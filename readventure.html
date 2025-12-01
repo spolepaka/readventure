@@ -1,0 +1,3443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readventure - Reading Adventure Game</title>
+    
+    <!-- Andika: Literacy-focused font designed for beginning readers (SIL International) -->
+    <!-- Research shows Andika improves reading for children with clear letter distinctions -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="qti-parser.js?v=2"></script>
+    <script src="test-mode-ui.js?v=2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: #0a0e27;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #game-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Board Screen */
+        #board-screen {
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            height: 100vh;
+            max-height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #board-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        #tiles-overlay {
+            position: absolute;
+            top: 51.8%;
+            left: 50.4%;
+            transform: translate(-50%, -50%);
+            width: 62vmin;
+            height: 62vmin;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5.4%;
+        }
+
+        /* DEBUG MODE - Show grid borders - DISABLED FOR PRODUCTION
+        #tiles-overlay > * {
+            border: 3px solid #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        #tiles-overlay .tile-hotspot {
+            border: 3px solid #ff00ff;
+            background: rgba(255, 0, 255, 0.15);
+        }
+
+        #tiles-overlay .tile-hotspot.locked {
+            border-color: #ff0000;
+            background: rgba(255, 0, 0, 0.15);
+        }
+        */
+
+        .tile-hotspot {
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            backdrop-filter: none;
+            background: transparent;
+        }
+
+        .tile-hotspot:hover:not(.locked) {
+            transform: scale(1.05);
+        }
+
+        .tile-hotspot.locked {
+            cursor: not-allowed;
+            backdrop-filter: blur(var(--blur-amount, 8px)) brightness(var(--blur-brightness, 0.6));
+            background: var(--lock-bg-color, rgba(0, 0, 0, 0.3));
+            -webkit-backdrop-filter: blur(var(--blur-amount, 8px)) brightness(var(--blur-brightness, 0.6));
+        }
+
+        .tile-hotspot.completed {
+            backdrop-filter: none;
+            background: transparent;
+        }
+
+        /* Lock icons overlay layer */
+        #locks-overlay {
+            position: absolute;
+            top: 51.8%;
+            left: 50.4%;
+            transform: translate(-50%, -50%);
+            width: 62vmin;
+            height: 62vmin;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5.4%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .lock-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lock-icon.visible {
+            opacity: 1;
+        }
+
+        .lock-symbol {
+            font-size: var(--lock-icon-size, 2.5em);
+            color: var(--lock-icon-color, #ffd700);
+            text-shadow: 
+                0 0 15px rgba(255, 215, 0, 0.9),
+                0 0 30px rgba(255, 215, 0, 0.7),
+                0 0 45px rgba(255, 215, 0, 0.5),
+                0 4px 10px rgba(0, 0, 0, 0.9);
+            filter: drop-shadow(0 0 8px rgba(0, 0, 0, 1));
+        }
+
+        .completion-checkmark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: #4caf50;
+            text-shadow: 
+                0 0 15px rgba(76, 175, 80, 0.9),
+                0 0 30px rgba(76, 175, 80, 0.7),
+                0 4px 10px rgba(0, 0, 0, 0.9);
+            pointer-events: none;
+            animation: checkmarkPop 0.5s ease;
+        }
+
+        @keyframes checkmarkPop {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        .screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: rgba(10, 14, 39, 0.95);
+        }
+
+        .screen.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Reading Screen */
+        #reading-screen {
+            flex-direction: row;
+            /* Padding around the content */
+            padding: 25px 30px;
+            gap: 25px;
+            /* Center the content horizontally */
+            justify-content: center;
+            /* Stretch children to full height */
+            align-items: stretch;
+        }
+
+        .passage-panel {
+            /* ~55-60% of the content area */
+            flex: 1.4;
+            /* Width: responsive with clamp */
+            width: clamp(400px, 50vw, 800px);
+            background: rgba(10, 20, 40, 0.97);
+            border: 2px solid #4a90e2;
+            border-radius: 15px;
+            /* Comfortable padding */
+            padding: 30px 40px;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(74, 144, 226, 0.3);
+            /* Full height with constraint */
+            max-height: calc(100vh - 60px);
+            min-height: 500px;
+        }
+
+        .passage-panel h2 {
+            /* Research: Headings 28-40px for grade 3 */
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            color: #7ec8f7;
+            margin-bottom: 30px;
+            font-size: 32px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            text-shadow: 0 2px 10px rgba(74, 144, 226, 0.4);
+        }
+
+        /*
+         * RESEARCH-BASED TYPOGRAPHY FOR GRADE 3 READERS
+         * =============================================
+         * Font: Andika - literacy-focused sans-serif with:
+         *   - Single-story 'a' and 'g' (matches handwriting)
+         *   - Clear b/d, p/q distinctions (reduces reversals)
+         *   - Large x-height for readability
+         *   - Open, rounded counters
+         * 
+         * Size: 20px (research range: 16-20px)
+         * Line Height: 1.75 (research range: 1.5-1.8×)
+         * Letter Spacing: 2.4px (0.12× font size per WCAG)
+         * Word Spacing: 3.2px (0.16× font size per WCAG)
+         * Paragraph Spacing: 40px (2× font size per WCAG)
+         * 
+         * Note: Justified text AVOIDED - creates uneven word spacing harmful to children
+         * Text is left-aligned (ragged right) for consistent word spacing
+         * 
+         * Sources: Essex University typography study, WCAG 2.1, SIL Andika research
+         */
+        
+        /* Container for passage content - centers the text block */
+        #passage-content {
+            width: 100%;
+        }
+        
+        .passage-panel p,
+        #passage-content p {
+            /* Font: Andika for literacy, Verdana as fallback (43% faster reading vs Sassoon) */
+            font-family: 'Andika', Verdana, Arial, sans-serif !important;
+            
+            /* Size: 20px - upper range for optimal comprehension (9% improvement) */
+            font-size: 20px !important;
+            
+            /* Line Height: 1.75× - generous spacing aids tracking to next line */
+            line-height: 1.75 !important;
+            
+            /* Letter Spacing: 0.12× font size = 2.4px (WCAG recommendation) */
+            letter-spacing: 2.4px !important;
+            
+            /* Word Spacing: 0.16× font size = 3.2px (WCAG recommendation) */
+            word-spacing: 3.2px !important;
+            
+            /* Paragraph Spacing: 2× font size = 40px */
+            margin-bottom: 40px !important;
+            
+            /* High contrast: white on dark blue (>4.5:1 ratio) */
+            color: #ffffff !important;
+            
+            /* LEFT-ALIGNED text (NOT justified) - research shows justified text
+               creates uneven word spacing that harms reading for children */
+            text-align: left !important;
+            
+            /* Prevent font-style: italic which harms readability */
+            font-style: normal !important;
+            
+            /* Regular weight - avoid bold for body text */
+            font-weight: 400 !important;
+        }
+
+        /* Also style the full-passage content */
+        .full-passage p,
+        .full-passage {
+            font-family: 'Andika', Verdana, Arial, sans-serif !important;
+            font-size: 20px !important;
+            line-height: 1.75 !important;
+            letter-spacing: 2.4px !important;
+            word-spacing: 3.2px !important;
+            margin-bottom: 40px !important;
+            color: #ffffff !important;
+            text-align: left !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+        }
+
+        /* Section divider - replaces "Section X" headings */
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+            margin: 30px 0;
+            opacity: 0.6;
+        }
+
+        /* Current section highlight for auto-scroll */
+        .section-paragraph.current {
+            /* Subtle left border to indicate current section */
+            border-left: 3px solid #64b5f6;
+            padding-left: 15px;
+            margin-left: -18px;
+        }
+
+        /* Custom scrollbar for passage panel */
+        .passage-panel::-webkit-scrollbar {
+            width: 10px;
+        }
+        .passage-panel::-webkit-scrollbar-track {
+            background: rgba(74, 144, 226, 0.1);
+            border-radius: 5px;
+        }
+        .passage-panel::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #4a90e2, #64b5f6);
+            border-radius: 5px;
+        }
+        .passage-panel::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #5a9fe8, #7ec8f7);
+        }
+        .passage-panel {
+            scroll-behavior: smooth;
+        }
+
+        .question-panel {
+            /* ~40-45% of the content area */
+            flex: 1;
+            /* Width: responsive with clamp */
+            width: clamp(320px, 35vw, 580px);
+            background: rgba(15, 25, 50, 0.95);
+            border: 2px solid #9c27b0;
+            border-radius: 15px;
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 30px rgba(156, 39, 176, 0.3);
+            /* Full vertical height with constraint */
+            max-height: calc(100vh - 60px);
+            min-height: 500px;
+            overflow-y: auto;
+        }
+
+        .question-panel h3 {
+            /* Question text uses Andika for readability */
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            color: #ce93d8;
+            margin-bottom: 25px;
+            font-size: 22px;
+            line-height: 1.6;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        #choices-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 0 1 auto;
+            overflow: visible;
+            padding-bottom: 8px;
+        }
+
+        /* Activity Timer Panel */
+        #activity-timer-panel {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        #activity-timer-panel.active {
+            display: flex;
+        }
+
+        .timer-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .timer-title {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+        }
+
+        .timer-instruction {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            color: #b8c5d6;
+            line-height: 1.7;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            max-width: 320px;
+        }
+
+        .timer-countdown {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffd93d;
+            text-shadow: 0 0 30px rgba(255, 217, 61, 0.6);
+            margin-bottom: 30px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .timer-continue-btn {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 18px 60px;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+        }
+
+        .timer-continue-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(78, 205, 196, 0.5);
+        }
+
+        .timer-continue-btn:disabled {
+            background: linear-gradient(135deg, #555 0%, #444 100%);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Question content wrapper */
+        #question-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #question-content.hidden {
+            display: none;
+        }
+
+        .choice-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 14px 18px;
+            /* Answer choices use Andika for consistency and readability */
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .choice-btn:hover {
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .choice-btn.selected {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 0 0 3px #f5576c, 0 4px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        .choice-btn.correct {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+        }
+
+        .choice-btn.incorrect {
+            background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+        }
+
+        .choice-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .nav-buttons {
+            margin-top: auto;
+            padding-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .btn.confirm-btn {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+        }
+
+        .btn.confirm-btn:hover:not(:disabled) {
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Quiz Screen */
+        #quiz-screen {
+            flex-direction: column;
+            padding: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quiz-container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(15, 25, 50, 0.95);
+            border: 2px solid #4a90e2;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 40px rgba(74, 144, 226, 0.4);
+        }
+
+        .quiz-intro {
+            text-align: center;
+        }
+
+        .quiz-intro h2 {
+            color: #64b5f6;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .full-passage {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .full-passage p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        .quiz-question {
+            display: none;
+        }
+
+        .quiz-question.active {
+            display: block;
+        }
+
+        .progress-indicator {
+            text-align: center;
+            color: #ba68c8;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .quiz-question h3 {
+            color: #ba68c8;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .quiz-choices {
+            margin-bottom: 30px;
+        }
+
+        /* Feedback Modal */
+        #feedback-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #feedback-modal.show {
+            display: flex;
+        }
+
+        .feedback-content {
+            background: rgba(15, 25, 50, 0.98);
+            border: 3px solid #4a90e2;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(74, 144, 226, 0.6);
+            animation: modalPop 0.3s ease;
+        }
+
+        @keyframes modalPop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .feedback-content.correct {
+            border-color: #4caf50;
+            box-shadow: 0 0 50px rgba(76, 175, 80, 0.6);
+        }
+
+        .feedback-content.incorrect {
+            border-color: #f44336;
+            box-shadow: 0 0 50px rgba(244, 67, 54, 0.6);
+        }
+
+        .feedback-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-title {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .feedback-text {
+            /* Feedback explanations use research-based typography */
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.75;
+            letter-spacing: 1.5px;
+            word-spacing: 2px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+            text-align: left;
+            max-width: 60ch;
+        }
+
+        /* Results Screen */
+        #results-screen {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Tile Results Screen */
+        #tile-results-screen {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .tile-results-content {
+            background: rgba(20, 40, 70, 0.95);
+            border-radius: 20px;
+            padding: 40px 50px;
+            max-width: 550px;
+            width: 100%;
+            border: 2px solid #4a90e2;
+            box-shadow: 0 0 40px rgba(74, 144, 226, 0.3);
+        }
+
+        .tile-results-title {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #4ecdc4;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .tile-results-article-name {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            color: #b8c5d6;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .results-section {
+            margin-bottom: 25px;
+        }
+
+        .results-section-title {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .results-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .result-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            background: rgba(74, 144, 226, 0.2);
+            border: 2px solid rgba(74, 144, 226, 0.4);
+            color: #b8c5d6;
+            position: relative;
+        }
+
+        .result-box .box-number {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .result-box .box-check {
+            font-size: 14px;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .result-box.correct {
+            background: rgba(78, 205, 196, 0.2);
+            border-color: #4ecdc4;
+            color: #4ecdc4;
+        }
+
+        .result-box.correct .box-check {
+            color: #4ecdc4;
+        }
+
+        .result-box.incorrect {
+            background: rgba(245, 87, 108, 0.15);
+            border-color: rgba(245, 87, 108, 0.5);
+            color: #e57373;
+        }
+
+        .result-box.incorrect .box-check {
+            color: #e57373;
+        }
+
+        .results-total-section {
+            background: rgba(30, 50, 80, 0.8);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .results-total-title {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .results-stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .results-stat-label {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 16px;
+            color: #b8c5d6;
+        }
+
+        .results-stat-value {
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .results-stat-value.accuracy {
+            color: #4ecdc4;
+            font-size: 22px;
+        }
+
+        /* Pass/Fail Status */
+        .pass-fail-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            font-family: 'Andika', Verdana, Arial, sans-serif;
+        }
+
+        .pass-fail-status.passed {
+            background: rgba(78, 205, 196, 0.2);
+            border: 2px solid #4ecdc4;
+        }
+
+        .pass-fail-status.failed {
+            background: rgba(245, 87, 108, 0.15);
+            border: 2px solid #f5576c;
+        }
+
+        .pass-fail-icon {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .pass-fail-status.passed .pass-fail-icon {
+            color: #4ecdc4;
+        }
+
+        .pass-fail-status.failed .pass-fail-icon {
+            color: #f5576c;
+        }
+
+        .pass-fail-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .pass-fail-status.passed .pass-fail-text {
+            color: #4ecdc4;
+        }
+
+        .pass-fail-status.failed .pass-fail-text {
+            color: #f5576c;
+        }
+
+        /* Tile results content when failed */
+        .tile-results-content.failed {
+            border-color: #f5576c;
+        }
+
+        .tile-results-content.passed {
+            border-color: #4ecdc4;
+        }
+
+        .tile-results-continue {
+            width: 100%;
+            padding: 16px 30px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #confetti-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .results-content {
+            background: rgba(15, 25, 50, 0.95);
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
+            z-index: 1;
+        }
+
+        .results-content h2 {
+            font-size: 48px;
+            color: #ffd700;
+            margin-bottom: 30px;
+        }
+
+        .score-display {
+            font-size: 72px;
+            color: #64b5f6;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .score-message {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(74, 144, 226, 0.8);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(74, 144, 226, 1);
+        }
+
+        /* Test Mode Panel */
+        #test-mode-panel {
+            position: fixed;
+            top: 20px;
+            right: -450px;
+            width: 420px;
+            max-height: 90vh;
+            background: rgba(15, 25, 50, 0.98);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 20px;
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        #test-mode-panel.visible {
+            right: 20px;
+        }
+
+        #test-mode-panel h3 {
+            color: #ffd700;
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 10px;
+        }
+
+        #test-mode-panel h4 {
+            color: #64b5f6;
+            margin: 15px 0 10px 0;
+            font-size: 16px;
+        }
+
+        .test-control {
+            margin-bottom: 15px;
+        }
+
+        .test-control label {
+            display: block;
+            color: #ba68c8;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .test-control select,
+        .test-control input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #4a90e2;
+            border-radius: 5px;
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .test-control select option {
+            background: #0f1932;
+            color: white;
+            padding: 4px 8px;
+        }
+
+        .test-control select optgroup {
+            background: #1a2d50;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 8px 4px;
+            border-top: 1px solid #ffd700;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .test-control input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+
+        .test-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+        }
+
+        .test-btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .test-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 215, 0, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .test-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+        }
+
+        .test-toggle.hidden {
+            display: none;
+        }
+
+        .config-preview {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #e0e0e0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .info-text {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Board Screen -->
+        <div id="board-screen">
+            <img id="board-image" src="assets/space_board_fullhd.webp" alt="Space Game Board">
+            <div id="tiles-overlay"></div>
+            <div id="locks-overlay"></div>
+        </div>
+
+        <!-- Reading Screen -->
+        <div id="reading-screen" class="screen">
+            <div class="passage-panel">
+                <h2 id="passage-title">Section Title</h2>
+                <div id="passage-content"></div>
+            </div>
+            <div class="question-panel">
+                <!-- Activity Timer Panel -->
+                <div id="activity-timer-panel">
+                    <div class="timer-icon">💡</div>
+                    <div class="timer-title">Activity</div>
+                    <div class="timer-instruction">Read the section carefully. Your guiding question will appear in...</div>
+                    <div class="timer-countdown" id="timer-countdown">30</div>
+                    <button class="timer-continue-btn" id="timer-continue-btn" onclick="game.skipTimer()">Continue</button>
+                </div>
+                
+                <!-- Question Content (hidden during timer) -->
+                <div id="question-content">
+                    <h3 id="question-prompt">Question goes here?</h3>
+                    <div id="choices-container"></div>
+                    <div class="nav-buttons">
+                        <button class="btn secondary" onclick="game.backToBoard()">Back to Board</button>
+                        <button class="btn confirm-btn" id="confirm-btn" onclick="game.confirmAnswer()" disabled>Confirm Answer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-container">
+                <!-- Quiz Intro -->
+                <div id="quiz-intro" class="quiz-intro">
+                    <h2>📚 Complete Story</h2>
+                    <div class="full-passage" id="full-passage-content"></div>
+                    <button class="btn" onclick="game.startQuiz()">Start Quiz</button>
+                </div>
+
+                <!-- Quiz Questions -->
+                <div id="quiz-questions-container"></div>
+
+                <div class="nav-buttons" id="quiz-nav" style="display: none;">
+                    <button class="btn secondary" onclick="game.backToBoard()">Back to Board</button>
+                    <button class="btn" id="quiz-next-btn" onclick="game.nextQuizQuestion()" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <canvas id="confetti-canvas"></canvas>
+            <div class="results-content">
+                <h2>🎉 Amazing Work! 🎉</h2>
+                <div class="score-display" id="final-score">0/8</div>
+                <div class="score-message" id="score-message">Great job!</div>
+                <button class="btn" onclick="game.playAgain()">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Tile Results Screen -->
+        <div id="tile-results-screen" class="screen">
+            <div class="tile-results-content" id="tile-results-content">
+                <h2 class="tile-results-title" id="tile-results-title">📊 Section Complete!</h2>
+                <div class="tile-results-article-name" id="tile-results-article"></div>
+                
+                <!-- Pass/Fail Status -->
+                <div class="pass-fail-status" id="pass-fail-status">
+                    <span class="pass-fail-icon" id="pass-fail-icon">✓</span>
+                    <span class="pass-fail-text" id="pass-fail-text">You passed!</span>
+                </div>
+                
+                <!-- Guiding Questions Section -->
+                <div class="results-section">
+                    <h3 class="results-section-title">Guiding Questions</h3>
+                    <div class="results-boxes" id="guiding-results-boxes"></div>
+                </div>
+                
+                <!-- Quiz Questions Section -->
+                <div class="results-section" id="quiz-results-section">
+                    <h3 class="results-section-title">Quiz Questions</h3>
+                    <div class="results-boxes" id="quiz-results-boxes"></div>
+                </div>
+                
+                <!-- Total Section -->
+                <div class="results-total-section">
+                    <h3 class="results-total-title">Total</h3>
+                    <div class="results-stat-row">
+                        <span class="results-stat-label">Correct Answers</span>
+                        <span class="results-stat-value" id="tile-correct-count">0 of 0</span>
+                    </div>
+                    <div class="results-stat-row">
+                        <span class="results-stat-label">Accuracy</span>
+                        <span class="results-stat-value accuracy" id="tile-accuracy">0%</span>
+                    </div>
+                </div>
+                
+                <button class="btn tile-results-continue" onclick="game.continueTileResults()">Continue</button>
+            </div>
+        </div>
+
+        <!-- Feedback Modal -->
+        <div id="feedback-modal">
+            <div class="feedback-content" id="feedback-content">
+                <div class="feedback-icon" id="feedback-icon">✓</div>
+                <div class="feedback-title" id="feedback-title">Correct!</div>
+                <div class="feedback-text" id="feedback-text"></div>
+                <button class="btn" onclick="game.closeFeedback()">Continue</button>
+            </div>
+        </div>
+
+        <!-- Test Mode Panel -->
+        <button id="test-toggle-btn" class="test-toggle hidden" onclick="toggleTestPanel()">🔧</button>
+        <div id="test-mode-panel">
+            <h3>🧪 Test Mode</h3>
+            
+            <h4>Story Selection <span id="article-count-badge" style="font-size: 0.7em; background: #00ff00; color: #000; padding: 2px 8px; border-radius: 10px; margin-left: 5px;">Loading...</span></h4>
+            <div class="test-control">
+                <label for="test-article-dropdown">Browse by Category:</label>
+                <select id="test-article-dropdown" style="width: 100%; max-height: 300px;">
+                    <option value="">Loading articles...</option>
+                </select>
+            </div>
+            <div class="test-control" style="margin-top: 8px;">
+                <label for="test-article-search">Or Search by Title/ID:</label>
+                <input type="text" id="test-article-search" 
+                    placeholder="Type to search (e.g., Alice, Solar, 101004)..." 
+                    style="width: 100%;">
+                <div class="info-text" style="margin-top: 5px; font-size: 0.85em; color: #888;">
+                    💡 Search filters the dropdown above
+                </div>
+            </div>
+
+            <h4>Content Mode</h4>
+            <div class="test-control">
+                <label for="test-content-mode">Granularity Mode:</label>
+                <select id="test-content-mode">
+                    <option value="one-question-per-tile">One Question Per Tile</option>
+                    <option value="all-questions-one-tile">All Questions One Tile (Coming Soon)</option>
+                    <option value="full-text-per-tile">Full Text Per Tile (Coming Soon)</option>
+                </select>
+            </div>
+
+            <h4>Visual Settings</h4>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-show-lock-icon" checked>
+                    Show Lock Icons
+                </label>
+            </div>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-show-checkmark">
+                    Show Checkmarks on Completion
+                </label>
+            </div>
+            <div class="test-control">
+                <label for="test-lock-icon">Lock Icon:</label>
+                <input type="text" id="test-lock-icon" value="🔒" maxlength="2">
+            </div>
+
+            <h4>Game Flow</h4>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-linear-progression" checked>
+                    Linear Progression
+                </label>
+            </div>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-confetti" checked>
+                    Enable Confetti
+                </label>
+            </div>
+
+            <h4>Reading Timer</h4>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-timer-enabled" checked>
+                    Enable Reading Timer
+                </label>
+            </div>
+            <div class="test-control">
+                <label for="test-timer-duration">Timer Duration (seconds):</label>
+                <input type="number" id="test-timer-duration" value="30" min="5" max="120" step="5" style="width: 70px;">
+            </div>
+            <div class="test-control">
+                <label>
+                    <input type="checkbox" id="test-timer-allow-skip">
+                    Allow Skip Button
+                </label>
+            </div>
+
+            <h4>Pass Threshold</h4>
+            <div class="test-control">
+                <label for="test-pass-threshold">Min % to Unblur Tile:</label>
+                <input type="number" id="test-pass-threshold" value="90" min="0" max="100" step="5" style="width: 70px;">
+                <span style="margin-left: 5px; color: #888;">%</span>
+            </div>
+
+            <div class="test-control">
+                <button class="test-btn" onclick="applyTestConfig()">🔄 Apply & Reload Story</button>
+                <button class="test-btn secondary" onclick="resetToDefaults()">↺ Reset to Defaults</button>
+            </div>
+
+            <h4>Current Config Preview</h4>
+            <div class="config-preview" id="config-preview"></div>
+
+            <div class="test-control">
+                <button class="test-btn" onclick="toggleTestPanel()" style="background: #666;">Close Panel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global Config - Will be loaded from game-config.json
+        let GAME_CONFIG = null;
+
+        // Note: Story data is now loaded dynamically from QTI data file
+        // based on startingArticleId in config, not hardcoded here
+
+        // Game Class
+        class SpaceReadingGame {
+            constructor(config, storyData) {
+                try {
+                    console.log('🎮 SpaceReadingGame constructor called');
+                    console.log('📊 Story data:', storyData);
+                    
+                    this.config = config;
+                    this.storyData = storyData;
+                    this.state = 'BOARD';
+                    this.currentTile = 0;
+                    this.currentQuizQuestion = 0;
+                    this.score = 0;
+                    
+                    // Validate story data
+                    if (!storyData || !storyData.sections || !storyData.quizQuestions) {
+                        throw new Error('Invalid story data structure - missing sections or quizQuestions');
+                    }
+                    
+                    console.log(`📚 Story has ${storyData.sections.length} sections, ${storyData.quizQuestions.length} quiz questions`);
+                    
+                    // Generate tiles dynamically based on story data and mode
+                    console.log('🔧 Generating active tiles...');
+                    this.activeTiles = this.generateActiveTiles();
+                    console.log(`✅ Generated ${this.activeTiles.length} active tiles`);
+                    
+                    // Calculate total questions
+                    const sectionsLength = (this.storyData.sections && Array.isArray(this.storyData.sections)) ? this.storyData.sections.length : 0;
+                    const quizLength = (this.storyData.quizQuestions && Array.isArray(this.storyData.quizQuestions)) ? this.storyData.quizQuestions.length : 0;
+                    
+                    if (this.config.scoringSettings.totalQuestionsCalculation === 'auto') {
+                        this.totalQuestions = sectionsLength + quizLength;
+                    } else {
+                        this.totalQuestions = this.config.scoringSettings.totalQuestionsCalculation;
+                    }
+                    
+                    this.selectedAnswer = null;
+                    this.selectedAnswerIndex = null;
+                    this.tilesCompleted = new Array(this.activeTiles.length).fill(false);
+                    this.tileProgress = {}; // Store progress for each tile
+                    
+                    // Tile results tracking (for showing results after each tile)
+                    this.currentTileGuidingResults = []; // Array of {correct: boolean}
+                    this.currentTileQuizResults = [];    // Array of {correct: boolean}
+                    
+                    // Timer settings (from config or defaults)
+                    const timerSettings = this.config.readingTimerSettings || {};
+                    this.readingTimerEnabled = timerSettings.enabled !== false; // default true
+                    this.readingTimerDuration = timerSettings.durationSeconds || 30;
+                    this.readingTimerAllowSkip = timerSettings.allowSkip === true; // default false
+                    this.readingTimerOnlyGuiding = timerSettings.onlyForGuidingQuestions !== false; // default true
+                    this.currentTimerValue = 0;
+                    this.timerInterval = null;
+                    this.pendingQuestionData = null; // Store question data to show after timer
+                    
+                    console.log(`✨ Game initialized with ${this.activeTiles.length} tiles, ${this.totalQuestions} total questions`);
+                    
+                    this.init();
+                } catch (error) {
+                    console.error('❌ Error in SpaceReadingGame constructor:', error);
+                    throw error;
+                }
+            }
+            
+            generateActiveTiles() {
+                const mode = this.config.contentGranularity.mode;
+                const pattern = this.config.tileLayout.tilePathPattern || 'linear-horizontal';
+                let tiles = [];
+                
+                // Determine how many tiles needed based on mode
+                switch (mode) {
+                    case 'one-question-per-tile':
+                        // Each section = 1 tile, plus 1 quiz tile per story
+                        tiles = this.generateTilesForOneQuestionMode(pattern);
+                        break;
+                        
+                    case 'all-questions-one-tile':
+                        // 1 tile for all sections, 1 tile for all quizzes (per story)
+                        tiles = this.generateTilesForAllQuestionsMode(pattern);
+                        break;
+                        
+                    case 'full-text-per-tile':
+                        // Everything in 1 tile per story
+                        tiles = this.generateTilesForFullTextMode(pattern);
+                        break;
+                }
+                
+                console.log(`Generated ${tiles.length} tiles for ${this.storyData.articles ? this.storyData.articles.length : 1} article(s) in mode: ${mode}`);
+                return tiles;
+            }
+            
+            generateTilesForOneQuestionMode(pattern) {
+                const tiles = [];
+                let tileIndex = 0;
+                
+                // For each article in sequence
+                if (this.storyData.articles) {
+                    this.storyData.articles.forEach((article, articleIndex) => {
+                        // Add section tiles
+                        article.sections.forEach((section, sectionIndex) => {
+                            tiles.push({
+                                type: 'section',
+                                sectionIndex: this.storyData.sections.findIndex(s => 
+                                    s.articleIndex === articleIndex && s.id === section.id
+                                ),
+                                articleIndex: articleIndex,
+                                label: `${article.title} - Section ${sectionIndex + 1}`
+                            });
+                            tileIndex++;
+                        });
+                        
+                        // Add quiz tile if article has quiz questions
+                        if (article.quizQuestions.length > 0) {
+                            tiles.push({
+                                type: 'quiz',
+                                sectionIndex: null,
+                                articleIndex: articleIndex,
+                                label: `${article.title} - Quiz`
+                            });
+                            tileIndex++;
+                        }
+                    });
+                } else {
+                    // Single story (backward compatibility)
+                    const numSectionTiles = this.storyData.sections.length;
+                    const numQuizTiles = this.storyData.quizQuestions.length > 0 ? 1 : 0;
+                    
+                    for (let i = 0; i < numSectionTiles; i++) {
+                        tiles.push({
+                            type: 'section',
+                            sectionIndex: i,
+                            articleIndex: 0,
+                            label: `Section ${i + 1}`
+                        });
+                    }
+                    
+                    if (numQuizTiles > 0) {
+                        tiles.push({
+                            type: 'quiz',
+                            sectionIndex: null,
+                            articleIndex: 0,
+                            label: 'Quiz'
+                        });
+                    }
+                }
+                
+                // Assign positions
+                const positions = this.generateTilePositions(tiles.length, pattern);
+                return tiles.map((tile, i) => ({ ...tile, ...positions[i] }));
+            }
+            
+            generateTilesForAllQuestionsMode(pattern) {
+                const tiles = [];
+                
+                if (this.storyData.articles) {
+                    // For each article: 1 reading tile + 1 quiz tile
+                    console.log(`📦 All-questions mode: Creating tiles for ${this.storyData.articles.length} articles (2 per article)`);
+                    this.storyData.articles.forEach((article, articleIndex) => {
+                        tiles.push({
+                            type: 'all-sections',
+                            sectionIndex: null,
+                            articleIndex: articleIndex,
+                            label: `${article.title} - Reading`
+                        });
+                        
+                        if (article.quizQuestions.length > 0) {
+                            tiles.push({
+                                type: 'quiz',
+                                sectionIndex: null,
+                                articleIndex: articleIndex,
+                                label: `${article.title} - Quiz`
+                            });
+                        }
+                        console.log(`  Article ${articleIndex}: ${article.title} → 2 tiles`);
+                    });
+                } else {
+                    // Single story
+                    console.log('📦 All-questions mode: Creating 2 tiles (single story)');
+                    tiles.push(
+                        { type: 'all-sections', sectionIndex: null, articleIndex: 0, label: 'Reading' },
+                        { type: 'quiz', sectionIndex: null, articleIndex: 0, label: 'Quiz' }
+                    );
+                }
+                
+                const positions = this.generateTilePositions(tiles.length, pattern);
+                const tilesWithPositions = tiles.map((tile, i) => ({ ...tile, ...positions[i] }));
+                
+                console.log(`📦 All-questions mode: Generated ${tilesWithPositions.length} total tiles`);
+                
+                return tilesWithPositions;
+            }
+            
+            generateTilesForFullTextMode(pattern) {
+                const tiles = [];
+                
+                if (this.storyData.articles) {
+                    // 1 tile per article
+                    console.log(`📦 Full-text mode: Creating ${this.storyData.articles.length} tiles (1 per article)`);
+                    this.storyData.articles.forEach((article, articleIndex) => {
+                        tiles.push({
+                            type: 'full-game',
+                            sectionIndex: null,
+                            articleIndex: articleIndex,
+                            label: article.title
+                        });
+                        console.log(`  Tile ${tiles.length - 1}: ${article.title}`);
+                    });
+                } else {
+                    // Single story (no articles array)
+                    console.log('📦 Full-text mode: Creating 1 tile (single story)');
+                    tiles.push({
+                        type: 'full-game',
+                        sectionIndex: null,
+                        articleIndex: 0,
+                        label: 'Complete Story'
+                    });
+                }
+                
+                const positions = this.generateTilePositions(tiles.length, pattern);
+                const tilesWithPositions = tiles.map((tile, i) => ({ ...tile, ...positions[i] }));
+                
+                console.log(`📦 Full-text mode: Generated ${tilesWithPositions.length} tiles at positions:`, 
+                    tilesWithPositions.map(t => `[${t.row},${t.col}]`).join(' '));
+                
+                return tilesWithPositions;
+            }
+            
+            generateTilePositions(count, pattern) {
+                const gridSize = this.config.tileLayout.gridSize;
+                const maxTiles = gridSize.rows * gridSize.columns;
+                
+                if (count > maxTiles) {
+                    console.warn(`Story needs ${count} tiles but grid only has ${maxTiles}. Limiting to ${maxTiles}.`);
+                    count = maxTiles;
+                }
+                
+                const positions = [];
+                
+                switch (pattern) {
+                    case 'linear-horizontal':
+                        // Fill row by row, left to right
+                        for (let i = 0; i < count; i++) {
+                            positions.push({
+                                row: Math.floor(i / gridSize.columns),
+                                col: i % gridSize.columns
+                            });
+                        }
+                        break;
+                        
+                    case 'linear-vertical':
+                        // Fill column by column, top to bottom
+                        for (let i = 0; i < count; i++) {
+                            positions.push({
+                                row: i % gridSize.rows,
+                                col: Math.floor(i / gridSize.rows)
+                            });
+                        }
+                        break;
+                        
+                    case 'snake':
+                        // Zigzag pattern
+                        for (let i = 0; i < count; i++) {
+                            const row = Math.floor(i / gridSize.columns);
+                            const col = row % 2 === 0 
+                                ? i % gridSize.columns  // Left to right on even rows
+                                : gridSize.columns - 1 - (i % gridSize.columns); // Right to left on odd rows
+                            positions.push({ row, col });
+                        }
+                        break;
+                        
+                    case 'spiral':
+                        // Spiral from outside to center
+                        positions.push(...this.generateSpiralPositions(count, gridSize));
+                        break;
+                        
+                    default:
+                        // Fallback to linear-horizontal
+                        for (let i = 0; i < count; i++) {
+                            positions.push({
+                                row: Math.floor(i / gridSize.columns),
+                                col: i % gridSize.columns
+                            });
+                        }
+                }
+                
+                return positions;
+            }
+            
+            generateSpiralPositions(count, gridSize) {
+                const positions = [];
+                let top = 0, bottom = gridSize.rows - 1;
+                let left = 0, right = gridSize.columns - 1;
+                let row = 0, col = 0;
+                
+                while (positions.length < count && top <= bottom && left <= right) {
+                    // Right
+                    for (col = left; col <= right && positions.length < count; col++) {
+                        positions.push({ row: top, col });
+                    }
+                    top++;
+                    
+                    // Down
+                    for (row = top; row <= bottom && positions.length < count; row++) {
+                        positions.push({ row, col: right });
+                    }
+                    right--;
+                    
+                    // Left
+                    for (col = right; col >= left && positions.length < count; col--) {
+                        positions.push({ row: bottom, col });
+                    }
+                    bottom--;
+                    
+                    // Up
+                    for (row = bottom; row >= top && positions.length < count; row--) {
+                        positions.push({ row, col: left });
+                    }
+                    left++;
+                }
+                
+                return positions;
+            }
+
+            init() {
+                this.applyConfigStyles();
+                this.loadBoardImage();
+                this.createTileHotspots();
+            }
+            
+            applyConfigStyles() {
+                // Apply grid alignment from config
+                const alignment = this.config.tileLayout.gridAlignment;
+                const tilesOverlay = document.getElementById('tiles-overlay');
+                const locksOverlay = document.getElementById('locks-overlay');
+                
+                [tilesOverlay, locksOverlay].forEach(overlay => {
+                    overlay.style.width = alignment.width;
+                    overlay.style.height = alignment.height;
+                    overlay.style.top = alignment.top;
+                    overlay.style.left = alignment.left;
+                    overlay.style.gap = alignment.gap;
+                });
+                
+                // Apply grid size
+                const gridSize = this.config.tileLayout.gridSize;
+                tilesOverlay.style.gridTemplateColumns = `repeat(${gridSize.columns}, 1fr)`;
+                tilesOverlay.style.gridTemplateRows = `repeat(${gridSize.rows}, 1fr)`;
+                locksOverlay.style.gridTemplateColumns = `repeat(${gridSize.columns}, 1fr)`;
+                locksOverlay.style.gridTemplateRows = `repeat(${gridSize.rows}, 1fr)`;
+                
+                // Apply visual settings to locked tiles via CSS variables
+                const visualSettings = this.config.visualSettings.lockedTile;
+                document.documentElement.style.setProperty('--blur-amount', visualSettings.blurAmount);
+                document.documentElement.style.setProperty('--blur-brightness', visualSettings.brightness);
+                document.documentElement.style.setProperty('--lock-bg-color', visualSettings.backgroundColor);
+                document.documentElement.style.setProperty('--lock-icon-size', visualSettings.lockIconSize);
+                document.documentElement.style.setProperty('--lock-icon-color', visualSettings.lockIconColor);
+            }
+            
+            loadBoardImage() {
+                const boardImage = document.getElementById('board-image');
+                boardImage.src = this.config.assets.boardImage;
+                
+                boardImage.addEventListener('error', () => {
+                    console.error('Failed to load board image');
+                    document.body.innerHTML = '<div style="color: white; text-align: center; padding: 50px; font-family: Arial;">Failed to load game board. Please refresh the page.</div>';
+                });
+            }
+
+            createTileHotspots() {
+                const overlay = document.getElementById('tiles-overlay');
+                const locksOverlay = document.getElementById('locks-overlay');
+                const gridSize = this.config.tileLayout.gridSize;
+                
+                console.log(`🎨 Creating ${this.activeTiles.length} active tiles from ${gridSize.rows}x${gridSize.columns} grid`);
+                console.log(`🎨 Active tile positions:`, this.activeTiles.map((t, i) => `Tile ${i}:[${t.row},${t.col}]`).join(', '));
+                
+                // Create grid cells for both layers
+                for (let row = 0; row < gridSize.rows; row++) {
+                    for (let col = 0; col < gridSize.columns; col++) {
+                        const cell = document.createElement('div');
+                        const lockCell = document.createElement('div');
+                        lockCell.className = 'lock-icon';
+                        
+                        // Check if this position has a tile
+                        const tileIndex = this.activeTiles.findIndex(
+                            pos => pos.row === row && pos.col === col
+                        );
+                        
+                        if (tileIndex !== -1) {
+                            const tileConfig = this.activeTiles[tileIndex];
+                            cell.className = 'tile-hotspot';
+                            cell.dataset.tileType = tileConfig.type;
+                            cell.setAttribute('role', 'button');
+                            cell.setAttribute('tabindex', '0');
+                            cell.setAttribute('aria-label', `Tile ${tileIndex + 1}: ${this.storyData.articles[tileConfig.articleIndex]?.title || 'Story'}`);
+                            cell.dataset.tileIndex = tileIndex;
+                            console.log(`  ✓ Created tile ${tileIndex} at [${row},${col}]: ${tileConfig.type} (Article ${tileConfig.articleIndex})`);
+                            
+                            // All tiles start locked (blurred) if linear progression is enabled
+                            if (this.config.gameFlow.linearProgression) {
+                                cell.classList.add('locked');
+                            }
+                            
+                            // Show lock icon based on config
+                            const showLock = this.config.visualSettings.lockedTile.showLockIcon;
+                            const firstUnlocked = this.config.gameFlow.firstTileUnlockedOnStart;
+                            
+                            if (showLock && (tileIndex > 0 || !firstUnlocked)) {
+                                const lockSymbol = document.createElement('div');
+                                lockSymbol.className = 'lock-symbol';
+                                lockSymbol.textContent = this.config.visualSettings.lockedTile.lockIcon;
+                                
+                                lockCell.appendChild(lockSymbol);
+                                lockCell.classList.add('visible');
+                            }
+                            
+                            cell.dataset.tileIndex = tileIndex;
+                            lockCell.dataset.tileIndex = tileIndex;
+                            cell.addEventListener('click', () => this.handleTileClick(tileIndex));
+                        }
+                        
+                        overlay.appendChild(cell);
+                        locksOverlay.appendChild(lockCell);
+                    }
+                }
+            }
+
+            // Reset tile results at start of each tile
+            resetTileResults() {
+                this.currentTileGuidingResults = [];
+                this.currentTileQuizResults = [];
+            }
+            
+            // Record a guiding question result
+            recordGuidingResult(correct) {
+                this.currentTileGuidingResults.push({ correct });
+            }
+            
+            // Record a quiz question result
+            recordQuizResult(correct) {
+                this.currentTileQuizResults.push({ correct });
+            }
+
+            handleTileClick(tileIndex) {
+                const tileElement = document.querySelector(`#tiles-overlay [data-tile-index="${tileIndex}"]`);
+                const lockIcon = document.querySelector(`#locks-overlay [data-tile-index="${tileIndex}"]`);
+                
+                // Check if tile has a lock icon (not just blur)
+                if (lockIcon && lockIcon.classList.contains('visible')) {
+                    // Shake animation for locked tiles
+                    tileElement.style.animation = 'shake 0.5s';
+                    setTimeout(() => {
+                        tileElement.style.animation = '';
+                    }, 500);
+                    return;
+                }
+                
+                this.currentTile = tileIndex;
+                
+                // Reset tile results for new tile (unless restoring)
+                this.resetTileResults();
+                
+                // Check if we have saved progress for this tile
+                if (this.tileProgress[tileIndex] && !this.tilesCompleted[tileIndex]) {
+                    console.log(`📂 Restoring progress for tile ${tileIndex}`);
+                    this.restoreTileProgress(tileIndex);
+                    return;
+                }
+                
+                // Get tile config to determine type
+                const tileConfig = this.activeTiles[tileIndex];
+                
+                console.log(`Clicked tile ${tileIndex}: ${tileConfig.type}, article ${tileConfig.articleIndex}`);
+                
+                switch (tileConfig.type) {
+                    case 'section':
+                        this.loadSection(tileConfig.sectionIndex);
+                        break;
+                    case 'quiz':
+                        this.loadQuizIntro(tileConfig.articleIndex);
+                        break;
+                    case 'all-sections':
+                        this.loadAllSections(tileConfig.articleIndex);
+                        break;
+                    case 'full-game':
+                        this.loadFullGame(tileConfig.articleIndex);
+                        break;
+                }
+            }
+            
+            restoreTileProgress(tileIndex) {
+                const progress = this.tileProgress[tileIndex];
+                
+                // Restore all the state
+                this.state = progress.state;
+                this.currentFullGameQuestion = progress.currentFullGameQuestion;
+                this.currentSectionQuestion = progress.currentSectionQuestion;
+                this.guidingQuestions = progress.guidingQuestions;
+                this.quizQuestions = progress.quizQuestions;
+                this.sectionsForArticle = progress.sectionsForArticle;
+                this.currentArticleTitle = progress.currentArticleTitle;
+                this.currentArticleIndex = progress.currentArticleIndex;
+                this.isInGuidingPhase = progress.isInGuidingPhase;
+                this.score = progress.score;
+                
+                console.log(`📂 Restored to question ${this.currentFullGameQuestion}, score ${this.score}`);
+                
+                // Resume at the current question
+                if (this.state === 'FULL_GAME') {
+                    this.loadFullGameQuestion(this.currentFullGameQuestion);
+                } else if (this.state === 'READING_ALL') {
+                    this.loadGuidingQuestion(this.currentSectionQuestion);
+                }
+            }
+
+            loadSection(sectionIndex) {
+                this.state = 'READING';
+                const section = this.storyData.sections[sectionIndex];
+                
+                document.getElementById('passage-title').textContent = section.title;
+                // Strip title from content if it appears at the beginning
+                const cleanedContent = this.stripTitleFromContent(section.content, section.title);
+                const paragraphs = cleanedContent.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+                document.getElementById('passage-content').innerHTML = paragraphs;
+                document.getElementById('question-prompt').textContent = section.question;
+                
+                const choicesContainer = document.getElementById('choices-container');
+                choicesContainer.innerHTML = '';
+                
+                section.choices.forEach((choice, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-btn';
+                    btn.textContent = choice.text;
+                    btn.onclick = () => this.selectAnswer(idx, choice);
+                    choicesContainer.appendChild(btn);
+                });
+                
+                this.selectedAnswer = null;
+                this.selectedAnswerIndex = null;
+                document.getElementById('confirm-btn').disabled = true;
+                
+                this.showScreen('reading-screen');
+            }
+            
+            loadAllSections(articleIndex = 0) {
+                // 'all-questions-one-tile' mode - Progressive sections with guiding questions
+                this.state = 'READING_ALL';
+                this.currentSectionQuestion = 0;
+                this.currentArticleIndex = articleIndex;
+                
+                // Get sections for this article
+                this.currentTileSections = this.storyData.sections.filter(s => 
+                    s.articleIndex === articleIndex
+                );
+                
+                const articleTitle = this.storyData.articles 
+                    ? this.storyData.articles[articleIndex].title
+                    : this.storyData.title;
+                
+                this.currentArticleTitleAll = articleTitle;
+                
+                // Load first guiding question (shows only first section)
+                this.loadGuidingQuestion(0);
+            }
+            
+            // Helper to strip the article title from the beginning of content
+            stripTitleFromContent(content, title) {
+                if (!content || !title) return content;
+                // Remove the title if it appears at the start of the content
+                let cleaned = content.trim();
+                if (cleaned.startsWith(title)) {
+                    cleaned = cleaned.substring(title.length).trim();
+                }
+                return cleaned;
+            }
+            
+            // Build progressive passage for all-questions mode
+            buildProgressivePassageAll(sectionsUpTo) {
+                let passageHTML = '';
+                const articleTitle = this.currentArticleTitleAll || this.storyData.title;
+                for (let i = 0; i <= sectionsUpTo && i < this.currentTileSections.length; i++) {
+                    const section = this.currentTileSections[i];
+                    if (i > 0) {
+                        passageHTML += '<hr class="section-divider">';
+                    }
+                    // Strip title from first section content and wrap in <p> tags
+                    let content = section.content;
+                    if (i === 0) {
+                        content = this.stripTitleFromContent(content, articleTitle);
+                    }
+                    // Add id to current (latest) section for auto-scroll
+                    const isCurrentSection = (i === sectionsUpTo);
+                    const sectionId = isCurrentSection ? 'id="current-section"' : '';
+                    passageHTML += `<p ${sectionId} class="section-paragraph${isCurrentSection ? ' current' : ''}">${content}</p>`;
+                }
+                return passageHTML;
+            }
+            
+            loadGuidingQuestion(questionIndex) {
+                const sectionsToUse = this.currentTileSections || this.storyData.sections;
+                
+                if (questionIndex >= sectionsToUse.length) {
+                    // All guiding questions done
+                    this.nextTile();
+                    return;
+                }
+                
+                // Show sections progressively
+                const passageHTML = this.buildProgressivePassageAll(questionIndex);
+                document.getElementById('passage-title').textContent = this.currentArticleTitleAll || this.storyData.title;
+                document.getElementById('passage-content').innerHTML = passageHTML;
+                
+                const section = sectionsToUse[questionIndex];
+                const totalGuiding = sectionsToUse.length;
+                
+                // Store pending question data for after timer
+                this.pendingQuestionData = {
+                    type: 'guiding',
+                    questionIndex: questionIndex,
+                    section: section,
+                    totalGuiding: totalGuiding
+                };
+                
+                // Start reading timer
+                this.startReadingTimer();
+                this.showScreen('reading-screen');
+            }
+            
+            // Scroll to current section in passage panel
+            scrollToCurrentSection() {
+                // Small delay to ensure DOM is updated
+                setTimeout(() => {
+                    const currentSection = document.getElementById('current-section');
+                    const passagePanel = document.querySelector('.passage-panel');
+                    
+                    if (currentSection && passagePanel) {
+                        // Scroll the current section into view within the passage panel
+                        currentSection.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start'
+                        });
+                    }
+                }, 100);
+            }
+            
+            // Timer Methods
+            startReadingTimer() {
+                // If timer is disabled, skip straight to showing the question
+                if (!this.readingTimerEnabled) {
+                    this.showQuestionAfterTimer();
+                    return;
+                }
+                
+                // Clear any existing timer
+                if (this.timerInterval) {
+                    clearInterval(this.timerInterval);
+                }
+                
+                // Auto-scroll to current section
+                this.scrollToCurrentSection();
+                
+                // Show timer panel, hide question content
+                document.getElementById('activity-timer-panel').classList.add('active');
+                document.getElementById('question-content').classList.add('hidden');
+                
+                // Show/hide the skip button based on config
+                const skipBtn = document.getElementById('timer-continue-btn');
+                skipBtn.style.display = this.readingTimerAllowSkip ? 'block' : 'none';
+                
+                // Initialize timer
+                this.currentTimerValue = this.readingTimerDuration;
+                document.getElementById('timer-countdown').textContent = this.currentTimerValue;
+                
+                // Update instruction text based on question type
+                const instruction = document.querySelector('.timer-instruction');
+                const timerTitle = document.querySelector('.timer-title');
+                const timerIcon = document.querySelector('.timer-icon');
+                
+                if (this.pendingQuestionData) {
+                    if (this.pendingQuestionData.type === 'fullgame-quiz') {
+                        // Quiz question - they've already read, just review
+                        timerIcon.textContent = '📝';
+                        timerTitle.textContent = 'Quiz Time!';
+                        const qNum = this.pendingQuestionData.quizIndex + 1;
+                        const total = this.pendingQuestionData.totalQuiz;
+                        instruction.textContent = `Review the full passage. Quiz question ${qNum} of ${total} will appear in...`;
+                    } else if (this.pendingQuestionData.type === 'fullgame-guiding') {
+                        // Full game guiding question
+                        timerIcon.textContent = '💡';
+                        timerTitle.textContent = 'Activity';
+                        const qNum = this.pendingQuestionData.sectionIndex + 1;
+                        const total = this.pendingQuestionData.totalSections;
+                        instruction.textContent = `Read the section carefully. Guiding question ${qNum} of ${total} will appear in...`;
+                    } else {
+                        // Regular guiding question
+                        timerIcon.textContent = '💡';
+                        timerTitle.textContent = 'Activity';
+                        const qNum = this.pendingQuestionData.questionIndex + 1;
+                        const total = this.pendingQuestionData.totalGuiding;
+                        instruction.textContent = `Read the section carefully. Guiding question ${qNum} of ${total} will appear in...`;
+                    }
+                }
+                
+                // Start countdown
+                this.timerInterval = setInterval(() => {
+                    this.currentTimerValue--;
+                    document.getElementById('timer-countdown').textContent = this.currentTimerValue;
+                    
+                    if (this.currentTimerValue <= 0) {
+                        this.skipTimer();
+                    }
+                }, 1000);
+            }
+            
+            skipTimer() {
+                // Clear timer
+                if (this.timerInterval) {
+                    clearInterval(this.timerInterval);
+                    this.timerInterval = null;
+                }
+                
+                // Hide timer panel, show question content
+                document.getElementById('activity-timer-panel').classList.remove('active');
+                document.getElementById('question-content').classList.remove('hidden');
+                
+                // Now show the actual question
+                this.showQuestionAfterTimer();
+            }
+            
+            showQuestionAfterTimer() {
+                if (!this.pendingQuestionData) return;
+                
+                const data = this.pendingQuestionData;
+                
+                if (data.type === 'guiding') {
+                    document.getElementById('question-prompt').textContent = 
+                        `Guiding Question ${data.questionIndex + 1} of ${data.totalGuiding}: ${data.section.question}`;
+                    
+                    const choicesContainer = document.getElementById('choices-container');
+                    choicesContainer.innerHTML = '';
+                    
+                    data.section.choices.forEach((choice, idx) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'choice-btn';
+                        btn.textContent = choice.text;
+                        btn.onclick = () => this.selectGuidingAnswer(data.questionIndex, idx, choice);
+                        choicesContainer.appendChild(btn);
+                    });
+                } else if (data.type === 'fullgame-guiding') {
+                    document.getElementById('question-prompt').textContent = 
+                        `Guiding Question ${data.sectionIndex + 1} of ${data.totalSections}: ${data.question}`;
+                    
+                    this.loadQuestionChoices(data.choices, data.questionIndex, 'guiding');
+                } else if (data.type === 'fullgame-quiz') {
+                    document.getElementById('question-prompt').textContent = 
+                        `Final Quiz ${data.quizIndex + 1} of ${data.totalQuiz}: ${data.question}`;
+                    
+                    this.loadQuestionChoices(data.choices, data.questionIndex, 'quiz');
+                }
+                
+                this.selectedAnswer = null;
+                this.selectedAnswerIndex = null;
+                document.getElementById('confirm-btn').disabled = true;
+                
+                // Clear pending data
+                this.pendingQuestionData = null;
+            }
+            
+            selectGuidingAnswer(questionIndex, choiceIndex, choice) {
+                const buttons = document.querySelectorAll('#choices-container .choice-btn');
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                buttons[choiceIndex].classList.add('selected');
+                
+                this.selectedAnswer = choice;
+                this.selectedAnswerIndex = choiceIndex;
+                this.currentSectionQuestion = questionIndex;
+                
+                // Enable confirm button (don't show feedback yet)
+                document.getElementById('confirm-btn').disabled = false;
+            }
+            
+            nextGuidingQuestion() {
+                // Move to next guiding question
+                this.loadGuidingQuestion(this.currentSectionQuestion + 1);
+            }
+            
+            loadFullGame(articleIndex = 0) {
+                // 'full-text-per-tile' mode - Progressive section reveal with guiding questions, then full text with quiz
+                this.state = 'FULL_GAME';
+                this.currentFullGameQuestion = 0;
+                this.currentArticleIndex = articleIndex;
+                this.guidingQuestions = [];
+                this.quizQuestions = [];
+                this.isInGuidingPhase = true;
+                
+                // Get data for this article
+                this.sectionsForArticle = this.storyData.sections.filter(s => 
+                    s.articleIndex === articleIndex
+                );
+                const quizForArticle = this.storyData.quizQuestions.filter(q => 
+                    q.articleIndex === articleIndex
+                );
+                
+                // Store article title
+                this.currentArticleTitle = this.storyData.articles 
+                    ? this.storyData.articles[articleIndex].title
+                    : this.storyData.title;
+                
+                // Build guiding questions list (one per section)
+                this.sectionsForArticle.forEach((section, idx) => {
+                    this.guidingQuestions.push({
+                        type: 'guiding',
+                        sectionIndex: idx,
+                        question: section.question,
+                        choices: section.choices
+                    });
+                });
+                
+                // Build quiz questions list
+                quizForArticle.forEach((quiz, idx) => {
+                    this.quizQuestions.push({
+                        type: 'quiz',
+                        quizIndex: idx,
+                        question: quiz.prompt,
+                        choices: quiz.choices
+                    });
+                });
+                
+                // Start with first guiding question (shows only first section)
+                this.loadFullGameQuestion(0);
+            }
+            
+            // Build passage HTML with sections up to a certain index
+            buildProgressivePassage(sectionsUpTo) {
+                let passageHTML = '';
+                const articleTitle = this.currentArticleTitle;
+                for (let i = 0; i <= sectionsUpTo && i < this.sectionsForArticle.length; i++) {
+                    const section = this.sectionsForArticle[i];
+                    // No "Section X" heading - just content with visual separator
+                    if (i > 0) {
+                        passageHTML += '<hr class="section-divider">';
+                    }
+                    // Strip title from first section content and wrap in <p> tags
+                    let content = section.content;
+                    if (i === 0) {
+                        content = this.stripTitleFromContent(content, articleTitle);
+                    }
+                    // Add id to current (latest) section for auto-scroll
+                    const isCurrentSection = (i === sectionsUpTo);
+                    const sectionId = isCurrentSection ? 'id="current-section"' : '';
+                    passageHTML += `<p ${sectionId} class="section-paragraph${isCurrentSection ? ' current' : ''}">${content}</p>`;
+                }
+                return passageHTML;
+            }
+            
+            // Build full passage (all sections) for final quiz
+            buildFullPassage() {
+                let passageHTML = '';
+                const articleTitle = this.currentArticleTitle;
+                this.sectionsForArticle.forEach((section, idx) => {
+                    if (idx > 0) {
+                        passageHTML += '<hr class="section-divider">';
+                    }
+                    // Strip title from first section content and wrap in <p> tags
+                    let content = section.content;
+                    if (idx === 0) {
+                        content = this.stripTitleFromContent(content, articleTitle);
+                    }
+                    passageHTML += `<p>${content}</p>`;
+                });
+                return passageHTML;
+            }
+            
+            loadFullGameQuestion(questionIndex) {
+                // Determine if we're in guiding phase or quiz phase
+                if (questionIndex < this.guidingQuestions.length) {
+                    // Still in guiding questions phase
+                    this.isInGuidingPhase = true;
+                    const q = this.guidingQuestions[questionIndex];
+                    const totalGuiding = this.guidingQuestions.length;
+                    
+                    // Show sections progressively: question 0 = section 0, question 1 = sections 0-1, etc.
+                    const passageHTML = this.buildProgressivePassage(questionIndex);
+                    
+                    document.getElementById('passage-title').textContent = this.currentArticleTitle;
+                    document.getElementById('passage-content').innerHTML = passageHTML;
+                    
+                    // Store pending question data for after timer
+                    this.pendingQuestionData = {
+                        type: 'fullgame-guiding',
+                        questionIndex: questionIndex,
+                        sectionIndex: questionIndex,
+                        totalSections: totalGuiding,
+                        question: q.question,
+                        choices: q.choices
+                    };
+                    
+                    // Start reading timer
+                    this.startReadingTimer();
+                    
+                } else {
+                    // Switched to final quiz phase
+                    this.isInGuidingPhase = false;
+                    const quizIndex = questionIndex - this.guidingQuestions.length;
+                    
+                    if (quizIndex >= this.quizQuestions.length) {
+                        // All questions done - move to next tile or show results
+                        this.nextTile();
+                        return;
+                    }
+                    
+                    const q = this.quizQuestions[quizIndex];
+                    const totalQuiz = this.quizQuestions.length;
+                    
+                    // Show FULL passage for quiz phase
+                    const passageHTML = this.buildFullPassage();
+                    
+                    document.getElementById('passage-title').textContent = this.currentArticleTitle;
+                    document.getElementById('passage-content').innerHTML = passageHTML;
+                    
+                    // For quiz questions, show question directly (no timer if onlyForGuidingQuestions is true)
+                    if (this.readingTimerOnlyGuiding) {
+                        // Show question directly without timer
+                        document.getElementById('activity-timer-panel').classList.remove('active');
+                        document.getElementById('question-content').classList.remove('hidden');
+                        
+                        document.getElementById('question-prompt').textContent = 
+                            `Final Quiz ${quizIndex + 1} of ${totalQuiz}: ${q.question}`;
+                        
+                        this.loadQuestionChoices(q.choices, questionIndex, 'quiz');
+                        
+                        this.selectedAnswer = null;
+                        this.selectedAnswerIndex = null;
+                        document.getElementById('confirm-btn').disabled = true;
+                    } else {
+                        // Store pending question data for after timer
+                        this.pendingQuestionData = {
+                            type: 'fullgame-quiz',
+                            questionIndex: questionIndex,
+                            quizIndex: quizIndex,
+                            totalQuiz: totalQuiz,
+                            question: q.question,
+                            choices: q.choices
+                        };
+                        
+                        // Start reading timer
+                        this.startReadingTimer();
+                    }
+                }
+                
+                this.showScreen('reading-screen');
+            }
+            
+            loadQuestionChoices(choices, questionIndex, questionType) {
+                const choicesContainer = document.getElementById('choices-container');
+                choicesContainer.innerHTML = '';
+                
+                choices.forEach((choice, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-btn';
+                    btn.textContent = choice.text;
+                    btn.onclick = () => this.selectFullGameAnswer(questionIndex, idx, choice, questionType);
+                    choicesContainer.appendChild(btn);
+                });
+            }
+            
+            selectFullGameAnswer(questionIndex, choiceIndex, choice, questionType) {
+                const buttons = document.querySelectorAll('#choices-container .choice-btn');
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                buttons[choiceIndex].classList.add('selected');
+                
+                this.selectedAnswer = choice;
+                this.selectedAnswerIndex = choiceIndex;
+                this.currentFullGameQuestion = questionIndex;
+                
+                // Enable confirm button (don't show feedback yet)
+                document.getElementById('confirm-btn').disabled = false;
+            }
+            
+            nextFullGameQuestion() {
+                // Move to next question in full game
+                this.loadFullGameQuestion(this.currentFullGameQuestion + 1);
+            }
+
+            selectAnswer(index, choice) {
+                const buttons = document.querySelectorAll('#choices-container .choice-btn');
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                buttons[index].classList.add('selected');
+                
+                this.selectedAnswer = choice;
+                this.selectedAnswerIndex = index;
+                
+                // Enable confirm button (don't show feedback yet)
+                document.getElementById('confirm-btn').disabled = false;
+            }
+
+            confirmAnswer() {
+                if (!this.selectedAnswer) return;
+                
+                // Disable confirm button
+                document.getElementById('confirm-btn').disabled = true;
+                
+                // Disable all choice buttons
+                const buttons = document.querySelectorAll('#choices-container .choice-btn');
+                buttons.forEach(btn => {
+                    btn.disabled = true;
+                });
+                
+                // Highlight correct/incorrect
+                buttons[this.selectedAnswerIndex].classList.add(this.selectedAnswer.correct ? 'correct' : 'incorrect');
+                
+                // Show feedback
+                this.showFeedback(this.selectedAnswer);
+            }
+
+            showFeedback(choice) {
+                // Record result for tile results screen
+                // Determine if this is a guiding or quiz question based on current state
+                if (this.state === 'FULL_GAME') {
+                    if (this.isInGuidingPhase) {
+                        this.recordGuidingResult(choice.correct);
+                    } else {
+                        this.recordQuizResult(choice.correct);
+                    }
+                } else if (this.state === 'GUIDING' || this.state === 'ALL_QUESTIONS' || this.state === 'READING_ALL' || this.state === 'READING') {
+                    this.recordGuidingResult(choice.correct);
+                } else if (this.state === 'QUIZ') {
+                    this.recordQuizResult(choice.correct);
+                } else {
+                    // Default to guiding for section-based
+                    this.recordGuidingResult(choice.correct);
+                }
+                
+                if (!this.config.feedbackSettings.showFeedbackModal) {
+                    // If no feedback modal, auto-advance
+                    if (choice.correct) this.score++;
+                    setTimeout(() => this.autoAdvance(), 500);
+                    return;
+                }
+                
+                const modal = document.getElementById('feedback-modal');
+                const content = document.getElementById('feedback-content');
+                const icon = document.getElementById('feedback-icon');
+                const title = document.getElementById('feedback-title');
+                const text = document.getElementById('feedback-text');
+                
+                const feedbackIcons = this.config.feedbackSettings.feedbackIcons;
+                const feedbackTitles = this.config.feedbackSettings.feedbackTitles;
+                
+                content.className = 'feedback-content ' + (choice.correct ? 'correct' : 'incorrect');
+                icon.textContent = choice.correct ? feedbackIcons.correct : feedbackIcons.incorrect;
+                title.textContent = choice.correct ? feedbackTitles.correct : feedbackTitles.incorrect;
+                text.textContent = choice.feedback;
+                
+                modal.classList.add('show');
+                
+                if (choice.correct) {
+                    this.score++;
+                }
+            }
+
+            closeFeedback() {
+                document.getElementById('feedback-modal').classList.remove('show');
+                
+                // Auto-advance to next question after closing feedback
+                setTimeout(() => this.autoAdvance(), 300);
+            }
+            
+            autoAdvance() {
+                // Automatically go to next question based on state
+                if (this.state === 'READING_ALL') {
+                    this.nextGuidingQuestion();
+                } else if (this.state === 'FULL_GAME') {
+                    this.nextFullGameQuestion();
+                } else {
+                    this.nextTile();
+                }
+            }
+
+            nextTile() {
+                // Show tile results screen first
+                this.showTileResults();
+            }
+            
+            showTileResults() {
+                // Get article title for display
+                const tileConfig = this.activeTiles[this.currentTile];
+                let articleTitle = '';
+                if (this.currentArticleTitle) {
+                    articleTitle = this.currentArticleTitle;
+                } else if (this.currentArticleTitleAll) {
+                    articleTitle = this.currentArticleTitleAll;
+                } else if (tileConfig && tileConfig.label) {
+                    articleTitle = tileConfig.label;
+                }
+                
+                document.getElementById('tile-results-article').textContent = articleTitle;
+                
+                // Populate guiding questions boxes
+                const guidingBoxes = document.getElementById('guiding-results-boxes');
+                guidingBoxes.innerHTML = '';
+                this.currentTileGuidingResults.forEach((result, idx) => {
+                    const box = document.createElement('div');
+                    box.className = `result-box ${result.correct ? 'correct' : 'incorrect'}`;
+                    box.innerHTML = `
+                        <span class="box-number">${idx + 1}</span>
+                        <span class="box-check">${result.correct ? '✓' : '✗'}</span>
+                    `;
+                    guidingBoxes.appendChild(box);
+                });
+                
+                // Populate quiz questions boxes (hide section if no quiz questions)
+                const quizSection = document.getElementById('quiz-results-section');
+                const quizBoxes = document.getElementById('quiz-results-boxes');
+                quizBoxes.innerHTML = '';
+                
+                if (this.currentTileQuizResults.length > 0) {
+                    quizSection.style.display = 'block';
+                    this.currentTileQuizResults.forEach((result, idx) => {
+                        const box = document.createElement('div');
+                        box.className = `result-box ${result.correct ? 'correct' : 'incorrect'}`;
+                        box.innerHTML = `
+                            <span class="box-number">${idx + 1}</span>
+                            <span class="box-check">${result.correct ? '✓' : '✗'}</span>
+                        `;
+                        quizBoxes.appendChild(box);
+                    });
+                } else {
+                    quizSection.style.display = 'none';
+                }
+                
+                // Calculate totals
+                const totalGuiding = this.currentTileGuidingResults.length;
+                const correctGuiding = this.currentTileGuidingResults.filter(r => r.correct).length;
+                const totalQuiz = this.currentTileQuizResults.length;
+                const correctQuiz = this.currentTileQuizResults.filter(r => r.correct).length;
+                
+                const totalQuestions = totalGuiding + totalQuiz;
+                const totalCorrect = correctGuiding + correctQuiz;
+                const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+                
+                document.getElementById('tile-correct-count').textContent = `${totalCorrect} of ${totalQuestions}`;
+                document.getElementById('tile-accuracy').textContent = `${accuracy}%`;
+                
+                // Check pass/fail status
+                const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
+                const passed = accuracy >= passThreshold;
+                
+                // Update pass/fail display
+                const passFailStatus = document.getElementById('pass-fail-status');
+                const passFailIcon = document.getElementById('pass-fail-icon');
+                const passFailText = document.getElementById('pass-fail-text');
+                const resultsContent = document.getElementById('tile-results-content');
+                const resultsTitle = document.getElementById('tile-results-title');
+                
+                // Clear previous classes
+                passFailStatus.classList.remove('passed', 'failed');
+                resultsContent.classList.remove('passed', 'failed');
+                
+                if (passed) {
+                    passFailStatus.classList.add('passed');
+                    resultsContent.classList.add('passed');
+                    passFailIcon.textContent = '✓';
+                    passFailText.textContent = `You passed! (${passThreshold}% required)`;
+                    resultsTitle.textContent = '🎉 Great Job!';
+                } else {
+                    passFailStatus.classList.add('failed');
+                    resultsContent.classList.add('failed');
+                    passFailIcon.textContent = '✗';
+                    passFailText.textContent = `Need ${passThreshold}% to unlock. Try again!`;
+                    resultsTitle.textContent = '📊 Keep Practicing!';
+                }
+                
+                // Show the tile results screen
+                this.hideAllScreens();
+                this.showScreen('tile-results-screen');
+            }
+            
+            continueTileResults() {
+                // Calculate accuracy for this tile
+                const totalGuiding = this.currentTileGuidingResults.length;
+                const correctGuiding = this.currentTileGuidingResults.filter(r => r.correct).length;
+                const totalQuiz = this.currentTileQuizResults.length;
+                const correctQuiz = this.currentTileQuizResults.filter(r => r.correct).length;
+                const totalQuestions = totalGuiding + totalQuiz;
+                const totalCorrect = correctGuiding + correctQuiz;
+                const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+                
+                // Get pass threshold from config (default 90%)
+                const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
+                const passed = accuracy >= passThreshold;
+                
+                // Mark tile as completed
+                this.tilesCompleted[this.currentTile] = true;
+                
+                // Get tile element
+                const tileElement = document.querySelector(`#tiles-overlay [data-tile-index="${this.currentTile}"]`);
+                
+                // Only remove blur if student PASSED the threshold
+                if (passed && this.config.visualSettings.completedTile.removeBlur) {
+                    tileElement.classList.remove('locked');
+                    tileElement.classList.add('completed');
+                    
+                    // Add checkmark if configured (only on pass)
+                    if (this.config.visualSettings.completedTile.showCheckmark) {
+                        const checkmark = document.createElement('div');
+                        checkmark.className = 'completion-checkmark';
+                        checkmark.textContent = this.config.visualSettings.completedTile.checkmarkIcon || '✓';
+                        tileElement.appendChild(checkmark);
+                    }
+                    
+                    console.log(`✅ Tile ${this.currentTile} PASSED with ${accuracy}% (threshold: ${passThreshold}%)`);
+                } else {
+                    // Did not pass - tile stays blurred but mark as attempted
+                    tileElement.classList.add('attempted');
+                    console.log(`❌ Tile ${this.currentTile} did not pass: ${accuracy}% (threshold: ${passThreshold}%)`);
+                }
+                
+                // Unlock next tile if linear progression (regardless of pass/fail)
+                if (this.config.gameFlow.linearProgression && this.currentTile < this.activeTiles.length - 1) {
+                    // Hide lock icon on locks overlay
+                    const nextLockIcon = document.querySelector(`#locks-overlay [data-tile-index="${this.currentTile + 1}"]`);
+                    if (nextLockIcon) nextLockIcon.classList.remove('visible');
+                }
+                
+                this.backToBoard();
+            }
+
+            backToBoard() {
+                // Clear any active timer
+                if (this.timerInterval) {
+                    clearInterval(this.timerInterval);
+                    this.timerInterval = null;
+                }
+                // Reset timer UI
+                document.getElementById('activity-timer-panel').classList.remove('active');
+                document.getElementById('question-content').classList.remove('hidden');
+                
+                // Save current progress for this tile before going back
+                if (this.currentTile !== undefined && this.currentTile !== null) {
+                    this.tileProgress[this.currentTile] = {
+                        state: this.state,
+                        currentFullGameQuestion: this.currentFullGameQuestion || 0,
+                        currentSectionQuestion: this.currentSectionQuestion || 0,
+                        guidingQuestions: this.guidingQuestions,
+                        quizQuestions: this.quizQuestions,
+                        sectionsForArticle: this.sectionsForArticle,
+                        currentArticleTitle: this.currentArticleTitle,
+                        currentArticleIndex: this.currentArticleIndex,
+                        isInGuidingPhase: this.isInGuidingPhase,
+                        score: this.score
+                    };
+                    console.log(`💾 Saved progress for tile ${this.currentTile}:`, this.tileProgress[this.currentTile]);
+                }
+                
+                this.state = 'BOARD';
+                this.hideAllScreens();
+            }
+
+            loadQuizIntro(articleIndex = 0) {
+                this.state = 'QUIZ_INTRO';
+                this.currentArticleIndex = articleIndex;
+                
+                // Get sections and quiz for this article
+                const sectionsForArticle = this.storyData.sections.filter(s => 
+                    s.articleIndex === articleIndex
+                );
+                const quizForArticle = this.storyData.quizQuestions.filter(q => 
+                    q.articleIndex === articleIndex
+                );
+                
+                const articleTitle = this.storyData.articles 
+                    ? this.storyData.articles[articleIndex].title
+                    : this.storyData.title;
+                
+                // Combine sections for this article, stripping title from first section
+                let fullPassage = '';
+                sectionsForArticle.forEach((section, idx) => {
+                    let content = section.content;
+                    if (idx === 0) {
+                        content = this.stripTitleFromContent(content, articleTitle);
+                    }
+                    fullPassage += content + '\n\n';
+                });
+                
+                const paragraphs = fullPassage.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+                document.getElementById('full-passage-content').innerHTML = paragraphs;
+                
+                const quizContainer = document.getElementById('quiz-questions-container');
+                quizContainer.innerHTML = '';
+                
+                const totalQuizQuestions = quizForArticle.length;
+                
+                // Store quiz questions for this tile
+                this.currentTileQuizQuestions = quizForArticle;
+                
+                quizForArticle.forEach((question, qIndex) => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.className = 'quiz-question';
+                    questionDiv.id = `quiz-question-${qIndex}`;
+                    
+                    const progressDiv = document.createElement('div');
+                    progressDiv.className = 'progress-indicator';
+                    progressDiv.textContent = `Question ${qIndex + 1} of ${totalQuizQuestions}`;
+                    
+                    const promptH3 = document.createElement('h3');
+                    promptH3.textContent = question.prompt;
+                    
+                    const choicesDiv = document.createElement('div');
+                    choicesDiv.className = 'quiz-choices';
+                    
+                    question.choices.forEach((choice, cIndex) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'choice-btn';
+                        btn.textContent = choice.text;
+                        btn.onclick = () => this.selectQuizAnswer(qIndex, cIndex, choice);
+                        choicesDiv.appendChild(btn);
+                    });
+                    
+                    questionDiv.appendChild(progressDiv);
+                    questionDiv.appendChild(promptH3);
+                    questionDiv.appendChild(choicesDiv);
+                    quizContainer.appendChild(questionDiv);
+                });
+                
+                document.getElementById('quiz-intro').style.display = 'block';
+                document.getElementById('quiz-nav').style.display = 'none';
+                this.currentQuizQuestion = 0;
+                
+                this.showScreen('quiz-screen');
+            }
+
+            startQuiz() {
+                document.getElementById('quiz-intro').style.display = 'none';
+                document.getElementById('quiz-nav').style.display = 'flex';
+                document.getElementById('quiz-next-btn').disabled = true;
+                
+                this.state = 'QUIZ_QUESTION';
+                this.showQuizQuestion(0);
+            }
+
+            showQuizQuestion(index) {
+                const questions = document.querySelectorAll('.quiz-question');
+                questions.forEach((q, i) => {
+                    q.classList.toggle('active', i === index);
+                });
+            }
+
+            selectQuizAnswer(questionIndex, choiceIndex, choice) {
+                const questionDiv = document.getElementById(`quiz-question-${questionIndex}`);
+                const buttons = questionDiv.querySelectorAll('.choice-btn');
+                
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                buttons[choiceIndex].classList.add('selected');
+                
+                this.selectedAnswer = choice;
+                this.showFeedback(choice);
+            }
+
+            nextQuizQuestion() {
+                this.currentQuizQuestion++;
+                
+                const quizQuestions = this.currentTileQuizQuestions || this.storyData.quizQuestions;
+                const totalQuizQuestions = quizQuestions.length;
+                
+                if (this.currentQuizQuestion < totalQuizQuestions) {
+                    this.showQuizQuestion(this.currentQuizQuestion);
+                    document.getElementById('quiz-next-btn').disabled = true;
+                    this.selectedAnswer = null;
+                    
+                    // Check if this is the last question in this quiz tile
+                    if (this.currentQuizQuestion === totalQuizQuestions - 1) {
+                        // Check if this is the last tile overall
+                        if (this.currentTile === this.activeTiles.length - 1) {
+                            document.getElementById('quiz-next-btn').textContent = 'Finish';
+                        } else {
+                            document.getElementById('quiz-next-btn').textContent = 'Next';
+                        }
+                    }
+                } else {
+                    // Done with this quiz tile
+                    this.tilesCompleted[this.currentTile] = true;
+                    
+                    // Check if this was the last tile
+                    if (this.currentTile === this.activeTiles.length - 1) {
+                        this.showResults();
+                    } else {
+                        // More tiles to go - unlock next tile and return to board
+                        this.nextTile();
+                    }
+                }
+            }
+
+            showResults() {
+                this.state = 'RESULTS';
+                
+                const scoreDisplay = document.getElementById('final-score');
+                const message = document.getElementById('score-message');
+                
+                scoreDisplay.textContent = `${this.score}/${this.totalQuestions}`;
+                
+                // Get message based on percentage from config
+                const percentage = (this.score / this.totalQuestions) * 100;
+                const scoreMessages = this.config.scoringSettings.scoreMessages;
+                
+                // Find the appropriate message (sorted by minPercentage descending)
+                const sortedMessages = [...scoreMessages].sort((a, b) => b.minPercentage - a.minPercentage);
+                const messageObj = sortedMessages.find(m => percentage >= m.minPercentage);
+                message.textContent = messageObj ? messageObj.message : 'Great effort!';
+                
+                this.hideAllScreens();
+                this.showScreen('results-screen');
+                
+                if (this.config.confettiSettings.enabled) {
+                    this.startConfetti();
+                }
+            }
+
+            startConfetti() {
+                const canvas = document.getElementById('confetti-canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                
+                const confettiConfig = this.config.confettiSettings;
+                const confetti = [];
+                const colors = confettiConfig.colors;
+                const particleCount = confettiConfig.particleCount;
+                const duration = confettiConfig.duration;
+                const particleSize = confettiConfig.particleSize || { min: 2, max: 8 };
+                
+                for (let i = 0; i < particleCount; i++) {
+                    confetti.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height - canvas.height,
+                        r: Math.random() * (particleSize.max - particleSize.min) + particleSize.min,
+                        d: Math.random() * 2 + 1,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        tilt: Math.random() * 10 - 10,
+                        tiltAngleIncremental: Math.random() * 0.07 + 0.05,
+                        tiltAngle: 0
+                    });
+                }
+                
+                let animationId;
+                const draw = () => {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    confetti.forEach((c, i) => {
+                        c.tiltAngle += c.tiltAngleIncremental;
+                        c.y += (Math.cos(c.d) + 3 + c.r / 2) / 2;
+                        c.x += Math.sin(c.d);
+                        c.tilt = Math.sin(c.tiltAngle - i / 3) * 15;
+                        
+                        ctx.beginPath();
+                        ctx.lineWidth = c.r / 2;
+                        ctx.strokeStyle = c.color;
+                        ctx.moveTo(c.x + c.tilt + c.r / 4, c.y);
+                        ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 4);
+                        ctx.stroke();
+                        
+                        if (c.y > canvas.height) {
+                            c.y = -10;
+                            c.x = Math.random() * canvas.width;
+                        }
+                    });
+                    
+                    animationId = requestAnimationFrame(draw);
+                };
+                
+                draw();
+                
+                setTimeout(() => {
+                    cancelAnimationFrame(animationId);
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }, duration);
+            }
+
+            playAgain() {
+                location.reload();
+            }
+
+            showScreen(screenId) {
+                this.hideAllScreens();
+                const screen = document.getElementById(screenId);
+                screen.classList.add('active');
+            }
+
+            hideAllScreens() {
+                const screens = document.querySelectorAll('.screen');
+                screens.forEach(screen => screen.classList.remove('active'));
+            }
+        }
+
+        // Add shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Load config and start the game
+        let game;
+        
+        async function loadConfig() {
+            try {
+                const response = await fetch('game-config.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load config');
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error loading config:', error);
+                console.warn('Using default configuration');
+                return getDefaultConfig();
+            }
+        }
+        
+        async function loadStoryDataFromQTI(config) {
+            try {
+                let articleSequence = [];
+                
+                console.log('📋 Load mode:', config.dataSource.autoLoadMode);
+                
+                // Determine which articles to load
+                if (config.dataSource.autoLoadMode === 'fill-grid') {
+                    // Auto-calculate how many articles needed to fill grid
+                    console.log('🔄 Auto-fill mode: Calculating articles to load...');
+                    articleSequence = await calculateArticlesToLoad(config);
+                } else if (config.dataSource.articleSequence && Array.isArray(config.dataSource.articleSequence)) {
+                    // Use manually specified sequence
+                    console.log('📋 Manual mode: Using specified article sequence');
+                    articleSequence = config.dataSource.articleSequence;
+                } else {
+                    // Fallback to single starting article
+                    console.log('📋 Fallback: Loading single article');
+                    articleSequence = [config.dataSource.startingArticleId];
+                }
+                
+                if (!articleSequence || articleSequence.length === 0) {
+                    throw new Error('No articles to load - check configuration');
+                }
+                
+                console.log(`📚 Loading ${articleSequence.length} articles:`, articleSequence);
+                
+                // Load all articles in sequence
+                const stories = [];
+                for (const articleId of articleSequence) {
+                    const storyData = await loadStoryByArticleId(
+                        config.dataSource.qtiDataPath,
+                        articleId
+                    );
+                    stories.push(storyData);
+                    console.log(`  ✓ Loaded: ${storyData.title} (${storyData.sections.length} sections, ${storyData.quizQuestions.length} quiz)`);
+                }
+                
+                // Combine all stories into one mega-story data structure
+                const combinedStoryData = {
+                    title: stories.length > 1 
+                        ? `${stories[0].title} (and ${stories.length - 1} more)`
+                        : stories[0].title,
+                    articles: stories,  // Keep original articles separate
+                    sections: [],
+                    quizQuestions: []
+                };
+                
+                // Flatten all sections and quiz questions
+                stories.forEach((story, storyIndex) => {
+                    if (story.sections && Array.isArray(story.sections)) {
+                        story.sections.forEach(section => {
+                            combinedStoryData.sections.push({
+                                ...section,
+                                articleIndex: storyIndex,
+                                articleTitle: story.title
+                            });
+                        });
+                    }
+                    
+                    if (story.quizQuestions && Array.isArray(story.quizQuestions)) {
+                        story.quizQuestions.forEach(quiz => {
+                            combinedStoryData.quizQuestions.push({
+                                ...quiz,
+                                articleIndex: storyIndex,
+                                articleTitle: story.title
+                            });
+                        });
+                    }
+                });
+                
+                console.log(`✨ Combined: ${stories.length} articles, ${combinedStoryData.sections.length} sections, ${combinedStoryData.quizQuestions.length} quiz questions`);
+                return combinedStoryData;
+            } catch (error) {
+                console.error('Error loading story data:', error);
+                throw new Error(`Failed to load stories: ${error.message}`);
+            }
+        }
+        
+        async function calculateArticlesToLoad(config) {
+            try {
+                const maxTiles = config.tileLayout.gridSize.rows * config.tileLayout.gridSize.columns;
+                const mode = config.contentGranularity.mode;
+                const startingArticleId = config.dataSource.startingArticleId;
+                const maxArticles = config.dataSource.maxArticles || 16;
+                
+                console.log(`🧮 Calculating articles to fill ${maxTiles} tiles in mode: ${mode}`);
+                console.log(`📍 Starting from: ${startingArticleId}`);
+                
+                // Load QTI data to get list of all articles
+                const qtiData = await loadQTIData(config.dataSource.qtiDataPath);
+                
+                if (!qtiData || !qtiData.assessments) {
+                    throw new Error('Invalid QTI data structure');
+                }
+                
+                const allArticles = getAvailableArticles(qtiData);
+                
+                if (!allArticles || allArticles.length === 0) {
+                    throw new Error('No articles found in QTI data');
+                }
+                
+                console.log(`📚 Found ${allArticles.length} total articles in QTI data`);
+                
+                // Find starting article index
+                const startIndex = allArticles.findIndex(a => a.identifier === startingArticleId);
+                if (startIndex === -1) {
+                    throw new Error(`Starting article ${startingArticleId} not found`);
+                }
+                
+                console.log(`📍 Starting article is at index ${startIndex} of ${allArticles.length}`);
+                
+                const articlesToLoad = [];
+                let tilesUsed = 0;
+                let currentIndex = startIndex;
+                
+                // Load articles until grid is filled or we run out
+                while (tilesUsed < maxTiles && currentIndex < allArticles.length && articlesToLoad.length < maxArticles) {
+                    const articleId = allArticles[currentIndex].identifier;
+                    articlesToLoad.push(articleId);
+                    
+                    // Load this article to check its size
+                    const tempStory = await loadStoryByArticleId(config.dataSource.qtiDataPath, articleId);
+                    
+                    if (!tempStory || !tempStory.sections) {
+                        console.warn(`⚠️ Article ${articleId} has no sections, skipping`);
+                        currentIndex++;
+                        continue;
+                    }
+                    
+                    // Calculate tiles needed for this article based on mode
+                    let tilesForArticle = 0;
+                    switch (mode) {
+                        case 'one-question-per-tile':
+                            const sectionsCount = tempStory.sections.length || 0;
+                            const quizCount = (tempStory.quizQuestions && tempStory.quizQuestions.length > 0) ? 1 : 0;
+                            tilesForArticle = sectionsCount + quizCount;
+                            break;
+                        case 'all-questions-one-tile':
+                            tilesForArticle = 2;  // 1 reading + 1 quiz
+                            break;
+                        case 'full-text-per-tile':
+                            tilesForArticle = 1;  // Everything in 1 tile
+                            break;
+                    }
+                    
+                    tilesUsed += tilesForArticle;
+                    console.log(`  📊 Article ${articlesToLoad.length}: ${allArticles[currentIndex].title} → ${tilesForArticle} tiles (cumulative: ${tilesUsed}/${maxTiles})`);
+                    
+                    // Check if we've filled the grid
+                    if (tilesUsed >= maxTiles) {
+                        console.log(`✅ Grid filled with ${articlesToLoad.length} articles (${tilesUsed} tiles)`);
+                        break;
+                    }
+                    
+                    currentIndex++;
+                }
+                
+                if (currentIndex >= allArticles.length) {
+                    console.log(`⚠️ Reached end of available articles at index ${currentIndex} (${allArticles.length} total articles)`);
+                }
+                
+                console.log(`📦 Will load ${articlesToLoad.length} articles:`, articlesToLoad);
+                return articlesToLoad;
+            } catch (error) {
+                console.error('❌ Error in calculateArticlesToLoad:', error);
+                throw error;
+            }
+        }
+        
+        function getDefaultConfig() {
+            // Fallback default config if file can't be loaded
+            return {
+                contentGranularity: {
+                    mode: "one-question-per-tile",
+                    numberOfSectionTiles: 4,
+                    numberOfQuizTiles: 1,
+                    showFullPassageBeforeQuiz: true
+                },
+                tileLayout: {
+                    gridSize: { rows: 4, columns: 4 },
+                    tilePathPattern: "linear-horizontal",
+                    gridAlignment: {
+                        width: "62vmin",
+                        height: "62vmin",
+                        top: "51.8%",
+                        left: "50.4%",
+                        gap: "5.4%"
+                    }
+                },
+                gameFlow: {
+                    linearProgression: true,
+                    allowSkipTiles: false,
+                    requireCorrectAnswerToProgress: false,
+                    showScoreDuringGame: false,
+                    firstTileUnlockedOnStart: true,
+                    enableBackButton: true
+                },
+                visualSettings: {
+                    lockedTile: {
+                        blurAmount: "8px",
+                        brightness: 0.6,
+                        backgroundColor: "rgba(0, 0, 0, 0.3)",
+                        showLockIcon: true,
+                        lockIcon: "🔒",
+                        lockIconSize: "2.5em",
+                        lockIconColor: "#ffd700"
+                    },
+                    completedTile: {
+                        removeBlur: true,
+                        showCheckmark: false
+                    },
+                    hoverEffect: {
+                        enabled: true,
+                        scale: 1.05,
+                        transitionDuration: "0.3s"
+                    }
+                },
+                scoringSettings: {
+                    totalQuestionsCalculation: "auto",
+                    scoreMessages: [
+                        { minPercentage: 100, message: "Perfect score! You're a reading superstar! 🌟" },
+                        { minPercentage: 75, message: "Excellent work! Keep it up! 🎉" },
+                        { minPercentage: 50, message: "Good job! Practice makes perfect! 👍" },
+                        { minPercentage: 0, message: "Nice try! Let's read it again! 📚" }
+                    ]
+                },
+                feedbackSettings: {
+                    showFeedbackModal: true,
+                    feedbackIcons: { correct: "✓", incorrect: "✗" },
+                    feedbackTitles: { correct: "Correct!", incorrect: "Not Quite!" },
+                    disableChoicesAfterSelection: true,
+                    highlightSelectedAnswer: true
+                },
+                confettiSettings: {
+                    enabled: true,
+                    particleCount: 150,
+                    duration: 10000,
+                    colors: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#ffd93d", "#6c5ce7", "#a29bfe"]
+                },
+                dataSource: {
+                    type: "external",
+                    qtiDataPath: "texts/qti_grade_3_data.json",
+                    startingArticleId: "article_101001",
+                    autoLoadMode: "fill-grid",
+                    maxArticles: 16
+                },
+                debug: {
+                    testMode: true,
+                    testModeHotkey: "`"
+                },
+                assets: {
+                    boardImage: "assets/space_board_fullhd.webp"
+                }
+            };
+        }
+        
+        // Test Mode Functions
+        function toggleTestPanel() {
+            const panel = document.getElementById('test-mode-panel');
+            panel.classList.toggle('visible');
+            updateConfigPreview();
+        }
+
+        function updateConfigPreview() {
+            const preview = document.getElementById('config-preview');
+            if (!GAME_CONFIG) return;
+            
+            const previewData = {
+                articleId: GAME_CONFIG.dataSource.startingArticleId,
+                mode: GAME_CONFIG.contentGranularity.mode,
+                linearProgression: GAME_CONFIG.gameFlow.linearProgression,
+                showLockIcon: GAME_CONFIG.visualSettings.lockedTile.showLockIcon,
+                lockIcon: GAME_CONFIG.visualSettings.lockedTile.lockIcon,
+                confettiEnabled: GAME_CONFIG.confettiSettings.enabled
+            };
+            
+            preview.textContent = JSON.stringify(previewData, null, 2);
+        }
+
+        async function applyTestConfig() {
+            // Get values from UI
+            const articleDropdown = document.getElementById('test-article-dropdown');
+            const articleId = articleDropdown ? articleDropdown.value : GAME_CONFIG.dataSource.startingArticleId;
+            const contentMode = document.getElementById('test-content-mode').value;
+            const showLockIcon = document.getElementById('test-show-lock-icon').checked;
+            const showCheckmark = document.getElementById('test-show-checkmark').checked;
+            const lockIcon = document.getElementById('test-lock-icon').value;
+            const linearProgression = document.getElementById('test-linear-progression').checked;
+            const confettiEnabled = document.getElementById('test-confetti').checked;
+            
+            // Timer settings
+            const timerEnabled = document.getElementById('test-timer-enabled').checked;
+            const timerDuration = parseInt(document.getElementById('test-timer-duration').value) || 30;
+            const timerAllowSkip = document.getElementById('test-timer-allow-skip').checked;
+            
+            // Pass threshold
+            const passThreshold = parseInt(document.getElementById('test-pass-threshold').value) || 90;
+
+            // Update config
+            // KEEP the existing article sequence from config, don't override it
+            // Only change if user explicitly selected a different article
+            const currentFirstArticle = GAME_CONFIG.dataSource.articleSequence 
+                ? GAME_CONFIG.dataSource.articleSequence[0] 
+                : articleId;
+            
+            if (articleId !== currentFirstArticle) {
+                // User changed the article - use single article
+                console.log(`📝 Test mode: Changing from ${currentFirstArticle} to ${articleId}`);
+                GAME_CONFIG.dataSource.articleSequence = [articleId];
+            } else {
+                // Keep existing sequence - user just changing mode/settings
+                console.log(`📝 Test mode: Keeping article sequence:`, GAME_CONFIG.dataSource.articleSequence);
+            }
+            
+            GAME_CONFIG.contentGranularity.mode = contentMode;
+            GAME_CONFIG.visualSettings.lockedTile.showLockIcon = showLockIcon;
+            GAME_CONFIG.visualSettings.completedTile.showCheckmark = showCheckmark;
+            GAME_CONFIG.visualSettings.lockedTile.lockIcon = lockIcon;
+            GAME_CONFIG.gameFlow.linearProgression = linearProgression;
+            GAME_CONFIG.confettiSettings.enabled = confettiEnabled;
+            
+            // Apply timer settings
+            if (!GAME_CONFIG.readingTimerSettings) {
+                GAME_CONFIG.readingTimerSettings = {};
+            }
+            GAME_CONFIG.readingTimerSettings.enabled = timerEnabled;
+            GAME_CONFIG.readingTimerSettings.durationSeconds = timerDuration;
+            GAME_CONFIG.readingTimerSettings.allowSkip = timerAllowSkip;
+            
+            // Apply pass threshold
+            GAME_CONFIG.gameFlow.passThresholdPercent = passThreshold;
+
+            console.log('Test mode: Applying new config:', GAME_CONFIG);
+            
+            // Reload the game with new settings
+            try {
+                const storyData = await loadStoryDataFromQTI(GAME_CONFIG);
+                console.log('Test mode: Story loaded:', storyData.title);
+                console.log('Test mode: Sections:', storyData.sections.length, 'Quiz questions:', storyData.quizQuestions.length);
+                
+                // Clear old game state
+                document.getElementById('tiles-overlay').innerHTML = '';
+                document.getElementById('locks-overlay').innerHTML = '';
+                
+                // Recreate game instance
+                game = new SpaceReadingGame(GAME_CONFIG, storyData);
+                
+                updateConfigPreview();
+                alert(`✅ Story loaded: ${storyData.title}\n\nTotal sections: ${storyData.sections.length}\nQuiz questions: ${storyData.quizQuestions.length}\nTiles: ${game.activeTiles.length}\nMode: ${contentMode}`);
+            } catch (error) {
+                console.error('Test mode: Error loading story:', error);
+                alert(`❌ Error loading story: ${error.message}\n\nCheck console for details.`);
+            }
+        }
+
+        function resetToDefaults() {
+            if (confirm('Reset all settings to defaults?')) {
+                location.reload();
+            }
+        }
+
+        async function initTestMode() {
+            if (!GAME_CONFIG || !GAME_CONFIG.debug || !GAME_CONFIG.debug.testMode) {
+                console.log('Test mode disabled in config');
+                return;
+            }
+
+            // Show test toggle button
+            const toggleBtn = document.getElementById('test-toggle-btn');
+            if (toggleBtn) {
+                toggleBtn.classList.remove('hidden');
+            }
+
+            // Set up keyboard hotkey
+            const hotkey = GAME_CONFIG.debug.testModeHotkey || '`';
+            document.addEventListener('keydown', (e) => {
+                if (e.key === hotkey) {
+                    e.preventDefault();
+                    toggleTestPanel();
+                }
+            });
+
+            // Load ALL available articles for the dropdown
+            try {
+                const qtiData = await loadQTIData(GAME_CONFIG.dataSource.qtiDataPath);
+                const allArticles = getAvailableArticles(qtiData);
+                
+                // Update badge with count
+                const badge = document.getElementById('article-count-badge');
+                if (badge) {
+                    badge.textContent = `${allArticles.length} stories`;
+                }
+                
+                // Categorize articles by title patterns
+                const categories = {
+                    'Classic Tales': [],
+                    'Animals & Nature': [],
+                    'Human Body': [],
+                    'Space & Astronomy': [],
+                    'Ancient Rome': [],
+                    'American History': [],
+                    'Native Americans': [],
+                    'Light & Sound': [],
+                    'Other Science': [],
+                    'Other Stories': []
+                };
+                
+                allArticles.forEach(article => {
+                    const title = article.title.toLowerCase();
+                    const id = article.identifier;
+                    
+                    if (title.includes('aladdin') || title.includes('alice') || title.includes('open road')) {
+                        categories['Classic Tales'].push(article);
+                    } else if (title.includes('fish') || title.includes('amphibian') || title.includes('reptile') || 
+                               title.includes('bird') || title.includes('mammal') || title.includes('animal') ||
+                               title.includes('vertebrate') || title.includes('invertebrate') || title.includes('classify') ||
+                               title.includes('warm-blooded') || title.includes('cold-blooded') || title.includes('goodall')) {
+                        categories['Animals & Nature'].push(article);
+                    } else if (title.includes('skeletal') || title.includes('muscular') || title.includes('nervous') ||
+                               title.includes('digestive') || title.includes('respiratory') || title.includes('circulatory') ||
+                               title.includes('eye') || title.includes('vision') || title.includes('ear') || title.includes('hearing') ||
+                               title.includes('body') || title.includes('brain')) {
+                        categories['Human Body'].push(article);
+                    } else if (title.includes('sun') || title.includes('moon') || title.includes('planet') ||
+                               title.includes('solar') || title.includes('space') || title.includes('star') ||
+                               title.includes('galaxy') || title.includes('asteroid') || title.includes('comet') ||
+                               title.includes('mercury') || title.includes('venus') || title.includes('mars') ||
+                               title.includes('jupiter') || title.includes('saturn') || title.includes('outer')) {
+                        categories['Space & Astronomy'].push(article);
+                    } else if (title.includes('rome') || title.includes('roman') || title.includes('romulus') ||
+                               title.includes('pompeii') || title.includes('julius') || title.includes('caesar') ||
+                               title.includes('gladiator') || title.includes('colosseum')) {
+                        categories['Ancient Rome'].push(article);
+                    } else if (title.includes('colony') || title.includes('colonies') || title.includes('jamestown') ||
+                               title.includes('plymouth') || title.includes('pilgrim') || title.includes('american')) {
+                        categories['American History'].push(article);
+                    } else if (title.includes('native') || title.includes('pueblo') || title.includes('lakota') ||
+                               title.includes('chinook') || title.includes('iroquois')) {
+                        categories['Native Americans'].push(article);
+                    } else if (title.includes('light') || title.includes('sound') || title.includes('wave') ||
+                               title.includes('reflection') || title.includes('refraction') || title.includes('vibration')) {
+                        categories['Light & Sound'].push(article);
+                    } else if (title.includes('matter') || title.includes('energy') || title.includes('force') ||
+                               title.includes('motion') || title.includes('magnet') || title.includes('electric')) {
+                        categories['Other Science'].push(article);
+                    } else {
+                        categories['Other Stories'].push(article);
+                    }
+                });
+                
+                // Populate dropdown with categorized articles
+                const dropdown = document.getElementById('test-article-dropdown');
+                if (dropdown) {
+                    let html = '';
+                    for (const [category, articles] of Object.entries(categories)) {
+                        if (articles.length > 0) {
+                            html += `<optgroup label="${category} (${articles.length})">`;
+                            articles.forEach(article => {
+                                const selected = article.identifier === GAME_CONFIG.dataSource.startingArticleId ? 'selected' : '';
+                                html += `<option value="${article.identifier}" ${selected}>${article.title}</option>`;
+                            });
+                            html += '</optgroup>';
+                        }
+                    }
+                    dropdown.innerHTML = html;
+                    dropdown.size = 10; // Show 10 items at once (scrollable)
+                    console.log(`✅ Populated categorized dropdown with ${allArticles.length} articles`);
+                }
+                
+                // Set up search filter
+                const searchInput = document.getElementById('test-article-search');
+                if (searchInput && dropdown) {
+                    searchInput.addEventListener('input', (e) => {
+                        const query = e.target.value.toLowerCase();
+                        const options = dropdown.querySelectorAll('option');
+                        const optgroups = dropdown.querySelectorAll('optgroup');
+                        
+                        // Show/hide options based on search
+                        options.forEach(option => {
+                            const text = option.textContent.toLowerCase();
+                            const value = option.value.toLowerCase();
+                            const match = text.includes(query) || value.includes(query);
+                            option.style.display = match ? '' : 'none';
+                        });
+                        
+                        // Show/hide optgroups if all their options are hidden
+                        optgroups.forEach(group => {
+                            const visibleOptions = group.querySelectorAll('option:not([style*="display: none"])');
+                            group.style.display = visibleOptions.length > 0 ? '' : 'none';
+                        });
+                    });
+                }
+            } catch (error) {
+                console.error('Failed to load articles for test mode:', error);
+            }
+
+            // Populate UI with current config values
+            // (Dropdown is populated in the article loading section above)
+            if (document.getElementById('test-content-mode')) {
+                document.getElementById('test-content-mode').value = GAME_CONFIG.contentGranularity.mode;
+            }
+            if (document.getElementById('test-show-lock-icon')) {
+                document.getElementById('test-show-lock-icon').checked = GAME_CONFIG.visualSettings.lockedTile.showLockIcon;
+            }
+            if (document.getElementById('test-show-checkmark')) {
+                document.getElementById('test-show-checkmark').checked = GAME_CONFIG.visualSettings.completedTile.showCheckmark;
+            }
+            if (document.getElementById('test-lock-icon')) {
+                document.getElementById('test-lock-icon').value = GAME_CONFIG.visualSettings.lockedTile.lockIcon;
+            }
+            if (document.getElementById('test-linear-progression')) {
+                document.getElementById('test-linear-progression').checked = GAME_CONFIG.gameFlow.linearProgression;
+            }
+            if (document.getElementById('test-confetti')) {
+                document.getElementById('test-confetti').checked = GAME_CONFIG.confettiSettings.enabled;
+            }
+            
+            // Initialize timer settings from config
+            const timerSettings = GAME_CONFIG.readingTimerSettings || {};
+            if (document.getElementById('test-timer-enabled')) {
+                document.getElementById('test-timer-enabled').checked = timerSettings.enabled !== false;
+            }
+            if (document.getElementById('test-timer-duration')) {
+                document.getElementById('test-timer-duration').value = timerSettings.durationSeconds || 30;
+            }
+            if (document.getElementById('test-timer-allow-skip')) {
+                document.getElementById('test-timer-allow-skip').checked = timerSettings.allowSkip === true;
+            }
+            
+            // Initialize pass threshold from config
+            if (document.getElementById('test-pass-threshold')) {
+                document.getElementById('test-pass-threshold').value = GAME_CONFIG.gameFlow.passThresholdPercent || 90;
+            }
+
+            console.log(`🧪 Test Mode enabled! Press '${hotkey}' to toggle panel or click 🔧 button`);
+        }
+
+        window.addEventListener('DOMContentLoaded', async () => {
+            console.log('🎮 Game starting...');
+            
+            try {
+                GAME_CONFIG = await loadConfig();
+                console.log('✅ Game config loaded:', GAME_CONFIG);
+                console.log(`📍 Starting article: ${GAME_CONFIG.dataSource.startingArticleId}`);
+                console.log(`🔄 Auto-load mode: ${GAME_CONFIG.dataSource.autoLoadMode}`);
+                
+                // Load story data based on config
+                const storyData = await loadStoryDataFromQTI(GAME_CONFIG);
+                console.log('✅ Story data loaded:', storyData);
+                
+                if (storyData.sections && storyData.quizQuestions) {
+                    console.log(`📊 Total sections: ${storyData.sections.length}, Total quiz: ${storyData.quizQuestions.length}`);
+                }
+                if (storyData.articles) {
+                    console.log(`📚 Loaded ${storyData.articles.length} articles`);
+                }
+                
+                game = new SpaceReadingGame(GAME_CONFIG, storyData);
+                console.log(`✅ Game initialized with ${game.activeTiles.length} tiles`);
+                
+                // Initialize test mode UI
+                initTestMode();
+                console.log('💡 TIP: Press \` (backtick) key to open Test Mode panel');
+            } catch (error) {
+                console.error('❌ Game initialization error:', error);
+                alert(`Game failed to load: ${error.message}\n\nCheck console for details.`);
+            }
+        });
+    </script>
+</body>
+</html>
+

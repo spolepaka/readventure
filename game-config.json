@@ -1,0 +1,178 @@
+{
+  "gameVersion": "2.0",
+  "gameName": "Readventure",
+  "currentTheme": "space",
+  
+  "contentGranularity": {
+    "mode": "full-text-per-tile",
+    "description": "How content is distributed across tiles",
+    "modes": {
+      "one-question-per-tile": "Each tile has one section with one guiding question (current)",
+      "all-questions-one-tile": "All guiding questions in one tile, quiz in another",
+      "full-text-per-tile": "Each tile contains full text + all guiding questions + quiz",
+      "custom": "Custom mapping defined in tileContentMapping"
+    },
+    "numberOfSectionTiles": 4,
+    "numberOfQuizTiles": 1,
+    "showFullPassageBeforeQuiz": true
+  },
+
+  "tileLayout": {
+    "gridSize": {
+      "rows": 4,
+      "columns": 4,
+      "description": "Total grid dimensions - 16 tiles available"
+    },
+    "tilePathPattern": "linear-horizontal",
+    "description": "Tiles are automatically generated based on story data. Pattern determines path through tiles.",
+    "availablePatterns": {
+      "linear-horizontal": "Fill row by row, left to right",
+      "linear-vertical": "Fill column by column, top to bottom",
+      "snake": "Zigzag pattern through grid",
+      "spiral": "Spiral from outside to center"
+    },
+    "gridAlignment": {
+      "width": "62vmin",
+      "height": "62vmin",
+      "top": "51.8%",
+      "left": "50.4%",
+      "gap": "5.4%",
+      "description": "CSS values for aligning the grid overlay with background image"
+    }
+  },
+
+  "gameFlow": {
+    "linearProgression": true,
+    "description": "If true, tiles unlock one at a time. If false, all tiles available",
+    "allowSkipTiles": false,
+    "requireCorrectAnswerToProgress": false,
+    "showScoreDuringGame": false,
+    "firstTileUnlockedOnStart": true,
+    "enableBackButton": true,
+    "passThresholdPercent": 90,
+    "passThresholdDescription": "Minimum accuracy % required to unblur the tile. If not met, tile stays blurred but next tile still unlocks."
+  },
+
+  "visualSettings": {
+    "lockedTile": {
+      "blurAmount": "8px",
+      "brightness": 0.6,
+      "backgroundColor": "rgba(0, 0, 0, 0.3)",
+      "showLockIcon": true,
+      "lockIcon": "🔒",
+      "lockIconSize": "2.5em",
+      "lockIconColor": "#ffd700"
+    },
+    "completedTile": {
+      "removeBlur": true,
+      "showCheckmark": false,
+      "checkmarkIcon": "✓"
+    },
+    "hoverEffect": {
+      "enabled": true,
+      "scale": 1.05,
+      "transitionDuration": "0.3s"
+    },
+    "tileStyle": {
+      "borderRadius": "15px",
+      "cursor": "pointer",
+      "cursorLocked": "not-allowed"
+    }
+  },
+
+  "scoringSettings": {
+    "totalQuestionsCalculation": "auto",
+    "description": "auto = sum of section questions + quiz questions, or specify a number",
+    "scoreMessages": [
+      { "minPercentage": 100, "message": "Perfect score! You're a reading superstar! 🌟" },
+      { "minPercentage": 75, "message": "Excellent work! Keep it up! 🎉" },
+      { "minPercentage": 50, "message": "Good job! Practice makes perfect! 👍" },
+      { "minPercentage": 0, "message": "Nice try! Let's read it again! 📚" }
+    ],
+    "showPercentageScore": false,
+    "showNumericScore": true
+  },
+
+  "feedbackSettings": {
+    "showFeedbackModal": true,
+    "modalAnimation": "modalPop",
+    "feedbackIcons": {
+      "correct": "✓",
+      "incorrect": "✗"
+    },
+    "feedbackTitles": {
+      "correct": "Correct!",
+      "incorrect": "Not Quite!"
+    },
+    "disableChoicesAfterSelection": true,
+    "highlightSelectedAnswer": true
+  },
+
+  "readingTimerSettings": {
+    "enabled": true,
+    "durationSeconds": 30,
+    "allowSkip": false,
+    "onlyForGuidingQuestions": true,
+    "description": "Countdown timer before guiding questions appear, giving students time to read"
+  },
+
+  "confettiSettings": {
+    "enabled": true,
+    "particleCount": 150,
+    "duration": 10000,
+    "colors": ["#ff6b6b", "#4ecdc4", "#45b7d1", "#ffd93d", "#6c5ce7", "#a29bfe"],
+    "particleSize": {
+      "min": 2,
+      "max": 8
+    }
+  },
+
+  "assets": {
+    "boardImage": "assets/space_board_fullhd.webp",
+    "boardImageAlt": "Space Game Board"
+  },
+
+  "ui": {
+    "theme": {
+      "primaryColor": "#667eea",
+      "secondaryColor": "#f093fb",
+      "backgroundColor": "#0a0e27",
+      "textColor": "#ffffff",
+      "correctColor": "#4caf50",
+      "incorrectColor": "#f44336",
+      "infoColor": "#64b5f6",
+      "quizColor": "#ba68c8"
+    },
+    "fontFamily": "'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif",
+    "buttonStyle": "gradient",
+    "borderStyle": "rounded"
+  },
+
+  "accessibility": {
+    "keyboardNavigation": false,
+    "screenReaderSupport": false,
+    "highContrastMode": false,
+    "focusIndicators": false,
+    "description": "Accessibility features (not yet implemented)"
+  },
+
+  "debug": {
+    "showGridBorders": false,
+    "showTileIndices": false,
+    "logStateChanges": false,
+    "testMode": true,
+    "testModeHotkey": "`"
+  },
+
+  "dataSource": {
+    "type": "external",
+    "description": "external = load from QTI JSON file",
+    "qtiDataPath": "texts/qti_grade_3_data.json",
+    "startingArticleId": "article_101001",
+    "autoLoadMode": "fill-grid",
+    "description_autoLoadMode": "fill-grid = automatically load as many articles as needed to fill all 16 tiles, manual = only load articles specified in articleSequence",
+    "maxArticles": 16,
+    "description_maxArticles": "Maximum number of articles to load (prevents loading all 131 articles)"
+  }
+}
+
