@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Readventure - Space Adventure</title>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="loader">
+    <span class="loader-text">Loading Readventure...</span>
+  </div>
+
+  <div id="game-container">
+    <!-- Board Screen -->
+    <div id="board-screen">
+      <img id="board-image" src="/assets/space_board_fullhd.webp" alt="Space Game Board">
+      <div id="tiles-overlay"></div>
+      <div id="locks-overlay"></div>
+    </div>
+
+    <!-- Reading Screen -->
+    <div id="reading-screen" class="screen">
+      <div class="passage-panel">
+        <h2 id="passage-title">Section Title</h2>
+        <div id="passage-content"></div>
+      </div>
+      <div class="question-panel">
+        <!-- Activity Timer Panel -->
+        <div id="activity-timer-panel">
+          <div class="timer-icon">💡</div>
+          <div class="timer-title">Activity</div>
+          <div class="timer-instruction">Read the section carefully. Your guiding question will appear in...</div>
+          <div class="timer-countdown" id="timer-countdown">30</div>
+          <button class="timer-continue-btn" id="timer-continue-btn" onclick="window.game?.skipTimer()">Continue</button>
+        </div>
+        
+        <!-- Question Content (hidden during timer) -->
+        <div id="question-content">
+          <h3 id="question-prompt">Question goes here?</h3>
+          <div id="choices-container"></div>
+          <div class="nav-buttons">
+            <button class="btn secondary" onclick="window.game?.backToBoard()">Back to Board</button>
+            <button class="btn confirm-btn" id="confirm-btn" onclick="window.game?.confirmAnswer()" disabled>Confirm Answer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+      <div class="quiz-container">
+        <!-- Quiz Intro -->
+        <div id="quiz-intro" class="quiz-intro">
+          <h2>📚 Complete Story</h2>
+          <div class="full-passage" id="full-passage-content"></div>
+          <button class="btn" onclick="window.game?.startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div id="quiz-questions-container"></div>
+
+        <div class="nav-buttons" id="quiz-nav" style="display: none;">
+          <button class="btn secondary" onclick="window.game?.backToBoard()">Back to Board</button>
+          <button class="btn" id="quiz-next-btn" onclick="window.game?.nextQuizQuestion()" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+      <canvas id="confetti-canvas"></canvas>
+      <div class="results-content">
+        <h2>🎉 Amazing Work! 🎉</h2>
+        <div class="score-display" id="final-score">0/8</div>
+        <div class="score-message" id="score-message">Great job!</div>
+        <button class="btn" onclick="window.game?.playAgain()">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Tile Results Screen -->
+    <div id="tile-results-screen" class="screen">
+      <div class="tile-results-content" id="tile-results-content">
+        <h2 class="tile-results-title" id="tile-results-title">📊 Section Complete!</h2>
+        <div class="tile-results-article-name" id="tile-results-article"></div>
+        
+        <!-- Pass/Fail Status -->
+        <div class="pass-fail-status" id="pass-fail-status">
+          <span class="pass-fail-icon" id="pass-fail-icon">✓</span>
+          <span class="pass-fail-text" id="pass-fail-text">You passed!</span>
+        </div>
+        
+        <!-- Guiding Questions Section -->
+        <div class="results-section">
+          <h3 class="results-section-title">Guiding Questions</h3>
+          <div class="results-boxes" id="guiding-results-boxes"></div>
+        </div>
+        
+        <!-- Quiz Questions Section -->
+        <div class="results-section" id="quiz-results-section">
+          <h3 class="results-section-title">Quiz Questions</h3>
+          <div class="results-boxes" id="quiz-results-boxes"></div>
+        </div>
+        
+        <!-- Total Section -->
+        <div class="results-total-section">
+          <h3 class="results-total-title">Total</h3>
+          <div class="results-stat-row">
+            <span class="results-stat-label">Correct Answers</span>
+            <span class="results-stat-value" id="tile-correct-count">0 of 0</span>
+          </div>
+          <div class="results-stat-row">
+            <span class="results-stat-label">Accuracy</span>
+            <span class="results-stat-value accuracy" id="tile-accuracy">0%</span>
+          </div>
+        </div>
+        
+        <button class="btn tile-results-continue" onclick="window.game?.continueTileResults()">Continue</button>
+      </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal">
+      <div class="feedback-content" id="feedback-content">
+        <div class="feedback-icon" id="feedback-icon">✓</div>
+        <div class="feedback-title" id="feedback-title">Correct!</div>
+        <div class="feedback-text" id="feedback-text"></div>
+        <button class="btn" onclick="window.game?.closeFeedback()">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+
+
+
+

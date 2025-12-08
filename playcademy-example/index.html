@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readventure - Turn Reading into Adventure</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0a1a;
+            --bg-grid: #12122a;
+            --primary: #00d4ff;
+            --primary-glow: rgba(0, 212, 255, 0.3);
+            --secondary: #ff6b35;
+            --text: #ffffff;
+            --text-muted: #8892b0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Grid Background */
+        .grid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridPulse 4s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: float 15s infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 2D Gaming Style Logo */
+        .logo {
+            display: inline-block;
+            position: relative;
+            padding: 1.5rem 3rem;
+            border: 4px solid var(--text);
+            background: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: -8px;
+            bottom: -8px;
+            border: 4px solid var(--primary);
+            z-index: -1;
+        }
+
+        .logo-text {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            letter-spacing: 0.3rem;
+            color: var(--text);
+            text-shadow: 
+                4px 4px 0 var(--primary),
+                -1px -1px 0 var(--bg-dark);
+        }
+
+        .logo-icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-size: 2rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Tagline */
+        .tagline {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        /* Theme Selection */
+        .theme-section {
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+
+        .themes-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Theme Card */
+        .theme-card {
+            position: relative;
+            width: 280px;
+            height: 200px;
+            border: 3px solid var(--text-muted);
+            background: rgba(255, 255, 255, 0.02);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .theme-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--primary-glow);
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 212, 255, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .theme-card:hover::before {
+            opacity: 1;
+        }
+
+        .theme-card.available {
+            border-color: var(--primary);
+        }
+
+        .theme-card.coming-soon {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .theme-card.coming-soon:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: var(--text-muted);
+        }
+
+        .theme-preview {
+            width: 100%;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .theme-preview.space {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        }
+
+        .theme-preview.jungle {
+            background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+        }
+
+        .theme-preview.ocean {
+            background: linear-gradient(135deg, #005c97 0%, #363795 100%);
+        }
+
+        .theme-preview-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        .theme-info {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .theme-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .theme-status {
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .theme-card.coming-soon .theme-status {
+            color: var(--text-muted);
+        }
+
+        /* Play Button Overlay */
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .theme-card:not(.coming-soon):hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .play-btn:hover {
+            background: var(--text);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            z-index: 10;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+            }
+
+            .theme-card {
+                width: 240px;
+                height: 180px;
+            }
+        }
+
+        /* Loading animation for page */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-text {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            color: var(--primary);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+        <span class="loader-text">LOADING...</span>
+    </div>
+
+    <!-- Animated Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <span class="logo-text">READVENTURE</span>
+            </div>
+            <p class="tagline">Turn Reading into Adventure</p>
+        </div>
+
+        <!-- Theme Selection -->
+        <div class="theme-section">
+            <h2 class="section-title">Select Your World</h2>
+            
+            <div class="themes-grid">
+                <!-- Space Theme - Available -->
+                <div class="theme-card available" onclick="launchGame('space')">
+                    <div class="theme-preview space">
+                        <span class="theme-preview-icon">🚀</span>
+                    </div>
+                    <div class="theme-info">
+                        <h3 class="theme-name">SPACE</h3>
+                        <span class="theme-status">★ Play Now</span>
+                    </div>
+                    <div class="play-overlay">
+                        <button class="play-btn">► PLAY</button>
+                    </div>
+                </div>
+
+                <!-- Jungle Theme - Coming Soon -->
+                <div class="theme-card coming-soon">
+                    <div class="theme-preview jungle">
+                        <span class="theme-preview-icon">🌴</span>
+                    </div>
+                    <div class="theme-info">
+                        <h3 class="theme-name">JUNGLE</h3>
+                        <span class="theme-status">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Ocean Theme - Coming Soon -->
+                <div class="theme-card coming-soon">
+                    <div class="theme-preview ocean">
+                        <span class="theme-preview-icon">🌊</span>
+                    </div>
+                    <div class="theme-info">
+                        <h3 class="theme-name">OCEAN</h3>
+                        <span class="theme-status">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        A <a href="https://playcademy.net" target="_blank">Playcademy</a> Game
+    </div>
+
+    <script>
+        // Hide loader when page is ready
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Launch game with selected theme
+        function launchGame(theme) {
+            if (theme === 'space') {
+                // Add a nice transition
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.3s ease';
+                
+                setTimeout(() => {
+                    window.location.href = '/game.html';
+                }, 300);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                launchGame('space');
+            }
+        });
+    </script>
+</body>
+</html>
