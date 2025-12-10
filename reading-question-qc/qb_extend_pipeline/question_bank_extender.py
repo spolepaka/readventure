@@ -66,7 +66,9 @@ class GeneratedQuestion:
 
 # JSON Schema for structured output (following Anthropic structured outputs spec)
 # See: https://platform.claude.com/docs/en/build-with-claude/structured-outputs
-QUESTION_SCHEMA = {
+
+# MCQ Schema - Multiple Choice Questions
+MCQ_SCHEMA = {
     "type": "object",
     "properties": {
         "sibling_questions": {
@@ -121,11 +123,11 @@ QUESTION_SCHEMA = {
                     },
                     "quality_verification": {
                         "type": "object",
-                        "description": "Self-check of quality requirements",
+                        "description": "Self-check of quality requirements matching QC pipeline checks",
                         "properties": {
                             "homogeneity_check": {
                                 "type": "string",
-                                "description": "Confirmation that all choices belong to the same category"
+                                "description": "Confirmation that all choices belong to the same conceptual category"
                             },
                             "specificity_check": {
                                 "type": "string",
@@ -133,10 +135,22 @@ QUESTION_SCHEMA = {
                             },
                             "length_check": {
                                 "type": "string",
-                                "description": "Confirmation that correct answer is not the longest"
+                                "description": "Word counts for each choice confirming balance within 10%"
+                            },
+                            "semantic_distance_check": {
+                                "type": "string",
+                                "description": "Confirmation that no distractors are synonyms or too close to correct answer"
+                            },
+                            "single_correct_check": {
+                                "type": "string",
+                                "description": "Confirmation that only one answer is defensible as correct"
+                            },
+                            "uniqueness_check": {
+                                "type": "string",
+                                "description": "Cross-reference: 'Sibling [N]: asks about [X] - differs from ORIGINAL (which asks [Y]) and Sibling [other numbers] (which ask [Z])'"
                             }
                         },
-                        "required": ["homogeneity_check", "specificity_check", "length_check"],
+                        "required": ["homogeneity_check", "specificity_check", "length_check", "semantic_distance_check", "single_correct_check", "uniqueness_check"],
                         "additionalProperties": False
                     }
                 },
@@ -152,6 +166,136 @@ QUESTION_SCHEMA = {
     },
     "required": ["sibling_questions"],
     "additionalProperties": False
+}
+
+# SR Schema - Short Response Questions
+SR_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "sibling_questions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "question": {
+                        "type": "string",
+                        "description": "The short response question text including any instructions"
+                    },
+                    "expected_response": {
+                        "type": "string",
+                        "description": "Sample complete response showing what a full-credit answer includes"
+                    },
+                    "key_details": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Key details or concepts that should be included in the response"
+                    },
+                    "scoring_notes": {
+                        "type": "string",
+                        "description": "Guidance on what constitutes a complete answer"
+                    },
+                    "dok_justification": {
+                        "type": "string",
+                        "description": "Explanation of why this question is at the specified DOK level"
+                    },
+                    "template_adaptation": {
+                        "type": "string",
+                        "description": "Brief explanation of how the original was adapted"
+                    }
+                },
+                "required": [
+                    "question", "expected_response", "key_details",
+                    "scoring_notes", "dok_justification", "template_adaptation"
+                ],
+                "additionalProperties": False
+            }
+        }
+    },
+    "required": ["sibling_questions"],
+    "additionalProperties": False
+}
+
+# MP Schema - Multipart Questions
+MP_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "sibling_questions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "part_a": {
+                        "type": "object",
+                        "properties": {
+                            "question": {"type": "string"},
+                            "option_1": {"type": "string"},
+                            "option_2": {"type": "string"},
+                            "option_3": {"type": "string"},
+                            "option_4": {"type": "string"},
+                            "correct_answer": {"type": "string", "enum": ["A", "B", "C", "D"]},
+                            "option_1_explanation": {"type": "string"},
+                            "option_2_explanation": {"type": "string"},
+                            "option_3_explanation": {"type": "string"},
+                            "option_4_explanation": {"type": "string"},
+                            "DOK": {"type": "integer"}
+                        },
+                        "required": ["question", "option_1", "option_2", "option_3", "option_4",
+                                   "correct_answer", "option_1_explanation", "option_2_explanation",
+                                   "option_3_explanation", "option_4_explanation", "DOK"],
+                        "additionalProperties": False
+                    },
+                    "part_b": {
+                        "type": "object",
+                        "properties": {
+                            "question": {"type": "string"},
+                            "option_1": {"type": "string"},
+                            "option_2": {"type": "string"},
+                            "option_3": {"type": "string"},
+                            "option_4": {"type": "string"},
+                            "correct_answer": {"type": "string", "enum": ["A", "B", "C", "D"]},
+                            "option_1_explanation": {"type": "string"},
+                            "option_2_explanation": {"type": "string"},
+                            "option_3_explanation": {"type": "string"},
+                            "option_4_explanation": {"type": "string"},
+                            "DOK": {"type": "integer"}
+                        },
+                        "required": ["question", "option_1", "option_2", "option_3", "option_4",
+                                   "correct_answer", "option_1_explanation", "option_2_explanation",
+                                   "option_3_explanation", "option_4_explanation", "DOK"],
+                        "additionalProperties": False
+                    },
+                    "connection_rationale": {
+                        "type": "string",
+                        "description": "Explanation of how Part B builds on Part A"
+                    },
+                    "dok_justification": {
+                        "type": "string",
+                        "description": "Explanation of why the combined question reaches the target DOK"
+                    },
+                    "standard_assessment": {
+                        "type": "string",
+                        "description": "How this multipart question assesses the target standard"
+                    },
+                    "template_adaptation": {
+                        "type": "string",
+                        "description": "Brief explanation of how the original was adapted"
+                    }
+                },
+                "required": ["part_a", "part_b", "connection_rationale", 
+                           "dok_justification", "standard_assessment", "template_adaptation"],
+                "additionalProperties": False
+            }
+        }
+    },
+    "required": ["sibling_questions"],
+    "additionalProperties": False
+}
+
+# Map question types to their schemas
+SCHEMA_MAP = {
+    "MCQ": MCQ_SCHEMA,
+    "SR": SR_SCHEMA,
+    "MP": MP_SCHEMA
 }
 
 
@@ -173,17 +317,22 @@ class QuestionBankExtender:
         # Load CCSS descriptions
         self.ccss_descriptions = self._load_ccss_descriptions()
     
-    def _load_prompts(self) -> Dict[int, str]:
-        """Load DOK-specific prompts from JSON file."""
+    def _load_prompts(self) -> Dict[str, str]:
+        """Load prompts indexed by question_type and DOK from JSON file.
+        
+        Returns: Dict mapping 'question_type_dok' (e.g., 'MCQ_2') -> prompt string
+        """
         prompts = {}
         if PROMPTS_FILE.exists():
             with open(PROMPTS_FILE, 'r', encoding='utf-8') as f:
                 prompt_data = json.load(f)
                 for item in prompt_data:
                     if item.get('function') == 'sibling_generation':
+                        question_type = item.get('question_type', 'MCQ')
                         dok = item.get('dok')
-                        prompts[dok] = item.get('prompt', '')
-            print(f"Loaded {len(prompts)} DOK-specific prompts")
+                        key = f"{question_type}_{dok}"
+                        prompts[key] = item.get('prompt', '')
+            print(f"Loaded {len(prompts)} prompts for different question types and DOK levels")
         else:
             print(f"WARNING: Prompts file not found at {PROMPTS_FILE}")
         return prompts
@@ -274,12 +423,18 @@ class QuestionBankExtender:
         num_siblings: int
     ) -> str:
         """
-        Build DOK-specific prompt for generating sibling questions for a single question.
+        Build question-type and DOK-specific prompt for generating sibling questions.
         
         Args:
             question: The original question to create siblings for
             num_siblings: Number of siblings to generate
         """
+        # Extract question type (default to MCQ)
+        question_type = question.get('question_type', 'MCQ').upper()
+        # Normalize question type
+        if question_type not in ['MCQ', 'SR', 'MP']:
+            question_type = 'MCQ'
+        
         # Extract DOK level (default to 2 if not specified)
         dok = question.get('DOK', 2)
         try:
@@ -287,18 +442,32 @@ class QuestionBankExtender:
         except (ValueError, TypeError):
             dok = 2
         
-        # Cap DOK at 3 (we only have prompts for 1, 2, 3)
-        if dok > 3:
-            dok = 3
-        if dok < 1:
-            dok = 1
+        # Cap DOK based on question type
+        # MCQ: DOK 1-3, SR: DOK 1-4, MP: DOK 2-3
+        if question_type == 'MCQ':
+            if dok > 3:
+                dok = 3
+            if dok < 1:
+                dok = 1
+        elif question_type == 'SR':
+            if dok > 4:
+                dok = 4
+            if dok < 1:
+                dok = 1
+        elif question_type == 'MP':
+            if dok > 3:
+                dok = 3
+            if dok < 2:
+                dok = 2
         
-        # Get the DOK-specific prompt template
-        prompt_template = self.prompts.get(dok)
+        # Get the question-type and DOK-specific prompt template
+        prompt_key = f"{question_type}_{dok}"
+        prompt_template = self.prompts.get(prompt_key)
         if not prompt_template:
-            # Fallback to DOK 2 if not found
-            prompt_template = self.prompts.get(2, '')
-            print(f"  WARNING: No prompt for DOK {dok}, using DOK 2")
+            # Fallback to MCQ DOK 2 if not found
+            fallback_key = "MCQ_2"
+            prompt_template = self.prompts.get(fallback_key, '')
+            print(f"  WARNING: No prompt for {prompt_key}, using {fallback_key}")
         
         # Extract CCSS and get description
         standard_code = question.get('CCSS', '')
@@ -562,6 +731,14 @@ DOK 3 Requirements for siblings:
         
         prompt = self.build_generation_prompt(questions, question_category, num_siblings)
         
+        # Determine question type from first question (assuming batch is same type)
+        question_type = questions[0].get('question_type', 'MCQ').upper() if questions else 'MCQ'
+        if question_type not in SCHEMA_MAP:
+            question_type = 'MCQ'
+        
+        # Select appropriate schema
+        schema = SCHEMA_MAP[question_type]
+        
         try:
             # Use the structured outputs beta API
             # See: https://platform.claude.com/docs/en/build-with-claude/structured-outputs
@@ -574,7 +751,7 @@ DOK 3 Requirements for siblings:
                 ],
                 output_format={
                     "type": "json_schema",
-                    "schema": QUESTION_SCHEMA
+                    "schema": schema
                 }
             )
             
@@ -598,10 +775,7 @@ DOK 3 Requirements for siblings:
                 end_idx = start_idx + num_siblings
                 
                 for j, gen_q in enumerate(sibling_questions[start_idx:end_idx]):
-                    # Extract quality verification if present
-                    quality_verification = gen_q.get('quality_verification', {})
-                    
-                    # Build output record matching QC pipeline format
+                    # Build base record with common metadata
                     record = {
                         # Preserve original metadata
                         'article_id': article_id,
@@ -616,19 +790,7 @@ DOK 3 Requirements for siblings:
                         'course': orig_q.get('course', ''),
                         'module': orig_q.get('module', ''),
                         'section_number': orig_q.get('section_number', ''),
-                        
-                        # Generated content
-                        'question': gen_q.get('question', ''),
-                        'question_type': 'MCQ',
-                        'option_1': gen_q.get('option_1', ''),
-                        'option_2': gen_q.get('option_2', ''),
-                        'option_3': gen_q.get('option_3', ''),
-                        'option_4': gen_q.get('option_4', ''),
-                        'correct_answer': gen_q.get('correct_answer', ''),
-                        'option_1_explanation': gen_q.get('option_1_explanation', ''),
-                        'option_2_explanation': gen_q.get('option_2_explanation', ''),
-                        'option_3_explanation': gen_q.get('option_3_explanation', ''),
-                        'option_4_explanation': gen_q.get('option_4_explanation', ''),
+                        'question_type': question_type,
                         
                         # Preserve metadata from original
                         'DOK': orig_q.get('DOK', ''),
@@ -639,13 +801,81 @@ DOK 3 Requirements for siblings:
                         # Tracking
                         'parent_question_id': orig_q.get('question_id', ''),
                         'generation_timestamp': datetime.now().isoformat(),
-                        
-                        # Quality verification from generation
                         'template_adaptation': gen_q.get('template_adaptation', ''),
-                        'homogeneity_check': quality_verification.get('homogeneity_check', ''),
-                        'specificity_check': quality_verification.get('specificity_check', ''),
-                        'length_check': quality_verification.get('length_check', '')
                     }
+                    
+                    # Add question-type specific fields
+                    if question_type == 'MCQ':
+                        quality_verification = gen_q.get('quality_verification', {})
+                        record.update({
+                            'question': gen_q.get('question', ''),
+                            'option_1': gen_q.get('option_1', ''),
+                            'option_2': gen_q.get('option_2', ''),
+                            'option_3': gen_q.get('option_3', ''),
+                            'option_4': gen_q.get('option_4', ''),
+                            'correct_answer': gen_q.get('correct_answer', ''),
+                            'option_1_explanation': gen_q.get('option_1_explanation', ''),
+                            'option_2_explanation': gen_q.get('option_2_explanation', ''),
+                            'option_3_explanation': gen_q.get('option_3_explanation', ''),
+                            'option_4_explanation': gen_q.get('option_4_explanation', ''),
+                            'cognitive_process': gen_q.get('cognitive_process', ''),
+                            'homogeneity_check': quality_verification.get('homogeneity_check', ''),
+                            'specificity_check': quality_verification.get('specificity_check', ''),
+                            'length_check': quality_verification.get('length_check', ''),
+                            'semantic_distance_check': quality_verification.get('semantic_distance_check', ''),
+                            'single_correct_check': quality_verification.get('single_correct_check', ''),
+                            'uniqueness_check': quality_verification.get('uniqueness_check', '')
+                        })
+                    
+                    elif question_type == 'SR':
+                        key_details = gen_q.get('key_details', [])
+                        record.update({
+                            'question': gen_q.get('question', ''),
+                            'expected_response': gen_q.get('expected_response', ''),
+                            'key_details': json.dumps(key_details) if isinstance(key_details, list) else key_details,
+                            'scoring_notes': gen_q.get('scoring_notes', ''),
+                            'dok_justification': gen_q.get('dok_justification', ''),
+                            # Clear MCQ-specific fields
+                            'option_1': '', 'option_2': '', 'option_3': '', 'option_4': '',
+                            'correct_answer': '', 
+                            'option_1_explanation': '', 'option_2_explanation': '',
+                            'option_3_explanation': '', 'option_4_explanation': '',
+                        })
+                    
+                    elif question_type == 'MP':
+                        part_a = gen_q.get('part_a', {})
+                        part_b = gen_q.get('part_b', {})
+                        record.update({
+                            # Part A
+                            'question': part_a.get('question', ''),
+                            'option_1': part_a.get('option_1', ''),
+                            'option_2': part_a.get('option_2', ''),
+                            'option_3': part_a.get('option_3', ''),
+                            'option_4': part_a.get('option_4', ''),
+                            'correct_answer': part_a.get('correct_answer', ''),
+                            'option_1_explanation': part_a.get('option_1_explanation', ''),
+                            'option_2_explanation': part_a.get('option_2_explanation', ''),
+                            'option_3_explanation': part_a.get('option_3_explanation', ''),
+                            'option_4_explanation': part_a.get('option_4_explanation', ''),
+                            'part_a_dok': part_a.get('DOK', ''),
+                            # Part B
+                            'part_b_question': part_b.get('question', ''),
+                            'part_b_option_1': part_b.get('option_1', ''),
+                            'part_b_option_2': part_b.get('option_2', ''),
+                            'part_b_option_3': part_b.get('option_3', ''),
+                            'part_b_option_4': part_b.get('option_4', ''),
+                            'part_b_correct_answer': part_b.get('correct_answer', ''),
+                            'part_b_option_1_explanation': part_b.get('option_1_explanation', ''),
+                            'part_b_option_2_explanation': part_b.get('option_2_explanation', ''),
+                            'part_b_option_3_explanation': part_b.get('option_3_explanation', ''),
+                            'part_b_option_4_explanation': part_b.get('option_4_explanation', ''),
+                            'part_b_dok': part_b.get('DOK', ''),
+                            # Connection info
+                            'connection_rationale': gen_q.get('connection_rationale', ''),
+                            'dok_justification': gen_q.get('dok_justification', ''),
+                            'standard_assessment': gen_q.get('standard_assessment', ''),
+                        })
+                    
                     generated.append(record)
             
             return generated
@@ -680,19 +910,36 @@ DOK 3 Requirements for siblings:
         output_path = Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
-        # Define fieldnames
+        # Define fieldnames (includes all fields for MCQ, SR, and MP question types)
         fieldnames = [
+            # Common metadata
             'article_id', 'article_title', 'section_id', 'section_sequence',
             'question_id', 'question_category', 'stimulus_id',
             'passage_text', 'lexile_level', 'course', 'module', 'section_number',
             'question', 'question_type',
+            # MCQ / Part A fields
             'option_1', 'option_2', 'option_3', 'option_4',
             'correct_answer',
             'option_1_explanation', 'option_2_explanation',
             'option_3_explanation', 'option_4_explanation',
+            # Common metadata continued
             'DOK', 'difficulty', 'CCSS', 'grade',
             'parent_question_id', 'generation_timestamp',
-            'template_adaptation', 'homogeneity_check', 'specificity_check', 'length_check'
+            'template_adaptation', 'cognitive_process',
+            # MCQ quality verification
+            'homogeneity_check', 'specificity_check', 'length_check',
+            'semantic_distance_check', 'single_correct_check', 'uniqueness_check',
+            # SR-specific fields
+            'expected_response', 'key_details', 'scoring_notes', 'dok_justification',
+            # MP-specific Part B fields
+            'part_a_dok',
+            'part_b_question',
+            'part_b_option_1', 'part_b_option_2', 'part_b_option_3', 'part_b_option_4',
+            'part_b_correct_answer',
+            'part_b_option_1_explanation', 'part_b_option_2_explanation',
+            'part_b_option_3_explanation', 'part_b_option_4_explanation',
+            'part_b_dok',
+            'connection_rationale', 'standard_assessment'
         ]
         
         # Check if output file exists (for appending)
