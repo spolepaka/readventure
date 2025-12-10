@@ -740,32 +740,47 @@ DOK 3 Requirements for siblings:
         schema = SCHEMA_MAP[question_type]
         
         try:
-            # Use the structured outputs beta API
+            # Use the structured outputs beta API with streaming for long requests
             # See: https://platform.claude.com/docs/en/build-with-claude/structured-outputs
-            response = self.client.beta.messages.create(
+            # Streaming is required for max_tokens > ~16K to avoid timeout errors
+            
+            collected_text = ""
+            stop_reason = None
+            
+            # Use raw streaming with beta headers
+            with self.client.messages.stream(
                 model=MODEL,
-                max_tokens=16000,
-                betas=[STRUCTURED_OUTPUTS_BETA],
+                max_tokens=64000,  # Claude Sonnet 4.5 max output
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
-                output_format={
-                    "type": "json_schema",
-                    "schema": schema
+                extra_headers={
+                    "anthropic-beta": STRUCTURED_OUTPUTS_BETA
+                },
+                extra_body={
+                    "output_format": {
+                        "type": "json_schema",
+                        "schema": schema
+                    }
                 }
-            )
+            ) as stream:
+                for text in stream.text_stream:
+                    collected_text += text
+                # Get final message for stop_reason
+                final_message = stream.get_final_message()
+                stop_reason = final_message.stop_reason
             
             # Check for refusal or max_tokens
-            if response.stop_reason == "refusal":
+            if stop_reason == "refusal":
                 print(f"  WARNING: Claude refused the request")
                 return []
-            if response.stop_reason == "max_tokens":
+            if stop_reason == "max_tokens":
                 print(f"  WARNING: Response truncated due to max_tokens limit")
                 return []
             
-            # Parse the JSON response directly from content
+            # Parse the JSON response from collected stream
             generated = []
-            response_data = json.loads(response.content[0].text)
+            response_data = json.loads(collected_text)
             sibling_questions = response_data.get("sibling_questions", [])
             
             # Map generated questions back to original questions
