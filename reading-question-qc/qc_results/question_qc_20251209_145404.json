@@ -1,0 +1,482 @@
+[
+  {
+    "question_id": "guiding_21014_302001",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fJ46Zr42VCoXVFpu'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3h9g4QfGNJBf8Xohu'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fF5aACW3NEqBbtRR'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3frYMcAfEfqdyEgML'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3emZPXVRoEZnWxGN9'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3eTTBJnbZfnuDMmq8'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3gpLCdPtwTzQR2qEQ'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fzECfnkgNyXxbHb5'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:53:59.562914"
+  },
+  {
+    "question_id": "guiding_21015_302002",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3exxf5FA6wPzaAHj2'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Let me evaluate each incorrect choice:\n\nA) \"bored\" - This is a plausible distractor. A student might confuse the mother's lack of enthusiasm or her passive acceptance of the stranger with boredom, especially if they misread her welcoming behavior as indifferent.\n\nB) \"angry\" - This is a plausible distractor. A student could reasonably infer that the mother might be angry about her husband never mentioning having a brother, which is explicitly stated as surprising information. The passage says \"her husband had never told her about having a brother,\" which could trigger anger in some contexts.\n\nC) \"excited\" - This is a plausible distractor. A student might interpret the mother's welcoming behavior and her belief in the stranger's promises about helping Aladdin become a merchant as excitement, especially since this could mean good fortune for her son.\n\nAll three incorrect choices represent reasonable misinterpretations of the mother's emotional state based on different aspects of the passage. None are obviously wrong or completely unrelated to the question.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3f4feaRj26V2eSve6'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3f98XBKQ5SPfTNpmd'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ehb3nJyEPzaf7d5R'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ekKQHUVQxqGu4RPp'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The passage explicitly states \"She felt very surprised because her husband had never told her about having a brother.\" This directly answers the question about how Aladdin's mother feels about meeting the stranger. \n\nA) bored - No support in the passage\nB) angry - No support in the passage; she \"welcomed the man into their home\" which contradicts anger\nC) excited - No support in the passage; welcoming someone is different from being excited\nD) surprised - Explicitly stated in the text\n\nOnly answer D has direct textual support, making it the only defensibly correct answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3epXofAQjZaVomx7J'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:54:04.340807"
+  },
+  {
+    "question_id": "guiding_21016_302003",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3giPKgQeE8QxhcVsb'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ef71PqhiaeSQSyKD'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fBrsf6LT1f5exhEJ'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fWTGBg2yAHaVxLNz'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ea9hiSGtYJidQe3T'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fAcceP9ZMHhA6kDV'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3f4RFSLsHPrHjmLLJ'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3euFCVSCHxh6x4Yg5'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:53:59.302727"
+  },
+  {
+    "question_id": "guiding_21017_302004",
+    "question_type": "MCQ",
+    "overall_score": 0.0,
+    "total_checks_passed": 0,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3f5ewbPgZi5M2Nyqm'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fSz1wGmFJV51xPi7'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ejKfmvTMmMukyF8t'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fPm4T7pAq6fz5gF8'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3egMMC7Zu3p1VQGxE'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fdQDHaVBbv6H4S9b'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fyEfVJEtkH4Cq1TE'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fC72gbsxqPYAo6vx'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:53:59.207306"
+  },
+  {
+    "question_id": "quiz_302005",
+    "question_type": "MCQ",
+    "overall_score": 0.0,
+    "total_checks_passed": 0,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3ehqPfeDxw4qLr8hX'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3gnMNHrCkNvPAtH9R'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3eg6ey5J9QXJEJChi'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fSjZPzgbYNVapJET'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3gyWV49DW2V4agN9J'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3fKJ7LN32GB3EbKfN'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3epHCCDKHH4AaG6do'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3f7PjYCCfm1KqLfKW'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:53:59.451679"
+  },
+  {
+    "question_id": "quiz_302006",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3pk5qdjHZVGW3PMsW'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rFNEBMobU88tVro3'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qM3bHukYc7RQu3wC'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qhssffCC43eiQmT1'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qHpQqXvTzQVA8ZtG'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qkbq9HwwJUihanGf'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3pdt298GKZeUPLanE'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3r6gsavCBNyysbEq8'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:54:01.487619"
+  },
+  {
+    "question_id": "quiz_302007",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qcffZKB3GXDVB4Pg'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rmd4QhEpfmqK1pL8'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rzGH5vPFsPdqHf4V'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qrJimJRvzVq2BxUc'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3q3BqAhSDgh3wKGGq'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3r4xJ36ucWHTJvxM1'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3r8RTtwAUXj4HJxov'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3qbgMjivxuGbbS3qM'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:54:01.746436"
+  },
+  {
+    "question_id": "quiz_302008",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rS2j1RTsp2FvZjfP'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rdvuCs6dz3THf2GX'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rSmyTko2rrxbGar2'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rms9ZnV7UmUQvs6m'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rKLXNn6CjU9ZyDH1'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rS2qSFFWVyY6vCL4'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3s9SWrzfKa2zCinRm'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwE3rNon6TnJ1gvUZB4L'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:54:01.606112"
+  }
+]

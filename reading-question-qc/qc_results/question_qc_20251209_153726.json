@@ -1,0 +1,482 @@
+[
+  {
+    "question_id": "guiding_21014_302001",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices (baker, tailor, farmer, teacher) are single-word nouns representing occupations. They follow identical grammatical structure with no variation in form or length.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (baker, farmer, teacher) are plausible distractors. They are all common occupations that would be familiar to students and represent the type of work a poor family's father might do. A student who skimmed the passage or didn't read carefully could reasonably confuse these occupations with \"tailor,\" especially since they are all traditional working-class jobs. None of the choices are obviously wrong or completely unrelated to the context of the story.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices (baker, tailor, farmer, teacher) are occupations/professions, which directly corresponds to the question asking about what Aladdin's father \"worked as.\" This creates perfect conceptual homogeneity - all choices address the same type of concept (occupations) and are plausible answers to the specific question being asked.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices (baker, tailor, farmer, teacher) are common occupations described with single, simple nouns at the same level of specificity. They are all general profession terms without technical jargon or varying levels of detail.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.1 by asking students to identify a key detail explicitly stated in the text (\"His father worked as a tailor\"). This requires students to ask and answer questions about key details from the passage, which is exactly what the standard requires. The answer is clearly found in the text and represents a factual detail that demonstrates reading comprehension.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear, precise, and unambiguous. It asks a straightforward factual question about Aladdin's father's occupation, which is explicitly stated in the first sentence of the passage: \"His father worked as a tailor, making clothes for people.\" There are no ambiguous pronouns, double negatives, or complex sentence structures. The language is simple and direct, appropriate for the grade level. The question has only one possible correct interpretation and answer.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The passage explicitly states \"His father worked as a tailor, making clothes for people.\" This directly supports answer choice B (tailor) and clearly contradicts all other options. There are no ambiguities, contradictions, or need for unsupported inferences - the text directly provides the answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Aladdin's father worked as a\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, or structural elements that need verification. It is simply asking about content from the passage without referencing specific locations within it.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:31:40.165872"
+  },
+  {
+    "question_id": "guiding_21015_302002",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices are single-word adjectives describing emotional states: \"bored,\" \"angry,\" \"excited,\" and \"surprised.\" They follow identical grammatical structure as past participles used as adjectives, making them perfectly parallel.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices are plausible distractors. \"Excited\" could reasonably fool students who focus on the mother welcoming the stranger and believing his promises about helping Aladdin become wealthy. \"Angry\" might appeal to students who think about her husband never mentioning this brother, which could cause suspicion or upset. \"Bored\" is less strong but could attract students who misread the emotional tone or think she's indifferent to the situation. Each choice represents a reasonable misinterpretation of the mother's emotional state and relates logically to the scenario.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices (bored, angry, excited, surprised) are emotions/feelings that describe a character's emotional state. The question asks about how Aladdin's mother \"feels,\" and all options are appropriate emotional responses someone might have when meeting a stranger. This is a clear example of good homogeneity where all choices belong to the same conceptual category of emotions/feelings.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices (bored, angry, excited, surprised) are basic, single-word emotions at the same level of specificity. They are all common, general emotional states without technical terminology or varying levels of complexity.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.3 by asking students to describe a character's feelings/emotions (Aladdin's mother feeling surprised), which is explicitly stated in the text. This requires students to identify and describe character traits/emotions, which is a core component of describing characters as required by the standard. The answer is directly supported by the text: \"She felt very surprised because her husband had never told her about having a brother.\"",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks specifically about Aladdin's mother's feelings when meeting the stranger, and the passage explicitly states \"She felt very surprised because her husband had never told her about having a brother.\" The question uses straightforward language, has no ambiguous pronouns, and directly corresponds to information provided in the text. Answer choice D (surprised) is clearly supported by the passage, making this a well-constructed comprehension question.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The passage explicitly states \"She felt very surprised\" making D the only defensible answer, while A, B, and C have no textual support.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Which word describes how Aladdin's mother most likely feels about meeting the stranger?\" does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, or page numbers. It simply asks about content that can be found within the passage without referencing specific structural elements. Since there are no passage references to verify, this meets the criteria.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:32:26.330004"
+  },
+  {
+    "question_id": "guiding_21016_302003",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each is a complete sentence with a subject and predicate in simple present tense. A) \"a stranger visits...\", B) \"they climb...\", C) \"words make...\", and D) \"Aladdin gathers...\" all maintain consistent structure as declarative sentences describing actions or events.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice D \"Aladdin gathers dry sticks for a fire\" is obviously wrong as it describes a completely ordinary, realistic activity that happens in everyday life. Any reasonable student would recognize that gathering sticks for a fire is not a fantasy element. This makes it a bad distractor with no educational value rather than representing a plausible misconception about what makes a story fantasy.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices are story events/plot elements that could potentially serve as evidence for determining whether a story is fantasy or not. Each choice presents a specific occurrence from the narrative that the reader might use to categorize the genre - some are realistic events (A, B, D) while one is clearly fantastical (C), but they all function as the same type of textual evidence for genre identification.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity - each describes a concrete, simple action or event using everyday language: \"a stranger visits,\" \"they climb up,\" \"words make the earth split,\" and \"Aladdin gathers dry sticks.\" None are overly technical, complex, or significantly more detailed than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The question tests genre identification (recognizing fantasy elements) rather than text structure skills that RL.3.5 typically addresses. The magical/supernatural elements focus doesn't align with structural analysis of stories.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks students to identify what makes this story a fantasy, which has a straightforward meaning. The answer choices are distinct and easily distinguishable: A) ordinary event, B) realistic physical activity, C) magical/supernatural event, D) mundane task. There are no ambiguous pronouns, double negatives, or overly complex structures. The language is precise and age-appropriate. Students would clearly understand they need to identify the fantastical element that distinguishes this from realistic fiction.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Only choice C identifies a supernatural/magical element (words causing earth to split) that definitively marks the story as fantasy, while A, B, and D all describe realistic events that could occur in any genre.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"The reader can tell this story is a fantasy because\" does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, or specific quotes that need verification. Since there are no passage references to check, this meets the criteria for returning 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:33:16.387123"
+  },
+  {
+    "question_id": "guiding_21017_302004",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: infinitive verb phrase + noun phrase + subordinate clause. Each begins with an infinitive verb (show, interest, teach, make), followed by \"readers\" as the object, and then additional descriptive information. The structures are parallel and consistent.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices are plausible distractors. Choice A could fool students who focus on the literal plot elements (finding a magic lamp) rather than the deeper theme. Choice B might appeal to students who notice the emphasis on gems and treasures throughout the story. Choice D could mislead students who misinterpret the ending, thinking the magician is the victim rather than recognizing his greed as the cause of his downfall. Each choice relates logically to story elements while missing the central moral lesson.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices address the same conceptual category - the author's purpose or intent in writing the story. Each option presents a different possible reason why the story was written: to show how something is done (A), to generate interest in a topic (B), to teach a moral lesson (C), or to evoke sympathy (D). These are all legitimate types of authorial purposes.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity. Each choice presents a general purpose or theme using simple, accessible language: \"show readers how magic lamps are found,\" \"interest readers in collecting gems,\" \"teach readers that greed can lead to trouble,\" and \"make readers feel sorry for the magician.\" They all follow the same structure of describing the author's intent with comparable detail and complexity.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The question tests author's purpose/theme rather than point of view, which is what RL.3.6 typically requires. There's a mismatch between the skill being assessed and the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question \"This story was most likely written to\" is clear and unambiguous. It asks students to identify the author's primary purpose, which is a standard reading comprehension skill. The question structure is straightforward with no ambiguous pronouns, double negatives, or overly complex language. The four answer choices are distinct and cover different possible purposes (instructional, promotional, moral lesson, and emotional response). Students would clearly understand they need to determine the main reason the author wrote this story based on the events and outcome described in the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Answer C is clearly supported by the story's plot structure and moral lesson, while the other choices either misinterpret the story's focus or lack textual support.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question contains no specific passage references to verify. It's a general question about the story's purpose without citing particular paragraphs, lines, sections, or other structural elements.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:34:07.503302"
+  },
+  {
+    "question_id": "quiz_302005",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: \"Aladdin will + verb phrase.\" Each option uses the same subject (Aladdin), auxiliary verb (will), and is followed by a main verb with appropriate complements. The structures are consistently parallel despite minor variations in the verb phrases that follow.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All incorrect choices are plausible distractors. Choice B (becoming a ruler) is a reasonable misconception since \"richer than any king\" could be misinterpreted as literally becoming royalty. Choice C (finding gold coins) represents a literal interpretation that students might make about wealth in a magical cave. Choice D (meeting kings) shows another literal misreading of the phrase involving kings. Each incorrect option demonstrates common ways students might misunderstand figurative language about extreme wealth.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices are interpretations of what the phrase \"richer than any king in the world\" means in the context of the story. Each choice offers a different possible meaning: A) focuses on wealth/money, B) interprets it as political power, C) suggests literal treasure, and D) implies social connections. While they vary in their specific interpretations, they all belong to the same conceptual category of \"possible meanings of the phrase.\"",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a straightforward interpretation of what \"richer than any king in the world\" might mean, using simple, accessible language. They all offer concrete explanations (having lots of money, becoming a ruler, finding gold coins, meeting kings) without any being significantly more complex, technical, or detailed than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly tests RL.3.4 by requiring students to interpret a figurative phrase and distinguish its nonliteral meaning from literal interpretations, which is exactly what the standard requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks students to interpret a specific phrase (\"richer than any king in the world\") from the story, which is a straightforward comprehension task. The question structure is simple and direct, with no ambiguous pronouns, double negatives, or overly complex language. The phrase being analyzed is clearly identified with quotation marks, and students would understand they need to determine what this figurative expression means. The answer choices provide distinct interpretations, making the task clear and focused.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A correctly interprets the idiomatic meaning of \"richer than any king\" as having immense wealth. Options B, C, and D either misunderstand the idiom (confusing wealth with rulership or being too literal) or are completely off-topic. There is exactly one defensible correct answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not contain any specific structural passage references such as paragraph numbers, line numbers, section titles, or page numbers. While it does reference a quote from \"the story\" and mentions what \"the magician tells Aladdin,\" these are content references rather than structural passage references. Since there are no specific passage structure references to verify, the criteria are met.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:35:04.237554"
+  },
+  {
+    "question_id": "quiz_302006",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Choice B contains a grammatical error (\"won't to go\" should be \"won't go\"), making it structurally inconsistent with the other grammatically correct complete sentences. This creates an unfair disadvantage as the error makes it an obviously incorrect choice regardless of content knowledge.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors that relate to events in the Aladdin story. Choice B involves Aladdin's reluctance about the cave, C relates to his actions while inside the cave with treasures, and D involves the magical elements (ring) that are central to the plot. Each represents a logical misconception about the sequence of events that leads to Aladdin being trapped, making them believable wrong answers for students who partially remember the story.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices represent different possible actions or behaviors by Aladdin that could serve as reasons/causes for the magician trapping him in the cave. They are all potential causal explanations for the same event, making them homogeneous in terms of conceptual category - they all address \"why the magician trapped Aladdin\" with different possible motivations/triggers.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices use simple, direct language to describe Aladdin's actions/behaviors at the same level of detail and complexity",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.3 by asking students to identify what causes the magician's action (trapping Aladdin), which requires understanding character motivation and how one character's actions contribute to story events. Each answer choice represents a different character action that could lead to the consequence, requiring students to analyze the cause-and-effect relationship between character behaviors and plot developments.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks for a specific cause-and-effect relationship in the Aladdin story that students would recognize. The question uses simple, direct language with no ambiguous pronouns, double negatives, or overly complex structure. Each answer choice presents a distinct scenario, making it easy for students to identify the correct reason why the magician traps Aladdin. The question has one clear interpretation and is appropriately written for the grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage is listed as \"nan\" (not available/null), which means there is no text provided to validate any of the answer choices. Without a passage, it's impossible to determine which answer is correct or to verify that exactly one answer is defensibly correct. All four choices could potentially be correct depending on which version of the Aladdin story is being referenced, but without the specific passage, none can be validated as the single correct answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What causes the magician to trap Aladdin in the cave?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or other structural elements. Since there are no passage references to verify, the criteria are met by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:35:47.903273"
+  },
+  {
+    "question_id": "quiz_302007",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each is a complete sentence that begins with an imperative verb or statement about a general principle. A) \"Magic can solve...\" (declarative sentence), B) \"Be careful about...\" (imperative sentence), C) \"Hard work is...\" (declarative sentence), and D) \"Always listen to...\" (imperative sentence). While there's a mix of declarative and imperative sentences, they all function as complete statements expressing advice or lessons, maintaining consistent grammatical structure for the purpose of answering the question about the story's central message.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All incorrect choices are plausible distractors. Choice A reflects a common misconception about fairy tales focusing on magical solutions. Choice C represents a reasonable but incorrect interpretation emphasizing work ethic themes. Choice D is logically related since Aladdin's mother likely would have warned against the magician, making this a believable lesson students might extract. Each option relates to legitimate themes that could be found in the Aladdin story and represents reasonable misinterpretations of the central message.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices represent potential moral lessons or themes that could be derived from the Aladdin story. Each option presents a different life lesson or message (about magic/belief, trust/strangers, hard work/success, and parental advice), but they all belong to the same conceptual category of moral teachings or central messages from the story.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity - they are all general moral lessons or themes expressed in simple, accessible language. Each choice presents a broad life lesson (about magic/belief, trust/strangers, work/success, or parental advice) without being overly technical, complex, or detailed. None stand out as significantly more or less specific than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.2 by asking students to identify the central message/lesson (theme) of the story, and all answer choices present viable themes that would require text analysis to evaluate.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"this story about Aladdin and the magician\" but no passage is provided (marked as \"nan\"). Students cannot determine the central message or lesson without access to the actual story being referenced. The pronoun \"this\" is ambiguous since it doesn't clearly refer to any provided text. While the question structure itself is clear, the missing passage makes it impossible for students to answer accurately.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "No passage is provided (shows \"nan\"), making it impossible to determine which answer choice is correct or to verify that only one answer is defensibly correct based on the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What is the central message or lesson of this story about Aladdin and the magician?\" does not contain any specific structural references to passage elements such as paragraph numbers, line numbers, section titles, specific quotes, or page numbers. Since there are no passage references to verify, the criteria are met by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:36:37.482157"
+  },
+  {
+    "question_id": "quiz_302008",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern of adverbial clauses beginning with subordinating conjunctions (\"So,\" \"Because,\" \"To,\" \"So\") followed by complete clauses. While the specific conjunctions vary (\"So,\" \"Because,\" \"To,\" \"So\"), they all function as purpose/reason clauses answering \"why\" in a grammatically parallel structure. The variation in conjunctions is appropriate and doesn't create unfair advantage since they all serve the same grammatical function of explaining motivation.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All incorrect choices are plausible distractors. Choice A (helping Aladdin become rich) relates to the magician's deceptive promises and could fool students who remember the magician offering wealth but miss his true motive. Choice B (truly being family) directly addresses the uncle deception and could confuse students who don't grasp that it's pretense. Choice D (taking him for a walk) connects to the magician leading Aladdin to the cave location, which students might remember as the surface action without understanding the deeper purpose. Each represents reasonable misconceptions about the magician's motivations.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character motivation question asking why the magician pretends to be Aladdin's uncle. All four answer choices provide possible motivations or reasons for the magician's deception: A) to help Aladdin become wealthy, B) because of family connection, C) to obtain the magic lamp, and D) to take Aladdin on a journey. Each choice addresses the \"why\" behind the character's actions, making them all motivational explanations that belong to the same conceptual category.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity. Each provides a clear, straightforward reason using simple language and similar sentence structure. They all explain the magician's motivation with comparable detail - none are overly technical, overly simple, or significantly more complex than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The question tests character motivation and plot details rather than the central message/moral and how it's conveyed, which is what RL.3.2 specifically requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear, precise, and unambiguous. It asks for a specific motivation (\"Why does the magician pretend to be Aladdin's uncle?\") with straightforward language that students would easily understand. There are no ambiguous pronouns, double negatives, or overly complex structures. The question has one clear interpretation and the answer choices are distinct and well-defined. Students familiar with the Aladdin story would understand exactly what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "No passage is provided (\"nan\"), making it impossible to verify that exactly one answer is defensibly correct based on textual evidence. Without the passage, multiple interpretations could potentially be valid.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Why does the magician pretend to be Aladdin's uncle?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or other structural elements. Since there are no passage references to verify, the criteria are met by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T15:37:26.724342"
+  }
+]

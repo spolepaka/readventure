@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-10T00:18:42.928849",
+  "input_file": "../outputs/extended_questions.csv",
+  "mode": "both",
+  "question_qc": {
+    "total": 20,
+    "passed": 12,
+    "failed": 8,
+    "pass_rate": 0.6,
+    "average_score": 0.74
+  },
+  "explanation_qc": {
+    "total": 80,
+    "passed": 48,
+    "failed": 32,
+    "pass_rate": 0.6,
+    "average_score": 0.8388888888888886
+  }
+}

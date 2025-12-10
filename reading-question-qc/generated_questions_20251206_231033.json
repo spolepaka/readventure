@@ -1,0 +1,55 @@
+[
+  {
+    "question_id": "story-1-q1",
+    "passage_id": "story-1",
+    "passage_text": "The old lighthouse stood alone on the rocky cliff, its beam sweeping across the dark waters every night without fail. For sixty years, keeper Thomas Marsh had climbed the spiral staircase each evening to light the lamp. His hands, weathered and strong, knew every step by heart.\n\nOne stormy November night, the lighthouse lamp flickered and nearly died. Thomas worked frantically, his arthritic fingers fumbling with the machinery. Below, he knew, ships were counting on that light. 'Not on my watch,' he muttered, and with one final effort, the light blazed back to life.\n\nThe next morning, the harbor master came with news: a cargo ship had made it safely to port, guided by the lighthouse beam during the worst of the storm. Thomas smiled quietly and began his climb up the stairs once more.",
+    "question_type": "MCQ",
+    "dok": 2,
+    "standard": "RL.3.3",
+    "generated_content": "```json\n{\n  \"question\": \"How does Thomas's emotional state change from the beginning to the end of the story?\",\n  \"choices\": {\n    \"A\": \"from content to worried\",\n    \"B\": \"from calm to frantic to satisfied\",\n    \"C\": \"from tired to energetic\",\n    \"D\": \"from confident to defeated\"\n  },\n  \"correct_answer\": \"B\",\n  \"DOK\": 2,\n  \"CCSS\": \"RL.9-10.3\",\n  \"template_adaptation\": \"I adapted the example's focus on character emotional progression by identifying Thomas's emotional journey through three distinct phases: his initial calm routine, his frantic struggle during the crisis, and his quiet satisfaction after learning of the ship's safe arrival.\",\n  \"cognitive_process\": \"Analyzing character emotional development and making inferences about feelings based on actions and context clues throughout the narrative sequence\",\n  \"rationale\": \"This requires DOK 2 reasoning because students must synthesize information from multiple parts of the text, infer emotions from character actions and dialogue, and trace the progression of feelings across the story's events rather than simply recalling stated facts.\"\n}\n```",
+    "prompt_used": "MCQ DOK 2",
+    "example_used": true,
+    "timestamp": "2025-12-06T23:10:40.568080",
+    "structured_content": {
+      "question": "How does Thomas's emotional state change from the beginning to the end of the story?",
+      "choices": {
+        "A": "from content to worried",
+        "B": "from calm to frantic to satisfied",
+        "C": "from tired to energetic",
+        "D": "from confident to defeated"
+      },
+      "correct_answer": "B",
+      "DOK": 2,
+      "CCSS": "RL.9-10.3",
+      "template_adaptation": "I adapted the example's focus on character emotional progression by identifying Thomas's emotional journey through three distinct phases: his initial calm routine, his frantic struggle during the crisis, and his quiet satisfaction after learning of the ship's safe arrival.",
+      "cognitive_process": "Analyzing character emotional development and making inferences about feelings based on actions and context clues throughout the narrative sequence",
+      "rationale": "This requires DOK 2 reasoning because students must synthesize information from multiple parts of the text, infer emotions from character actions and dialogue, and trace the progression of feelings across the story's events rather than simply recalling stated facts."
+    }
+  },
+  {
+    "question_id": "story-1-q2",
+    "passage_id": "story-1",
+    "passage_text": "The old lighthouse stood alone on the rocky cliff, its beam sweeping across the dark waters every night without fail. For sixty years, keeper Thomas Marsh had climbed the spiral staircase each evening to light the lamp. His hands, weathered and strong, knew every step by heart.\n\nOne stormy November night, the lighthouse lamp flickered and nearly died. Thomas worked frantically, his arthritic fingers fumbling with the machinery. Below, he knew, ships were counting on that light. 'Not on my watch,' he muttered, and with one final effort, the light blazed back to life.\n\nThe next morning, the harbor master came with news: a cargo ship had made it safely to port, guided by the lighthouse beam during the worst of the storm. Thomas smiled quietly and began his climb up the stairs once more.",
+    "question_type": "MCQ",
+    "dok": 1,
+    "standard": "RL.3.1",
+    "generated_content": "```json\n{\n  \"question\": \"What does Thomas Marsh do each evening?\",\n  \"choices\": {\n    \"A\": \"climbs the spiral staircase to light the lamp\",\n    \"B\": \"repairs the rocky cliff\",\n    \"C\": \"guides ships to port\",\n    \"D\": \"talks to the harbor master\"\n  },\n  \"correct_answer\": \"A\",\n  \"DOK\": 1,\n  \"CCSS\": \"RL.3.1\",\n  \"template_adaptation\": \"I adapted the example's 'What does the main character do at the beginning of the story?' structure to ask about Thomas Marsh's routine evening activity, maintaining the same question pattern and answer choice format with simple action phrases.\",\n  \"rationale\": \"The text explicitly states 'For sixty years, keeper Thomas Marsh had climbed the spiral staircase each evening to light the lamp,' making this a direct recall question requiring no inference.\"\n}\n```",
+    "prompt_used": "MCQ DOK 1",
+    "example_used": true,
+    "timestamp": "2025-12-06T23:10:45.222924",
+    "structured_content": {
+      "question": "What does Thomas Marsh do each evening?",
+      "choices": {
+        "A": "climbs the spiral staircase to light the lamp",
+        "B": "repairs the rocky cliff",
+        "C": "guides ships to port",
+        "D": "talks to the harbor master"
+      },
+      "correct_answer": "A",
+      "DOK": 1,
+      "CCSS": "RL.3.1",
+      "template_adaptation": "I adapted the example's 'What does the main character do at the beginning of the story?' structure to ask about Thomas Marsh's routine evening activity, maintaining the same question pattern and answer choice format with simple action phrases.",
+      "rationale": "The text explicitly states 'For sixty years, keeper Thomas Marsh had climbed the spiral staircase each evening to light the lamp,' making this a direct recall question requiring no inference."
+    }
+  }
+]

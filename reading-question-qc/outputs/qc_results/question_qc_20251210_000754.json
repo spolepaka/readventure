@@ -1,0 +1,1202 @@
+[
+  {
+    "question_id": "guiding_21014_302001_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each consists of two plural nouns connected by \"and\" (noun + and + noun). Specifically:\nA) travel and adventures\nB) food and shelter\nC) fancy clothes and jewelry\nD) books and school supplies\n\nWhile there is minor variation in that some nouns have adjective modifiers (C: \"fancy clothes,\" D: \"school supplies\"), this does not create an unfair structural inconsistency. The core pattern of \"noun phrase + and + noun phrase\" is maintained throughout all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (A, C, and D) are plausible distractors. They represent things that require money and could reasonably confuse a student who partially understands the story. A student might think: (A) the mother worked to fund Aladdin's adventures, (C) to provide luxuries for the family, or (D) to pay for Aladdin's education. These are all logically related to \"what a parent might work to provide for their child\" and aren't obviously wrong without knowing the specific context that Aladdin's family was poor and struggling with basic necessities. Each distractor has educational value in testing whether students understand the family's poverty and basic survival needs versus other possible expenditures.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices represent the same conceptual category: types of expenses or things that money can be spent on. Each option (travel/adventures, food/shelter, fancy clothes/jewelry, books/school supplies) represents a different category of expenditure that Aladdin's mother might have worked to afford. They are all potential objects of earning money for, making this a homogeneous set of choices addressing what the mother needed to provide financially.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices follow the same structural pattern: [category] and [category]. Each option presents two related items at a similar level of generality:\n- A) \"travel and adventures\" - two general leisure concepts\n- B) \"food and shelter\" - two basic necessities\n- C) \"fancy clothes and jewelry\" - two luxury items\n- D) \"books and school supplies\" - two education-related items\n\nAll choices are phrased at the same level of specificity (general categories rather than specific items), use parallel construction, and represent paired concepts of similar scope. None stands out as significantly more technical, detailed, or abstract than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are synonymous with or degree-variants of 'food and shelter'; they refer to luxuries (A, C) or education (D), not basic necessities.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.1 (Ask and answer questions about key details). The question asks students to identify a key detail from the text - specifically, what Aladdin's mother had to work for after his father died. This requires students to locate and recall explicit information from the passage, which is exactly what the standard requires. The DOK Level 1 designation is also appropriate as this is a straightforward recall question requiring students to find information directly stated in the text. All answer choices are plausible and test whether students can identify the specific detail mentioned in the passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. The pronouns are properly referenced (Aladdin's father, his mother), the sentence structure is straightforward, and the question asks a specific, understandable concept: what did Aladdin's mother need to earn money for after his father died. The answer choices are distinct and mutually exclusive, making it clear what is being asked. The language is appropriate and accessible for students who would be reading the Aladdin story.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage field is empty - there is no text provided to validate the answer against. Without passage content, it's impossible to determine if answer B (food and shelter) is the only defensibly correct answer or if other options could also be supported. The question cannot be properly validated without the source material.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"When Aladdin's father died, his mother had to work hard to earn money for\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, or structural elements. It is simply asking about content related to the story of Aladdin without referencing any particular location within a passage. According to the instructions, if the question does not contain passage references, the score should be 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T23:58:13.082670"
+  },
+  {
+    "question_id": "guiding_21015_302002_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices are single adjectives: \"patient,\" \"playful,\" \"angry,\" and \"thankful.\" They follow the same grammatical pattern and structure, with each being a one-word adjective that could describe someone's behavior or demeanor. This is consistent parallelism.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (A: patient, B: playful, D: thankful) are plausible distractors for this question about the magician's behavior in the Aladdin story. \"Patient\" could fool students who misremember the scene or confuse it with earlier parts where the magician might have been more controlled. \"Playful\" could appeal to students who misinterpret the magician's tone or associate magic with playfulness. \"Thankful\" relates logically to the context of receiving the lamp and could trap students who don't carefully read that Aladdin \"cannot hand him the lamp right away.\" Each option represents a reasonable emotion that could describe someone's behavior, making them educationally valuable distractors rather than throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices (patient, playful, angry, thankful) are emotional states or character traits that describe how someone acts or behaves. They all belong to the same conceptual category of descriptive adjectives for behavior/demeanor. The question asks how the magician acts, and all options appropriately address this by offering different possible behavioral descriptions.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are single-word adjectives describing emotional states or attitudes at the same level of specificity. \"Patient,\" \"playful,\" \"angry,\" and \"thankful\" are all common, straightforward descriptors of behavior/emotion that are equally accessible and concrete. None are overly technical, complex, or significantly more detailed than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors (patient, playful, thankful) are synonymous with or easily confusable with 'angry'; they are semantic opposites or unrelated moods.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.3, which requires students to describe characters and explain how their actions contribute to story events. The question asks students to describe the magician's character (specifically his emotional state/behavior) based on his actions when Aladdin cannot immediately hand him the lamp. This requires analyzing the character's behavior in response to a specific story event, which is precisely what the standard demands. The DOK Level 1 is appropriate as it asks for basic character description/identification rather than deeper analysis of how actions contribute to plot.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It has a specific subject (the magician), a clear action being evaluated (how he acts), a defined moment (when Aladdin cannot hand him the lamp right away), and asks for a straightforward descriptor (which word best describes). The pronouns \"him\" clearly refers to the magician, and \"the lamp\" is a specific object from the Aladdin story. The answer choices are distinct emotions/behaviors that are mutually exclusive. The sentence structure is simple and appropriate for elementary/middle grade students. There are no ambiguous pronouns, double negatives, or vague language that would create multiple interpretations.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because the passage itself is missing. Without the passage text, I cannot determine whether the magician's behavior when Aladdin cannot hand him the lamp is described in a way that makes \"angry\" (choice C) the only defensibly correct answer, or whether other options like \"patient,\" \"playful,\" or \"thankful\" could also be supported. The validation task requires comparing the answer choices against specific textual evidence, which is not provided.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not contain any specific passage references such as paragraph numbers, line numbers, section titles, or page numbers. It simply asks about content that should be found somewhere in the passage (how the magician acts when Aladdin cannot hand him the lamp right away). Since there are no structural references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T23:58:07.346454"
+  },
+  {
+    "question_id": "guiding_21016_302003_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.6,
+    "total_checks_passed": 6,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each is a verb phrase in past tense beginning with a verb and followed by additional information. Specifically:\n- A) traveled (verb) + prepositional phrase\n- B) promised (verb) + infinitive phrase\n- C) spoke (verb) + noun phrase + relative clause\n- D) climbed (verb) + prepositional phrase\n\nWhile choice C is notably longer due to the descriptive clause \"that made the sky turn dark,\" all choices maintain the fundamental structure of past tense verb + complement. The length difference in C is due to content (providing the fantasy element clue) rather than a shift in grammatical structure. This does not create an unfair advantage as the question specifically asks about identifying fantasy elements, making the additional descriptive content relevant rather than structurally inconsistent.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (A, B, D) are plausible distractors. They represent events that could reasonably occur in the Aladdin story but don't definitively indicate fantasy. A student who partially understands the concept of fantasy might confuse:\n- \"traveled from far away\" (A) - exotic settings are common in fantasy but also in realistic fiction\n- \"promised to help Aladdin\" (B) - promises/agreements happen in all genres\n- \"climbed up a steep mountain\" (D) - physical actions that occur in both realistic and fantasy stories\n\nThese choices test whether students understand that fantasy requires supernatural/impossible elements (like magic words darkening the sky), not just unusual or dramatic events. Each distractor has educational value in distinguishing fantasy from other genres.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The question asks what makes this story a fantasy. All choices should be elements that indicate fantasy genre. However, choices A, B, and D (traveled from far away, promised to help, climbed a mountain) are ordinary, realistic actions that could occur in any story type. Only choice C (spoke magic words that made the sky turn dark) is a supernatural/fantasy element. The choices span different conceptual categories: realistic actions vs. fantasy/supernatural elements.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option describes a simple, concrete action or event:\n- A) \"traveled from far away\" - simple action with basic descriptor\n- B) \"promised to help Aladdin\" - simple action with object\n- C) \"spoke magic words that made the sky turn dark\" - simple action with straightforward consequence\n- D) \"climbed up a steep mountain\" - simple action with basic descriptor\n\nWhile option C is slightly longer, it maintains the same casual, straightforward language level as the others. None use technical terminology, complex phrasing, or significantly different levels of detail. They all describe observable actions or events in plain, accessible language appropriate for the reading level.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Only option C clearly signals a fantasy element (supernatural magic), while A, B, and D describe ordinary actions that do not indicate fantasy. They are not synonymous with C nor equally supported.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The standard RL.3.5 requires students to refer to parts of stories, dramas, and poems when writing or speaking about a text, using terms like chapter, scene, and stanza, and to describe how each successive part builds on earlier sections. This is about understanding text structure and organization.\n\nHowever, this question is testing the student's ability to identify elements of the fantasy genre (magical/impossible events), which aligns more closely with RL.3.10 (reading and comprehending literature) or potentially RL.3.3 (describing characters and story elements). The question asks students to recognize what makes a story fantasy based on impossible/magical events (magic words making the sky turn dark), not to identify or use structural elements of texts or explain how parts of a story build on each other.\n\nThe question does not assess the assigned standard RL.3.5.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"this story\" without providing the passage/story itself. Students cannot answer the question because they don't have access to the text being referenced. While the question structure is clear and the answer choices are unambiguous, the missing passage makes it impossible for students to determine which answer is correct. This is a fundamental flaw that would confuse any student attempting to answer.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The question asks what indicates this is a fantasy story. Let me evaluate each choice:\n\nA) \"traveled from far away\" - This is realistic; people can travel from far away in real life\nB) \"promised to help Aladdin\" - This is realistic; people make promises in real life\nC) \"spoke magic words that made the sky turn dark\" - This is supernatural/impossible in reality; magic words causing the sky to darken is a clear fantasy element\nD) \"climbed up a steep mountain\" - This is realistic; people can climb steep mountains in real life\n\nOnly choice C describes something that cannot happen in reality and is definitively a fantasy element. The other three choices describe realistic actions that could occur in non-fantasy stories. There is exactly one defensibly correct answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"The reader can tell this story is a fantasy because the magician\" does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a general question about the content. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T23:59:08.838995"
+  },
+  {
+    "question_id": "guiding_21017_302004_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.5,
+    "total_checks_passed": 5,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: infinitive verb phrase (\"to\" + verb) followed by a noun phrase or clause. Specifically:\n- A) \"to become\" (infinitive) + noun phrase\n- B) \"to describe\" (infinitive) + noun phrase\n- C) \"to show\" (infinitive) + noun phrase/clause\n- D) \"to tell\" (infinitive) + noun phrase/clause\n\nAll choices maintain consistent structure as infinitive phrases expressing purpose, which is appropriate for completing \"This story was most likely written to ___\". The minor variation in what follows each infinitive (direct objects vs. clauses) does not create unfair advantage or disadvantage.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice D (\"tell readers about mountains in Persia\") appears to be too specific and geographic to be a plausible distractor for a story's main purpose. While the story may be set in Persia with mountains mentioned, this is clearly a setting detail rather than the author's purpose. This would be obviously wrong to most reasonable students as an author's purpose, making it a weak distractor. Choices A and B could be plausible if the story contains merchants, gardens, or gems as story elements that students might confuse with the main purpose, but D is too narrowly focused on a geographic/descriptive detail to represent a reasonable misconception about author's purpose.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is an author's purpose question asking why the story was written. All four answer choices represent different possible purposes for writing the text:\nA) to explain/teach (how to become a merchant)\nB) to describe (beauty of gardens and gems)\nC) to teach a lesson/moral (about impatience)\nD) to inform (about mountains in Persia)\n\nAll choices belong to the same conceptual category - they are all potential authorial purposes or reasons for writing the text. This is homogeneous.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity. Each option describes a potential purpose of the story using comparable detail:\n- A) \"explain how to become a merchant\" - specific purpose with concrete subject\n- B) \"describe the beauty of gardens and gems\" - specific purpose with concrete subjects\n- C) \"show readers that being impatient can cause problems\" - specific purpose with concrete lesson\n- D) \"tell readers about mountains in Persia\" - specific purpose with concrete subject\n\nAll choices follow the same structure: verb + purpose/topic with similar levels of detail. None are overly technical or vague compared to the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors focus on explaining a trade, describing scenery, or informing about geography, which are not synonymous with showing a moral about impatience.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.6 requires students to distinguish their own point of view from that of the narrator or characters. This question asks about author's purpose (\"This story was most likely written to\"), which assesses RL.3.2 (determining theme/central message/lesson) or RI.3.6 (author's purpose in informational text). The question does not ask students to identify or distinguish between different points of view (their own vs. narrator's vs. characters'), which is the specific skill required by RL.3.6. This is a misalignment between the question and the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"This story\" but no passage/story is provided in the context given. Without the actual story text, students cannot determine the author's purpose. The question itself is grammatically clear and the answer choices are well-structured, but the question is functionally unanswerable and ambiguous because the essential reference material is missing. The pronoun \"This\" has no clear antecedent in the provided materials.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because the passage itself is missing from the provided information. Without the actual story/passage text, I cannot determine whether:\n- Choice C (impatience causing problems) is the clear main purpose\n- Choices A, B, or D could also be defended as correct\n- The passage actually supports any of these answers\n\nTo properly validate this question, I would need to read the complete passage to assess whether it clearly demonstrates a moral lesson about impatience (C), or whether it could reasonably be argued to serve any of the other purposes listed. The question asks about authorial intent (\"most likely written to\"), which requires careful analysis of the passage content, structure, and emphasis.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"This story was most likely written to\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or other structural elements. It is a general question about the purpose or intent of the story. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T23:59:11.439381"
+  },
+  {
+    "question_id": "quiz_302005_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are all noun phrases consisting of a plural noun (\"items,\" \"memories,\" \"powers,\" \"friends\") modified by an adjective or descriptor (\"Valuable,\" \"Special,\" \"Magical,\" \"Friends who will help him escape\"). Each choice is then followed by a prepositional phrase or relative clause providing additional context (\"like gems and jewels,\" \"from the adventure,\" \"from the lamp,\" \"who will help him escape\"). While there is minor variation in the modifying elements, all choices maintain the core structure of modified noun phrases, making them grammatically parallel and fair.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for a vocabulary question about \"treasures\" in the Aladdin story context:\n\nB) \"Special memories\" - This represents a common figurative interpretation of \"treasure\" that students encounter in modern contexts (e.g., \"treasured memories\"), making it a reasonable misconception for students who might confuse literal and figurative meanings.\n\nC) \"Magical powers from the lamp\" - This is contextually relevant to the Aladdin story where magical elements are central, and a student might reasonably confuse what the magician is offering with the lamp's powers, especially since both involve gaining something valuable.\n\nD) \"Friends who will help him escape\" - This connects to the common phrase \"treasure your friends\" and the figurative use of treasure to mean \"value highly.\" It's also contextually plausible since Aladdin does need help in the story.\n\nEach distractor tests whether students understand the literal meaning of \"treasures\" versus figurative or contextually-confused interpretations, making them educationally valuable wrong answers rather than throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a word meaning question asking what \"treasures\" means in context. All four answer choices provide different possible interpretations/definitions of what \"treasures\" could mean: A) physical valuable items, B) memories, C) magical powers, D) helpful friends. Each choice represents a different potential meaning of the word \"treasures,\" making them all the same type of concept - possible definitions or interpretations of the target word.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a clear, concrete interpretation of what \"treasures\" could mean in the context:\n- A) \"Valuable items like gems and jewels\" - specific physical objects with examples\n- B) \"Special memories from the adventure\" - specific abstract concept with context\n- C) \"Magical powers from the lamp\" - specific supernatural items with source\n- D) \"Friends who will help him escape\" - specific people with their function\n\nEach choice follows the same pattern: a noun phrase describing a type of treasure + additional clarifying detail. The language complexity and sentence structure are consistent across all options, making them appropriately balanced for comparison.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are synonymous with or easily confusable for 'treasures' as used here; only A refers to concrete valuable items.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.4, which requires students to determine the meaning of words and phrases as they are used in a text. The question explicitly asks what the word \"treasures\" means \"in this part of the story,\" requiring students to use context clues from the passage to determine the contextually appropriate meaning. The answer choices present different interpretations (literal valuable items vs. figurative meanings like memories, powers, or friends), which tests whether students can distinguish between the literal/contextual meaning and other possible interpretations. This is precisely the skill RL.3.4 targets at the DOK Level 2 (skill/concept), as it requires more than just recall\u2014students must apply understanding of context to determine word meaning.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It asks for the meaning of a specific word (\"treasures\") in a specific context (when the magician speaks to Aladdin). The question structure is straightforward with no ambiguous pronouns, double negatives, or overly complex syntax. The phrase \"in this part of the story\" provides clear context. All answer choices present distinct interpretations of the word \"treasures,\" making it easy for students to understand what is being asked. The vocabulary and sentence structure are appropriate for elementary/middle grade students who would be reading Aladdin.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage itself is missing from this question, making it impossible to verify whether answer A is the only defensibly correct answer. Without the actual text showing the context of when the magician says \"take any treasures you want,\" I cannot determine:\n1) Whether \"treasures\" clearly refers to valuable items like gems and jewels\n2) Whether the other options could be supported by the passage\n3) Whether the passage provides sufficient context to eliminate the other choices\n\nThis is a critical flaw - the passage is required to validate that exactly one answer is defensibly correct based on textual evidence.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references a quote from \"the magician\" saying \"take any treasures you want\" and asks about the meaning of \"treasures\" in \"this part of the story.\" However, no passage text is actually provided - the passage field is empty. Since there are no specific structural references (like paragraph numbers, line numbers, or section titles) being made in the question, and the question format appears to be asking about a quote that would presumably be in a passage that should accompany it, this falls under the category of \"the question does not contain passage references\" (meaning specific structural references). The question simply refers to content that should be in the passage without making claims about specific paragraph numbers, lines, or sections that could be verified as accurate or inaccurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:00:15.152702"
+  },
+  {
+    "question_id": "quiz_302005_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option consists of:\n- \"The lamp can\" + verb phrase\n- A) \"can make a person very wealthy\"\n- B) \"can light up dark places\"\n- C) \"can tell the future\"\n- D) \"can make someone disappear\"\n\nAll choices use the modal verb \"can\" followed by a base verb and appropriate objects/complements. This creates consistent parallel structure across all options, making the question grammatically fair.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for a question about a magic lamp's \"amazing powers.\" Choice B (lighting up dark places) is a reasonable literal interpretation since it is a lamp. Choice C (telling the future) and Choice D (making someone disappear) are both common magical abilities associated with magical objects in fairy tales and stories. A student who hasn't read carefully or confuses Aladdin's lamp with other magical items could reasonably select any of these options. None are obviously wrong or unrelated to the concept of magical powers.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a word meaning question asking what \"amazing powers\" means in the context of the story. All four answer choices (A-D) present different possible powers/abilities that the lamp could have - making someone wealthy, lighting dark places, telling the future, or making someone disappear. Each choice offers a different interpretation of what the lamp's \"amazing powers\" could be. All choices belong to the same conceptual category: they are all potential definitions or explanations of what \"amazing powers\" means.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity. Each option describes a single, concrete capability that a magical lamp might have: making someone wealthy (A), providing light (B), predicting future events (C), or causing disappearance (D). All are expressed in simple, parallel language structures (\"The lamp can [verb phrase]\") and describe specific magical abilities at the same level of detail. None are overly technical, vague, or significantly more complex than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Options B\u2013D describe different abilities and are not synonymous with or equally supported as A; there is no double-key risk.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.4, which requires students to determine the meaning of words and phrases as they are used in a text. The question asks students to interpret what \"amazing powers\" means based on the story context. Students must use textual evidence to determine which answer choice correctly reflects what the phrase means in this particular story. This is exactly what RL.3.4 requires - determining meaning of words/phrases within the literary text. The DOK Level 2 is also appropriate as students must interpret and make inferences from the text rather than simply recall information.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It directly asks students to interpret the meaning of \"amazing powers\" based on the story context. The quoted phrase is clearly attributed to the magician speaking to Aladdin. There are no ambiguous pronouns, double negatives, or overly complex structures. The question has one clear interpretation: students must use story evidence to determine what the lamp's \"amazing powers\" are. The answer choices provide distinct options that would be appropriate for assessing reading comprehension. The language is straightforward and suitable for elementary/middle grade students.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage provided is empty/missing. Without the actual story text, I cannot verify whether \"amazing powers\" specifically refers to making someone wealthy (A), lighting dark places (B), telling the future (C), or making someone disappear (D). The question asks what \"amazing powers\" means \"based on the story,\" but no story content is provided to make this determination. This is a critical flaw - the correct answer cannot be validated without the passage text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not contain any specific structural references to the passage (no paragraph numbers, line numbers, section titles, or page numbers). It only references a quote (\"had amazing powers\") that would need to exist in the passage for the question to be valid, but the task is specifically to verify structural references like paragraph numbers, line numbers, etc. Since there are no such structural references in the question, the answer is 1 according to the instruction: \"1 if all passage references are accurate and exist; OR if the question does not contain passage references\"",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:00:14.453601"
+  },
+  {
+    "question_id": "quiz_302005_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option consists of:\n1. An indefinite article (\"A\")\n2. An adjective modifier (\"very valuable\", \"wonderful\", \"close\", \"beautiful\")\n3. A noun phrase that serves as the subject\n4. Additional descriptive elements (relative clauses or prepositional phrases)\n\nSpecifically:\nA) A [adjective phrase] + that-clause\nB) A [adjective] + [noun] + prepositional phrase\nC) A [adjective] + [noun] + prepositional phrase\nD) A [adjective] + [noun] + infinitive phrase\n\nWhile there are minor variations in the modifying structures (that-clause vs. prepositional phrase vs. infinitive phrase), all choices maintain the core pattern of \"A + adjective + noun + modifier.\" This represents consistent parallel structure where all options are noun phrases with descriptive elements, making them grammatically fair and parallel for test-taking purposes.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice B (\"A wonderful story about kings and queens\") and Choice D (\"A beautiful place to visit on vacation\") are obviously wrong and unrelated to what \"treasure\" means in any context. While Choice C (\"A close friendship\") could represent a metaphorical interpretation of \"treasure,\" Choices B and D are throwaway options that no reasonable student who understands the basic meaning of \"treasure\" would select. These are not testing common misconceptions about the word \"treasure\" - they're simply unrelated concepts that make no sense in the context of a magician telling Aladdin about something under a stone.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a word meaning question asking what the phrase \"great treasure\" means in the story context. All four answer choices provide different possible definitions/meanings of what \"great treasure\" could refer to: A) valuable riches, B) a story, C) a friendship, D) a beautiful place. While these are diverse interpretations, they all belong to the same conceptual category - they are all potential meanings/definitions of the phrase \"great treasure.\" Each choice attempts to define what the phrase means, making this a homogeneous set of answer choices for a vocabulary/phrase meaning question.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a simple, clear interpretation of \"great treasure\" using everyday language:\n- A: \"Something very valuable that will make Aladdin rich\" (concrete material wealth)\n- B: \"A wonderful story about kings and queens\" (narrative/story)\n- C: \"A close friendship between two people\" (relationship)\n- D: \"A beautiful place to visit on vacation\" (location/destination)\n\nEach choice is expressed in plain, accessible language with comparable sentence structure and complexity. None uses technical jargon, overly complex phrasing, or significantly more/fewer words than the others. They all represent different interpretations of the phrase at the same conceptual level.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Only option A matches the clear, literal meaning of 'great treasure' as wealth in the Aladdin context; the other options are unrelated concepts.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.4, which requires students to determine the meaning of words and phrases as they are used in a text. The question asks students to interpret what \"great treasure\" means specifically in the context of this story (Aladdin). The answer choices require students to distinguish between the literal/contextual meaning (A - something valuable that will make Aladdin rich) and other figurative or unrelated meanings (B, C, D). This is appropriate for DOK Level 2 as it requires students to apply their understanding of context clues to determine meaning, going beyond simple recall.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It asks students to interpret the meaning of a specific phrase (\"great treasure\") within the context of the story. The phrase is properly quoted and attributed to a specific character and situation. There are no ambiguous pronouns, double negatives, or overly complex structures. The question is straightforward: what does this phrase mean in this story? The answer choices provide distinct interpretations, with only one (A) being the literal/contextual meaning of \"great treasure\" in a typical Aladdin story, while the others are clearly incorrect alternative meanings. Students would understand they need to determine the contextual meaning of the phrase.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The phrase \"great treasure\" in the context of Aladdin stories universally refers to valuable material wealth. \n\nA) \"Something very valuable that will make Aladdin rich\" - This is the literal and contextual meaning of \"treasure\" in this story context. Correct.\n\nB) \"A wonderful story about kings and queens\" - \"Treasure\" does not mean a story. This is clearly incorrect.\n\nC) \"A close friendship between two people\" - While \"treasure\" can be used metaphorically for friendship in some contexts, in the Aladdin story, the magician is literally referring to physical treasure under a stone. This is clearly incorrect.\n\nD) \"A beautiful place to visit on vacation\" - \"Treasure\" does not mean a place. This is clearly incorrect.\n\nOnly answer A correctly defines what \"great treasure\" means in this story context - valuable material wealth. The other three options are clearly wrong as they misdefine the term entirely.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references a specific quote \"a great treasure\" and states it appears in the passage where \"the magician tells Aladdin about 'a great treasure' under the stone.\" However, no passage text is actually provided to verify against. Since the passage field is empty, I cannot verify whether this quote exists or if the context is accurate. But according to the instructions, I should return 1 \"if all passage references are accurate and exist; OR if the question does not contain passage references.\" While the question does contain a reference to passage content (the quote), without an actual passage provided, this appears to be a case where verification cannot be performed. However, the more relevant interpretation is that the question makes a specific claim about passage content that cannot be verified because no passage exists. This would make the reference inaccurate. Given the empty passage, the reference to \"the magician tells Aladdin\" and the quote cannot be confirmed to exist, making this a case of an inaccurate reference.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:01:14.863969"
+  },
+  {
+    "question_id": "quiz_302005_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option begins with \"The ring will\" followed by a verb phrase:\n- A) \"will protect Aladdin from danger\"\n- B) \"will help Aladdin find his way home\"\n- C) \"will make Aladdin invisible to others\"\n- D) \"will give Aladdin the strength to lift heavy stones\"\n\nAll choices are complete sentences with parallel structure: subject (The ring) + modal verb (will) + main verb + object/complement. While the length and complexity of the verb phrases vary slightly, this is minor variation that doesn't create unfair advantage or disadvantage. The consistent grammatical framework is maintained throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors. Each represents a reasonable misinterpretation of what \"keep you safe from any harm\" might mean in a magical context:\n- B (finding way home) relates to safety through navigation/not being lost\n- C (invisibility) is a common magical protection mechanism in stories\n- D (strength to lift stones) could relate to overcoming physical obstacles/dangers\n\nAll options are logically connected to the concept of protection and safety, and could reasonably fool a student who partially understands the phrase or conflates different types of magical assistance. None are obviously wrong or unrelated to the question about what the magician's promise means.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices interpret what \"keep you safe from any harm\" means by offering different types of magical protection or powers the ring might provide. Each choice presents a different possible meaning/function of the ring's protective power: physical protection (A), navigation help (B), invisibility (C), or enhanced strength (D). They all address the same conceptual category - interpretations of what the ring's protective power means or how it works.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a concrete, specific function that the ring could perform:\n- A: protection from danger\n- B: navigation/wayfinding assistance\n- C: invisibility power\n- D: enhanced physical strength\n\nEach choice uses straightforward language with a similar structure (\"The ring will [verb] [specific outcome]\"). They all describe distinct magical abilities at the same level of detail - none are overly general (like \"help Aladdin\") or overly specific (like \"protect Aladdin from physical injuries sustained from falls greater than 10 feet\"). The choices maintain consistent specificity across all options.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Only option A paraphrases 'keep you safe from any harm'; other options introduce unrelated abilities not implied by the phrase.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The standard RL.3.4 requires students to determine the meaning of words and phrases as they are used in a text, distinguishing literal from non-literal language. This question directly assesses this skill by asking students to interpret what the phrase \"will keep you safe from any harm\" means in context. Students must understand that this phrase means protection from danger (choice A), which requires interpreting the meaning of the words/phrase as used in the story. This is a DOK 2 task because it requires interpretation beyond simple recall. The question appropriately targets the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It directly asks what the magician means by a specific quoted phrase \"will keep you safe from any harm.\" There are no ambiguous pronouns - \"he\" clearly refers to the magician, and \"you\" refers to the person being addressed (presumably Aladdin based on context). The sentence structure is straightforward and appropriate for students reading this level of text. The question has one clear interpretation: it's asking students to identify what protection or benefit the ring provides according to the magician's statement. The answer choices present distinct, mutually exclusive options that directly relate to interpreting the phrase \"keep you safe from any harm.\"",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage itself is missing from this question, making it impossible to verify whether answer A is the only defensibly correct answer or if other options could also be supported. Without the actual passage text, I cannot determine if the magician's statement \"will keep you safe from any harm\" is directly quoted, paraphrased, or contextualized in a way that would exclude options B, C, or D. The phrase \"keep you safe from any harm\" in option A appears to be a direct restatement of the quoted text, but options B, C, and D could potentially be described as ways the ring keeps Aladdin safe depending on what the passage actually says. This is a validation failure due to missing passage content.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question asks about what the magician means when he says the ring \"will keep you safe from any harm\". This question contains a quote reference but does not make any specific structural references to the passage such as paragraph numbers, line numbers, section titles, or page numbers. Since the question does not contain passage references of the types listed (paragraph numbers, line numbers, section titles, etc.), it meets the criteria for returning a score of 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Shortest distractor (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:01:18.791774"
+  },
+  {
+    "question_id": "quiz_302006_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: Subject (\"He\") + verb in simple present tense + object/complement. Each choice is a complete sentence with parallel structure:\n- A) He refuses...\n- B) He steals...\n- C) He accidentally breaks...\n- D) He loses...\n\nThe addition of the adverb \"accidentally\" in choice C is a minor variation that does not disrupt the parallel structure or create an unfair advantage. All choices maintain consistent grammatical form as complete sentences with the same subject-verb-object pattern.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for the Aladdin story:\n\nB) \"He steals too many treasures from the garden\" - This is plausible because Aladdin does encounter a magical garden with jeweled fruits in the cave, and a student might reasonably confuse taking treasures as the reason for being trapped.\n\nC) \"He accidentally breaks the magic spell\" - This relates to the magical nature of the cave and could represent a misconception about how the cave's magic works.\n\nD) \"He loses the special ring the magician gave him\" - This is particularly strong because the magician does give Aladdin a magic ring before he enters the cave, so a student who partially remembers the story might confuse this detail with the cause of entrapment.\n\nAll incorrect options draw from actual elements of the Aladdin story (treasures, magic, the ring), making them believable wrong answers rather than throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices represent possible causal explanations for why Aladdin becomes trapped in the cave. Each option presents a different action or event (refusing to hand over the lamp, stealing treasures, breaking a spell, losing the ring) that could serve as the reason for the entrapment. They all address the same conceptual category: causes/reasons for a specific plot event.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a concrete action or event with comparable complexity:\n- A) \"refuses to hand over the lamp immediately\" - specific action with timing detail\n- B) \"steals too many treasures from the garden\" - specific action with quantity detail\n- C) \"accidentally breaks the magic spell\" - specific action with manner detail\n- D) \"loses the special ring the magician gave him\" - specific action with object detail\n\nAll choices follow the same structure: subject + verb + object/detail, and all describe specific plot events at the same narrative level. None are overly technical, vague, or significantly more complex than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are synonymous with or easily confused with the correct cause. They present distinct, unsupported causes (stealing treasures, breaking a spell, losing a ring) versus refusing to hand over the lamp.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.3, which requires students to describe characters and explain how their actions contribute to story events. The question asks students to identify WHY Aladdin becomes trapped (the consequence) by connecting it to a character's action (Aladdin refusing to hand over the lamp). This requires understanding the causal relationship between a character's action and a resulting story event, which is precisely what the standard demands. The correct answer (A) demonstrates that Aladdin's refusal to immediately give the lamp causes the magician to trap him in the cave - a clear example of how a character's action contributes to/causes a story event. This is appropriately DOK Level 2 as it requires making connections between actions and consequences rather than simple recall.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear, precise, and unambiguous. It asks a straightforward cause-and-effect question about a specific event (Aladdin becoming trapped in the cave). The subject \"Aladdin\" is clearly identified, the verb \"become trapped\" is specific, and the location \"in the cave\" is unambiguous. There are no ambiguous pronouns, double negatives, or overly complex sentence structures. The question has one clear interpretation and is written at an appropriate complexity level. All answer choices are distinct and address different possible reasons for the trapping, making the question testable and clear for students.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because no passage was provided. The task requires verifying that exactly one answer can be \"defended based on the passage,\" but there is no passage text included to reference. Without the passage, I cannot determine whether answer A (or any other option) is defensibly correct, whether multiple answers could be argued as correct, or whether the passage supports the indicated answer. This is a critical red flag - the correct answer cannot be verified without the source material.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Why does Aladdin become trapped in the cave?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or other structural elements. It is a straightforward content question that does not reference any particular location within the passage. According to the instructions, if the question does not contain passage references, the score should be 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:02:15.021552"
+  },
+  {
+    "question_id": "quiz_302006_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option is a complete sentence in the present tense with the structure: \"Aladdin\" (subject) + verb phrase + object/complement. Specifically:\nA) Aladdin cannot give him the lamp right away.\nB) Aladdin touches the treasures he was told not to touch.\nC) Aladdin tells his mother about the cave.\nD) Aladdin drops the lamp and it breaks.\n\nAll choices begin with \"Aladdin\" as the subject and contain a complete predicate. While the specific verbs and complements vary in content, this is expected and appropriate - the grammatical structure remains parallel across all options. This consistency does not provide any unfair advantage or disadvantage to test-takers.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for the Aladdin story. Choice B relates to a common element in the tale where Aladdin is given instructions about the treasures in the cave. Choice C involves a logical story element about telling his mother, which could confuse students about the sequence of events. Choice D involves the lamp breaking, which is thematically related to the central object of the story and represents a reasonable misconception about what might anger the magician. All options are contextually related to the Aladdin narrative and could believably fool students who partially remember the story.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character motivation/cause question asking what triggers the magician's anger. All four answer choices present different possible actions by Aladdin that could cause the magician's anger:\nA) A delay in obtaining the lamp\nB) Disobeying instructions about treasures\nC) Revealing information to his mother\nD) Damaging the lamp\n\nAll choices are potential causal events/actions that could explain the magician's emotional response. They all belong to the same conceptual category: possible causes for the character's anger.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a concrete action or situation involving Aladdin that could cause the magician's anger:\n- A) describes a timing/availability issue with the lamp\n- B) describes a rule violation regarding treasures\n- C) describes sharing information with his mother\n- D) describes an accident with the lamp\n\nAll choices use simple, straightforward language with similar sentence structures (subject + verb + object/complement). They are all specific enough to be distinct plot points while maintaining the same level of detail - none are overly general (\"Aladdin misbehaves\") or overly specific with excessive detail (\"Aladdin accidentally brushes against the golden treasures with his left hand despite three explicit warnings\").",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors describe different causes (touching treasure, telling his mother, breaking the lamp) and are not synonymous with A. Only A matches the typical cause of the magician\u2019s anger.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.3: \"Describe characters and explain how their actions contribute to story events.\" This standard requires students to make connections between character actions and their consequences/effects on the plot.\n\nThe question asks \"What causes the magician to become angry with Aladdin?\" This is asking students to identify a cause-effect relationship (what action led to anger), which is more aligned with RL.3.1 (asking and answering questions about key details) or basic comprehension. \n\nTo properly assess RL.3.3, the question would need to ask students to explain HOW a character's actions contribute to or affect story events - for example: \"How does Aladdin's refusal to give the lamp right away affect what happens next in the story?\" or \"Explain how the magician's anger changes the events of the story.\"\n\nThe current question only requires recall of a detail (what made the magician angry), not analysis of how character actions contribute to story events.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear, precise, and unambiguous. It uses straightforward language asking for a specific cause-and-effect relationship (what causes the magician's anger). The subject \"the magician\" is clearly identified, as is \"Aladdin.\" There are no ambiguous pronouns, double negatives, or overly complex structures. The question has one clear interpretation: identifying the action that triggers the magician's anger toward Aladdin. All answer choices are written in parallel structure and are mutually exclusive, making the question appropriate for comprehension assessment.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because no passage is provided. The task requires verifying that exactly one answer can be \"defended based on the passage,\" but there is no passage text included to reference. Without the passage, I cannot determine:\n1) Whether answer A is actually supported\n2) Whether any other answers could also be correct\n3) Whether the passage contradicts any of the options\n4) Whether multiple answers could be argued as correct\n\nThis is a critical red flag - the question cannot be properly validated without the source material it references.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What causes the magician to become angry with Aladdin?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a straightforward content question that does not reference any structural elements of the passage. According to the instructions, if the question does not contain passage references, the score should be 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:02:30.777249"
+  },
+  {
+    "question_id": "quiz_302006_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are complete sentences in the present tense with the same structure (Subject + Verb + Object/Complement). Each begins with a noun phrase as the subject (\"His bag,\" \"The magician,\" \"The cave,\" \"The magic ring\") followed by a verb phrase. The sentences are of similar length and complexity, making them grammatically parallel and fair for test-takers to evaluate.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for the Aladdin story. Choice B relates to the magician's role and potential consequences of Aladdin's greed. Choice C invokes a common trope in treasure cave stories where taking too much triggers a collapse. Choice D references the magic ring, which is an actual element in the Aladdin tale. Each option represents a reasonable misconception about cause-and-effect consequences in the story and relates logically to the scenario of collecting too many gems. None are obviously wrong or unrelated to someone with partial knowledge of the tale.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices describe consequences or results of Aladdin collecting too many gems. Each option presents a different negative outcome (bag too heavy, magician refuses help, cave collapses, ring stops working), but they all belong to the same conceptual category: they are all potential consequences/effects of the same action. This is a cause-and-effect question where all choices represent possible effects.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a concrete, specific consequence of Aladdin collecting too many gems:\n- A) Describes a physical consequence (weight) and its effect (difficulty climbing)\n- B) Describes a character's action/reaction (magician refusing help)\n- C) Describes an environmental consequence (cave collapsing)\n- D) Describes a magical object malfunction (ring stops working)\n\nEach choice is structured similarly with a subject-verb-object format, uses comparable vocabulary complexity, and provides the same level of detail about what happens. None are overly technical, vague, or significantly more elaborate than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Options B, C, and D describe distinct outcomes (lack of help, cave collapse, ring malfunction) and are not synonyms or degree variants of A's consequence (bag too heavy).",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.3 requires students to describe characters and explain how their actions contribute to story events. This question asks about a consequence of Aladdin's action (collecting too many gems), which appears surface-level aligned. However, the question is actually testing reading comprehension of a cause-effect relationship (what happens as a result), not asking students to describe Aladdin's character or explain how his actions contribute to the sequence of events in the story. A proper RL.3.3 question would ask something like \"How does Aladdin's decision to collect many gems affect what happens in the story?\" or \"What does Aladdin's action of collecting gems show about his character, and how does this lead to other events?\" This question is more aligned with RL.3.1 (asking about key details) or basic comprehension rather than character analysis and the contribution of actions to plot development.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear, precise, and unambiguous. It uses straightforward language with no ambiguous pronouns, double negatives, or overly complex structure. \"What happens as a result of Aladdin collecting too many gems?\" directly asks about a cause-and-effect relationship that is easy to understand. The subject (Aladdin), action (collecting too many gems), and what's being asked for (the consequence) are all clearly stated. The answer choices are also distinct and specific, making it easy for students to identify the correct consequence from the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because no passage was provided. Without the passage text, I cannot verify whether answer A (or any other answer) is the only defensibly correct answer based on the source material. The question references events that should be described in a passage about Aladdin collecting gems, but that passage is missing from the prompt.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What happens as a result of Aladdin collecting too many gems?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a general content question about the passage. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:03:14.391293"
+  },
+  {
+    "question_id": "quiz_302006_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.7,
+    "total_checks_passed": 7,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are complete sentences in the present tense with \"The lamp\" as the subject (A, B, C) or \"He\" as the subject (D). Each provides a declarative statement explaining a reason. While A, B, and C specifically mention \"the lamp\" and D uses \"he,\" this is a minor variation that doesn't create unfair advantage - all are complete, grammatically parallel sentences that directly answer the \"why\" question with a statement of fact or motivation.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for the Aladdin story. Choice B (dropped the lamp) is reasonable as students might confuse the sequence of events in the cave. Choice C (lamp hanging in garden tree) relates to an actual location in the story where the lamp might be found. Choice D (wants to keep it) reflects Aladdin's eventual motivation and the central conflict of the story. Each incorrect option connects logically to the narrative and could fool students with partial understanding of the tale, rather than being obviously wrong or unrelated.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character motivation/reasoning question asking why Aladdin says he cannot reach the lamp. All four answer choices provide different possible reasons or explanations for Aladdin's statement:\nA) Physical obstacle (lamp buried in bag)\nB) Physical circumstance (lamp was dropped)\nC) Physical location (lamp still in tree)\nD) Intentional motivation (wants to keep it)\n\nWhile choices A-C focus on physical/logistical reasons and D focuses on intentional deception, they all address the same conceptual category: reasons/explanations for why Aladdin says he cannot reach the lamp. They are all potential answers to the \"why\" question about Aladdin's statement.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a concrete, single-clause explanation for why Aladdin cannot reach the lamp:\n- A: Physical location explanation (in bag)\n- B: Physical location explanation (dropped in cave)\n- C: Physical location explanation (hanging in tree)\n- D: Motivational explanation (wants to keep it)\n\nAll choices use simple, straightforward language with comparable sentence structure and length. None are significantly more technical, verbose, or vague than the others. They all provide the same level of detail - a direct reason without excessive elaboration or oversimplification.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "The prompt 'Why does Aladdin say he cannot reach the lamp?' can mean either the stated excuse (A) or his underlying motive (D). Both can be considered correct depending on interpretation.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.3: \"Describe characters and explain how their actions contribute to story events.\" This requires students to analyze character motivations and connect actions to plot consequences.\n\nThe question asks \"Why does Aladdin say he cannot reach the lamp when the magician asks for it?\" This is testing literal comprehension of what Aladdin stated as his reason (a factual detail from the text), not asking students to describe Aladdin's character or explain how his actions contribute to the story's events.\n\nWhile answer choice D hints at character motivation (\"He wants to keep the lamp for himself\"), the question itself is asking for a factual recall of what Aladdin said, which aligns more closely with RL.3.1 (ask and answer questions about key details) rather than RL.3.3's requirement to describe characters and explain how their actions contribute to events.\n\nTo properly assess RL.3.3, the question would need to ask something like: \"How does Aladdin's refusal to give the magician the lamp affect what happens next in the story?\" or \"What does Aladdin's decision to keep the lamp tell you about his character?\"",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks for a specific reason why Aladdin gives a particular excuse to the magician. The pronouns are clear - \"he\" refers to Aladdin and \"it\" refers to the lamp (which is explicitly mentioned). The sentence structure is straightforward with no double negatives or unnecessary complexity. The question has one clear interpretation: what excuse does Aladdin provide when asked for the lamp? All answer choices present distinct, mutually exclusive scenarios that would be easily understood by students familiar with the Aladdin story.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage is missing - there is no text provided to verify the answer against. Without the passage, I cannot determine whether answer A (or any other answer) is defensibly correct, or whether multiple answers could be argued as correct. The question asks about a specific detail from the Aladdin story (why he says he cannot reach the lamp), but without the actual passage text, there is no way to verify which answer choice is supported by the source material.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Why does Aladdin say he cannot reach the lamp when the magician asks for it?\" does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, page numbers, or other structural elements. It is a content-based question that asks about events in the story without referencing specific locations within the passage structure. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:03:35.255648"
+  },
+  {
+    "question_id": "quiz_302007_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.6,
+    "total_checks_passed": 6,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option is a complete declarative sentence in the present tense with a modal verb or simple present:\nA) \"Not all promises from strangers can be trusted.\" (modal verb construction)\nB) \"Always keep your promises no matter what happens.\" (imperative sentence)\nC) \"Making promises to family members is most important.\" (gerund subject + linking verb + predicate adjective)\nD) \"Promises about money will always come true.\" (modal verb construction)\n\nWait, let me reconsider. Looking more carefully:\n- A, C, and D are declarative statements about promises\n- B is an imperative command (\"keep your promises\")\n\nHowever, examining the overall structure, all four are complete sentences that express a lesson or principle about promises. While B uses imperative mood and the others use declarative mood, they all function as complete sentence statements of a lesson. This is a minor variation in sentence mood rather than a fundamental structural inconsistency that would create unfair advantage. All choices adequately express a potential lesson in complete sentence form.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice D (\"Promises about money will always come true\") is obviously wrong and a throwaway option. Any reasonable student would recognize this as an absolute statement that contradicts basic life experience - promises about money frequently are not kept. This is not a plausible misconception or a subtle misunderstanding of the lesson; it's an extreme statement that no student who partially understands the story would select. It lacks educational value as a distractor.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices present different lessons or principles about promises. Each option offers a distinct moral or takeaway about the nature of promises:\n- A) addresses trustworthiness of promises from strangers\n- B) addresses commitment to keeping promises\n- C) addresses priority/importance of promises to family\n- D) addresses reliability of promises about money\n\nAll choices belong to the same conceptual category: they are all potential lessons/morals about promises that could be derived from a story.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a complete lesson statement about promises with comparable complexity:\n- A) addresses trust and strangers (one qualifier)\n- B) addresses commitment and circumstances (one qualifier)\n- C) addresses importance and family context (one qualifier)\n- D) addresses reliability and money context (one qualifier)\n\nAll choices follow the same structural pattern of stating a lesson about promises with one contextual element (strangers/circumstances/family/money). None are significantly more technical, verbose, or simplified than the others. They maintain consistent specificity levels appropriate for a comprehension question about story lessons.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Options B, C, and D express different morals (keeping promises universally, prioritizing family promises, or guarantees about money) rather than the idea of trusting promises from strangers; none are synonymous or degree-only variations of A.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.2 requires students to \"recount the story, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nWhile this question does ask about a \"lesson\" (which aligns with determining moral/message), there are critical problems:\n\n1. **No passage provided**: The question references \"Based on the story\" but no story text is given, making it impossible to assess whether students are determining the lesson FROM the text itself or just selecting general statements about promises.\n\n2. **Cannot assess \"how it is conveyed\"**: RL.3.2 specifically requires students to explain HOW the message is conveyed through key details. This multiple-choice format only asks students to identify a lesson, not explain how the story conveys it.\n\n3. **DOK Level 3 mismatch**: The question is labeled DOK 3 (strategic thinking), but without requiring students to cite evidence or explain how details support the lesson, it functions more as DOK 2 (skill/concept) at best.\n\nThe question assesses a related but different skill - identifying general themes about promises rather than determining and explaining how a specific text conveys its central message through key details.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"the story\" but no passage or story is provided. Students cannot answer what the \"main lesson about making promises\" is without knowing what story is being discussed. This makes the question impossible to evaluate or answer in its current form. While the question itself is grammatically clear and the answer choices are well-structured, the missing context makes it fundamentally ambiguous and unusable.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage itself is missing from this question, making it impossible to verify whether answer choice A (or any other choice) is defensibly correct based on textual evidence. Without the actual story content, I cannot determine:\n1) Whether the story involves strangers making promises\n2) What the actual lesson about promises is in the narrative\n3) Whether other answer choices could also be supported\n4) Whether the indicated correct answer A can be defended at all\n\nThis is a critical flaw - the validation task requires comparing answer choices against passage content, but no passage content is provided beyond the label \"Passage:\" with nothing following it.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Based on the story, what is the main lesson about making promises?\" does not contain any specific structural references to passage elements such as paragraph numbers, line numbers, section titles, specific quotes, or page numbers. It makes a general reference to \"the story\" but does not cite any specific location or structural element within the passage. Since the question does not contain passage references that need to be verified, the criteria are met.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:04:26.510741"
+  },
+  {
+    "question_id": "quiz_302007_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.6,
+    "total_checks_passed": 6,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are complete sentences that begin with a noun phrase about \"greed\" or \"greedy people\" followed by a verb phrase making a statement about greed. Each choice presents a complete declarative sentence with consistent structure (Subject + Verb + Complement). While the specific content and length vary, the fundamental grammatical pattern is parallel across all options - they are all complete sentences making claims about greed or greedy people.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Evaluating the incorrect choices (B, C, D):\n\n**Choice B** (\"Greedy people always get exactly what they deserve\") - This is a plausible distractor. It represents a common misconception about moral lessons in stories - the idea of \"just deserts\" or karma. Students often oversimplify story morals into absolute statements about punishment and reward.\n\n**Choice C** (\"Working hard is better than being greedy for treasure\") - This is plausible as it relates to common themes about greed vs. honest work that appear in many stories. A student who partially understands might confuse the specific lesson about greed causing harm with a broader work ethic message.\n\n**Choice D** (\"Greed only happens to poor people who want money\") - This is plausible because it represents a potential misconception about who experiences greed. While more sophisticated readers would recognize greed affects all economic classes, a student with partial understanding might associate greed primarily with those lacking resources.\n\nAll three incorrect choices are logically related to the topic of greed, represent believable misconceptions, and could reasonably fool students who partially understand the lesson. None are obviously wrong or throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices present potential lessons or moral statements about greed. Each option offers a different perspective on what the story might teach about greed (its effects on behavior, consequences, alternatives, or who experiences it), but they all remain within the same conceptual category of \"lessons about greed.\" None of the choices shift to a different type of concept like plot details, character names, or setting descriptions.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity. Each presents a complete statement about greed using everyday language and similar sentence structures. They all make broad moral claims about greed (its effects, consequences, or scope) without being overly technical or varying significantly in complexity. While the content differs, the level of detail and specificity is balanced across all options - none are notably simpler or more complex than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "B asserts an absolute outcome, C shifts to a work-ethic moral rather than harm caused by greed, and D makes a false overgeneralization. None are near-synonymous with A or equally supported.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nWhile the question does ask about a lesson (moral) from the story, which seems aligned with RL.3.2, there are critical problems:\n\n1. **No passage provided**: The question references \"the story\" but no actual text/passage is given for students to analyze. RL.3.2 requires determining the lesson FROM the text and explaining how it's conveyed through key details. Without a passage, students cannot demonstrate this skill.\n\n2. **Multiple choice format limits assessment**: The standard requires students to both determine AND explain how the moral is conveyed through key details. A multiple choice question only tests recognition of a pre-written moral, not the ability to determine it from text or explain how key details convey it.\n\n3. **Cannot assess DOK Level 3**: Without text to analyze, this becomes a recall or recognition task (DOK 1-2), not the strategic thinking/reasoning required for DOK 3.\n\nThe question assesses a related but different skill (recognizing themes about greed in general) rather than directly assessing the standard's requirement to determine and explain a story's moral from textual evidence.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"the story\" without any story being provided in the passage section. Students cannot answer what lesson \"the story\" teaches about greed when no story is present. This creates complete ambiguity about what text they should be analyzing. While the question itself is grammatically clear and the answer choices are well-written, the missing context makes it impossible for students to understand what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because no passage was provided. The question explicitly references \"the story\" and asks what lesson it teaches, but there is no story text included for me to evaluate. Without the passage, I cannot determine:\n1) Whether answer A is actually supported by the story\n2) Whether any other answers could also be defended\n3) Whether the passage contradicts any of the options\n4) What the story is actually about\n\nThis is a critical flaw - the validation task is impossible to complete without the referenced passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What lesson does the story teach about greed?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a general question about the content/theme of the passage. Since there are no passage references to verify, the criteria are met by default according to the instruction \"1 if all passage references are accurate and exist; OR if the question does not contain passage references.\"",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (12 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:04:46.818522"
+  },
+  {
+    "question_id": "quiz_302007_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.5,
+    "total_checks_passed": 5,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are complete declarative sentences that make statements about people or behavior. Each choice has a subject and predicate structure:\n- A) \"You cannot always tell...\" (complete sentence)\n- B) \"People who hug you are...\" (complete sentence)\n- C) \"Magicians are always...\" (complete sentence)\n- D) \"Poor people are more...\" (complete sentence)\n\nWhile the sentences vary in length and complexity, they all maintain consistent grammatical structure as complete statements. This variation in length does not create an unfair advantage or disadvantage - it's a natural result of expressing different ideas in complete sentences. The parallelism is maintained at the structural level.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice B (\"People who hug you are always telling the truth\") is too obviously wrong and absurd to be a plausible distractor. Any reasonable student would recognize this as an extreme overgeneralization that doesn't represent a genuine lesson about judging people. Choice C makes an overgeneralization about magicians but could represent a misconception from the story. Choice D presents a social stereotype that, while incorrect, could be a believable misinterpretation. However, since B is clearly a throwaway option with no educational value - no story would seriously teach that physical gestures guarantee honesty - not all incorrect choices meet the criteria for good distractors.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices present lessons or moral statements about judging people or trustworthiness. Each option offers a different potential lesson that could be drawn from a story about evaluating others: A) about initial appearances, B) about trusting specific behaviors, C) about stereotyping occupations, D) about stereotyping economic classes. While they vary in validity and specificity, they all belong to the same conceptual category of \"moral lessons about judging/trusting people.\"",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a complete moral lesson or judgment principle in straightforward language:\n- A) Makes a general statement about judging character based on initial behavior\n- B) Makes a specific claim about people who hug and truthfulness\n- C) Makes a generalization about magicians and honesty\n- D) Makes a comparative statement about poor vs rich people and honesty\n\nWhile the content varies, each choice is expressed as a single, complete moral statement of similar length and complexity. None uses significantly more technical language, abstract concepts, or verbose explanations than the others. They all operate at the same \"moral lesson\" level of discourse.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not synonymous with A and make absolute or biased claims (always, specific groups) that are clearly different from the general lesson in A.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to recount stories and determine the central message, lesson, or moral. While the question does ask about what the story teaches (which aligns with identifying a lesson/moral), the answer choices present significant problems. Choices B, C, and D are overgeneralizations that would rarely be appropriate lessons from a third-grade story (\"People who hug you are always telling the truth,\" \"Magicians are always dishonest,\" \"Poor people are more honest than rich people\"). These extreme statements suggest the question may not be properly assessing the standard as intended. Additionally, without the actual passage provided, we cannot verify if the question genuinely assesses the central message of THIS specific story. The question structure is appropriate for RL.3.2, but the answer choices undermine its validity as a proper assessment of the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it uses the ambiguous demonstrative pronoun \"this story\" without providing the actual story in the passage section. Students cannot answer what a story teaches about judging people when no story is present. The question assumes context that is missing, making it impossible to evaluate which answer choice is correct. While the question itself is grammatically clear and the answer choices are well-written, the lack of the referenced story makes this question fundamentally ambiguous and unanswerable as presented.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "I cannot validate this question because the passage itself is missing. Without the passage, I cannot determine:\n1) Whether answer A is actually supported by the text\n2) Whether any of the other answers (B, C, or D) could also be defended based on the passage content\n3) Whether the passage addresses the topic of judging people at all\n\nThis is a critical flaw - the validation task requires comparing answer choices against the passage, but no passage text was provided to make this assessment.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What does this story teach about judging people?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or other structural elements. It is a general comprehension question about the passage's theme. Since there are no passage references to verify, the criteria are met by default according to the instruction \"1 if all passage references are accurate and exist; OR if the question does not contain passage references.\"",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (14 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:05:25.817598"
+  },
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.5,
+    "total_checks_passed": 5,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: they are complete sentences in the present tense that make declarative statements about patience/impatience. Each choice has a subject (noun phrase) and predicate (verb phrase):\nA) \"Impatience can lead...\" \nB) \"Patient people always get...\"\nC) \"Being impatient helps...\"\nD) \"Only children need...\"\n\nWhile there are minor variations in sentence length and specific vocabulary, the core grammatical structure is consistent across all options - they are all complete declarative sentences making claims about the topic. This consistency does not create an unfair advantage or disadvantage for any option.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice B (\"Patient people always get magical treasures in the end\") is a plausible distractor as it represents a common misconception about story morals - that patience is always literally rewarded. Choice C (\"Being impatient helps you get things done faster\") represents another reasonable misconception about the value of impatience. However, Choice D (\"Only children need to learn to be patient\") is obviously wrong to any reasonable student. The idea that patience is exclusively a childhood lesson is not a common misconception and is clearly false - adults also need patience. This makes it a throwaway option rather than an educationally valuable distractor.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices address the same conceptual category: lessons or messages about patience/impatience. Each choice presents a different potential interpretation of what the story suggests about being patient - whether it's about consequences of impatience (A), rewards for patience (B), benefits of impatience (C), or who needs patience (D). They are all thematic interpretations related to the concept of patience, making this a homogeneous set of answer choices.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a complete statement about patience that includes: (1) a subject (impatient people, patient people, being impatient, or only children), (2) a verb/action, and (3) a consequence or outcome. They are all written in accessible, straightforward language without mixing casual and technical terminology. The sentence structures are comparable in complexity, and each makes a clear claim about patience without being overly simplistic or unnecessarily elaborate compared to the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are semantically close to option A; they express opposite or unrelated ideas.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount the story, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nWhile this question does ask about a lesson/moral (patience), it has a critical flaw: there is no passage provided. RL.3.2 specifically requires students to determine how the message is conveyed \"through key details in the text.\" Without a passage, students cannot reference specific textual evidence or explain how the moral is conveyed through the story's details.\n\nAdditionally, the answer choices are problematic. Choice B includes \"magical treasures\" which may not be in the text, Choice C and D are obviously incorrect distractors that don't require text analysis, and even Choice A could be answered based on general knowledge about patience rather than analysis of the specific text.\n\nFor this to properly assess RL.3.2, it would need: (1) an actual passage, and (2) answer choices that require students to connect the moral to specific story details.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a critical clarity issue: it references \"the story\" but no story/passage is provided in the context given. Students cannot answer what a story \"suggests\" without having access to that story. While the question itself is grammatically clear and the answer choices are well-structured, the question is fundamentally unanswerable and ambiguous without the referenced text. This makes it confusing and unclear for students.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage is missing from this question, making it impossible to verify whether answer A (or any answer) can be defended based on textual evidence. Without the passage, I cannot determine if:\n- The story actually shows impatience leading to bad decisions that hurt others (A)\n- The passage mentions magical treasures at all (B)\n- The story suggests impatience helps efficiency (C)\n- The passage limits patience lessons to children only (D)\n\nSince validation requires checking answers against the passage and no passage is provided, I cannot confirm that exactly one answer is defensibly correct.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What does the story suggest about being patient?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a general interpretive question about the passage content. Since there are no passage references to verify, the criteria are met by default according to the instruction \"1 if all passage references are accurate and exist; OR if the question does not contain passage references.\"",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:05:42.093691"
+  },
+  {
+    "question_id": "quiz_302008_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9,
+    "total_checks_passed": 9,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each choice consists of:\n1. A subject pronoun \"He\"\n2. A linking verb \"is\" (or \"truly cares\"/\"wants\" in B, but still maintains parallel structure with \"He + verb\")\n3. An adjective or descriptive phrase followed by \"and\" \n4. A second clause beginning with a verb\n\nMore specifically:\nA) He is [adjective] and [verb phrase]\nB) He [verb phrase] and [verb phrase]\nC) He is [adjective] and [verb phrase]\nD) He is [adjective] and [verb phrase]\n\nWhile choice B uses action verbs instead of \"is + adjective,\" all choices maintain the core parallel structure of \"He [verb/state] and [action/intention].\" This minor variation does not create an unfair advantage or disadvantage, as all options are complete sentences with consistent subject-verb-conjunction patterns describing the magician's character traits and motivations.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Let me evaluate each incorrect choice (B, C, D):\n\n**Choice B**: \"He truly cares about Aladdin and wants to help him\" - This is a plausible distractor because a student who doesn't fully understand deception might misinterpret the magician's actions as kindness, especially if the magician acts friendly or gives Aladdin gifts as part of the deception. This represents a common misconception about distinguishing between genuine care and manipulation.\n\n**Choice C**: \"He is confused and really believes he is Aladdin's uncle\" - This is plausible because a student might confuse \"pretending\" with \"being mistaken.\" It tests whether students understand the difference between deliberate deception and confusion, which is an important comprehension skill.\n\n**Choice D**: \"He is generous and wants to share the treasure with Aladdin\" - This is plausible because students might focus on the fact that the magician involves Aladdin in getting treasure and misunderstand his true selfish motives. It represents a misconception about interpreting character motivation.\n\nAll three incorrect choices are educationally valuable distractors that test important reading comprehension skills: understanding deception vs. kindness, intentional lying vs. confusion, and selfish vs. generous motives. None are obviously wrong or throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character trait/motivation question asking what the magician's behavior reveals about his character. All four answer choices describe character traits or motivations: A) dishonest/manipulative, B) caring/helpful, C) confused/delusional, D) generous/sharing. While they present different interpretations of the character, they all belong to the same conceptual category of character analysis.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a character trait followed by a brief explanation of the magician's motivation or state of mind:\n- A: \"dishonest and willing to lie to get what he wants\"\n- B: \"truly cares about Aladdin and wants to help him\"\n- C: \"confused and really believes he is Aladdin's uncle\"\n- D: \"generous and wants to share the treasure with Aladdin\"\n\nEach follows the same structure (character trait + motivation/explanation) and uses comparable vocabulary complexity. None are significantly more technical, verbose, or simplified than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The statement that he pretends to be an uncle to trick Aladdin clearly supports dishonesty (A); options B, C, and D contradict the passage and are not supported.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nThis question asks students to analyze what the magician's deceptive action reveals about his character traits. This is character analysis based on actions, which directly aligns with RL.3.3 (\"Describe characters and explain how their actions contribute to story events\"), not RL.3.2. \n\nRL.3.2 focuses on identifying central messages, lessons, or morals of a story, not on character trait analysis. While understanding character actions can support comprehension of theme, this question specifically targets character analysis skills rather than determining the story's central message or moral.\n\nThe question does not assess the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks students to make an inference about the magician's character based on a specific action (pretending to be Aladdin's uncle to trick him). The pronoun \"this\" clearly refers to the deceptive behavior described in the previous sentence. The sentence structure is straightforward and appropriate for the grade level. The question has one clear interpretation: what does the magician's deceptive action reveal about his character? The answer choices provide distinct options with only one logical answer (A), making the question's intent unmistakable.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "The question asks what the magician's pretending to be Aladdin's uncle shows about his character. This is a straightforward character analysis question based on the stated action.\n\nA) \"He is dishonest and willing to lie to get what he wants\" - This is directly supported. Pretending to be someone's uncle when you're not is definitionally dishonest/lying, and doing so \"to trick Aladdin into helping him\" clearly shows he's lying to get what he wants.\n\nB) \"He truly cares about Aladdin and wants to help him\" - This contradicts the passage. The text explicitly states he wants to \"trick Aladdin into helping him,\" not help Aladdin.\n\nC) \"He is confused and really believes he is Aladdin's uncle\" - This contradicts the passage. The word \"pretends\" makes clear this is deliberate deception, not confusion.\n\nD) \"He is generous and wants to share the treasure with Aladdin\" - This is unsupported and contradicts the stated purpose of tricking Aladdin \"into helping him\" (implying the magician's own benefit).\n\nOnly answer A is defensible based on the passage. The other three are either directly contradicted or unsupported.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not contain any specific structural references to the passage (no paragraph numbers, line numbers, section titles, page numbers, or other structural elements are mentioned). The question simply refers to content about \"the magician pretends to be Aladdin's uncle\" without citing where this information appears in the passage. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:06:30.114024"
+  },
+  {
+    "question_id": "quiz_302008_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option consists of:\n- Subject pronoun \"He\"\n- Verb (thinks/knows/believes/wants)\n- Noun clause beginning with \"that\" (implied in A, B, C) or infinitive phrase (D)\n\nMore specifically:\nA) He thinks [that] Aladdin will follow directions...\nB) He knows [that] Aladdin has special magical powers\nC) He believes [that] Aladdin is the strongest boy...\nD) He wants to make Aladdin rich...\n\nWhile D uses an infinitive construction rather than a noun clause, this is a minor structural variation that doesn't create unfair advantage. All choices are complete sentences with the same subject-verb opening pattern and similar complexity. The grammatical consistency is sufficient for fair assessment.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Evaluating the incorrect choices (B, C, D):\n\nB) \"He knows Aladdin has special magical powers\" - This is a plausible distractor. Students might confuse Aladdin's later acquisition of magical items (lamp, ring) with having inherent powers, or misremember the story's details.\n\nC) \"He believes Aladdin is the strongest boy in the city\" - This is plausible because physical strength could reasonably be needed to retrieve something from a cave/underground location. Students might think physical capability was the selection criterion.\n\nD) \"He wants to make Aladdin rich because they are related\" - This is plausible because in the story, the magician does pretend to be Aladdin's uncle (they are supposedly related), and he does promise Aladdin rewards. Students who partially remember the story might conflate the false relationship claim with the actual motivation.\n\nAll three incorrect choices relate logically to the question and represent reasonable misunderstandings of the story's plot. None are obviously wrong or throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character motivation question asking why the magician chose Aladdin. All four answer choices provide possible reasons/motivations for the magician's choice:\nA) Motivation: Aladdin's obedience\nB) Motivation: Aladdin's magical powers\nC) Motivation: Aladdin's physical strength\nD) Motivation: Family relationship/desire to help him\n\nAll choices address the same conceptual category - they are all potential motivations or reasons for the magician's decision to choose Aladdin.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option presents a single, straightforward reason for the magician's choice of Aladdin, expressed in simple, comparable language:\n- A: behavioral trait (following directions)\n- B: possession of powers (magical abilities)\n- C: physical attribute (strength)\n- D: relational motivation (family connection + wealth)\n\nEach choice is roughly the same length, uses everyday vocabulary, and provides one clear motivation without excessive elaboration or technical language. There are no outliers with significantly more or less detail than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are near-synonymous with A or equally supported; B, C, and D present clearly different reasons.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount the story, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nThis question asks students to identify the magician's motivation for choosing Aladdin - a character analysis question focused on understanding a specific plot detail and character motivation. This directly aligns with RL.3.3 (describing characters and explaining how their actions contribute to story events), not RL.3.2.\n\nRL.3.2 would require students to identify the central message/moral of the Aladdin story (such as \"greed leads to downfall\" or \"kindness is rewarded\") and explain how that message is conveyed through the story's key details. This question about why the magician chose Aladdin is a plot-level detail question, not a central message/moral question.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks a specific question about the magician's motivation for choosing Aladdin. The pronouns are clear (\"the magician\" and \"Aladdin\" are explicitly named), there are no double negatives, the sentence structure is straightforward, and the language is precise. The question has one clear interpretation: what is the magician's reason for selecting Aladdin specifically. The answer choices are also distinct and mutually exclusive, each presenting a different possible motivation. The complexity is appropriate for students familiar with the Aladdin story.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage is missing - there is no text provided to validate the answer choices against. Without the passage, I cannot determine whether answer A is the only defensibly correct answer or if other options (B, C, or D) could also be supported. The question asks about the magician's specific motivation for choosing Aladdin, which requires explicit information from the passage to validate. This is a critical red flag: I cannot verify that exactly one answer is correct without the source material.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"Why does the magician choose Aladdin specifically to help him find the lamp?\" does not contain any specific passage references such as paragraph numbers, line numbers, section titles, quotes, or page numbers. It is a general comprehension question about the content. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:06:46.704918"
+  },
+  {
+    "question_id": "quiz_302008_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each is a complete sentence with a subject (\"He\") and predicate. Each choice presents a statement about the magician's motivations or actions in a consistent declarative sentence structure. While the sentences vary in length and complexity, this variation does not create an unfair advantage - they all maintain the same fundamental grammatical structure of complete sentences making claims about the character.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (B, C, D) are plausible distractors for students who partially understand the Aladdin story:\n\nB) \"He is protecting Aladdin from dangerous treasures\" - This could fool students who misinterpret the magician's warnings about touching things in the cave, confusing cautionary instructions with protective intent.\n\nC) \"He plans to come back later to rescue Aladdin\" - This represents a naive interpretation where students might assume the magician has good intentions and just made a temporary decision, not recognizing his true malicious nature.\n\nD) \"He accidentally trapped Aladdin\" - This could appeal to students who don't fully grasp the magician's deliberate betrayal and might think the cave closing was unintentional.\n\nEach distractor represents a reasonable misunderstanding of the magician's motivations and actions, making them educationally valuable wrong answers rather than obviously incorrect throwaway options.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character motivation/intention question asking what the magician's action reveals about him. All four answer choices address the same conceptual category - they each provide a different possible motivation or intention behind the magician's action:\nA) Selfish motivation (prioritizing the lamp over Aladdin)\nB) Protective motivation (safeguarding Aladdin)\nC) Planned rescue motivation (temporary trapping with intent to return)\nD) Accidental action (no intentional motivation)\n\nAll choices directly answer what the trapping reveals about the magician's character, intentions, or motivations. They are homogeneous in addressing character motivation/intention.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides:\n- A clear motivation or explanation for the magician's action\n- A complete cause-and-effect statement\n- Similar sentence structure and complexity\n- Comparable length (roughly 10-15 words each)\n- Same level of interpretive depth about the character's intentions\n\nNone of the choices stands out as significantly more technical, verbose, or simplistic than the others. They all offer character-motivation explanations at the same analytical level.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors present opposite or clearly different motives (protection, future rescue, accident), not synonymous with A\u2019s selfish intent. None are equally supported by the typical narrative context.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nThis question asks students to analyze what the magician's action reveals about his character - specifically his motivations and intentions. This is character analysis based on actions, which directly aligns with RL.3.3 (Describe characters and explain how their actions contribute to story events), not RL.3.2.\n\nRL.3.2 would require students to identify the central message/moral of the story or recount the story, not analyze character traits or motivations. The question is testing character inference skills rather than determining central message or recounting key story elements.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. The pronoun \"him\" unambiguously refers to \"the magician\" (the subject of the sentence). The question asks students to make an inference about the magician's character based on his action of trapping Aladdin. The sentence structure is straightforward and appropriate for the grade level. The answer choices present distinct interpretations with no overlap, making it clear what students need to evaluate. There are no double negatives, vague language, or unnecessary complexity that would confuse students.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage text is missing - only \"Passage:\" appears with no actual content provided. Without the passage, I cannot verify whether answer A (or any answer) is defensibly correct based on textual evidence. The question asks what the magician's action \"reveals\" which requires specific details from the passage about the trapping incident, the magician's motivations, and the context. Without this information, I cannot determine if exactly one answer is clearly correct or if multiple interpretations are possible.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question \"What does the magician's action of trapping Aladdin reveal about him?\" does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, page numbers, or other structural elements. It simply asks about content (the magician's action) without referencing where in the passage this information appears. Since there are no passage references to verify, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:07:29.368393"
+  },
+  {
+    "question_id": "quiz_302008_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8,
+    "total_checks_passed": 8,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern. Each option consists of:\n- A subject pronoun \"She\"\n- A verb phrase describing her state or action\n- Additional clauses providing more detail\n\nSpecifically:\nA) \"She is trusting and believes...\"\nB) \"She knows... but pretends...\"\nC) \"She is suspicious and doesn't want...\"\nD) \"She remembers meeting...\"\n\nAll are complete sentences with parallel structure using \"She\" + verb construction. While the specific verbs and clause structures vary slightly, this is minor variation within the same overall grammatical pattern (complete declarative sentences about the subject \"she\"). This does not create an unfair advantage or disadvantage for test-takers.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Evaluating the incorrect choices (B, C, D):\n\nB) \"She knows the man is lying but pretends to believe him\" - This is a plausible misreading of the mother's behavior. A student might interpret politeness or hesitation as knowing deception, representing a reasonable misconception about character motivation.\n\nC) \"She is suspicious and doesn't want the man in her home\" - This is the opposite of the correct answer but could reflect a student's misinterpretation of caution or initial hesitation as ongoing suspicion. It's a logical alternative interpretation of her reaction.\n\nD) \"She remembers meeting the man many years ago\" - In the Aladdin story, the \"uncle\" claims to be a long-lost relative. A student might confuse the stranger's claim with the mother's actual memory, or misunderstand whether she genuinely recognizes him. This tests comprehension of the deception in the plot.\n\nAll three incorrect choices represent reasonable misinterpretations of the mother's character and reactions, rather than being obviously wrong or unrelated to the question about her reaction to the stranger.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a character analysis question asking what the mother's reaction reveals about her. All four answer choices describe different possible character traits or states of mind of Aladdin's mother:\nA) Her level of trust/credulity\nB) Her awareness and deceptiveness\nC) Her suspicion and boundaries\nD) Her memory/recognition\n\nAll choices address the same conceptual category: character traits or mental states of Aladdin's mother as revealed by her reaction. There is no mixing of different types of concepts like plot events, settings, or structural elements.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option:\n- Describes a single character trait or state of mind (trusting, knowing/pretending, suspicious, remembering)\n- Includes a brief elaboration that explains the trait in context\n- Uses comparable sentence structure and length\n- Maintains the same level of psychological complexity\n- Uses everyday language without mixing technical and casual terms\n\nThere are no outliers with significantly more or less detail than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "Options B and C present opposite traits to A (deception awareness or suspicion), and D is unrelated. None are synonymous with A or differ only in degree.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.2, which requires students to \"recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\"\n\nThis question asks students to analyze a character's reaction and make inferences about her personality traits (trusting, suspicious, etc.). This is character analysis, which directly aligns with RL.3.3 (describing characters and explaining how their actions contribute to story events), not RL.3.2.\n\nRL.3.2 would require questions about the central message, lesson, or moral of the story, or asking students to recount the story. This question does not assess either of those skills - it assesses character inference and analysis instead.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It asks what Aladdin's mother's reaction reveals about her character, which is a straightforward comprehension question. The pronouns are unambiguous - \"her\" clearly refers to Aladdin's mother, and \"the stranger\" is a clear reference to a character in the passage. The sentence structure is simple and direct. The answer choices present four distinct character interpretations that are mutually exclusive and easy to distinguish. There are no double negatives, vague language, or multiple possible interpretations of what is being asked. A student would clearly understand they need to analyze the mother's reaction to determine what it reveals about her personality or character traits.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage text is missing, making it impossible to verify whether answer A is the only defensibly correct answer or if other options (B, C, or D) could also be supported. Without the passage describing Aladdin's mother's actual reaction to the stranger, I cannot determine if she is trusting (A), pretending (B), suspicious (C), or remembering him (D). This is a critical flaw - the validation requires the passage content to assess whether the question has exactly one defensible answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question asks \"What does Aladdin's mother's reaction to the stranger tell you about her?\" This question does not contain any specific structural references to the passage such as paragraph numbers, line numbers, section titles, page numbers, or other structural elements. It simply refers to content that would need to exist in the passage (Aladdin's mother and a stranger), but does not make claims about WHERE in the passage this information appears. Since the question does not contain passage references that need to be verified, the answer is 1.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-10T00:07:54.944398"
+  }
+]

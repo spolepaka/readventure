@@ -1,0 +1,482 @@
+[
+  {
+    "question_id": "guiding_21014_302001",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJcgTxhKdtfumi3aRe'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All three incorrect choices (baker, farmer, teacher) are plausible distractors for young students reading this passage. These are all common, traditional occupations that would be familiar to elementary-age readers and fit the historical/fairy tale setting of the story. A student who skimmed the passage or confused details might reasonably select any of these occupations, as they are all working-class professions similar in social status to a tailor. None of the options are obviously wrong or completely unrelated - they all represent believable occupations for Aladdin's father in this context.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJctrhKKECvsGnjeyj'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJcmB8PivNtmMXwdBL'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.1 (Ask and answer questions about key details). The question asks students to identify a specific detail from the text (Aladdin's father's occupation), which requires them to refer explicitly to the passage where it states \"His father worked as a tailor, making clothes for people.\" This is a straightforward recall of a key detail from the story, which is exactly what RL.3.1 requires. The DOK Level 1 designation is also appropriate as this is basic recall/recognition. The question properly aligns with the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJbku5jxFqwiyJsYGu'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJdhyesVaJLiGJhf5h'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEJdCDtX47nfA9dxDwf'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:26.500215"
+  },
+  {
+    "question_id": "guiding_21015_302002",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEK9vv23fk7V6p892p3'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEK7U5Watvu84k6h2vc'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four answer choices (bored, angry, excited, surprised) are emotional states or feelings. The question asks about how Aladdin's mother \"feels,\" and all options consistently provide different possible emotions she might experience. This is a homogeneous set - all choices belong to the same conceptual category of emotions/feelings.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are single-word, basic emotions at the same level of specificity: \"bored\", \"angry\", \"excited\", and \"surprised\" are all common, simple emotional states that would be taught at an elementary level. None are more technical, complex, or detailed than the others. They represent equivalent levels of vocabulary and conceptual complexity.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEK7s9DriWkWMSc398K'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKASfczhvViwDh8rzv'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEK7kh5SAvvfzoHfreR'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEK7QrXMVucu2Y4rWeb'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:31.438825"
+  },
+  {
+    "question_id": "guiding_21016_302003",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKUjkdmqdMxc57XBY2'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKW5N9GLJUHaqxBgfU'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKUDzp6gv8ETjLfhbK'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option describes a concrete, single action or event using simple language:\n- A) \"a stranger visits Aladdin's house\" - simple action with subject and location\n- B) \"they climb up a steep mountain path\" - simple action with descriptive detail\n- C) \"words make the earth split open\" - simple cause-and-effect action\n- D) \"Aladdin gathers dry sticks for a fire\" - simple action with purpose\n\nAll choices use everyday vocabulary, present one clear event, and are roughly the same length and complexity. None are significantly more technical, abstract, or detailed than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKUbKQWjKpBLuq3Mre'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and precise. It asks students to identify which element makes the story a fantasy, which is a straightforward literary analysis task. The question stem is unambiguous - \"The reader can tell this story is a fantasy because\" - and directly relates to the passage. All four answer choices are concrete, specific events from the passage that students can evaluate. There are no ambiguous pronouns, double negatives, or overly complex structures. The correct answer (C - magical words causing supernatural events) is clearly distinguishable from realistic events (A, B, D). The vocabulary and sentence structure are appropriate for elementary/middle school students reading Aladdin. Students would understand they need to identify the fantastical/magical element versus ordinary realistic events.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKUT96KT51aJzSPKfT'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKUzt9jN6cigBnefcj'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:37.576071"
+  },
+  {
+    "question_id": "guiding_21017_302004",
+    "question_type": "MCQ",
+    "overall_score": 0.1,
+    "total_checks_passed": 1,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKw246UM18sXmNg86c'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKvGuQC6xLo1W3CG7i'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKveEb1uEhHGzu3pgN'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKw7Fxvxx2pWpToawq'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "The assigned standard is RL.3.6, which requires students to distinguish their own point of view from that of the narrator or characters. This standard is about perspective-taking and understanding different viewpoints within a text.\n\nThe question asks \"This story was most likely written to...\" which is asking students to identify the author's purpose or the moral/theme of the story. This assesses RL.3.2 (determining theme/moral and how it's conveyed through key details) rather than RL.3.6.\n\nThe correct answer (C - \"teach readers that greed can lead to trouble\") requires identifying the story's theme/moral, not distinguishing between different points of view. None of the answer choices address perspective or point of view, which is the core skill of RL.3.6.\n\nThis is a misalignment between the question and the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKwJfaxecAN92fkaFZ'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Let me evaluate each answer choice:\n\nA) \"show readers how magic lamps are found\" - This is too literal. While the passage does describe finding a lamp, this is clearly part of a larger narrative (Aladdin), not an instructional piece about lamp-finding.\n\nB) \"interest readers in collecting gems\" - Nothing in the passage promotes gem collecting. The gems are merely plot devices, and their weight actually causes problems for Aladdin.\n\nC) \"teach readers that greed can lead to trouble\" - This is clearly supported. The magician's greed (wanting only the lamp, refusing to help Aladdin first) directly leads to his failure - he ends up with nothing because he couldn't wait. The moral lesson about greed causing problems is the central theme.\n\nD) \"make readers feel sorry for the magician\" - The passage portrays the magician negatively: he's impatient, angry, selfish (\"He only cared about getting the magic lamp\"), and traps Aladdin. Readers would feel sorry for Aladdin, not the magician.\n\nAnswer C is the only defensible choice. This is a classic fable/folktale structure with a clear moral lesson about how greed leads to negative consequences.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEKvptxaPwW9eoYAcfX'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:45.844805"
+  },
+  {
+    "question_id": "quiz_302005",
+    "question_type": "MCQ",
+    "overall_score": 0.2,
+    "total_checks_passed": 2,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELcYagVRHBCEdXZPGc'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELZJNaVfA4Hvis6gSB'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a phrase meaning/interpretation question asking what \"richer than any king in the world\" means. All four answer choices provide different possible interpretations of what this phrase could mean:\nA) Interprets \"richer\" as having vast amounts of money\nB) Interprets it as becoming a ruler/king himself\nC) Interprets it as finding specific treasure (gold coins)\nD) Interprets it as meeting/associating with kings\n\nAll choices are attempting to explain the meaning of the same phrase, just offering different interpretations. They all belong to the conceptual category of \"possible meanings/interpretations of the phrase.\"",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELcQtmU4wJiaViC59d'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.4, which requires students to determine the meaning of words and phrases as they are used in a text. The question asks students to interpret the figurative phrase \"richer than any king in the world\" - this is exactly what RL.3.4 demands. The correct answer (A) demonstrates understanding that this is a figurative expression meaning extreme wealth, not literal interpretations about becoming a ruler (B), finding specific gold coins (C), or meeting kings (D). This is appropriately DOK Level 2 as it requires interpretation beyond literal comprehension.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELYs5KxYzsqDDqnmDa'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELZ21ASTcZgyHxdFry'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELZEemEA1BVm28EWSe'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:51.454991"
+  },
+  {
+    "question_id": "quiz_302006",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELwsS1rC9kqsoVBHcL'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELxn162aZFSGiqKTi4'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELxmFyUbZknZtE9SRF'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELx4LsagNzuFRgCAbS'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.3, which requires students to describe characters and explain how their actions contribute to story events. \n\nThe question asks students to identify what action (Aladdin not giving the lamp right away) causes a specific story event (the magician trapping Aladdin in the cave). This requires understanding:\n1. Character actions (Aladdin's behavior with the lamp)\n2. How those actions contribute to/cause story events (being trapped)\n3. The cause-and-effect relationship between character behavior and plot development\n\nAll answer choices present different character actions and their potential consequences, requiring students to identify the correct causal relationship between a character's action and a resulting story event. This is precisely what RL.3.3 demands at a DOK Level 2 (skill/concept application).",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. It asks for a specific cause-and-effect relationship (what causes the magician to trap Aladdin). The subject \"the magician\" is clearly identified, the action \"trap Aladdin in the cave\" is specific, and students would understand they need to identify the reason for this action. There are no ambiguous pronouns, double negatives, or overly complex structures. The question has one clear interpretation appropriate for students familiar with the Aladdin story. Note: There is a minor typo in choice B (\"won't to go\" should be \"won't go\"), but this doesn't affect the clarity of the main question itself.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELxUe5qXkxnvz2X13i'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwELwbK95jWNPwypZuk2'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:57:57.963728"
+  },
+  {
+    "question_id": "quiz_302007",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMS74JzmnMqEUuavJG'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMSZauMPBFGQfnq5xj'}",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "This is a central message/lesson question, and all four answer choices present potential moral lessons or themes from the story:\nA) A lesson about magic and belief\nB) A lesson about trusting strangers\nC) A lesson about hard work and wealth\nD) A lesson about heeding parental advice\n\nAll choices are thematic lessons/morals that could be derived from a story, making them homogeneous in category. None are plot details, character descriptions, or other conceptual categories.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMS93FUKwzwSEKNVSC'}",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.2, which requires students to recount stories and determine the central message, lesson, or moral. The question explicitly asks students to identify \"the central message or lesson\" of the Aladdin story, which is the exact skill specified in the standard. The answer choices present different potential themes/lessons, requiring students to analyze the story events and determine which message is best supported. This is appropriately complex for DOK Level 3 (strategic thinking/reasoning), as students must evaluate multiple interpretations rather than simply recall facts. The question aligns precisely with the assigned standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMUA5fD7zK8zgN184z'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMS3azHD4DdAa9Ukkf'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMTsxjZ1iwSpuUwxQ9'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:58:03.772085"
+  },
+  {
+    "question_id": "quiz_302008",
+    "question_type": "MCQ",
+    "overall_score": 0.3,
+    "total_checks_passed": 3,
+    "total_checks_run": 10,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMt134oRZtoudz9oTA'}",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "Evaluating the incorrect choices (A, B, D):\n\nA) \"So he can help Aladdin become a rich merchant\" - This is plausible because the magician does pretend to offer help and mentorship to Aladdin, which could include promises of wealth or a trade. A student might confuse the magician's false pretenses with his actual motivation.\n\nB) \"Because he is truly part of Aladdin's family\" - This is plausible because the magician explicitly claims to be Aladdin's uncle in the story. A student who doesn't understand the deception might believe this claim at face value.\n\nD) \"So he can take Aladdin for a long mountain walk\" - This is plausible because the magician does literally take Aladdin on a journey to the mountains/cave. A student might confuse this surface-level action with the underlying motive, not recognizing it as merely a means to an end.\n\nAll three incorrect options relate to actual events or claims in the Aladdin story and represent reasonable misunderstandings of the magician's true motivation. None are obviously wrong or unrelated.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMsciyMQT79ui7jcb9'}",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four answer choices are at similar levels of specificity and detail. Each option provides a simple, direct reason for the magician's deception using straightforward language:\n- A) States a specific goal (help become rich merchant)\n- B) States a relationship claim (family member)\n- C) States a specific goal (get the magic lamp)\n- D) States a specific activity (take for mountain walk)\n\nAll choices are single-clause explanations of similar length and complexity, using everyday vocabulary without technical terms or overly elaborate descriptions. None stands out as significantly more or less detailed than the others.",
+        "category": "distractor"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMsdTt18WH9TGHBULi'}",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMsQpUpqs8J4Te6wFL'}",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMsTYt6FoZ8xjYNR8W'}",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CVwEMraTqDH8cPYRswhkL'}",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "timestamp": "2025-12-09T14:58:11.883280"
+  }
+]

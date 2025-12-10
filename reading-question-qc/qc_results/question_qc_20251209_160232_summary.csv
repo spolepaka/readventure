@@ -1,0 +1,9 @@
+question_id,score,status,clarity_precision,grammatical_parallel,homogeneity,length_check,passage_reference,plausibility,single_correct_answer,specificity_balance,standard_alignment
+guiding_21014_302001,100%,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
+guiding_21015_302002,100%,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
+guiding_21016_302003,78%,✅,✅,✅,✅,✅,✅,❌,✅,✅,❌
+guiding_21017_302004,78%,✅,✅,✅,✅,❌,✅,✅,✅,✅,❌
+quiz_302005,89%,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅
+quiz_302006,89%,✅,✅,❌,✅,✅,✅,✅,✅,✅,✅
+quiz_302007,100%,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
+quiz_302008,100%,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
