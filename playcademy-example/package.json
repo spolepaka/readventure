@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@playcademy/vite-plugin": "^0.2.6",
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
   },
