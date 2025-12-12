@@ -112,14 +112,17 @@ export function generateActiveTiles(
   const pattern = config.tileLayout.tilePathPattern || 'linear-horizontal';
   
   switch (mode) {
-    case 'one-question-per-tile':
+    case 'one-section-per-tile':
+    case 'one-question-per-tile': // legacy name
       return generateTilesForOneQuestionMode(config, storyData, pattern);
-    case 'all-questions-one-tile':
+    case 'one-article-per-tile':
+    case 'all-questions-one-tile': // legacy name
       return generateTilesForAllQuestionsMode(config, storyData, pattern);
     case 'full-text-per-tile':
       return generateTilesForFullTextMode(config, storyData, pattern);
     default:
-      return generateTilesForOneQuestionMode(config, storyData, pattern);
+      // Default: one article per tile (reading + quiz tiles per article)
+      return generateTilesForAllQuestionsMode(config, storyData, pattern);
   }
 }
 

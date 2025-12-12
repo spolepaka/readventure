@@ -217,6 +217,12 @@ export class SpaceReadingGame {
       s.articleIndex === articleIndex
     );
 
+    // Handle "all sections" mode (sectionIndex: -1) - one article per tile
+    if (sectionIndex === -1) {
+      this.loadArticleTile(articleIndex);
+      return;
+    }
+
     const section = this.sectionsForArticle[sectionIndex] || this.storyData.sections[sectionIndex];
     if (!section) {
       console.error('Section not found:', sectionIndex);
@@ -251,6 +257,250 @@ export class SpaceReadingGame {
     }
 
     this.showScreen('reading-screen');
+  }
+
+  /**
+   * Load an entire article as one tile (guiding questions + quiz questions)
+   * Sections are revealed PROGRESSIVELY during guiding phase, then full passage for quiz
+   */
+  private loadArticleTile(articleIndex: number): void {
+    // Get all sections for this article and store for progressive reveal
+    this.sectionsForArticle = this.storyData.sections.filter(s => s.articleIndex === articleIndex);
+    
+    if (this.sectionsForArticle.length === 0) {
+      console.error('No sections found for article:', articleIndex);
+      return;
+    }
+
+    this.currentArticleTitle = this.sectionsForArticle[0].articleTitle || this.storyData.title;
+    this._currentArticleIndex = articleIndex;
+
+    // Create guiding questions from ALL sections
+    this.guidingQuestions = this.sectionsForArticle.map(section => ({
+      id: section.identifier,
+      prompt: section.question,
+      choices: section.choices,
+      articleIndex,
+      articleTitle: this.currentArticleTitle
+    }));
+
+    // Get quiz questions for this article
+    const quizForArticle = this.storyData.quizQuestions.filter(q => q.articleIndex === articleIndex);
+    this._quizQuestions = quizForArticle.map(quiz => ({
+      id: quiz.id || quiz.identifier,
+      prompt: quiz.prompt,
+      choices: quiz.choices,
+      articleIndex,
+      articleTitle: this.currentArticleTitle
+    }));
+
+    console.log(`📚 Article tile: ${this.guidingQuestions.length} guiding + ${this._quizQuestions.length} quiz questions`);
+
+    this.isInGuidingPhase = true;
+    this._currentFullGameQuestion = 0;
+    this.currentSectionQuestion = 0;
+
+    // Load first question (guiding question with first section)
+    this.loadArticleQuestion(0);
+    this.showScreen('reading-screen');
+  }
+
+  /**
+   * Load a question (guiding or quiz) for the article tile
+   * Handles both phases: progressive sections for guiding, full passage for quiz
+   */
+  private loadArticleQuestion(questionIndex: number): void {
+    const totalGuiding = this.guidingQuestions.length;
+    const totalQuiz = this._quizQuestions.length;
+
+    if (questionIndex < totalGuiding) {
+      // GUIDING PHASE: Progressive section reveal
+      this.isInGuidingPhase = true;
+      this.currentSectionQuestion = questionIndex;
+
+      // Update passage title
+      const titleEl = document.getElementById('passage-title');
+      if (titleEl) titleEl.textContent = this.currentArticleTitle;
+
+      // Build progressive passage (sections 0 through questionIndex)
+      const contentEl = document.getElementById('passage-content');
+      if (contentEl) {
+        contentEl.innerHTML = this.buildProgressivePassage(questionIndex);
+      }
+
+      // Auto-scroll to current section
+      this.scrollToCurrentSection();
+
+      // Show timer or question
+      if (this.readingTimerEnabled && this.readingTimerOnlyGuiding) {
+        this.startReadingTimer(() => {
+          this.renderGuidingQuestion(questionIndex);
+        });
+      } else {
+        this.renderGuidingQuestion(questionIndex);
+      }
+
+    } else {
+      // QUIZ PHASE: Full passage shown, quiz questions
+      this.isInGuidingPhase = false;
+      const quizIndex = questionIndex - totalGuiding;
+
+      if (quizIndex >= totalQuiz) {
+        // All questions done - show tile results
+        this.showTileResults();
+        return;
+      }
+
+      // Update passage title
+      const titleEl = document.getElementById('passage-title');
+      if (titleEl) titleEl.textContent = this.currentArticleTitle;
+
+      // Show FULL passage for quiz phase
+      const contentEl = document.getElementById('passage-content');
+      if (contentEl) {
+        contentEl.innerHTML = this.buildFullPassage();
+      }
+
+      // Show quiz question directly (no timer for quiz if onlyForGuidingQuestions)
+      document.getElementById('activity-timer-panel')?.classList.remove('active');
+      document.getElementById('question-content')?.classList.remove('hidden');
+
+      this.renderQuizQuestion(quizIndex, totalQuiz);
+    }
+  }
+
+  /**
+   * Build progressive passage HTML - shows sections up to current question
+   * with the current section highlighted
+   */
+  private buildProgressivePassage(sectionsUpTo: number): string {
+    let passageHTML = '';
+    
+    for (let i = 0; i <= sectionsUpTo && i < this.sectionsForArticle.length; i++) {
+      const section = this.sectionsForArticle[i];
+      
+      // Add section divider between sections
+      if (i > 0) {
+        passageHTML += '<hr class="section-divider">';
+      }
+      
+      // Strip title from first section content
+      let content = section.content;
+      if (i === 0 && this.currentArticleTitle) {
+        content = this.stripTitleFromContent(content, this.currentArticleTitle);
+      }
+      
+      // Mark current (latest) section for highlighting and auto-scroll
+      const isCurrentSection = (i === sectionsUpTo);
+      const sectionId = isCurrentSection ? 'id="current-section"' : '';
+      const currentClass = isCurrentSection ? ' current' : '';
+      
+      passageHTML += `<p ${sectionId} class="section-paragraph${currentClass}">${content}</p>`;
+    }
+    
+    return passageHTML;
+  }
+
+  /**
+   * Build full passage HTML - all sections for quiz phase
+   */
+  private buildFullPassage(): string {
+    let passageHTML = '';
+    
+    for (let i = 0; i < this.sectionsForArticle.length; i++) {
+      const section = this.sectionsForArticle[i];
+      
+      // Add section divider between sections
+      if (i > 0) {
+        passageHTML += '<hr class="section-divider">';
+      }
+      
+      // Strip title from first section content
+      let content = section.content;
+      if (i === 0 && this.currentArticleTitle) {
+        content = this.stripTitleFromContent(content, this.currentArticleTitle);
+      }
+      
+      passageHTML += `<p>${content}</p>`;
+    }
+    
+    return passageHTML;
+  }
+
+  /**
+   * Render a guiding question with question number
+   */
+  private renderGuidingQuestion(questionIndex: number): void {
+    const question = this.guidingQuestions[questionIndex];
+    const totalQuestions = this.guidingQuestions.length;
+
+    const promptEl = document.getElementById('question-prompt');
+    const choicesEl = document.getElementById('choices-container');
+    const confirmBtn = document.getElementById('confirm-btn') as HTMLButtonElement;
+
+    if (promptEl) {
+      promptEl.textContent = `Guiding Question ${questionIndex + 1} of ${totalQuestions}: ${question.prompt}`;
+    }
+    if (confirmBtn) confirmBtn.disabled = true;
+
+    if (choicesEl) {
+      choicesEl.innerHTML = '';
+      question.choices.forEach((choice, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.textContent = choice.text;
+        btn.addEventListener('click', () => this.selectAnswer(choice, index));
+        choicesEl.appendChild(btn);
+      });
+    }
+
+    // Show question content, hide timer
+    document.getElementById('activity-timer-panel')?.classList.remove('active');
+    document.getElementById('question-content')?.classList.remove('hidden');
+  }
+
+  /**
+   * Render a quiz question with question number
+   */
+  private renderQuizQuestion(quizIndex: number, totalQuiz: number): void {
+    const question = this._quizQuestions[quizIndex];
+
+    const promptEl = document.getElementById('question-prompt');
+    const choicesEl = document.getElementById('choices-container');
+    const confirmBtn = document.getElementById('confirm-btn') as HTMLButtonElement;
+
+    if (promptEl) {
+      promptEl.textContent = `Final Quiz ${quizIndex + 1} of ${totalQuiz}: ${question.prompt}`;
+    }
+    if (confirmBtn) confirmBtn.disabled = true;
+
+    if (choicesEl) {
+      choicesEl.innerHTML = '';
+      question.choices.forEach((choice, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.textContent = choice.text;
+        btn.addEventListener('click', () => this.selectAnswer(choice, index));
+        choicesEl.appendChild(btn);
+      });
+    }
+  }
+
+  /**
+   * Scroll to the current section in the passage panel
+   */
+  private scrollToCurrentSection(): void {
+    setTimeout(() => {
+      const currentSection = document.getElementById('current-section');
+      const passagePanel = document.querySelector('.passage-panel');
+      
+      if (currentSection && passagePanel) {
+        currentSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start'
+        });
+      }
+    }, 100);
   }
 
   private renderPassage(section: Section): void {
@@ -372,8 +622,16 @@ export class SpaceReadingGame {
 
     this.selectedAnswer = null;
 
-    // Check if this was the last question in the tile
-    if (this.isInGuidingPhase) {
+    // Check if we're in article-per-tile mode (one-article-per-tile)
+    // This is indicated by having sectionsForArticle populated with multiple sections AND quiz questions
+    const isArticlePerTileMode = this.sectionsForArticle.length > 1 || this._quizQuestions.length > 0;
+
+    if (isArticlePerTileMode) {
+      // Article-per-tile mode: advance through guiding + quiz questions
+      this._currentFullGameQuestion++;
+      this.loadArticleQuestion(this._currentFullGameQuestion);
+    } else if (this.isInGuidingPhase) {
+      // Section-per-tile mode (guiding phase)
       this.currentSectionQuestion++;
       if (this.currentSectionQuestion >= this.guidingQuestions.length) {
         // Done with guiding questions - show tile results
@@ -382,7 +640,7 @@ export class SpaceReadingGame {
         this.renderQuestion(this.guidingQuestions[this.currentSectionQuestion]);
       }
     } else {
-      // Quiz mode - handled by nextQuizQuestion
+      // Quiz screen mode - handled by nextQuizQuestion
       const nextBtn = document.getElementById('quiz-next-btn') as HTMLButtonElement;
       if (nextBtn) nextBtn.disabled = false;
     }
@@ -504,13 +762,16 @@ export class SpaceReadingGame {
       console.log(`❌ Tile ${this.currentTile} did not pass: ${accuracy}% (threshold: ${passThreshold}%)`);
     }
     
-    // Unlock next tile if linear progression
+    // Unlock next tile if linear progression (remove lock icon only, NOT the blur)
+    // The next tile stays blurred but becomes clickable
     if (this.config.gameFlow.linearProgression && this.currentTile < this.activeTiles.length - 1) {
+      // Remove lock icon (makes it look clickable)
       const nextLockIcon = document.querySelector(`#locks-overlay [data-tile-index="${this.currentTile + 1}"]`);
       if (nextLockIcon) nextLockIcon.classList.remove('visible');
       
+      // Remove not-clickable class (changes cursor to pointer)
+      // BUT keep the 'locked' class (blur stays until they pass that tile)
       const nextTile = document.querySelector(`#tiles-overlay [data-tile-index="${this.currentTile + 1}"]`);
-      nextTile?.classList.remove('locked');
       nextTile?.classList.remove('not-clickable');
     }
     

@@ -4,11 +4,11 @@
   "currentTheme": "space",
   
   "contentGranularity": {
-    "mode": "one-question-per-tile",
+    "mode": "one-article-per-tile",
     "description": "How content is distributed across tiles",
     "modes": {
-      "one-question-per-tile": "Each tile has one section with one guiding question (current)",
-      "all-questions-one-tile": "All guiding questions in one tile, quiz in another",
+      "one-article-per-tile": "Each article gets one reading tile (all sections + guiding Qs) + one quiz tile (DEFAULT)",
+      "one-section-per-tile": "Each section gets its own tile with one guiding question",
       "full-text-per-tile": "Each tile contains full text + all guiding questions + quiz",
       "custom": "Custom mapping defined in tileContentMapping"
     },
