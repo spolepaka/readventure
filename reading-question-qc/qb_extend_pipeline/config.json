@@ -1,0 +1,5 @@
+{
+  "include_guiding": false,
+  "only_guiding": false,
+  "log_dir": "outputs/llm_logs"
+}

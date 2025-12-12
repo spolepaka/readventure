@@ -47,7 +47,7 @@
     "allowSkipTiles": false,
     "requireCorrectAnswerToProgress": false,
     "showScoreDuringGame": false,
-    "firstTileUnlockedOnStart": false,
+    "firstTileUnlockedOnStart": true,
     "enableBackButton": true,
     "passThresholdPercent": 90,
     "passThresholdDescription": "Minimum accuracy % required to unblur the tile. If not met, tile stays blurred but next tile still unlocks."

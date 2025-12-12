@@ -3,20 +3,31 @@
 Question Bank Extender
 
 Generates sibling questions for existing reading comprehension questions.
-- 1 sibling per guiding question
-- 4 siblings per quiz question
+- By default: Only extends quiz questions (4 siblings per quiz question)
+- With --include-guiding: Also extends guiding questions (1 sibling each)
+- With --only-guiding: Only extends guiding questions
 
 Uses Claude Sonnet 4.5 with structured output mode.
 Processes one article at a time and saves checkpoints.
-
-Uses DOK-specific prompts from 'qb_extend prompts.json' with full quality requirements
-matching the bulk generation system.
+Logs all LLM communications with timestamps for traceability.
 
 Usage:
-    python question_bank_extender.py \
-        --input qti_existing_questions.csv \
-        --output extended_questions.csv \
-        --checkpoint checkpoints/
+    # Default: Only quiz questions
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv
+    
+    # Include guiding questions too
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv \\
+        --include-guiding
+    
+    # Only guiding questions
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv \\
+        --only-guiding
 """
 
 import os
@@ -25,12 +36,14 @@ import csv
 import argparse
 import time
 import re
+import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 import anthropic
 from dotenv import load_dotenv
+import pandas as pd
 
 # Load environment variables from .env file
 load_dotenv()
@@ -47,6 +60,7 @@ QUIZ_SIBLINGS = 4     # Generate 4 siblings per quiz question
 # Prompt file path
 PROMPTS_FILE = Path(__file__).parent / "qb_extend prompts.json"
 CCSS_FILE = Path(__file__).parent / "ck_gen - ccss.csv"
+CONFIG_FILE = Path(__file__).parent / "config.json"
 
 
 @dataclass
@@ -71,7 +85,7 @@ class GeneratedQuestion:
 MCQ_SCHEMA = {
     "type": "object",
     "properties": {
-        "sibling_questions": {
+        "variant_questions": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -117,13 +131,13 @@ MCQ_SCHEMA = {
                         "type": "string",
                         "description": "Feedback for option D explaining why it is correct or incorrect"
                     },
-                    "template_adaptation": {
+                    "differentiation_notes": {
                         "type": "string",
-                        "description": "Brief explanation of how the original was adapted to create this sibling"
+                        "description": "How this question differs from the reference: text location, question type, aspect of standard assessed"
                     },
                     "quality_verification": {
                         "type": "object",
-                        "description": "Self-check of quality requirements matching QC pipeline checks",
+                        "description": "Self-check of quality and diversity requirements",
                         "properties": {
                             "homogeneity_check": {
                                 "type": "string",
@@ -145,12 +159,12 @@ MCQ_SCHEMA = {
                                 "type": "string",
                                 "description": "Confirmation that only one answer is defensible as correct"
                             },
-                            "uniqueness_check": {
+                            "diversity_check": {
                                 "type": "string",
-                                "description": "Cross-reference: 'Sibling [N]: asks about [X] - differs from ORIGINAL (which asks [Y]) and Sibling [other numbers] (which ask [Z])'"
+                                "description": "Confirmation that this question targets different text, uses different question stem, and requires different reasoning than reference and other variants"
                             }
                         },
-                        "required": ["homogeneity_check", "specificity_check", "length_check", "semantic_distance_check", "single_correct_check", "uniqueness_check"],
+                        "required": ["homogeneity_check", "specificity_check", "length_check", "semantic_distance_check", "single_correct_check", "diversity_check"],
                         "additionalProperties": False
                     }
                 },
@@ -158,13 +172,13 @@ MCQ_SCHEMA = {
                     "question", "option_1", "option_2", "option_3", "option_4",
                     "correct_answer", "option_1_explanation", "option_2_explanation",
                     "option_3_explanation", "option_4_explanation",
-                    "template_adaptation", "quality_verification"
+                    "differentiation_notes", "quality_verification"
                 ],
                 "additionalProperties": False
             }
         }
     },
-    "required": ["sibling_questions"],
+    "required": ["variant_questions"],
     "additionalProperties": False
 }
 
@@ -172,7 +186,7 @@ MCQ_SCHEMA = {
 SR_SCHEMA = {
     "type": "object",
     "properties": {
-        "sibling_questions": {
+        "variant_questions": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -198,20 +212,20 @@ SR_SCHEMA = {
                         "type": "string",
                         "description": "Explanation of why this question is at the specified DOK level"
                     },
-                    "template_adaptation": {
+                    "differentiation_notes": {
                         "type": "string",
-                        "description": "Brief explanation of how the original was adapted"
+                        "description": "How this question differs from reference: paragraph targeted, topic focus"
                     }
                 },
                 "required": [
                     "question", "expected_response", "key_details",
-                    "scoring_notes", "dok_justification", "template_adaptation"
+                    "scoring_notes", "dok_justification", "differentiation_notes"
                 ],
                 "additionalProperties": False
             }
         }
     },
-    "required": ["sibling_questions"],
+    "required": ["variant_questions"],
     "additionalProperties": False
 }
 
@@ -219,7 +233,7 @@ SR_SCHEMA = {
 MP_SCHEMA = {
     "type": "object",
     "properties": {
-        "sibling_questions": {
+        "variant_questions": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -276,18 +290,18 @@ MP_SCHEMA = {
                         "type": "string",
                         "description": "How this multipart question assesses the target standard"
                     },
-                    "template_adaptation": {
+                    "differentiation_notes": {
                         "type": "string",
-                        "description": "Brief explanation of how the original was adapted"
+                        "description": "How this question differs from reference: analytical focus, text elements targeted"
                     }
                 },
                 "required": ["part_a", "part_b", "connection_rationale", 
-                           "dok_justification", "standard_assessment", "template_adaptation"],
+                           "dok_justification", "standard_assessment", "differentiation_notes"],
                 "additionalProperties": False
             }
         }
     },
-    "required": ["sibling_questions"],
+    "required": ["variant_questions"],
     "additionalProperties": False
 }
 
@@ -299,10 +313,112 @@ SCHEMA_MAP = {
 }
 
 
+class LLMLogger:
+    """Logs all LLM communications with timestamps for traceability."""
+    
+    def __init__(self, log_dir: Path, run_id: str):
+        self.log_dir = log_dir
+        self.run_id = run_id
+        self.log_file = log_dir / f"llm_logs_{run_id}.jsonl"
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Also set up a summary log for quick reference
+        self.summary_file = log_dir / f"llm_summary_{run_id}.txt"
+        
+        print(f"LLM logs will be saved to: {self.log_file}")
+    
+    def log_request(
+        self,
+        request_id: str,
+        prompt: str,
+        model: str,
+        headers: Dict[str, Any],
+        extra_body: Dict[str, Any],
+        article_id: str = "",
+        question_category: str = "",
+        question_type: str = ""
+    ) -> None:
+        """Log an LLM request."""
+        timestamp = datetime.now().isoformat()
+        
+        log_entry = {
+            "timestamp": timestamp,
+            "type": "request",
+            "request_id": request_id,
+            "article_id": article_id,
+            "question_category": question_category,
+            "question_type": question_type,
+            "model": model,
+            "headers": headers,
+            "extra_body": extra_body,
+            "prompt": prompt,
+            "prompt_length": len(prompt)
+        }
+        
+        # Write to JSONL file
+        with open(self.log_file, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+        
+        # Write summary
+        with open(self.summary_file, 'a', encoding='utf-8') as f:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"[{timestamp}] REQUEST {request_id}\n")
+            f.write(f"Article: {article_id} | Category: {question_category} | Type: {question_type}\n")
+            f.write(f"Model: {model}\n")
+            f.write(f"Prompt length: {len(prompt)} chars\n")
+            f.write(f"Headers: {json.dumps(headers)}\n")
+            f.write(f"{'='*80}\n")
+    
+    def log_response(
+        self,
+        request_id: str,
+        response_text: str,
+        stop_reason: str,
+        duration_seconds: float,
+        success: bool,
+        error_message: str = ""
+    ) -> None:
+        """Log an LLM response."""
+        timestamp = datetime.now().isoformat()
+        
+        log_entry = {
+            "timestamp": timestamp,
+            "type": "response",
+            "request_id": request_id,
+            "success": success,
+            "stop_reason": stop_reason,
+            "duration_seconds": duration_seconds,
+            "response_length": len(response_text) if response_text else 0,
+            "response": response_text,
+            "error_message": error_message
+        }
+        
+        # Write to JSONL file
+        with open(self.log_file, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+        
+        # Write summary
+        with open(self.summary_file, 'a', encoding='utf-8') as f:
+            f.write(f"\n[{timestamp}] RESPONSE {request_id}\n")
+            f.write(f"Success: {success} | Stop Reason: {stop_reason} | Duration: {duration_seconds:.2f}s\n")
+            f.write(f"Response length: {len(response_text) if response_text else 0} chars\n")
+            if error_message:
+                f.write(f"Error: {error_message}\n")
+            f.write(f"{'-'*80}\n")
+
+
 class QuestionBankExtender:
     """Generates sibling questions for existing question bank."""
     
-    def __init__(self, api_key: str, checkpoint_dir: Optional[str] = None):
+    def __init__(
+        self, 
+        api_key: str, 
+        checkpoint_dir: Optional[str] = None,
+        log_dir: Optional[str] = None,
+        run_id: Optional[str] = None,
+        include_guiding: bool = False,
+        only_guiding: bool = False
+    ):
         self.client = anthropic.Anthropic(api_key=api_key)
         self.checkpoint_dir = Path(checkpoint_dir) if checkpoint_dir else None
         if self.checkpoint_dir:
@@ -310,6 +426,18 @@ class QuestionBankExtender:
         
         self.processed_articles = set()
         self.generated_questions = []
+        
+        # Question category settings
+        self.include_guiding = include_guiding
+        self.only_guiding = only_guiding
+        
+        # Set up run ID (used for timestamped outputs)
+        self.run_id = run_id or datetime.now().strftime('%Y%m%d_%H%M%S')
+        
+        # Set up LLM logger
+        log_path = Path(log_dir) if log_dir else (Path(__file__).parent / "outputs" / "llm_logs")
+        self.llm_logger = LLMLogger(log_path, self.run_id)
+        self.request_counter = 0
         
         # Load DOK-specific prompts
         self.prompts = self._load_prompts()
@@ -327,7 +455,8 @@ class QuestionBankExtender:
             with open(PROMPTS_FILE, 'r', encoding='utf-8') as f:
                 prompt_data = json.load(f)
                 for item in prompt_data:
-                    if item.get('function') == 'sibling_generation':
+                    # Support both old 'sibling_generation' and new 'variant_generation' function names
+                    if item.get('function') in ['variant_generation', 'sibling_generation']:
                         question_type = item.get('question_type', 'MCQ')
                         dok = item.get('dok')
                         key = f"{question_type}_{dok}"
@@ -517,14 +646,13 @@ class QuestionBankExtender:
         if len(questions) == 1 and self.prompts:
             return self.build_generation_prompt_for_question(questions[0], num_siblings)
         
-        # For multiple questions, build a combined prompt using DOK-specific templates
+        # For multiple questions, build a combined prompt with DIVERSITY focus
         # Get article info from first question
         article_title = questions[0].get('article_title', '')
         grade = questions[0].get('grade', 3)
         
         # Build passage context
         if question_category == 'guiding':
-            # For guiding, include section-specific passages
             passages_text = ""
             for q in questions:
                 section_num = q.get('section_number', q.get('section_sequence', ''))
@@ -532,125 +660,134 @@ class QuestionBankExtender:
                 if passage:
                     passages_text += f"\n### Section {section_num}:\n{passage}\n"
         else:
-            # For quiz, use the combined passage (should be same for all)
             passages_text = questions[0].get('passage_text', '')
         
-        # Group questions by DOK level for better prompt generation
-        questions_by_dok = {}
-        for q in questions:
+        # Build reference question sections
+        prompt_sections = []
+        total_to_generate = len(questions) * num_siblings
+        
+        for idx, q in enumerate(questions, 1):
             dok = q.get('DOK', 2)
             try:
                 dok = int(dok)
             except (ValueError, TypeError):
                 dok = 2
-            if dok not in questions_by_dok:
-                questions_by_dok[dok] = []
-            questions_by_dok[dok].append(q)
-        
-        # Build prompt sections for each DOK level
-        prompt_sections = []
-        total_to_generate = len(questions) * num_siblings
-        
-        for dok, dok_questions in sorted(questions_by_dok.items()):
-            # Get DOK-specific requirements
+                
+            standard_code = q.get('CCSS', '')
+            standard_description = self.ccss_descriptions.get(standard_code, '')
+            grade_level = self._extract_grade_level(standard_code)
             dok_requirements = self._get_dok_requirements(dok)
             
-            for i, q in enumerate(dok_questions, 1):
-                standard_code = q.get('CCSS', '')
-                standard_description = self.ccss_descriptions.get(standard_code, '')
-                grade_level = self._extract_grade_level(standard_code)
-                
-                prompt_sections.append(f"""
-### Original Question (DOK {dok}, {q.get('difficulty', 'medium')}):
+            prompt_sections.append(f"""
+### Reference Question {idx} (DOK {dok}, {q.get('difficulty', 'medium')}):
 - Standard: {standard_code} - {standard_description}
-- Grade Level: {grade_level}
 - Question: {q.get('question', '')}
 - A) {q.get('option_1', '')}
 - B) {q.get('option_2', '')}
 - C) {q.get('option_3', '')}
 - D) {q.get('option_4', '')}
-- Correct Answer: {q.get('correct_answer', '')}
+- Correct: {q.get('correct_answer', '')}
 
-Feedback for each option:
-- A) {q.get('option_1_explanation', '')[:300]}...
-- B) {q.get('option_2_explanation', '')[:300]}...
-- C) {q.get('option_3_explanation', '')[:300]}...
-- D) {q.get('option_4_explanation', '')[:300]}...
-
-**Generate {num_siblings} sibling(s) for this question with SAME DOK ({dok}), difficulty ({q.get('difficulty', 'medium')}), and CCSS ({standard_code}).**
+**Create {num_siblings} DIVERSE variants for this question at DOK {dok}, difficulty {q.get('difficulty', 'medium')}, CCSS {standard_code}.**
 {dok_requirements}
 """)
         
-        prompt = f"""You are generating sibling questions for a grade {grade} reading assessment.
+        prompt = f"""You are creating DIVERSE ALTERNATIVE assessment questions for a grade {grade} reading assessment.
+
+Your goal is to create questions that are MAXIMALLY DIFFERENT from each reference while still assessing the same standard.
 
 ## Article: {article_title}
 
-## Passage(s):
+## Passage:
 {passages_text}
 
-## Original Questions to Create Siblings For:
+## Reference Questions (for quality benchmark, NOT for copying):
 {"".join(prompt_sections)}
 
-## Task:
-Generate {num_siblings} NEW sibling question(s) for EACH original question above.
-- Total questions to generate: {total_to_generate}
-- Each sibling must have the SAME DOK, difficulty, and CCSS as its original
-- Each sibling must test the SAME passage/section as its original
-- Questions must be DIFFERENT from the originals (different focus, angle, or details)
+## CRITICAL: MAXIMUM DIVERSITY REQUIREMENTS
 
-## Quality Requirements (CRITICAL - All Must Be Met):
+### What You MUST Do Differently for EACH Variant:
+1. **Ask about DIFFERENT text evidence** - Each variant should focus on a DIFFERENT paragraph, sentence, or detail
+2. **Use DIFFERENT question stems** - Vary between "What...", "Why...", "How...", "Which detail...", "Based on...", "According to..."
+3. **Target DIFFERENT correct answers** - Aim for different answer letters (A, B, C, D) across variants
+4. **Focus on DIFFERENT aspects** - If reference asks about character words, ask about actions, settings, or events
+5. **Require DIFFERENT reasoning** - Each variant should need unique thinking to answer
+
+### What You Must NOT Do (AUTOMATIC REJECTION):
+❌ Do NOT ask about the same phrase, sentence, or paragraph as the reference
+❌ Do NOT rephrase the reference question with minor word changes
+❌ Do NOT create variants where the same reasoning answers multiple questions
+❌ Do NOT have multiple variants about the same concept (e.g., all about "being rich")
+❌ Do NOT copy question structure - be creative with how you ask
+
+### BAD Examples (TOO SIMILAR - would be rejected):
+- Reference: "What does 'richer than any king' mean?"
+- BAD Variant 1: "What does 'make any person very rich' mean?" ← Same concept (wealth)!
+- BAD Variant 2: "What does 'richer than any king in the world' mean?" ← Same phrase!
+
+### GOOD Examples (TRULY DIFFERENT):
+- Reference: "What does 'richer than any king' mean?"
+- GOOD Variant 1: "What does the phrase 'the earth split open' describe?" ← Different text, different concept
+- GOOD Variant 2: "According to paragraph 1, what job did Aladdin's father have?" ← Different section, factual recall
+- GOOD Variant 3: "How does the author show that the location is remote?" ← Different literary focus
+- GOOD Variant 4: "What does it mean when the text says the magician 'needed someone to help him'?" ← Different quote
+
+## Task:
+Generate {num_siblings} DIVERSE variants for EACH reference question.
+- Total questions to generate: {total_to_generate}
+- Each variant must assess the SAME standard at the SAME DOK level
+- Each variant must be COMPLETELY DIFFERENT from the reference AND from other variants
+
+## Quality Requirements:
 
 ### Question Quality:
-1. **Text Dependency**: Must require reading the passage to answer - cannot be answered with general knowledge
-2. **Clear and Precise**: Unambiguous question with one correct answer
-3. **Grade Appropriate**: Vocabulary and concepts suitable for the grade level
-4. **Standard Alignment**: Question must directly assess the specific skill in the CCSS
-5. **Template Fidelity**: Follow the original's question structure and cognitive demand
+1. **Text Dependency**: Must require reading the passage
+2. **Clear and Precise**: One correct answer, no ambiguity
+3. **Grade Appropriate**: Suitable vocabulary for grade {grade}
+4. **Standard Alignment**: Directly assess the target CCSS
 
 ### Answer Choice Quality:
-6. **Plausible Distractors**: Wrong answers should be believable but clearly incorrect
-7. **Grammatical Parallelism**: All choices MUST follow the same grammatical structure
-8. **Homogeneity**: All choices MUST belong to the same conceptual category
-   - Do NOT mix character traits with setting details, or themes with specific facts
-9. **Specificity Balance**: All choices MUST have similar levels of detail
-   - GOOD: "happy", "sad", "angry", "worried" (all single emotion words)
-   - BAD: "sad" vs "experiencing deep melancholy" (different detail levels)
-10. **Length Balance**: Correct answer must NOT be the longest option
-11. **Semantic Distance**: Distractors must NOT be synonyms of the correct answer
+5. **Plausible Distractors**: Believable but clearly incorrect
+6. **Grammatical Parallelism**: All choices same structure
+7. **Homogeneity**: All choices from same category
+8. **Length Balance**: Within 10% word count
+9. **Semantic Distance**: No synonyms or too-close pairs
 
-### Feedback/Explanations (REQUIRED for each choice):
-For CORRECT answers: Why correct with text evidence + reading strategy
-For INCORRECT answers: Common misconception + why wrong + correct answer + strategy tip
+### Feedback Requirements:
+For CORRECT: Why correct + text evidence + strategy
+For INCORRECT: Why wrong + misconception + guidance
 
 ## Output Format:
-Generate exactly {total_to_generate} questions in the sibling_questions array.
+Generate exactly {total_to_generate} questions in the variant_questions array.
+First all {num_siblings} variants for Reference 1, then all for Reference 2, etc.
 
 ```json
 {{
-  "sibling_questions": [
+  "variant_questions": [
     {{
-      "question": "The full question text here",
-      "option_1": "First answer choice (A)",
-      "option_2": "Second answer choice (B)",
-      "option_3": "Third answer choice (C)",
-      "option_4": "Fourth answer choice (D)",
+      "question": "The question text",
+      "option_1": "Choice A",
+      "option_2": "Choice B", 
+      "option_3": "Choice C",
+      "option_4": "Choice D",
       "correct_answer": "A",
-      "option_1_explanation": "Detailed feedback for option A",
-      "option_2_explanation": "Detailed feedback for option B",
-      "option_3_explanation": "Detailed feedback for option C",
-      "option_4_explanation": "Detailed feedback for option D",
-      "template_adaptation": "How you adapted the original",
+      "option_1_explanation": "Feedback for A",
+      "option_2_explanation": "Feedback for B",
+      "option_3_explanation": "Feedback for C",
+      "option_4_explanation": "Feedback for D",
+      "differentiation_notes": "Targets [paragraph X] about [topic Y] - differs from reference which asks about [Z]",
       "quality_verification": {{
         "homogeneity_check": "all choices are [category]",
-        "specificity_check": "all choices are at [detail level]",
-        "length_check": "correct answer is appropriate length"
+        "specificity_check": "all at [detail level]",
+        "length_check": "balanced within 10%",
+        "semantic_distance_check": "no synonyms or too-close pairs",
+        "single_correct_check": "only [letter] is defensible",
+        "diversity_check": "targets [specific text/paragraph] - completely different from reference and other variants"
       }}
     }}
   ]
 }}
 ```
-
-Generate siblings in order: first all siblings for Question 1, then all siblings for Question 2, etc.
 """
         
         return prompt
@@ -689,6 +826,7 @@ DOK 3 Requirements for siblings:
         Generate sibling questions for all questions in an article.
         
         Makes separate API calls for guiding and quiz questions.
+        Respects the include_guiding and only_guiding settings.
         """
         results = []
         
@@ -696,8 +834,12 @@ DOK 3 Requirements for siblings:
         guiding_questions = [q for q in questions if q.get('question_category') == 'guiding']
         quiz_questions = [q for q in questions if q.get('question_category') == 'quiz']
         
-        # Generate guiding siblings
-        if guiding_questions:
+        # Determine which categories to process based on settings
+        process_guiding = self.only_guiding or self.include_guiding
+        process_quiz = not self.only_guiding
+        
+        # Generate guiding siblings (if enabled)
+        if guiding_questions and process_guiding:
             print(f"  Generating {len(guiding_questions) * GUIDING_SIBLINGS} guiding siblings...")
             guiding_results = self._generate_batch(
                 questions=guiding_questions,
@@ -706,9 +848,11 @@ DOK 3 Requirements for siblings:
                 article_id=article_id
             )
             results.extend(guiding_results)
+        elif guiding_questions:
+            print(f"  Skipping {len(guiding_questions)} guiding questions (quiz-only mode)")
         
-        # Generate quiz siblings
-        if quiz_questions:
+        # Generate quiz siblings (if enabled)
+        if quiz_questions and process_quiz:
             print(f"  Generating {len(quiz_questions) * QUIZ_SIBLINGS} quiz siblings...")
             quiz_results = self._generate_batch(
                 questions=quiz_questions,
@@ -717,6 +861,8 @@ DOK 3 Requirements for siblings:
                 article_id=article_id
             )
             results.extend(quiz_results)
+        elif quiz_questions:
+            print(f"  Skipping {len(quiz_questions)} quiz questions (guiding-only mode)")
         
         return results
     
@@ -739,6 +885,33 @@ DOK 3 Requirements for siblings:
         # Select appropriate schema
         schema = SCHEMA_MAP[question_type]
         
+        # Generate unique request ID
+        self.request_counter += 1
+        request_id = f"{self.run_id}_{self.request_counter:04d}"
+        
+        # Prepare headers and extra_body for logging
+        headers = {"anthropic-beta": STRUCTURED_OUTPUTS_BETA}
+        extra_body = {
+            "output_format": {
+                "type": "json_schema",
+                "schema": schema
+            }
+        }
+        
+        # Log the request
+        self.llm_logger.log_request(
+            request_id=request_id,
+            prompt=prompt,
+            model=MODEL,
+            headers=headers,
+            extra_body=extra_body,
+            article_id=article_id,
+            question_category=question_category,
+            question_type=question_type
+        )
+        
+        start_time = time.time()
+        
         try:
             # Use the structured outputs beta API with streaming for long requests
             # See: https://platform.claude.com/docs/en/build-with-claude/structured-outputs
@@ -754,21 +927,25 @@ DOK 3 Requirements for siblings:
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
-                extra_headers={
-                    "anthropic-beta": STRUCTURED_OUTPUTS_BETA
-                },
-                extra_body={
-                    "output_format": {
-                        "type": "json_schema",
-                        "schema": schema
-                    }
-                }
+                extra_headers=headers,
+                extra_body=extra_body
             ) as stream:
                 for text in stream.text_stream:
                     collected_text += text
                 # Get final message for stop_reason
                 final_message = stream.get_final_message()
                 stop_reason = final_message.stop_reason
+            
+            duration = time.time() - start_time
+            
+            # Log the response
+            self.llm_logger.log_response(
+                request_id=request_id,
+                response_text=collected_text,
+                stop_reason=stop_reason,
+                duration_seconds=duration,
+                success=True
+            )
             
             # Check for refusal or max_tokens
             if stop_reason == "refusal":
@@ -781,15 +958,16 @@ DOK 3 Requirements for siblings:
             # Parse the JSON response from collected stream
             generated = []
             response_data = json.loads(collected_text)
-            sibling_questions = response_data.get("sibling_questions", [])
+            # Support both old "sibling_questions" and new "variant_questions" keys
+            variant_questions = response_data.get("variant_questions", response_data.get("sibling_questions", []))
             
             # Map generated questions back to original questions
             for i, orig_q in enumerate(questions):
-                # Each original question gets num_siblings new questions
+                # Each original question gets num_variants new questions
                 start_idx = i * num_siblings
                 end_idx = start_idx + num_siblings
                 
-                for j, gen_q in enumerate(sibling_questions[start_idx:end_idx]):
+                for j, gen_q in enumerate(variant_questions[start_idx:end_idx]):
                     # Build base record with common metadata
                     record = {
                         # Preserve original metadata
@@ -816,7 +994,7 @@ DOK 3 Requirements for siblings:
                         # Tracking
                         'parent_question_id': orig_q.get('question_id', ''),
                         'generation_timestamp': datetime.now().isoformat(),
-                        'template_adaptation': gen_q.get('template_adaptation', ''),
+                        'differentiation_notes': gen_q.get('differentiation_notes', gen_q.get('template_adaptation', '')),
                     }
                     
                     # Add question-type specific fields
@@ -839,7 +1017,7 @@ DOK 3 Requirements for siblings:
                             'length_check': quality_verification.get('length_check', ''),
                             'semantic_distance_check': quality_verification.get('semantic_distance_check', ''),
                             'single_correct_check': quality_verification.get('single_correct_check', ''),
-                            'uniqueness_check': quality_verification.get('uniqueness_check', '')
+                            'diversity_check': quality_verification.get('diversity_check', quality_verification.get('uniqueness_check', ''))
                         })
                     
                     elif question_type == 'SR':
@@ -896,6 +1074,18 @@ DOK 3 Requirements for siblings:
             return generated
             
         except Exception as e:
+            duration = time.time() - start_time
+            
+            # Log the error
+            self.llm_logger.log_response(
+                request_id=request_id,
+                response_text="",
+                stop_reason="error",
+                duration_seconds=duration,
+                success=False,
+                error_message=str(e)
+            )
+            
             print(f"  ERROR generating batch: {e}")
             return []
     
@@ -904,13 +1094,14 @@ DOK 3 Requirements for siblings:
         input_file: str, 
         output_file: str,
         limit: int = 0
-    ) -> None:
+    ) -> str:
         """
         Process all articles and generate sibling questions.
+        Returns the path to the combined output file.
         
         Args:
             input_file: Path to input CSV with existing questions
-            output_file: Path to output CSV for generated questions
+            output_file: Path to output CSV for generated questions (base name, will add timestamp)
             limit: Limit number of articles to process (0 = all)
         """
         # Load existing questions grouped by article
@@ -918,12 +1109,24 @@ DOK 3 Requirements for siblings:
         articles = self.load_existing_questions(input_file)
         print(f"Found {len(articles)} articles with {sum(len(q) for q in articles.values())} questions")
         
+        # Print mode info
+        if self.only_guiding:
+            print("Mode: ONLY guiding questions")
+        elif self.include_guiding:
+            print("Mode: Quiz questions + guiding questions")
+        else:
+            print("Mode: Quiz questions only (default)")
+        
         # Load checkpoint
         self.load_checkpoint()
         
-        # Prepare output file
+        # Prepare timestamped output file
         output_path = Path(output_file)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        extended_filename = f"{output_path.stem}_{self.run_id}{output_path.suffix}"
+        extended_file = output_path.parent / extended_filename
+        extended_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        print(f"Extended questions will be saved to: {extended_file}")
         
         # Define fieldnames (includes all fields for MCQ, SR, and MP question types)
         fieldnames = [
@@ -940,10 +1143,10 @@ DOK 3 Requirements for siblings:
             # Common metadata continued
             'DOK', 'difficulty', 'CCSS', 'grade',
             'parent_question_id', 'generation_timestamp',
-            'template_adaptation', 'cognitive_process',
+            'differentiation_notes', 'cognitive_process',
             # MCQ quality verification
             'homogeneity_check', 'specificity_check', 'length_check',
-            'semantic_distance_check', 'single_correct_check', 'uniqueness_check',
+            'semantic_distance_check', 'single_correct_check', 'diversity_check',
             # SR-specific fields
             'expected_response', 'key_details', 'scoring_notes', 'dok_justification',
             # MP-specific Part B fields
@@ -958,7 +1161,7 @@ DOK 3 Requirements for siblings:
         ]
         
         # Check if output file exists (for appending)
-        file_exists = output_path.exists()
+        file_exists = extended_file.exists()
         
         # Process articles
         article_ids = list(articles.keys())
@@ -967,7 +1170,7 @@ DOK 3 Requirements for siblings:
         
         total_generated = 0
         
-        with open(output_file, 'a' if file_exists else 'w', newline='', encoding='utf-8') as f:
+        with open(extended_file, 'a' if file_exists else 'w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             if not file_exists:
                 writer.writeheader()
@@ -984,7 +1187,14 @@ DOK 3 Requirements for siblings:
                 guiding_count = sum(1 for q in questions if q.get('question_category') == 'guiding')
                 quiz_count = sum(1 for q in questions if q.get('question_category') == 'quiz')
                 
-                expected = guiding_count * GUIDING_SIBLINGS + quiz_count * QUIZ_SIBLINGS
+                # Calculate expected based on mode
+                if self.only_guiding:
+                    expected = guiding_count * GUIDING_SIBLINGS
+                elif self.include_guiding:
+                    expected = guiding_count * GUIDING_SIBLINGS + quiz_count * QUIZ_SIBLINGS
+                else:
+                    expected = quiz_count * QUIZ_SIBLINGS
+                
                 print(f"  Existing: {guiding_count} guiding + {quiz_count} quiz")
                 print(f"  Expected to generate: {expected} questions")
                 
@@ -1007,13 +1217,140 @@ DOK 3 Requirements for siblings:
                 # Rate limiting
                 time.sleep(1)
         
-        print(f"\nDone! Generated {total_generated} total questions")
-        print(f"Output saved to {output_file}")
+        print(f"\nExtension complete! Generated {total_generated} total questions")
+        print(f"Extended questions saved to {extended_file}")
+        
+        # Now combine with original questions
+        combined_file = self._combine_questions(
+            extended_csv=str(extended_file),
+            original_csv=input_file,
+            output_dir=str(output_path.parent),
+            output_base_name=output_path.stem
+        )
+        
+        print(f"\n✓ Done! Combined output: {combined_file}")
+        return combined_file
+    
+    def _combine_questions(
+        self,
+        extended_csv: str,
+        original_csv: str,
+        output_dir: str,
+        output_base_name: str = "extended"
+    ) -> str:
+        """
+        Combine original and extended questions into a single timestamped CSV.
+        
+        The combined filename is derived from the output_base_name:
+        - If it contains 'extended', replace with 'combined'
+        - Otherwise, use 'combined_' prefix
+        
+        Returns the path to the combined file.
+        """
+        print(f"\n--- Combining Questions ---")
+        print(f"Reading extended questions from: {extended_csv}")
+        extended_df = pd.read_csv(extended_csv)
+        print(f"  Found {len(extended_df)} extended questions")
+        
+        # Get unique parent question IDs
+        parent_ids = extended_df['parent_question_id'].dropna().unique()
+        print(f"  Found {len(parent_ids)} unique parent question IDs")
+        
+        print(f"Reading original questions from: {original_csv}")
+        original_df = pd.read_csv(original_csv)
+        print(f"  Total original questions: {len(original_df)}")
+        
+        # Filter to only the parent questions that were extended
+        original_parents_df = original_df[original_df['question_id'].isin(parent_ids)].copy()
+        print(f"  Matched parent questions: {len(original_parents_df)}")
+        
+        # Add columns that exist in extended but not in original (fill with empty)
+        extended_only_cols = [col for col in extended_df.columns if col not in original_df.columns]
+        for col in extended_only_cols:
+            original_parents_df[col] = ''
+        
+        # Mark question source for clarity
+        original_parents_df['question_source'] = 'original'
+        extended_df['question_source'] = 'extended'
+        
+        # Get all columns (union of both dataframes plus question_source)
+        all_columns = list(extended_df.columns) + ['question_source']
+        # Remove duplicates while preserving order
+        all_columns = list(dict.fromkeys(all_columns))
+        
+        # Reorder both dataframes to have the same columns
+        original_parents_df = original_parents_df.reindex(columns=all_columns)
+        extended_df = extended_df.reindex(columns=all_columns)
+        
+        # Combine: originals first, then their extended siblings
+        combined_df = pd.concat([original_parents_df, extended_df], ignore_index=True)
+        
+        # Sort to group originals with their siblings
+        combined_df = combined_df.sort_values(
+            by=['article_id', 'section_sequence', 'question_id'],
+            key=lambda x: x.astype(str)
+        ).reset_index(drop=True)
+        
+        # Create timestamped output filename
+        # Derive combined name from the output base name
+        if 'extended' in output_base_name.lower():
+            # Replace 'extended' with 'combined' (case-insensitive)
+            import re
+            combined_base = re.sub(r'extended', 'combined', output_base_name, flags=re.IGNORECASE)
+        else:
+            # Fallback: prepend 'combined_' 
+            combined_base = f"combined_{output_base_name}"
+        
+        combined_filename = f"{combined_base}_{self.run_id}.csv"
+        combined_file = Path(output_dir) / combined_filename
+        
+        print(f"Saving combined questions to: {combined_file}")
+        combined_df.to_csv(combined_file, index=False)
+        print(f"  Total questions in combined file: {len(combined_df)}")
+        print(f"    - Original questions: {len(original_parents_df)}")
+        print(f"    - Extended questions: {len(extended_df)}")
+        
+        # Print summary by article
+        print("\n--- Summary by Article ---")
+        summary = combined_df.groupby(['article_id', 'question_source']).size().unstack(fill_value=0)
+        print(summary)
+        
+        return str(combined_file)
+
+
+def load_config() -> Dict[str, Any]:
+    """Load configuration from config.json if it exists."""
+    if CONFIG_FILE.exists():
+        with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            print(f"Loaded configuration from {CONFIG_FILE}")
+            return config
+    return {}
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Generate sibling questions for existing question bank'
+        description='Generate sibling questions for existing question bank',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+    # Default: Only quiz questions (4 siblings each)
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv
+
+    # Include guiding questions (1 sibling each) + quiz questions
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --include-guiding
+
+    # Only guiding questions
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --only-guiding
+
+Configuration:
+    You can also set defaults in config.json:
+    {
+        "include_guiding": false,
+        "only_guiding": false,
+        "log_dir": "outputs/llm_logs"
+    }
+        """
     )
     parser.add_argument(
         '--input', '-i', 
@@ -1023,7 +1360,7 @@ def main():
     parser.add_argument(
         '--output', '-o', 
         required=True, 
-        help='Output CSV file for generated questions'
+        help='Output CSV file for generated questions (timestamp will be added)'
     )
     parser.add_argument(
         '--checkpoint', '-c',
@@ -1040,8 +1377,44 @@ def main():
         '--api-key',
         help='Anthropic API key (or set ANTHROPIC_API_KEY env var)'
     )
+    parser.add_argument(
+        '--include-guiding',
+        action='store_true',
+        help='Include guiding questions (by default, only quiz questions are extended)'
+    )
+    parser.add_argument(
+        '--only-guiding',
+        action='store_true',
+        help='Only extend guiding questions (skip quiz questions)'
+    )
+    parser.add_argument(
+        '--log-dir',
+        default=None,
+        help='Directory for LLM communication logs (default: outputs/llm_logs)'
+    )
+    parser.add_argument(
+        '--config',
+        default=None,
+        help='Path to config file (default: config.json in script directory)'
+    )
     
     args = parser.parse_args()
+    
+    # Load config file
+    if args.config:
+        global CONFIG_FILE
+        CONFIG_FILE = Path(args.config)
+    config = load_config()
+    
+    # Merge config with CLI args (CLI takes precedence)
+    include_guiding = args.include_guiding or config.get('include_guiding', False)
+    only_guiding = args.only_guiding or config.get('only_guiding', False)
+    log_dir = args.log_dir or config.get('log_dir', None)
+    
+    # Validate mutually exclusive options
+    if include_guiding and only_guiding:
+        print("ERROR: Cannot use both --include-guiding and --only-guiding")
+        return 1
     
     # Get API key
     api_key = args.api_key or os.getenv('ANTHROPIC_API_KEY')
@@ -1052,7 +1425,10 @@ def main():
     # Create extender and run
     extender = QuestionBankExtender(
         api_key=api_key,
-        checkpoint_dir=args.checkpoint
+        checkpoint_dir=args.checkpoint,
+        log_dir=log_dir,
+        include_guiding=include_guiding,
+        only_guiding=only_guiding
     )
     
     extender.process_all_articles(
@@ -1066,4 +1442,3 @@ def main():
 
 if __name__ == '__main__':
     exit(main())
-

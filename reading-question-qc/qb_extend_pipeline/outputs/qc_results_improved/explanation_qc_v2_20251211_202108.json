@@ -1,0 +1,3522 @@
+[
+  {
+    "question_id": "quiz_302005",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": false,
+        "reason": "The explanation fails to address the correct interpretation of 'richer than any king in the world' directly. Instead, it connects with an incorrect answer 'Aladdin will have more money than he can count,' which does not exactly match the promised comparison to a king's wealth in terms of 'richness.' The correct answer should emphasize the superiority of wealth compared to a king's, not just a large indeterminate amount."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation references specific parts of the text mentioning the lamp's ability to make someone 'very rich' and the specific phrase that Aladdin will be 'richer than any king in the world.'"
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation encourages looking for 'repeated hints and strong words' as a strategy to anticipate and understand story developments, which is a good skill reinforcement for reading comprehension."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is positive and encouraging, emphasizing successful prediction and interpretation techniques in a supportive manner."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, providing necessary information and guidance without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for elementary students, using clear and straightforward expressions suitable for young readers."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:00.689169"
+  },
+  {
+    "question_id": "quiz_302005",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies why the incorrect answer was wrong by highlighting the distinction between being wealthy and being a ruler."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It explains the possible misconception that interpreting 'richer than any king' might lead a student to think of acquiring a kingly title, rather than understanding it as possessing wealth."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "Uses direct quotes from the text, explaining that the lamp makes someone very rich, which is specifically about wealth, not power or rulership."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Directs the student towards the correct understanding of wealth and refocuses on interpreting textual phrases related to wealth correctly."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Offers practical advice such as rereading and underlining key words, which is an actionable strategy that helps clarify understanding of the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models a good reasoning process by dissecting the phrase and relating it back to the context of the story, illustrating how to analyze and interpret textual evidence."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and educational, aiming to correct the mistake without discouragement and encouraging better analysis."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, focused, and clear without unnecessary detail that could confuse at the elementary level."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and the explanation are suitable for an elementary level, using straightforward language and clear examples from the text."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:03.357842"
+  },
+  {
+    "question_id": "quiz_302005",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately identifies that the incorrect answer about gold coins is not supported by the text, which instead mentions 'beautiful gems' and being 'very rich.'"
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation infers a misconception where students might think of literal treasures like gold coins when wealth is mentioned, rather than understanding broader terms like 'rich' or 'wealthy' can include other forms of treasure."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "It directly refutes the incorrect answer by mentioning the actual content found in the passage ('beautiful gems') and aligns it with broader terms of riches, thus proving the incorrect answer is unsupported by the text."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It effectively redirects the student towards the correct answer by emphasizing the true interpretation of being 'rich' as per the text."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "It provides a strategy to adhere more closely to the text and to avoid inferring details not mentioned (stick to the exact words), which is actionable advice for tackling similar questions in the future."
+      },
+      "reasoning_model": {
+        "passed": false,
+        "reason": "Although there is some reasoning involved in refuting the incorrect answer, it does not clearly model a full reasoning process on analyzing textual evidence and determining key phrases that lead to a correct interpretation."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and focuses on guiding towards better understanding rather than criticizing the mistake harshly."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, focusing on relevant details without unnecessary elaboration, which makes it sufficiently direct and easy to understand."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is appropriate for an elementary level, using clear and simple language that is easy to comprehend for young students."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:22.215570"
+  },
+  {
+    "question_id": "quiz_302005",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly addresses the specific error in the student's choice by pointing out that the passage never mentions Aladdin meeting kings."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It points out that the student may have been confused or overly focused on the word 'king', leading to a wrong assumption about meeting kings."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "Uses specific evidence from the text, noting that the passage says the lamp would make Aladdin very rich, which contradicts the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Directly guides the student toward the correct answer, emphasizing the wealth aspect mentioned in the passage."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Provides a clear strategy by suggesting to reread the passage for clue words and choose the option that aligns with the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Shows how to logically link passage details to the question, helping model a critical thinking process for the student."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive, encouraging correct analysis and understanding without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is crisp and to the point, making it easy to understand without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is clear, straightforward and suitable for elementary students, making complex ideas accessible."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:14.003617"
+  },
+  {
+    "question_id": "quiz_302005_sibling_1",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation accurately interprets the figurative language 'the earth split open right at their feet' as the ground opening up to show something hidden below, which matches the narrative events."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation describes the event and interprets the action but fails to directly cite or refer to specific textual segments from the provided passage that include or mention the phrase and its context."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "While the explanation does a good job of interpreting the phrase, it does not explicitly mention or reinforce any particular reading skills such as identifying figurative language or understanding metaphorical descriptions, which could be useful for future similar tasks."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation maintains a positive and supportive tone that is encouraging and meant to affirm the correct understanding of the text."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is brief and to the point, effectively conveying the meaning without unnecessary detail or verbosity, making it suitably concise."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used in the explanation is straightforward and accessible, suitable for an elementary-level student's understanding without being overly simplistic or complex."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:24.238083"
+  },
+  {
+    "question_id": "quiz_302005_sibling_1",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the answer is incorrect because it incorrectly implies a natural event (earthquake) rather than a magical, specific event (controlled opening)."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation addresses the possible misconception leading to the wrong choice by explaining that the phrase sounds like it could describe a more general natural event, rather than a specific magical act."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "Although the text itself is not directly quoted to refute the incorrect answer, the explanation accurately references the content by describing the ground opening in one specific spot rather than the whole mountain shaking."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Correctly points to what the passage actually describes, a controlled opening rather than an earthquake, guiding the student toward understanding the correct interpretation of the event."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide strategies to avoid similar mistakes in the future, such as closer reading of descriptive phrases."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Demonstrates how to differentiate between a natural and a magical event by emphasizing the specifics of the situation described."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is instructional and supportive, correcting the mistake without casting blame or creating discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and avoids unnecessary details, making it easy to understand the point being made."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear enough for elementary-level students to understand, without being overly complex or too simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:33.545388"
+  },
+  {
+    "question_id": "quiz_302005_sibling_1",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.4444444444444444,
+    "total_checks_passed": 4,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly indicates that the magician used magic to open the earth, rather than physically digging, aligning precisely with why the answer is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address what specific misconception might have led a student to believe that the magician physically dug a hole."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not directly reference the passage text that contradicts the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It clarifies that the event described was a result of magic, hinting towards the correct understanding of the phrase 'split open' in its magical context."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is provided on how students could avoid similar mistakes in the future."
+      },
+      "reasoning_model": {
+        "passed": false,
+        "reason": "While it does explain the mistake, it doesn't elaborate on how to process or analyze text clues effectively to reach the correct conclusion."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and informational, suitable for pointing out an error without being discouraging."
+      },
+      "conciseness": {
+        "passed": false,
+        "reason": "The explanation could be more concise, as it slightly deviates into describing the nature of 'split open' without direct tie-back to textual evidence or student misconceptions."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear enough for elementary students to understand, although it could benefit from more direct references to easily identifiable text segments or simpler explanations of concepts like 'nonliteral language.'"
+      }
+    },
+    "timestamp": "2025-12-11T20:12:35.782028"
+  },
+  {
+    "question_id": "quiz_302005_sibling_1",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states why the specific answer given is incorrect by indicating that Aladdin did not fall through; rather, the ground opened in a specified manner."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to discuss why a student might think Aladdin fell through a crack, such as misreading the text or visualizing the scene incorrectly."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite or refer directly to specific text from the passage proving that the earth opened in front of them, not under Aladdin."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The correct scenario is outlined by explaining what actually happened when the ground opened, even mentioning the stairs and Aladdin's subsequent actions."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "There is no strategy given on how to better analyze or interpret text in the future to avoid similar mistakes."
+      },
+      "reasoning_model": {
+        "passed": false,
+        "reason": "While there is explanation of what happened, it lacks a detailed reasoning process that walks through how to arrive at the correct interpretation."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and factual, which does not discourage but rather straightforwardly corrects the misinformation."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the incorrect answer without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear enough for elementary students to understand without being too complex or simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:45.611504"
+  },
+  {
+    "question_id": "quiz_302005_sibling_2",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.3333333333333333,
+    "total_checks_passed": 2,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": false,
+        "reason": "The explanation fails because it references an event or dialogue ('Aladdin felt amazed by what he heard') that does not appear in the provided text. Misattribution of textual support leads to confusion about the correctness of the explanation."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation cites events ('Aladdin felt amazed by what he heard') that do not exist in the provided text excerpts, thereby failing to accurately utilize or reference specific textual evidence."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not mention any specific reading strategy or skill, such as inferring emotions from the context or analyzing character reactions, which could be beneficial for future reading tasks."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is friendly and supportive, suitable for encouraging elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is brief and directly attempts to address the question, adhering to a concise format."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "The language presupposes a comprehension of phrases like 'nonliteral language,' which may be too complex for elementary level understanding. The explanation also incorrectly asserts elements of the plot that are not in the text, which might confuse students."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:45.709107"
+  },
+  {
+    "question_id": "quiz_302005_sibling_2",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clarifies that the error was not related to a hearing issue but rather to Aladdin's emotional response, directly addressing the specific mistake in the answer provided."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not speculate on why the student might have thought Aladdin couldn't hear well, missing an opportunity to address the root of the misunderstanding."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the incorrect answer by stating that Aladdin followed the instructions perfectly, indicating that he heard and understood them well."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation highlights that the phrase was about Aladdin's amazement rather than auditory issues, steering students toward understanding the correct interpretation of emotional response."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation lacks a specific strategy or tips that the student could use to avoid similar confusion in future, such as advice on careful reading or understanding expressions."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "By highlighting the distinction between hearing and emotional reaction, the explanation demonstrates good reasoning and helps model how students should dissect such phrases in texts."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and focused on clarifying the mistake, making it supportive and not discouraging to the student."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is to the point and concise without unnecessary details, efficiently conveying the necessary information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and approach used in the explanation are suitable for elementary students, being simple and straightforward enough for their comprehension level."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:58.448504"
+  },
+  {
+    "question_id": "quiz_302005_sibling_2",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies that the issue is not about language barriers but Aladdin's surprise at the magnitude of the task."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not discuss why a student might think the incorrect answer was about language barriers, such as misunderstanding the meaning of 'could hardly believe'."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses the context of the passage, noting that Aladdin 'agreed to help,' which implies he understood the magician."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It points out that the correct interpretation involves the incredibility of the request, steering students toward understanding the actual meaning."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide specific strategies students can use to better interpret similar phrases or situations in future reading tasks."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models a good reasoning process by clarifying the difference between language comprehension and being amazed by a request, helping students understand how to analyze the text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is factual and informative, providing correction without being discouraging or negative."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and to the point, effectively addressing the error without unnecessary information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear enough for elementary school students to understand, fitting the grade level appropriately."
+      }
+    },
+    "timestamp": "2025-12-11T20:12:57.161185"
+  },
+  {
+    "question_id": "quiz_302005_sibling_2",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly targets why the specific answer choice of 'Aladdin wanted to refuse but was too scared' is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not delve into the underlying student misconception that could lead to the choice of the incorrect answer; it only refutes it."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses evidence from the text by stating 'the text says he agreed to help,' which supports the idea that Aladdin was willing, thus directly contradicting the erroneous answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The clarification points to the correct perception of amazement and disbelief about the task, not fear, and adds context from the text, guiding towards the correct understanding."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a specific strategy or method to help the student avoid the same error in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a sound reasoning process by using text evidence to highlight why the incorrect answer does not align with Aladdin's response."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and focuses on elucidating the mistake without discouragement or negative implications."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct and sharply focused on why the answer is incorrect, without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and direct, making it suitable for elementary students to understand easily."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:06.936783"
+  },
+  {
+    "question_id": "quiz_302005_sibling_3",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation clarifies why the answer is correct by connecting the phrase in question with the magician's desire for obedience and lack of resistance, thus accurately showing understanding of the magician's motives."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation directly refers to the phrase from the passage 'a person who would follow his directions without asking too many questions' and relates it to why the magician chose Aladdin, therefore using specific textual evidence."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not mention any specific reading strategies or skills such as inference or identifying themes, which could be useful for future application."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and informative, suitable for educational feedback and appropriate for students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, providing just enough information to justify the correctness of the answer without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The explanation uses clear, simple language that is appropriate for the comprehension level of elementary students without being overly simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:06.739979"
+  },
+  {
+    "question_id": "quiz_302005_sibling_3",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies that the incorrect answer misinterprets the magician's intentions, correcting it by stating the magician's true goal was exploitation, not education."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation notes the incorrect interpretation but fails to explore why a student might think the magician intended to teach reading, such as confusing the act of following directions with learning."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation asserts the correct trait desired by the magician is obedience without explicitly contrasting it against the text to refute the notion of teaching."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It clarifies the correct answer by highlighting that the magician sought obedience and trust, guiding the student towards understanding the character's true motives."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "While the explanation corrects the mistake, it does not provide a specific strategy or method by which students can avoid similar misunderstandings in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation offers a good reasoning process by identifying the incorrect answer, explaining why it is incorrect, and specifying what the correct interpretation should focus on."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and educational, focusing on clarifying the misunderstanding without any negativity or discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and to the point, effectively delivering the necessary correction without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for an elementary level, using simple terms and clear concepts that align with the cognitive and comprehension skills of younger students."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:18.391877"
+  },
+  {
+    "question_id": "quiz_302005_sibling_3",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states why 'intelligent' is the incorrect answer, showing how the necessity for 'not asking too many questions' implies a lack of desire for intellectual scrutiny rather than intelligence."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "Identifies why a student might mistakenly think 'intelligent' by confusing non-questioning obedience with intelligence."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The textual evidence\u2014'a person who would follow his directions without asking too many questions'\u2014directly refutes the idea that the magician was looking for intelligence."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation emphasizes the magician's desire to avoid inquisitiveness, guiding the student to understand that obedience and trustfulness are more aligned with the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "Does not provide a strategy on how to avoid similar errors in the future, such as suggesting students clarify what character traits are valued by characters in context."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Shows good reasoning by linking the text's specifics to why the answer chosen is incorrect, modeling for students how to use text evidence in their reasoning."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation maintains a neutral and informative tone, which is supportive and not discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, efficiently explaining why the answer was incorrect without unnecessary information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and concept discussion are appropriate for an elementary level, focusing on clear terms and straightforward reasoning."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:17.440666"
+  },
+  {
+    "question_id": "quiz_302005_sibling_3",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that language ability is not relevant to the phrase in question, thereby addressing the specific error of linking the distractor to the passage."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to discuss why a student might think that speaking many languages relates to not asking many questions, thus missing an opportunity to address the root of the misconception."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific text to directly contradict the incorrect answer; it only indirectly mentions that the concept of language ability is not discussed in the passage."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation clearly refutes the incorrect answer and highlights the correct idea that the magician wanted someone who does not question his motives or plans."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "Although the explanation provides a refutation, it does not offer a strategy or method to help the student avoid making a similar error in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by indicating the irrelevance of language skills to the 'asking too many questions' reference, thus demonstrating a method to critically evaluate answer choices."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and educational, correcting the error without discouragement or negativity."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, addressing the key points without unnecessary complexity or lengthiness."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and appropriate for an elementary school level, making it accessible for students to understand."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:28.125009"
+  },
+  {
+    "question_id": "quiz_302005_sibling_4",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation directly links the action of throwing perfumes into the flames and speaking magical words as part of a magical ritual, effectively clarifying why the answer is correct."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation suggests evidence such as 'spoke magical words in a loud voice' and dramatic changes like 'sky turning dark, thunder, earth opening', but these specific phrases or similar are not quoted or mentioned directly from the given passage. Thus, it lacks direct citation."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation lacks mention of specific reading strategies or skills that can be used in future similar scenarios. It does not guide the student on how to approach similar questions or enhance comprehension skills."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and informative, suitable for elementary students without being condescending or overly simplistic."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is straightforward and to the point, effectively describing why the actions taken by the magician indicate a magical ritual without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and complexity of the explanation are appropriate for elementary students, using understandable terms and a clear explanation suitable for the age group."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:29.971533"
+  },
+  {
+    "question_id": "quiz_302005_sibling_4",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the incorrect answer focused wrongly on the pleasant smell rather than the magical purpose of the perfumes."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation identifies the misconception that the student may think the perfumes were for olfactory enhancement rather than a magical component."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses the outcomes described in the passage (darkness, thunder, earth splitting) to refute the incorrect assumption about the purpose of the perfumes."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation corrects the student by indicating that the perfumes were part of a magical spell, directing the student towards the correct interpretation."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer a specific strategy on how to analyze or approach similar questions in the future, missing an opportunity to enhance learning by suggesting a method for interpreting textual cues."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models good reasoning by confronting the wrong answer with logical deduction from textual evidence, showing how conclusions should align with the narrative context."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone maintains a supportive atmosphere, clarifying the error without being dismissive or discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and to the point, effectively communicating why the answer was incorrect without unnecessary complexity or verbosity."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and understandable, suitable for an elementary grade level, explaining concepts in an accessible manner."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:40.600351"
+  },
+  {
+    "question_id": "quiz_302005_sibling_4",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies that the magician was not trying to put out the fire, but instead was performing an action to enhance his magical ritual."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address why a student might incorrectly believe that adding perfume to fire would extinguish it, such as confusing the purpose of the magician's actions."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not explicitly refer back to the passage content that contradicts the wrong answer; it only relies on common knowledge about fires and perfumes."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Explicitly states the magician was using the fire for a magic spell, guiding the student towards understanding the correct context of the action."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "Does not provide a strategy for the student on how to better approach similar questions in the future, such as paying closer attention to the intent behind actions described in the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models logical reasoning by explaining the improbability and inconsistency of perfumes being used to extinguish flames given their properties."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation maintains a neutral and factual tone, which is not discouraging to the student."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and succinct without unnecessary details, which helps in maintaining clarity."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is straightforward and appropriate for an elementary student's understanding, avoiding overly complex terms."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:41.568742"
+  },
+  {
+    "question_id": "quiz_302005_sibling_4",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that using 'perfumes' in cooking is inappropriate and clarifies that the action was for a magical, not culinary, purpose."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation points out the error but does not delve into why a student might think perfumes were used for cooking, such as misunderstanding the use of 'perfumes' or the context of the scene."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the incorrect answer by contrasting the use of perfumes in cooking with their role in the spell-casting context described in the passage."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It clearly states that the action was part of casting a spell, guiding students toward the correct understanding of the magician's actions."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "While the explanation corrects the error, it does not offer a specific strategy or advice for how students can avoid similar mistakes in understanding texts."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models reasoning by contrasting incorrect assumptions about ingredients with the narrative and intended use in the text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and factual, correcting the misunderstanding without any discouragement or negativity."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the error and the actual intent in the text without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and direct, suitable for an elementary level understanding without oversimplifying or using overly complex vocabulary."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:07.013473"
+  },
+  {
+    "question_id": "quiz_302006",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.5,
+    "total_checks_passed": 3,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": false,
+        "reason": "The explanation inaccurately describes the reason for trapping Aladdin in the cave because the original text doesn't actually provide details of the interaction about the lamp within the provided passage. The explanation seems to reference an event not included in the given text."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation fails because it cites dialogue ('First, hand me the lamp,' 'I cannot reach it right now.') that does not appear in the provided passage. This absence of actual textual reference implies that either the text is incomplete, or the explanation refers to the wrong part of the story."
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation reinforces the reading skill of understanding cause and effect and encourages rereading to understand the sequence of events, which are useful strategies for elementary reading comprehension."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is encouraging and supportive, emphasizing successful understanding of cause and effect, which is appropriate for motivating elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, focusing directly on the cause and effect without unnecessary details, making it suitable for elementary students who benefit from direct and clear explanations."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "Despite using age-appropriate language, the explanation incorrectly references events not present in the text, potentially confusing students. Correct content is essential for grade appropriateness."
+      }
+    },
+    "timestamp": "2025-12-11T20:13:53.844691"
+  },
+  {
+    "question_id": "quiz_302006",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies the error in thinking that Aladdin refused to go into the cave, when in fact he did enter it."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation hints at the possible misconception by addressing the thought that Aladdin might have refused to enter the cave, clearing up any confusion."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation fails to cite specific text as evidence. It refers vaguely to what the story says, which does not provide a clear textual refutation."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It correctly guides toward the accurate answer that Aladdin doesn't give the magician the lamp right away, thereby clarifying the misunderstanding."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Provides a useful strategy by advising to 'reread and find the exact sentence in the text that answers the question', fostering stronger reading comprehension."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models a good reasoning process by dissecting the student's potential thought process and giving the factual position based on the story context."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive, focusing on correcting the misconception without being discouraging, inducing a positive learning environment."
+      },
+      "conciseness": {
+        "passed": false,
+        "reason": "The explanation could be deemed a little verbose due to some redundancy like extensive replication of what the story stated without needing it for the incorrect answer's explanation."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is suitable for elementary students, using simple terms and constructs, which facilitates understanding at this cognitive level."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:10.557991"
+  },
+  {
+    "question_id": "quiz_302006",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clarifies that the incorrect answer suggests an incorrect causal event (taking too many gems) not supported by the text. It emphasizes that the triggering issue was not handing over the lamp."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation points out that students might be misdirected by the presence of gems, which, though present in the narrative, aren't the reason for Aladdin being trapped."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "It explicitly refutes the incorrect notion that the gems caused the problem by confirming the text states the issue was not handing over the lamp."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It directly points to the correct reason (not giving the lamp right away) for Aladdin's trapping, guiding students towards the correct understanding."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "It advises students to reread surrounding text to verify the cause of the action, providing a specific strategy to improve comprehension accuracy."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a critical examination of the text surrounding an event to correctly interpret narratives, illustrating sound reasoning."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation is supportive and educational, offering guidance without any negativity or discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and sticks to relevant details without becoming verbose or drifting from the main focus."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is straightforward and suitable for elementary students, making complex content accessible at an appropriate grade level."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:17.865343"
+  },
+  {
+    "question_id": "quiz_302006",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately points out that the idea of the ring breaking is not supported by the text, which clearly contradicts this answer choice."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation addresses a possible misconception by indicating that the student may have brought in an outside idea not present in the text, such as the ring breaking."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses the text to refute the incorrect answer by stating there's no mention of the ring breaking and instead highlighting the relevant dialogue about the lamp."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It guides the student toward the correct answer by focusing on the actual text evidence surrounding the lamp and the magician's reaction to not receiving it."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Provides an actionable strategy by advising the student to reread lines around significant events and look for cause-effect clues that directly support an answer."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models good reasoning by showing how to examine the text closely, especially emphasizing words that signal cause and effect."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive, encouraging the student to look closely at the text and reexamine their assumptions without penalizing or shaming for the initial mistake."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is directly related to the question and avoids unnecessary information, making it concise and to the point."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and method are appropriate for elementary students, using straightforward explanations and avoiding overly complex terminology."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:23.591093"
+  },
+  {
+    "question_id": "quiz_302006_sibling_1",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation directly addresses the question of why Aladdin's mother welcomed the stranger despite her surprise, by pointing out that it was because the stranger promised to help Aladdin become a merchant and make good money."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation effectively uses a quote from the text to support the reasoning, thereby demonstrating how and why Aladdin's mother was convinced to welcome the stranger."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation identifies what happens in the story but does not highlight or discuss a reading comprehension skill or strategy that students can apply in future reading scenarios. It does not encourage analysis or critical thinking beyond this particular instance."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and informative, which is suitable and encouraging for an elementary-level reader without being condescending or overly complex."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, presenting the necessary information and textual evidence in a compact form without unnecessary detail or rambling."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used in the explanation is appropriate for elementary students, using clear and understandable terms fitting for their reading level."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:25.726432"
+  },
+  {
+    "question_id": "quiz_302006_sibling_1",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies that the error in the answer lies in the claim about gifts, which are not mentioned in the text. It corrects the specific error effectively."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation points out the error but does not explore why a student might think that gifts were involved, such as confusing narrative elements or making assumptions not supported by the text."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the incorrect answer by stating that the story does not mention the stranger bringing any gifts, effectively using the absence of this information in the text to discredit the wrong choice."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It points the student towards the correct answer by clarifying what actually convinced the mother (the stranger's promise to help Aladdin become a merchant and earn money), which is correct guidance towards understanding the right answer."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "The advice to 'Reread paragraph 2 to find what actually convinced her' provides a clear, actionable strategy for students to verify information in the text and avoid similar errors in future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a good reasoning process by demonstrating how to identify relevant information in the passage that directly relates to the question asked, and how to disregard unsupported information."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is objective and focused on helping the student understand the text better. It encourages re-reading and correct understanding without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, providing just enough detail to be clear and helpful without overwhelming an elementary student with too much information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is suitable for an elementary level student, using simple terms and direct instructions that support easy understanding and correction of the misconception."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:37.033295"
+  },
+  {
+    "question_id": "quiz_302006_sibling_1",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies and clarifies that Aladdin did not assert the stranger's trustworthiness, which is why the chosen answer was incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore why a student might mistakenly believe Aladdin vouched for the stranger's trustworthiness, missing an opportunity to address deeper misunderstandings."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific text passages to refute the incorrect answer, relying instead on a general recall of the events."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It indirectly points toward the correct answer by refuting the wrong answer and mentioning the stranger's promise, though it could more directly state and affirm the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer specific advice or strategies to help students avoid similar errors in the future, such as re-reading pertinent parts of the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It helps model critical thinking by breaking down why the student's choice was wrong and clarifying the correct motivator for the mother's actions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is instructional and neutral, providing correction without being discouraging or harsh."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, delivering necessary correction and clarification without unnecessary information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and understandable, suitable for elementary-level students, though could further enhance understanding by directly quoting or summarizing relevant parts of the text"
+      }
+    },
+    "timestamp": "2025-12-11T20:14:37.036385"
+  },
+  {
+    "question_id": "quiz_302006_sibling_1",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly specifies that the stranger does not show proof of being family, directly addressing why the selected answer is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address what might have led the student to think the stranger showed proof. It fails to explore the student's possible misconception."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses evidence from the text, specifically that the mother was never informed of a brother, to refute the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It mentions that the mother believed the stranger's promise about helping Aladdin earn good money, indirectly pointing to the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a specific strategy for students to use to avoid similar mistakes in the future, such as verifying information in the passage or understanding motives."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a reasoning process by connecting the mother's surprise and lack of prior knowledge about a brother to the validity of the stranger's claim."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and factual, providing correction without discouraging language, suitable for an educational setting."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and sticks to the necessary details to clarify why the answer is incorrect."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and direct, appropriate for an elementary grade level, explaining concepts in an understandable manner."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:48.684849"
+  },
+  {
+    "question_id": "quiz_302006_sibling_2",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation provides a clear linkage between the magician's action of trapping Aladdin and his impatient behavior, highlighting how it directly relates to the question of showing impatience."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation incorrectly attributes a quote to the text that does not appear in the provided passage. It mentions, 'The impatient magician could not wait any longer,' which is not found in the given story segment."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not mention any strategies or suggest skills that could be useful in future reading comprehension tasks, such as identifying character traits based on actions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is straightforward and direct, making it encouraging for students without being condescending or inappropriate."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, adequately explaining why the answer is correct without additional or unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and clear, suitable for elementary-level students, and avoids overly complex phrasing or concepts."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:46.026933"
+  },
+  {
+    "question_id": "quiz_302006_sibling_2",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the provided answer choice is incorrect because there is no evidence in the text supporting that the magician walked quickly, which directly addresses the error in the distractor."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not delve into why a student might think that walking quickly shows impatience, nor does it address potential confusion about indicators of impatience."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation directly refutes the incorrect answer by indicating that the text does not mention the pace of the magician's walking during the climb."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It points towards the correct indication of impatience which occurs later in the story, hence guiding students to the right evidence."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is offered on how to avoid similar mistakes in the future, such as closely reading the text for specific evidence."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models critical thinking by dissecting the incorrect answer and examining the text for evidence, which supports developing reasoning skills."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and informative, focusing purely on the educational content without any unnecessary negative language."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and concise, providing just enough information to refute the incorrect answer and direct attention to the correct parts of the text."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language in the explanation is understandable and appropriate for an elementary level student, using simple and direct phrases to communicate the points."
+      }
+    },
+    "timestamp": "2025-12-11T20:14:57.605989"
+  },
+  {
+    "question_id": "quiz_302006_sibling_2",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.3333333333333333,
+    "total_checks_passed": 3,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation successfully challenges the incorrect choice by clarifying that the magician did give Aladdin detailed instructions, thereby showing that the selected answer is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation misses an opportunity to explore why a student might think that the magician's impatience is shown by refusal to answer questions instead of his actions. It does not discuss any specific misconception that might lead to this wrong choice."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation references a 'paragraph 5,' which does not exist in the provided text excerpts, therefore it fails to cite concrete textual evidence from the provided passage that directly contradicts the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "Although it refutes the incorrect answer, the explanation does not guide towards understanding that the correct display of impatience is when the magician cannot wait for Aladdin to climb out before getting the lamp."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide any strategies or suggestions on how to avoid similar errors in future, lacking actionable advice."
+      },
+      "reasoning_model": {
+        "passed": false,
+        "reason": "The explanation does not adequately model reasoning processes that connect evidence to the question asked, particularly as it references a nonexistent part of the text, confusing the analysis."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and factual, avoiding discouragement or harshness, suitable for feedback in an educational setting."
+      },
+      "conciseness": {
+        "passed": false,
+        "reason": "The explanation brings in irrelevant details concerning 'paragraph 5,' which doesn\u2019t exist in the available text, thus adding confusion rather than conciseness."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and clear, generally suitable for an elementary level. However, the reference to a non-existent paragraph might confuse a younger reader."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:11.385926"
+  },
+  {
+    "question_id": "quiz_302006_sibling_2",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly addresses why it is incorrect to perceive arriving early as a sign of impatience, contrasting it with a scene where the magician's impatience is explicitly shown."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "Effectively hints that students might confuse 'early arrival' with 'impatience.' This signifies an understanding of where the confusion may stem from."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "Uses a later part of the story where the magician displays actual impatience, effectively refuting the early arrival as evidence of impatience."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Points towards the correct behavior demonstrating impatience, leading students towards the right aspect of the story."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "While the explanation corrects the misconception, it does not provide a specific strategy to help avoid similar mistakes in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models the reasoning process by comparing the incorrect interpretation with accurate evidence from the text, showing students how to analyze text to make conclusions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "Maintains a supportive tone by respectfully explaining why the chosen answer is incorrect, without being harsh or discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, providing enough detail to understand the misconception without being overly verbose."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, balancing simplicity with the necessary detail to clarify the misconception."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:10.458600"
+  },
+  {
+    "question_id": "quiz_302006_sibling_3",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation correctly states the cause-effect relationship, specifically how the heavy bag influenced Aladdin's ability to climb out, linking directly to the following actions in the narrative."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The provided explanation does not cite specific evidence or text from the passage within the answer feedback; it generalizes the content."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not mention any specific reading strategy or skill that students could apply in future reading comprehension tasks, such as identifying cause and effect or summarizing main points."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and matter-of-fact, suitable for elementary students without being condescending or overly simplistic."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct and to the point, delivering the necessary information without extra elaboration, which makes it clear for the target age group."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, being straightforward and avoiding complex vocabulary or constructions, making it comprehensible for the age group."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:29.709345"
+  },
+  {
+    "question_id": "quiz_302006_sibling_3",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation successfully identifies and articulates the specific error in the student's reasoning, highlighting that the magician's anger was due to not obtaining the lamp, rather than jealousy over the gems."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to address why a student might think the gems made the magician jealous, such as possibly misinterpreting the magician\u2019s intentions or character."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses information from the passage to refute the incorrect answer by pointing out that the magician's focus was solely on the lamp, not the gems."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation does not guide the student toward understanding the correct answer about the bag\u2019s weight hindering Aladdin\u2019s movement."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategies are provided for the student on how to avoid this error in the future or how to analyze the text and character motivations more accurately."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a good reasoning process by analyzing the magician\u2019s motivations based on evidence from the text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is supportive and educational, focusing on clarifying the misunderstanding without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is clear and to the point, effectively communicating the main issue without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is appropriate for an elementary level; it avoids overly complex vocabulary and focuses directly on the elements relevant to the passage and the question."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:30.843821"
+  },
+  {
+    "question_id": "quiz_302006_sibling_3",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies the specific error by stating that the ring does not break, which directly addresses the incorrect answer provided."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to pinpoint what misconception might lead a student to think the ring would break due to extra weight. It only states what doesn't happen, missing an opportunity to explore why a student might think this."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses the information from the text about the ring's purpose ('to keep you safe ') to refute the idea that the ring breaks due to the bag's weight."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It subtly points towards the correct answer by emphasizing the actual issue is with the heavy bag making climbing difficult, not the ring breaking."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer a specific strategy to help avoid similar misunderstandings in the future. It only corrects the present error."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation shows good reasoning by contrasting the incorrect belief with what the text actually says, thus modeling how to verify claims with textual evidence."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and focused on clarifying the misunderstanding without any negativity or discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the error and referring to the text to make its point without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, simple and direct, making it accessible for the intended age group."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:41.076183"
+  },
+  {
+    "question_id": "quiz_302006_sibling_3",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly refutes the incorrect answer by stating that the gems do not light up the cave, which is the central claim of the wrong choice."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to explore why a student might think the gems illuminate the cave, such as mistaking the potential reflective properties of gems for a source of light."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation successfully points out that the text does not support the idea that the gems provide light, which directly opposes the substance of the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It helps redirect the student's understanding by emphasizing that the narrative importance of the gems' weight is their contribution to Aladdin's difficulty in climbing."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer a specific strategy for students to use in avoiding similar mistakes in the future, such as verifying their answers against the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "By correcting the misconception and highlighting the correct details from the text, the explanation models a good reasoning process for interpreting textual evidence."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is straightforward and focused on clarifying the mistake without any negative language, which is supportive for learners."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, focusing only on the necessary details to refute the incorrect answer and redirect to the correct concept."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and appropriate for an elementary level, direct enough to be understood without simplifying beyond necessary detail."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:48.962526"
+  },
+  {
+    "question_id": "quiz_302006_sibling_4",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.5,
+    "total_checks_passed": 3,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the magician's decision to leave Aladdin trapped is indicative of his selfish and cruel nature, focusing solely on acquiring the lamp rather than Aladdin's well-being. This directly addresses the question of what the action reveals about his character."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation claims that 'the text states: He only cared about getting the magic lamp.' However, the passage does not contain this exact quote. The explanation suggests a specific line from the text that doesn't exist, misleading about the direct citation."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation lacks an explicit mention of strategies or skill-building tips that can help students understand or analyze similar text or character motives in the future. It solely discusses the scenario without guiding how to approach similar analyses."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and focused, providing information without being condescending or overly simplistic. It maintains a scholarly tone appropriate for educating students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, delivering the analysis in a clear and direct manner without unnecessary elaboration or diversion from the main point."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "The explanation might be slightly complex for an elementary level, particularly in terms of sentence structure and vocabulary such as 'selfishness,' 'cruelty,' and 'contributing to our understanding.' These could be simplified to enhance understanding for young readers."
+      }
+    },
+    "timestamp": "2025-12-11T20:15:58.613057"
+  },
+  {
+    "question_id": "quiz_302006_sibling_4",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the story does not suggest the magician fears Aladdin will steal his powers, effectively pinpointing the error in the distractor."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore or suggest any reason why a student might think the magician fears Aladdin stealing his powers, such as misunderstanding the magician's motives or the nature of magical powers in the story."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "While the explanation claims that the magician's actions are not driven by fear of Aladdin stealing powers, it fails to use specific textual evidence to support why this idea is incorrect."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation redirects the focus towards the correct idea that the magician only cares about the lamp and not Aladdin's safety."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "It does not offer any strategies or advice on how to better analyze or interpret the text to avoid such mistakes in the future."
+      },
+      "reasoning_model": {
+        "passed": false,
+        "reason": "The explanation does not clearly model the reasoning process needed to understand why the distractor is incorrect or how to correctly interpret the magician\u2019s actions from the textual clues."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and informational, which is supportive for learning without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The statement is succinct and directly addresses the incorrect answer without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and appropriate for an elementary level, avoiding complex terms or overly complicated explanations."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:07.272607"
+  },
+  {
+    "question_id": "quiz_302006_sibling_4",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the magician does not believe Aladdin will escape, which directly addresses why the selected answer is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address why a student might think that the magician believes Aladdin will find another way out, such as misunderstanding the magician's intentions or the finality of the magic used."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refers to a portion of the text indicating that Aladdin was trapped, which directly refutes the idea that the magician expected Aladdin to find another way out."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "While the explanation refutes the incorrect answer, it does not explicitly guide the student towards understanding that the magician's actions reflect his disregard for Aladdin's safety in pursuit of the lamp."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No actionable strategies or advice are provided to help students avoid similar misconceptions in the future or to improve their comprehension skills."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The reasoning process involves analyzing the magician's intentions and clarifying the misinterpretation of the text, which helps model how to approach complex character motivations."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation maintains a neutral and informative tone, which is supportive and non-discouraging for elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, addressing the incorrect answer directly without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is straightforward and accessible, making it suitable for an elementary level understanding without being overly simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:16.194718"
+  },
+  {
+    "question_id": "quiz_302006_sibling_4",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly addresses why the incorrect answer does not match the magician's motives, emphasizing that his actions were self-serving rather than instructional."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore why a student might think the magician wanted to teach Aladdin about obedience. It misses the opportunity to diagnose the misconception."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation attempts to use the context of the magician's anger to refute the incorrect answer, although it does not cite a specific quote."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation does not point towards the correct answer explicitly. It discusses the magician's selfishness and impatience but doesn't connect these traits to his disregard for Aladdin's safety."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No strategies are provided for how students can correctly interpret similar questions in the future or how to apply the right reasoning."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a reasoning process by contrasting possible motives behind the magician's actions, helping students see the distinction between personal and altruistic motives."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and factual, not discouraging or harsh, making it supportive in nature."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is brief and to the point, effectively conveying the reason why the distractor was incorrect without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for an elementary level, avoiding overly complex terms and focusing on clear, simple explanations."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:22.983588"
+  },
+  {
+    "question_id": "quiz_302007",
+    "option_label": "A",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies the specific error by stating how the incorrect answer misrepresents the outcomes in the story."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It effectively explains the plausible student misconception by stating that the focus on 'magic' in their initial answer misguided their understanding of the passage's message."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses evidence from the text, particularly the actions and deceit of the magician, to refute the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It directs students towards the correct interpretation by indicating the real lesson of being cautious about trusting strangers with grand promises."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "It provides a clear strategy by advising students to consider the results of characters' actions within the entire story."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Demonstrates a structured reasoning process that can help students understand the link between the magician's deceit and the lesson of the story."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and constructive, guiding the student through their mistake without any discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, delivering a clear message without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and direct, suitable for elementary level understanding."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:28.720082"
+  },
+  {
+    "question_id": "quiz_302007",
+    "option_label": "B",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation correctly identifies the central theme as caution against overly trusting strangers based on their promises, which directly aligns with events in the story where the 'uncle' misleads Aladdin."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation generally references the events and promises made by the stranger but fails to cite specific passages or direct quotes from the text that highlight these pivotal moments."
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation reinforces the reading comprehension skill by suggesting a technique of focusing on outcomes following big promises made by characters to deduce the story's lesson."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is encouraging and supportive, guiding the student to reflect on the methodology for identifying the story's lesson, which is suitable for the elementary level."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and direct, clearly expressing the main takeaway without unnecessary detail, making it easy for elementary students to grasp."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and the explanation is easy to understand, making it well-suited for an elementary audience. It avoids complex terms and focuses on the conceptual understanding relevant to young learners."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:33.019477"
+  },
+  {
+    "question_id": "quiz_302007",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately identifies why the specific answer is incorrect by clarifying that Aladdin's potential wealth does not come from hard work but from deceptive promises made by the stranger."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation effectively diagnoses the possible misconception, suggesting that the student may have overly focused on the theme of hard work due to Aladdin's mother\u2019s struggles, rather than the main events driving the narrative."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses details from the passage effectively to refute the incorrect answer and reinforce the intended lesson, citing the stranger's deception."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It explicitly points students towards the correct answer by summarizing the true lesson of the story, emphasizing the importance of being cautious with strangers who offer grand promises."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Offers a clear, actionable strategy by suggesting the student should reread the entire passage and focus on the overarching warning, helping refine their analytical approach."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models a solid reasoning process by connecting specific plot events and character actions to the broader theme of the story, guiding how to analyze narrative to derive themes."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and instructional, focusing on guiding the student towards better understanding without any negativity."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct and direct, effectively using the passage to clarify the misconception without unnecessary information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear, appropriate for an elementary level student, making complex ideas accessible without being overly simplistic or condescending."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:40.991606"
+  },
+  {
+    "question_id": "quiz_302007",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the mother did not give advice about strangers, which highlights why selecting 'Always listen to your mother's advice about strangers' is incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explainer recognizes the possible student misconception that all advice about strangers comes from parental guidance, especially when they note that the mother actually believed the stranger."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses specific details from the text to refute the provided answer, mentioning that the mother believed the 'uncle' despite his deception, which directly contradicts the idea of the mother giving advice about strangers."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It redirects the student towards understanding the correct lesson to be careful about trusting strangers who make big promises, tying this directly to the story's events."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "The explainer provides a strategy to improve comprehension and answer selection by advising the student to 'reread and ask, \u201cWhat lesson fits what actually happens in the whole story?\u201d'"
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation demonstrates a solid reasoning process by connecting the actual events of the story and the actions of the characters to the lesson that should be derived, hence modeling how to analyze a text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and educational, focusing on guiding the student towards better understanding without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is reasonably concise, focusing only on relevant details to address the incorrect answer and guide towards the correct understanding."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and examples used are suitable for elementary students, with clear and understandable explanations without sophisticated vocabulary or complex constructions."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:47.336586"
+  },
+  {
+    "question_id": "quiz_302007_sibling_1",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation accurately identifies why the answer is correct by linking the magician's false promises to his underlying motive, which supports the lesson about mistrusting grand promises from strangers."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation does not cite direct quotations or specific passages from the text to support its claim, thus failing to provide clear textual evidence from the story."
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation indirectly reinforces the skill of critical thinking and caution when trusting strangers, which is a key reading comprehension skill, by pointing out the deceptive nature of the stranger's promises."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is straightforward and informative, appropriate for elementary students without being condescending or overly complex."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct and to the point, effectively conveying the main idea without unnecessary elaboration, making it suitable for the intended audience."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, with clear and accessible vocabulary that conveys the message effectively without being too complex or simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:16:50.719393"
+  },
+  {
+    "question_id": "quiz_302007_sibling_1",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately states that while Aladdin's mother's hard work illustrates their difficult circumstances, it does not directly address the lesson about mistrust regarding strangers who make large promises."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation hints at a possible misconception by students: they might believe that any detail about the family's poverty could be linked to the theme of trust, illustrating why the family might trust easily due to their desperate situation."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not directly use or cite specific text from the passage to refute the incorrect answer, relying instead on general logical reasoning."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "While the explanation does not explicitly spell out the correct answer, it implicitly guides towards dismissing unrelated answers and focusing on those linked to deceptive promises."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is provided on how to avoid similar errors in the future; it only clarifies why the given answer is incorrect."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by clarifying why the provided detail about Aladdin's mother's hard work is not directly related to the deceit involved in making big promises."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is supportive and instructional without being discouraging, focusing on explaining the error in a constructive manner."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, providing just enough information to clarify the incorrect answer without overwhelming with unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is straightforward and appropriate for elementary-level students, using clear and simple terms to explain the reasoning behind the analysis."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:00.967905"
+  },
+  {
+    "question_id": "quiz_302007_sibling_1",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately clarifies why the selected incorrect answer does not support the lesson about not trusting big promises made by strangers, emphasizing the difference between demonstrating magic and making deceptive promises."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address what specific misconception might have led a student to choose the incorrect option. It fails to explore why a student might logically connect magical abilities with trustworthiness or deception."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not use any specific textual evidence to refute the choice directly; it only generally states that the issue isn't about magic abilities."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "While it indicates the direction toward deception and false promises, it does not explicitly connect or guide the student back to the correct answer from the passage."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer a clear, actionable strategy that students could use in future assessments to avoid similar mistakes."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a reasoning process by differentiating between magical demonstrations and the theme of trusting strangers' promises, thereby guiding the thought process toward the theme of the question."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone remains supportive and educational, not belittling the student's wrong choice, but instead focusing on understanding why it was incorrect."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct, focusing directly on the issue with the chosen distractor without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and concepts are appropriate for elementary students, with clear, straightforward phrasing suitable for the grade level."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:07.673519"
+  },
+  {
+    "question_id": "quiz_302007_sibling_1",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the choice of 'Aladdin finds beautiful gems in the underground garden' fails to support the lesson related to trusting people who make big promises to strangers. It clarifies that the existence of treasure is not linked to the caution against trusting easily."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation indirectly hints at a possible student misconception that the presence of gems (a positive outcome) might justify the trust placed in strangers, guiding the student away from this incorrect assumption."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific passage text that directly contradicts the choice about finding gems. It focuses on explaining why the detail is irrelevant rather than contradicting it with textual evidence."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation indirectly guides the student toward the correct answer by highlighting the importance of focusing on the magician's deception and dishonest promises which is the essence of the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a specific strategy for how to avoid similar errors in the future, such as tips for identifying key details related to the question's theme or lesson."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models a reasoning process by making a clear distinction between the presence of treasure and the lesson of the narrative, helping the student understand how to identify supporting details correctly."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is educational and supportive, correcting the student's error without any harshness or criticism, suitable for an instructive feedback environment."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and goes straight to the heart of why the answer is incorrect without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear enough for elementary students to understand, using appropriate terminology to discuss the points effectively."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:17.608955"
+  },
+  {
+    "question_id": "quiz_302007_sibling_2",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.3333333333333333,
+    "total_checks_passed": 2,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": false,
+        "reason": "The explanation fails to accurately reflect the events of the passage or the thematic focus of the assigned question. The passage does not depict the magician losing the lamp or making a terrible decision due to impatience. It primarily shows the magician's deceptive and manipulative plan involving Aladdin to obtain the magic lamp."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation does not provide or reference specific textual evidence from the passage to support the claim that the magician's greed leads him to make a poor decision that results in losing the lamp. The passage does not indicate such an event."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not reinforce any particular reading comprehension skill, such as inference-making or understanding character motivation, nor does it suggest strategies for identifying themes or morals in the text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is encouraging and designed to confirm the student's understanding, which is appropriate for elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is reasonably concise without unnecessary details, maintaining a focus on the theme of greed and consequences."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "The explanation misinterprets the events of the story, which could confuse elementary students in their understanding of the text. Correct interpretation is crucial for grade-level appropriateness."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:19.101951"
+  },
+  {
+    "question_id": "quiz_302007_sibling_2",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation effectively distinguishes between the honest work of Aladdin's father and the concept of greed, clarifying why this choice does not align with the theme of greed in the story."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore what might have led a student to choose the father's hard work as indicative of greed's consequences, such as confusing the roles of the characters or their actions."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation indicates that the father\u2019s efforts were honest, which does counter the notion of greed linked to his job, effectively using the text to refute the incorrect choice."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It mentions the magician's greed as the correct focus for understanding the theme, indirectly pointing towards the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "While the explanation identifies the error, it does not provide a specific strategy or advice that would help students avoid this mistake in future assessments."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by contrasting the natures of hard work and greed, showing how to analyze character motivation and actions to determine thematic elements."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is educational and neutral, providing correction without sounding harsh or discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and concise, clearly addressing the incorrect answer without excess or overly complex information."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear, suitable for elementary students, making it easy for them to follow and understand the reasoning provided."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:34.384186"
+  },
+  {
+    "question_id": "quiz_302007_sibling_2",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation effectively identifies why climbing a mountain is not an example of greed leading to bad decisions, distinguishing the physical effort from the moral aspect of the narrative."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to address what specific misconception might lead a student to incorrectly associate climbing the mountain with the theme of greed, such as misunderstanding the thematic content or confusing physical action with moral decisions."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "No specific textual evidence or parts of the story are cited that directly contradict the idea that climbing the mountain shows greed or poor decision-making."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "Though indirect, the explanation does mention the correct concept related to greed through the magician's actions, pointing briefly towards the right idea."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategies are provided for students on how to avoid this error in the future or how to better identify themes in the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation does model an analytical approach by separating the physical action of climbing from thematic elements such as greed, guiding in logical thematic analysis."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation maintains a neutral and informative tone, which is supportive for educational purposes without being discouraging or harsh."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the incorrect answer without unnecessary elaboration, making it suitable for elementary level understanding."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and explanation are simple and easy to understand, appropriate for an elementary school audience, avoiding complex jargon or overly technical explanations."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:31.524122"
+  },
+  {
+    "question_id": "quiz_302007_sibling_2",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies why the specific answer is wrong by pointing out that the location of the lamp is unrelated to the theme of greed influencing decisions."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to address what misconception might lead a student to choose the incorrect answer (e.g., confusing setting details with thematic elements)."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific text from the passage to directly refute the incorrect answer. It does not demonstrate that the 'lamp hanging from a tree' concept is not even mentioned in the text."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It indirectly points to the correct answer by emphasizing that the important element is how the characters' actions, driven by greed, are depicted, rather than the setting."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is provided to help avoid similar errors in the future, such as advice on how to distinguish between thematic elements and setting details."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models the reasoning process by connecting the theme of greed to the characters' actions rather than to inanimate objects' descriptions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and instructive, not discouraging or negative."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is straightforward and concise, focusing directly on why the incorrect answer does not convey the theme of the story."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for elementary students, making complex ideas accessible without overly simplifying them."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:47.691643"
+  },
+  {
+    "question_id": "quiz_302007_sibling_3",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation identifies the magician's dishonesty and impatience as direct causes of his failure, effectively linking these traits to the outcome in the narrative."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation does not cite specific passages or quotes from the text to support the connection between the magician's traits and his failure to obtain the lamp."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "While the explanation discusses the moral lesson, it does not explicitly mention strategies or skills in reading comprehension that students can use in future contexts."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is positive and supportive, suitable for an educational setting, encouraging understanding of the narrative's moral."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, effectively conveying the reason for the magician's failure without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for elementary students, using clear and understandable terms without being too complex or too simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:45.940774"
+  },
+  {
+    "question_id": "quiz_302007_sibling_3",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the incorrect answer is not about the dangers of travel but the magician's character flaws."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "While the explanation states why the answer is incorrect, it does not explore why a student might think that traveling to foreign countries is dangerous."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the incorrect answer by highlighting that the magician's journey was successful, showing that travel was not the issue."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation redirects students by clarifying that the real issue is the magician's dishonesty and impatience."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy or advice is provided on how to avoid similar mistakes in future responses."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models logical reasoning by contrasting the actual events and the magician's traits with the incorrect focus on travel."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and focused on clarifying the misunderstanding without any discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and avoids unnecessary detail, making the refutation clear and to the point."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is straightforward and suitable for elementary students, using simple terms and clear logic."
+      }
+    },
+    "timestamp": "2025-12-11T20:17:57.437333"
+  },
+  {
+    "question_id": "quiz_302007_sibling_3",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation effectively identifies that the fault in the answer is attributing the failure to the use of magic, rather than to the magician's character flaws."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation suggests a misconception where students might falsely attribute negative outcomes to the use of magic in stories, neglecting deeper moral or character-based themes."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the answer by pointing out that the magician does successfully use magic, thus indicating that magic isn't inherently problematic in this context."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation redirects the student toward understanding the real cause of the magician's failure \u2013 his dishonesty and impatience."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a clear strategy for students to use in order to avoid similar errors in future assessments. It fails to suggest how to correctly analyze character motivations or how to discern the main causes of events in a story."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by correcting the misinterpretation and guiding the thought process toward understanding the actual thematic elements of the story."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is educational and supportive, correcting the mistake without discouraging the reader."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the problem with the answer and providing evidence from the text without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for elementary students, clearly explaining the concepts without using overly complex vocabulary or concepts."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:01.140894"
+  },
+  {
+    "question_id": "quiz_302007_sibling_3",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation explicitly identifies that the concept of 'helping family members' is irrelevant to the magician's intentions and circumstances in the story, clearly stating why the answer does not fit."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It clarifies a potential student misconception by pointing out that the magician's claim of being a family member was a lie, which could confuse students into thinking that family values play a key role in the narrative."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses details from the text to refute the incorrect answer by emphasizing that the magician was dishonest about his identity and did not prioritize family, which directly opposes the idea suggested by the distractor."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It steers the student towards recognizing dishonesty and impatience as central themes which caused the failure to secure the lamp, aligning with the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "Although the explanation helps identify why the given answer is wrong, it does not provide specific strategies on how to avoid such errors in future responses."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The reasoning process is modeled effectively by stating that the characters\u2019 actual interactions and intentions differ from the premise suggested by the distractor, guiding students on how to critically analyze character motivation and actions against the answer choices."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is educational and supports learning. It corrects the student's misconception without being discouraging or harsh."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is straightforward and clear without unnecessary detail, making it easy for elementary students to understand."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, explaining complex concepts like dishonesty and motivation in an accessible manner without oversimplifying the narrative context."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:12.748608"
+  },
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 1.0,
+    "total_checks_passed": 6,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation directly addresses why the answer is correct by summarizing the situation (financial struggle) that led to the overriding of caution in Aladdin's mother when confronted with the magician's promises."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation specifically refers to the magician's promise of helping Aladdin 'earn good money' and the mother's surprise about never having heard about a brother, which are both directly pulled from the text."
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation reinforces the critical reading skill of understanding implicit meanings and consequences in the story, i.e., how desperation can cloud judgment. This is a strategy readers can apply in future reading tasks."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is encouraging and supportive, appropriate for elementary students, promoting a positive learning environment."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is clear, direct, and avoids unnecessary elaboration, making it concise and effective."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and easily understandable for elementary-level students, with concepts explained in a straightforward manner suitable for their comprehension level."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:11.168363"
+  },
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the mother does not know the stranger is lying, which directly addresses the incorrect answer that mothers always know when strangers are telling the truth."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation suggests a possible misconception a student may have: that parents, especially mothers, inherently know the truth about strangers. This misconception is addressed by showing that even parents can be deceived."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "While not directly quoting, the explanation does reference the crucial aspect of the story where the mother is deceived by the magician's promises, refuting the idea that she knows he is lying."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation points towards the correct answer by mentioning the power of appealing promises and the need for caution, which aligns with the correct central message about the allure of easy money."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation lacks a specific strategy that students could use to avoid a similar error in the future (e.g., critically questioning motives in stories or checking for evidence of truthfulness)."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by showing how to think through the question and assess evidence from the story, demonstrating analysis of character motives and actions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and educational, focused on explaining the misconception without belittling the student's incorrect choice."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, effectively communicating why the answer is incorrect without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and appropriate for an elementary level, using clear terms and concepts that align with the students' reading and comprehension levels."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:32.174567"
+  },
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation effectively identifies why the incorrect answer choice is wrong by clarifying the nuanced point that the issue isn't accepting help, but rather accepting it blindly without scrutinizing the credibility of the stranger."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It clarifies the possible misconception by specifying that rejecting all help is not the moral, but caution in trust is, which might lead a student to reconsider superficial reads of similar situations."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation fails to directly quote or cite the passage regarding the unexpected introduction of the 'uncle' character, which would directly support refutation of the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation hints at the correct answer by focusing on the importance of judgment and identifying warning signs, which leads to the correct understanding of the situation."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "It advises assessing the authenticity of the helper's story, providing a clear strategy to avoid being misled, which is applicable in similar circumstances."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models the reasoning process by dissecting the key elements of the situation \u2013 help acceptance and source trustworthiness \u2013 leading to a deeper understanding."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive, addressing the error without depreciating the student's effort, and encourages thoughtful analysis."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and sticks to the point without unnecessary elaboration, making it effective and clear."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and understandable for elementary students, properly aligning with their learning level."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:25.389984"
+  },
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the answer is incorrect because the 'family member' is not genuine, thus addressing why the chosen answer is wrong based on the scenario in the story."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation addresses the likely misconception by pointing out that the supposed family member's appearance is actually a deception, correcting the potential error in thinking that family reliably appears in times of need."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "While the explanation contradicts the incorrect assumption about the 'family member,' it does not cite specific parts of the text directly contradicting the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation does not direct students towards understanding why the correct answer better fits the passage, nor does it mention what the correct central message is."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide any strategies for how students might avoid similar errors in the future, such as verifying the authenticity of characters' claims or critically evaluating a story's events."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a good reasoning process by dissecting the incorrect interpretation of the 'family member' aspect and explaining the underlying deception, which is crucial to understanding the story."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and focused on explaining the error without any negative language that could be discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation provided is succinct and sticks to the point without unnecessary information, making it easy to understand the justification for why the answer was incorrect."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is clear, simple, and appropriate for elementary level students, making the information accessible without oversimplifying complex ideas."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:46.658691"
+  },
+  {
+    "question_id": "quiz_302008",
+    "option_label": "A",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation effectively points out the incorrect answer hinges on the guise of the magician wanting to help Aladdin become rich, then contrasts it with the text's emphasis on the magician's real goal surrounding the magic lamp."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It identifies a likely student error of focusing on the magician\u2019s promise rather than his ultimate motive, indicating an understanding of the surface text rather than the deeper intentions of the characters."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation utilizes specific evidence from the text about the magician's true goal of needing the magic lamp, which refutes the incorrect notion that his primary motive was to make Aladdin wealthy."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It redirects the student to the correct answer by emphasizing the magician\u2019s actual intent in the text, which was obtaining the lamp, not aiding in Aladdin's financial ascendance."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Offers a clear strategy for the student to use in future responses: examine character actions and track repeated clues, not just initial promises or statements."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by breaking down how to approach understanding character motivation beyond surface-level interactions."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is instructive and supportive, focusing on how to understand and analyze the story better without demeaning the incorrect choice."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The response is direct and focused, providing clear reasons for why the answer choice was incorrect without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and concepts used are suitable for an elementary level, explaining complex ideas like intentions and deceit in an accessible way."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:48.171778"
+  },
+  {
+    "question_id": "quiz_302008",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies the specific error by stating that the magician is not really Aladdin\u2019s uncle and was only pretending to get the magic lamp."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The response identifies a plausible misconception by suggesting students may have been misled by the magician's actions and words, calling Aladdin 'nephew' and hugging him, which might imply familial relations."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses textual evidence to refute the incorrect answer, pointing out direct quotes which clarify that the magician was not truly Aladdin\u2019s uncle."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation guides the student toward the correct answer by explaining the magician\u2019s real motive was to obtain the magic lamp."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Provides a helpful strategy advising the student to reread for sentences that reveal a character\u2019s real intentions, thus helping avoid similar misconceptions."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models a good reasoning process by dissecting the magician\u2019s behavior and linking it to his true intentions, which corrects the student's misunderstanding."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and helpful, focusing on how the student can improve understanding rather than simply highlighting the error."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is clear and concise, focusing directly on the necessary details to understand why the original answer choice was incorrect."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The explanation uses simple and direct language appropriate for elementary students, making it accessible for the intended age group."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:02.932238"
+  },
+  {
+    "question_id": "quiz_302008",
+    "option_label": "C",
+    "is_correct": true,
+    "overall_score": 1.0,
+    "total_checks_passed": 6,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation successfully clarifies why the magician pretended to be Aladdin's uncle, highlighting his ultimate goal of obtaining the magic lamp by leveraging a familial connection to gain trust."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation effectively uses direct citations from the text to support the reasoning, mentioning the magician's requirement for someone to bring him the lamp and his plan to deceive Aladdin."
+      },
+      "skill_reinforcement": {
+        "passed": true,
+        "reason": "The explanation helps reinforce reading comprehension skills by prompting students to consider a character's goals and actions to understand underlying motives, thus aiding in identifying motives in future readings."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation remains encouraging and supportive, providing a positive learning environment for elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and directly addresses the question without unnecessary information, making it clear and easy to follow."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is suitable for an elementary grade level, neither too complex nor too simplistic, ensuring that the explanation is accessible and understandable to the intended audience."
+      }
+    },
+    "timestamp": "2025-12-11T20:18:57.876526"
+  },
+  {
+    "question_id": "quiz_302008",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation specifies that the incorrect answer focuses on a secondary event (the mountain walk) rather than the main goal of the character (getting the magic lamp)."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation suggests the student may have mistakenly focused on a less important detail, the walk, rather than the magician's main motive."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The text clearly indicates the magician's main goal was the lamp, and this is used to refute the distractor."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It directs the student towards understanding the magician's true intention, pointing out the importance of recognizing the main goals in the text."
+      },
+      "actionable_strategy": {
+        "passed": true,
+        "reason": "Advising the student to look for what the character 'wants most' helps in avoiding similar errors by identifying main goals over circumstantial details."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It effectively models how to analyze character motivation within the context of the story, emphasizing focusing on primary goals."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The explanation remains supportive and constructive, aimed at guiding the student to understand correct reasoning."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and succinct, focusing solely on addressing the error and guiding towards correct reasoning."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for elementary students, balancing simplicity with necessary detail for clear understanding."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:10.693509"
+  },
+  {
+    "question_id": "quiz_302008_sibling_1",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation provides a direct connection between the magician's choice of Aladdin and the characteristics of Aladdin, acknowledging that he was chosen because he was less likely to question the magician's intentions. This ties back to the magician's goal of finding a compliant helper, aligning with the suggestion that these traits are why the magician did not seek the lamp himself."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The answer cites specific parts of the text which mention the magician's reason for choosing Aladdin \u2014 particularly that he needed someone 'who would follow his directions without asking too many questions' and that 'Aladdin was exactly the right person for this job.' This directly supports the explanation provided."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not mention a specific reading strategy or skill, such as inference or critical thinking, that students might employ in future similar contexts. It rather focuses solely on justifying the correctness of the answer."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and informative, suitable for an educational setting. It does not come off as condescending or overly casual, making it appropriate for elementary students."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is reasonably concise, clearly delivering the reason for why the answer is correct without unnecessary details or complexity."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used in the explanation is suitable for elementary students. It uses clear, straightforward sentences that are easy to follow and understand, avoiding complex structures or terminology."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:17.367403"
+  },
+  {
+    "question_id": "quiz_302008_sibling_1",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly addresses the inaccuracy of the answer, clearly stating that the magician's age or strength is not mentioned as a limitation in the text."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It points out the likely student misconception that the magician's physical inability is the reason for choosing Aladdin, which is incorrect based on the magician's demonstrated capability."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation refutes the incorrect answer by recalling that the magician climbed the steep mountain and performed magic, demonstrating his physical aptitude."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation does not guide the student towards the correct answer that 'the lamp can only be retrieved by someone young and innocent.' It fails to mention any aspect of these specific requirements."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "There is no actionable strategy provided for how to avoid similar errors in future assessments; it does not teach how to better analyze the text or clues."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The answer models a good reasoning process by using evidence from the passage to disprove the incorrect answer, illustrating critical thinking."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and focuses on explaining the error without discouragement, helpful for educational settings."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is clear, direct, and not overly verbose, thereby maintaining focus and clarity."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "The language might be slightly complex for elementary students as terms like 'physical aptitude' or understanding why the magician\u2019s physical abilities relate to his tasks might not be immediately clear to younger students."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:23.486111"
+  },
+  {
+    "question_id": "quiz_302008_sibling_1",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation directly addresses the incorrect answer by clearly stating that Aladdin does not have prior knowledge about the lamp, which refutes the distractor directly."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to suggest why a student might think Aladdin knows secret information about the lamp; it does not explore potential reasons behind this misconception."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation effectively uses text from the passage, demonstrating that Aladdin was surprised and unaware of the details surrounding the lamp, thereby refuting the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation does not mention or hint towards the correct answer about why the magician chose Aladdin, missing an opportunity to guide students towards a better understanding."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a strategy to help students avoid this error in the future, such as encouraging them to seek direct text evidence for their answers."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by using evidence from the passage to refute the incorrect answer, showing students how to evaluate options based on textual evidence."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and focused on clarifying the facts, neither encouraging nor discouraging, but appropriate for correcting a mistaken answer."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, clearly stating the objection to the incorrect answer without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and suitable for elementary students, explaining the situation in an accessible way without complex terminology."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:31.169971"
+  },
+  {
+    "question_id": "quiz_302008_sibling_1",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies why believing the magician wants to share the treasure with Aladdin is incorrect, stating that it is contrary to the magician's deceptive motivations as shown in the passage."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation points out the misconception that may occur if the student assumed that the magician's intentions were genuine, highlighting that his promises were actually deceptive."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "Though the explanation refutes the wrong answer, it inaccurately references a non-existent direct quote from the text, 'He only cared about getting the magic lamp,' which does not appear in the provided passage section."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "The explanation fails to guide the student toward understanding the correct answer. It does not mention that the magician targeted Aladdin because he was young and innocent."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is given to the student on how to avoid such errors in the future or how better to analyze character motivations and actions."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models reasoning by connecting the magician's actions and words to his deceptive nature, helping students see beyond superficial presentations."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is factual and straightforward, providing correction without being discouraging or negative, which is suitable for an educational setting."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, addressing the specific error without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": false,
+        "reason": "The language and concepts, such as 'deceptions' and interpreting underlying motivations, might be too complex for elementary level students without further simplification or definitions."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:39.264697"
+  },
+  {
+    "question_id": "quiz_302008_sibling_2",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.8333333333333334,
+    "total_checks_passed": 5,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation accurately clarifies how the magician's lie about being Aladdin's uncle is critical for gaining the trust of Aladdin and his mother, which is pivotal for the events that follow, specifically the journey to the mountain."
+      },
+      "textual_evidence": {
+        "passed": true,
+        "reason": "The explanation effectively uses a direct reference from the text mentioning that the mother 'welcomed the man into their home' due to his claim, which supports the stated reason for the correctness of the answer."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not highlight any specific reading skill such as identifying motives or understanding character actions that could be used as a strategy in future reading. It merely explains the context without fostering deeper reading comprehension skills."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is straightforward and neutral, providing a supportive and clear response suitable for elementary students, encouraging understanding without any negative connotations."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct, providing just enough information to justify the correctness of the answer without extraneous details or digression."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and structure of the explanation are appropriate for an elementary grade level, using straightforward vocabulary and simple sentence structures that are easily understandable by young learners."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:40.142838"
+  },
+  {
+    "question_id": "quiz_302008_sibling_2",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clarifies that the lie was not an act of care but manipulation, directly addressing the error in the distractor."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation emphasizes the magician's lack of care but does not discuss why a student might think the lie indicates care, such as confusing deception with genuine emotional connection."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "Uses specific lines from the text indicating the magician's true motives, effectively countering the incorrect answer."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "While the explanation refutes the incorrect choice effectively, it does not guide students toward understanding why the correct answer is 'It gains the family's trust so they let him take Aladdin away.'"
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No strategies are provided to help students avoid similar errors in the future, such as advice on scrutinizing character motives or correlating actions to impacts."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Demonstrates clear reasoning by linking the false claim of kinship to the magician's real motives, modeling how to use textual evidence in reasoning."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and focused on explaining the text, not discouraging or critical of the student."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, directly addressing the issue without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is straightforward and appropriate for an elementary level, using clear terms and avoiding complex jargon."
+      }
+    },
+    "timestamp": "2025-12-11T20:19:50.519521"
+  },
+  {
+    "question_id": "quiz_302008_sibling_2",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly states that the magician's lie did not contribute to Aladdin learning merchant skills, correctly identifying the specific error in the answer."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore why a student might think that the magician's intention was to teach Aladdin merchant skills, such as confusing the initial false promise with actual training."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation successfully uses evidence from the text about the magician's actions (taking Aladdin to a mountain instead of meeting merchants) to show the incorrectness of the answer."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation notes that the lie was used to gain trust, directing students toward understanding the correct impact of the lie in the story."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "It does not provide strategies or tips on how to avoid similar misunderstandings in future questions."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models good reasoning by using specific details from the text to refute the incorrect answer and validate the correct concept."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is educational and corrective without being discouraging; it focuses on clarifying the misconception."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is direct and to the point without unnecessary details, making it easy to understand."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and appropriate for elementary students, using clear and straightforward terms."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:00.321866"
+  },
+  {
+    "question_id": "quiz_302008_sibling_2",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies the error by stating that the magician does not teach Aladdin about magic but uses magic in front of him."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not address why a student might think that the magician's intention was to teach Aladdin about magic, missing a chance to discuss possible student misunderstandings."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific parts of the text to directly refute the incorrect answer, relying instead on a general description of the events."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation points out the correct purpose of the lie, which is to gain trust in order to use Aladdin for the magician's personal goals."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation provides no strategy to help students avoid similar errors in the future, such as careful reading or verifying details in the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models the reasoning process by connecting the magician's actions and intentions logically, helping clarify the narrative's progression."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is informative and neutral, suitable for correcting a misunderstanding without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, focusing directly on the question and the incorrect answer without unnecessary details."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear, appropriate for an elementary-level understanding without being too complex or simplistic."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:03.679471"
+  },
+  {
+    "question_id": "quiz_302008_sibling_3",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation effectively highlights how the magician's failure to assist Aladdin directly contributed to his own undoing, aligning with the outcome of the story where patience might have led to success."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation lacks direct quotes or specific references to the passage, relying instead on a generalized recounting of the situation."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "While the explanation discusses the consequences of a character trait (impatience), it does not explicitly link this analysis to a reading comprehension skill such as inferencing or drawing conclusions, which could be used in future similar tasks."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is positive and supportive, suitable for encouraging elementary students to understand the moral or lesson within the story."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, clearly outlining the scenario without unnecessary detail or complexity, making it suitable for the target age group."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The vocabulary and sentence structure used are appropriate for elementary students, making the explanation accessible and understandable for this age group."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:13.546210"
+  },
+  {
+    "question_id": "quiz_302008_sibling_3",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the answer choice is wrong because there is no evidence in the text that Aladdin intended to keep the lamp hidden forever."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "The explanation addresses a potential student misconception by clarifying that Aladdin's issue was physical difficulty, not a desire to deceive or withhold the lamp."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses information from the text to refute the incorrect answer by emphasizing Aladdin's willingness to help and the logistical challenge he faced."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It indirectly leads to the correct answer by clarifying Aladdin's intentions and the situation, helping to guide understanding towards what really happened."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not provide a specific strategy for students to use in order to avoid similar errors in future assessments."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Shows good reasoning process by analyzing the text, identifying incorrect assumptions, and clarifying the logical flow of events."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is supportive and educational, focusing on clarifying confusion without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, addressing the key points without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language and approach are suitable for elementary students, using clear and understandable terms."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:20.939902"
+  },
+  {
+    "question_id": "quiz_302008_sibling_3",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly identifies that the specific error in the distractor is the claim of a cave collapse, which is not supported by the text."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation fails to address or explore what misconception might have led a student to think the cave would collapse, such as confusing the story with another tale or misunderstanding the nature of magical intervention."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "It successfully uses the information from the text to refute the incorrect claim by stating that the cave's closure was due to magic, not structural instability."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "While indirectly, the explanation suggests the correct answer by indicating that the magician sealing the cave with magic was the primary issue, not a collapse."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "It does not provide a specific strategy for how a student can avoid this type of error in the future, such as paying closer attention to the cause and effect as presented in the story."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a good reasoning process by demonstrating how to differentiate between an imagined scenario and what the text actually says."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and focused on addressing the misunderstanding without being discouraging or critical of the student."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, delivering the necessary critique and correction without unnecessary elaboration."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is appropriate for an elementary level, clear and direct without being too complex."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:26.270326"
+  },
+  {
+    "question_id": "quiz_302008_sibling_3",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation clearly points out that the mother\u2019s character trait of trust and lack of suspicion make the option incorrect."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "Effectively addresses the misconception by stating that there is no evidence to support that Aladdin's mother would have intervened, helping to clarify student understanding."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation argues against the distractor by highlighting the mother\u2019s trust in the magician, contradicting the claim that she would have stopped them."
+      },
+      "correct_guidance": {
+        "passed": false,
+        "reason": "Does not provide or lead to information about the correct answer or clarify what the correct scenario would involve."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "While the explanation clarifies why the response is incorrect, it does not provide strategies for how to approach similar questions in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "Models good reasoning by demonstrating how to use evidence from the text to refute an incorrect answer."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and educational, focusing purely on clarifying why the distractor is incorrect without discouraging the student."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is to the point and succinct, adequately addressing the incorrect answer without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and straightforward, suitable for an elementary level understanding."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:38.381324"
+  },
+  {
+    "question_id": "quiz_302008_sibling_4",
+    "option_label": "A",
+    "is_correct": true,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 4,
+    "total_checks_run": 6,
+    "checks": {
+      "correctness_explanation": {
+        "passed": true,
+        "reason": "The explanation clearly communicates the rationale behind why the magician gives Aladdin the ring; it underscores the necessity of Aladdin's survival for the magician's goal to retrieve the lamp."
+      },
+      "textual_evidence": {
+        "passed": false,
+        "reason": "The explanation fails to cite specific text from the passage or use direct quotes to support the explanation of the magician's intentions and actions."
+      },
+      "skill_reinforcement": {
+        "passed": false,
+        "reason": "The explanation does not explicitly mention or reinforce any particular reading comprehension strategies or skills that students can apply in future reading tasks."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation is neutral and straightforward, making it appropriate for educational feedback without being condescending or harsh."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise, providing a clear and focused insight into the magician's actions without unnecessary elaboration or detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used in the explanation is simple and clear enough for elementary students to understand without being overly simplistic or complex."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:34.752930"
+  },
+  {
+    "question_id": "quiz_302008_sibling_4",
+    "option_label": "B",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation accurately identifies that the magician is not interested in training Aladdin in magic, thus refuting the incorrect answer."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not delve into why a student might think the magician wants Aladdin to become a magician too, such as misunderstanding the purpose of the ring."
+      },
+      "textual_refutation": {
+        "passed": true,
+        "reason": "The explanation uses the passage's context that the magician was solely interested in acquiring the magic lamp and not in Aladdin's magical development."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation correctly highlights that the magician's actual intention was for Aladdin to safely retrieve the lamp, directing the student towards the correct answer."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No strategy is provided to help students avoid similar errors in the future, such as encouraging them to look for motives or outcomes hinted in the text."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The answer demonstrates effective reasoning by tying the magician's actions and stated motives to the specific details mentioned in the text."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone of the explanation remains neutral and factual, providing feedback without discouragement."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is to the point and efficiently addresses the incorrect answer without unnecessary verbosity."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language used is simple and straightforward, suitable for an elementary school reading comprehension level."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:52.655423"
+  },
+  {
+    "question_id": "quiz_302008_sibling_4",
+    "option_label": "C",
+    "is_correct": false,
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the ring is described as protective rather than a tool for mind control, directly addressing the inaccuracy in the distractor."
+      },
+      "misconception_diagnosis": {
+        "passed": true,
+        "reason": "It suggests that a misconception may arise by assuming mind control due to the magician's deceptive nature, but clarifies that the text specifies the ring serves a protective purpose."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "While the explanation refutes the incorrect answer, it fails to cite specific text supporting that the ring is meant for protection rather than control."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "The explanation indirectly points towards the correct answer by emphasizing the ring's true purpose to ensure Aladdin's safety, which is necessary for him to retrieve the lamp."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "The explanation does not offer a specific strategy on how to avoid similar errors in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "The explanation models a good reasoning process by dissecting the intent behind the magician giving the ring, contrasting it with the provided incorrect answer."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is constructive and informative, helping the student understand the mistake without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is succinct and directly addresses the question without unnecessary detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is clear and suitable for elementary students, using simple terms and straightforward explanations."
+      }
+    },
+    "timestamp": "2025-12-11T20:20:48.767283"
+  },
+  {
+    "question_id": "quiz_302008_sibling_4",
+    "option_label": "D",
+    "is_correct": false,
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "specific_error": {
+        "passed": true,
+        "reason": "The explanation correctly identifies that the answer is incorrect because the magician did not intend to give Aladdin magical powers permanently, but rather only as a temporary aid."
+      },
+      "misconception_diagnosis": {
+        "passed": false,
+        "reason": "The explanation does not explore why a student might think that the magician intended to give Aladdin permanent magical powers. It does not address possible reasons or misunderstandings that led to the incorrect answer."
+      },
+      "textual_refutation": {
+        "passed": false,
+        "reason": "The explanation does not cite specific text from the passage that directly contradicts the incorrect answer but broadly refers to the magician's later actions."
+      },
+      "correct_guidance": {
+        "passed": true,
+        "reason": "It hints at the correct answer by suggesting the temporary nature of the gift and the magician's ultimate goal related to the magic lamp."
+      },
+      "actionable_strategy": {
+        "passed": false,
+        "reason": "No specific strategy is provided on how to better approach similar questions or avoid this type of mistake in the future."
+      },
+      "reasoning_model": {
+        "passed": true,
+        "reason": "It models reasoning by linking the magician's intention (temporary safety for Aladdin) to his overall plan (retrieving the lamp), showing students how to consider character motivations."
+      },
+      "tone": {
+        "passed": true,
+        "reason": "The tone is neutral and informative, focusing on explaining the misconception without being discouraging."
+      },
+      "conciseness": {
+        "passed": true,
+        "reason": "The explanation is concise and to the point, adequately explaining the error without excessive detail."
+      },
+      "grade_appropriateness": {
+        "passed": true,
+        "reason": "The language is simple and clear, making it appropriate for an elementary student's understanding."
+      }
+    },
+    "timestamp": "2025-12-11T20:21:08.072321"
+  }
+]

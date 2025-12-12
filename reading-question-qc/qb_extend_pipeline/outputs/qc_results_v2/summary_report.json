@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-12-11T20:40:50.206700",
+  "input_file": "qb_extend_pipeline/outputs/qb_combined_v2_20251211_202459.csv",
+  "mode": "explanations",
+  "total_time_seconds": 541.380076,
+  "version": "v2_optimized",
+  "question_qc": null,
+  "explanation_qc": {
+    "total": 76,
+    "passed": 36,
+    "failed": 40,
+    "pass_rate": 0.47368421052631576,
+    "average_score": 0.8106725146198832
+  }
+}

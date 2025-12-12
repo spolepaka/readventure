@@ -154,6 +154,8 @@ export class SpaceReadingGame {
         if (showLockIcon && (tileIndex > 0 || !firstTileUnlocked)) {
           lockDiv.classList.add('visible');
           lockDiv.innerHTML = `<span class="lock-symbol">${this.config.visualSettings.lockedTile.lockIcon}</span>`;
+          // Mark tile as not clickable (shows not-allowed cursor)
+          tileDiv.classList.add('not-clickable');
         }
 
         tileDiv.addEventListener('click', () => this.onTileClick(tileIndex));
@@ -509,6 +511,7 @@ export class SpaceReadingGame {
       
       const nextTile = document.querySelector(`#tiles-overlay [data-tile-index="${this.currentTile + 1}"]`);
       nextTile?.classList.remove('locked');
+      nextTile?.classList.remove('not-clickable');
     }
     
     this.backToBoard();

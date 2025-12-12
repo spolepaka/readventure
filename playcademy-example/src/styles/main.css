@@ -85,30 +85,40 @@ body {
 #board-screen {
   position: relative;
   width: 100%;
-  max-width: 1920px;
   height: 100vh;
-  max-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* Board Wrapper - maintains 16:9 aspect ratio and contains overlays */
+#board-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: min(100%, calc(100vh * 16 / 9));
+  max-height: min(100vh, calc(100vw * 9 / 16));
+  aspect-ratio: 16 / 9;
 }
 
 #board-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   user-select: none;
   pointer-events: none;
 }
 
-/* Tiles Overlay */
+/* Tiles Overlay - percentages relative to board-wrapper (square grid) */
 #tiles-overlay {
   position: absolute;
   top: 51.8%;
   left: 50.4%;
   transform: translate(-50%, -50%);
-  width: 62vmin;
-  height: 62vmin;
+  /* For a square in 16:9 container: height 62%, width = 62% * 9/16 = 34.875% */
+  width: 34.875%;
+  height: 62%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -124,15 +134,20 @@ body {
   background: transparent;
 }
 
-.tile-hotspot:hover:not(.locked) {
+.tile-hotspot:hover:not(.not-clickable) {
   transform: scale(1.05);
 }
 
+/* Blurred tiles - visual effect only, still clickable unless .not-clickable */
 .tile-hotspot.locked {
-  cursor: not-allowed;
   backdrop-filter: blur(var(--blur-amount)) brightness(var(--blur-brightness));
   background: var(--lock-bg-color);
   -webkit-backdrop-filter: blur(var(--blur-amount)) brightness(var(--blur-brightness));
+}
+
+/* Truly locked tiles - not clickable (has visible lock icon) */
+.tile-hotspot.not-clickable {
+  cursor: not-allowed;
 }
 
 .tile-hotspot.completed {
@@ -144,30 +159,33 @@ body {
   pointer-events: none;
 }
 
-/* Lock Icons Overlay */
+/* Lock Icons Overlay - percentages relative to board-wrapper (square grid) */
 #locks-overlay {
   position: absolute;
   top: 51.8%;
   left: 50.4%;
   transform: translate(-50%, -50%);
-  width: 62vmin;
-  height: 62vmin;
+  /* For a square in 16:9 container: height 62%, width = 62% * 9/16 = 34.875% */
+  width: 34.875%;
+  height: 62%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 5.4%;
   pointer-events: none;
   z-index: 10;
+  container-type: inline-size;
 }
 
 .lock-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 5px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .lock-icon.visible {
@@ -175,14 +193,15 @@ body {
 }
 
 .lock-symbol {
-  font-size: var(--lock-icon-size);
+  /* Responsive size: 12% of container width = ~48% of each cell (4 cols with gaps) */
+  font-size: 2vmin;
+  font-size: 12cqw;
+  line-height: 1;
   color: var(--lock-icon-color);
   text-shadow: 
-    0 0 15px rgba(255, 215, 0, 0.9),
-    0 0 30px rgba(255, 215, 0, 0.7),
-    0 0 45px rgba(255, 215, 0, 0.5),
-    0 4px 10px rgba(0, 0, 0, 0.9);
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 1));
+    0 0 10px rgba(255, 215, 0, 0.9),
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .completion-checkmark {
@@ -440,10 +459,9 @@ body {
 }
 
 .timer-countdown {
-  font-size: 48px;
-  font-weight: 700;
-  color: #ffd93d;
-  text-shadow: 0 0 30px rgba(255, 217, 61, 0.6);
+  font-size: 28px;
+  font-weight: 500;
+  color: #a8b8c8;
   margin-bottom: 30px;
   font-variant-numeric: tabular-nums;
 }
