@@ -12,6 +12,12 @@
     <span class="loader-text">Loading Readventure...</span>
   </div>
 
+  <!-- Back to Home Button -->
+  <button class="back-home-btn" id="back-home-btn" onclick="goBackToHome()">
+    <span class="back-icon">←</span>
+    <span class="back-text">HOME</span>
+  </button>
+
   <div id="game-container">
     <!-- Board Screen -->
     <div id="board-screen">
@@ -24,6 +30,49 @@
 
     <!-- Reading Screen -->
     <div id="reading-screen" class="screen">
+      <!-- PowerPath 100 Stats Bar -->
+      <div id="powerpath-bar" class="powerpath-bar">
+        <!-- Brand -->
+        <div class="powerpath-brand">
+          <span class="powerpath-icon">🚀</span>
+          <div class="powerpath-titles">
+            <span class="powerpath-title">PowerPath 100</span>
+            <span class="powerpath-subtitle">Mission Control</span>
+          </div>
+        </div>
+        
+        <!-- Score -->
+        <div class="pp-stat score-stat">
+          <div class="pp-score">
+            <span class="score-current" id="pp-score">0</span>
+            <span class="score-max">/100</span>
+          </div>
+        </div>
+        
+        <!-- Questions Answered -->
+        <div class="pp-stat">
+          <div class="pp-label">Questions Answered</div>
+          <div class="pp-value" id="pp-questions">0</div>
+        </div>
+        
+        <!-- Accuracy -->
+        <div class="pp-stat">
+          <div class="pp-label">Accuracy</div>
+          <div class="pp-value-row">
+            <span class="pp-value" id="pp-accuracy">0%</span>
+            <div class="pp-accuracy-bar">
+              <div class="pp-accuracy-fill" id="pp-accuracy-fill" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Time Elapsed -->
+        <div class="pp-stat">
+          <div class="pp-label">Time Elapsed</div>
+          <div class="pp-value pp-time" id="pp-time">00:00:00</div>
+        </div>
+      </div>
+
       <div class="passage-panel">
         <h2 id="passage-title">Section Title</h2>
         <div id="passage-content"></div>
@@ -133,6 +182,22 @@
     </div>
   </div>
 
+  <script>
+    // Go back to home/landing page
+    function goBackToHome() {
+      // Play whoosh sound via soundManager if available
+      if (window.soundManager) {
+        window.soundManager.exitReadingMode();
+        window.soundManager.play('whoosh');
+      }
+      
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 300);
+    }
+  </script>
   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

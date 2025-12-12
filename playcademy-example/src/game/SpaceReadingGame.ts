@@ -1,6 +1,7 @@
 /**
  * SpaceReadingGame - Main Game Class
  * A reading comprehension game with board-based progression
+ * Now powered by PowerPath 100 adaptive algorithm!
  */
 
 import type {
@@ -16,6 +17,8 @@ import type {
 } from '../types';
 import { generateActiveTiles } from './tiles';
 import { startConfetti } from './confetti';
+import { PowerPath100, convertToPowerPathQuestion, type PowerPathQuestion, type PowerPathStats } from './powerpath';
+import { soundManager } from '../utils/sound-manager';
 
 export class SpaceReadingGame {
   private config: GameConfig;
@@ -53,7 +56,13 @@ export class SpaceReadingGame {
   private _currentFullGameQuestion = 0;
   private currentSectionQuestion = 0;
   private currentTileQuizQuestions: QuizQuestion[] = [];
-
+  
+  // PowerPath 100 algorithm
+  private powerPath: PowerPath100 | null = null;
+  private currentPowerPathQuestion: PowerPathQuestion | null = null;
+  private powerPathStartTime: number = 0;
+  private powerPathTimerInterval: number | null = null;
+  
   constructor(config: GameConfig, storyData: StoryData) {
     console.log('🎮 SpaceReadingGame constructor called');
     console.log('📊 Story data:', storyData);
@@ -189,10 +198,14 @@ export class SpaceReadingGame {
     // This matches the original Readventure behavior where lock icon controls clickability
     if (lockIcon && lockIcon.classList.contains('visible')) {
       // Shake animation for locked tiles
+      soundManager.play('locked');
       tile?.classList.add('shake');
       setTimeout(() => tile?.classList.remove('shake'), 500);
       return;
     }
+
+    // Play tile selection sound
+    soundManager.play('tile-select');
 
     this.currentTile = tileIndex;
     const activeTile = this.activeTiles[tileIndex];
@@ -200,6 +213,9 @@ export class SpaceReadingGame {
     // Reset tile results tracking
     this.currentTileGuidingResults = [];
     this.currentTileQuizResults = [];
+
+    // Enter reading mode (disables sounds during reading)
+    soundManager.enterReadingMode();
 
     if (activeTile.type === 'section') {
       this.loadSection(activeTile.sectionIndex!, activeTile.articleIndex);
@@ -262,6 +278,7 @@ export class SpaceReadingGame {
   /**
    * Load an entire article as one tile (guiding questions + quiz questions)
    * Sections are revealed PROGRESSIVELY during guiding phase, then full passage for quiz
+   * Now powered by PowerPath 100 algorithm!
    */
   private loadArticleTile(articleIndex: number): void {
     // Get all sections for this article and store for progressive reveal
@@ -287,22 +304,235 @@ export class SpaceReadingGame {
     // Get quiz questions for this article
     const quizForArticle = this.storyData.quizQuestions.filter(q => q.articleIndex === articleIndex);
     this._quizQuestions = quizForArticle.map(quiz => ({
-      id: quiz.id || quiz.identifier,
+      id: quiz.id,
       prompt: quiz.prompt,
       choices: quiz.choices,
       articleIndex,
-      articleTitle: this.currentArticleTitle
+      articleTitle: this.currentArticleTitle,
+      metadata: quiz.metadata
     }));
 
     console.log(`📚 Article tile: ${this.guidingQuestions.length} guiding + ${this._quizQuestions.length} quiz questions`);
 
+    // Initialize PowerPath 100 algorithm
+    const powerPathGuiding = this.guidingQuestions.map(q => convertToPowerPathQuestion(q));
+    const powerPathQuiz = this._quizQuestions.map(q => convertToPowerPathQuestion(q));
+    
+    this.powerPath = new PowerPath100(
+      powerPathGuiding,
+      powerPathQuiz,
+      (stats) => this.updatePowerPathUI(stats)
+    );
+    
+    // Start PowerPath timer
+    this.powerPathStartTime = Date.now();
+    this.startPowerPathTimer();
+    
+    console.log(`🚀 PowerPath 100 initialized with ${powerPathGuiding.length} guiding + ${powerPathQuiz.length} quiz questions`);
+    const counts = this.powerPath.getQuestionCounts();
+    console.log(`📊 Quiz difficulty distribution: Easy=${counts.easy}, Medium=${counts.medium}, Hard=${counts.hard}`);
+
     this.isInGuidingPhase = true;
     this._currentFullGameQuestion = 0;
     this.currentSectionQuestion = 0;
+    
+    // Reset tile results tracking
+    this.currentTileGuidingResults = [];
+    this.currentTileQuizResults = [];
 
-    // Load first question (guiding question with first section)
-    this.loadArticleQuestion(0);
+    // Load first question using PowerPath
+    this.loadNextPowerPathQuestion();
     this.showScreen('reading-screen');
+  }
+  
+  /**
+   * Start the PowerPath timer for time tracking
+   */
+  private startPowerPathTimer(): void {
+    // Clear any existing timer
+    if (this.powerPathTimerInterval) {
+      window.clearInterval(this.powerPathTimerInterval);
+    }
+    
+    // Update time display every second
+    this.powerPathTimerInterval = window.setInterval(() => {
+      const elapsed = Date.now() - this.powerPathStartTime;
+      const timeEl = document.getElementById('pp-time');
+      if (timeEl) {
+        timeEl.textContent = this.formatTime(elapsed);
+      }
+    }, 1000);
+  }
+  
+  /**
+   * Stop the PowerPath timer
+   */
+  private stopPowerPathTimer(): void {
+    if (this.powerPathTimerInterval) {
+      window.clearInterval(this.powerPathTimerInterval);
+      this.powerPathTimerInterval = null;
+    }
+  }
+  
+  /**
+   * Format milliseconds to HH:MM:SS
+   */
+  private formatTime(ms: number): string {
+    const seconds = Math.floor(ms / 1000);
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  }
+  
+  /**
+   * Update PowerPath 100 UI elements
+   */
+  private updatePowerPathUI(stats: PowerPathStats): void {
+    // Update score
+    const scoreEl = document.getElementById('pp-score');
+    if (scoreEl) {
+      scoreEl.textContent = stats.score.toString();
+    }
+    
+    // Update questions answered
+    const questionsEl = document.getElementById('pp-questions');
+    if (questionsEl) {
+      questionsEl.textContent = stats.questionsAnswered.toString();
+    }
+    
+    // Update accuracy
+    const accuracyEl = document.getElementById('pp-accuracy');
+    if (accuracyEl) {
+      accuracyEl.textContent = `${stats.accuracy}%`;
+    }
+    
+    // Update accuracy bar
+    const accuracyFill = document.getElementById('pp-accuracy-fill');
+    if (accuracyFill) {
+      accuracyFill.style.width = `${stats.accuracy}%`;
+    }
+    
+    // Update time
+    const timeEl = document.getElementById('pp-time');
+    if (timeEl) {
+      timeEl.textContent = stats.timeElapsed;
+    }
+  }
+  
+  /**
+   * Load the next question from PowerPath algorithm
+   */
+  private loadNextPowerPathQuestion(): void {
+    if (!this.powerPath) {
+      console.error('PowerPath not initialized');
+      return;
+    }
+    
+    // Check if PowerPath is complete (score >= 100)
+    if (this.powerPath.isComplete()) {
+      console.log('🎉 PowerPath 100 complete!');
+      this.stopPowerPathTimer();
+      this.showTileResults();
+      return;
+    }
+    
+    // Get next question from PowerPath
+    const nextQuestion = this.powerPath.getNextQuestion();
+    
+    if (!nextQuestion) {
+      console.log('No more questions available');
+      this.stopPowerPathTimer();
+      this.showTileResults();
+      return;
+    }
+    
+    this.currentPowerPathQuestion = nextQuestion;
+    const phase = this.powerPath.getCurrentPhase();
+    this.isInGuidingPhase = phase === 'guiding';
+    
+    // Update passage title
+    const titleEl = document.getElementById('passage-title');
+    if (titleEl) titleEl.textContent = this.currentArticleTitle;
+    
+    // Update passage content based on phase
+    const contentEl = document.getElementById('passage-content');
+    
+    if (this.isInGuidingPhase) {
+      // Progressive passage reveal for guiding questions
+      // Find which section index this guiding question corresponds to
+      const guidingIndex = this.guidingQuestions.findIndex(q => q.id === nextQuestion.id);
+      this.currentSectionQuestion = guidingIndex >= 0 ? guidingIndex : 0;
+      
+      if (contentEl) {
+        contentEl.innerHTML = this.buildProgressivePassage(this.currentSectionQuestion);
+      }
+      this.scrollToCurrentSection();
+      
+      // Show timer for guiding questions if enabled
+      if (this.readingTimerEnabled && this.readingTimerOnlyGuiding) {
+        this.startReadingTimer(() => {
+          this.renderPowerPathQuestion(nextQuestion, phase);
+        });
+      } else {
+        this.renderPowerPathQuestion(nextQuestion, phase);
+      }
+    } else {
+      // Full passage for quiz phase
+      if (contentEl) {
+        contentEl.innerHTML = this.buildFullPassage();
+      }
+      
+      // Show quiz question directly (no timer for quiz)
+      document.getElementById('activity-timer-panel')?.classList.remove('active');
+      document.getElementById('question-content')?.classList.remove('hidden');
+      
+      this.renderPowerPathQuestion(nextQuestion, phase);
+    }
+  }
+  
+  /**
+   * Render a PowerPath question
+   */
+  private renderPowerPathQuestion(question: PowerPathQuestion, phase: 'guiding' | 'quiz'): void {
+    const promptEl = document.getElementById('question-prompt');
+    const choicesEl = document.getElementById('choices-container');
+    const confirmBtn = document.getElementById('confirm-btn') as HTMLButtonElement;
+    
+    // Get stats for display
+    const stats = this.powerPath?.getStats();
+    const questionNum = stats?.questionsAnswered ? stats.questionsAnswered + 1 : 1;
+    
+    // Build question text with phase indicator
+    let phaseLabel = '';
+    if (phase === 'guiding') {
+      const guidingIndex = this.guidingQuestions.findIndex(q => q.id === question.id);
+      phaseLabel = `📖 Guiding Question ${guidingIndex + 1} of ${this.guidingQuestions.length}`;
+    } else {
+      const difficulty = question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1);
+      phaseLabel = `🎯 Quiz Question (${difficulty})`;
+    }
+    
+    if (promptEl) {
+      promptEl.innerHTML = `<span class="phase-label">${phaseLabel}</span><br>${question.prompt}`;
+    }
+    if (confirmBtn) confirmBtn.disabled = true;
+    
+    if (choicesEl) {
+      choicesEl.innerHTML = '';
+      question.choices.forEach((choice, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.textContent = choice.text;
+        btn.addEventListener('click', () => this.selectAnswer(choice, index));
+        choicesEl.appendChild(btn);
+      });
+    }
+    
+    // Show question content, hide timer
+    document.getElementById('activity-timer-panel')?.classList.remove('active');
+    document.getElementById('question-content')?.classList.remove('hidden');
   }
 
   /**
@@ -573,7 +803,15 @@ export class SpaceReadingGame {
     if (!this.selectedAnswer) return;
 
     const isCorrect = this.selectedAnswer.correct;
-    if (isCorrect) this.score++;
+    
+    // Use PowerPath 100 for scoring if available
+    if (this.powerPath && this.currentPowerPathQuestion) {
+      const scoreChange = this.powerPath.recordAnswer(this.currentPowerPathQuestion.id, isCorrect);
+      console.log(`📊 PowerPath: ${isCorrect ? '✅' : '❌'} Score change: ${scoreChange > 0 ? '+' : ''}${scoreChange}, New score: ${this.powerPath.getStats().score}`);
+    } else {
+      // Fallback to legacy scoring
+      if (isCorrect) this.score++;
+    }
 
     // Track result for tile results
     if (this.isInGuidingPhase) {
@@ -622,7 +860,13 @@ export class SpaceReadingGame {
 
     this.selectedAnswer = null;
 
-    // Check if we're in article-per-tile mode (one-article-per-tile)
+    // If PowerPath is active, use it to get next question
+    if (this.powerPath) {
+      this.loadNextPowerPathQuestion();
+      return;
+    }
+
+    // Legacy mode: Check if we're in article-per-tile mode (one-article-per-tile)
     // This is indicated by having sectionsForArticle populated with multiple sections AND quiz questions
     const isArticlePerTileMode = this.sectionsForArticle.length > 1 || this._quizQuestions.length > 0;
 
@@ -649,16 +893,43 @@ export class SpaceReadingGame {
   private showTileResults(): void {
     this.state = 'TILE_RESULTS';
     
-    const totalGuiding = this.currentTileGuidingResults.length;
-    const correctGuiding = this.currentTileGuidingResults.filter(r => r.correct).length;
-    const totalQuiz = this.currentTileQuizResults.length;
-    const correctQuiz = this.currentTileQuizResults.filter(r => r.correct).length;
-    const totalQuestions = totalGuiding + totalQuiz;
-    const totalCorrect = correctGuiding + correctQuiz;
-    const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+    // Exit reading mode so celebration sounds can play
+    soundManager.exitReadingMode();
     
-    const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
-    const passed = accuracy >= passThreshold;
+    // Stop PowerPath timer if running
+    this.stopPowerPathTimer();
+    
+    // Get stats from PowerPath if available
+    let totalQuestions: number;
+    let totalCorrect: number;
+    let accuracy: number;
+    let powerPathScore: number = 0;
+    let passed: boolean;
+    
+    if (this.powerPath) {
+      const stats = this.powerPath.getStats();
+      totalQuestions = stats.questionsAnswered;
+      accuracy = stats.accuracy;
+      powerPathScore = stats.score;
+      totalCorrect = Math.round((stats.accuracy / 100) * totalQuestions);
+      
+      // With PowerPath, "passed" means reaching score of 100
+      passed = stats.isComplete;
+      
+      console.log(`🏁 PowerPath results: Score=${powerPathScore}, Questions=${totalQuestions}, Accuracy=${accuracy}%, Passed=${passed}`);
+    } else {
+      // Legacy mode
+      const totalGuiding = this.currentTileGuidingResults.length;
+      const correctGuiding = this.currentTileGuidingResults.filter(r => r.correct).length;
+      const totalQuiz = this.currentTileQuizResults.length;
+      const correctQuiz = this.currentTileQuizResults.filter(r => r.correct).length;
+      totalQuestions = totalGuiding + totalQuiz;
+      totalCorrect = correctGuiding + correctQuiz;
+      accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+      
+      const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
+      passed = accuracy >= passThreshold;
+    }
     
     // Update UI elements
     const articleEl = document.getElementById('tile-results-article');
@@ -668,7 +939,13 @@ export class SpaceReadingGame {
     if (correctCountEl) correctCountEl.textContent = `${totalCorrect} of ${totalQuestions}`;
     
     const accuracyEl = document.getElementById('tile-accuracy');
-    if (accuracyEl) accuracyEl.textContent = `${accuracy}%`;
+    if (accuracyEl) {
+      if (this.powerPath) {
+        accuracyEl.textContent = `${accuracy}% (Score: ${powerPathScore}/100)`;
+      } else {
+        accuracyEl.textContent = `${accuracy}%`;
+      }
+    }
     
     // Render result boxes
     this.renderResultBoxes('guiding-results-boxes', this.currentTileGuidingResults);
@@ -676,8 +953,9 @@ export class SpaceReadingGame {
     
     // Show/hide quiz section
     const quizSection = document.getElementById('quiz-results-section');
+    const totalQuizCount = this.currentTileQuizResults.length;
     if (quizSection) {
-      quizSection.style.display = totalQuiz > 0 ? 'block' : 'none';
+      quizSection.style.display = totalQuizCount > 0 ? 'block' : 'none';
     }
     
     // Update pass/fail status
@@ -695,14 +973,31 @@ export class SpaceReadingGame {
         passFailStatus.classList.add('passed');
         resultsContent.classList.add('passed');
         passFailIcon.textContent = '✓';
-        passFailText.textContent = `You passed! (${passThreshold}% required)`;
-        resultsTitle.textContent = '🎉 Great Job!';
+        
+        // Play celebration sound for passing!
+        soundManager.play('success');
+        
+        if (this.powerPath) {
+          passFailText.textContent = `🚀 PowerPath 100 Complete! Score: ${powerPathScore}`;
+          resultsTitle.textContent = '🎉 Mission Accomplished!';
+        } else {
+          const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
+          passFailText.textContent = `You passed! (${passThreshold}% required)`;
+          resultsTitle.textContent = '🎉 Great Job!';
+        }
       } else {
         passFailStatus.classList.add('failed');
         resultsContent.classList.add('failed');
         passFailIcon.textContent = '✗';
-        passFailText.textContent = `Need ${passThreshold}% to unlock. Try again!`;
-        resultsTitle.textContent = '📊 Keep Practicing!';
+        
+        if (this.powerPath) {
+          passFailText.textContent = `Keep going! Score: ${powerPathScore}/100. Try again to reach 100!`;
+          resultsTitle.textContent = '🚀 Almost There!';
+        } else {
+          const passThreshold = this.config.gameFlow.passThresholdPercent || 90;
+          passFailText.textContent = `Need ${passThreshold}% to unlock. Try again!`;
+          resultsTitle.textContent = '📊 Keep Practicing!';
+        }
       }
     }
     
@@ -788,6 +1083,12 @@ export class SpaceReadingGame {
     // Reset timer UI
     document.getElementById('activity-timer-panel')?.classList.remove('active');
     document.getElementById('question-content')?.classList.remove('hidden');
+    
+    // Exit reading mode (enables sounds again)
+    soundManager.exitReadingMode();
+    
+    // Play whoosh transition sound
+    soundManager.play('whoosh');
     
     this.state = 'BOARD';
     this.hideAllScreens();
@@ -949,6 +1250,10 @@ export class SpaceReadingGame {
     const messageObj = sortedMessages.find(m => percentage >= m.minPercentage);
     if (message) message.textContent = messageObj?.message || 'Great effort!';
     
+    // Exit reading mode and play celebration sound
+    soundManager.exitReadingMode();
+    soundManager.play('success');
+    
     this.hideAllScreens();
     this.showScreen('results-screen');
     
@@ -1016,11 +1321,19 @@ export class SpaceReadingGame {
     this.hideAllScreens();
     const screen = document.getElementById(screenId);
     if (screen) screen.classList.add('active');
+    
+    // Hide HOME button when showing any overlay screen (not on board)
+    const homeBtn = document.getElementById('back-home-btn');
+    if (homeBtn) homeBtn.style.display = 'none';
   }
 
   private hideAllScreens(): void {
     const screens = document.querySelectorAll('.screen');
     screens.forEach(screen => screen.classList.remove('active'));
+    
+    // Show HOME button when returning to board screen
+    const homeBtn = document.getElementById('back-home-btn');
+    if (homeBtn) homeBtn.style.display = 'flex';
   }
 
   // Public getters for external access

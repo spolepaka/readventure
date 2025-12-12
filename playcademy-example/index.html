@@ -339,6 +339,36 @@
             text-decoration: none;
         }
 
+        /* Exit Button */
+        .exit-btn {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.7rem;
+            background: transparent;
+            color: var(--text-muted);
+            border: 2px solid var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exit-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .exit-btn::before {
+            content: '←';
+            font-size: 1rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .logo-text {
@@ -401,6 +431,9 @@
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
+    <!-- Exit Button -->
+    <button class="exit-btn" id="exit-btn" onclick="exitToArcade()">EXIT</button>
+
     <!-- Main Content -->
     <div class="container">
         <!-- Logo Section -->
@@ -461,7 +494,63 @@
         A <a href="https://playcademy.net" target="_blank">Playcademy</a> Game
     </div>
 
-    <script>
+    <script type="module">
+        // Sound effects for landing page
+        const sounds = {
+            click: new Audio('/sounds/click.mp3'),
+            hover: new Audio('/sounds/hover.mp3'),
+            whoosh: new Audio('/sounds/whoosh.mp3')
+        };
+        
+        // Preload and set volumes
+        sounds.click.volume = 0.4;
+        sounds.hover.volume = 0.15;
+        sounds.whoosh.volume = 0.4;
+        
+        function playSound(name) {
+            const sound = sounds[name];
+            if (sound) {
+                const clone = sound.cloneNode();
+                clone.volume = sound.volume;
+                clone.play().catch(() => {});
+            }
+        }
+        
+        // Initialize Playcademy SDK
+        let client = null;
+        
+        async function initSDK() {
+            try {
+                const { PlaycademyClient } = await import('@playcademy/sdk');
+                client = await PlaycademyClient.init();
+                console.log('🎮 Playcademy SDK initialized');
+                // Store client globally
+                window.playcademyClient = client;
+            } catch (err) {
+                console.log('🎮 Running in standalone mode (SDK not available)');
+            }
+        }
+        
+        initSDK();
+        
+        // Exit to arcade function
+        window.exitToArcade = async function() {
+            playSound('click');
+            if (client?.runtime?.exit) {
+                try {
+                    await client.runtime.exit();
+                } catch (error) {
+                    // In development/sandbox mode, exit() may fail - show friendly message
+                    console.log('🎮 Exit to arcade (development mode - no arcade to return to)');
+                    alert('Exit to arcade works when running in the Playcademy platform.\n\nIn development mode, there is no arcade to return to.');
+                }
+            } else {
+                // Fallback for standalone mode - just show a message
+                console.log('Exit to arcade (SDK not available in standalone mode)');
+                alert('Exit to arcade is only available when running in Playcademy.');
+            }
+        };
+
         // Hide loader when page is ready
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -487,8 +576,10 @@
         createParticles();
 
         // Launch game with selected theme
-        function launchGame(theme) {
+        window.launchGame = function(theme) {
             if (theme === 'space') {
+                playSound('whoosh');
+                
                 // Add a nice transition
                 document.body.style.opacity = '0';
                 document.body.style.transition = 'opacity 0.3s ease';
@@ -497,12 +588,26 @@
                     window.location.href = '/game.html';
                 }, 300);
             }
-        }
+        };
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-                launchGame('space');
+                window.launchGame('space');
+            }
+        });
+        
+        // Add hover sounds to interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme cards hover sound
+            document.querySelectorAll('.theme-card.available').forEach(card => {
+                card.addEventListener('mouseenter', () => playSound('hover'));
+            });
+            
+            // Exit button hover
+            const exitBtn = document.querySelector('.exit-btn');
+            if (exitBtn) {
+                exitBtn.addEventListener('mouseenter', () => playSound('hover'));
             }
         });
     </script>

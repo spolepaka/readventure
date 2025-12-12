@@ -18,7 +18,7 @@ export interface GridAlignment {
 }
 
 export interface ContentGranularity {
-  mode: 'one-question-per-tile' | 'all-questions-one-tile' | 'full-text-per-tile' | 'custom';
+  mode: 'one-section-per-tile' | 'one-article-per-tile' | 'one-question-per-tile' | 'all-questions-one-tile' | 'full-text-per-tile' | 'custom';
   description?: string;
   modes?: Record<string, string>;
   numberOfSectionTiles: number;

@@ -7,11 +7,23 @@
 import './styles/main.css';
 import { SpaceReadingGame } from './game';
 import { loadConfig, loadStoryDataFromQTI } from './utils/config-loader';
+import { soundManager } from './utils/sound-manager';
 import type { GameConfig } from './types';
 
 // Global game instance
 let game: SpaceReadingGame | null = null;
 let GAME_CONFIG: GameConfig | null = null;
+
+// Initialize sound manager on first user interaction
+let soundsInitialized = false;
+function initSoundsOnInteraction() {
+  if (!soundsInitialized) {
+    soundsInitialized = true;
+    soundManager.init();
+  }
+}
+document.addEventListener('click', initSoundsOnInteraction, { once: true });
+document.addEventListener('keydown', initSoundsOnInteraction, { once: true });
 
 /**
  * Initialize the game
