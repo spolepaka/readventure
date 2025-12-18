@@ -1465,6 +1465,10 @@ class ConcurrentQuestionBankExtender:
         self._total_articles = 0
         self._completed_articles = 0
         self._total_generated = 0
+        self._article_times: List[float] = []  # Track time per article
+        self._article_questions: List[int] = []  # Track questions per article
+        self._failed_articles: List[str] = []  # Track failed articles
+        self._start_time = 0.0
         
         # Shared LLM logger (already thread-safe)
         self.llm_logger = LLMLogger(self.log_dir, self.run_id)
@@ -1478,9 +1482,59 @@ class ConcurrentQuestionBankExtender:
             with open(checkpoint_file, 'r') as f:
                 data = json.load(f)
                 processed = set(data.get('processed_articles', []))
-                print(f"Loaded checkpoint: {len(processed)} articles already processed")
                 return processed
         return set()
+    
+    def _load_completed_from_output(self, output_file: Path, articles: Dict[str, List[Dict]]) -> set:
+        """
+        Load completed articles by checking the output file.
+        An article is considered complete if it has the expected number of generated questions.
+        """
+        completed = set()
+        partial = set()
+        
+        if not output_file.exists():
+            return completed
+        
+        try:
+            df = pd.read_csv(output_file)
+            if df.empty:
+                return completed
+            
+            # Count questions per article in output
+            output_counts = df.groupby('article_id').size().to_dict()
+            
+            # For each article in output, check if it's complete
+            for article_id, count in output_counts.items():
+                if article_id not in articles:
+                    continue
+                
+                # Calculate expected questions for this article
+                questions = articles[article_id]
+                quiz_questions = [q for q in questions if q.get('question_category') == 'quiz']
+                guiding_questions = [q for q in questions if q.get('question_category') == 'guiding']
+                
+                expected = 0
+                if not self.only_guiding:
+                    expected += len(quiz_questions) * 4  # 4 siblings per quiz question
+                if self.include_guiding or self.only_guiding:
+                    expected += len(guiding_questions) * 4
+                
+                # Allow some tolerance (at least 75% complete)
+                if count >= expected * 0.75:
+                    completed.add(article_id)
+                else:
+                    partial.add(article_id)
+            
+            if completed:
+                print(f"  Found {len(completed)} completed articles in output file")
+            if partial:
+                print(f"  Found {len(partial)} partially completed articles (will reprocess)")
+                
+        except Exception as e:
+            print(f"  Warning: Could not read output file: {e}")
+        
+        return completed
     
     def _save_checkpoint(self, article_id: str) -> None:
         """Save checkpoint after processing an article. Thread-safe."""
@@ -1525,8 +1579,6 @@ class ConcurrentQuestionBankExtender:
         guiding_count = sum(1 for q in questions if q.get('question_category') == 'guiding')
         quiz_count = sum(1 for q in questions if q.get('question_category') == 'quiz')
         
-        print(f"[Worker {worker_id}] Processing {article_id} ({guiding_count} guiding + {quiz_count} quiz)")
-        
         try:
             start_time = time.time()
             generated = worker.generate_siblings_for_article(article_id, questions)
@@ -1546,14 +1598,27 @@ class ConcurrentQuestionBankExtender:
             with self._progress_lock:
                 self._completed_articles += 1
                 self._total_generated += len(generated)
+                self._article_times.append(elapsed)
+                self._article_questions.append(len(generated))
+                
+                # Calculate stats
                 progress = self._completed_articles / self._total_articles * 100
-                print(f"[Worker {worker_id}] Completed {article_id}: {len(generated)} questions in {elapsed:.1f}s "
-                      f"({self._completed_articles}/{self._total_articles} = {progress:.1f}%)")
+                total_elapsed = time.time() - self._start_time
+                avg_time = total_elapsed / self._completed_articles
+                remaining = self._total_articles - self._completed_articles
+                eta = avg_time * remaining
+                
+                # Clean progress output
+                print(f"\n✓ Article {self._completed_articles}/{self._total_articles} complete [{progress:.0f}%]")
+                print(f"  • {article_id}: {len(generated)} questions in {elapsed:.0f}s")
+                print(f"  • Total: {self._total_generated} questions | Elapsed: {total_elapsed:.0f}s | ETA: {eta:.0f}s")
             
             return len(generated)
             
         except Exception as e:
-            print(f"[Worker {worker_id}] ERROR processing {article_id}: {e}")
+            with self._progress_lock:
+                self._failed_articles.append(article_id)
+            print(f"\n✗ ERROR [{article_id}]: {e}")
             return 0
     
     def process_all_articles_concurrent(
@@ -1588,30 +1653,67 @@ class ConcurrentQuestionBankExtender:
                     articles[article_id] = []
                 articles[article_id].append(row)
         
-        print(f"Found {len(articles)} articles with {sum(len(q) for q in articles.values())} questions")
+        total_questions = sum(len(q) for q in articles.values())
+        print(f"Found {len(articles)} articles with {total_questions} questions")
         
-        # Load checkpoint
-        self._processed_articles = self._load_checkpoint()
-        
-        # Filter out already processed articles
-        article_ids = [aid for aid in articles.keys() if aid not in self._processed_articles]
-        if limit > 0:
-            article_ids = article_ids[:limit]
-        
-        self._total_articles = len(article_ids)
-        print(f"Articles to process: {self._total_articles}")
-        
-        if self._total_articles == 0:
-            print("No articles to process!")
-            return ""
-        
-        # Prepare output file
+        # Prepare output file path (use fixed name, not timestamped)
         output_path = Path(output_file)
-        extended_filename = f"{output_path.stem}_{self.run_id}{output_path.suffix}"
-        extended_file = output_path.parent / extended_filename
+        # Avoid redundant naming like "qb_extended_extended.csv"
+        if 'extended' in output_path.stem.lower():
+            extended_file = output_path
+        else:
+            extended_file = output_path.parent / f"{output_path.stem}_extended.csv"
         extended_file.parent.mkdir(parents=True, exist_ok=True)
         
-        print(f"Extended questions will be saved to: {extended_file}")
+        # Load completed articles from checkpoint
+        checkpoint_completed = self._load_checkpoint()
+        
+        # Also check the output file for completed articles
+        print(f"\nChecking for previously completed work...")
+        output_completed = self._load_completed_from_output(extended_file, articles)
+        
+        # Combine both sources - an article is complete if in either
+        already_completed = checkpoint_completed | output_completed
+        
+        # Update checkpoint with output file completions
+        self._processed_articles = already_completed
+        
+        # Get all article IDs in order
+        all_article_ids = list(articles.keys())
+        
+        # Find articles that still need processing
+        remaining_ids = [aid for aid in all_article_ids if aid not in already_completed]
+        
+        # Apply limit to remaining articles
+        if limit > 0:
+            article_ids = remaining_ids[:limit]
+        else:
+            article_ids = remaining_ids
+        
+        self._total_articles = len(article_ids)
+        
+        # Calculate progress context
+        total_in_dataset = len(all_article_ids)
+        already_done = len(already_completed)
+        
+        print(f"\n📋 PROGRESS STATUS")
+        print(f"{'─'*40}")
+        print(f"  Total articles in dataset: {total_in_dataset}")
+        print(f"  Already completed:         {already_done}")
+        print(f"  Remaining to process:      {len(remaining_ids)}")
+        print(f"  Will process this run:     {self._total_articles}")
+        
+        if self._total_articles == 0:
+            print("\n✓ No articles to process - all done!")
+            # Still return combined file if it exists
+            combined_file = extended_file.parent / f"{output_path.stem}_combined.csv"
+            if combined_file.exists():
+                return str(combined_file)
+            return ""
+        
+        print(f"\n📁 OUTPUT FILE: {extended_file}")
+        if extended_file.exists():
+            print(f"  (appending to existing file)")
         
         # Define fieldnames
         fieldnames = [
@@ -1646,7 +1748,12 @@ class ConcurrentQuestionBankExtender:
                 writer.writeheader()
         
         # Process articles concurrently
+        print(f"\n{'─'*60}")
+        print(f"Starting processing...")
+        print(f"{'─'*60}")
+        
         start_time = time.time()
+        self._start_time = start_time
         
         with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
             # Submit tasks - round-robin distribute articles to workers
@@ -1676,14 +1783,65 @@ class ConcurrentQuestionBankExtender:
         
         total_time = time.time() - start_time
         
+        # Calculate detailed stats
+        avg_time = total_time / max(1, self._completed_articles)
+        avg_questions = self._total_generated / max(1, self._completed_articles)
+        questions_per_min = (self._total_generated / total_time) * 60 if total_time > 0 else 0
+        
+        # Format time nicely
+        def format_time(seconds: float) -> str:
+            if seconds < 60:
+                return f"{seconds:.0f}s"
+            minutes = int(seconds // 60)
+            secs = int(seconds % 60)
+            return f"{minutes}m {secs}s"
+        
+        # Count total questions in output file for cumulative stats
+        total_in_output = 0
+        total_articles_done = len(self._processed_articles)
+        if extended_file.exists():
+            try:
+                df = pd.read_csv(extended_file)
+                total_in_output = len(df)
+                total_articles_done = df['article_id'].nunique()
+            except:
+                pass
+        
         print(f"\n{'='*60}")
-        print(f"CONCURRENT PROCESSING COMPLETE")
+        print(f"  PROCESSING COMPLETE")
         print(f"{'='*60}")
-        print(f"Total time: {total_time:.1f}s")
-        print(f"Articles processed: {self._completed_articles}")
-        print(f"Questions generated: {self._total_generated}")
-        print(f"Average time per article: {total_time/max(1, self._completed_articles):.1f}s")
-        print(f"Extended questions saved to: {extended_file}")
+        print(f"\n📊 THIS RUN")
+        print(f"{'─'*40}")
+        print(f"  Articles processed:  {self._completed_articles}/{self._total_articles}")
+        print(f"  Questions generated: {self._total_generated}")
+        print(f"  Failed articles:     {len(self._failed_articles)}")
+        
+        print(f"\n📊 CUMULATIVE TOTAL")
+        print(f"{'─'*40}")
+        print(f"  Total articles done: {total_articles_done}")
+        print(f"  Total questions:     {total_in_output}")
+        
+        print(f"\n⏱️  TIMING")
+        print(f"{'─'*40}")
+        print(f"  Total time:          {format_time(total_time)}")
+        print(f"  Avg per article:     {format_time(avg_time)}")
+        print(f"  Questions/minute:    {questions_per_min:.1f}")
+        
+        if self._article_times:
+            min_time = min(self._article_times)
+            max_time = max(self._article_times)
+            print(f"  Fastest article:     {format_time(min_time)}")
+            print(f"  Slowest article:     {format_time(max_time)}")
+        
+        print(f"\n📁 OUTPUT")
+        print(f"{'─'*40}")
+        print(f"  Extended: {extended_file}")
+        
+        if self._failed_articles:
+            print(f"\n⚠️  FAILED ARTICLES")
+            print(f"{'─'*40}")
+            for article in self._failed_articles:
+                print(f"  • {article}")
         
         # Combine with original questions
         combined_file = self._combine_questions(
@@ -1693,7 +1851,10 @@ class ConcurrentQuestionBankExtender:
             output_base_name=output_path.stem
         )
         
-        print(f"\n✓ Done! Combined output: {combined_file}")
+        print(f"\n{'='*60}")
+        print(f"  ✓ DONE!")
+        print(f"{'='*60}")
+        print(f"\nCombined output: {combined_file}\n")
         return combined_file
     
     def _combine_questions(
@@ -1704,20 +1865,14 @@ class ConcurrentQuestionBankExtender:
         output_base_name: str = "extended"
     ) -> str:
         """Combine original and extended questions into a single CSV."""
-        print(f"\n--- Combining Questions ---")
-        print(f"Reading extended questions from: {extended_csv}")
+        print(f"\n📦 COMBINING FILES")
+        print(f"{'─'*40}")
         extended_df = pd.read_csv(extended_csv)
-        print(f"  Found {len(extended_df)} extended questions")
         
         parent_ids = extended_df['parent_question_id'].dropna().unique()
-        print(f"  Found {len(parent_ids)} unique parent question IDs")
         
-        print(f"Reading original questions from: {original_csv}")
         original_df = pd.read_csv(original_csv)
-        print(f"  Total original questions: {len(original_df)}")
-        
         original_parents_df = original_df[original_df['question_id'].isin(parent_ids)].copy()
-        print(f"  Matched parent questions: {len(original_parents_df)}")
         
         extended_only_cols = [col for col in extended_df.columns if col not in original_df.columns]
         for col in extended_only_cols:
@@ -1738,19 +1893,15 @@ class ConcurrentQuestionBankExtender:
             key=lambda x: x.astype(str)
         ).reset_index(drop=True)
         
-        if 'extended' in output_base_name.lower():
-            combined_base = re.sub(r'extended', 'combined', output_base_name, flags=re.IGNORECASE)
-        else:
-            combined_base = f"combined_{output_base_name}"
-        
-        combined_filename = f"{combined_base}_{self.run_id}.csv"
+        # Use fixed filename (no timestamp) so it gets updated in place
+        combined_filename = f"{output_base_name}_combined.csv"
         combined_file = Path(output_dir) / combined_filename
         
-        print(f"Saving combined questions to: {combined_file}")
         combined_df.to_csv(combined_file, index=False)
-        print(f"  Total questions in combined file: {len(combined_df)}")
-        print(f"    - Original questions: {len(original_parents_df)}")
-        print(f"    - Extended questions: {len(extended_df)}")
+        print(f"  Original questions: {len(original_parents_df)}")
+        print(f"  Extended questions: {len(extended_df)}")
+        print(f"  Combined total:     {len(combined_df)}")
+        print(f"  Combined: {combined_file}")
         
         return str(combined_file)
 
