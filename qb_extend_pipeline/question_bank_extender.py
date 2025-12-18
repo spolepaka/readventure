@@ -8,26 +8,38 @@ Generates sibling questions for existing reading comprehension questions.
 - With --only-guiding: Only extends guiding questions
 
 Uses Claude Sonnet 4.5 with structured output mode.
-Processes one article at a time and saves checkpoints.
+Supports CONCURRENT processing with multiple API keys.
 Logs all LLM communications with timestamps for traceability.
 
 Usage:
-    # Default: Only quiz questions
+    # Default: Only quiz questions (sequential)
     python question_bank_extender.py \\
         --input inputs/qti_existing_questions.csv \\
         --output outputs/extended_questions.csv
+    
+    # Concurrent processing with multiple API keys
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv \\
+        --concurrent
     
     # Include guiding questions too
     python question_bank_extender.py \\
         --input inputs/qti_existing_questions.csv \\
         --output outputs/extended_questions.csv \\
         --include-guiding
+
+Concurrency:
+    Set multiple API keys in .env file:
+        ANTHROPIC_API_KEY_1=sk-ant-...
+        ANTHROPIC_API_KEY_2=sk-ant-...
+        ANTHROPIC_API_KEY_3=sk-ant-...
     
-    # Only guiding questions
-    python question_bank_extender.py \\
-        --input inputs/qti_existing_questions.csv \\
-        --output outputs/extended_questions.csv \\
-        --only-guiding
+    Or use comma-separated keys:
+        ANTHROPIC_API_KEYS=sk-ant-key1,sk-ant-key2,sk-ant-key3
+    
+    Each key processes one article at a time in parallel.
+    5 keys = 5 articles processed concurrently.
 """
 
 import os
@@ -37,16 +49,20 @@ import argparse
 import time
 import re
 import logging
+import threading
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from queue import Queue
 import anthropic
 from dotenv import load_dotenv
 import pandas as pd
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file in the script's directory
+ENV_FILE = Path(__file__).parent / ".env"
+load_dotenv(ENV_FILE)
 
 
 # Model configuration
@@ -56,6 +72,54 @@ STRUCTURED_OUTPUTS_BETA = "structured-outputs-2025-11-13"
 # Generation counts
 GUIDING_SIBLINGS = 1  # Generate 1 sibling per guiding question
 QUIZ_SIBLINGS = 4     # Generate 4 siblings per quiz question
+
+# Default concurrency settings
+DEFAULT_MAX_WORKERS = 5  # Maximum concurrent workers if more keys available
+
+
+def load_api_keys() -> List[str]:
+    """
+    Load API keys from environment variables.
+    
+    Supports multiple formats:
+    1. Comma-separated: ANTHROPIC_API_KEYS=key1,key2,key3
+    2. Numbered: ANTHROPIC_API_KEY_1, ANTHROPIC_API_KEY_2, etc.
+    3. Single key: ANTHROPIC_API_KEY (fallback)
+    
+    Returns: List of API keys
+    """
+    keys = []
+    
+    # Try comma-separated keys first
+    comma_keys = os.getenv('ANTHROPIC_API_KEYS', '')
+    if comma_keys:
+        keys = [k.strip() for k in comma_keys.split(',') if k.strip()]
+        if keys:
+            print(f"Loaded {len(keys)} API keys from ANTHROPIC_API_KEYS")
+            return keys
+    
+    # Try numbered keys (ANTHROPIC_API_KEY_1, _2, etc.)
+    i = 1
+    while True:
+        key = os.getenv(f'ANTHROPIC_API_KEY_{i}')
+        if key:
+            keys.append(key.strip())
+            i += 1
+        else:
+            break
+    
+    if keys:
+        print(f"Loaded {len(keys)} API keys from ANTHROPIC_API_KEY_1 to ANTHROPIC_API_KEY_{len(keys)}")
+        return keys
+    
+    # Fallback to single key
+    single_key = os.getenv('ANTHROPIC_API_KEY')
+    if single_key:
+        print("Loaded 1 API key from ANTHROPIC_API_KEY")
+        return [single_key.strip()]
+    
+    return []
+
 
 # Prompt file path
 PROMPTS_FILE = Path(__file__).parent / "qb_extend prompts.json"
@@ -314,7 +378,7 @@ SCHEMA_MAP = {
 
 
 class LLMLogger:
-    """Logs all LLM communications with timestamps for traceability."""
+    """Logs all LLM communications with timestamps for traceability. Thread-safe."""
     
     def __init__(self, log_dir: Path, run_id: str):
         self.log_dir = log_dir
@@ -324,6 +388,10 @@ class LLMLogger:
         
         # Also set up a summary log for quick reference
         self.summary_file = log_dir / f"llm_summary_{run_id}.txt"
+        
+        # Thread-safety locks
+        self._log_lock = threading.Lock()
+        self._summary_lock = threading.Lock()
         
         print(f"LLM logs will be saved to: {self.log_file}")
     
@@ -336,15 +404,17 @@ class LLMLogger:
         extra_body: Dict[str, Any],
         article_id: str = "",
         question_category: str = "",
-        question_type: str = ""
+        question_type: str = "",
+        worker_id: int = 0
     ) -> None:
-        """Log an LLM request."""
+        """Log an LLM request. Thread-safe."""
         timestamp = datetime.now().isoformat()
         
         log_entry = {
             "timestamp": timestamp,
             "type": "request",
             "request_id": request_id,
+            "worker_id": worker_id,
             "article_id": article_id,
             "question_category": question_category,
             "question_type": question_type,
@@ -355,19 +425,21 @@ class LLMLogger:
             "prompt_length": len(prompt)
         }
         
-        # Write to JSONL file
-        with open(self.log_file, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+        # Write to JSONL file (thread-safe)
+        with self._log_lock:
+            with open(self.log_file, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
         
-        # Write summary
-        with open(self.summary_file, 'a', encoding='utf-8') as f:
-            f.write(f"\n{'='*80}\n")
-            f.write(f"[{timestamp}] REQUEST {request_id}\n")
-            f.write(f"Article: {article_id} | Category: {question_category} | Type: {question_type}\n")
-            f.write(f"Model: {model}\n")
-            f.write(f"Prompt length: {len(prompt)} chars\n")
-            f.write(f"Headers: {json.dumps(headers)}\n")
-            f.write(f"{'='*80}\n")
+        # Write summary (thread-safe)
+        with self._summary_lock:
+            with open(self.summary_file, 'a', encoding='utf-8') as f:
+                f.write(f"\n{'='*80}\n")
+                f.write(f"[{timestamp}] REQUEST {request_id} (Worker {worker_id})\n")
+                f.write(f"Article: {article_id} | Category: {question_category} | Type: {question_type}\n")
+                f.write(f"Model: {model}\n")
+                f.write(f"Prompt length: {len(prompt)} chars\n")
+                f.write(f"Headers: {json.dumps(headers)}\n")
+                f.write(f"{'='*80}\n")
     
     def log_response(
         self,
@@ -376,15 +448,17 @@ class LLMLogger:
         stop_reason: str,
         duration_seconds: float,
         success: bool,
-        error_message: str = ""
+        error_message: str = "",
+        worker_id: int = 0
     ) -> None:
-        """Log an LLM response."""
+        """Log an LLM response. Thread-safe."""
         timestamp = datetime.now().isoformat()
         
         log_entry = {
             "timestamp": timestamp,
             "type": "response",
             "request_id": request_id,
+            "worker_id": worker_id,
             "success": success,
             "stop_reason": stop_reason,
             "duration_seconds": duration_seconds,
@@ -393,22 +467,24 @@ class LLMLogger:
             "error_message": error_message
         }
         
-        # Write to JSONL file
-        with open(self.log_file, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+        # Write to JSONL file (thread-safe)
+        with self._log_lock:
+            with open(self.log_file, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
         
-        # Write summary
-        with open(self.summary_file, 'a', encoding='utf-8') as f:
-            f.write(f"\n[{timestamp}] RESPONSE {request_id}\n")
-            f.write(f"Success: {success} | Stop Reason: {stop_reason} | Duration: {duration_seconds:.2f}s\n")
-            f.write(f"Response length: {len(response_text) if response_text else 0} chars\n")
-            if error_message:
-                f.write(f"Error: {error_message}\n")
-            f.write(f"{'-'*80}\n")
+        # Write summary (thread-safe)
+        with self._summary_lock:
+            with open(self.summary_file, 'a', encoding='utf-8') as f:
+                f.write(f"\n[{timestamp}] RESPONSE {request_id} (Worker {worker_id})\n")
+                f.write(f"Success: {success} | Stop Reason: {stop_reason} | Duration: {duration_seconds:.2f}s\n")
+                f.write(f"Response length: {len(response_text) if response_text else 0} chars\n")
+                if error_message:
+                    f.write(f"Error: {error_message}\n")
+                f.write(f"{'-'*80}\n")
 
 
 class QuestionBankExtender:
-    """Generates sibling questions for existing question bank."""
+    """Generates sibling questions for existing question bank. Supports concurrent processing."""
     
     def __init__(
         self, 
@@ -417,7 +493,8 @@ class QuestionBankExtender:
         log_dir: Optional[str] = None,
         run_id: Optional[str] = None,
         include_guiding: bool = False,
-        only_guiding: bool = False
+        only_guiding: bool = False,
+        worker_id: int = 0
     ):
         self.client = anthropic.Anthropic(api_key=api_key)
         self.checkpoint_dir = Path(checkpoint_dir) if checkpoint_dir else None
@@ -431,6 +508,9 @@ class QuestionBankExtender:
         self.include_guiding = include_guiding
         self.only_guiding = only_guiding
         
+        # Worker identification for concurrent processing
+        self.worker_id = worker_id
+        
         # Set up run ID (used for timestamped outputs)
         self.run_id = run_id or datetime.now().strftime('%Y%m%d_%H%M%S')
         
@@ -438,6 +518,10 @@ class QuestionBankExtender:
         log_path = Path(log_dir) if log_dir else (Path(__file__).parent / "outputs" / "llm_logs")
         self.llm_logger = LLMLogger(log_path, self.run_id)
         self.request_counter = 0
+        
+        # Thread-safety locks for shared resources
+        self._checkpoint_lock = threading.Lock()
+        self._counter_lock = threading.Lock()
         
         # Load DOK-specific prompts
         self.prompts = self._load_prompts()
@@ -521,30 +605,33 @@ class QuestionBankExtender:
         return articles
     
     def load_checkpoint(self) -> None:
-        """Load checkpoint if exists."""
+        """Load checkpoint if exists. Thread-safe."""
         if not self.checkpoint_dir:
             return
-            
-        checkpoint_file = self.checkpoint_dir / 'progress.json'
-        if checkpoint_file.exists():
-            with open(checkpoint_file, 'r') as f:
-                data = json.load(f)
-                self.processed_articles = set(data.get('processed_articles', []))
-                print(f"Loaded checkpoint: {len(self.processed_articles)} articles already processed")
+        
+        with self._checkpoint_lock:
+            checkpoint_file = self.checkpoint_dir / 'progress.json'
+            if checkpoint_file.exists():
+                with open(checkpoint_file, 'r') as f:
+                    data = json.load(f)
+                    self.processed_articles = set(data.get('processed_articles', []))
+                    print(f"Loaded checkpoint: {len(self.processed_articles)} articles already processed")
     
     def save_checkpoint(self, article_id: str) -> None:
-        """Save checkpoint after processing an article."""
+        """Save checkpoint after processing an article. Thread-safe."""
         if not self.checkpoint_dir:
             return
-            
-        self.processed_articles.add(article_id)
         
-        checkpoint_file = self.checkpoint_dir / 'progress.json'
-        with open(checkpoint_file, 'w') as f:
-            json.dump({
-                'processed_articles': list(self.processed_articles),
-                'last_updated': datetime.now().isoformat()
-            }, f, indent=2)
+        with self._checkpoint_lock:
+            self.processed_articles.add(article_id)
+            
+            checkpoint_file = self.checkpoint_dir / 'progress.json'
+            with open(checkpoint_file, 'w') as f:
+                json.dump({
+                    'processed_articles': list(self.processed_articles),
+                    'last_updated': datetime.now().isoformat(),
+                    'last_worker': self.worker_id
+                }, f, indent=2)
     
     def build_generation_prompt_for_question(
         self, 
@@ -885,9 +972,10 @@ DOK 3 Requirements for siblings:
         # Select appropriate schema
         schema = SCHEMA_MAP[question_type]
         
-        # Generate unique request ID
-        self.request_counter += 1
-        request_id = f"{self.run_id}_{self.request_counter:04d}"
+        # Generate unique request ID (thread-safe)
+        with self._counter_lock:
+            self.request_counter += 1
+            request_id = f"{self.run_id}_w{self.worker_id}_{self.request_counter:04d}"
         
         # Prepare headers and extra_body for logging
         headers = {"anthropic-beta": STRUCTURED_OUTPUTS_BETA}
@@ -907,7 +995,8 @@ DOK 3 Requirements for siblings:
             extra_body=extra_body,
             article_id=article_id,
             question_category=question_category,
-            question_type=question_type
+            question_type=question_type,
+            worker_id=self.worker_id
         )
         
         start_time = time.time()
@@ -944,7 +1033,8 @@ DOK 3 Requirements for siblings:
                 response_text=collected_text,
                 stop_reason=stop_reason,
                 duration_seconds=duration,
-                success=True
+                success=True,
+                worker_id=self.worker_id
             )
             
             # Check for refusal or max_tokens
@@ -1083,10 +1173,11 @@ DOK 3 Requirements for siblings:
                 stop_reason="error",
                 duration_seconds=duration,
                 success=False,
-                error_message=str(e)
+                error_message=str(e),
+                worker_id=self.worker_id
             )
             
-            print(f"  ERROR generating batch: {e}")
+            print(f"  [Worker {self.worker_id}] ERROR generating batch: {e}")
             return []
     
     def process_all_articles(
@@ -1318,6 +1409,352 @@ DOK 3 Requirements for siblings:
         return str(combined_file)
 
 
+class ConcurrentQuestionBankExtender:
+    """
+    Orchestrates concurrent question generation using multiple API keys.
+    
+    Each API key gets its own worker that processes articles sequentially.
+    Multiple workers run in parallel, each with its own API key.
+    """
+    
+    def __init__(
+        self,
+        api_keys: List[str],
+        checkpoint_dir: Optional[str] = None,
+        log_dir: Optional[str] = None,
+        run_id: Optional[str] = None,
+        include_guiding: bool = False,
+        only_guiding: bool = False,
+        max_workers: Optional[int] = None
+    ):
+        """
+        Initialize concurrent extender with multiple API keys.
+        
+        Args:
+            api_keys: List of Anthropic API keys
+            checkpoint_dir: Directory for checkpoint files
+            log_dir: Directory for LLM logs
+            run_id: Optional run ID (auto-generated if not provided)
+            include_guiding: Include guiding questions
+            only_guiding: Only process guiding questions
+            max_workers: Maximum number of concurrent workers (defaults to number of keys)
+        """
+        if not api_keys:
+            raise ValueError("At least one API key is required")
+        
+        self.api_keys = api_keys
+        self.num_workers = min(len(api_keys), max_workers or len(api_keys))
+        
+        self.checkpoint_dir = Path(checkpoint_dir) if checkpoint_dir else Path(__file__).parent / "checkpoints"
+        self.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.log_dir = Path(log_dir) if log_dir else Path(__file__).parent / "outputs" / "llm_logs"
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.run_id = run_id or datetime.now().strftime('%Y%m%d_%H%M%S')
+        self.include_guiding = include_guiding
+        self.only_guiding = only_guiding
+        
+        # Thread-safe shared state
+        self._processed_articles = set()
+        self._checkpoint_lock = threading.Lock()
+        self._output_lock = threading.Lock()
+        self._progress_lock = threading.Lock()
+        
+        # Progress tracking
+        self._total_articles = 0
+        self._completed_articles = 0
+        self._total_generated = 0
+        
+        # Shared LLM logger (already thread-safe)
+        self.llm_logger = LLMLogger(self.log_dir, self.run_id)
+        
+        print(f"Initialized concurrent extender with {self.num_workers} workers")
+    
+    def _load_checkpoint(self) -> set:
+        """Load processed articles from checkpoint."""
+        checkpoint_file = self.checkpoint_dir / 'progress.json'
+        if checkpoint_file.exists():
+            with open(checkpoint_file, 'r') as f:
+                data = json.load(f)
+                processed = set(data.get('processed_articles', []))
+                print(f"Loaded checkpoint: {len(processed)} articles already processed")
+                return processed
+        return set()
+    
+    def _save_checkpoint(self, article_id: str) -> None:
+        """Save checkpoint after processing an article. Thread-safe."""
+        with self._checkpoint_lock:
+            self._processed_articles.add(article_id)
+            checkpoint_file = self.checkpoint_dir / 'progress.json'
+            with open(checkpoint_file, 'w') as f:
+                json.dump({
+                    'processed_articles': list(self._processed_articles),
+                    'last_updated': datetime.now().isoformat(),
+                    'num_workers': self.num_workers
+                }, f, indent=2)
+    
+    def _worker_process_article(
+        self,
+        worker_id: int,
+        api_key: str,
+        article_id: str,
+        questions: List[Dict],
+        output_file: Path,
+        fieldnames: List[str]
+    ) -> int:
+        """
+        Worker function to process a single article.
+        
+        Returns: Number of questions generated
+        """
+        # Create a worker-specific extender with its own API client
+        # Share the same LLM logger (it's thread-safe)
+        worker = QuestionBankExtender(
+            api_key=api_key,
+            checkpoint_dir=str(self.checkpoint_dir),
+            log_dir=str(self.log_dir),
+            run_id=self.run_id,
+            include_guiding=self.include_guiding,
+            only_guiding=self.only_guiding,
+            worker_id=worker_id
+        )
+        # Share the thread-safe logger
+        worker.llm_logger = self.llm_logger
+        
+        guiding_count = sum(1 for q in questions if q.get('question_category') == 'guiding')
+        quiz_count = sum(1 for q in questions if q.get('question_category') == 'quiz')
+        
+        print(f"[Worker {worker_id}] Processing {article_id} ({guiding_count} guiding + {quiz_count} quiz)")
+        
+        try:
+            start_time = time.time()
+            generated = worker.generate_siblings_for_article(article_id, questions)
+            elapsed = time.time() - start_time
+            
+            # Write to output (thread-safe)
+            with self._output_lock:
+                with open(output_file, 'a', newline='', encoding='utf-8') as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    for record in generated:
+                        writer.writerow(record)
+            
+            # Save checkpoint
+            self._save_checkpoint(article_id)
+            
+            # Update progress
+            with self._progress_lock:
+                self._completed_articles += 1
+                self._total_generated += len(generated)
+                progress = self._completed_articles / self._total_articles * 100
+                print(f"[Worker {worker_id}] Completed {article_id}: {len(generated)} questions in {elapsed:.1f}s "
+                      f"({self._completed_articles}/{self._total_articles} = {progress:.1f}%)")
+            
+            return len(generated)
+            
+        except Exception as e:
+            print(f"[Worker {worker_id}] ERROR processing {article_id}: {e}")
+            return 0
+    
+    def process_all_articles_concurrent(
+        self,
+        input_file: str,
+        output_file: str,
+        limit: int = 0
+    ) -> str:
+        """
+        Process all articles concurrently using multiple workers.
+        
+        Args:
+            input_file: Path to input CSV with existing questions
+            output_file: Path to output CSV for generated questions
+            limit: Limit number of articles to process (0 = all)
+        
+        Returns: Path to combined output file
+        """
+        print(f"\n{'='*60}")
+        print(f"CONCURRENT PROCESSING MODE")
+        print(f"Workers: {self.num_workers}")
+        print(f"{'='*60}\n")
+        
+        # Load existing questions grouped by article
+        print(f"Loading existing questions from {input_file}...")
+        articles = {}
+        with open(input_file, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                article_id = row['article_id']
+                if article_id not in articles:
+                    articles[article_id] = []
+                articles[article_id].append(row)
+        
+        print(f"Found {len(articles)} articles with {sum(len(q) for q in articles.values())} questions")
+        
+        # Load checkpoint
+        self._processed_articles = self._load_checkpoint()
+        
+        # Filter out already processed articles
+        article_ids = [aid for aid in articles.keys() if aid not in self._processed_articles]
+        if limit > 0:
+            article_ids = article_ids[:limit]
+        
+        self._total_articles = len(article_ids)
+        print(f"Articles to process: {self._total_articles}")
+        
+        if self._total_articles == 0:
+            print("No articles to process!")
+            return ""
+        
+        # Prepare output file
+        output_path = Path(output_file)
+        extended_filename = f"{output_path.stem}_{self.run_id}{output_path.suffix}"
+        extended_file = output_path.parent / extended_filename
+        extended_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        print(f"Extended questions will be saved to: {extended_file}")
+        
+        # Define fieldnames
+        fieldnames = [
+            'article_id', 'article_title', 'section_id', 'section_sequence',
+            'question_id', 'question_category', 'stimulus_id',
+            'passage_text', 'lexile_level', 'course', 'module', 'section_number',
+            'question', 'question_type',
+            'option_1', 'option_2', 'option_3', 'option_4',
+            'correct_answer',
+            'option_1_explanation', 'option_2_explanation',
+            'option_3_explanation', 'option_4_explanation',
+            'DOK', 'difficulty', 'CCSS', 'grade',
+            'parent_question_id', 'generation_timestamp',
+            'differentiation_notes', 'cognitive_process',
+            'homogeneity_check', 'specificity_check', 'length_check',
+            'semantic_distance_check', 'single_correct_check', 'diversity_check',
+            'expected_response', 'key_details', 'scoring_notes', 'dok_justification',
+            'part_a_dok',
+            'part_b_question',
+            'part_b_option_1', 'part_b_option_2', 'part_b_option_3', 'part_b_option_4',
+            'part_b_correct_answer',
+            'part_b_option_1_explanation', 'part_b_option_2_explanation',
+            'part_b_option_3_explanation', 'part_b_option_4_explanation',
+            'part_b_dok',
+            'connection_rationale', 'standard_assessment'
+        ]
+        
+        # Write header if file doesn't exist
+        if not extended_file.exists():
+            with open(extended_file, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+        
+        # Process articles concurrently
+        start_time = time.time()
+        
+        with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
+            # Submit tasks - round-robin distribute articles to workers
+            futures = {}
+            for i, article_id in enumerate(article_ids):
+                worker_id = i % self.num_workers
+                api_key = self.api_keys[worker_id]
+                
+                future = executor.submit(
+                    self._worker_process_article,
+                    worker_id,
+                    api_key,
+                    article_id,
+                    articles[article_id],
+                    extended_file,
+                    fieldnames
+                )
+                futures[future] = article_id
+            
+            # Wait for all tasks to complete
+            for future in as_completed(futures):
+                article_id = futures[future]
+                try:
+                    future.result()
+                except Exception as e:
+                    print(f"ERROR: Article {article_id} failed: {e}")
+        
+        total_time = time.time() - start_time
+        
+        print(f"\n{'='*60}")
+        print(f"CONCURRENT PROCESSING COMPLETE")
+        print(f"{'='*60}")
+        print(f"Total time: {total_time:.1f}s")
+        print(f"Articles processed: {self._completed_articles}")
+        print(f"Questions generated: {self._total_generated}")
+        print(f"Average time per article: {total_time/max(1, self._completed_articles):.1f}s")
+        print(f"Extended questions saved to: {extended_file}")
+        
+        # Combine with original questions
+        combined_file = self._combine_questions(
+            extended_csv=str(extended_file),
+            original_csv=input_file,
+            output_dir=str(output_path.parent),
+            output_base_name=output_path.stem
+        )
+        
+        print(f"\n✓ Done! Combined output: {combined_file}")
+        return combined_file
+    
+    def _combine_questions(
+        self,
+        extended_csv: str,
+        original_csv: str,
+        output_dir: str,
+        output_base_name: str = "extended"
+    ) -> str:
+        """Combine original and extended questions into a single CSV."""
+        print(f"\n--- Combining Questions ---")
+        print(f"Reading extended questions from: {extended_csv}")
+        extended_df = pd.read_csv(extended_csv)
+        print(f"  Found {len(extended_df)} extended questions")
+        
+        parent_ids = extended_df['parent_question_id'].dropna().unique()
+        print(f"  Found {len(parent_ids)} unique parent question IDs")
+        
+        print(f"Reading original questions from: {original_csv}")
+        original_df = pd.read_csv(original_csv)
+        print(f"  Total original questions: {len(original_df)}")
+        
+        original_parents_df = original_df[original_df['question_id'].isin(parent_ids)].copy()
+        print(f"  Matched parent questions: {len(original_parents_df)}")
+        
+        extended_only_cols = [col for col in extended_df.columns if col not in original_df.columns]
+        for col in extended_only_cols:
+            original_parents_df[col] = ''
+        
+        original_parents_df['question_source'] = 'original'
+        extended_df['question_source'] = 'extended'
+        
+        all_columns = list(extended_df.columns) + ['question_source']
+        all_columns = list(dict.fromkeys(all_columns))
+        
+        original_parents_df = original_parents_df.reindex(columns=all_columns)
+        extended_df = extended_df.reindex(columns=all_columns)
+        
+        combined_df = pd.concat([original_parents_df, extended_df], ignore_index=True)
+        combined_df = combined_df.sort_values(
+            by=['article_id', 'section_sequence', 'question_id'],
+            key=lambda x: x.astype(str)
+        ).reset_index(drop=True)
+        
+        if 'extended' in output_base_name.lower():
+            combined_base = re.sub(r'extended', 'combined', output_base_name, flags=re.IGNORECASE)
+        else:
+            combined_base = f"combined_{output_base_name}"
+        
+        combined_filename = f"{combined_base}_{self.run_id}.csv"
+        combined_file = Path(output_dir) / combined_filename
+        
+        print(f"Saving combined questions to: {combined_file}")
+        combined_df.to_csv(combined_file, index=False)
+        print(f"  Total questions in combined file: {len(combined_df)}")
+        print(f"    - Original questions: {len(original_parents_df)}")
+        print(f"    - Extended questions: {len(extended_df)}")
+        
+        return str(combined_file)
+
+
 def load_config() -> Dict[str, Any]:
     """Load configuration from config.json if it exists."""
     if CONFIG_FILE.exists():
@@ -1334,8 +1771,14 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-    # Default: Only quiz questions (4 siblings each)
+    # Default: Only quiz questions (4 siblings each), sequential processing
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv
+
+    # CONCURRENT processing with multiple API keys (5 articles in parallel)
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --concurrent
+
+    # Concurrent with specific number of workers
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --concurrent --max-workers 3
 
     # Include guiding questions (1 sibling each) + quiz questions
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --include-guiding
@@ -1343,12 +1786,28 @@ Examples:
     # Only guiding questions
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --only-guiding
 
+Concurrency:
+    Set multiple API keys in .env file for concurrent processing:
+    
+    Option 1 - Comma-separated:
+        ANTHROPIC_API_KEYS=sk-ant-key1,sk-ant-key2,sk-ant-key3
+    
+    Option 2 - Numbered:
+        ANTHROPIC_API_KEY_1=sk-ant-key1
+        ANTHROPIC_API_KEY_2=sk-ant-key2
+        ANTHROPIC_API_KEY_3=sk-ant-key3
+    
+    Each key processes one article at a time in parallel.
+    5 keys = 5 articles processed concurrently.
+
 Configuration:
     You can also set defaults in config.json:
     {
         "include_guiding": false,
         "only_guiding": false,
-        "log_dir": "outputs/llm_logs"
+        "log_dir": "outputs/llm_logs",
+        "concurrent": false,
+        "max_workers": 5
     }
         """
     )
@@ -1375,7 +1834,7 @@ Configuration:
     )
     parser.add_argument(
         '--api-key',
-        help='Anthropic API key (or set ANTHROPIC_API_KEY env var)'
+        help='Anthropic API key (or set ANTHROPIC_API_KEY env var). For concurrent mode, use .env with multiple keys.'
     )
     parser.add_argument(
         '--include-guiding',
@@ -1397,6 +1856,17 @@ Configuration:
         default=None,
         help='Path to config file (default: config.json in script directory)'
     )
+    parser.add_argument(
+        '--concurrent',
+        action='store_true',
+        help='Enable concurrent processing with multiple API keys'
+    )
+    parser.add_argument(
+        '--max-workers',
+        type=int,
+        default=None,
+        help='Maximum number of concurrent workers (default: number of API keys, max 10)'
+    )
     
     args = parser.parse_args()
     
@@ -1410,32 +1880,75 @@ Configuration:
     include_guiding = args.include_guiding or config.get('include_guiding', False)
     only_guiding = args.only_guiding or config.get('only_guiding', False)
     log_dir = args.log_dir or config.get('log_dir', None)
+    concurrent = args.concurrent or config.get('concurrent', False)
+    max_workers = args.max_workers or config.get('max_workers', DEFAULT_MAX_WORKERS)
     
     # Validate mutually exclusive options
     if include_guiding and only_guiding:
         print("ERROR: Cannot use both --include-guiding and --only-guiding")
         return 1
     
-    # Get API key
-    api_key = args.api_key or os.getenv('ANTHROPIC_API_KEY')
-    if not api_key:
-        print("ERROR: No API key provided. Set ANTHROPIC_API_KEY or use --api-key")
-        return 1
-    
-    # Create extender and run
-    extender = QuestionBankExtender(
-        api_key=api_key,
-        checkpoint_dir=args.checkpoint,
-        log_dir=log_dir,
-        include_guiding=include_guiding,
-        only_guiding=only_guiding
-    )
-    
-    extender.process_all_articles(
-        input_file=args.input,
-        output_file=args.output,
-        limit=args.limit
-    )
+    # Handle concurrent vs sequential mode
+    if concurrent:
+        # Load multiple API keys for concurrent processing
+        api_keys = load_api_keys()
+        
+        if not api_keys:
+            print("ERROR: No API keys found for concurrent mode.")
+            print("Set multiple keys in .env:")
+            print("  ANTHROPIC_API_KEYS=key1,key2,key3")
+            print("  or")
+            print("  ANTHROPIC_API_KEY_1=key1")
+            print("  ANTHROPIC_API_KEY_2=key2")
+            return 1
+        
+        if len(api_keys) == 1:
+            print("WARNING: Only 1 API key found. Concurrent mode works best with multiple keys.")
+            print("Proceeding with single-key concurrent mode...")
+        
+        # Create concurrent extender and run
+        extender = ConcurrentQuestionBankExtender(
+            api_keys=api_keys,
+            checkpoint_dir=args.checkpoint,
+            log_dir=log_dir,
+            include_guiding=include_guiding,
+            only_guiding=only_guiding,
+            max_workers=min(max_workers, 10)  # Cap at 10 workers
+        )
+        
+        extender.process_all_articles_concurrent(
+            input_file=args.input,
+            output_file=args.output,
+            limit=args.limit
+        )
+    else:
+        # Sequential mode - single API key
+        api_key = args.api_key or os.getenv('ANTHROPIC_API_KEY')
+        if not api_key:
+            # Try loading from multiple keys (use first one)
+            api_keys = load_api_keys()
+            if api_keys:
+                api_key = api_keys[0]
+                print("Using first API key from .env for sequential processing")
+        
+        if not api_key:
+            print("ERROR: No API key provided. Set ANTHROPIC_API_KEY or use --api-key")
+            return 1
+        
+        # Create sequential extender and run
+        extender = QuestionBankExtender(
+            api_key=api_key,
+            checkpoint_dir=args.checkpoint,
+            log_dir=log_dir,
+            include_guiding=include_guiding,
+            only_guiding=only_guiding
+        )
+        
+        extender.process_all_articles(
+            input_file=args.input,
+            output_file=args.output,
+            limit=args.limit
+        )
     
     return 0
 
