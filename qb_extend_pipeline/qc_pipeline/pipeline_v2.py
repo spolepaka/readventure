@@ -200,9 +200,16 @@ class QCPipelineV2:
                 self.openai_client = None
                 logger.info("Skipping OpenAI checks (--skip-openai flag set)")
             else:
+                # Try to load OpenAI key - check single key first, then numbered keys
                 openai_key = os.getenv('OPENAI_API_KEY')
+                if not openai_key:
+                    # Try numbered keys (OPENAI_API_KEY_1, etc.)
+                    openai_keys = load_api_keys('OPENAI')
+                    openai_key = openai_keys[0] if openai_keys else None
+                    
                 if openai_key:
                     self.openai_client = AsyncOpenAI(api_key=openai_key)
+                    logger.info("OpenAI client initialized for supplementary checks")
                 else:
                     logger.warning("OPENAI_API_KEY not set - OpenAI checks will be skipped")
                     self.openai_client = None
