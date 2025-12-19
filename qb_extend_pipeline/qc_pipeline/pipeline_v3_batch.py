@@ -47,7 +47,15 @@ from openai import AsyncOpenAI
 
 from qc_pipeline.modules.question_qc_v3_batch import QuestionQCAnalyzerV3Batch
 from qc_pipeline.modules.question_qc_v2 import QuestionQCAnalyzerV2
-from qc_pipeline.utils import calculate_pass_rate
+from qc_pipeline.utils import (
+    calculate_pass_rate,
+    compute_content_hash,
+    truncate_text,
+    extract_passage_title,
+    get_run_id,
+    archive_old_runs,
+    get_failed_checks_list
+)
 
 # Load environment from .env file in the script's directory
 ENV_FILE = Path(__file__).parent.parent / ".env"
@@ -136,6 +144,14 @@ class QCPipelineV3Batch:
         self.args = args
         self.output_dir = Path(args.output)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create directory structure
+        self.runs_dir = self.output_dir / "runs"
+        self.runs_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Generate run ID for this execution
+        self.run_id = get_run_id()
+        logger.info(f"Run ID: {self.run_id}")
 
         # Load API keys (supports ANTHROPIC_API_KEY_1, _2 format)
         anthropic_keys = load_api_keys('ANTHROPIC')
@@ -183,29 +199,35 @@ class QCPipelineV3Batch:
         self._existing_results: List[Dict[str, Any]] = []
         self._existing_results_map: Dict[str, Dict[str, Any]] = {}
 
-    def _get_results_file(self) -> Path:
-        """Get the path to the results file."""
-        return self.output_dir / "question_qc_v3_results.json"
+    def _get_merged_file(self) -> Path:
+        """Get the path to the merged results file."""
+        return self.output_dir / "question_qc_merged.json"
+    
+    def _get_run_file(self, suffix: str = ".json") -> Path:
+        """Get the path for current run's output file."""
+        return self.runs_dir / f"qc_run_{self.run_id}{suffix}"
 
-    def _load_completed_from_output(self) -> tuple[Set[str], List[Dict[str, Any]], Set[str], Dict[str, Dict[str, Any]]]:
+    def _load_completed_from_output(self) -> tuple[Set[str], List[Dict[str, Any]], Set[str], Dict[str, Dict[str, Any]], Dict[str, str]]:
         """
-        Load completed question IDs from the output folder.
+        Load completed question IDs from the merged output file.
         
         Returns:
-            Tuple of (fully_completed_ids, existing_results, needs_openai_ids, results_map)
+            Tuple of (fully_completed_ids, existing_results, needs_openai_ids, results_map, hash_map)
             - fully_completed_ids: Questions with all checks done
             - existing_results: All loaded results
             - needs_openai_ids: Questions that have Claude checks but missing OpenAI checks
             - results_map: Map of question_id to result for merging
+            - hash_map: Map of question_id to content_hash for change detection
         """
         fully_completed_ids = set()
         needs_openai_ids = set()
         existing_results = []
         results_map = {}
-        results_file = self._get_results_file()
+        hash_map = {}  # Track content hashes
+        results_file = self._get_merged_file()
         
         if not results_file.exists():
-            return fully_completed_ids, existing_results, needs_openai_ids, results_map
+            return fully_completed_ids, existing_results, needs_openai_ids, results_map, hash_map
         
         try:
             with open(results_file, 'r') as f:
@@ -215,6 +237,7 @@ class QCPipelineV3Batch:
                 question_id = result.get('question_id', '')
                 checks = result.get('checks', {})
                 check_names = set(checks.keys())
+                content_hash = result.get('content_hash', '')
                 
                 # Check what's present
                 has_claude = len(check_names & self.CLAUDE_CHECKS) >= len(self.CLAUDE_CHECKS) - 1
@@ -223,6 +246,8 @@ class QCPipelineV3Batch:
                 
                 existing_results.append(result)
                 results_map[question_id] = result
+                if content_hash:
+                    hash_map[question_id] = content_hash
                 
                 # Determine status
                 if has_claude and has_openai and has_local:
@@ -240,11 +265,11 @@ class QCPipelineV3Batch:
         except Exception as e:
             logger.warning(f"  Could not read existing results: {e}")
         
-        return fully_completed_ids, existing_results, needs_openai_ids, results_map
+        return fully_completed_ids, existing_results, needs_openai_ids, results_map, hash_map
 
     def _save_results_incrementally(self, new_results: List[Dict[str, Any]]):
-        """Save results incrementally to the output file."""
-        results_file = self._get_results_file()
+        """Save results incrementally to the merged output file."""
+        results_file = self._get_merged_file()
         
         # Load existing results
         existing_results = []
@@ -310,6 +335,8 @@ class QCPipelineV3Batch:
         """
         Prepare questions from dataframe, optionally skipping completed ones.
         
+        Uses content_hash to detect modified questions that need re-running.
+        
         Args:
             df: Input dataframe
             skip_completed: If True, skip questions already in output (including those needing only OpenAI)
@@ -320,46 +347,69 @@ class QCPipelineV3Batch:
         questions = []
         skipped_complete = 0
         skipped_has_claude = 0
+        skipped_unchanged = 0
+        rerun_modified = 0
         
         for i, row in df.iterrows():
             question_id = str(row.get('question_id') or row.get('item_id', f'Q{i+1}'))
             
-            # Skip if fully completed (has all checks)
-            if skip_completed and question_id in self._completed_question_ids:
+            choices = {
+                'A': str(row.get('option_1') or row.get('choice_A', '') or ''),
+                'B': str(row.get('option_2') or row.get('choice_B', '') or ''),
+                'C': str(row.get('option_3') or row.get('choice_C', '') or ''),
+                'D': str(row.get('option_4') or row.get('choice_D', '') or '')
+            }
+            
+            question_text = str(row.get('question', '') or '')
+            correct_answer = str(row.get('correct_answer', '') or '')
+            
+            # Compute content hash for change detection
+            content_hash = compute_content_hash(question_text, choices, correct_answer)
+            
+            # Check if question exists and if content has changed
+            existing_hash = self._hash_map.get(question_id, '')
+            content_changed = existing_hash and existing_hash != content_hash
+            
+            if content_changed:
+                logger.info(f"  ⚠️ Question {question_id} content changed - will re-run QC")
+                rerun_modified += 1
+                # Remove from completed sets so it gets processed
+                self._completed_question_ids.discard(question_id)
+                self._needs_openai_ids.discard(question_id)
+            
+            # Skip if fully completed (has all checks) AND content unchanged
+            if skip_completed and question_id in self._completed_question_ids and not content_changed:
                 skipped_complete += 1
                 continue
             
-            # Skip if already has Claude checks (only needs OpenAI)
+            # Skip if already has Claude checks (only needs OpenAI) AND content unchanged
             # These are handled separately by _run_openai_checks
-            if skip_completed and question_id in self._needs_openai_ids:
+            if skip_completed and question_id in self._needs_openai_ids and not content_changed:
                 skipped_has_claude += 1
                 continue
-            
-            choices = {
-                'A': row.get('option_1') or row.get('choice_A', ''),
-                'B': row.get('option_2') or row.get('choice_B', ''),
-                'C': row.get('option_3') or row.get('choice_C', ''),
-                'D': row.get('option_4') or row.get('choice_D', '')
-            }
 
             structured_content = {
-                'question': row.get('question', ''),
+                'question': question_text,
                 'choices': choices,
-                'correct_answer': row.get('correct_answer', ''),
-                'CCSS': row.get('CCSS', ''),
-                'CCSS_description': row.get('CCSS_description', ''),
+                'correct_answer': correct_answer,
+                'CCSS': str(row.get('CCSS', '') or ''),
+                'CCSS_description': str(row.get('CCSS_description', '') or ''),
                 'DOK': row.get('DOK', '')
             }
 
-            passage = row.get('passage_text') or row.get('passage') or row.get('stimulus', '')
+            passage = str(row.get('passage_text') or row.get('passage') or row.get('stimulus', '') or '')
 
             question_item = {
                 'question_id': question_id,
+                'article_id': str(row.get('article_id', '') or ''),
+                'content_hash': content_hash,
                 'question_type': row.get('question_type', 'MCQ'),
                 'passage_text': passage,
+                'passage_title': extract_passage_title(passage, max_length=50),
+                'question_preview': truncate_text(question_text, max_length=60),
                 'grade': row.get('grade'),
                 'structured_content': structured_content,
-                'article_id': row.get('article_id', '')
+                'run_id': self.run_id
             }
             questions.append(question_item)
 
@@ -369,7 +419,18 @@ class QCPipelineV3Batch:
             logger.info(f"  Total in input:       {len(df)}")
             logger.info(f"  Fully completed:      {skipped_complete}")
             logger.info(f"  Has Claude (OpenAI only): {skipped_has_claude}")
+            if rerun_modified > 0:
+                logger.info(f"  ⚠️ Modified (re-run):  {rerun_modified}")
             logger.info(f"  Need Claude batch:    {len(questions)}")
+        
+        # Store stats for summary report
+        self._run_stats = {
+            'total_in_input': len(df),
+            'skipped_complete': skipped_complete,
+            'skipped_has_claude': skipped_has_claude,
+            'rerun_modified': rerun_modified,
+            'need_claude_batch': len(questions)
+        }
 
         return questions
 
@@ -390,23 +451,33 @@ class QCPipelineV3Batch:
         
         elapsed = time.time() - start_time
 
-        # Save results incrementally
+        # Add run_id and additional fields to results
+        for r in results:
+            r['run_id'] = self.run_id
+            # Find matching question to get passage_title and question_preview
+            q_match = next((q for q in questions if q['question_id'] == r.get('question_id')), {})
+            if q_match:
+                r['passage_title'] = q_match.get('passage_title', '')
+                r['question_preview'] = q_match.get('question_preview', '')
+                r['content_hash'] = q_match.get('content_hash', '')
+
+        # Save to merged file (for checkpointing)
         all_results = self._save_results_incrementally(results)
-        logger.info(f"  ✓ Saved {len(results)} new results (total: {len(all_results)})")
+        logger.info(f"  ✓ Saved {len(results)} new results to merged file (total: {len(all_results)})")
 
         logger.info(f"\nCompleted in {elapsed:.1f}s ({len(questions) / elapsed:.1f} questions/sec)")
 
-        # Save to canonical results file (for checkpointing)
-        all_results = self._save_results_incrementally(results)
-        logger.info(f"  ✓ Saved {len(results)} new results to canonical file (total: {len(all_results)})")
+        # Save current run to runs folder
+        run_file = self._get_run_file(".json")
+        with open(run_file, 'w') as f:
+            json.dump(results, f, indent=2)
+        logger.info(f"Saved run results to {run_file}")
 
-        # Also create timestamped copy for reference
-        output_file = self.output_dir / f"question_qc_v3_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(output_file, 'w') as f:
-            json.dump(all_results, f, indent=2)
-        logger.info(f"Saved timestamped copy to {output_file}")
-
-        self._create_readable_csv(all_results, output_file)
+        # Create summary CSV for this run
+        self._create_readable_csv(all_results, run_file)
+        
+        # Archive old runs (keep latest 5)
+        archive_old_runs(self.output_dir, keep_latest=5)
 
         stats = calculate_pass_rate(all_results)
         logger.info(f"\nQuestion QC Summary:")
@@ -497,6 +568,7 @@ class QCPipelineV3Batch:
         logger.info("=" * 60)
         logger.info("STARTING BATCH QC PIPELINE V3 (WITH CHECKPOINTING)")
         logger.info("=" * 60)
+        logger.info(f"Run ID: {self.run_id}")
         logger.info(f"Input: {self.args.input}")
         logger.info(f"Output: {self.output_dir}")
         logger.info(f"Model: {self.args.claude_model}")
@@ -505,13 +577,14 @@ class QCPipelineV3Batch:
             logger.info(f"OpenAI: Enabled for supplementary checks")
         else:
             logger.info(f"OpenAI: Disabled (no API key)")
-        logger.info(f"\n📁 Checking for existing results in output folder...")
+        logger.info(f"\n📁 Checking for existing results in merged file...")
 
-        # Load completed questions from output - now returns 4 values
+        # Load completed questions from output - now returns 5 values including hash_map
         (self._completed_question_ids, 
          self._existing_results, 
          self._needs_openai_ids, 
-         self._existing_results_map) = self._load_completed_from_output()
+         self._existing_results_map,
+         self._hash_map) = self._load_completed_from_output()
 
         df = self.load_input_data()
         
@@ -565,9 +638,23 @@ class QCPipelineV3Batch:
             skip_openai = getattr(self.args, 'skip_openai', False)
             if not skip_openai and self.openai_client and questions:
                 logger.info(f"\nRunning OpenAI checks for {len(questions)} newly processed questions...")
+                
+                # Update the results map with newly processed Claude results
+                for r in results:
+                    self._existing_results_map[r.get('question_id')] = r
+                
                 asyncio.run(self._run_openai_checks(questions))
-                # Reload results after OpenAI merge
-                results = list(self._existing_results_map.values())
+                
+                # Reload all results from merged file after OpenAI merge
+                merged_file = self._get_merged_file()
+                if merged_file.exists():
+                    with open(merged_file, 'r') as f:
+                        results = json.load(f)
+                
+                # Regenerate CSVs with complete results (including OpenAI checks)
+                run_file = self._get_run_file(".json")
+                self._create_readable_csv(results, run_file)
+                logger.info("Regenerated CSVs with OpenAI check results")
         else:
             # No Claude batch needed - use existing results (with merged OpenAI checks)
             logger.info("\n✓ All Claude checks already completed!")
@@ -593,65 +680,158 @@ class QCPipelineV3Batch:
         logger.info(f"Results saved to {self.output_dir}")
 
     def _create_summary_report(self, results: List[Dict[str, Any]], elapsed: float):
+        """Create detailed summary report with per-article breakdown."""
         stats = calculate_pass_rate(results)
         
+        # Batch results breakdown
         batch_results = {}
         for r in results:
             br = r.get('batch_result', 'unknown')
             batch_results[br] = batch_results.get(br, 0) + 1
+        
+        # Per-article breakdown
+        by_article = {}
+        for r in results:
+            article_id = r.get('article_id', 'unknown')
+            if article_id not in by_article:
+                by_article[article_id] = {'total': 0, 'passed': 0, 'failed': 0}
+            by_article[article_id]['total'] += 1
+            if r.get('overall_score', 0) >= 0.8:
+                by_article[article_id]['passed'] += 1
+            else:
+                by_article[article_id]['failed'] += 1
+        
+        # Failed checks summary (which checks fail most often)
+        failed_checks_summary = {}
+        for r in results:
+            for check_name, check_data in r.get('checks', {}).items():
+                if isinstance(check_data, dict) and check_data.get('score', 0) != 1:
+                    failed_checks_summary[check_name] = failed_checks_summary.get(check_name, 0) + 1
+        
+        # Sort by failure count
+        failed_checks_summary = dict(sorted(failed_checks_summary.items(), key=lambda x: -x[1]))
 
         summary = {
+            'run_id': self.run_id,
             'timestamp': datetime.now().isoformat(),
             'input_file': self.args.input,
             'version': 'v3_batch',
-            'total_time_seconds': elapsed,
-            'cost_savings': '50% vs standard API',
-            'question_qc': stats,
-            'batch_results': batch_results
+            
+            'stats': {
+                'total_processed': stats['total'],
+                'skipped_complete': getattr(self, '_run_stats', {}).get('skipped_complete', 0),
+                'skipped_unchanged': getattr(self, '_run_stats', {}).get('skipped_has_claude', 0),
+                'rerun_modified': getattr(self, '_run_stats', {}).get('rerun_modified', 0),
+                'new_questions': getattr(self, '_run_stats', {}).get('need_claude_batch', 0),
+                'passed': stats['passed'],
+                'failed': stats['failed'],
+                'pass_rate': stats['pass_rate'],
+                'average_score': stats['average_score']
+            },
+            
+            'by_article': by_article,
+            'failed_checks_summary': failed_checks_summary,
+            'batch_results': batch_results,
+            
+            'timing': {
+                'total_seconds': elapsed,
+                'questions_per_second': stats['total'] / elapsed if elapsed > 0 else 0
+            },
+            
+            'cost_savings': '50% vs standard API'
         }
 
+        # Save to runs folder with timestamp
+        run_report_file = self._get_run_file("_report.json")
+        with open(run_report_file, 'w') as f:
+            json.dump(summary, f, indent=2)
+        logger.info(f"Saved run report to {run_report_file}")
+        
+        # Also save latest summary to main output folder
         summary_file = self.output_dir / "summary_report.json"
         with open(summary_file, 'w') as f:
             json.dump(summary, f, indent=2)
         logger.info(f"Saved summary report to {summary_file}")
 
+    # All possible check names
+    ALL_CHECK_NAMES = [
+        'clarity_precision', 'difficulty_assessment', 'grammatical_parallel',
+        'homogeneity', 'length_check', 'passage_reference', 'plausibility',
+        'single_correct_answer', 'specificity_balance', 'standard_alignment', 'too_close'
+    ]
+
     def _create_readable_csv(self, qc_results: List[Dict[str, Any]], json_file: Path):
+        """Create summary CSV with both compact summary and individual check columns."""
         if not qc_results:
             return
-
-        all_checks = set()
-        for result in qc_results:
-            all_checks.update(result.get('checks', {}).keys())
-        all_checks = sorted(all_checks)
 
         summary_csv_file = json_file.with_name(json_file.stem + '_summary.csv')
         summary_rows = []
 
         for result in qc_results:
             q_id = result.get('question_id', '')
+            article_id = result.get('article_id', '')
+            content_hash = result.get('content_hash', '')
+            passage_title = result.get('passage_title', '')
+            question_preview = result.get('question_preview', '')
+            run_id = result.get('run_id', '')
+            
+            # Get failed checks as comma-separated list
+            checks = result.get('checks', {})
+            failed_checks = get_failed_checks_list(checks)
+            
+            passed = result.get('total_checks_passed', 0)
+            total = result.get('total_checks_run', 0)
+            
             row = {
                 'question_id': q_id,
+                'article_id': article_id,
+                'content_hash': content_hash,
+                'passage_title': passage_title,
+                'question_preview': question_preview,
                 'score': f"{result.get('overall_score', 0):.0%}",
-                'status': '✅' if result.get('overall_score', 0) >= 0.7 else '❌',
-                'passed': result.get('total_checks_passed', 0),
-                'total': result.get('total_checks_run', 0),
-                'batch_result': result.get('batch_result', 'unknown')
+                'status': '✅' if result.get('overall_score', 0) >= 0.8 else '❌',
+                'passed_total': f"{passed}/{total}",
+                'failed_checks': failed_checks,
+                'run_id': run_id
             }
-
-            for check_name in all_checks:
-                check = result.get('checks', {}).get(check_name, {})
-                passed = check.get('score', 0) == 1
-                row[check_name] = '✅' if passed else '❌'
+            
+            # Add individual check columns
+            for check_name in self.ALL_CHECK_NAMES:
+                check_data = checks.get(check_name, {})
+                if isinstance(check_data, dict):
+                    score = check_data.get('score', '')
+                    if score == 1:
+                        row[check_name] = '✅'
+                    elif score == 0:
+                        row[check_name] = '❌'
+                    else:
+                        row[check_name] = ''  # Not run
+                else:
+                    row[check_name] = ''
 
             summary_rows.append(row)
 
+        fieldnames = [
+            'question_id', 'article_id', 'content_hash', 'passage_title', 
+            'question_preview', 'score', 'status', 'passed_total', 
+            'failed_checks', 'run_id'
+        ] + self.ALL_CHECK_NAMES
+        
         with open(summary_csv_file, 'w', newline='', encoding='utf-8') as f:
-            fieldnames = ['question_id', 'score', 'status', 'passed', 'total', 'batch_result'] + list(all_checks)
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(summary_rows)
 
         logger.info(f"Saved summary CSV to {summary_csv_file}")
+        
+        # Also save to merged summary CSV
+        merged_csv_file = self.output_dir / "question_qc_merged_summary.csv"
+        with open(merged_csv_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(summary_rows)
+        logger.info(f"Saved merged summary CSV to {merged_csv_file}")
 
 
 def main():

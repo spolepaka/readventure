@@ -3,15 +3,165 @@
 Shared utility functions for the QC pipeline.
 """
 
+import hashlib
 import json
 import logging
 import os
 import re
+import shutil
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 
 logger = logging.getLogger(__name__)
+
+
+# =============================================================================
+# CONTENT HASH FUNCTIONS
+# =============================================================================
+
+def compute_content_hash(question_text: str, options: Dict[str, str], correct_answer: str) -> str:
+    """
+    Create a unique 12-character fingerprint of question content.
+    If question text, options, or correct answer change, the hash changes.
+    
+    Args:
+        question_text: The question stem
+        options: Dict of option labels to option text (e.g., {"A": "...", "B": "..."})
+        correct_answer: The correct option label (e.g., "A")
+        
+    Returns:
+        12-character hash string
+    """
+    content = {
+        "question": question_text.strip() if question_text else "",
+        "options": {k: v.strip() if v else "" for k, v in sorted(options.items())},
+        "correct": correct_answer.strip() if correct_answer else ""
+    }
+    content_str = json.dumps(content, sort_keys=True)
+    return hashlib.sha256(content_str.encode()).hexdigest()[:12]
+
+
+# =============================================================================
+# TEXT TRUNCATION HELPERS
+# =============================================================================
+
+def truncate_text(text: str, max_length: int = 60, suffix: str = "...") -> str:
+    """
+    Truncate text to max_length, adding suffix if truncated.
+    
+    Args:
+        text: Text to truncate
+        max_length: Maximum length before truncation
+        suffix: Suffix to add if truncated (default "...")
+        
+    Returns:
+        Truncated text
+    """
+    if not text:
+        return ""
+    text = text.strip()
+    if len(text) <= max_length:
+        return text
+    return text[:max_length - len(suffix)].rstrip() + suffix
+
+
+def extract_passage_title(passage_text: str, max_length: int = 50) -> str:
+    """
+    Extract first line of passage as title, truncated to max_length.
+    
+    Args:
+        passage_text: Full passage text
+        max_length: Maximum length for title
+        
+    Returns:
+        First line of passage, truncated with "..."
+    """
+    if not passage_text:
+        return ""
+    
+    # Split by newlines and get first non-empty line
+    lines = passage_text.strip().split('\n')
+    first_line = ""
+    for line in lines:
+        line = line.strip()
+        if line:
+            first_line = line
+            break
+    
+    if not first_line:
+        # No newlines, take first sentence or chunk
+        first_line = passage_text.strip()[:200]
+    
+    return truncate_text(first_line, max_length)
+
+
+# =============================================================================
+# OUTPUT FILE MANAGEMENT
+# =============================================================================
+
+def get_run_id() -> str:
+    """Generate a run ID based on current timestamp."""
+    return datetime.now().strftime('%Y%m%d_%H%M%S')
+
+
+def archive_old_runs(output_dir: Path, keep_latest: int = 5) -> None:
+    """
+    Move old run files to archive folder, keeping only the latest N runs.
+    
+    Args:
+        output_dir: The QC results output directory
+        keep_latest: Number of recent runs to keep in main folder
+    """
+    runs_dir = output_dir / "runs"
+    archive_dir = output_dir / "archive"
+    
+    if not runs_dir.exists():
+        return
+    
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Find all run files (by timestamp pattern)
+    run_files = sorted(runs_dir.glob("qc_run_*.json"), reverse=True)
+    
+    # Group by run_id (same timestamp)
+    run_ids = set()
+    for f in run_files:
+        # Extract run_id from filename like qc_run_20251219_150000.json
+        match = re.search(r'qc_run_(\d{8}_\d{6})', f.name)
+        if match:
+            run_ids.add(match.group(1))
+    
+    run_ids = sorted(run_ids, reverse=True)
+    
+    # Archive older runs
+    if len(run_ids) > keep_latest:
+        old_run_ids = run_ids[keep_latest:]
+        for old_id in old_run_ids:
+            for pattern in [f"qc_run_{old_id}*"]:
+                for f in runs_dir.glob(pattern):
+                    dest = archive_dir / f.name
+                    logger.info(f"Archiving {f.name}")
+                    shutil.move(str(f), str(dest))
+
+
+def get_failed_checks_list(checks: Dict[str, Any]) -> str:
+    """
+    Get comma-separated list of failed check names.
+    
+    Args:
+        checks: Dict of check_name -> check_result
+        
+    Returns:
+        Comma-separated string of failed check names, or empty string if all passed
+    """
+    failed = []
+    for check_name, check_data in checks.items():
+        score = check_data.get('score', 0) if isinstance(check_data, dict) else 0
+        if score != 1:
+            failed.append(check_name)
+    return ", ".join(sorted(failed)) if failed else ""
 
 
 def load_prompts(prompts_file: Optional[str] = None) -> Dict[str, Any]:

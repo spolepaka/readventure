@@ -397,9 +397,17 @@ Use this passage to evaluate questions about it. The passage content is shared a
                     if block.type == "tool_use" and block.name == "submit_qc_results":
                         for check_name in CLAUDE_CHECKS:
                             check_data = block.input.get(check_name, {})
+                            # Handle case where check_data is a string or unexpected type
+                            if isinstance(check_data, dict):
+                                score = check_data.get('score', 0)
+                                reasoning = check_data.get('reasoning', 'No reasoning')
+                            else:
+                                # Fallback for malformed response
+                                score = 0
+                                reasoning = str(check_data) if check_data else 'No response'
                             check_results[check_name] = {
-                                'score': check_data.get('score', 0),
-                                'response': check_data.get('reasoning', 'No reasoning'),
+                                'score': score,
+                                'response': reasoning,
                                 'category': 'distractor' if check_name in ['grammatical_parallel', 'plausibility', 'homogeneity', 'specificity_balance'] else 'question'
                             }
                         break
@@ -420,7 +428,14 @@ Use this passage to evaluate questions about it. The passage content is shared a
                 
                 results.append({
                     'question_id': question_id,
+                    'article_id': question_data.get('article_id', ''),
+                    'content_hash': question_data.get('content_hash', ''),
                     'question_type': question_data.get('question_type', 'MCQ'),
+                    'passage_title': question_data.get('passage_title', ''),
+                    'question_preview': question_data.get('question_preview', ''),
+                    'correct_answer': question_data.get('structured_content', {}).get('correct_answer', ''),
+                    'ccss': question_data.get('structured_content', {}).get('CCSS', ''),
+                    'dok': question_data.get('structured_content', {}).get('DOK', ''),
                     'overall_score': overall_score,
                     'total_checks_passed': total_score,
                     'total_checks_run': total_checks,
@@ -434,6 +449,7 @@ Use this passage to evaluate questions about it. The passage content is shared a
                 logger.error(f"Request {custom_id} errored: {error.type} - {error.message}")
                 results.append({
                     'question_id': question_id,
+                    'article_id': question_data.get('article_id', ''),
                     'overall_score': 0,
                     'error': f"{error.type}: {error.message}",
                     'batch_result': 'errored',
@@ -445,6 +461,7 @@ Use this passage to evaluate questions about it. The passage content is shared a
                 logger.warning(f"Request {custom_id} expired")
                 results.append({
                     'question_id': question_id,
+                    'article_id': question_data.get('article_id', ''),
                     'overall_score': 0,
                     'error': 'Request expired',
                     'batch_result': 'expired',
@@ -455,6 +472,7 @@ Use this passage to evaluate questions about it. The passage content is shared a
             elif result.result.type == "canceled":
                 results.append({
                     'question_id': question_id,
+                    'article_id': question_data.get('article_id', ''),
                     'overall_score': 0,
                     'error': 'Request canceled',
                     'batch_result': 'canceled',

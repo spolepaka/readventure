@@ -1,0 +1,138 @@
+
+================================================================================
+[2025-12-19T00:02:23.204208] REQUEST 20251219_000223_w0_0001 (Worker 0)
+Article: article_101003 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11438 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+================================================================================
+[2025-12-19T00:02:23.204375] REQUEST 20251219_000223_w3_0001 (Worker 3)
+Article: article_101006 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11373 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+================================================================================
+[2025-12-19T00:02:23.205056] REQUEST 20251219_000223_w4_0001 (Worker 4)
+Article: article_101007 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11977 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+================================================================================
+[2025-12-19T00:02:23.205650] REQUEST 20251219_000223_w1_0001 (Worker 1)
+Article: article_101004 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10959 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+================================================================================
+[2025-12-19T00:02:23.206043] REQUEST 20251219_000223_w2_0001 (Worker 2)
+Article: article_101005 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11478 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:26.324108] RESPONSE 20251219_000223_w3_0001 (Worker 3)
+Success: False | Stop Reason: error | Duration: 3.12s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZULaBLAhJxeJb4D77'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2025-12-19T00:02:26.332155] REQUEST 20251219_000223_w0_0001 (Worker 0)
+Article: article_101008 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10109 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:26.473094] RESPONSE 20251219_000223_w4_0001 (Worker 4)
+Success: False | Stop Reason: error | Duration: 3.26s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZUiturezqUwxeTAAk'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2025-12-19T00:02:26.480251] REQUEST 20251219_000223_w1_0001 (Worker 1)
+Article: article_101009 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11294 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:26.590013] RESPONSE 20251219_000223_w1_0001 (Worker 1)
+Success: False | Stop Reason: error | Duration: 3.37s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZUk8fijE3KufDXQj1'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2025-12-19T00:02:26.597212] REQUEST 20251219_000223_w2_0001 (Worker 2)
+Article: article_101010 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 9870 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:29.498688] RESPONSE 20251219_000223_w2_0001 (Worker 2)
+Success: False | Stop Reason: error | Duration: 2.90s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZi16pvgnzcUuDCgWA'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2025-12-19T00:02:29.502355] REQUEST 20251219_000223_w3_0001 (Worker 3)
+Article: article_101011 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11729 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:29.786962] RESPONSE 20251219_000223_w0_0001 (Worker 0)
+Success: False | Stop Reason: error | Duration: 3.45s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZgu8A7qWasj7D9d7K'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2025-12-19T00:02:29.792354] REQUEST 20251219_000223_w4_0001 (Worker 4)
+Article: article_101012 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10632 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2025-12-19T00:02:29.812989] RESPONSE 20251219_000223_w1_0001 (Worker 1)
+Success: False | Stop Reason: error | Duration: 3.33s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZibKsxvNhwYgmfyPe'}
+--------------------------------------------------------------------------------
+
+[2025-12-19T00:02:32.431514] RESPONSE 20251219_000223_w3_0001 (Worker 3)
+Success: False | Stop Reason: error | Duration: 2.93s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZvYAgCYx6C7tJ3XqL'}
+--------------------------------------------------------------------------------
+
+[2025-12-19T00:02:32.940127] RESPONSE 20251219_000223_w4_0001 (Worker 4)
+Success: False | Stop Reason: error | Duration: 3.15s
+Response length: 0 chars
+Error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'Number of concurrent connections has exceeded your rate limit. Please try again later or contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}, 'request_id': 'req_011CWEdZxWUq5HZqskfAVjNh'}
+--------------------------------------------------------------------------------
+
+[2025-12-19T00:05:32.409697] RESPONSE 20251219_000223_w0_0001 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 189.20s
+Response length: 40971 chars
+--------------------------------------------------------------------------------
+
+[2025-12-19T00:05:49.393846] RESPONSE 20251219_000223_w2_0001 (Worker 2)
+Success: True | Stop Reason: end_turn | Duration: 206.18s
+Response length: 43574 chars
+--------------------------------------------------------------------------------

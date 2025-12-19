@@ -1,0 +1,67 @@
+[
+  {
+    "custom_id": "article_101003__quiz__quiz_302021",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101003__quiz__quiz_302022",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101003__quiz__quiz_302023",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101003__quiz__quiz_302024",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101004__quiz__quiz_302029",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101004__quiz__quiz_302030",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101004__quiz__quiz_302031",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101004__quiz__quiz_302032",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101005__quiz__quiz_302037",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101005__quiz__quiz_302038",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101005__quiz__quiz_302039",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101005__quiz__quiz_302040",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "article_101005__quiz__quiz_302041",
+    "result_type": "errored",
+    "error": "ErrorResponse(error=InvalidRequestError(message='betas: Extra inputs are not permitted', type='invalid_request_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  }
+]
