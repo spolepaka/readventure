@@ -1,0 +1,1122 @@
+[
+  {
+    "question_id": "quiz_302013",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern - each is a single adjective describing an emotional state (happy, angry, worried, scared).",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "The distractors are not plausible. The passage clearly states 'Aladdin was so happy!' immediately after the genie brings the forty servants with gems. There is no textual evidence suggesting Aladdin would be angry, worried, or scared in this context. He requested the servants to fulfill the Sultan's requirement and got exactly what he needed to marry the princess. The incorrect choices are obviously wrong given the explicit statement in the text.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices belong to the same conceptual category - they are all single-word emotional states or feelings.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at the same level of specificity - each is a basic, single-word emotion appropriate for grade 3 level. No choice is more detailed or complex than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.3, which requires students to describe characters and explain how their actions contribute to the sequence of events. The question asks students to infer Aladdin's feelings based on his actions (rubbing the lamp, requesting servants) and the story events (getting what he needs to marry the princess), which aligns with character analysis at the 3rd grade level.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks about a specific moment (when Aladdin sees the forty servants with bowls of gems) and requests an inference about his emotional state using 'most likely feel,' which is appropriate language for an inferential question.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one defensibly correct answer. The passage explicitly states 'Aladdin was so happy!' immediately after describing the servants bringing the gems. This direct textual evidence makes 'happy' the only correct answer, with no ambiguity.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references 'the forty servants with bowls of gems,' which accurately corresponds to the passage content: 'Almost instantly, the genie brought forty servants. Each servant carried a large golden bowl.' No specific paragraph numbers or quotes are provided that could be inaccurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "All choices are 3 words or less",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.253080"
+  },
+  {
+    "question_id": "quiz_302013_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'He [verb phrase]'. Each option begins with the subject pronoun 'He' followed by a verb phrase describing an action (runs away, asks, hides, rubs), maintaining consistent parallel structure throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible reactions to seeing a huge, frightening genie. Option A (running away) and C (hiding behind his mother) are believable fear responses that a child might have. Option D (rubbing the lamp again) could seem logical as a way to make the genie disappear. None of the incorrect options are obviously wrong based on what might happen in such a scenario.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category: they are all immediate physical actions or verbal responses that Aladdin could take in reaction to the genie's appearance. Each describes what Aladdin does in that specific moment when his mother is frightened.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each option describes a single, specific action: running away, asking for food, hiding, or rubbing the lamp. No choice is significantly more detailed or vague than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 requires students to describe characters and explain how their actions contribute to the sequence of events. This question assesses exactly that - it asks students to identify what action Aladdin takes at a specific point in the story sequence (when his mother is scared), demonstrating understanding of character actions and story events.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about Aladdin's action when his mother is scared by the lamp's genie, which is a precise moment in the story. The phrasing 'what does Aladdin do when' clearly indicates the question is asking about his immediate response to this specific situation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one correct answer supported by the passage. The text clearly states: 'Aladdin's mother was so frightened she almost fell down. Aladdin quickly said, \"We are very hungry! Please bring us something to eat!\"' This directly supports answer B. None of the other options are mentioned or implied in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (such as paragraph numbers or line numbers) are cited in the question, so there are no references to verify for accuracy. The question refers to events that are accurately represented in the passage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.253559"
+  },
+  {
+    "question_id": "quiz_302013_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'He' + verb phrase describing an action or state. Each option begins with 'He' followed by a verb (becomes/stops/becomes/starts) and additional descriptive information.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible within the context of the story. A) is reasonable as the Sultan might wonder about Aladdin's origins after seeing such wealth. C) is plausible as a parent might have concerns about arranging marriage. D) is believable as the passage does mention a wedding celebration, though this happens later after more conditions are met. None of the distractors are obviously wrong.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe emotional or behavioral changes in the Sultan. They all represent shifts in his attitude or actions, maintaining conceptual consistency across the answer set.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices provide similar levels of detail about the Sultan's reaction. Each option specifies a particular attitude change or action with comparable specificity - none are overly vague or excessively detailed compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 asks students to describe how characters respond to major events and challenges. This question directly assesses this standard by asking students to identify how the Sultan's attitude changes in response to seeing the gems, which is a significant event in the story. This requires understanding character development and response to events.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific change in the Sultan's attitude at a clearly defined moment (after seeing the gems). The phrasing is age-appropriate for grade 3 and has only one reasonable interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is clearly one correct answer. The passage explicitly states: 'But when Aladdin's mother opened her cloth and showed the gems, the Sultan stopped laughing. He looked closely at the sparkling stones.' This directly matches answer choice B. While D mentions the wedding celebration, this happens much later after additional conditions are met, not immediately after seeing the gems.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not include specific passage references like paragraph numbers or quotes, so there are no references to verify for accuracy. This check passes by default when no specific references are made.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.253832"
+  },
+  {
+    "question_id": "quiz_302013_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow a consistent grammatical pattern. Each choice begins with a subject pronoun ('He') followed by a verb phrase describing an action or intention (A: 'is trying to clean', B: 'puts his hands together to pray', C: 'wants to call', D: 'hopes to find'). The structures are parallel and consistent throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice C ('He wants to call the magician back') is not plausible. At this point in the story, Aladdin has just called out to his 'uncle' for help but received no answer, and the passage explicitly states the magician 'did not care about Aladdin anymore' and had left. There is no indication that Aladdin is aware of the ring's magic powers or that he would intentionally try to call back the person who abandoned him in the cave. This makes C obviously wrong rather than a believable distractor.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices belong to the same conceptual category - they all describe Aladdin's motivations or intentions for his actions in the cave. Each choice explains 'why' he rubbed the ring by describing a purpose or reason (cleaning, praying, calling someone, finding escape). They are all explanations of motivation/intent.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each provides a brief, single-clause explanation of Aladdin's motivation without excessive detail or oversimplification. They are balanced in length and complexity, appropriate for grade 3 students.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 requires students to describe characters, explain how their actions contribute to the sequence of events, and understand cause-and-effect relationships in stories. This question directly assesses this standard by asking students to identify why Aladdin performs a specific action (rubbing the ring), which requires understanding the character's motivation and the causal sequence (he prayed, which caused him to rub the ring, which summoned the genie). This is appropriate for DOK Level 2.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question contains an ambiguity. The passage states: 'Finally, he put his hands together to pray. When he did this, he rubbed the ring on his finger.' The text indicates that Aladdin rubbed the ring WHILE praying, not BECAUSE he was praying. The rubbing appears to be accidental - a consequence of putting his hands together, not his intention. The question asks 'Why does Aladdin rub the ring?' which could be interpreted as asking for his intentional purpose (which would be 'none' since it was accidental) or the circumstances during which it happened (praying). This ambiguity makes the question unclear.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The designated correct answer (B) is problematic. The passage states he 'put his hands together to pray. When he did this, he rubbed the ring.' This suggests the rubbing was an accidental byproduct of praying, not the reason itself. Choice D ('He hopes to find a way out') is also defensible because the passage shows Aladdin had been trying to escape for three days (yelling, crying, then praying), so his broader motivation for all actions, including praying, was to escape. The question conflates immediate circumstance with underlying motivation, creating ambiguity about which answer is truly correct.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not include specific passage references such as paragraph numbers, line numbers, or direct quotes. Since no specific references are made, this check passes by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.254224"
+  },
+  {
+    "question_id": "quiz_302013_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: Subject (He) + verb + object/complement. Each choice is a complete sentence describing an action Aladdin takes.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible and relate to events in the passage. Choice A (selling silver plates), B (showing gems), and D (rubbing the lamp) are all actions Aladdin actually takes in the story. A student who misunderstands what 'bravery' means or confuses different story events could reasonably select any of these distractors.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are actions that Aladdin performs in the story. They all belong to the same conceptual category: specific behaviors or deeds undertaken by the protagonist.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail. Each describes a single, specific action with similar amounts of information (subject + action + relevant details). No choice is significantly more vague or detailed than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 requires students to describe characters, explain how their actions contribute to sequences of events, and analyze character traits. This question asks students to identify a detail that demonstrates a specific character trait (bravery) through Aladdin's actions, which directly assesses the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has a significant ambiguity problem. It asks which detail shows Aladdin acts bravely 'when the lamp genie appears,' but the passage describes TWO genie encounters. First, the ring genie appears when Aladdin is scared but says 'Take me out of this cave!' Second, the lamp genie appears and Aladdin's mother is frightened, but Aladdin 'quickly said' his wish. The correct answer (C) states 'He speaks to the genie even though he is scared,' which actually describes the RING genie encounter (where it explicitly says 'Aladdin was scared'), not the lamp genie encounter. This creates confusion about which event the question is referencing.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "There is confusion about the correct answer. The question asks about bravery 'when the lamp genie appears,' but choice C ('He speaks to the genie even though he is scared') describes what happened with the RING genie, not the lamp genie. The passage states 'Aladdin was scared, but he said...' when the ring genie appeared. When the lamp genie appears, the passage says Aladdin's mother was frightened and Aladdin 'quickly said' his wish, but it doesn't explicitly state Aladdin was scared at that moment. This mismatch between the question stem and the correct answer creates ambiguity about what the truly correct answer should be.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 0,
+        "response": "The question references 'when the lamp genie appears' but the correct answer (C) actually describes Aladdin's behavior when the RING genie appears. The passage clearly distinguishes these two events: 'Aladdin was scared, but he said, \"Take me out of this cave!\"' occurs with the ring genie, while with the lamp genie, it's Aladdin's mother who is frightened. The implicit passage reference in the question stem is inaccurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.254468"
+  },
+  {
+    "question_id": "quiz_302014",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern. Each choice is a noun phrase: 'The magic ring and lamp' (noun phrase with compound object), 'The gems from the cave' (noun phrase with prepositional modifier), 'His mother's visit to the Sultan' (noun phrase with possessive and prepositional modifier), and 'The magician's help' (noun phrase with possessive). They all function as noun phrases answering 'what helps Aladdin.'",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All incorrect choices are plausible distractors. B) The gems help Aladdin gain the Sultan's interest and are important to the story. C) His mother's visit is necessary for making the marriage proposal. D) The magician's help is initially plausible since he gave Aladdin the ring and led him to the lamp, though ultimately he abandoned Aladdin. Each distractor represents something that played a role in the story, making them believable wrong answers.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all aids/resources/help that Aladdin received during the story. Each represents a different type of assistance (magical items, valuable goods, human action, or guidance from another person), but they all fall under the umbrella of 'things that helped Aladdin' which is what the question asks about.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices maintain similar levels of detail. A) names two specific magical items, B) identifies gems with their source location, C) specifies whose visit and to whom, and D) identifies whose help. Each choice provides a comparable level of specificity - naming the helper/resource and providing minimal context.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.2 focuses on recounting stories, including fables, folktales, and myths from diverse cultures; determining the central message, lesson, or moral and explaining how it is conveyed through key details. This question asks students to identify what helps the protagonist most, which tests comprehension of plot elements and cause-effect relationships, not the central message/moral of the story. This is more aligned with understanding key details and story elements (RL.3.1 or RL.3.3) rather than determining central message or moral.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. 'What helps Aladdin the most in this story?' has a single, clear interpretation - it asks students to identify the primary source of assistance for Aladdin throughout the narrative. The phrase 'the most' clearly indicates students should identify the most significant help, not just any help.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is defensibly the single correct answer. The magic ring saves Aladdin from the cave, and the magic lamp provides food, creates the wedding preparations, builds the palace, and enables him to meet the Sultan's demands. While other choices represent help Aladdin received, the magical items are the primary drivers of his success and appear throughout the story as the most significant sources of assistance. The question asks what helps 'the most,' and the magical items clearly provide the greatest and most sustained help.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "This question does not include any specific passage references (such as paragraph numbers, line numbers, or direct quotes), so there are no references to verify for accuracy. The question refers to 'this story' generally, which is appropriate and accurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.254768"
+  },
+  {
+    "question_id": "quiz_302014_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: each begins with a gerund phrase (Having, Using, Asking, Finding) followed by a predicate that describes an outcome or principle. This creates parallel construction across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible misinterpretations of the story's events. Option A could appeal to students focusing on the magical lamp and ring solving problems. Option C relates to Aladdin's mother helping him and interacting with the Sultan. Option D connects to the gems and treasures leading to marriage. Each distractor has textual support that might mislead students who focus on surface details rather than deeper themes.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are the same type of answer\u2014they each present a potential lesson or moral principle that could be derived from the story. They all address life lessons about problem-solving, success, and achieving goals, maintaining conceptual consistency across all options.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices maintain similar levels of detail and abstraction. Each presents a general life lesson in a single sentence with comparable complexity and scope. None is significantly more specific or general than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.2 requires students to recount stories and determine central messages, lessons, or morals. This question directly assesses this standard by asking students to identify the lesson the story teaches about resourcefulness, requiring them to analyze the narrative and extract its central message about using resources wisely.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written with unambiguous wording. It specifically asks about the lesson regarding being resourceful, giving students a clear focus. The term 'resourceful' appropriately narrows the scope while remaining accessible to 3rd graders. There is only one reasonable interpretation of what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is the clearly correct answer. Throughout the story, Aladdin demonstrates resourcefulness: he uses the ring when trapped, uses the lamp to get food and meet the Sultan's demands, and leverages the gems wisely. The story shows success comes from using available resources (magical items, gems) wisely rather than the magic itself being the solution (A), relying on others (C), or simply having treasure (D). Only B captures the theme of resourcefulness.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references such as paragraph numbers, line citations, or direct quotes. Therefore, there are no references to verify for accuracy. This check passes by default when no specific references are made.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.255071"
+  },
+  {
+    "question_id": "quiz_302014_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: each is a complete sentence that states a general principle or message. They all use a similar pattern of subject + verb + complement, maintaining parallel construction throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible on the surface. B) relates to the mother-son relationship shown; C) connects to the prominent role of genies in solving problems; D) touches on the rags-to-riches element of the story. While not the best answers, each distractor could tempt a student who focuses on different story elements rather than the central message, making them effective distractors.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All four choices present thematic messages or life lessons that could be derived from a story. They all function as potential central messages/themes, keeping them within the same conceptual category of moral or thematic statements about life lessons.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are stated at similar levels of abstraction and detail. Each presents a broad life principle or message in approximately the same number of words (6-9 words each) and with comparable scope - none is overly specific or overly vague compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.2, which requires students to recount stories and determine the central message, lesson, or moral. The question explicitly asks for the 'central message' shown through Aladdin's journey, requiring students to analyze the entire narrative arc and identify the overarching theme, which is precisely what the standard targets.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifies what students should analyze ('Aladdin's journey from the cave to the palace') and what they should identify ('central message'). The phrase 'Based on the story' clearly indicates students should use the passage provided. There is only one reasonable interpretation of what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Answer A is clearly the best answer. Aladdin demonstrates courage (staying calm with the genies, asking to marry the princess) and quick thinking (commanding the genie when his mother was frightened, using the lamp to meet the Sultan's demands) that transform his life from poverty to a palace. While genies help (C), they aren't presented as the answer to 'every' wish and aren't the message. B isn't supported as central (the magician betrayed him). D is contradicted by the story's values. Only A captures the central message of the complete narrative arc.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question makes a general reference to 'Aladdin's journey from the cave to the palace,' which accurately describes the narrative arc presented in the passage. The story does begin with Aladdin stuck in the cave and concludes with him in a palace. No specific paragraph numbers or direct quotes are cited, so there are no specific references to verify as accurate or inaccurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.255311"
+  },
+  {
+    "question_id": "quiz_302014_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.5555555555555556,
+    "total_checks_passed": 5,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: Each begins with a gerund phrase (Giving up, Waiting, Continuing, Luck is) followed by descriptive information about that concept. The parallelism is consistent across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible for a 3rd-grade student analyzing the story. Options A and B represent common misconceptions about problem-solving strategies, and option D reflects a common belief about luck vs. effort. While they are incorrect interpretations of Aladdin's actions, they are not obviously wrong and could be reasonably selected by students who misinterpret the theme.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices belong to the same conceptual category: they are all statements about problem-solving approaches and life lessons/themes. Each presents a different perspective on how to handle challenges and what leads to success, making them homogeneous in nature.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each option presents a single, concise principle or lesson about handling challenges in approximately the same number of words and with similar complexity appropriate for grade 3.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.2 requires students to 'recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.' While this question does ask about a theme (persistence), it specifically frames it as 'what the story reveals about the importance of persistence through Aladdin's actions.' This is problematic because persistence is not the central message of the Aladdin story. The story is primarily about wishes, magic, resourcefulness, and social advancement. The question imposes a specific thematic lens (persistence) rather than asking students to independently determine the central message from the text.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has clarity issues because it presupposes that persistence is a central theme demonstrated through Aladdin's actions, which is debatable. Aladdin's success comes primarily from magical assistance (the genies) rather than persistence. While he does pray in the cave which accidentally summons the genie, most subsequent successes involve simply rubbing the lamp to get what he wants - this is more about resourcefulness or using available tools than persistence. The question frame creates ambiguity about what evidence students should cite.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Option C ('Continuing to try different solutions brings results') is designated as correct, but this interpretation is questionable. Aladdin's success stems primarily from accidentally rubbing the ring (which summons a genie) and then using the lamp's genie - not from deliberately trying different solutions through persistent effort. One could argue option D ('Luck is more important than making an effort') is actually more defensible given that Aladdin accidentally activated the ring while praying and happened upon the lamp's power. The story doesn't clearly demonstrate systematic persistence as much as fortunate circumstances and magical assistance.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references such as paragraph numbers, line numbers, or direct quotes that could be verified for accuracy. Therefore, this criterion passes by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Shortest distractor (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.255556"
+  },
+  {
+    "question_id": "quiz_302014_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.4444444444444444,
+    "total_checks_passed": 4,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: [Subject] + [verb] + [object/complement]. Each choice is a complete sentence describing an action or state involving a character from the story.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D ('Aladdin's mother thinks the gems are just pretty stones') is not a plausible distractor. It simply shows a lack of knowledge about gem value, not anything related to the moral about cleverness versus riches. Options A and C are somewhat plausible as they involve characters seeking wealth, but they don't demonstrate the moral either. The distractors don't provide believable alternative interpretations of the moral being asked about.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are the same type of answer - they are all specific details/events from the story that could potentially relate to a moral or lesson. Each choice describes a character's action or behavior from the narrative.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All four choices provide similar levels of detail. Each choice identifies a specific character and describes one particular action or trait from the story in roughly the same amount of detail.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral and explain how it is conveyed through key details. However, this question is problematic because the passage doesn't actually convey the moral that 'cleverness is more valuable than riches.' The story shows Aladdin using magic (the lamp and ring) to gain riches and marry the princess - success through magical assistance, not cleverness over riches. The question imposes a moral that isn't supported by the text, making it impossible to properly assess the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question has significant clarity issues. First, it presupposes a moral ('cleverness is more valuable than riches') that the passage doesn't actually convey. Second, even if we accept this moral, option B (using the ring vs. lamp) doesn't clearly demonstrate cleverness being more valuable than riches - it just shows Aladdin using two different magical items. The question is ambiguous about what would constitute evidence of this particular moral.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "There isn't a defensibly correct answer because the passage doesn't support the moral stated in the question. The story is about a poor boy who uses magic to become rich and marry a princess - it's a rags-to-riches tale through magical means, not a story about cleverness triumphing over wealth. Option B shows Aladdin using magical objects appropriately, but this demonstrates following instructions or resourcefulness with magic, not that cleverness is more valuable than riches. None of the options genuinely support this moral.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question doesn't make any specific passage references (no paragraph numbers, line numbers, or direct quotes). All answer choices reference events that do occur in the passage: the Sultan wanting gems, Aladdin using the ring and lamp, the magician traveling for the lamp, and Aladdin's mother not recognizing the gems' value. Since no specific references are made, this passes by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (13 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.255795"
+  },
+  {
+    "question_id": "quiz_302015",
+    "question_type": "MCQ",
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'to [verb phrase]'. Each option begins with 'to' followed by a verb (explain, show, teach, describe), maintaining consistent parallel construction throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice C ('to teach people how to find magic lamps and genies') is not a plausible distractor. It's obviously wrong because the story is fictional/fantastical and clearly not meant as an instructional guide for finding magic objects. A third-grader would recognize this is not a realistic author's purpose. Choice D is also questionable as a plausible distractor since the story focuses on magic and fantasy elements rather than historical information about daily life.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices do not all belong to the same conceptual category. Choices A and C focus on explaining/teaching about the mechanics of magical elements (genies, finding lamps), while choices B and D represent higher-level author's purposes (teaching a moral lesson, describing historical context). Choice B addresses theme/moral purpose, while the others address informational purposes or literal instruction, creating a conceptual mismatch.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail and specificity. Each option offers a complete statement of purpose with comparable complexity and length, appropriate for the grade level. No choice is noticeably more vague or more detailed than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.6 asks students to distinguish their own point of view from that of the narrator or characters. This question instead asks about author's purpose/message, which aligns more closely with standards about theme (RL.3.2) or author's purpose (RI.3.6 for informational text). The question does not require students to identify or distinguish points of view.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks straightforwardly about the author's purpose in writing the story, which is a standard comprehension question that third-graders would understand. The phrasing 'Why did the author write this story' is clear and precise.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly the defensible correct answer. The story demonstrates how Aladdin's cleverness (rubbing the lamp, making wise wishes) and relatively kind behavior lead to his happiness (marriage to the princess, wealth, palace). The narrative arc supports this theme. While some might argue about nuances, B is the most defensible answer among the choices given, and the other options are clearly less accurate.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references (no paragraph numbers, line numbers, or direct quotes are cited), so this check passes by default. There are no references to verify for accuracy.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.255996"
+  },
+  {
+    "question_id": "quiz_302015_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: each begins with 'to' followed by an infinitive verb phrase ('to show', 'to create', 'to explain', 'to teach'), making them parallel infinitive phrases explaining authorial purpose.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice A ('to show that mothers are always scared of magic') is obviously wrong as it makes an overgeneralization that is not supported by the text or reasonable literary interpretation. The word 'always' makes this an implausible distractor. Choice D ('to teach readers that magic is dangerous') is also questionable as the passage portrays magic positively (it helps Aladdin), not as dangerous. These distractors are too obviously incorrect for a quality assessment item.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all address authorial purpose/intent for including a specific scene. Each choice explains why the author made a literary decision, maintaining homogeneity in the type of answer provided.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each provides a single reason for the author's inclusion of the scene, with comparable levels of explanation and scope. No choice is significantly more detailed or vague than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.6 (distinguishing their own point of view from that of the narrator or those of the characters/author's craft). The question asks students to analyze the author's purpose for including a specific scene, which requires understanding the author's perspective and literary choices - a key component of this standard at grade 3 level.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically identifies the scene (where Aladdin's mother is frightened by the genie) and asks about the author's likely purpose for including it. The question stem is precise and has one clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is one defensibly correct answer (B). The scene clearly demonstrates the genie's power - he is described as 'huge,' 'much bigger than the first one,' with a voice that 'thundered,' causing the mother to almost fall down. This dramatic introduction creates excitement and establishes the genie's impressive nature. While other choices touch on elements in the text, only B accurately captures the author's primary literary purpose for this scene.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references 'the scene where Aladdin's mother is frightened by the genie,' which accurately describes events in the passage where the mother starts rubbing the lamp, a huge genie appears, and she becomes 'so frightened she almost fell down.' This reference is accurate to the passage content.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.256231"
+  },
+  {
+    "question_id": "quiz_302015_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'Readers should [verb] that Aladdin [predicate]'. Each choice begins with 'Readers should' followed by a verb (think, believe, feel, worry) and then a clause about Aladdin. This consistent parallel structure makes the choices grammatically uniform.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations that a student might reasonably consider. Choice A (greedy/selfish) could seem plausible given his ambitious request. Choice C (working hard) relates to the effort to meet the Sultan's demands. Choice D (making a mistake) could be seen as questioning whether someone of his background should marry royalty. None of the distractors are obviously wrong without careful analysis of the author's tone and narrative framing.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category\u2014they are all about the reader's perspective or attitude toward Aladdin's decision to marry the princess. Each option presents a different emotional or evaluative stance (negative judgment, positive support, sympathy, concern) that readers might hold, making them homogeneous in type.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each provides a general emotional stance (greedy/selfish, deserves happiness/success, sorry/working hard, making a mistake) without excessive elaboration or vague generalities. The choices are balanced in their level of detail and complexity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.6 focuses on distinguishing point of view and understanding how the reader's perspective differs from characters. This question directly assesses this standard by asking students to identify what point of view the author wants readers to adopt about Aladdin's choice. Students must analyze the author's tone, narrative framing, and presentation to determine the intended reader perspective, which is precisely what RL.3.6 requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's intended reader perspective on Aladdin's choice to marry the princess. The phrasing 'What point of view does the author want readers to have' is clear and appropriate for grade 3. Students understand what is being asked\u2014to identify the author's intended perspective for readers regarding this specific story event.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is the only defensibly correct answer. The passage consistently presents Aladdin's story in a positive light\u2014he escapes danger, helps his mother, uses magic responsibly, and the narrative culminates in celebration with 'a wonderful feast, music, and dancing.' The Sultan recognizes Aladdin as 'perfect for his daughter,' and Aladdin's happiness is emphasized ('Aladdin was so happy!'). The author frames this as a success story deserving of celebration, not as greed, excessive hardship, or a mistake. No other answer choice is supportable by the text's tone and framing.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references such as paragraph numbers, line numbers, or direct quotes that could be verified for accuracy. It asks about a general event in the story (Aladdin's choice to marry the princess) which is clearly present in the passage. Since no specific references are made that could be inaccurate, this check passes.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Shortest distractor (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.256482"
+  },
+  {
+    "question_id": "quiz_302015_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'By [verb-ing] [content]'. Choice A: 'By showing...', Choice B: 'By describing...', Choice C: 'By explaining...', Choice D: 'By telling...'. This creates a consistent, parallel structure across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice B is implausible because the passage does not describe what clothes Aladdin or his mother wear (until the very end when only Aladdin receives fine clothes, which doesn't compare them). Choice C is implausible because the passage never explains or addresses their relative ages - this is assumed knowledge but not something the author uses to help readers understand differences. These distractors are too obviously wrong and not truly believable based on passage content.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category: literary techniques or methods the author uses to characterize and differentiate Aladdin from his mother. Each option presents a different potential authorial strategy (showing behavior, describing appearance, explaining facts, telling reactions).",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each provides a general method (showing/describing/explaining/telling) followed by a brief, comparable description of the content. None is significantly more detailed or vague than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.6 focuses on distinguishing one's own point of view from that of the narrator or characters. This question appropriately assesses how an author reveals character differences (Aladdin vs. his mother) through literary techniques, which aligns with understanding character perspectives and how they're developed. For grade 3, asking how the author helps readers understand character differences is appropriate for this standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's technique for helping readers understand the difference between Aladdin and his mother. The phrasing is accessible for grade 3 students, and there is only one reasonable interpretation of what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "While choice A is defensible (the genie scene shows Aladdin speaking calmly while his mother is frightened), choice D is also defensible. The passage explicitly states that Aladdin's mother 'laughed' when he said he wanted to marry the Sultan's daughter and said 'Have you lost your mind?' This shows a clear difference between them - Aladdin has ambitious ideas while his mother finds them laughable. Both A and D represent valid ways the author differentiates the characters, making this question problematic.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references (no paragraph numbers, line numbers, or direct quotes are cited), so this criterion is automatically satisfied. The question asks about general authorial technique across the passage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.256696"
+  },
+  {
+    "question_id": "quiz_302015_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.6666666666666666,
+    "total_checks_passed": 6,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: each begins with 'that' followed by a complete clause. The structure is consistent across all four options (that + noun phrase + verb phrase).",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options B, C, and D are not plausible distractors. Option B (magical buildings lasting longer) is never mentioned or implied in the passage. Option C (Sultan being jealous) contradicts the passage, which states 'the Sultan knew Aladdin was perfect for his daughter.' Option D (living in palaces making people happier) is not supported by the text. These distractors are too obviously wrong for a 3rd-grade assessment.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices span different conceptual categories. Option A addresses social status/equality, Option B addresses building durability/magic properties, Option C addresses emotions/jealousy, and Option D addresses psychological effects of housing. They are not all interpreting the author's purpose in the same conceptual domain.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at a similar level of detail and specificity. Each option presents a single, complete idea about what the author is trying to show through the palace descriptions. None are significantly more general or more detailed than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.6 focuses on distinguishing one's own point of view from that of the narrator or characters. This question asks about author's purpose/intent in using descriptive details, which aligns more with standards about craft and structure (like RL.3.5) or author's purpose, not point of view. The question does not assess the student's ability to distinguish different perspectives.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks students to identify what idea the author conveys through the description of the two palaces. The phrasing is appropriate for 3rd grade and has one clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only defensibly correct answer. The passage explicitly states the genie 'built him a palace right next to the Sultan's palace' and describes elaborate preparations 'fit for a prince,' clearly indicating Aladdin has achieved royal-level status. When the Sultan saw the palace, he 'knew Aladdin was perfect for his daughter,' confirming equal status was achieved. No other option is supported by the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question makes no specific passage references (no paragraph numbers, line numbers, or direct quotes are cited). Therefore, there are no references to verify for accuracy. This receives a PASS by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.256872"
+  },
+  {
+    "question_id": "quiz_302016",
+    "question_type": "MCQ",
+    "overall_score": 0.7777777777777778,
+    "total_checks_passed": 7,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow an identical grammatical structure: 'Each part shows Aladdin [verb]ing [object/complement]'. This creates perfect parallelism across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option B ('Each part shows different characters helping Aladdin escape') is not plausible. Aladdin only escapes once (from the cave in the first section), and only one character (the genie of the ring) helps him escape. Options C and D are also implausible: there are no lessons about friendship in the story, and Aladdin doesn't find different magical objects in each section - he finds the ring and lamp once, then uses the lamp repeatedly. These distractors are too obviously wrong to be effective.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all about how the narrative structure builds across sections. Each option describes a different pattern of progression (escalating problems, different helpers, learning lessons, finding objects), maintaining conceptual homogeneity.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of specificity. Each identifies a general pattern across sections without going into excessive detail: 'bigger problems,' 'different characters,' 'new lessons about friendship,' 'different magical object.' The level of abstraction and detail is balanced across all options.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 requires students to refer to parts of stories, dramas, and poems, using terms like chapter, scene, and stanza, and describe how each successive part builds on earlier sections. This question directly assesses this standard by asking students to analyze how sections of the story build on earlier parts, which is exactly what the standard requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. The phrase 'how each section of this story builds on the earlier parts' is precise and understandable for grade 3 students. The question stem and answer choices are straightforward with no confusing language or multiple interpretations.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only defensibly correct answer. The story clearly shows progression: Section 1 - Aladdin uses ring genie to escape cave; Section 2 - uses lamp genie to get food; Section 3 - uses lamp genie to produce gems for marriage proposal; Section 4 - uses lamp genie to create servants, treasures, palace, and wedding. Each use of magic addresses increasingly complex problems (escape \u2192 hunger \u2192 marriage conditions \u2192 grand wedding preparations). No other answer is supported by the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references (no paragraph numbers, line numbers, or quoted text). It refers generally to 'sections' of the story, which aligns with the clear section breaks indicated by horizontal lines in the passage. Since no specific references are made that could be inaccurate, this check passes.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.295901"
+  },
+  {
+    "question_id": "quiz_302016_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'Both sections show Aladdin [verb phrase]'. Each choice maintains parallel construction with consistent verb tense and sentence pattern.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible. A) is believable because Aladdin does interact with his mother in the story. B) could seem reasonable since the cave is enclosed and one might loosely consider the palace setting as enclosed. D) is plausible because gems are central to the cave section and appear in the palace section when sent to the Sultan. None are obviously wrong without careful analysis of the text.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all describe types of connections or parallels between the two sections (cave and palace). Each presents a potential thematic or plot element that might link the beginning and ending.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices operate at similar levels of detail. Each identifies a specific type of connection (asking for advice, being trapped, receiving magical help, learning about gems) without being overly general or excessively specific compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 addresses how parts of stories, dramas, or poems build on earlier sections. This question directly assesses this standard by asking students to identify how the beginning section (cave) connects to the ending section (palace), requiring them to understand structural connections between story parts.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It uses straightforward language appropriate for grade 3, clearly identifies the two sections to compare (beginning in cave, ending at palace), and asks for a specific type of analysis (how they connect). The term 'connect' is appropriate for this grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice C is the only defensibly correct answer. In the cave, the genie of the ring helps Aladdin escape. At the palace, the genie of the lamp helps create the palace, provides servants, and facilitates the wedding. A is incorrect (mother gives advice but Aladdin doesn't ask for it in the palace section). B is incorrect (palace is not presented as a trap or enclosed space). D is incorrect (the ending focuses on the palace creation and wedding, not learning about gems).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question makes general references to 'the beginning section in the cave' and 'the ending section at the palace' which accurately correspond to the passage structure. No specific paragraph numbers or quotes are cited that could be inaccurate. The references made are appropriately general and accurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.296304"
+  },
+  {
+    "question_id": "quiz_302016_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'Each section' + verb + object/complement. This parallel construction makes the choices easy to compare and evaluate.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible without close reading. A) could seem reasonable since two genies do appear; C) might seem possible given the mention of North Africa and the cave; D) could be believable as both Aladdin and his mother are featured prominently. None are obviously wrong at first glance, making them effective distractors.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category: structural/organizational patterns created by the section divisions. Each option proposes a different type of pattern (character introduction, value progression, setting changes, character focus), but they all respond to the question about what pattern the sections create.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each makes a single, clear claim about what pattern the sections create, using comparable language and complexity appropriate for grade 3.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.5, which focuses on referring to parts of stories (chapters, scenes, stanzas) and describing how each successive part builds on earlier sections. The question asks students to identify the organizational pattern created by dividing the story into sections and how they build upon each other, which is precisely what the standard addresses.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks about the pattern created by section divisions, which has a specific meaning in the context of text structure. The phrasing is appropriate for grade 3 and leads to one clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Answer B is the only defensibly correct answer. Tracing through the sections: 1) Aladdin gains freedom from the cave, 2) He gains food and sustenance, 3) He gains the possibility of marriage to the princess, 4) He gains wealth, status, a palace, and the actual marriage. This shows clear progression of increasingly valuable gains. A is incorrect (only one genie per ring/lamp, not new ones each section), C is incorrect (all sections occur in the same location after the opening), and D is incorrect (the mother isn't featured in later sections).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question does not make any specific passage references (no paragraph numbers, line numbers, or direct quotes are cited), so there are no references to verify for accuracy. This receives a passing score by default.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.299053"
+  },
+  {
+    "question_id": "quiz_302016_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 9,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical pattern: [Aladdin's + gerund] + [verb] + [object/prepositional phrase]. Each choice has a possessive subject (Aladdin's), followed by a gerund (praying, yelling, crying, calling out), then a verb describing a causal relationship (leads, makes, causes, brings), and concludes with the result.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible in the context of the passage. The passage explicitly mentions that Aladdin yelled for help (B), cried (C), and called out 'Uncle!' (D) before he prayed and rubbed the ring. While these actions don't lead to the outcomes stated in the distractors, they are events that actually occurred in sequence, making them believable choices for a 3rd grader who might confuse which action led to which result.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category: they all describe a cause-and-effect relationship between one of Aladdin's actions and a resulting event that helps him escape. Each follows the pattern of 'Aladdin did X, which caused Y to happen.' This homogeneity is appropriate for the question about how events build on each other.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices maintain similar levels of detail. Each choice identifies a specific action Aladdin took (praying, yelling, crying, calling out) and a specific outcome (discovering ring's power, magician returning, cave walls breaking, genie rescuing). The level of specificity is balanced across all four options.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.5, which asks students to refer to parts of stories and explain how events, chapters, or scenes build on earlier events. The question explicitly asks 'How does the section where Aladdin escapes the cave build on what happened earlier in that same section?' requiring students to identify the cause-effect relationship between Aladdin's sequential actions (yelling, crying, praying) and the discovery of the ring's power. This directly tests understanding of how events build on each other.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifies the section being analyzed (where Aladdin escapes the cave) and asks how later events in that section build on earlier events. The phrase 'build on what happened earlier in that same section' clearly indicates students should identify a cause-effect relationship within the cave escape sequence.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one defensibly correct answer (A). The passage clearly states the sequence: Aladdin yelled, then cried, then prayed by putting his hands together, and 'When he did this, he rubbed the ring on his finger.' This action of praying directly led to rubbing the ring, which caused the genie to appear. The other options describe actions that occurred but did not lead to the stated outcomes: yelling didn't bring back the magician, crying didn't break the walls, and calling out didn't bring the genie.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "While the question doesn't include specific paragraph numbers or direct quotes, it accurately references the section about Aladdin escaping the cave, which does exist in the passage. The content described in the correct answer (praying leading to discovering the ring's power) is accurately reflected in the passage text. No inaccurate references are made.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.299328"
+  },
+  {
+    "question_id": "quiz_302016_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8888888888888888,
+    "total_checks_passed": 8,
+    "total_checks_run": 9,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: a subject + verb + object/complement pattern. Each choice is a complete declarative sentence describing an action or event (A: The genie brings..., B: Aladdin's mother visits..., C: The Sultan laughs..., D: The magician returns...).",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choices B and C are not plausible distractors because they describe events that occur BEFORE the Sultan's challenge, not after it. The question specifically asks what happens after 'Aladdin receiving the Sultan's challenge' (i.e., how the final section builds upon that challenge). Choice D is also problematic because the magician never returns in the passage at all. Only choice A describes an event that actually occurs after the challenge is given.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All answer choices are the same type of conceptual category - they are all specific plot events/details from the story. Each describes an action taken by a character or entity within the narrative.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices provide a similar level of detail - each identifies a specific character action with a brief description of what happens. The length and specificity are reasonably balanced across all four choices.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.5, which focuses on referring to parts of texts when describing how parts of a text build on earlier sections. The question asks students to identify how the final section (parts of text) builds upon an earlier section (the Sultan's challenge), requiring understanding of text structure and how story elements connect across sections.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks which detail shows how the final section builds upon a specific prior event (the Sultan's challenge). The wording is appropriate for grade 3 and has a clear, singular interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one defensibly correct answer (A). The Sultan's challenge is given in section 3: he requires forty servants each carrying bowls of gems. In section 4 (the final section), Aladdin rubs the lamp and the genie brings exactly what was requested - forty servants with bowls of gems. This directly fulfills the challenge and shows how the final section builds upon it. No other choice describes events from the final section that respond to the challenge.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question refers to 'the Sultan's challenge' and 'the final section,' both of which are accurate references to the passage. The Sultan does issue a challenge (requiring forty servants with gems) in section 3, and there is a clearly defined final section (section 4) where Aladdin responds to this challenge. No specific paragraph numbers or quotes are cited that could be inaccurate.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "batch_result": "succeeded",
+    "timestamp": "2025-12-18T22:10:08.299748"
+  }
+]

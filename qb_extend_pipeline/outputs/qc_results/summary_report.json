@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-12-19T00:31:34.865174",
+  "input_file": "outputs/qb_extended_combined.csv",
+  "version": "v3_batch",
+  "total_time_seconds": 0.005238056182861328,
+  "cost_savings": "50% vs standard API",
+  "question_qc": {
+    "total": 85,
+    "passed": 70,
+    "failed": 15,
+    "pass_rate": 0.8235294117647058,
+    "average_score": 0.87379679144385
+  },
+  "batch_results": {
+    "succeeded": 85
+  }
+}

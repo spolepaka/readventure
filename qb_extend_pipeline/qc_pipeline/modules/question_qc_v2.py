@@ -534,8 +534,69 @@ Respond with JSON:
         tasks = [self.analyze_question(q, semaphore) for q in questions]
         return await asyncio.gather(*tasks)
 
+    async def analyze_openai_only(
+        self,
+        question_item: Dict[str, Any],
+        semaphore: Optional[asyncio.Semaphore] = None
+    ) -> Dict[str, Any]:
+        """
+        Run only OpenAI checks for a question.
+        
+        Used when Claude checks have already been completed and only OpenAI checks are missing.
+        Returns partial results that should be merged with existing Claude results.
+        """
+        async with semaphore if semaphore else asyncio.Semaphore(1):
+            question_id = question_item.get('question_id', 'unknown')
+            passage_text = question_item.get('passage_text', '')
+            grade = question_item.get('grade')
 
+            if 'structured_content' not in question_item:
+                logger.warning(f"No structured_content for {question_id}")
+                return {
+                    'question_id': question_id,
+                    'checks': {},
+                    'error': 'No structured_content provided'
+                }
 
+            question_data = question_item['structured_content']
+            logger.debug(f"Running OpenAI checks only for {question_id}")
 
+            results = {}
 
+            # Run only OpenAI batch (1 API call for 2 checks)
+            if self.openai_client:
+                openai_results = await self._run_openai_batch(question_data, passage_text, grade)
+                results.update(openai_results)
+            else:
+                logger.warning(f"No OpenAI client for {question_id}")
+                return {
+                    'question_id': question_id,
+                    'checks': {},
+                    'error': 'No OpenAI client available'
+                }
+
+            return {
+                'question_id': question_id,
+                'checks': results,
+                'timestamp': datetime.now().isoformat()
+            }
+
+    async def analyze_batch_openai_only(
+        self,
+        questions: List[Dict[str, Any]],
+        concurrency: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        Run only OpenAI checks for a batch of questions.
+        
+        Used when Claude checks have already been completed and only OpenAI checks are missing.
+        Returns partial results that should be merged with existing Claude results.
+        """
+        if not self.openai_client:
+            logger.warning("No OpenAI client available for OpenAI-only batch")
+            return []
+        
+        semaphore = asyncio.Semaphore(concurrency)
+        tasks = [self.analyze_openai_only(q, semaphore) for q in questions]
+        return await asyncio.gather(*tasks)
 

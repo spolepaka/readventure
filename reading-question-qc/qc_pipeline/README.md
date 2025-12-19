@@ -2,6 +2,14 @@
 
 Comprehensive quality control system for reading comprehension assessment items (MCQ and MP question types).
 
+## Pipeline Versions
+
+| Version | File | Description | Best For |
+|---------|------|-------------|----------|
+| V1 | `pipeline.py` | Sequential API calls | Testing, small batches |
+| V2 | `pipeline_v2.py` | Optimized concurrent calls (2 API calls/question) | Real-time, medium batches |
+| **V3** | `pipeline_v3_batch.py` | **Batch API with 50% cost reduction** | **Large-scale QC** |
+
 ## Quick Start
 
 ```bash
@@ -9,30 +17,63 @@ Comprehensive quality control system for reading comprehension assessment items 
 export ANTHROPIC_API_KEY="your-claude-api-key"
 export OPENAI_API_KEY="your-openai-api-key"  # Optional but recommended
 
-# Run question QC
+# V1: Basic question QC
 python pipeline.py --input questions.csv --output results/ --mode questions
 
-# Run question + explanation QC
-python pipeline.py --input data.csv --output results/ --mode both
+# V2: Optimized real-time QC
+python pipeline_v2.py --input questions.csv --output results/ --mode questions
 
-# Include difficulty assessment (requires benchmark questions)
-python pipeline.py \
-  --input questions.csv \
-  --output results/ \
-  --examples benchmark_questions.csv
+# V3: Batch processing (50% cost, high throughput)
+python pipeline_v3_batch.py --input questions.csv --output results/
 ```
+
+## V3 Batch Processing (Recommended for Large Datasets)
+
+The V3 pipeline uses Claude's [Message Batches API](https://platform.claude.com/docs/en/build-with-claude/batch-processing) for maximum efficiency:
+
+### Benefits
+- **50% cost reduction** on all API calls
+- **Higher throughput** for large-scale processing
+- **Prompt caching** - article text shared across questions
+- **Resume capability** - recover from interruptions
+
+### Usage
+```bash
+# Process large question bank
+python pipeline_v3_batch.py \
+  --input large_question_bank.csv \
+  --output results/
+
+# Resume interrupted batch
+python pipeline_v3_batch.py \
+  --resume \
+  --batch-id msgbatch_01abc123... \
+  --input questions.csv \
+  --output results/
+```
+
+### How It Works
+1. Questions are grouped by article/passage for cache efficiency
+2. All requests submitted as a single batch (up to 100,000)
+3. Batch processes asynchronously (typically < 1 hour)
+4. Results retrieved and mapped back to questions
 
 ## Architecture
 
 ```
 qc_pipeline/
 ├── config/
-│   └── prompts.json          # All quality control prompts
+│   └── prompts.json              # Quality control prompts
 ├── modules/
-│   ├── question_qc.py        # Question quality control
-│   └── explanation_qc.py     # Explanation quality control
-├── utils.py                  # Shared utilities
-└── pipeline.py               # Main orchestration script
+│   ├── question_qc.py            # V1: Sequential question QC
+│   ├── question_qc_v2.py         # V2: Optimized (batched calls)
+│   ├── question_qc_v3_batch.py   # V3: Batch API (50% cost)
+│   ├── explanation_qc.py         # V1: Sequential explanation QC
+│   └── explanation_qc_v2.py      # V2: Optimized explanation QC
+├── utils.py                      # Shared utilities
+├── pipeline.py                   # V1: Sequential pipeline
+├── pipeline_v2.py                # V2: Optimized pipeline
+└── pipeline_v3_batch.py          # V3: Batch pipeline (NEW)
 ```
 
 ## Pipeline Flow
@@ -237,10 +278,18 @@ export OPENAI_API_KEY="sk-..."         # Required for explanations, optional for
 
 ## Performance Notes
 
-- **Question QC**: ~5-10 questions/minute
-- **Explanation QC**: ~20-40 options/minute
-- Sequential processing ensures consistency
-- Use `--limit` for testing before full runs
+### Throughput by Version
+| Version | Questions/Minute | Cost | Use Case |
+|---------|-----------------|------|----------|
+| V1 | ~5-10 | Baseline | Testing |
+| V2 | ~30-40 | Baseline | Real-time |
+| **V3** | **Unlimited*** | **50% of baseline** | **Large-scale** |
+
+*V3 throughput limited only by batch API capacity (100K requests/batch)
+
+### Recommendations
+- **V1/V2**: Use `--limit` for testing before full runs
+- **V3**: Submit batch, then poll for results (typically < 1 hour)
 
 ## Troubleshooting
 

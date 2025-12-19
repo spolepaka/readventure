@@ -317,8 +317,3 @@ Respond with JSON:
         tasks = [self.analyze_explanation(e, semaphore) for e in explanations]
         return await asyncio.gather(*tasks)
 
-
-
-
-
-

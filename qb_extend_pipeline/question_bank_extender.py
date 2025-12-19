@@ -8,7 +8,11 @@ Generates sibling questions for existing reading comprehension questions.
 - With --only-guiding: Only extends guiding questions
 
 Uses Claude Sonnet 4.5 with structured output mode.
-Supports CONCURRENT processing with multiple API keys.
+Supports three processing modes:
+1. Sequential (default): One article at a time
+2. Concurrent (--concurrent): Multiple articles in parallel with multiple API keys
+3. Batch (--batch-mode): Claude Message Batches API for 50% cost reduction
+
 Logs all LLM communications with timestamps for traceability.
 
 Usage:
@@ -22,6 +26,18 @@ Usage:
         --input inputs/qti_existing_questions.csv \\
         --output outputs/extended_questions.csv \\
         --concurrent
+    
+    # BATCH MODE: 50% cost reduction (async processing)
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv \\
+        --batch-mode
+    
+    # Resume interrupted batch
+    python question_bank_extender.py \\
+        --input inputs/qti_existing_questions.csv \\
+        --output outputs/extended_questions.csv \\
+        --batch-mode --resume-batch msgbatch_xxx
     
     # Include guiding questions too
     python question_bank_extender.py \\
@@ -40,6 +56,12 @@ Concurrency:
     
     Each key processes one article at a time in parallel.
     5 keys = 5 articles processed concurrently.
+
+Batch Mode:
+    Uses Claude's Message Batches API for 50% cost reduction.
+    - Async processing: Submit batch, poll for completion, retrieve results
+    - Best for large-scale processing where you can wait for results
+    - Can resume interrupted batches with --resume-batch
 """
 
 import os
@@ -50,9 +72,10 @@ import time
 import re
 import logging
 import threading
+import httpx
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from queue import Queue
@@ -1906,6 +1929,997 @@ class ConcurrentQuestionBankExtender:
         return str(combined_file)
 
 
+class BatchQuestionBankExtender:
+    """
+    Batch processing mode using Claude's Message Batches API.
+    
+    Provides 50% cost reduction by submitting all requests as a single batch.
+    Asynchronous processing - submit batch, poll for completion, retrieve results.
+    
+    Best for large-scale processing where you can wait for results.
+    """
+    
+    # Batch API polling settings
+    POLL_INTERVAL = 30  # seconds between status checks
+    MAX_POLL_TIME = 86400  # 24 hours max wait time
+    
+    def __init__(
+        self,
+        api_key: str,
+        checkpoint_dir: Optional[str] = None,
+        log_dir: Optional[str] = None,
+        run_id: Optional[str] = None,
+        include_guiding: bool = False,
+        only_guiding: bool = False
+    ):
+        """
+        Initialize batch extender.
+        
+        Args:
+            api_key: Anthropic API key
+            checkpoint_dir: Directory for checkpoint files
+            log_dir: Directory for logs
+            run_id: Optional run ID (auto-generated if not provided)
+            include_guiding: Include guiding questions
+            only_guiding: Only process guiding questions
+        """
+        self.api_key = api_key
+        self.client = anthropic.Anthropic(api_key=api_key)
+        
+        self.checkpoint_dir = Path(checkpoint_dir) if checkpoint_dir else Path(__file__).parent / "checkpoints"
+        self.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.log_dir = Path(log_dir) if log_dir else Path(__file__).parent / "outputs" / "llm_logs"
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Batch data directory
+        self.batch_data_dir = self.checkpoint_dir / "batch_data"
+        self.batch_data_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.run_id = run_id or datetime.now().strftime('%Y%m%d_%H%M%S')
+        self.include_guiding = include_guiding
+        self.only_guiding = only_guiding
+        
+        # Load prompts and CCSS
+        self.prompts = self._load_prompts()
+        self.ccss_descriptions = self._load_ccss_descriptions()
+        
+        # Track processed articles
+        self._processed_articles = set()
+        
+        print(f"Initialized batch extender")
+        print(f"  Batch data: {self.batch_data_dir}")
+        print(f"  Cost savings: 50% vs standard API")
+    
+    def _load_prompts(self) -> Dict[str, str]:
+        """Load prompts from JSON file."""
+        prompts = {}
+        if PROMPTS_FILE.exists():
+            with open(PROMPTS_FILE, 'r', encoding='utf-8') as f:
+                prompt_data = json.load(f)
+                for item in prompt_data:
+                    if item.get('function') in ['variant_generation', 'sibling_generation']:
+                        question_type = item.get('question_type', 'MCQ')
+                        dok = item.get('dok')
+                        key = f"{question_type}_{dok}"
+                        prompts[key] = item.get('prompt', '')
+            print(f"  Loaded {len(prompts)} prompts")
+        return prompts
+    
+    def _load_ccss_descriptions(self) -> Dict[str, str]:
+        """Load CCSS descriptions from CSV file."""
+        descriptions = {}
+        if CCSS_FILE.exists():
+            with open(CCSS_FILE, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    code = row.get('standard_code', row.get('code', ''))
+                    desc = row.get('standard_description', row.get('description', ''))
+                    if code and desc:
+                        descriptions[code] = desc
+            print(f"  Loaded {len(descriptions)} CCSS descriptions")
+        return descriptions
+    
+    def _extract_grade_level(self, standard_code: str) -> str:
+        """Extract grade level from CCSS standard code."""
+        match = re.search(r'\.(K|\d+(?:-\d+)?)\.\d+', standard_code)
+        if match:
+            grade_part = match.group(1)
+            if grade_part == 'K':
+                return "kindergarten"
+            elif '-' in grade_part:
+                return f"grades {grade_part}"
+            else:
+                return f"grade {grade_part}"
+        return "grade 3"
+    
+    def _get_dok_requirements(self, dok: int) -> str:
+        """Get DOK-specific requirements text."""
+        if dok == 1:
+            return """
+DOK 1 Requirements:
+- Test recall of basic facts, definitions, or details
+- Require simple recognition or identification
+- Ask for information directly stated in the text"""
+        elif dok == 2:
+            return """
+DOK 2 Requirements:
+- Apply skills and concepts to make basic inferences
+- Classify, organize, or compare information
+- Make connections between ideas"""
+        elif dok >= 3:
+            return """
+DOK 3 Requirements:
+- Require strategic thinking and reasoning
+- Analyze, evaluate, or synthesize information
+- Draw conclusions based on multiple pieces of evidence"""
+        return ""
+    
+    def _build_tool_for_question_type(self, question_type: str, num_siblings: int) -> Dict:
+        """
+        Build a tool definition for structured output based on question type.
+        Uses tool use instead of the structured outputs beta for batch API compatibility.
+        """
+        # MCQ variant question schema
+        mcq_variant_schema = {
+            "type": "object",
+            "properties": {
+                "question": {"type": "string", "description": "The question prompt text"},
+                "option_1": {"type": "string", "description": "First answer choice (A)"},
+                "option_2": {"type": "string", "description": "Second answer choice (B)"},
+                "option_3": {"type": "string", "description": "Third answer choice (C)"},
+                "option_4": {"type": "string", "description": "Fourth answer choice (D)"},
+                "correct_answer": {"type": "string", "enum": ["A", "B", "C", "D"], "description": "The correct answer letter"},
+                "option_1_explanation": {"type": "string", "description": "Feedback for option A"},
+                "option_2_explanation": {"type": "string", "description": "Feedback for option B"},
+                "option_3_explanation": {"type": "string", "description": "Feedback for option C"},
+                "option_4_explanation": {"type": "string", "description": "Feedback for option D"},
+                "differentiation_notes": {"type": "string", "description": "How this question differs from the reference"}
+            },
+            "required": ["question", "option_1", "option_2", "option_3", "option_4", 
+                        "correct_answer", "option_1_explanation", "option_2_explanation",
+                        "option_3_explanation", "option_4_explanation", "differentiation_notes"]
+        }
+        
+        # SR variant question schema
+        sr_variant_schema = {
+            "type": "object",
+            "properties": {
+                "question": {"type": "string", "description": "The short response question text"},
+                "expected_response": {"type": "string", "description": "Sample complete response"},
+                "key_details": {"type": "array", "items": {"type": "string"}, "description": "Key details required"},
+                "scoring_notes": {"type": "string", "description": "Guidance on scoring"},
+                "dok_justification": {"type": "string", "description": "DOK level justification"},
+                "differentiation_notes": {"type": "string", "description": "How this differs from reference"}
+            },
+            "required": ["question", "expected_response", "key_details", "scoring_notes", 
+                        "dok_justification", "differentiation_notes"]
+        }
+        
+        # MP variant question schema
+        mp_part_schema = {
+            "type": "object",
+            "properties": {
+                "question": {"type": "string"},
+                "option_1": {"type": "string"},
+                "option_2": {"type": "string"},
+                "option_3": {"type": "string"},
+                "option_4": {"type": "string"},
+                "correct_answer": {"type": "string", "enum": ["A", "B", "C", "D"]},
+                "option_1_explanation": {"type": "string"},
+                "option_2_explanation": {"type": "string"},
+                "option_3_explanation": {"type": "string"},
+                "option_4_explanation": {"type": "string"},
+                "DOK": {"type": "integer"}
+            },
+            "required": ["question", "option_1", "option_2", "option_3", "option_4",
+                        "correct_answer", "option_1_explanation", "option_2_explanation",
+                        "option_3_explanation", "option_4_explanation", "DOK"]
+        }
+        
+        mp_variant_schema = {
+            "type": "object",
+            "properties": {
+                "part_a": mp_part_schema,
+                "part_b": mp_part_schema,
+                "connection_rationale": {"type": "string"},
+                "dok_justification": {"type": "string"},
+                "standard_assessment": {"type": "string"},
+                "differentiation_notes": {"type": "string"}
+            },
+            "required": ["part_a", "part_b", "connection_rationale", "dok_justification",
+                        "standard_assessment", "differentiation_notes"]
+        }
+        
+        # Select schema based on question type
+        if question_type == "SR":
+            variant_schema = sr_variant_schema
+        elif question_type == "MP":
+            variant_schema = mp_variant_schema
+        else:  # MCQ or default
+            variant_schema = mcq_variant_schema
+        
+        return {
+            "name": "generate_variant_questions",
+            "description": f"Generate {num_siblings} variant question(s) based on the reference question",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "variant_questions": {
+                        "type": "array",
+                        "items": variant_schema,
+                        "description": f"Array of {num_siblings} variant question(s)"
+                    }
+                },
+                "required": ["variant_questions"]
+            }
+        }
+    
+    def _build_prompt_for_question(self, question: Dict, num_siblings: int) -> str:
+        """Build prompt for generating siblings for a single question."""
+        question_type = question.get('question_type', 'MCQ').upper()
+        if question_type not in ['MCQ', 'SR', 'MP']:
+            question_type = 'MCQ'
+        
+        dok = question.get('DOK', 2)
+        try:
+            dok = int(dok)
+        except (ValueError, TypeError):
+            dok = 2
+        
+        # Cap DOK based on question type
+        if question_type == 'MCQ':
+            dok = max(1, min(3, dok))
+        elif question_type == 'SR':
+            dok = max(1, min(4, dok))
+        elif question_type == 'MP':
+            dok = max(2, min(3, dok))
+        
+        prompt_key = f"{question_type}_{dok}"
+        prompt_template = self.prompts.get(prompt_key)
+        if not prompt_template:
+            prompt_template = self.prompts.get("MCQ_2", '')
+        
+        standard_code = question.get('CCSS', '')
+        standard_description = self.ccss_descriptions.get(standard_code, '')
+        grade_level = self._extract_grade_level(standard_code)
+        
+        # Use string replacement instead of .format() to avoid issues with JSON curly braces in templates
+        replacements = {
+            '{grade_level}': grade_level,
+            '{passage_text}': question.get('passage_text', ''),
+            '{standard_code}': standard_code,
+            '{standard_description}': standard_description,
+            '{difficulty}': question.get('difficulty', 'medium'),
+            '{original_question}': question.get('question', ''),
+            '{original_option_1}': question.get('option_1', ''),
+            '{original_option_2}': question.get('option_2', ''),
+            '{original_option_3}': question.get('option_3', ''),
+            '{original_option_4}': question.get('option_4', ''),
+            '{original_correct_answer}': question.get('correct_answer', ''),
+            '{original_option_1_explanation}': question.get('option_1_explanation', '')[:500],
+            '{original_option_2_explanation}': question.get('option_2_explanation', '')[:500],
+            '{original_option_3_explanation}': question.get('option_3_explanation', '')[:500],
+            '{original_option_4_explanation}': question.get('option_4_explanation', '')[:500],
+            '{num_siblings}': str(num_siblings)
+        }
+        
+        prompt = prompt_template
+        for key, value in replacements.items():
+            prompt = prompt.replace(key, str(value))
+        
+        return prompt
+    
+    def _load_completed_from_output(self, output_file: Path, articles: Dict[str, List[Dict]]) -> set:
+        """Load completed articles by checking the output file and combined file."""
+        completed = set()
+        
+        # Check multiple possible output files
+        files_to_check = [output_file]
+        
+        # Also check combined file
+        combined_file = output_file.parent / "qb_extended_combined.csv"
+        if combined_file.exists():
+            files_to_check.append(combined_file)
+        
+        # Check extended file variant
+        extended_file = output_file.parent / f"{output_file.stem}_extended.csv"
+        if extended_file.exists() and extended_file not in files_to_check:
+            files_to_check.append(extended_file)
+        
+        for check_file in files_to_check:
+            if not check_file.exists():
+                continue
+            
+            try:
+                df = pd.read_csv(check_file)
+                if df.empty:
+                    continue
+                
+                # Check for extended questions (have parent_question_id)
+                if 'parent_question_id' in df.columns:
+                    extended_df = df[df['parent_question_id'].notna()]
+                    if not extended_df.empty:
+                        output_counts = extended_df.groupby('article_id').size().to_dict()
+                    else:
+                        output_counts = {}
+                else:
+                    output_counts = df.groupby('article_id').size().to_dict()
+                
+                for article_id, count in output_counts.items():
+                    if article_id not in articles:
+                        continue
+                    
+                    questions = articles[article_id]
+                    quiz_questions = [q for q in questions if q.get('question_category') == 'quiz']
+                    guiding_questions = [q for q in questions if q.get('question_category') == 'guiding']
+                    
+                    expected = 0
+                    if not self.only_guiding:
+                        expected += len(quiz_questions) * QUIZ_SIBLINGS
+                    if self.include_guiding or self.only_guiding:
+                        expected += len(guiding_questions) * GUIDING_SIBLINGS
+                    
+                    if count >= expected * 0.75:
+                        completed.add(article_id)
+                        
+            except Exception as e:
+                print(f"  Warning: Could not read {check_file}: {e}")
+        
+        return completed
+    
+    def _build_batch_requests(
+        self, 
+        articles: Dict[str, List[Dict]],
+        completed_articles: set
+    ) -> Tuple[List[Dict], Dict[str, Dict]]:
+        """
+        Build batch requests for all articles.
+        
+        Returns:
+            Tuple of (batch_requests, request_metadata)
+            - batch_requests: List of request objects for the batch API
+            - request_metadata: Mapping of custom_id to original question metadata
+        """
+        batch_requests = []
+        request_metadata = {}
+        
+        for article_id, questions in articles.items():
+            if article_id in completed_articles:
+                continue
+            
+            # Separate guiding and quiz questions
+            guiding_questions = [q for q in questions if q.get('question_category') == 'guiding']
+            quiz_questions = [q for q in questions if q.get('question_category') == 'quiz']
+            
+            process_guiding = self.only_guiding or self.include_guiding
+            process_quiz = not self.only_guiding
+            
+            # Build requests for guiding questions
+            if guiding_questions and process_guiding:
+                for i, question in enumerate(guiding_questions):
+                    custom_id = f"{article_id}__guiding__{question.get('question_id', i)}"
+                    prompt = self._build_prompt_for_question(question, GUIDING_SIBLINGS)
+                    question_type = question.get('question_type', 'MCQ').upper()
+                    if question_type not in SCHEMA_MAP:
+                        question_type = 'MCQ'
+                    
+                    # Build tool definition for structured output
+                    tool_def = self._build_tool_for_question_type(question_type, GUIDING_SIBLINGS)
+                    
+                    batch_requests.append({
+                        "custom_id": custom_id,
+                        "params": {
+                            "model": MODEL,
+                            "max_tokens": 16384,
+                            "messages": [{"role": "user", "content": prompt}],
+                            "tools": [tool_def],
+                            "tool_choice": {"type": "tool", "name": tool_def["name"]}
+                        }
+                    })
+                    
+                    request_metadata[custom_id] = {
+                        "article_id": article_id,
+                        "question_category": "guiding",
+                        "question_type": question_type,
+                        "num_siblings": GUIDING_SIBLINGS,
+                        "original_question": question
+                    }
+            
+            # Build requests for quiz questions
+            if quiz_questions and process_quiz:
+                for i, question in enumerate(quiz_questions):
+                    custom_id = f"{article_id}__quiz__{question.get('question_id', i)}"
+                    prompt = self._build_prompt_for_question(question, QUIZ_SIBLINGS)
+                    question_type = question.get('question_type', 'MCQ').upper()
+                    if question_type not in SCHEMA_MAP:
+                        question_type = 'MCQ'
+                    
+                    # Build tool definition for structured output
+                    tool_def = self._build_tool_for_question_type(question_type, QUIZ_SIBLINGS)
+                    
+                    batch_requests.append({
+                        "custom_id": custom_id,
+                        "params": {
+                            "model": MODEL,
+                            "max_tokens": 16384,
+                            "messages": [{"role": "user", "content": prompt}],
+                            "tools": [tool_def],
+                            "tool_choice": {"type": "tool", "name": tool_def["name"]}
+                        }
+                    })
+                    
+                    request_metadata[custom_id] = {
+                        "article_id": article_id,
+                        "question_category": "quiz",
+                        "question_type": question_type,
+                        "num_siblings": QUIZ_SIBLINGS,
+                        "original_question": question
+                    }
+        
+        return batch_requests, request_metadata
+    
+    def _submit_batch(self, batch_requests: List[Dict]) -> str:
+        """
+        Submit batch to Claude API.
+        
+        Returns: batch_id
+        """
+        print(f"\nSubmitting batch with {len(batch_requests)} requests...")
+        
+        # Save batch requests for debugging/recovery
+        requests_file = self.batch_data_dir / f"batch_requests_{self.run_id}.json"
+        with open(requests_file, 'w') as f:
+            json.dump(batch_requests, f, indent=2)
+        print(f"  Saved batch requests to {requests_file}")
+        
+        # Submit batch
+        batch = self.client.messages.batches.create(requests=batch_requests)
+        
+        batch_id = batch.id
+        print(f"  Batch created: {batch_id}")
+        print(f"  Status: {batch.processing_status}")
+        
+        # Save batch info
+        batch_info_file = self.batch_data_dir / f"batch_info_{batch_id}.json"
+        with open(batch_info_file, 'w') as f:
+            json.dump({
+                "batch_id": batch_id,
+                "run_id": self.run_id,
+                "created_at": datetime.now().isoformat(),
+                "num_requests": len(batch_requests),
+                "status": batch.processing_status
+            }, f, indent=2)
+        
+        return batch_id
+    
+    def _poll_batch(self, batch_id: str) -> Dict:
+        """
+        Poll batch until completion.
+        
+        Returns: Final batch status
+        """
+        start_time = time.time()
+        
+        while True:
+            elapsed = time.time() - start_time
+            
+            if elapsed > self.MAX_POLL_TIME:
+                raise TimeoutError(f"Batch {batch_id} did not complete within {self.MAX_POLL_TIME}s")
+            
+            batch = self.client.messages.batches.retrieve(batch_id)
+            status = batch.processing_status
+            
+            # Calculate counts
+            succeeded = batch.request_counts.succeeded if batch.request_counts else 0
+            errored = batch.request_counts.errored if batch.request_counts else 0
+            canceled = batch.request_counts.canceled if batch.request_counts else 0
+            expired = batch.request_counts.expired if batch.request_counts else 0
+            processing = batch.request_counts.processing if batch.request_counts else 0
+            total = succeeded + errored + canceled + expired + processing
+            
+            print(f"  Batch {batch_id} status: {status} (elapsed: {elapsed:.0f}s)")
+            print(f"    Succeeded: {succeeded}, Processing: {processing}, Errored: {errored}")
+            
+            if status == "ended":
+                print(f"  Batch completed in {elapsed:.0f}s")
+                return {
+                    "status": status,
+                    "succeeded": succeeded,
+                    "errored": errored,
+                    "canceled": canceled,
+                    "expired": expired,
+                    "total": total,
+                    "elapsed": elapsed
+                }
+            
+            print(f"  Waiting {self.POLL_INTERVAL}s before next check...")
+            time.sleep(self.POLL_INTERVAL)
+    
+    def _retrieve_results(self, batch_id: str) -> List[Dict]:
+        """
+        Retrieve results from completed batch.
+        
+        Returns: List of result objects
+        """
+        print(f"\nRetrieving results for batch {batch_id}...")
+        
+        results = []
+        for result in self.client.messages.batches.results(batch_id):
+            results.append({
+                "custom_id": result.custom_id,
+                "result_type": result.result.type if result.result else "error",
+                "message": result.result.message if result.result and hasattr(result.result, 'message') else None,
+                "error": result.result.error if result.result and hasattr(result.result, 'error') else None
+            })
+        
+        print(f"  Retrieved {len(results)} results")
+        
+        # Save results
+        results_file = self.batch_data_dir / f"batch_results_{batch_id}.json"
+        with open(results_file, 'w') as f:
+            # Convert to serializable format
+            serializable_results = []
+            for r in results:
+                sr = {"custom_id": r["custom_id"], "result_type": r["result_type"]}
+                if r["message"]:
+                    sr["content"] = r["message"].content[0].text if r["message"].content else ""
+                    sr["stop_reason"] = r["message"].stop_reason
+                if r["error"]:
+                    sr["error"] = str(r["error"])
+                serializable_results.append(sr)
+            json.dump(serializable_results, f, indent=2)
+        print(f"  Saved results to {results_file}")
+        
+        return results
+    
+    def _parse_batch_results(
+        self, 
+        results: List[Dict], 
+        request_metadata: Dict[str, Dict]
+    ) -> List[Dict]:
+        """
+        Parse batch results and create output records.
+        
+        Returns: List of generated question records
+        """
+        generated_records = []
+        succeeded = 0
+        failed = 0
+        
+        for result in results:
+            custom_id = result["custom_id"]
+            
+            if custom_id not in request_metadata:
+                print(f"  Warning: Unknown custom_id {custom_id}")
+                continue
+            
+            metadata = request_metadata[custom_id]
+            original_question = metadata["original_question"]
+            article_id = metadata["article_id"]
+            question_category = metadata["question_category"]
+            question_type = metadata["question_type"]
+            num_siblings = metadata["num_siblings"]
+            
+            if result["result_type"] != "succeeded":
+                failed += 1
+                print(f"  Failed: {custom_id} - {result.get('error', 'Unknown error')}")
+                continue
+            
+            try:
+                # Parse tool use response
+                message = result["message"]
+                if not message or not message.content:
+                    failed += 1
+                    continue
+                
+                # Find tool use block in content
+                variant_questions = []
+                for block in message.content:
+                    if hasattr(block, 'type') and block.type == 'tool_use':
+                        # Tool use response - get input
+                        tool_input = block.input if hasattr(block, 'input') else {}
+                        variant_questions = tool_input.get("variant_questions", [])
+                        break
+                    elif hasattr(block, 'text'):
+                        # Text response fallback - try to parse JSON
+                        try:
+                            response_data = json.loads(block.text)
+                            variant_questions = response_data.get("variant_questions", response_data.get("sibling_questions", []))
+                            break
+                        except:
+                            pass
+                
+                if not variant_questions:
+                    failed += 1
+                    print(f"  Warning: No variant questions in response for {custom_id}")
+                    continue
+                
+                # Create records for each generated question
+                for j, gen_q in enumerate(variant_questions[:num_siblings]):
+                    record = {
+                        'article_id': article_id,
+                        'article_title': original_question.get('article_title', ''),
+                        'section_id': original_question.get('section_id', ''),
+                        'section_sequence': original_question.get('section_sequence', ''),
+                        'question_id': f"{original_question.get('question_id', '')}__sibling_{j+1}",
+                        'question_category': question_category,
+                        'stimulus_id': original_question.get('stimulus_id', ''),
+                        'passage_text': original_question.get('passage_text', ''),
+                        'lexile_level': original_question.get('lexile_level', ''),
+                        'course': original_question.get('course', ''),
+                        'module': original_question.get('module', ''),
+                        'section_number': original_question.get('section_number', ''),
+                        'question_type': question_type,
+                        'DOK': original_question.get('DOK', ''),
+                        'difficulty': original_question.get('difficulty', ''),
+                        'CCSS': original_question.get('CCSS', ''),
+                        'grade': original_question.get('grade', 3),
+                        'parent_question_id': original_question.get('question_id', ''),
+                        'generation_timestamp': datetime.now().isoformat(),
+                        'differentiation_notes': gen_q.get('differentiation_notes', ''),
+                    }
+                    
+                    # Add question-type specific fields
+                    if question_type == 'MCQ':
+                        quality_verification = gen_q.get('quality_verification', {})
+                        record.update({
+                            'question': gen_q.get('question', ''),
+                            'option_1': gen_q.get('option_1', ''),
+                            'option_2': gen_q.get('option_2', ''),
+                            'option_3': gen_q.get('option_3', ''),
+                            'option_4': gen_q.get('option_4', ''),
+                            'correct_answer': gen_q.get('correct_answer', ''),
+                            'option_1_explanation': gen_q.get('option_1_explanation', ''),
+                            'option_2_explanation': gen_q.get('option_2_explanation', ''),
+                            'option_3_explanation': gen_q.get('option_3_explanation', ''),
+                            'option_4_explanation': gen_q.get('option_4_explanation', ''),
+                            'homogeneity_check': quality_verification.get('homogeneity_check', ''),
+                            'specificity_check': quality_verification.get('specificity_check', ''),
+                            'length_check': quality_verification.get('length_check', ''),
+                            'semantic_distance_check': quality_verification.get('semantic_distance_check', ''),
+                            'single_correct_check': quality_verification.get('single_correct_check', ''),
+                            'diversity_check': quality_verification.get('diversity_check', ''),
+                        })
+                    elif question_type == 'SR':
+                        key_details = gen_q.get('key_details', [])
+                        record.update({
+                            'question': gen_q.get('question', ''),
+                            'expected_response': gen_q.get('expected_response', ''),
+                            'key_details': json.dumps(key_details) if isinstance(key_details, list) else key_details,
+                            'scoring_notes': gen_q.get('scoring_notes', ''),
+                            'dok_justification': gen_q.get('dok_justification', ''),
+                        })
+                    elif question_type == 'MP':
+                        part_a = gen_q.get('part_a', {})
+                        part_b = gen_q.get('part_b', {})
+                        record.update({
+                            'question': part_a.get('question', ''),
+                            'option_1': part_a.get('option_1', ''),
+                            'option_2': part_a.get('option_2', ''),
+                            'option_3': part_a.get('option_3', ''),
+                            'option_4': part_a.get('option_4', ''),
+                            'correct_answer': part_a.get('correct_answer', ''),
+                            'option_1_explanation': part_a.get('option_1_explanation', ''),
+                            'option_2_explanation': part_a.get('option_2_explanation', ''),
+                            'option_3_explanation': part_a.get('option_3_explanation', ''),
+                            'option_4_explanation': part_a.get('option_4_explanation', ''),
+                            'part_a_dok': part_a.get('DOK', ''),
+                            'part_b_question': part_b.get('question', ''),
+                            'part_b_option_1': part_b.get('option_1', ''),
+                            'part_b_option_2': part_b.get('option_2', ''),
+                            'part_b_option_3': part_b.get('option_3', ''),
+                            'part_b_option_4': part_b.get('option_4', ''),
+                            'part_b_correct_answer': part_b.get('correct_answer', ''),
+                            'part_b_option_1_explanation': part_b.get('option_1_explanation', ''),
+                            'part_b_option_2_explanation': part_b.get('option_2_explanation', ''),
+                            'part_b_option_3_explanation': part_b.get('option_3_explanation', ''),
+                            'part_b_option_4_explanation': part_b.get('option_4_explanation', ''),
+                            'part_b_dok': part_b.get('DOK', ''),
+                            'connection_rationale': gen_q.get('connection_rationale', ''),
+                            'standard_assessment': gen_q.get('standard_assessment', ''),
+                        })
+                    
+                    generated_records.append(record)
+                
+                succeeded += 1
+                
+            except Exception as e:
+                failed += 1
+                print(f"  Error parsing {custom_id}: {e}")
+        
+        print(f"\n  Parsed {succeeded} successful results, {failed} failures")
+        print(f"  Generated {len(generated_records)} question records")
+        
+        return generated_records
+    
+    def resume_batch(self, batch_id: str, articles: Dict[str, List[Dict]], output_file: Path) -> str:
+        """
+        Resume processing from an existing batch.
+        
+        Args:
+            batch_id: The batch ID to resume
+            articles: All articles data (for metadata)
+            output_file: Output file path
+            
+        Returns: Path to combined output file
+        """
+        print(f"\n{'='*60}")
+        print(f"RESUMING BATCH: {batch_id}")
+        print(f"{'='*60}\n")
+        
+        # Rebuild request metadata from saved file
+        requests_file = None
+        for f in self.batch_data_dir.glob("batch_requests_*.json"):
+            requests_file = f
+            break
+        
+        if not requests_file:
+            raise ValueError(f"Cannot find batch requests file for batch {batch_id}")
+        
+        # Build metadata (need to rebuild since we don't save it)
+        completed_articles = self._load_completed_from_output(output_file, articles)
+        _, request_metadata = self._build_batch_requests(articles, completed_articles)
+        
+        # Poll for completion
+        status = self._poll_batch(batch_id)
+        
+        # Retrieve and parse results
+        results = self._retrieve_results(batch_id)
+        records = self._parse_batch_results(results, request_metadata)
+        
+        # Write output
+        return self._write_output(records, output_file, articles)
+    
+    def _write_output(
+        self, 
+        records: List[Dict], 
+        output_file: Path,
+        original_articles: Dict[str, List[Dict]]
+    ) -> str:
+        """Write generated records to output file and create combined file."""
+        
+        fieldnames = [
+            'article_id', 'article_title', 'section_id', 'section_sequence',
+            'question_id', 'question_category', 'stimulus_id',
+            'passage_text', 'lexile_level', 'course', 'module', 'section_number',
+            'question', 'question_type',
+            'option_1', 'option_2', 'option_3', 'option_4',
+            'correct_answer',
+            'option_1_explanation', 'option_2_explanation',
+            'option_3_explanation', 'option_4_explanation',
+            'DOK', 'difficulty', 'CCSS', 'grade',
+            'parent_question_id', 'generation_timestamp',
+            'differentiation_notes', 'cognitive_process',
+            'homogeneity_check', 'specificity_check', 'length_check',
+            'semantic_distance_check', 'single_correct_check', 'diversity_check',
+            'expected_response', 'key_details', 'scoring_notes', 'dok_justification',
+            'part_a_dok',
+            'part_b_question',
+            'part_b_option_1', 'part_b_option_2', 'part_b_option_3', 'part_b_option_4',
+            'part_b_correct_answer',
+            'part_b_option_1_explanation', 'part_b_option_2_explanation',
+            'part_b_option_3_explanation', 'part_b_option_4_explanation',
+            'part_b_dok',
+            'connection_rationale', 'standard_assessment'
+        ]
+        
+        # Write extended questions - append to existing if file exists
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Load existing records if file exists
+        existing_records = []
+        if output_file.exists():
+            try:
+                existing_df = pd.read_csv(output_file)
+                existing_records = existing_df.to_dict('records')
+                print(f"  Found {len(existing_records)} existing records in {output_file}")
+            except Exception as e:
+                print(f"  Warning: Could not read existing file: {e}")
+        
+        # Combine existing and new records, avoiding duplicates by question_id
+        existing_ids = {r.get('question_id') for r in existing_records}
+        new_records = [r for r in records if r.get('question_id') not in existing_ids]
+        all_records = existing_records + new_records
+        
+        with open(output_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for record in all_records:
+                writer.writerow(record)
+        
+        print(f"\n  Saved {len(all_records)} total extended questions to {output_file}")
+        print(f"    ({len(existing_records)} existing + {len(new_records)} new)")
+        
+        # Create combined file
+        return self._combine_questions(str(output_file), original_articles, str(output_file.parent))
+    
+    def _combine_questions(
+        self, 
+        extended_csv: str, 
+        original_articles: Dict[str, List[Dict]],
+        output_dir: str
+    ) -> str:
+        """Combine original and extended questions."""
+        print(f"\n📦 COMBINING FILES")
+        print(f"{'─'*40}")
+        
+        extended_df = pd.read_csv(extended_csv)
+        parent_ids = extended_df['parent_question_id'].dropna().unique()
+        
+        # Build original dataframe from articles
+        original_records = []
+        for questions in original_articles.values():
+            for q in questions:
+                if q.get('question_id') in parent_ids:
+                    original_records.append(q)
+        
+        original_df = pd.DataFrame(original_records)
+        
+        # Add missing columns
+        for col in extended_df.columns:
+            if col not in original_df.columns:
+                original_df[col] = ''
+        
+        original_df['question_source'] = 'original'
+        extended_df['question_source'] = 'extended'
+        
+        all_columns = list(extended_df.columns) + ['question_source']
+        all_columns = list(dict.fromkeys(all_columns))
+        
+        original_df = original_df.reindex(columns=all_columns)
+        extended_df = extended_df.reindex(columns=all_columns)
+        
+        combined_df = pd.concat([original_df, extended_df], ignore_index=True)
+        combined_df = combined_df.sort_values(
+            by=['article_id', 'section_sequence', 'question_id'],
+            key=lambda x: x.astype(str)
+        ).reset_index(drop=True)
+        
+        combined_file = Path(output_dir) / f"qb_extended_combined.csv"
+        combined_df.to_csv(combined_file, index=False)
+        
+        print(f"  Original questions: {len(original_df)}")
+        print(f"  Extended questions: {len(extended_df)}")
+        print(f"  Combined total:     {len(combined_df)}")
+        print(f"  Combined: {combined_file}")
+        
+        return str(combined_file)
+    
+    def process_all_articles_batch(
+        self,
+        input_file: str,
+        output_file: str,
+        limit: int = 0,
+        resume_batch_id: Optional[str] = None
+    ) -> str:
+        """
+        Process all articles using batch API.
+        
+        Args:
+            input_file: Path to input CSV
+            output_file: Path to output CSV
+            limit: Limit number of articles (0 = all)
+            resume_batch_id: Optional batch ID to resume
+            
+        Returns: Path to combined output file
+        """
+        print(f"\n{'='*60}")
+        print(f"BATCH PROCESSING MODE")
+        print(f"Cost savings: 50% vs standard API")
+        print(f"{'='*60}\n")
+        
+        # Load existing questions
+        print(f"Loading existing questions from {input_file}...")
+        articles = {}
+        with open(input_file, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                article_id = row['article_id']
+                if article_id not in articles:
+                    articles[article_id] = []
+                articles[article_id].append(row)
+        
+        total_questions = sum(len(q) for q in articles.values())
+        print(f"Found {len(articles)} articles with {total_questions} questions")
+        
+        # Prepare output file
+        output_path = Path(output_file)
+        if 'extended' in output_path.stem.lower():
+            extended_file = output_path
+        else:
+            extended_file = output_path.parent / f"{output_path.stem}_extended.csv"
+        
+        # Check for completed articles
+        completed_articles = self._load_completed_from_output(extended_file, articles)
+        print(f"  Already completed: {len(completed_articles)} articles")
+        
+        # Apply limit
+        article_ids = [aid for aid in articles.keys() if aid not in completed_articles]
+        if limit > 0:
+            article_ids = article_ids[:limit]
+        
+        # Filter articles to process
+        articles_to_process = {aid: articles[aid] for aid in article_ids}
+        
+        if not articles_to_process:
+            print("\n✓ All articles already processed!")
+            combined_file = extended_file.parent / "qb_extended_combined.csv"
+            return str(combined_file) if combined_file.exists() else ""
+        
+        print(f"\n📋 PROGRESS STATUS")
+        print(f"{'─'*40}")
+        print(f"  Total articles in dataset: {len(articles)}")
+        print(f"  Already completed:         {len(completed_articles)}")
+        print(f"  Will process this run:     {len(articles_to_process)}")
+        
+        # Resume existing batch if provided
+        if resume_batch_id:
+            return self.resume_batch(resume_batch_id, articles, extended_file)
+        
+        # Build batch requests
+        print(f"\nBuilding batch requests...")
+        batch_requests, request_metadata = self._build_batch_requests(articles_to_process, set())
+        print(f"  Created {len(batch_requests)} batch requests")
+        
+        if not batch_requests:
+            print("\n✓ No requests to process!")
+            return ""
+        
+        # Save metadata for resume capability
+        metadata_file = self.batch_data_dir / f"batch_metadata_{self.run_id}.json"
+        with open(metadata_file, 'w') as f:
+            # Save serializable version
+            serializable_metadata = {}
+            for k, v in request_metadata.items():
+                serializable_metadata[k] = {
+                    "article_id": v["article_id"],
+                    "question_category": v["question_category"],
+                    "question_type": v["question_type"],
+                    "num_siblings": v["num_siblings"],
+                    "original_question_id": v["original_question"].get("question_id", "")
+                }
+            json.dump(serializable_metadata, f, indent=2)
+        
+        # Submit batch
+        batch_id = self._submit_batch(batch_requests)
+        
+        print(f"\n📋 BATCH SUBMITTED")
+        print(f"{'─'*40}")
+        print(f"  Batch ID: {batch_id}")
+        print(f"  Requests: {len(batch_requests)}")
+        print(f"  To resume: --batch-mode --resume-batch {batch_id}")
+        
+        # Poll for completion
+        start_time = time.time()
+        status = self._poll_batch(batch_id)
+        total_time = time.time() - start_time
+        
+        # Retrieve and parse results
+        results = self._retrieve_results(batch_id)
+        records = self._parse_batch_results(results, request_metadata)
+        
+        # Write output
+        combined_file = self._write_output(records, extended_file, articles)
+        
+        print(f"\n{'='*60}")
+        print(f"  BATCH PROCESSING COMPLETE")
+        print(f"{'='*60}")
+        print(f"\n📊 RESULTS")
+        print(f"{'─'*40}")
+        print(f"  Batch ID:            {batch_id}")
+        print(f"  Total time:          {total_time:.0f}s")
+        print(f"  Requests processed:  {status['succeeded']}/{status['total']}")
+        print(f"  Questions generated: {len(records)}")
+        print(f"  Cost savings:        50%")
+        print(f"\n📁 OUTPUT")
+        print(f"{'─'*40}")
+        print(f"  Extended:  {extended_file}")
+        print(f"  Combined:  {combined_file}")
+        
+        return combined_file
+
+
 def load_config() -> Dict[str, Any]:
     """Load configuration from config.json if it exists."""
     if CONFIG_FILE.exists():
@@ -1931,11 +2945,25 @@ Examples:
     # Concurrent with specific number of workers
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --concurrent --max-workers 3
 
+    # BATCH MODE: 50% cost reduction (async processing)
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --batch-mode
+
+    # Resume an interrupted batch
+    python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --batch-mode --resume-batch msgbatch_xxx
+
     # Include guiding questions (1 sibling each) + quiz questions
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --include-guiding
 
     # Only guiding questions
     python question_bank_extender.py -i inputs/questions.csv -o outputs/extended.csv --only-guiding
+
+Processing Modes:
+    --concurrent:  Real-time processing with multiple API keys
+                   Best for: Immediate results, progress tracking
+                   
+    --batch-mode:  Async processing with 50% cost reduction
+                   Best for: Large-scale processing, cost optimization
+                   Note: Results may take minutes to hours
 
 Concurrency:
     Set multiple API keys in .env file for concurrent processing:
@@ -1958,6 +2986,7 @@ Configuration:
         "only_guiding": false,
         "log_dir": "outputs/llm_logs",
         "concurrent": false,
+        "batch_mode": false,
         "max_workers": 5
     }
         """
@@ -2018,6 +3047,17 @@ Configuration:
         default=None,
         help='Maximum number of concurrent workers (default: number of API keys, max 10)'
     )
+    parser.add_argument(
+        '--batch-mode',
+        action='store_true',
+        help='Use Claude Message Batches API for 50%% cost reduction (async processing)'
+    )
+    parser.add_argument(
+        '--resume-batch',
+        type=str,
+        default=None,
+        help='Resume a previously submitted batch by ID (use with --batch-mode)'
+    )
     
     args = parser.parse_args()
     
@@ -2033,11 +3073,48 @@ Configuration:
     log_dir = args.log_dir or config.get('log_dir', None)
     concurrent = args.concurrent or config.get('concurrent', False)
     max_workers = args.max_workers or config.get('max_workers', DEFAULT_MAX_WORKERS)
+    batch_mode = args.batch_mode or config.get('batch_mode', False)
+    resume_batch = args.resume_batch
     
     # Validate mutually exclusive options
     if include_guiding and only_guiding:
         print("ERROR: Cannot use both --include-guiding and --only-guiding")
         return 1
+    
+    if concurrent and batch_mode:
+        print("ERROR: Cannot use both --concurrent and --batch-mode")
+        print("  --concurrent: Real-time processing with multiple API keys")
+        print("  --batch-mode: Async batch processing with 50% cost reduction")
+        return 1
+    
+    # Handle batch mode
+    if batch_mode:
+        # Get API key for batch mode (uses single key)
+        api_key = args.api_key or os.getenv('ANTHROPIC_API_KEY')
+        if not api_key:
+            api_keys = load_api_keys()
+            if api_keys:
+                api_key = api_keys[0]
+        
+        if not api_key:
+            print("ERROR: No API key provided. Set ANTHROPIC_API_KEY or use --api-key")
+            return 1
+        
+        extender = BatchQuestionBankExtender(
+            api_key=api_key,
+            checkpoint_dir=args.checkpoint,
+            log_dir=log_dir,
+            include_guiding=include_guiding,
+            only_guiding=only_guiding
+        )
+        
+        extender.process_all_articles_batch(
+            input_file=args.input,
+            output_file=args.output,
+            limit=args.limit,
+            resume_batch_id=resume_batch
+        )
+        return 0
     
     # Handle concurrent vs sequential mode
     if concurrent:
