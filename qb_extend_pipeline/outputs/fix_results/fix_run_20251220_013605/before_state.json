@@ -1,0 +1,24 @@
+{
+  "quiz_302007_sibling_4": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "specificity_balance"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D are not plausible distractors because they are too literal and specific to the story's fantasy elements rather than generalizable life lessons. Option B ('always involve magic and require special rings') is obviously wrong because it takes literal story details and presents them as a universal truth. Options C and D similarly take specific plot elements (mountain climbing, long-lost family) and frame them as general patterns, making them obviously implausible as real-world lessons.",
+      "homogeneity": "The choices do not belong to the same conceptual category. Option A presents a generalizable life lesson/moral about human motivation. Options B, C, and D present literal story details framed as general patterns. This creates a category mismatch - one is a thematic interpretation while the others are superficial plot summaries presented as lessons.",
+      "specificity_balance": "There is significant imbalance in specificity. Option A is appropriately general and abstract (a universal life lesson). Options B, C, and D are overly specific, incorporating particular story details (magic, rings, mountains, long-lost family members) that don't translate to general lessons, making them much more concrete than option A."
+    },
+    "question_text": "Based on the whole story, what message can readers learn about offers that seem too good to be true?",
+    "options": {
+      "A": "They often come from people who want something for themselves",
+      "B": "They always involve magic and require special rings for safety",
+      "C": "They usually require climbing mountains to reach hidden treasures",
+      "D": "They happen most often when you meet long-lost family members"
+    }
+  }
+}

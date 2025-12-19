@@ -1,0 +1,2450 @@
+[
+  {
+    "question_id": "quiz_302013_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern - they all begin with 'She' followed by a verb phrase describing her reaction, maintaining consistent structure throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible reactions someone might have when suddenly encountering a genie - asking for food, running away, or dropping something and screaming are all believable fear responses that could occur in such a situation.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all descriptions of Aladdin's mother's immediate physical/emotional reactions to seeing the genie appear.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail, describing both a physical action and emotional state (frightened/almost falls, asks for food, runs and hides, drops lamp and screams) with comparable specificity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.3 (describing characters and explaining how their actions contribute to events) by asking students to identify a specific character reaction that directly impacts the story's progression.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous, asking for a specific character's reaction to a specific event that is clearly described in the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one correct answer. The passage explicitly states 'Aladdin's mother was so frightened she almost fell down,' making option A the only defensible correct answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or quotes) are made in the question, so this check passes by default. The question accurately refers to events described in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are sufficiently different from the correct answer. Each describes a distinct reaction to the sudden appearance of the genie, making them clearly distinguishable in context. Distractor 'B' features an action that is not about fear but about making a request, while 'C' and 'D' both describe different types of scared responses, neither involving near falling as in the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question involves simple reading comprehension suitable for Grade 3. The vocabulary ('frightened', 'genie', 'falls down') and the requirement to recall a specific detail from the text are appropriate for this grade level. The paragraph from which the answer is derived is straightforward and provides a clear scenario, allowing students to easily locate and understand the relevant information.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:04.595910",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302013_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'She [verb phrase]' - each choice begins with 'She' followed by a verb and explanatory phrase.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option B 'She wants to meet the Sultan's daughter' is not plausible as a reason for helping Aladdin marry the princess. The passage shows no indication that the mother has any interest in meeting the daughter, making this an obviously weak distractor.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent potential motivations or reasons for the mother's change of heart, maintaining conceptual consistency as explanations for her behavioral shift.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail - each provides a specific, concrete reason for the mother's change in attitude without being overly elaborate or too vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 focuses on describing characters and explaining how their actions contribute to events. This question directly assesses students' ability to analyze character motivation and behavioral change, which aligns perfectly with the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about the mother's change from laughing at Aladdin's idea to helping him. The wording is unambiguous and age-appropriate for 3rd grade.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Answer A is clearly correct based on the passage: 'But Aladdin said, \"Remember those shiny gems from the cave? Take them as a gift to the Sultan.\"' The text shows the mother's change occurs after Aladdin reminds her about the gems and asks her to take them to the Sultan.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question stem, so this check passes by default. The question relies on general comprehension of the story events.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct enough and do not closely resemble the correct answer. Choices B, C, and D present alternative reasons for Aladdin's mother's actions but are not similar in semantic content to A, which clearly connects to the narrative element of the shiny gems prompting her action. The options are differentiated well enough to avoid confusion.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be slightly above the typical Grade 3 level due to the reasoning and comprehension level required. Grade 3 students are still developing more advanced inference skills, and understanding the motivational shift in a character based on a non-explicitly stated realization (the value of the gems) might be challenging. Additionally, the vocabulary and narrative context might also stretch the capabilities typical for this grade, involving themes of marriage and financial exchanges that aren't frequently dealt with at this educational stage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:02.347893",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302014_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: each is a complete sentence starting with a gerund or noun phrase, followed by a verb phrase describing an outcome or principle.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible moral lessons that could be found in fairy tales. Option A could relate to Aladdin's persistence, Option B could relate to his treatment of the genies, and Option D could relate to general moral virtue, making them believable but incorrect interpretations.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent the same conceptual category - moral lessons or central messages that could be derived from a story. They are all thematic interpretations rather than plot details or character traits.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each presents a general life principle or moral lesson in concise, comparable language without being overly detailed or overly vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.2, which requires students to recount stories and determine the central message, lesson, or moral. Asking for the 'central message' explicitly targets this standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. 'Central message' is appropriate terminology for 3rd grade level, and the question has a single, clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option C is clearly the best answer as Aladdin succeeds by wisely using the magical items he possesses (the ring and lamp). The other options don't align well with the story events - there's minimal emphasis on hard work, kindness to others, or honesty as driving forces.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question makes no specific passage references (no paragraph numbers, line numbers, or direct quotes), so there are no references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the question are distinct enough from the correct answer that they should not cause confusion. Each choice represents a different virtue or approach, such as hard work (A), kindness (B), wisdom in resource use (C), and honesty (D). Each option encapsulates a unique and clear trait or action, making it unlikely that they would be confused with one another based on the content provided in the passage.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question and passage are appropriate for a Grade 3 level. The vocabulary used in the passage and the question is simple and straightforward, suitable for young learners. The reasoning required to deduce the answer involves basic inference from the story where Aladdin uses the magical items wisely to improve his and his mother's situation. This level of cognitive demand is fitting for third graders, who are generally starting to engage in slightly more complex comprehension and inferential thinking.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:02.832141",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302014_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure - each is a complete declarative sentence that states a general principle or lesson.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations. Choice A reflects the magical elements, Choice C could relate to the Sultan's initial reaction to class differences, and Choice D reflects the family dynamics shown in the story.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are thematic messages or life lessons that could potentially be derived from the story, maintaining conceptual consistency as moral/lesson statements.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of abstraction - each presents a general life principle or lesson at comparable levels of detail and specificity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.2 by asking students to identify the central message/theme of the story, which requires analyzing how characters respond to challenges and determining the lesson conveyed.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. 'Central message' and 'solving problems' are appropriate terms for 3rd grade level, and the question has one clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly correct as Aladdin consistently uses the tools available to him (the ring, then the lamp) to overcome challenges. The other choices are not well-supported by the story's events and character actions.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this criterion is met by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided are not semantically too close to the correct answer, making them relatively easy to differentiate. Each distractor carries a distinctive idea: 'A' suggests reliance solely on magic, 'C' touches on social hierarchy, and 'D' emphasizes family support. None of these directly hint at the practical use of available resources to solve problems, as indicated in choice 'B'.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and conceptual demands of this question are well-suited for a Grade 3 level. The passage provides context and examples that should allow students at this grade level to comprehend the central message about utilizing available resources (as represented by the magical ring and lamp). Additionally, the moral or takeaway of the story is aligned well with the cognitive and developmental abilities of third graders, focusing on practical and tangible actions (using tools) rather than abstract philosophical ideas.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:00.530476",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302015_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'To show how [subject] [verb] [object/complement]'. Each choice is an infinitive phrase with consistent parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of why an author might include a character's reaction. Choice A relates to magical elements in the story, Choice C addresses decision-making behavior, and Choice D connects to parental protective instincts - all reasonable authorial purposes that could apply to various parts of the passage.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all potential authorial purposes or reasons for including specific story elements. Each choice addresses why an author would include particular content to convey a theme or message.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity. Each presents a general thematic concept (wonder, wealth/opinions, quick decisions, parental protection) without being overly detailed or overly broad compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.6 focuses on distinguishing the reader's point of view from that of the narrator or characters. This question asks about authorial purpose/intent rather than point of view, making it more aligned with standards about author's craft or theme rather than the specified standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's purpose for including the Sultan's reaction to the gems, which is a precise and understandable request.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly the best answer. The passage explicitly shows the Sultan's attitude changing from dismissive laughter to agreement after seeing the valuable gems, demonstrating how wealth can change opinions. The other choices don't directly address this specific reaction sequence.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so there are no references to evaluate for accuracy. The question references 'the Sultan's reaction to the gems' which is accurately reflected in the passage content.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the question are semantically distinct from the correct answer. Each choice represents a different aspect or consequence of the encounter with the Sultan: magical effects, influence of wealth, decision-making of rulers, and parent's protective instincts. These options provide varied viewpoints, making it easier for the students to distinguish the correct answer based on context provided in the passage.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary used in the question and the passage is suitable for a Grade 3 level, being straightforward and simple. The reasoning demand of identifying why the author included a specific detail (the Sultan's reaction) in the narrative involves basic inferential skills. This is a skill typically developed at this educational stage, as children are encouraged to think about characters' motives and actions within the context of a story. The passage provides sufficient detail to support the answer, making the cognitive load manageable for this age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:02.932370",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302015_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'The narrator describes the Sultan [verb]ing...' This creates consistent parallel construction across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options C and D are not plausible distractors. Option C is factually incorrect (the Sultan didn't call Aladdin's mother - she went to him), and Option D has no basis in the text (no mention of the Sultan giving his daughter gifts). These are obviously wrong rather than believable alternatives.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe narrative techniques the author uses to show the Sultan's changing opinion through his actions and reactions. They all belong to the same conceptual category of how the narrator reveals character development.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail, describing specific actions or reactions of the Sultan without being overly detailed or vague. Each option mentions one clear narrative element.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.6 by asking students to identify how the narrator shows character perspective/opinion changes. Students must distinguish the narrator's point of view and understand how narrative techniques reveal character development.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It directly asks about narrative technique (how the narrator shows) and focuses on a specific character development (Sultan's changing opinion about Aladdin).",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the only correct answer. The passage explicitly shows the Sultan first laughing at the proposal, then becoming amazed when he sees the gems. No other option accurately describes what happens in the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question or answer choices, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from each other and from the correct answer in terms of the actions they describe. They reflect different possible scenarios involving the Sultan's reaction or actions and are clearly differentiated. For instance, asking for more treasure (choice B), calling someone to the palace (choice C), and giving gifts (choice D) illustrate very different outcomes compared to being amazed by gems (choice A). Each choice indicates a different type of reaction from the Sultan, reducing potential confusion for the respondent.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is suitable for a Grade 3 level based on the vocabulary and reasoning required. The language used is simple and clear, with terms like 'amazed,' 'laughing,' and 'gems' that are understandable at this grade level. The cognitive demand involves making a logical connection from a cause (seeing gems) to an effect (changing behavior) that is manageable for third graders, aligning well with their developmental stage. The length and complexity of the text provided in the passage are also appropriate, as it guides students clearly toward the answer without requiring advanced inferential skills.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:06.833969",
+    "run_id": "20251220_013656",
+    "article_id": "article_101002"
+  },
+  {
+    "question_id": "quiz_302037_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'She starts by [action] and ends by [action].' The structure is consistent across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible. Choice B captures real elements (excitement about the cake, confusion about identity). Choice C reflects actual crying episodes. Choice D mentions exploration and character interactions that do occur. None are obviously wrong.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all describe Alice's emotional/behavioral progression from beginning to end of the passage, comparing her initial reactions to her final reactions.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail, each describing two specific behaviors/reactions (one from the beginning, one from the end) without being overly detailed or too vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 focuses on describing characters and how their actions contribute to events. This question directly assesses character analysis by asking students to trace Alice's behavioral/emotional change throughout the passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific comparison between Alice's reactions at the beginning versus the end of the passage, which is straightforward to understand.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly correct. Alice starts by crying when she faces size problems (can't reach key, too big for door) and ends by taking action (deciding to explore, getting mushroom pieces). The other choices misrepresent either the beginning or ending behaviors.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default. The question refers generally to 'beginning' and 'end' of the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from the correct answer and from each other. Each choice describes a different sequence of emotions and actions, allowing a clear distinction. Distractor B involves 'excitement' and 'confusion about identity,' which are not mentioned concerning Alice's reactions to size changes in the passage. Distractor C suggests she asked for help, which didn't occur. Distractor D mentions exploring and talking to other characters, diverging significantly from the focus on Alice's reactions to her size changes.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3 as it uses relatively simple language and asks students to identify a sequence of events and emotions, which are clearly stated in the passage. Students are required to extract information directly from the text rather than infer deeply, which is suitable for their reading comprehension level at this grade. The reading passage complexity and vocabulary are also appropriate for this age group, focusing on straightforward narrative comprehension.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:06.752474",
+    "run_id": "20251220_013656",
+    "article_id": "article_101005"
+  },
+  {
+    "question_id": "quiz_302038_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'Problems + verb + when/if + condition/action.' Each choice presents a complete statement about how problems work or are resolved.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations. Choice A reflects a common problem-solving approach (seeking help), Choice C addresses cause-and-effect thinking about problems, and Choice D represents avoidance as a strategy some might consider, making all options believable to 3rd graders.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all statements about general approaches to or perspectives on problem-solving, maintaining thematic consistency.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and abstraction. Each presents a general principle about problems in roughly the same number of words with comparable complexity for the grade level.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.2 by asking students to identify the central message/lesson about problem-solving that emerges from Alice's experiences throughout the passage, requiring them to determine the theme from the text details.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks for the 'main message the author wants readers to understand about solving problems,' providing clear direction for what students should identify.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly correct as Alice demonstrates persistence and tries multiple approaches (drinking, eating cake, getting advice from Caterpillar). The other choices are not supported by the text evidence - Alice doesn't receive effective help from others, her problems aren't caused by poor choices, and ignoring problems doesn't resolve them.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this criterion is automatically satisfied.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from each other and from the correct answer in terms of the solution methods they suggest towards problem-solving. Each choice represents a different approach or view on handling problems: 'A' suggests seeking help, 'B' encourages patience and experimenting with solutions, 'C' hints at consequences of choices, and 'D' discusses avoidance. This diversity in the possible answers ensures that there isn't a semantic overlap that could confuse the test-taker.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The passage uses straightforward language appropriate for Grade 3, narrating a sequence of events with simple sentences. Although the question requires critical thinking, it aligns with the developmental abilities of Grade 3 students to infer from the text that various attempts and patience are part of problem-solving, as seen in Alice trying different things to manage her size. The cognitive task of deriving the 'main message' from Alice's experiences is suitable for the comprehension and analytical abilities expected at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:11.133075",
+    "run_id": "20251220_013656",
+    "article_id": "article_101005"
+  },
+  {
+    "question_id": "quiz_302039_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the exact same grammatical structure: 'Alice thinks changing sizes is [adjective], but the Caterpillar thinks it is [adjective].' The parallel construction is consistent across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options B, C, and D are not plausible based on the passage. Alice never expresses that changing sizes is 'fun' (B), 'helpful' (C), or 'easy' (D). In fact, the passage shows Alice experiencing problems and confusion from the size changes. These distractors are obviously incorrect to anyone who read the passage carefully.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - contrasting emotional/evaluative responses to size changes between Alice and the Caterpillar. Each option presents Alice's perspective versus the Caterpillar's perspective on the same phenomenon.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at the same level of specificity, using single adjectives to describe each character's perspective on size changes. No choice is significantly more detailed or general than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.6 by asking students to distinguish between different characters' points of view about the same events. Students must analyze how Alice views her size changes versus how the Caterpillar views them, which is exactly what the standard requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about how the two characters' viewpoints differ regarding size changes. The wording is precise and age-appropriate for 3rd grade, with no ambiguous language.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the only correct answer. The passage shows Alice expressing confusion and problems with her size changes ('What a strange feeling!', 'I do not really know who I am'), while the Caterpillar 'did not seem to understand Alice's problem' and calmly gives advice, suggesting he views it as normal.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, line numbers, or direct quotes) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided in the multiple choice question are semantically distinct from the correct answer, ensuring that they are clearly different in meaning and context. Each choice represents a different perspective or emotional reaction to the changing of sizes: confusing vs. normal (correct answer); fun vs. scary; helpful vs. silly; and easy vs. hard. There is no overlap in sentiment or viewpoint that could lead to confusion among the options.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question might be too complex for a grade 3 level, primarily due to the abstract nature of comparing perspectives of different characters in the story. Understanding variable points of view and abstract concepts like 'confusing' versus 'normal' could challenge younger students' cognitive capabilities. Additionally, the vocabulary used ('Caterpillar', 'perspective', 'scary', 'silly', etc.) and the requirement to infer emotional states and perspectives from a text may surpass typical grade 3 reading comprehension and reasoning abilities.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:07.177902",
+    "run_id": "20251220_013656",
+    "article_id": "article_101005"
+  },
+  {
+    "question_id": "quiz_302041_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'Each paragraph shows Alice [verb phrase describing an action/situation].' The parallel structure is consistent across all four options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible. Option A relates to Alice's size changes from eating/drinking, Option C could seem reasonable given the White Rabbit appearance, and Option D reflects a common story structure about learning lessons. None are obviously wrong without careful analysis.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all structural patterns that describe how the author organized the first three paragraphs to convey information about Alice's experience.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each provides a general structural pattern without being overly detailed or vague, maintaining consistent scope across options.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.5 by asking students to analyze how the author structures the text (specifically the first three paragraphs) to convey Alice's challenge. It requires understanding of text structure and organizational patterns.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks about the structure of the first three paragraphs and how they show Alice's main challenge. The wording is precise and age-appropriate for 3rd grade.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly the correct answer. Each paragraph shows Alice changing size (shrinking, growing, shrinking again) but remaining unable to reach her goal of entering the garden. The other options don't accurately describe the structural pattern across all three paragraphs.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question accurately references 'the first three paragraphs' which corresponds to the actual structure of the passage. This reference is correct and helps students focus on the relevant portion of text.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in this multiple-choice question are well-differentiated from the correct answer. Each distractor offers a unique scenario distinct from 'B - Each paragraph shows Alice changing size but still unable to reach her goal.' Distractors A, C, and D propose different themes such as trying different foods, meeting new characters, and learning lessons, none of which accurately reflect the passage's focus on Alice's size changes and her consistent failure to achieve her aim.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriately challenging for a Grade 3 level. The vocabulary used in the question and the answer choices is straightforward and aligns with the language skills of students at this grade level. Additionally, the cognitive demand of this question, which requires linking Alice's changing size to her inability to achieve her goal, is suitable. It encourages students to summarize the main problem faced by the character across different parts of the story without requiring overly complex analytical skills.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:03.889295",
+    "run_id": "20251220_013656",
+    "article_id": "article_101005"
+  },
+  {
+    "question_id": "quiz_302041_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'Each paragraph shows Alice [verb phrase] that [comparative clause].' The parallel construction is consistent across all four options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of the story structure. B could seem correct since Alice does encounter characters (White Rabbit, Caterpillar). C could appeal to students who notice Alice learning things. D could attract those who see escalating challenges as 'danger.' None are obviously wrong without careful analysis.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - how the author structures the story to show progression or development over time. Each option describes a different type of narrative progression pattern.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and abstraction. Each describes a general structural pattern using similar phrasing ('Each paragraph shows Alice...') and comparable levels of specificity about the progression.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 focuses on referring to parts of stories and describing how parts of a text build on earlier sections. This question directly assesses how the author structures paragraphs to build complexity over time, which aligns perfectly with analyzing text structure and progression.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about how the author uses structure to show increasing complication of Alice's size problems, with clear focus on authorial technique and story progression.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct - each incident does create a bigger problem (too small for key, then too big for door, then swimming in tears). The other options don't accurately describe the actual story structure pattern shown in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references 'each paragraph' conceptually rather than making specific numbered citations, and this reference is accurate - the progression can indeed be traced through the paragraph structure of the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are clearly distinct from the correct answer. Options B, C, and D describe different scenarios involving other characters, learning lessons, and visiting dangerous places, which do not directly relate to the increasing complications of Alice\u2019s size changes as described in the correct answer A. Each distractor introduces a different perspective or aspect of the story, ensuring that they are not semantically too similar to the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be too complex for a Grade 3 level due to the abstract reasoning required to understand causal relationships and complexities within the text. Students at this grade level might struggle with identifying how each action Alice takes leads to increasingly complicated problems, which requires a synthesis of text and an understanding of sequence and consequence that may not be fully developed. Moreover, the vocabulary and concepts, such as describing logistic and proportional changes (getting smaller and larger and the implications thereof), might be challenging for children in the third grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:23.788599",
+    "run_id": "20251220_013656",
+    "article_id": "article_101005"
+  },
+  {
+    "question_id": "quiz_302031_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'She + verb + object/complement.' Each choice begins with 'She' followed by an action verb and describes what Alice does.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible events that actually occur in the story. Option B (falling down the well), Option C (getting tired by the river), and Option D (finding the golden key) are all real events from the passage, making them believable wrong answers for students who might confuse the sequence.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all actions/events that Alice experiences during her adventure. Each describes a specific action Alice takes or situation she encounters.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail. Each option gives a brief, specific action without being overly detailed or overly vague. They are all concise descriptions of single events.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.5, which focuses on referring to parts of stories and describing how each successive part builds on earlier sections. The question requires students to identify the sequence of events and understand story structure.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific point in the sequence ('right after Alice lands in the pile of leaves') and the language is appropriate for 3rd grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one correct answer. The passage clearly states that after Alice lands on the pile of leaves, 'In front of her was a long tunnel. The White Rabbit was rushing down it. Alice ran after him.' This matches option A perfectly.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question accurately references the specific event from the passage - Alice landing in the pile of leaves - which occurs in the third section of the text. No inaccurate references are made.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors offered in the multiple-choice question are clearly distinct from the correct answer. Each choice relates to fundamentally different parts of the Alice's Adventure in Wonderland story, making it easy to discern the correct context of events following her landing on a pile of leaves. The inaccuracy of the other options with respect to what occurs immediately after Alice lands is apparent, and there is no semantic closeness that might confuse readers.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question demands that students remember specific plot details and accurately sequence events immediately following a significant action in the story. While the memory component is suitable for Grade 3, the detail and exactitude necessary in recalling the direct sequence of events might be challenging, particularly without the presence of the full text during the assessment. The vocabulary such as 'tunnel' and 'pile of leaves' is appropriate for this grade level, but the complexity of textual navigation needed may exceed typical expectations for 3rd graders, especially considering it is a direct recall from a possibly unfamiliar text rather than a comprehension based on a provided passage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:24.783819",
+    "run_id": "20251220_013656",
+    "article_id": "article_101004"
+  },
+  {
+    "question_id": "quiz_302032_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'The narrator + verb phrase + description of narrative technique.' Each choice maintains consistent structure with 'The narrator' as subject followed by a descriptive predicate.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are believable. Option B could seem correct since narrators often focus on events. Option C is plausible as third-person narrators might emphasize emotions differently. Option D is reasonable as narrative pacing can differ from real-time experience. None are obviously wrong without careful analysis.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category: differences between third-person narration and first-person perspective. Each option describes a specific aspect of how the narrator's telling might differ from Alice's own account.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail and specificity. Each makes one clear claim about narrative technique without being overly detailed or vague. The complexity and scope of each option is comparable.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.6, which focuses on distinguishing point of view and understanding how narrators tell stories. The question specifically asks students to compare third-person narration with how Alice herself would tell the story, requiring analysis of narrative perspective.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific comparison between the narrator's telling and Alice's potential telling, with a clear focus on identifying narrative differences. The wording is accessible for 3rd grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct as the passage demonstrates the narrator's access to Alice's internal thoughts and feelings ('Alice thought to herself,' 'Alice wondered'). The other options are not supported by evidence: B is incorrect as both would tell real events, C has no textual support, and D is not evident in the pacing.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question or answer choices that could be inaccurate. The question refers generally to the narrative style throughout the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct in their statements and offer clear contrasts to the correct answer (A). Distractor B states the narrator 'only tells about things that really happened,' which clearly doesn\u2019t include Alice\u2019s inner thoughts and feelings indicated in the correct answer. Distractor C incorrectly suggests the narrator exaggerates Alice's emotions, and Distractor D implies an element of time compression in the narration, both of which are easily distinguishable from A, which mentions internal thoughts and feelings.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question and choices involve reasoning about narration style, specifically how thoughts and external events are conveyed. This can be challenging but achievable for a Grade 3 student given the context provided from the passage. The language used in the question and options is straightforward and age-appropriate. The discussion about internal thoughts vs. actual events is a suitable cognitive challenge for this grade level, supporting comprehension development and critical thinking about texts.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:23.249118",
+    "run_id": "20251220_013656",
+    "article_id": "article_101004"
+  },
+  {
+    "question_id": "quiz_302046_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'It + verb + Alice + to + action/outcome.' Each choice uses parallel construction with consistent subject-verb-object patterns.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D is not plausible because the passage clearly shows Alice continues exploring after the Cat disappears - she walks to the tea party with the Mad Hatter and March Hare. Options B and C are also questionable as distractors since the text shows Alice successfully finds her way to the tea party without difficulty or tree climbing.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe Alice's subsequent actions/decisions after the Cheshire Cat disappears. They all represent potential behavioral responses or consequences following the Cat's vanishing act.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail about Alice's actions. Each describes a specific behavioral outcome without being overly detailed or vague compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 focuses on describing characters, settings, and events, and explaining how they influence each other. This question directly assesses how one event (the Cat's disappearing) influences subsequent story events, which is exactly what the standard requires.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about the cause-and-effect relationship between the Cat's disappearing action and what happens next in the story. The wording is unambiguous and age-appropriate for grade 3.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only defensible answer. The passage shows that after the Cat disappears, Alice continues walking and arrives at the tea party where she encounters the Mad Hatter and March Hare, which aligns with the Cat's earlier direction about where these characters live.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default. The question refers generally to story events that are accurately reflected in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinctly different both in concept and outcome from the correct answer. Doesn\u2019t B, C, and D lead to various outcomes that do not directly connect to Alice deciding to visit Mad Hatter and March Hare. The distinction between correct and incorrect answers is clearly established, which aids the test-taker in identifying the precise effect of the Cheshire Cat's actions as depicted in the passage.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question might be challenging for a Grade 3 level due to several factors. First, it requires the ability to infer the consequences of an event (the cat disappearing) that are not explicitly stated but rather implied in the narrative. Second, the complexity of the vocabulary such as 'disappear', 'Cheshire Cat', 'Mad Hatter', and 'March Hare', and the abstract nature of concepts like disappearing gradually might be complicating for younger students to fully grasp. This might make the reasoning demands and inference making slightly too sophisticated for the typical cognitive and comprehension level expected at this grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:28.065585",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302046_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern - they all start with 'She' followed by a verb and describe Alice's action in response to the lemonade offer.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible responses Alice could have had to the lemonade offer. Each represents a reasonable way someone might react in that social situation, making them believable incorrect choices.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe Alice's behavioral responses to the March Hare's lemonade offer - they are all actions/reactions she could have taken in that specific moment.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail about Alice's response - each describes one specific action she takes without being overly elaborate or too vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.3 by asking how Alice's specific response reveals aspects of her character. Students must analyze her actions to understand her personality traits (observant, direct, honest).",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about Alice's response to the lemonade offer and how it reveals her character, with clear context from the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is the only correct answer based on the passage text: 'Alice looked around the whole table carefully. I don't see any lemonade anywhere.' The other options describe actions that did not occur in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers or quotes are referenced in the question, and the question accurately refers to events that occur in the passage (the lemonade exchange between Alice and the March Hare).",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in this question are distinct and diverse in their scenarios. Each offers a significantly different response from Alice: acceptance, pointing out absence, making a request, and ignoring. These options are clearly different from each other and do not overlap in meaning or result in semantic similarity that could confuse the answer choice.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question poses a difficulty in that the correct answer described in the prompt is not actually mentioned in the provided passage. This disconnect makes the question inappropriate for Grade 3 or any level, as it relies on information not provided or implied in the text. The inability to derive the answer from the passage increases cognitive load and does not align with expectations for comprehensibility and fairness, particularly for the cognitive and deductive reasoning capabilities expected at Grade 3.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:24.370104",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302047_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern of imperative verb phrases: 'Stay calm and keep trying,' 'Give up when things get hard,' 'Avoid talking to new people,' 'Always follow the first advice.'",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of how one might respond to confusing situations. Each represents a reasonable strategy that someone might consider when faced with confusion, making them believable incorrect choices.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all strategies or approaches for dealing with difficult or confusing situations. Each presents a different behavioral response to confusion.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity, presenting general behavioral strategies without excessive detail. Each is a concise, broadly applicable piece of advice of comparable scope.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral. This question asks about a lesson the story teaches, but the passage doesn't clearly demonstrate Alice learning or embodying the lesson 'stay calm and keep trying.' The standard requires identifying themes explicitly supported by the text, not inferring general life lessons.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question is ambiguous because it asks what 'lesson the story teaches' without clearly defining whether it means what Alice learns, what readers should learn, or what the author intended. Additionally, 'dealing with confusing situations' is vague and could apply to multiple aspects of Alice's journey.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The passage doesn't clearly support option A as the definitive correct answer. Alice doesn't consistently demonstrate staying calm (she shows anger multiple times) or a clear pattern of persistence leading to success. Other interpretations could be equally valid based on the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, line numbers, or direct quotes) are made in the question, so there are no references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in this question are clearly differentiated from the correct answer. Each option represents a distinct approach to handling confusing situations: 'Stay calm and keep trying' suggests perseverance, 'Give up when things get hard' suggests surrender, 'Avoid talking to new people' implies social withdrawal, and 'Always follow the first advice' limits decision-making to initial suggestions. None of these choices are semantically close enough to each other to cause confusion, as each presents a unique strategy.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "For Grade 3, this question may be slightly challenging due to a few factors. Firstly, the vocabulary and phrases such as 'everyone in this place is mad, including me and you,' and 'a grin without a cat' are complex and could be confusing. Secondly, the abstract reasoning required to understand the thematic implications of Alice's experiences and extract a lesson about handling confusing situations may be too demanding for this age group, typically between 8 to 9 years old. The literal comprehension of the text might be manageable, but the inferential reasoning about life lessons from the story would likely be intricate for most children in this grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:31.361411",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302047_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: subject + modal verb/verb + predicate. Each choice is a complete sentence expressing a general principle or lesson.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible themes that could reasonably be drawn from children's literature. Options A, C, and D represent common moral lessons found in stories, making them believable alternatives even though they don't match the passage content.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all moral lessons or themes that could be derived from a story. Each represents a potential main message or takeaway.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each presents a general life lesson or principle in simple, concrete terms appropriate for 3rd grade level without being overly detailed or vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.2 requires students to recount stories and determine central message, lesson, or moral. This question directly assesses this standard by asking students to identify the main message conveyed through Alice's conversations.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks for the main message conveyed through Alice's conversations, providing clear parameters for what students should analyze.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly the best answer. The passage repeatedly shows confusing, illogical conversations (the Cat's circular logic, the March Hare's lemonade offer, the Mad Hatter's word play). The other options are not supported by the passage content.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references 'Alice's conversations in Wonderland' which accurately reflects the content of the passage. No specific paragraph numbers or quotes are cited that could be inaccurate.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided ('Friends should always help each other', 'People should be kind to strangers', and 'Children must listen to adults') are significantly different in meaning from the correct answer 'Talking can sometimes be confusing.' Each choice targets a different theme or lesson which might be derived from various stories, ensuring that there is a clear distinction between the correct answer and the distractors.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question and passage are appropriate for a Grade 3 level. The vocabulary and sentence structures in the passage are manageable for this age group, focusing on direct speech and clear, descriptive actions which can help maintain student interest. The reasoning required to choose the correct answer is also suitable for this grade level, encouraging students to infer and understand the somewhat confusing nature of conversations based on Alice's interactions with the characters. The cognitive load is balanced and fitting for third graders who are at a developing stage of reading comprehension and inferential understanding.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:25.536655",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302048_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: each begins with 'He' followed by a verb phrase describing an action or behavior of the Cheshire Cat.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible because they describe actual behaviors or statements from the Cheshire Cat in the passage. A third-grader could reasonably think any of these details might suggest mystery or magic.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are the same type of answer - they each describe specific actions, behaviors, or statements made by the Cheshire Cat that could potentially indicate mysterious or magical qualities.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail, each describing one or two specific behaviors or actions of the Cheshire Cat without being overly detailed or overly vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.7 focuses on explaining how illustrations contribute to text meaning and mood. This question asks about text details that show character traits (mysterious/magical), which aligns more with character analysis standards like RL.3.3 rather than the illustration-text relationship standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for specific text details that demonstrate particular character traits, and the task is straightforward for the target grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option C is clearly the best answer as physically disappearing piece by piece is the most obviously magical and mysterious behavior. The other options, while describing unusual behaviors, don't demonstrate supernatural qualities as clearly.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question or answer choices, so this check passes by default. All content referenced is accurately represented from the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are clearly differentiated from each other and from the correct answer. Each option describes different aspects of the Cheshire Cat's behavior and characteristics, none of which are semantically similar enough to the correct answer (C) to cause confusion. The unique aspect of the cat disappearing, with only his grin remaining, distinctly conveys his mysterious and magical nature compared to the other choices that focus on his dialogue or physical positioning.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary used in the question and answer choices is appropriate for Grade 3, involving common words combined with the context provided directly from a familiar children's story. The reasoning required to identify how the disappearance of the Cheshire Cat showcases his magical qualities fits well with the cognitive capabilities of a typical third grader, who can infer characteristics from explicit details like the physical description of disappearing and the remaining grin. This provides an engaging yet manageable challenge for students in this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:24.689598",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302048_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.5454545454545454,
+    "total_checks_passed": 6,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'Alice [verb] [object/prepositional phrase]' - they are consistently structured as actions Alice takes.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option B 'Alice talks to the sleepy Dormouse' is not plausible because the text explicitly states the Dormouse is sleepy and there's no indication Alice ever speaks to it. Option D 'Alice solves the raven riddle' is also implausible since the passage ends mid-sentence without Alice solving anything.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent conversational interactions or attempts at interaction that Alice has at the tea party scene, maintaining conceptual consistency.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail - each describes a specific conversational topic or interaction without being overly broad or excessively detailed.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.7 focuses on using illustrations and text to demonstrate understanding of characters, setting, or plot. This question is asking students to organize narrative events in sequence, which is more aligned with story structure/sequencing standards rather than using visual and textual information for comprehension.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question is ambiguous about what constitutes 'Conversation 3.' The chart format suggests discrete conversations, but the tea party scene contains multiple overlapping exchanges about room at the table, lemonade, and invitations that blur together rather than forming distinct conversations.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Both A and C could be considered correct. The argument about room at the table and the discussion about lemonade occur in the same continuous exchange and are equally valid as 'Conversation 3' since there's no clear delineation between conversations in the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are clearly distinct from the correct answer and from each other. Each choice refers to a different potential interaction Alice could have during the tea party, and only option A ('Alice argues about room at the table') is directly supported by the provided passage. The other choices refer to interactions or elements not mentioned in the text, making it less likely that they would be confused with the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is suitable for a Grade 3 level. The vocabulary used in the question and choices is straightforward and age-appropriate. The reasoning required to identify the correct answer involves matching a detail from the text to the chart, a task that aligns well with the reading comprehension and critical thinking skills expected at this grade level. Furthermore, the text provides a clear context for each conversation, which aids in making the connections needed to answer the question accurately.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (7 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:27.548128",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302048_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'Alice [verb] [object/description]' - they are all complete sentences describing Alice's actions or thoughts in a consistent structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible because they all describe actual events from the story that could reasonably be considered important details. Each represents a genuine moment from Alice's journey that a student might think should be included in the chart.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all specific actions, thoughts, or behaviors of Alice from the three scenes described in the chart. Each represents a detail about Alice's experiences during her journey.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at a similar level of detail - each describes one specific action or thought of Alice with comparable amounts of descriptive detail. None is significantly more general or more granular than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.7 requires students to explain how illustrations and text work together or use information from illustrations and text to demonstrate understanding. This question asks students to identify missing information from a chart, which is more about sequencing and identifying key details (RL.3.1 or RL.3.3) rather than the relationship between text and visual representations.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It provides a simple chart showing Alice's journey in three steps and asks which information should be added to make it more complete. The task is straightforward and easy to understand.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "The question asks what should be added to make the chart 'more complete,' but all options describe events that actually happened in the story. While option C might represent a significant reaction, options A and B also describe important moments (Alice's initial request for help and her bold action at the tea party) that could reasonably make the chart more complete.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or quotes) are made in the question, so this criterion is satisfied by default. The chart accurately reflects the general sequence of events from the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided differ significantly from each other, not only in content but also in the nature of what they highlight regarding Alice's experiences. For instance, A) focuses on her polite request, B) describes her assertive behavior at the tea party, D) highlights an interaction that is elaborative and conversational. These are distinct enough not to be confused with the correct option C), which captures Alice's reaction to a supernatural occurrence. This differentiation helps ensure the clarity needed to accurately select the correct option without confusion or overlap.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is tailored quite well for a Grade 3 level. Vocabulary used is appropriate for this age group, allowing young students to engage with the material effectively. The reasoning required (connecting parts of a narrative to a summarizing chart) is aligned with cognitive skills developed around this age, fostering comprehension and synthesis skills. In structuring the question and choices in this manner, it addresses standard literacy competencies and comprehension monitoring expected for early elementary students.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:32.976608",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302049_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.5454545454545454,
+    "total_checks_passed": 6,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "The choices do not follow consistent grammatical structure. A and B use 'First X, then Y' pattern, C uses 'All characters meet Alice at once', and D uses 'Characters appear in Alice's dreams' - these are different grammatical constructions.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D 'Characters appear in Alice's dreams' is not plausible based on the passage. The text presents the encounters as real events in Wonderland, not dreams. Option C is also implausible since the passage clearly shows Alice meeting characters sequentially, not all at once.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices span different conceptual categories. A and B describe sequential order of meetings, C describes simultaneous meetings, and D describes a completely different scenario (dreams vs. reality). They don't all address the same type of organizational structure.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "There are significant differences in specificity. A and B are specific about the order of two encounters, C is general about timing, and D introduces an entirely different concept (dreams) not related to organizational sequence.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.5 by asking about how the author organizes the story structure, specifically the sequence of character introductions, which relates to understanding text structure and organization.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about how the author organizes the story to show Alice meeting different characters. The intent is unambiguous.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct based on the passage structure. Alice first meets the Cheshire Cat (paragraphs 1-2), then encounters the tea party group with the March Hare, Mad Hatter, and Dormouse (paragraphs 3-4).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question or answer choices, so this criterion is met by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from each other and the correct answer, leaving no confusion among choices. Each option presents a different scenario regarding the sequence or nature of interactions with various characters, making the distinctions between them clear. There's no semantic similarity that could mislead or confuse a third grader into choosing an incorrect answer over the correct one.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is suitable for a Grade 3 student as it involves basic reading comprehension skills, which includes remembering the order and context in which events occur in a narrative. The vocabulary used in both the passage and the question is appropriate for this grade level, not involving any overly complex terms. Additionally, the task of identifying the sequence in which characters are met by the protagonist is a straightforward reasoning challenge suitable for this age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:44.979317",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302049_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All choices follow the same grammatical structure - each is a complete quoted sentence with dialogue tags indicating who is speaking.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible as they are actual lines from the conversation between Alice and the Cheshire Cat that occurs early in the passage, making them believable wrong answers.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are the same type of answer - direct quotations from the dialogue between Alice and the Cheshire Cat in the passage.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail - each is a single sentence of dialogue with speaker attribution, maintaining consistent specificity across options.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.5 focuses on referring to parts of stories, dramas, and poems using terms like chapter, scene, and stanza. This question asks students to identify the beginning of a conversation, which is more about sequence/chronology than structural text features.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous, asking specifically for the sentence that shows the beginning of the conversation between Alice and the Cheshire Cat.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the correct answer as it contains Alice's first words to the Cheshire Cat, definitively marking the beginning of their conversation. The other options are responses that come later in the dialogue.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers are made in the question, and all quoted material in the answer choices accurately appears in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors chosen are discrete segments of the conversation between Alice and the Cheshire Cat that follow a logical order. Each choice represents a distinct part of their exchange, starting with the initial question from Alice (A) and followed by responses and further comments from both characters (B, C, D). This clear sequential flow helps make the distinction between the beginning of the conversation and subsequent dialogue obvious.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and structure of the question are appropriate for Grade 3 students. The words used, such as 'polite', 'conversation', and 'beginning', are typically within the reading and comprehension level expected at this grade. The task of identifying the beginning of a conversation from given options tests basic reading comprehension and attention to detail, relevant skills at this educational stage. The context of the dialogue from a well-known children's story, 'Alice's Adventures in Wonderland', also aids in making the material engaging and relatable for the students.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (17 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:42.941347",
+    "run_id": "20251220_013656",
+    "article_id": "article_101006"
+  },
+  {
+    "question_id": "quiz_302055_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow a consistent grammatical structure - each presents a complete statement or principle about behavior/authority/decision-making in similar declarative sentence format.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations that a student might reasonably derive from the passage. Choice A reflects blind obedience to authority, C focuses on procedural fairness, and D represents a belief in hierarchical wisdom - all are believable misinterpretations.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category of moral lessons or messages about authority, justice, and standing up for principles. They all address themes present in Alice's experiences.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are stated at similar levels of generality - each presents a broad moral principle or lesson without getting into specific details about the story events.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.2 by asking students to identify the central message/theme conveyed through Alice's experiences, which requires determining the main idea and explaining how details support it.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about the central message conveyed through Alice's experiences with unfair rules in both situations mentioned, leaving no ambiguity about what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly the best answer as Alice explicitly stands up against unfair authority (refusing the Queen's order to hold her tongue, calling out 'stuff and nonsense'). The other choices contradict Alice's actual behavior in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or direct quotes are made in the question, so this check passes by default. The question accurately refers to general events (croquet game and trial) that are present in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors presented are distinct from each other and convey markedly different concepts. Each option suggests a different perspective on authority and personal conduct, so there is minimal risk of semantic confusion with the correct answer. Distractor A emphasizes blind respect for authority, D posits a trust in the decision-making of those in power, and C interprets the narrative as a parallel for proper conduct in structured activities. These are clearly different from the correct answer B, which focuses on resistance to authority when it is unjust.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question might be too complex for a typical Grade 3 student in terms of vocabulary, abstract reasoning, and interpretation required. Terms like 'central message,' along with concepts such as analyzing fairness and authority from a narrative, generally align with higher elementary grades, perhaps Grade 5 or above. Additionally, the passage content and the implications of the narrative choices (such as coping with unfair rules and interpreting actions in a metaphorical game) require a level of analytical thinking and synthesis that is potentially beyond the expected cognitive abilities and educational exposure of Grade 3 students.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (13 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:45.283074",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302055_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: gerund phrase + predicate. Each begins with a gerund (Playing, Speaking, Following, Making) followed by a descriptive phrase about what that action accomplishes.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible lessons that could potentially be drawn from the story. Alice does play games (croquet), there are rules in Wonderland, and she meets various creatures, making each option believable without careful analysis.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent moral lessons or life principles that could be learned from a story, maintaining conceptual consistency as potential themes or messages.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are stated at similar levels of abstraction and detail - each presents a general life lesson in approximately the same number of words with comparable complexity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.2 focuses on recounting stories and determining central message/lesson/moral. This question directly asks for the main lesson Alice learns, which aligns perfectly with identifying the central message of the text.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically for the main lesson Alice learns. The wording is appropriate for grade 3 and has one clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly supported by the text, particularly when Alice courageously speaks up against the unjust trial process, saying 'Stuff and nonsense!' and 'I won't!' when told to hold her tongue. The other options lack strong textual support.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers, line numbers, or direct quotes are referenced in the question, so there are no passage references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided in this question sufficiently differ from the correct answer semantically. Each option presents a distinct lesson or theme, such as the value of play, courage, rule-following, or friendship, none of which closely overlap. The correct answer, 'Speaking up for what is right takes courage and bravery,' is clearly distinct from the other themes, reducing confusion among the choices.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The complexity of reasoning required for this question appears too advanced for typical Grade 3 students. The passage does not explicitly address or emphasize the lesson of 'Speaking up for what is right takes courage and bravery.' Such an interpretation requires a level of inferential reasoning and abstract thought likely beyond the educational development of most children at this grade level. Additionally, vocabulary such as 'Mock Turtle,' 'Gryphon,' and other Wonderland-specific terms might be challenging without prior exposure or explanation.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:45.581754",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302056_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'From [possessor]'s point of view' with consistent preposition and noun structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible. Choice A could seem correct since we follow Alice's journey, Choice B might appeal to students who notice the Queen's prominence, and Choice D could attract those who focus on the sister at the end.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all identify different potential narrative perspectives/points of view from characters or observers in the story.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail, each naming a specific perspective holder (Alice, Queen, someone watching, sister) without varying levels of specificity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.6 which focuses on distinguishing point of view. The question asks students to identify the narrative perspective, which is exactly what this standard measures.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clear and unambiguous. 'Point of view' is appropriate terminology for 3rd grade, and the question has only one reasonable interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice C is clearly correct. The story uses third-person narration with an external narrator describing Alice's actions and thoughts ('Alice walked,' 'Alice was sure,' 'Alice woke up'), not first-person from any character's perspective.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors (A, B, D) each represent distinct perspectives (Alice, the Queen, the sister), which are clearly differentiable from the answer (C), which indicates a third-person external observer. There is no semantic overlap that would confuse the identity of the viewpoint, making these choices distinctly separable.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be challenging for a Grade 3 student due to several factors. Firstly, the text is complex, containing advanced vocabulary and nuanced descriptions that require significant comprehension skills. Secondly, discerning narrative perspective is not a straightforward task and typically develops in older students, requiring a deeper level of textual analysis and understanding of narrative conventions than might be expected of children at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Shortest distractor (5 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:42.989325",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302057_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'From [noun/gerund phrase] to [noun/gerund phrase] to [noun/gerund phrase]'. Each choice consistently uses this three-part parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible because they each describe actual events that happen in the passage in chronological order. Choice B mentions games and creatures Alice meets, Choice C covers exploration, learning, and waking up, and Choice D describes finding doors, meeting creatures, and storytelling - all events that occur in the text.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all sequences of three events/experiences that Alice encounters during her adventure, presented as progressions through her journey in Wonderland.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices maintain similar levels of detail and specificity. Each option presents three general categories of events without getting into specific details, maintaining consistent breadth in describing Alice's experiences.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.5 by asking students to analyze how the author organizes events to show a progression (Alice's experiences becoming more dangerous). This requires understanding of text structure and how authors sequence events for effect.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks about the author's organization of events to show increasing danger, which is a precise and understandable concept for 3rd grade students.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is the only answer that correctly identifies the progression toward increasing danger: croquet (fun but chaotic), conversation (confusing but harmless), trial (directly threatening with 'Off with her head!'). The other choices describe events but don't show escalating danger.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers or quotes are referenced in the question or answer choices, so this criterion is satisfied by default. The question refers generally to events in the passage without making specific citations.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided in this multiple-choice question are not semantically too similar to the correct answer. Each choice presents a distinct sequence of events, and none of the incorrect answers contain elements of increasing danger or confusion that align closely with the correct answer. Thus, there is a clear distinction between the correct answer and the incorrect ones, ensuring that the question is not confusing.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question appears appropriate for a Grade 3 level. The key aspect of the question involves identifying a sequence of events, which is a suitable comprehension task for this grade level. Additionally, the vocabulary used in the question and choices is accessible for third graders. The question also encourages critical thinking by asking students to discern the nature of Alice's experiences based on their description, within the grasp of the cognitive demands expected at this educational stage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:47.161184",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302057_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All choices follow the same grammatical pattern starting with 'By' followed by a gerund phrase (describing, showing, making, having), creating consistent parallel structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option B is not plausible - Alice actually meets more people as she progresses (garden with many people, then Mock Turtle and Gryphon, then trial participants). Option D is also questionable as Alice doesn't solve problems but rather encounters increasingly chaotic situations.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address organizational/structural techniques an author might use to show progression or development in a narrative, staying within the same conceptual category of text organization methods.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail, each describing a general organizational pattern without being overly specific or overly broad compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 focuses on referring to parts of stories and describing how parts build on each other. This question directly asks about how the author organizes the passage to show progression, which aligns with analyzing how parts of the text build upon each other.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about organizational structure to show increasing confusion, which has a clear meaning and purpose.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct as each section presents increasingly chaotic and nonsensical events (croquet with live animals, confusing school subjects, backwards trial). The other options are not supported by the text structure.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or quotes) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are clearly distinct from each other and from the correct answer. Distractors B, C, and D each describe a different aspect of the narrative progression or structure that doesn't overlap significantly with A, which correctly captures the escalating oddity of events described in the passage.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "This question might be challenging for Grade 3 students due to several factors. The vocabulary ('stranger', 'semantic similarities', etc.) and concepts (analyzing the organization of a text and inferring the progression of confusion in a narrative) are likely too advanced for this grade level. Furthermore, the description of events in the passage might require a higher level of reading comprehension and abstract thinking than typical for third graders.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:47.120053",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302058_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All choices follow the same grammatical structure: 'Each part [verb] [object/complement]' - this creates consistent parallel structure across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of how story parts might work together. Choice A (new places) could seem valid as Alice moves from croquet to meeting creatures to trial. Choice C (getting braver) has some support with Alice standing up to the Queen. Choice D (more characters) tracks the introduction of new creatures throughout.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - how the four parts of the story function together to create a cohesive narrative structure. Each option presents a different organizational principle for the story's progression.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each presents a general pattern or organizational principle that could apply across the four story parts without getting into specific details.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 focuses on referring to parts of stories and describing how each successive part builds on earlier sections. This question directly assesses understanding of how the four parts work together to create the complete narrative structure.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks students to analyze how the four parts function together, which has a clear meaning and single interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 0,
+        "response": "Choice B (each part gets more exciting) is questionable as the correct answer. While there's some escalation, choice C (Alice getting braver) has strong textual support - she becomes increasingly assertive, culminating in boldly defying the Queen with 'Stuff and nonsense!' and 'I won't!' Multiple answers could be defensibly correct.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or direct quotes are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the question maintain distinctive thematic elements separate from the correct answer. Each choice represents a different narrative element (new locations 'A', increase in excitement 'B', developing bravery 'C', adding characters 'D'), allowing a clear distinction so students are unlikely to confuse them with the correct answer. The question presents unique themes for each choice, ensuring clarity in the differentiation between options.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and conceptual content of the prompt and options are suitable for a Grade 3 level. Understanding sequence and the development of story excitement (as per the correct answer) aligns well with the curriculum focus areas, such as recognizing story elements and sequence, which are typical for this age group. The reasoning required to determine which aspect (e.g., excitement, bravery, characters) best sums up the shift across the story parts is manageable for third graders, ensuring the question is neither too easy nor exceedingly challenging for them.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:50.703933",
+    "run_id": "20251220_013656",
+    "article_id": "article_101007"
+  },
+  {
+    "question_id": "quiz_302062_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure with 'They are' + verb phrase/adjective phrase describing the state or condition of the boats.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible descriptions of how boats might be found in a boathouse. Options B, C, and D all represent realistic scenarios that could occur in a boat storage facility.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe the physical state, condition, or arrangement of boats in a boathouse, maintaining conceptual consistency within the same category.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of descriptive detail about the boats' condition or arrangement, with no choice being significantly more general or specific than others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RL.3.1 by requiring students to locate and recall explicit information from the passage about what Rat observed in the boathouse.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous, asking specifically about what Rat notices about the boats in Toad's boathouse with no room for misinterpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only correct answer, directly supported by the passage text: 'Some boats hung from wooden beams above them. Other boats were pulled up on ramps. But none of the boats were in the water.'",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided in the multiple-choice question are distinct from the correct answer and each other. The right answer mentions the boats hanging from beams or being on ramps, clearly indicating they're out of the water. In contrast, other options describe entirely different states or attributes of the boats (floating in water, brightly colored, designed for racing), which do not risk confusion with the correct answer. This ensures that students need to have understood the specific detail from the passage rather than guessing among semantically similar choices.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The difficulty level appears appropriate for a Grade 3 student. The vocabulary used in the question and the options is straightforward and suitable for this grade level, as terms like 'beams,' 'ramps,' and 'floating' are generally comprehensible by students in this age group. Furthermore, the reasoning required to retrieve the correct answer involves directly recalling an explicitly stated fact from the passage, a task well within the capability of third-grade students. The question effectively tests reading comprehension without introducing undue complexity.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (11 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:51.246084",
+    "run_id": "20251220_013656",
+    "article_id": "article_101008"
+  },
+  {
+    "question_id": "quiz_302064_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'Good friends' + verb phrase. Each option maintains parallel construction throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible statements about friendship that could seem correct to a student who misunderstands the passage's focus. Options A, C, and D represent common but incorrect interpretations of what makes good friendships.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are statements about the nature of good friendships, staying within the same conceptual category of friendship lessons or principles.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each presents a general principle about friendship without being overly detailed or overly broad compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.2 asks students to recount stories and determine the central message, lesson, or moral. This question directly assesses that standard by asking for the main lesson about friendship demonstrated in the story.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically for the 'main lesson about friendship shown throughout the story,' which has a clear and focused meaning.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly correct as demonstrated by Rat's description of Toad's flaws ('not very smart,' 'brags a lot') yet still calling him 'the best of animals' and 'a great friend.' The other options are not supported by the passage evidence.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, line citations, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the multiple-choice question are sufficiently distinct from the correct answer. Choice A refers to physical attributes (nice houses), C focuses on shared activities (same hobbies), and D refers to agreement in opinions, none of which closely overlap with the thematic content of choice B, which revolves around acceptance of personal flaws. Therefore, there should be no confusion between the choices provided and the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3 in terms of vocabulary complexity and reasoning demands. The passage offers a straightforward narrative that students at this level can follow, and the thematic elements discussed, such as friendship and acceptance, are relevant and understandable to this age group. The vocabulary used in both the passage and the question is suitable for third graders, and the reasoning required to choose between the provided options aligns well with the cognitive skills expected at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:44:51.345143",
+    "run_id": "20251220_013656",
+    "article_id": "article_101008"
+  },
+  {
+    "question_id": "quiz_302071_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'He is [adjective] and [adjective].' Each choice presents two character traits using identical syntax.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible character traits that could reasonably describe someone. While they don't match Toad's behavior in the passage, they represent believable personality characteristics that aren't obviously wrong at first glance.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - pairs of character traits or personality descriptors. Each option describes behavioral characteristics using two adjectives.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at the same level of specificity, with each offering two general character traits. No choice is significantly more detailed or vague than the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 requires students to describe characters and explain how their actions contribute to the sequence of events. This question directly assesses character analysis by asking students to identify Toad's traits based on his actions and dialogue throughout the passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for character traits that Toad demonstrates 'throughout the passage,' which provides clear parameters for analysis.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly correct based on textual evidence: Toad persistently tries to convince Rat and Mole to join him, uses persuasive language, and continues pushing even when initially rejected. The other options are not supported by his behavior in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided in the multiple-choice options (thoughtful and patient, quiet and modest, careful and cautious) are distinctly different from the correct answer (persuasive and persistent). Each choice reflects a significantly different set of personality traits. There is no semantic overlap that could confuse a student or blur the distinctions between the correct answer and the other options.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for a Grade 3 level. The vocabulary used within the passage and in the answer choices is simple and understandable for this age group. The reasoning required to select the correct answer involves identifying traits from Toad's actions and dialogue, which fosters basic comprehension and analytical skills relevant to third graders. The task does not demand a deep or complex analysis, making it well-suited for this educational level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:05.827013",
+    "run_id": "20251220_013656",
+    "article_id": "article_101009"
+  },
+  {
+    "question_id": "quiz_302072_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: each begins with an adjective describing friends (True, Good, Best, Real) followed by 'friends' and then a verb phrase describing what they do.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of friendship themes that could be drawn from the story. Choice A relates to agreement, C to trying new things, and D to adventure choices - all concepts present in the passage that could mislead students who focus on surface details rather than the deeper message.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all statements about the nature of friendship and how friends should behave with each other.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each makes a general claim about friendship behavior using roughly the same sentence length and complexity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.2 by asking students to identify the main message/theme about friendship demonstrated in the story. Students must analyze character actions and relationships to determine the central lesson about considering others' feelings.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically for the 'main message about friendship shown in this story,' which has one clear interpretation and directly guides students to identify the theme.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is the only defensibly correct answer. The story clearly shows Rat considering Mole's feelings and changing his decision accordingly. The other choices contradict what actually happens in the story or represent superficial misreadings.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from one another and from the correct answer. Each choice presents a different aspect of friendship, ranging from agreeing on everything, considering feelings, trying new activities, to choosing adventures. The correct option B is clearly the only one supported by the text, where Rat expresses his desire to stay despite Toad's different wish, which highlights the theme of considering a friend's feelings.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and sentence structure in both the passage and the question are appropriate for a Grade 3 reading level. The question demands basic reasoning to understand contrasting viewpoints and decisions among friends, which is suitable for young students. Moreover, identifying themes about friendship based on behavior and interactions in the story is a relevant and manageable analysis task for this age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:02.116692",
+    "run_id": "20251220_013656",
+    "article_id": "article_101009"
+  },
+  {
+    "question_id": "quiz_302073_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'Toad wants [X], Rat wants [Y], and Mole wants [Z]' with parallel verb phrases throughout.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D is obviously wrong and implausible. The passage makes no mention of selling the wagon, buying a boat, or cooking lunch as motivations. Option C is also clearly incorrect as Toad explicitly wants companions, not to travel alone.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they each describe the three characters' motivations or desires regarding the proposed trip.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail, with each option giving one motivation per character in comparable specificity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.6 by asking students to analyze how the narrator reveals different characters' perspectives and motivations through their actions and dialogue.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically how the narrator shows each character has different reasons for their feelings, which is a precise and understandable prompt.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the only correct answer based on textual evidence: Toad explicitly seeks adventure and travel, Rat firmly wants to stay by his river, and Mole shows he wants to please both friends (staying loyal to Rat while quietly admitting the trip sounds fun).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are significantly different in meaning from the correct answer. Each choice presents a different view of the characters' motivations and attitudes that does not overlap confusingly. The correct answer (A) clearly aligns with the narrative description of each character's reaction: Toad is adventurous, Rat is resistant due to his attachment to home, and Mole is excited but seemingly also driven by a wish to maintain harmony, as evident from his following Toad eagerly.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and sentence structures used in both the passage and the question align well with the comprehension levels expected at Grade 3. The question requires students to infer the motives and feelings of the characters from their actions and words, which is a suitable cognitive demand for this grade level. The terminology ('adventure', 'stay home', 'please everyone') is accessible and does not involve complex interpretations, making it appropriate for young readers.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Shortest distractor (16 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:06.912931",
+    "run_id": "20251220_013656",
+    "article_id": "article_101009"
+  },
+  {
+    "question_id": "quiz_302079_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern with a noun phrase as the subject followed by a verb phrase describing what caused the crash.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible based on events described in the passage. Choice B references the friends jumping into the ditch, Choice C suggests the motor car hit the wagon (which could be inferred from the sequence of events), and Choice D mentions road conditions that could cause accidents.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent potential causes of the wagon crash, staying within the same conceptual category of 'what caused the accident.'",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail - each identifies a specific cause with comparable amounts of information and specificity.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.1 (asking and answering questions to demonstrate understanding of text) by requiring students to identify explicit information from the passage about what caused the crash.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the cause of the wagon crash, which has a clear answer based on the passage text.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly correct based on the passage text: 'The old grey horse got scared and jumped forward. Then there was a terrible crash.' The other choices are not supported by the text as direct causes.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct enough from each other and the correct answer. Each choice indicates a different cause for the crash: A) a horse being scared, B) actions of the friends themselves, C) a direct collision, and D) a road condition. There is no overlap or semantic confusion among the options provided. The distinction between the correct answer and distractors is clearly maintained.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary and sentence structure used in both the passage and the question are suitable for this age group. Additionally, the reasoning required to determine the correct answer - linking the effect of the motor car's appearance (scaring the horse) to the consequent crash - aligns well with the cognitive abilities expected at this educational level. The narrative is engaging and contextual clues are sufficient to lead to the correct answer without being overly complex.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:04.994464",
+    "run_id": "20251220_013656",
+    "article_id": "article_101010"
+  },
+  {
+    "question_id": "quiz_302080_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern, beginning with 'To' followed by a verb phrase (show/explain/describe/show), creating consistent parallel structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options B, C, and D are not plausible distractors. Option B about wagon color is completely unrelated to jumping into a ditch. Option C about running speed doesn't match the context of avoiding danger. Option D about road dirtiness is also unrelated to the action of jumping for safety.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices do not belong to the same conceptual category. Option A addresses author's purpose regarding danger/safety, while B addresses descriptive details about appearance, C addresses character abilities, and D addresses setting conditions.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity, each providing a concise explanation for the author's purpose in describing the action.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.3 focuses on describing how characters' actions contribute to events in a story. This question asks students to analyze why the author included the characters jumping into the ditch, which directly assesses understanding of how character actions relate to story events.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's purpose for describing the friends jumping into a ditch when the motor car approaches, which is a precise and focused inquiry.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the only defensible correct answer. The passage explicitly shows the friends had to jump to 'get out of the way' of the motor car, demonstrating its danger to travelers. The other options are not supported by the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in this question are distinct from the correct answer and each other. Each distractor provides a different perspective or reason for the action described in the passage (jumping into the ditch). The correct choice (A) focuses on the danger posed by the motor car, while the other options refer to unrelated aspects such as the color of the wagon, the speed of running, or the cleanliness of the road. These differences ensure there is no semantic overlap that could confuse the test-taker.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question, along with its vocabulary and the reasoning required, is suitable for a Grade 3 level. The vocabulary used in the question and choices are straightforward and accessible for young students. The reasoning needed to answer correctly is directly supported by clues in the text, such as the sudden appearance and effect of the motor car, without requiring overly sophisticated inferential skills. This aligns well with the cognitive and comprehension abilities expected at this educational level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:07.279568",
+    "run_id": "20251220_013656",
+    "article_id": "article_101010"
+  },
+  {
+    "question_id": "quiz_302081_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern - they are all simple declarative statements with a similar noun + verb + complement structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options C and D are not plausible distractors for a question about lessons learned from the story. While horses and wagons are mentioned in the passage, 'Horses need careful training' and 'Wagons break very easily' are not reasonable interpretations of the lesson from how the pleasant trip suddenly changed.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices span different conceptual categories. Option A is about life lessons/philosophy, Option B is about friendship dynamics, while Options C and D are about practical/technical matters related to horses and wagons.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail - they are all brief, general statements that could serve as lessons or takeaways.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.2 asks students to recount stories and determine central messages, lessons, or morals. This question directly asks for a lesson readers can learn, which aligns perfectly with identifying themes and lessons in literature.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about what lesson can be learned from how the pleasant trip suddenly changed. The reference to the change in the trip is unambiguous.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the best answer as it directly relates to the lesson about how their pleasant journey was suddenly disrupted by the motor car. The other options either focus on specific details rather than the broader lesson or are not well-supported by the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the multiple-choice question provide distinct alternatives that are not semantically too similar to the correct answer. Each distractor focuses on different elements of the narrative (e.g., the behavior of friends, the training of horses, the durability of wagons) none of which closely resemble the theme of the unpredictability and sudden change indicated by the correct answer. Therefore, there is a clear distinction between the correct answer and the incorrect ones.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and reasoning required for the question and its answer choices appear to be suitable for a Grade 3 level. The context of a narrative about a sudden change during a trip is relatable and understandable by children of this age group. The language utilized, including the terms and concepts expressed in the passage and question (such as 'adventure', 'disaster', 'wonderful', etc.), is simple and accessible for third-grade students. Additionally, the reasoning required to deduce that good times can end quickly from the described scenario is straightforward and not overly complex for this age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:45:06.425594",
+    "run_id": "20251220_013656",
+    "article_id": "article_101010"
+  }
+]

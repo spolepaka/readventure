@@ -1,0 +1,1173 @@
+{
+  "run_id": "20251220_013656",
+  "timestamp": "2025-12-20T01:45:07.728377",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 36,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 36,
+    "now_passing": 32,
+    "still_failing": 4,
+    "improvement_rate": "88.9%",
+    "questions_improved": 33,
+    "avg_score_before": 0.664,
+    "avg_score_after": 0.876,
+    "avg_score_improvement": 0.212
+  },
+  "by_check_improvement": {
+    "single_correct_answer": {
+      "before_failures": 13,
+      "after_failures": 4,
+      "fixed": 13
+    },
+    "plausibility": {
+      "before_failures": 27,
+      "after_failures": 10,
+      "fixed": 20
+    },
+    "clarity_precision": {
+      "before_failures": 14,
+      "after_failures": 2,
+      "fixed": 14
+    },
+    "length_check": {
+      "before_failures": 21,
+      "after_failures": 11,
+      "fixed": 16
+    },
+    "passage_reference": {
+      "before_failures": 4,
+      "after_failures": 0,
+      "fixed": 4
+    },
+    "difficulty_assessment": {
+      "before_failures": 13,
+      "after_failures": 11,
+      "fixed": 9
+    },
+    "standard_alignment": {
+      "before_failures": 20,
+      "after_failures": 6,
+      "fixed": 16
+    },
+    "homogeneity": {
+      "before_failures": 11,
+      "after_failures": 3,
+      "fixed": 9
+    },
+    "grammatical_parallel": {
+      "before_failures": 7,
+      "after_failures": 1,
+      "fixed": 7
+    },
+    "specificity_balance": {
+      "before_failures": 3,
+      "after_failures": 1,
+      "fixed": 3
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302013_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "clarity_precision",
+          "single_correct_answer"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice C ('He wants to call the magician back') is not plausible. At this point in the story, Aladdin has just called out to his 'uncle' for help but received no answer, and the passage explicitly states the magician 'did not care about Aladdin anymore' and had left. There is no indication that Aladdin is aware of the ring's magic powers or that he would intentionally try to call back the person who abandoned him in the cave. This makes C obviously wrong rather than a believable distractor.",
+          "clarity_precision": "The question contains an ambiguity. The passage states: 'Finally, he put his hands together to pray. When he did this, he rubbed the ring on his finger.' The text indicates that Aladdin rubbed the ring WHILE praying, not BECAUSE he was praying. The rubbing appears to be accidental - a consequence of putting his hands together, not his intention. The question asks 'Why does Aladdin rub the ring?' which could be interpreted as asking for his intentional purpose (which would be 'none' since it was accidental) or the circumstances during which it happened (praying). This ambiguity makes the question unclear.",
+          "single_correct_answer": "The designated correct answer (B) is problematic. The passage states he 'put his hands together to pray. When he did this, he rubbed the ring.' This suggests the rubbing was an accidental byproduct of praying, not the reason itself. Choice D ('He hopes to find a way out') is also defensible because the passage shows Aladdin had been trying to escape for three days (yelling, crying, then praying), so his broader motivation for all actions, including praying, was to escape. The question conflates immediate circumstance with underlying motivation, creating ambiguity about which answer is truly correct."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302013_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "clarity_precision": "The question has a significant ambiguity problem. It asks which detail shows Aladdin acts bravely 'when the lamp genie appears,' but the passage describes TWO genie encounters. First, the ring genie appears when Aladdin is scared but says 'Take me out of this cave!' Second, the lamp genie appears and Aladdin's mother is frightened, but Aladdin 'quickly said' his wish. The correct answer (C) states 'He speaks to the genie even though he is scared,' which actually describes the RING genie encounter (where it explicitly says 'Aladdin was scared'), not the lamp genie encounter. This creates confusion about which event the question is referencing.",
+          "single_correct_answer": "There is confusion about the correct answer. The question asks about bravery 'when the lamp genie appears,' but choice C ('He speaks to the genie even though he is scared') describes what happened with the RING genie, not the lamp genie. The passage states 'Aladdin was scared, but he said...' when the ring genie appeared. When the lamp genie appears, the passage says Aladdin's mother was frightened and Aladdin 'quickly said' his wish, but it doesn't explicitly state Aladdin was scared at that moment. This mismatch between the question stem and the correct answer creates ambiguity about what the truly correct answer should be.",
+          "passage_reference": "The question references 'when the lamp genie appears' but the correct answer (C) actually describes Aladdin's behavior when the RING genie appears. The passage clearly distinguishes these two events: 'Aladdin was scared, but he said, \"Take me out of this cave!\"' occurs with the ring genie, while with the lamp genie, it's Aladdin's mother who is frightened. The implicit passage reference in the question stem is inaccurate.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B 'She wants to meet the Sultan's daughter' is not plausible as a reason for helping Aladdin marry the princess. The passage shows no indication that the mother has any interest in meeting the daughter, making this an obviously weak distractor.",
+          "difficulty_assessment": "The question may be slightly above the typical Grade 3 level due to the reasoning and comprehension level required. Grade 3 students are still developing more advanced inference skills, and understanding the motivational shift in a character based on a non-explicitly stated realization (the value of the gems) might be challenging. Additionally, the vocabulary and narrative context might also stretch the capabilities typical for this grade, involving themes of marriage and financial exchanges that aren't frequently dealt with at this educational stage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302014_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.2 requires students to 'recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.' While this question does ask about a theme (persistence), it specifically frames it as 'what the story reveals about the importance of persistence through Aladdin's actions.' This is problematic because persistence is not the central message of the Aladdin story. The story is primarily about wishes, magic, resourcefulness, and social advancement. The question imposes a specific thematic lens (persistence) rather than asking students to independently determine the central message from the text.",
+          "clarity_precision": "The question has clarity issues because it presupposes that persistence is a central theme demonstrated through Aladdin's actions, which is debatable. Aladdin's success comes primarily from magical assistance (the genies) rather than persistence. While he does pray in the cave which accidentally summons the genie, most subsequent successes involve simply rubbing the lamp to get what he wants - this is more about resourcefulness or using available tools than persistence. The question frame creates ambiguity about what evidence students should cite.",
+          "single_correct_answer": "Option C ('Continuing to try different solutions brings results') is designated as correct, but this interpretation is questionable. Aladdin's success stems primarily from accidentally rubbing the ring (which summons a genie) and then using the lamp's genie - not from deliberately trying different solutions through persistent effort. One could argue option D ('Luck is more important than making an effort') is actually more defensible given that Aladdin accidentally activated the ring while praying and happened upon the lamp's power. The story doesn't clearly demonstrate systematic persistence as much as fortunate circumstances and magical assistance.",
+          "length_check": "Shortest distractor (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302014_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('Aladdin's mother thinks the gems are just pretty stones') is not a plausible distractor. It simply shows a lack of knowledge about gem value, not anything related to the moral about cleverness versus riches. Options A and C are somewhat plausible as they involve characters seeking wealth, but they don't demonstrate the moral either. The distractors don't provide believable alternative interpretations of the moral being asked about.",
+          "standard_alignment": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral and explain how it is conveyed through key details. However, this question is problematic because the passage doesn't actually convey the moral that 'cleverness is more valuable than riches.' The story shows Aladdin using magic (the lamp and ring) to gain riches and marry the princess - success through magical assistance, not cleverness over riches. The question imposes a moral that isn't supported by the text, making it impossible to properly assess the standard.",
+          "clarity_precision": "The question has significant clarity issues. First, it presupposes a moral ('cleverness is more valuable than riches') that the passage doesn't actually convey. Second, even if we accept this moral, option B (using the ring vs. lamp) doesn't clearly demonstrate cleverness being more valuable than riches - it just shows Aladdin using two different magical items. The question is ambiguous about what would constitute evidence of this particular moral.",
+          "single_correct_answer": "There isn't a defensibly correct answer because the passage doesn't support the moral stated in the question. The story is about a poor boy who uses magic to become rich and marry a princess - it's a rags-to-riches tale through magical means, not a story about cleverness triumphing over wealth. Option B shows Aladdin using magical objects appropriately, but this demonstrates following instructions or resourcefulness with magic, not that cleverness is more valuable than riches. None of the options genuinely support this moral.",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302015_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice B is implausible because the passage does not describe what clothes Aladdin or his mother wear (until the very end when only Aladdin receives fine clothes, which doesn't compare them). Choice C is implausible because the passage never explains or addresses their relative ages - this is assumed knowledge but not something the author uses to help readers understand differences. These distractors are too obviously wrong and not truly believable based on passage content.",
+          "single_correct_answer": "While choice A is defensible (the genie scene shows Aladdin speaking calmly while his mother is frightened), choice D is also defensible. The passage explicitly states that Aladdin's mother 'laughed' when he said he wanted to marry the Sultan's daughter and said 'Have you lost your mind?' This shows a clear difference between them - Aladdin has ambitious ideas while his mother finds them laughable. Both A and D represent valid ways the author differentiates the characters, making this question problematic.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.6 focuses on distinguishing the reader's point of view from that of the narrator or characters. This question asks about authorial purpose/intent rather than point of view, making it more aligned with standards about author's craft or theme rather than the specified standard."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302015_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. Option B (magical buildings lasting longer) is never mentioned or implied in the passage. Option C (Sultan being jealous) contradicts the passage, which states 'the Sultan knew Aladdin was perfect for his daughter.' Option D (living in palaces making people happier) is not supported by the text. These distractors are too obviously wrong for a 3rd-grade assessment.",
+          "homogeneity": "The choices span different conceptual categories. Option A addresses social status/equality, Option B addresses building durability/magic properties, Option C addresses emotions/jealousy, and Option D addresses psychological effects of housing. They are not all interpreting the author's purpose in the same conceptual domain.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing one's own point of view from that of the narrator or characters. This question asks about author's purpose/intent in using descriptive details, which aligns more with standards about craft and structure (like RL.3.5) or author's purpose, not point of view. The question does not assess the student's ability to distinguish different perspectives."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Option C is factually incorrect (the Sultan didn't call Aladdin's mother - she went to him), and Option D has no basis in the text (no mention of the Sultan giving his daughter gifts). These are obviously wrong rather than believable alternatives."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302037_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "clarity_precision",
+          "single_correct_answer"
+        ],
+        "failed_reasons": {
+          "plausibility": "While choices B and D have some plausibility, choices A and C are obviously wrong and easily eliminated. Choice A ('calm instead of worried') is the opposite of what happened - the Rabbit was still worried and rushed. Choice C ('helpful instead of rushed') contradicts the passage where he 'ran away quickly.' These are not believable distractors for students at this level.",
+          "clarity_precision": "The question is ambiguous because 'when readers first met him' is unclear. The passage provided is titled 'Part II,' suggesting there was a Part I where readers actually first met the White Rabbit. Within the provided passage, the Rabbit appears twice (coming back, then getting scared). The question's comparison point is vague - does it mean his first appearance in Part I (not provided) or his first appearance in this excerpt? This creates confusion about what is being compared.",
+          "single_correct_answer": "The correct answer is problematic. Choice B states 'He is scared instead of fancy,' but being 'fancy' is not a behavior - the passage says he 'looked very fancy' with gloves and a fan, which describes his appearance, not his behavior. He was scared (a behavior/emotion) at the second encounter, but 'fancy' doesn't describe his earlier behavior. Additionally, choice D ('quiet instead of talkative') could also be defended since he was 'talking to himself' initially but said nothing (fled silently) when he got scared. The question lacks one clearly defensible correct answer."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302038_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible. The passage clearly states that drinking the bottle made Alice smaller ('She was getting smaller and smaller. Soon, she was only ten inches tall'), not normal size. The mushroom did help her return to normal size, but the bottle did not - it made her shrink. This is factually incorrect based on the passage and therefore obviously wrong.",
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining the central message, lesson, or moral, explaining how it is conveyed through key details. This question asks students to identify two events with the same result, which is more about cause-and-effect relationships and story details rather than central message/theme. This is more aligned with narrative elements or comprehension standards (like RL.3.3 for describing character actions/consequences) rather than RL.3.2.",
+          "clarity_precision": "The question has ambiguity issues. Option C could be interpreted in multiple ways: both events involve Alice being sad (emotional state), or both events result from sadness (causal relationship). Additionally, 'same result' is vague - does it mean the same direct outcome, the same emotional state, or the same broader consequence? The question stem doesn't clarify what type of 'result' is being sought, making it unclear what students should identify.",
+          "single_correct_answer": "Multiple answers could be defended. Option C (the stated correct answer) is questionable because crying by the door and falling in the pool don't have the 'same result' - one results in a pool of tears, the other results in Alice getting wet. They share a common CAUSE (sadness), not result. Option B could also be argued: eating the cake makes her grow tall (9 feet), which allows her to grab the key ('She quickly grabbed the golden key'). The question conflates cause and effect, making it unclear whether we're identifying same causes or same results.",
+          "length_check": "Correct answer (17 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302039_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "While choices A and potentially D are plausible, choices B and C are not believable distractors. Choice B ('crying will always make your problems worse') is an absolute statement that doesn't align with the story's actual message\u2014Alice's crying created a problem but the story doesn't emphasize this as a moral lesson. Choice C ('animals can talk if you listen carefully') is misleading because animals DO talk in Wonderland without special listening, making it factually inconsistent with the passage. These are too obviously wrong for third graders who read the passage.",
+          "standard_alignment": "RL.3.6 requires students to distinguish their own point of view from that of the narrator or characters. This question asks about the author's purpose/theme ('why the author wrote the story'), which aligns more with RL.3.2 (recount stories and determine central message/lesson/moral) rather than RL.3.6 about point of view. The question does not assess the student's ability to identify or distinguish between different perspectives.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible based on the passage. Alice never expresses that changing sizes is 'fun' (B), 'helpful' (C), or 'easy' (D). In fact, the passage shows Alice experiencing problems and confusion from the size changes. These distractors are obviously incorrect to anyone who read the passage carefully.",
+          "difficulty_assessment": "The question might be too complex for a grade 3 level, primarily due to the abstract nature of comparing perspectives of different characters in the story. Understanding variable points of view and abstract concepts like 'confusing' versus 'normal' could challenge younger students' cognitive capabilities. Additionally, the vocabulary used ('Caterpillar', 'perspective', 'scary', 'silly', etc.) and the requirement to infer emotional states and perspectives from a text may surpass typical grade 3 reading comprehension and reasoning abilities."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302041_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.5 requires students to refer to parts of stories, dramas, and poems when writing or speaking about a text, using terms like chapter, scene, and stanza. This question does not assess understanding of text structure or structural elements. Instead, it asks students to identify textual evidence (a detail) that supports a characterization claim, which aligns more with RL.3.1 (asking and answering questions, referring to the text) or RL.3.3 (describing characters and explaining how their actions contribute to the sequence of events).",
+          "single_correct_answer": "Multiple answers could be defended as correct. While Choice B ('How strange!' cried Alice) occurs after she grows bigger (a second size change), Choice A ('What a strange feeling!' said Alice) also shows her surprise at a size change (getting smaller). Both demonstrate surprise at size changes. The question asks for evidence that size changes 'continue to surprise her,' which implies ongoing/repeated surprise. However, Choice C ('Everything is so weird today!') could also be defended as it reflects her cumulative reaction to multiple strange events including repeated size changes. The question lacks sufficient specificity to distinguish one clearly correct answer.",
+          "length_check": "Shortest distractor (6 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302041_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do NOT follow consistent grammatical structure. Options A, B, and D begin with 'how,' 'that,' and 'when' respectively (noun clause structures), while option C begins with 'why' followed by a modal verb construction ('should never'). The structures are inconsistent: A uses 'how' + noun phrase, B uses 'that' + complete clause, C uses 'why' + modal statement, and D uses 'when' + past tense clause.",
+          "plausibility": "Options B, C, and D are NOT plausible distractors. Option B ('that Alice enjoys swimming in unusual places') is obviously wrong as the passage clearly shows Alice is distressed, not enjoying herself. Option C ('why Alice should never cry about her problems') presents a moralistic lesson that is not supported by the text. Option D ('when Alice learned to control her emotions better') is factually incorrect as Alice doesn't learn to control her emotions in this scene. These distractors would be easily eliminated by students who read the passage.",
+          "homogeneity": "The choices do NOT belong to the same conceptual category. Option A addresses literary technique (cause and effect/consequences), option B addresses character preference/enjoyment, option C addresses moral lessons, and option D addresses character development timing. These represent fundamentally different types of answers about why an author includes a detail."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question may be too complex for a Grade 3 level due to the abstract reasoning required to understand causal relationships and complexities within the text. Students at this grade level might struggle with identifying how each action Alice takes leads to increasingly complicated problems, which requires a synthesis of text and an understanding of sequence and consequence that may not be fully developed. Moreover, the vocabulary and concepts, such as describing logistic and proportional changes (getting smaller and larger and the implications thereof), might be challenging for children in the third grade."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302031_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.45454545454545453,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Several distractors are not plausible. Choice B ('she will measure the tunnel's length') has no support in the passage - Alice never measures anything. Choice C ('she will dig deeper') is clearly wrong as Alice doesn't dig at all in the tunnel section. Choice D ('she will meet strange characters') is somewhat plausible as a general prediction but doesn't logically connect her thoughts about upside-down people to what actually happens next in the tunnel. These distractors are too obviously incorrect for 3rd graders who read the passage.",
+          "standard_alignment": "RL.3.5 requires students to refer to parts of stories, dramas, and poems when writing or speaking about a text, using terms like chapter, scene, and stanza. This question asks about how one part of the text (Alice's thoughts while falling) connects to what happens next (in the tunnel), which is more about text structure and comprehension (RL.3.1 or RL.3.3) rather than using structural terminology. The question doesn't ask students to identify or use terms that describe text structure components, which is the core of RL.3.5.",
+          "clarity_precision": "The question has clarity issues. It asks how Alice's thoughts 'help readers understand what happens next in the tunnel,' but the correct answer (A) doesn't actually describe what happens next - it describes Alice's emotional state (not being afraid). Additionally, 'what happens next in the tunnel' is vague - does it mean immediately after landing, or the entire tunnel sequence? The connection between her thought about stairs and running through the tunnel is also tenuous and requires inference that may not be clear to 3rd graders.",
+          "single_correct_answer": "The question is problematic because answer A doesn't accurately describe 'what happens next in the tunnel.' After Alice lands, the passage says 'In front of her was a long tunnel. The White Rabbit was rushing down it. Alice ran after him.' She runs because she's chasing the rabbit, not because of her earlier thoughts about stairs. Additionally, answer D has some merit - Alice does encounter the strange experience of locked doors, a magical table, shrinking bottles, etc., which could connect to her wondering about strange/upside-down scenarios. The correct answer doesn't clearly stand out as the only defensible choice.",
+          "length_check": "Correct answer (14 words) too long",
+          "difficulty_assessment": "The question may be challenging for Grade 3 due to several factors. The vocabulary used, such as 'center of the earth', and the conceptual understanding required to interpret Alice's hypothetical thoughts about falling and correlating that to her actions in the story, are complex. Additionally, reasoning about hypotheticals and making inferences based on subtle narrative cues can be demanding for younger students."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question demands that students remember specific plot details and accurately sequence events immediately following a significant action in the story. While the memory component is suitable for Grade 3, the detail and exactitude necessary in recalling the direct sequence of events might be challenging, particularly without the presence of the full text during the assessment. The vocabulary such as 'tunnel' and 'pile of leaves' is appropriate for this grade level, but the complexity of textual navigation needed may exceed typical expectations for 3rd graders, especially considering it is a direct recall from a possibly unfamiliar text rather than a comprehension based on a provided passage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302032_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.45454545454545453,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The passage shows the narrator presenting the story in a matter-of-fact way without indicating it's 'dangerous' (B), and the narrator clearly doesn't present it as 'boring' (C) given the engaging narrative style. Most importantly, there is no evidence in the passage about what Alice's sister thinks at all - she is merely mentioned at the beginning reading a book. The question asks students to infer something that has no textual support.",
+          "standard_alignment": "RL.3.6 requires students to distinguish their own point of view from that of the narrator or characters. This question asks students to compare the narrator's perspective with that of Alice's sister, who is barely mentioned and whose viewpoint is never developed in the passage. The sister's perspective cannot be determined from the text, making this an invalid assessment of the standard. A proper RL.3.6 question would compare the student's view with the narrator's, or compare views of actual characters whose perspectives are evident in the text.",
+          "clarity_precision": "The question is ambiguous and unclear because Alice's sister's viewpoint is never presented in the passage. The sister appears only briefly at the beginning reading a book, with no indication of her thoughts about Alice's adventure. Students cannot reasonably determine what the sister 'might think' based on the passage, making the question inherently unclear and unanswerable from the text provided.",
+          "single_correct_answer": "There is no defensibly correct answer because the passage provides no information about what Alice's sister thinks or would think about the adventure. The sister is only mentioned at the very beginning as someone Alice is sitting next to while reading a book. The passage never indicates the sister's perspective on Alice's adventure (which appears to be Alice falling down the rabbit hole). Answer A cannot be verified as correct from the passage.",
+          "length_check": "Correct answer (16 words) too long",
+          "difficulty_assessment": "The question might be challenging for a Grade 3 student due to its comparative nature, requiring understanding and interpretation of subtle narrative perspectives that may not be explicitly stated in the text. This question assumes knowledge about Alice's sister's potential viewpoint and involves abstract reasoning related to the assumed or imaginary opinions of characters. Furthermore, terms like 'magical and exciting' versus 'make-believe' might require a nuanced understanding of storytelling and character conception that could be advanced for this grade level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.545
+    },
+    {
+      "question_id": "quiz_302046_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question does not assess RL.3.3 (describing characters and explaining how their actions contribute to events). Instead, it tests literal comprehension of what a character said, which is more aligned with reading comprehension standards focused on key details.",
+          "clarity_precision": "The question is problematic because the Mad Hatter never actually responds when Alice asks for the answer to his riddle. The passage ends mid-sentence with the Mad Hatter making an analogy about saying vs. meaning, but he never addresses Alice's request for the riddle answer.",
+          "single_correct_answer": "There is no defensibly correct answer because the Mad Hatter never responds to Alice asking for the riddle answer. The passage shows him posing the riddle, but then the conversation shifts to other topics and he never provides or refuses to provide the answer."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible because the passage clearly shows Alice continues exploring after the Cat disappears - she walks to the tea party with the Mad Hatter and March Hare. Options B and C are also questionable as distractors since the text shows Alice successfully finds her way to the tea party without difficulty or tree climbing.",
+          "difficulty_assessment": "The question might be challenging for a Grade 3 level due to several factors. First, it requires the ability to infer the consequences of an event (the cat disappearing) that are not explicitly stated but rather implied in the narrative. Second, the complexity of the vocabulary such as 'disappear', 'Cheshire Cat', 'Mad Hatter', and 'March Hare', and the abstract nature of concepts like disappearing gradually might be complicating for younger students to fully grasp. This might make the reasoning demands and inference making slightly too sophisticated for the typical cognitive and comprehension level expected at this grade."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302046_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question does not assess RL.3.3 (describing how characters' actions contribute to events). There is a fundamental problem: the Dormouse telling a confusing story is not actually described in the provided passage text, making this question unanswerable based on the given content.",
+          "clarity_precision": "The question is clearly written but refers to an event (the Dormouse telling a confusing story) that does not appear in the provided passage, making it impossible to answer accurately.",
+          "single_correct_answer": "Since the Dormouse telling a confusing story is not described in the passage, there is no basis for determining any correct answer. The question cannot be answered from the provided text.",
+          "passage_reference": "The question references the Dormouse telling a confusing story, but this event does not occur in the provided passage. The Dormouse is mentioned as being sleepy at the tea table, but no story-telling scene is described."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question poses a difficulty in that the correct answer described in the prompt is not actually mentioned in the provided passage. This disconnect makes the question inappropriate for Grade 3 or any level, as it relies on information not provided or implied in the text. The inability to derive the answer from the passage increases cognitive load and does not align with expectations for comprehensibility and fairness, particularly for the cognitive and deductive reasoning capabilities expected at Grade 3."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302047_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'Cats are the best guides when you are lost' is obviously wrong and not plausible. While the passage features a cat, the lesson is clearly not about cats being good guides - the Cheshire Cat's advice is deliberately unhelpful and circular. This makes it an obviously incorrect distractor rather than a believable one.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Options A, B, and C present general life lessons or principles about decision-making and advice-seeking, while option D is specifically about cats as guides, which is a different type of answer focused on character types rather than universal lessons.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The content and complexity of the question and choices might be challenging for a Grade 3 student due to several factors. First, the vocabulary such as 'depend,' 'mad Hatter,' 'March Hare,' and interpreting the metaphorical usage in the Cheshire Cat's dialogue can be sophisticated for this age group. Second, the abstract reasoning required to infer a moral or lesson from a philosophical conversation exceeds typical Grade 3 cognitive developmental stages, where more concrete reasoning is prevalent. Additionally, understanding the nuanced lessons about decision-making based on the given conversation requires higher-level inferential skills. Therefore, this question seems more suited for older students."
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral. This question asks about a lesson the story teaches, but the passage doesn't clearly demonstrate Alice learning or embodying the lesson 'stay calm and keep trying.' The standard requires identifying themes explicitly supported by the text, not inferring general life lessons.",
+          "clarity_precision": "The question is ambiguous because it asks what 'lesson the story teaches' without clearly defining whether it means what Alice learns, what readers should learn, or what the author intended. Additionally, 'dealing with confusing situations' is vague and could apply to multiple aspects of Alice's journey.",
+          "single_correct_answer": "The passage doesn't clearly support option A as the definitive correct answer. Alice doesn't consistently demonstrate staying calm (she shows anger multiple times) or a clear pattern of persistence leading to success. Other interpretations could be equally valid based on the text.",
+          "difficulty_assessment": "For Grade 3, this question may be slightly challenging due to a few factors. Firstly, the vocabulary and phrases such as 'everyone in this place is mad, including me and you,' and 'a grin without a cat' are complex and could be confusing. Secondly, the abstract reasoning required to understand the thematic implications of Alice's experiences and extract a lesson about handling confusing situations may be too demanding for this age group, typically between 8 to 9 years old. The literal comprehension of the text might be manageable, but the inferential reasoning about life lessons from the story would likely be intricate for most children in this grade."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302047_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices don't follow consistent grammatical structure. A and B use infinitive phrases ('Always accept...', 'It is better to leave...'), while C and D use gerund phrases ('Sharing food...', 'Sleeping during...'). This inconsistency makes the options feel uneven.",
+          "plausibility": "Options A, C, and D are not plausible based on the passage content. The tea party scene shows rudeness and nonsensical conversation, making 'accept invitations politely' and 'sharing creates friendships' clearly wrong. Option D about sleeping being rude is unrelated to the actual lesson, as the Dormouse's sleepiness isn't the focus of criticism.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The question may be challenging for a Grade 3 level due to several reasons. Firstly, the vocabulary and concepts such as 'mad', experience interpretation, and abstract thinking about behavior in nonsensical situations are complex. Secondly, the requirement to infer a lesson or moral from a humorous and whimsical story passage demands higher-order thinking skills, which might be too advanced for this educational stage. This reasoning task requires significant comprehension and analytical abilities that typically develop in older students."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302048_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.2727272727272727,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are obviously wrong as distractors. Option C describes an event that happened before the tea party in the passage sequence, and Option D also occurs before the tea party. These are clearly not plausible for completing section II.C about the tea party itself.",
+          "homogeneity": "The choices span different conceptual categories - some describe events during the tea party (A, B), while others describe events from earlier in the story (C, D). They are not all the same type of tea party event.",
+          "standard_alignment": "RL.3.7 involves using illustrations and text details to describe characters, setting, or events. This question appears to be testing reading comprehension and sequencing rather than using illustrations and text details for description. The standard alignment is unclear.",
+          "clarity_precision": "The question is problematic because the correct answer (A) refers to content that is not present in the provided passage excerpt. The passage cuts off mid-sentence and does not include any story about sisters in a syrup well, making the question unanswerable based on the given text.",
+          "single_correct_answer": "The designated correct answer (A) cannot be verified as correct because the referenced content about the Dormouse telling a story about sisters in a syrup well does not appear in the provided passage. This makes it impossible to confirm there is one defensibly correct answer.",
+          "passage_reference": "The outline structure references specific sections (I, II.A, II.B, II.C) but the correct answer refers to content not present in the provided passage excerpt. The passage ends abruptly and does not contain the Dormouse story mentioned in option A.",
+          "length_check": "Correct answer (11 words) too long",
+          "difficulty_assessment": "The complexity of the vocabulary and reasoning required in this question seems to be a bit high for a typical third grader. Phrases like 'Dormouse tells a story about sisters in a syrup well' may not be straightforward for all third-grade students to completely comprehend without additional context or explanation. Furthermore, the ability to connect this story element to the structure of the answer might demand a deeper level of inferencing than expected at this grade level."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.7 focuses on explaining how illustrations contribute to text meaning and mood. This question asks about text details that show character traits (mysterious/magical), which aligns more with character analysis standards like RL.3.3 rather than the illustration-text relationship standard."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.636
+    },
+    {
+      "question_id": "quiz_302048_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C ('Each section takes place in a different season') is obviously wrong as there are no seasonal references in the passage. Option D is also implausible since there are no mysteries being solved from section to section. These are not believable distractors for 3rd grade students.",
+          "standard_alignment": "RL.3.7 typically focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks about organizational structure and section connections, which is more aligned with informational text structure standards rather than literary analysis of story elements.",
+          "length_check": "Shortest distractor (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B 'Alice talks to the sleepy Dormouse' is not plausible because the text explicitly states the Dormouse is sleepy and there's no indication Alice ever speaks to it. Option D 'Alice solves the raven riddle' is also implausible since the passage ends mid-sentence without Alice solving anything.",
+          "standard_alignment": "RL.3.7 focuses on using illustrations and text to demonstrate understanding of characters, setting, or plot. This question is asking students to organize narrative events in sequence, which is more aligned with story structure/sequencing standards rather than using visual and textual information for comprehension.",
+          "clarity_precision": "The question is ambiguous about what constitutes 'Conversation 3.' The chart format suggests discrete conversations, but the tea party scene contains multiple overlapping exchanges about room at the table, lemonade, and invitations that blur together rather than forming distinct conversations.",
+          "single_correct_answer": "Both A and C could be considered correct. The argument about room at the table and the discussion about lemonade occur in the same continuous exchange and are equally valid as 'Conversation 3' since there's no clear delineation between conversations in the text.",
+          "length_check": "Correct answer (7 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.182
+    },
+    {
+      "question_id": "quiz_302048_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible - the characters Alice meets (Cheshire Cat, Mad Hatter, March Hare) are not progressively friendlier; they are actually quite rude and unhelpful. Option D is also implausible as Alice doesn't solve problems more quickly - she becomes more confused and doesn't solve the riddle at all.",
+          "standard_alignment": "RL.3.7 typically focuses on understanding illustrations and their relationship to text, or using information from illustrations and text. This question asks about textual structure and progression, which is more aligned with RL.3.5 (text structure) or RL.3.3 (character development), not RL.3.7.",
+          "difficulty_assessment": "The question is likely too complex for a typical Grade 3 student considering the abstract reasoning required to understand how narrative techniques, like increasing illogical events, signify Alice's growing confusion. This concept involves a sophisticated level of cognitive and analytical skills that are more appropriate for older students. Furthermore, the vocabulary and themes drawn from 'Alice's Adventures in Wonderland' might be challenging for this age group without prior exposure or simplified adaptations."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "standard_alignment",
+          "single_correct_answer"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.7 requires students to explain how illustrations and text work together or use information from illustrations and text to demonstrate understanding. This question asks students to identify missing information from a chart, which is more about sequencing and identifying key details (RL.3.1 or RL.3.3) rather than the relationship between text and visual representations.",
+          "single_correct_answer": "The question asks what should be added to make the chart 'more complete,' but all options describe events that actually happened in the story. While option C might represent a significant reaction, options A and B also describe important moments (Alice's initial request for help and her bold action at the tea party) that could reasonably make the chart more complete."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302049_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories, dramas, and poems using terms like chapter, scene, and stanza, and describing how each successive part builds on earlier sections. This question asks about identifying unusual details in text, which is more aligned with comprehension/analysis standards rather than text structure knowledge.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "For Grade 3, the concept of analyzing nuanced details of a disappearing act, particularly focusing on metaphysical components like 'a grin without a cat,' may be challenging. The vocabulary and abstract reasoning required to understand why a disembodied grin is unusual are likely too complex for the typical cognitive development at this educational level. Although children are familiar with the story, the specifics of this question may be overly intricate."
+        }
+      },
+      "after": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices do not follow consistent grammatical structure. A and B use 'First X, then Y' pattern, C uses 'All characters meet Alice at once', and D uses 'Characters appear in Alice's dreams' - these are different grammatical constructions.",
+          "plausibility": "Option D 'Characters appear in Alice's dreams' is not plausible based on the passage. The text presents the encounters as real events in Wonderland, not dreams. Option C is also implausible since the passage clearly shows Alice meeting characters sequentially, not all at once.",
+          "homogeneity": "The choices span different conceptual categories. A and B describe sequential order of meetings, C describes simultaneous meetings, and D describes a completely different scenario (dreams vs. reality). They don't all address the same type of organizational structure.",
+          "specificity_balance": "There are significant differences in specificity. A and B are specific about the order of two encounters, C is general about timing, and D introduces an entirely different concept (dreams) not related to organizational sequence.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.182
+    },
+    {
+      "question_id": "quiz_302049_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice D ('By showing that the characters speak different languages') is obviously wrong and not plausible. There is no evidence in the passage of different languages being spoken - all characters communicate in English throughout. This makes it an implausible distractor.",
+          "standard_alignment": "The question does not properly assess RL.3.5, which focuses on referring to parts of stories, dramas, and poems when writing or speaking about a text, using terms like chapter, scene, and stanza. This question is actually assessing author's craft and how literary techniques develop themes, which is more advanced than the stated standard.",
+          "difficulty_assessment": "The question demands a relatively sophisticated comprehension of the narrative and ability to analyze how dialogue contributes to thematic development, tasks which might be complex for a typical third grader. Understanding characters' metaphorical or non-literal discussion about 'madness' and how it contributes to the theme of confusion requires a higher level of abstract thinking and inference, likely beyond the typical capacity of a Grade 3 student. Moreover, the necessary background knowledge about the characters and the setting (Wonderland, Cheshire Cat, etc.) calls for a familiarity that might not be expected at this educational stage."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories, dramas, and poems using terms like chapter, scene, and stanza. This question asks students to identify the beginning of a conversation, which is more about sequence/chronology than structural text features.",
+          "length_check": "Correct answer (17 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302055_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice C 'Sisters should always play together' is not plausible as it has no connection to the ending or the lesson about Alice waking up from her dream. Choice D 'Croquet is a difficult game to learn' is also implausible as it focuses on a specific game detail rather than the broader lesson from the ending.",
+          "homogeneity": "The choices span different conceptual categories. Choice A addresses imagination/dreams, Choice B is about physical places, Choice C is about relationships/behavior, and Choice D is about game difficulty. They are not all the same type of lesson or theme.",
+          "specificity_balance": "Choice A is broad and thematic about dreams and adventures, Choice B is moderately specific about gardens, Choice C is specific about sibling behavior, and Choice D is very specific about croquet gameplay. The levels of specificity vary significantly."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question might be too complex for a typical Grade 3 student in terms of vocabulary, abstract reasoning, and interpretation required. Terms like 'central message,' along with concepts such as analyzing fairness and authority from a narrative, generally align with higher elementary grades, perhaps Grade 5 or above. Additionally, the passage content and the implications of the narrative choices (such as coping with unfair rules and interpreting actions in a metaphorical game) require a level of analytical thinking and synthesis that is potentially beyond the expected cognitive abilities and educational exposure of Grade 3 students.",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302055_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining central message, lesson, or moral. However, this question asks about HOW the message is conveyed through narrative structure, which is more aligned with craft and structure standards (RL.3.5) rather than theme identification.",
+          "clarity_precision": "The question is somewhat ambiguous. 'Central message' and 'sequence of increasingly chaotic events' are abstract concepts that may be difficult for 3rd graders to interpret consistently. The phrasing could lead to multiple valid interpretations.",
+          "difficulty_assessment": "The question and the multiple-choice answers may be challenging for a Grade 3 level due to several factors. The vocabulary used in the question and the passage, such as 'chaotic,' 'sequence,' and 'central message,' is relatively advanced for third graders. Additionally, the cognitive and reasoning demands of the question, which require understanding abstract concepts like the representation of unrestricted imagination and interpreting the non-linear and surreal events of a narrative, are likely too complex for the typical developmental stage of Grade 3 students. This type of analysis generally aligns with higher grade levels where students are more capable of abstract thinking and literary analysis."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The complexity of reasoning required for this question appears too advanced for typical Grade 3 students. The passage does not explicitly address or emphasize the lesson of 'Speaking up for what is right takes courage and bravery.' Such an interpretation requires a level of inferential reasoning and abstract thought likely beyond the educational development of most children at this grade level. Additionally, vocabulary such as 'Mock Turtle,' 'Gryphon,' and other Wonderland-specific terms might be challenging without prior exposure or explanation.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302056_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and D are not plausible distractors. Option A ('witnesses always tell the truth') contradicts the passage which states witnesses 'did not help at all.' Option D ('queens make the best judges') is obviously wrong given the Queen's unreasonable behavior. Only option B presents a believable misconception.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing point of view and identifying who is telling the story. This question assesses theme analysis and author's message, which is more aligned with standards like RL.3.2 (central message/theme) rather than point of view.",
+          "difficulty_assessment": "The question appears to be too complex both in terms of vocabulary and reasoning for a typical Grade 3 student. Words such as 'illogical', the concept of 'sentence before guilt', and understanding the thematic use of a trial scene to illustrate a message about fairness may not align well with the cognitive and comprehension levels expected at this grade level. The context required to adequately analyze this question assumes a depth of understanding about narrative techniques and abstract reasoning typical of older students."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question may be challenging for a Grade 3 student due to several factors. Firstly, the text is complex, containing advanced vocabulary and nuanced descriptions that require significant comprehension skills. Secondly, discerning narrative perspective is not a straightforward task and typically develops in older students, requiring a deeper level of textual analysis and understanding of narrative conventions than might be expected of children at this grade level.",
+          "length_check": "Shortest distractor (5 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302057_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. Choice A and D use simple noun phrases ('The Queen of Hearts', 'The Mock Turtle remembering school'), while choices B and C are more complex descriptive phrases ('The narrator describing events', 'Alice thinking about her own school'). The structures are not parallel.",
+          "specificity_balance": "There are significant differences in specificity. Choice A is very general ('The Queen of Hearts'), choice B is moderately specific ('The narrator describing events'), while choices C and D are quite specific about the mental processes ('Alice thinking about her own school', 'The Mock Turtle remembering school').",
+          "length_check": "Correct answer (6 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302057_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('To prove that sleeping by rivers causes strange dreams') is obviously wrong and not plausible. It focuses on a trivial detail (sleeping by rivers) that has no connection to the story's literary purpose or meaning.",
+          "homogeneity": "The choices span different conceptual categories. Options A and D focus on literal/practical interpretations (writing dreams down, location-based dream causation), while B and C address literary/thematic purposes. They don't all belong to the same type of answer about story purpose.",
+          "length_check": "Correct answer (11 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B is not plausible - Alice actually meets more people as she progresses (garden with many people, then Mock Turtle and Gryphon, then trial participants). Option D is also questionable as Alice doesn't solve problems but rather encounters increasingly chaotic situations.",
+          "difficulty_assessment": "This question might be challenging for Grade 3 students due to several factors. The vocabulary ('stranger', 'semantic similarities', etc.) and concepts (analyzing the organization of a text and inferring the progression of confusion in a narrative) are likely too advanced for this grade level. Furthermore, the description of events in the passage might require a higher level of reading comprehension and abstract thinking than typical for third graders."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302058_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories, dramas, and poems when writing or speaking about a text, using terms like chapter, scene, and stanza. This question asks about how content is introduced rather than having students refer to text structure or use structural terms.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The question might be challenging for a third-grade student mainly due to the complexity of the passage, which includes many characters and unusual concepts like flamingo mallets and hedgehog balls, typical of Lewis Carroll's sophisticated narrative style in 'Alice\u2019s Adventures in Wonderland.' Such imagery and fantasy elements can be difficult for young readers to process, especially when required to infer Alice's amazement among other subtle emotional cues from the text. Furthermore, the concept of bizarre alterations to a game like croquet might be outside the common experience of most third graders, increasing the difficulty of understanding the context fully."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "single_correct_answer"
+        ],
+        "failed_reasons": {
+          "single_correct_answer": "Choice B (each part gets more exciting) is questionable as the correct answer. While there's some escalation, choice C (Alice getting braver) has strong textual support - she becomes increasingly assertive, culminating in boldly defying the Queen with 'Stuff and nonsense!' and 'I won't!' Multiple answers could be defensibly correct."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302062_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. Choice A uses active voice ('Rat says'), Choice B uses a simple noun phrase ('The lawn stretches'), Choice C uses passive voice ('is described as'), and Choice D uses a different sentence structure ('Mole asks to visit'). They don't follow a parallel pattern.",
+          "plausibility": "Choices B, C, and D are not plausible distractors for the question asked. Choice B describes a physical feature but doesn't indicate travel method, Choice C describes the building itself (completely unrelated to travel), and Choice D mentions asking to visit but says nothing about the method of travel. Only Choice A actually addresses HOW they travel.",
+          "homogeneity": "The choices span different conceptual categories. Choice A describes a method of transportation, Choice B describes a landscape feature, Choice C describes building characteristics, and Choice D describes a social request. They are not all the same type of answer - only A relates to travel method."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (11 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302064_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A ('Beautiful places always have beautiful owners') is not plausible as a theme about appearances based on the passage description, which focuses on buildings and character rather than physical beauty of owners. Choice D is also questionable as it makes an absolute claim about maintenance that isn't supported by the passage focus.",
+          "standard_alignment": "RL.3.2 requires students to recount stories and determine central message, lesson, or moral. This question asks about theme suggested by description in one paragraph, which is more of an inferential reading skill (RL.3.1) rather than identifying the central message of the entire story.",
+          "clarity_precision": "The question is ambiguous because paragraph 5 describes both the grand exterior of Toad Hall and Toad's boastful behavior. It's unclear whether students should focus on the building description alone or the combination of setting and character introduction.",
+          "passage_reference": "The question references 'paragraph 5' but the passage shows paragraph breaks with dashes, making paragraph numbering unclear. What appears to be referenced spans multiple sections of text.",
+          "difficulty_assessment": "The vocabulary and conceptual analysis required for this question are likely too advanced for a typical third grader. While children at this age can understand basic descriptions and direct comparisons, the idea of examining thematic implications about appearances and character as suggested in the question steps into higher-level reasoning and inference. The themes discussed and the requirement to interpret a description of a home to speculate about the characteristics of its owner involve abstract thinking not usually fully developed at the third-grade level. The complexity of the passage and question would fit better with upper elementary or middle school students."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302071_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A is a compound statement about what Mole says, Choice B describes an action Mole takes, Choice C describes a question Mole asks, and Choice D describes what Mole tells someone. The structures vary between dialogue content, actions, and speech acts.",
+          "plausibility": "Choice C ('Mole asks Rat what they should do next') is not plausible as this event does not occur anywhere in the passage. Choice D ('Mole tells Toad that the wagon is pretty') is also not supported by the text - while the narrator mentions Mole liked the pretty wagon, there's no evidence he told this to Toad directly.",
+          "homogeneity": "The choices span different conceptual categories. Choice A focuses on contradictory statements showing internal conflict, Choice B describes a physical action, Choice C describes asking a question, and Choice D describes giving a compliment. They represent different types of evidence for mixed feelings.",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302072_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices do not follow consistent grammatical structure. Choice A includes dialogue attribution ('said Rat'), Choice B is a descriptive statement, Choice C is direct dialogue with attribution, and Choice D is a narrative description. The mix of dialogue and narrative descriptions creates inconsistent grammatical patterns.",
+          "plausibility": "Choice A is not plausible as evidence that Rat cares about Mole's happiness - asking for agreement doesn't demonstrate care for someone's happiness. Choice D (Rat not looking happy while following) also doesn't support the idea that Rat cares about Mole's happiness. These are obviously weak distractors.",
+          "standard_alignment": "RL.3.2 requires students to recount stories and determine central message, lesson, or moral. This question asks students to find textual evidence to support a character trait interpretation, which aligns more with RL.3.3 (describing characters and explaining how their actions contribute to events) rather than determining central message."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302073_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'He is hungry and wants to eat before traveling' is not plausible as a conclusion about Rat's character based on changing his mind about lunch. The passage shows no evidence of Rat being motivated by hunger, and this choice doesn't address character traits like the other options do.",
+          "homogeneity": "While options A, B, and C all describe character traits or decision-making patterns, option D describes a basic physical need (hunger) rather than a character trait, breaking the conceptual category.",
+          "clarity_precision": "The question is problematic because the passage doesn't actually show Rat changing his mind about lunch - it only shows Toad inviting them to lunch and suggesting they can talk about the trip. The question assumes a change of mind that isn't clearly demonstrated in the text.",
+          "difficulty_assessment": "The complexity and demands of this question may pose significant challenges for a typical Grade 3 student. The text itself, although engaging, presents complex characters and motivations that require a higher level of inferential thinking and comprehension, beyond what is typically expected at this educational level. The vocabulary used ('waste of time', 'dusty highways', 'travel wagon') and the need to infer emotional states and motivations from narrative cues might also be demanding for third graders."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is obviously wrong and implausible. The passage makes no mention of selling the wagon, buying a boat, or cooking lunch as motivations. Option C is also clearly incorrect as Toad explicitly wants companions, not to travel alone.",
+          "length_check": "Shortest distractor (16 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302079_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses a past tense clause ('They had to jump'), Choice B combines past tense action with quoted speech ('Toad stretched out his legs and talked about the real life'), Choice C describes continuous action ('Rat danced up and down'), and Choice D describes sequential actions ('The old grey horse got scared and jumped forward'). The structures are inconsistent.",
+          "plausibility": "Choices A, C, and D are not plausible distractors because they clearly describe events that happened AFTER the accident, not before it. The question specifically asks for details showing the friends were enjoying their trip 'before the accident,' making these choices obviously wrong rather than believable distractors.",
+          "length_check": "Correct answer (11 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302080_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Option C (sounds proving the car was more expensive) has no logical connection to sound description, and Option D (sounds showing they should have stayed on country roads) doesn't relate to how sounds show the car getting closer.",
+          "homogeneity": "The choices span different conceptual categories. Option A addresses sound progression/proximity, Option B addresses cause-and-effect on the horse, Option C addresses economic comparison, and Option D addresses travel decisions. They don't all belong to the same category of literary analysis.",
+          "specificity_balance": "Option A provides very specific textual evidence with exact quotes, while Options C and D make general claims without specific supporting details. The level of specificity varies significantly across choices.",
+          "length_check": "Correct answer (16 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. Option B about wagon color is completely unrelated to jumping into a ditch. Option C about running speed doesn't match the context of avoiding danger. Option D about road dirtiness is also unrelated to the action of jumping for safety.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A addresses author's purpose regarding danger/safety, while B addresses descriptive details about appearance, C addresses character abilities, and D addresses setting conditions.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": false,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302081_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice B ('Country roads are always safer than big highways for traveling') is too absolute with the word 'always' and makes an overly broad generalization not supported by the passage. Choice D about wagon strength is also implausible as the crash was caused by the horse being scared, not wagon weakness.",
+          "homogeneity": "The choices span different conceptual categories - A addresses technology/modernization themes, B makes a general safety comparison, C focuses on trip planning behavior, and D concerns equipment durability. They don't all address the same type of story message.",
+          "length_check": "Shortest distractor (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors for a question about lessons learned from the story. While horses and wagons are mentioned in the passage, 'Horses need careful training' and 'Wagons break very easily' are not reasonable interpretations of the lesson from how the pleasant trip suddenly changed.",
+          "homogeneity": "The choices span different conceptual categories. Option A is about life lessons/philosophy, Option B is about friendship dynamics, while Options C and D are about practical/technical matters related to horses and wagons."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    }
+  ]
+}

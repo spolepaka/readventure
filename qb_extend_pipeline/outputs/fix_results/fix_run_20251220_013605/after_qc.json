@@ -1,0 +1,70 @@
+[
+  {
+    "question_id": "quiz_302007_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern starting with 'You should' followed by a verb and explanation clause, creating consistent parallel structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible responses that someone might genuinely believe about trusting strangers. Option A reflects naive trust, Option C suggests parental guidance, and Option D focuses on material gestures - all believable but incomplete approaches.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category of advice/guidance about how to approach trusting strangers who make promises. They all address the same theme from different perspectives.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail - each offers a general principle or approach with a brief explanatory clause. None is significantly more detailed or vague than others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question properly assesses RL.3.2 by asking students to identify a theme/lesson from the story. The magician's deception and manipulation of Aladdin through false promises directly supports the theme about being cautious with strangers.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about the story's lesson regarding trusting strangers who make big promises. The wording is unambiguous and age-appropriate for 3rd grade.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly the correct answer as the story demonstrates through the magician's deception that strangers making big promises often have hidden motives. The other options are not supported by the story's events and theme.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this check passes by default as there are no references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors in the multiple-choice question are not semantically too similar to the correct answer, which is option 'B'. Each choice represents a distinctive perspective on how to approach strangers making big promises, thus maintaining a clear distinction between the correct answer and the incorrect answers. The incorrect answers (A, C, D) each propose different incorrect strategies, making it unlikely for them to confuse the students.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and sentence structure used in both the passage and the question seem appropriate for Grade 3. The concepts discussed, such as trust, caution, and understanding stranger's intentions are suitable for this age group, inviting critical thinking without being overly complicated. The scenario provided in the passage clearly supports the question, allowing students to make an informed choice based on text evidence and general life lessons, thus aligning well with cognitive and comprehension skills expected at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T01:36:40.787334",
+    "run_id": "20251220_013605",
+    "article_id": "article_101001"
+  }
+]

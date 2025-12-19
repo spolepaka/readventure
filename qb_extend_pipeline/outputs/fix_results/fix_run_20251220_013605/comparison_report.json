@@ -1,0 +1,65 @@
+{
+  "run_id": "20251220_013605",
+  "timestamp": "2025-12-20T01:36:40.834642",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 1,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 1,
+    "now_passing": 1,
+    "still_failing": 0,
+    "improvement_rate": "100.0%",
+    "questions_improved": 1,
+    "avg_score_before": 0.727,
+    "avg_score_after": 1.0,
+    "avg_score_improvement": 0.273
+  },
+  "by_check_improvement": {
+    "plausibility": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "specificity_balance": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "homogeneity": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302007_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors because they are too literal and specific to the story's fantasy elements rather than generalizable life lessons. Option B ('always involve magic and require special rings') is obviously wrong because it takes literal story details and presents them as a universal truth. Options C and D similarly take specific plot elements (mountain climbing, long-lost family) and frame them as general patterns, making them obviously implausible as real-world lessons.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A presents a generalizable life lesson/moral about human motivation. Options B, C, and D present literal story details framed as general patterns. This creates a category mismatch - one is a thematic interpretation while the others are superficial plot summaries presented as lessons.",
+          "specificity_balance": "There is significant imbalance in specificity. Option A is appropriately general and abstract (a universal life lesson). Options B, C, and D are overly specific, incorporating particular story details (magic, rings, mountains, long-lost family members) that don't translate to general lessons, making them much more concrete than option A."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    }
+  ]
+}

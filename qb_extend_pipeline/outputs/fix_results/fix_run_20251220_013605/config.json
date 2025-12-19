@@ -1,0 +1,11 @@
+{
+  "run_id": "20251220_013605",
+  "timestamp": "2025-12-20T01:36:05.704591",
+  "qc_results_path": "outputs/qc_results/question_qc_merged.json",
+  "questions_csv_path": "outputs/qb_extended_combined.csv",
+  "output_dir": "outputs/fix_results",
+  "article_ids": [
+    "article_101001"
+  ],
+  "total_failed": 1
+}
