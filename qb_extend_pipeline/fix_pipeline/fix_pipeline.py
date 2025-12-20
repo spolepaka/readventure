@@ -34,6 +34,12 @@ from dotenv import load_dotenv
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from qc_pipeline.utils import (
+    compute_content_hash,
+    extract_passage_title,
+    truncate_text
+)
+
 from fix_pipeline.failure_analyzer import (
     load_qc_results,
     get_failed_extended_questions,
@@ -306,14 +312,42 @@ class QuestionFixPipeline:
         # Run QC
         results = await analyzer.analyze_batch(questions_to_qc, concurrency=10)
         
-        # Add metadata
+        # Add metadata (matching V2 pipeline output format)
         for result in results:
+            qid = result['question_id']
+            
+            # Find matching question context
+            q_data = None
+            for q in questions_to_qc:
+                if q['question_id'] == qid:
+                    q_data = q
+                    break
+            
+            # Get row from DataFrame
+            mask = self.questions_df['question_id'] == qid
+            row = self.questions_df[mask].iloc[0] if mask.any() else {}
+            
+            # Compute content hash
+            if q_data:
+                content = q_data.get('structured_content', {})
+                content_hash = compute_content_hash(
+                    content.get('question', ''),
+                    content.get('choices', {}),
+                    content.get('correct_answer', '')
+                )
+                passage_text = q_data.get('passage_text', '')
+                question_text = content.get('question', '')
+            else:
+                content_hash = ''
+                passage_text = ''
+                question_text = ''
+            
+            # Add all metadata fields
             result['run_id'] = self.run_id
-            result['article_id'] = self.questions_df[
-                self.questions_df['question_id'] == result['question_id']
-            ].iloc[0].get('article_id', '') if len(self.questions_df[
-                self.questions_df['question_id'] == result['question_id']
-            ]) > 0 else ''
+            result['article_id'] = str(row.get('article_id', '') if hasattr(row, 'get') else '')
+            result['content_hash'] = content_hash
+            result['passage_title'] = extract_passage_title(passage_text, max_length=50)
+            result['question_preview'] = truncate_text(question_text, max_length=60)
         
         logger.info(f"QC complete for {len(results)} questions")
         return results

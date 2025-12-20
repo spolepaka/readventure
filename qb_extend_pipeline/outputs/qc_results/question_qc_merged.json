@@ -1101,7 +1101,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:36:40.787334",
     "run_id": "20251220_013605",
-    "article_id": "article_101001"
+    "article_id": "article_101001",
+    "content_hash": "d442612318bd",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part I",
+    "question_preview": "What does this story teach about trusting strangers who m..."
   },
   {
     "question_id": "quiz_302008",
@@ -1761,7 +1764,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:04.595910",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "3168251a4b88",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "How does Aladdin's mother react when she first sees the g..."
   },
   {
     "question_id": "quiz_302013_sibling_4",
@@ -1829,7 +1835,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:02.347893",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "236cfd3f24c9",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "Why does Aladdin's mother change from laughing at his ide..."
   },
   {
     "question_id": "quiz_302014",
@@ -2119,7 +2128,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:02.832141",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "58b1b9ddbd03",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "What is the central message of this story about Aladdin?"
   },
   {
     "question_id": "quiz_302014_sibling_4",
@@ -2187,7 +2199,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:00.530476",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "2468385f0b13",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "What central message does the story teach about solving p..."
   },
   {
     "question_id": "quiz_302015",
@@ -2477,7 +2492,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:02.932370",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "8136db8fcec6",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "Why does the author include the Sultan's reaction to the ..."
   },
   {
     "question_id": "quiz_302015_sibling_4",
@@ -2545,7 +2563,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:06.833969",
     "run_id": "20251220_013656",
-    "article_id": "article_101002"
+    "article_id": "article_101002",
+    "content_hash": "54d1a83a9906",
+    "passage_title": "Aladdin and the Wonderful Lamp, Part II",
+    "question_preview": "How does the narrator show readers that the Sultan's opin..."
   },
   {
     "question_id": "quiz_302016",
@@ -4759,7 +4780,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:06.752474",
     "run_id": "20251220_013656",
-    "article_id": "article_101005"
+    "article_id": "article_101005",
+    "content_hash": "2c0fe2690340",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part II",
+    "question_preview": "How does Alice's reaction to her size problems change fro..."
   },
   {
     "question_id": "quiz_302038",
@@ -4975,7 +4999,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:11.133075",
     "run_id": "20251220_013656",
-    "article_id": "article_101005"
+    "article_id": "article_101005",
+    "content_hash": "b75b8949bde8",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part II",
+    "question_preview": "What is the main message the author wants readers to unde..."
   },
   {
     "question_id": "quiz_302038_sibling_3",
@@ -5265,7 +5292,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:07.177902",
     "run_id": "20251220_013656",
-    "article_id": "article_101005"
+    "article_id": "article_101005",
+    "content_hash": "f49e596adc7b",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part II",
+    "question_preview": "How does Alice's point of view about her size changes dif..."
   },
   {
     "question_id": "quiz_302039_sibling_2",
@@ -6073,7 +6103,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:03.889295",
     "run_id": "20251220_013656",
-    "article_id": "article_101005"
+    "article_id": "article_101005",
+    "content_hash": "54f490a3acde",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part II",
+    "question_preview": "How does the author structure the first three paragraphs ..."
   },
   {
     "question_id": "quiz_302041_sibling_3",
@@ -6215,7 +6248,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:23.788599",
     "run_id": "20251220_013656",
-    "article_id": "article_101005"
+    "article_id": "article_101005",
+    "content_hash": "848f3f2365a3",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part II",
+    "question_preview": "How does the author structure the story to show that Alic..."
   },
   {
     "question_id": "quiz_302029",
@@ -7319,7 +7355,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:24.783819",
     "run_id": "20251220_013656",
-    "article_id": "article_101004"
+    "article_id": "article_101004",
+    "content_hash": "9fca47ac0e7d",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part I",
+    "question_preview": "Which part of the story comes right after Alice lands in ..."
   },
   {
     "question_id": "quiz_302032",
@@ -7683,7 +7722,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:23.249118",
     "run_id": "20251220_013656",
-    "article_id": "article_101004"
+    "article_id": "article_101004",
+    "content_hash": "8a2de70b86c2",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part I",
+    "question_preview": "How does the narrator tell this story differently than Al..."
   },
   {
     "question_id": "quiz_302046",
@@ -7893,7 +7935,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:28.065585",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "63e3a062fb72",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "How does the Cheshire Cat's action of disappearing affect..."
   },
   {
     "question_id": "quiz_302046_sibling_3",
@@ -8032,7 +8077,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:24.370104",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "ceb993becd11",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "How does Alice's response to the March Hare's offer of le..."
   },
   {
     "question_id": "quiz_302047",
@@ -8171,7 +8219,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:31.361411",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "12fa5b49ecd1",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "What lesson does the story teach about dealing with confu..."
   },
   {
     "question_id": "quiz_302047_sibling_2",
@@ -8381,7 +8432,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:25.536655",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "ce2878b10cfc",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "What main message does the author share through Alice's c..."
   },
   {
     "question_id": "quiz_302048",
@@ -8520,7 +8574,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:24.689598",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "ad6989e6c623",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "Which text details best help readers understand that the ..."
   },
   {
     "question_id": "quiz_302048_sibling_2",
@@ -8659,7 +8716,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:27.548128",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "622c8525177e",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "Look at this chart about Alice's conversations:\n\nConversa..."
   },
   {
     "question_id": "quiz_302048_sibling_4",
@@ -8727,7 +8787,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:32.976608",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "c436459f3a88",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "Look at this simple chart about Alice's journey:\n\nAlice's..."
   },
   {
     "question_id": "quiz_302049",
@@ -8866,7 +8929,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:44.979317",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "187dfe387f96",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "How does the author organize the story to show Alice meet..."
   },
   {
     "question_id": "quiz_302049_sibling_2",
@@ -9005,7 +9071,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:42.941347",
     "run_id": "20251220_013656",
-    "article_id": "article_101006"
+    "article_id": "article_101006",
+    "content_hash": "d5360ec9925b",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "Which sentence from the passage shows the beginning of th..."
   },
   {
     "question_id": "quiz_302049_sibling_4",
@@ -9570,7 +9639,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:45.283074",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "af8bdf541699",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "What central message does the author convey through Alice..."
   },
   {
     "question_id": "quiz_302055_sibling_2",
@@ -9709,7 +9781,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:45.581754",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "5aa0303c65f8",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "What is the main lesson Alice learns throughout her adven..."
   },
   {
     "question_id": "quiz_302055_sibling_4",
@@ -10061,7 +10136,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:42.989325",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "31487d038696",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "From whose point of view is this story told?"
   },
   {
     "question_id": "quiz_302056_sibling_4",
@@ -10342,7 +10420,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:47.161184",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "65c6854bc417",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "How does the author organize the events to show Alice's e..."
   },
   {
     "question_id": "quiz_302057_sibling_3",
@@ -10481,7 +10562,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:47.120053",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "ae31bde96f9c",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "How does the author organize the passage to show Alice's ..."
   },
   {
     "question_id": "quiz_302058",
@@ -10620,7 +10704,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:50.703933",
     "run_id": "20251220_013656",
-    "article_id": "article_101007"
+    "article_id": "article_101007",
+    "content_hash": "a9c88faca4d1",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part IV",
+    "question_preview": "How do the four parts of this story work together to show..."
   },
   {
     "question_id": "quiz_302058_sibling_2",
@@ -11185,7 +11272,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:51.246084",
     "run_id": "20251220_013656",
-    "article_id": "article_101008"
+    "article_id": "article_101008",
+    "content_hash": "d2956324bfef",
+    "passage_title": "The Open Road, Part I",
+    "question_preview": "According to the passage, what does Rat notice about all ..."
   },
   {
     "question_id": "quiz_302063",
@@ -11821,7 +11911,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:44:51.345143",
     "run_id": "20251220_013656",
-    "article_id": "article_101008"
+    "article_id": "article_101008",
+    "content_hash": "bea16cdf319b",
+    "passage_title": "The Open Road, Part I",
+    "question_preview": "What is the main lesson about friendship shown throughout..."
   },
   {
     "question_id": "quiz_302064_sibling_4",
@@ -12883,7 +12976,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:05.827013",
     "run_id": "20251220_013656",
-    "article_id": "article_101009"
+    "article_id": "article_101009",
+    "content_hash": "53d65158daed",
+    "passage_title": "The Open Road, Part II",
+    "question_preview": "What character trait does Toad show throughout the passage?"
   },
   {
     "question_id": "quiz_302071_sibling_4",
@@ -13306,7 +13402,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:02.116692",
     "run_id": "20251220_013656",
-    "article_id": "article_101009"
+    "article_id": "article_101009",
+    "content_hash": "e52157a8038b",
+    "passage_title": "The Open Road, Part II",
+    "question_preview": "What is the main message about friendship shown in this s..."
   },
   {
     "question_id": "quiz_302073",
@@ -13445,7 +13544,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:06.912931",
     "run_id": "20251220_013656",
-    "article_id": "article_101009"
+    "article_id": "article_101009",
+    "content_hash": "f23ee944e6d1",
+    "passage_title": "The Open Road, Part II",
+    "question_preview": "How does the narrator show that each character has a diff..."
   },
   {
     "question_id": "quiz_302073_sibling_2",
@@ -14365,7 +14467,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:04.994464",
     "run_id": "20251220_013656",
-    "article_id": "article_101010"
+    "article_id": "article_101010",
+    "content_hash": "5521778ccd1a",
+    "passage_title": "The Open Road, Part III",
+    "question_preview": "According to the passage, what caused the friends' wagon ..."
   },
   {
     "question_id": "quiz_302080",
@@ -14717,7 +14822,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:07.279568",
     "run_id": "20251220_013656",
-    "article_id": "article_101010"
+    "article_id": "article_101010",
+    "content_hash": "e47d50431e59",
+    "passage_title": "The Open Road, Part III",
+    "question_preview": "Why does the author describe the friends jumping into a d..."
   },
   {
     "question_id": "quiz_302081",
@@ -15069,7 +15177,10 @@
     "provider": "openrouter",
     "timestamp": "2025-12-20T01:45:06.425594",
     "run_id": "20251220_013656",
-    "article_id": "article_101010"
+    "article_id": "article_101010",
+    "content_hash": "9dfcc1c6dfc8",
+    "passage_title": "The Open Road, Part III",
+    "question_preview": "What lesson can readers learn from how the friends' pleas..."
   },
   {
     "question_id": "quiz_302082",
