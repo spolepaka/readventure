@@ -205,24 +205,31 @@ def regenerate_summary_csv(
                 if isinstance(data, dict) and data.get('score', 1) == 0
             ]
             
+            overall_score = result.get('overall_score', 0)
             row = {
                 'question_id': result.get('question_id', ''),
                 'article_id': result.get('article_id', ''),
                 'content_hash': result.get('content_hash', ''),
                 'passage_title': result.get('passage_title', ''),
                 'question_preview': result.get('question_preview', ''),
-                'score': result.get('overall_score', 0),
-                'status': 'PASS' if result.get('overall_score', 0) >= 0.8 else 'FAIL',
+                'score': f"{overall_score:.0%}",  # Format as percentage
+                'status': '✅' if overall_score >= 0.8 else '❌',  # Use checkmarks
                 'passed_total': f"{result.get('total_checks_passed', 0)}/{result.get('total_checks_run', 0)}",
                 'failed_checks': ', '.join(failed_checks) if failed_checks else '',
                 'run_id': result.get('run_id', '')
             }
             
-            # Add individual check scores
+            # Add individual check scores as checkmarks
             for check_name in ALL_CHECK_NAMES:
                 check_data = checks.get(check_name, {})
                 if isinstance(check_data, dict):
-                    row[check_name] = check_data.get('score', '')
+                    score = check_data.get('score', '')
+                    if score == 1:
+                        row[check_name] = '✅'
+                    elif score == 0:
+                        row[check_name] = '❌'
+                    else:
+                        row[check_name] = ''  # Not run
                 else:
                     row[check_name] = ''
             
