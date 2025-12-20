@@ -8156,58 +8156,58 @@
   {
     "question_id": "quiz_302047_sibling_1",
     "question_type": "MCQ",
-    "overall_score": 1.0,
-    "total_checks_passed": 11,
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
     "total_checks_run": 11,
     "checks": {
       "grammatical_parallel": {
         "score": 1,
-        "response": "All answer choices follow a similar grammatical structure - they are complete sentences that state general principles or advice using similar sentence patterns.",
+        "response": "All answer choices follow the same grammatical pattern of imperative verb phrases: 'Stay calm and keep trying,' 'Give up when things get hard,' 'Avoid talking to new people,' 'Always follow the first advice.'",
         "category": "distractor"
       },
       "plausibility": {
         "score": 1,
-        "response": "All distractors are plausible interpretations. Choice A could relate to Alice's politeness with rude characters, Choice C connects to Alice asking questions throughout, and Choice D reflects a reasonable interpretation about stranger danger in unfamiliar places.",
+        "response": "All distractors are plausible interpretations of how one might respond to confusing situations. Each represents a reasonable strategy that someone might consider when faced with confusion, making them believable incorrect choices.",
         "category": "distractor"
       },
       "homogeneity": {
         "score": 1,
-        "response": "All choices belong to the same conceptual category - they are all life lessons or themes that could potentially be derived from Alice's experiences in the story.",
+        "response": "All choices belong to the same conceptual category - they are all strategies or approaches for dealing with difficult or confusing situations. Each presents a different behavioral response to confusion.",
         "category": "distractor"
       },
       "specificity_balance": {
         "score": 1,
-        "response": "All choices are at a similar level of abstraction and detail - each presents a general life principle or lesson in comparable specificity without being overly detailed or overly vague.",
+        "response": "All choices are at similar levels of specificity, presenting general behavioral strategies without excessive detail. Each is a concise, broadly applicable piece of advice of comparable scope.",
         "category": "distractor"
       },
       "standard_alignment": {
-        "score": 1,
-        "response": "The question properly assesses RL.3.2 by asking students to identify the central message/lesson of the text, which requires understanding how key details support the main theme throughout Alice's various encounters.",
+        "score": 0,
+        "response": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral. This question asks about a lesson the story teaches, but the passage doesn't clearly demonstrate Alice learning or embodying the lesson 'stay calm and keep trying.' The standard requires identifying themes explicitly supported by the text, not inferring general life lessons.",
         "category": "question"
       },
       "clarity_precision": {
-        "score": 1,
-        "response": "The question is clearly written and unambiguous. It asks for the 'main message the author shows through Alice's experiences' which clearly directs students to identify the overarching theme demonstrated through the character interactions.",
+        "score": 0,
+        "response": "The question is ambiguous because it asks what 'lesson the story teaches' without clearly defining whether it means what Alice learns, what readers should learn, or what the author intended. Additionally, 'dealing with confusing situations' is vague and could apply to multiple aspects of Alice's journey.",
         "category": "question"
       },
       "single_correct_answer": {
-        "score": 1,
-        "response": "Choice B is clearly the best answer as it captures the nonsensical nature of Wonderland (disappearing cat, mad characters, illogical conversations) while showing Alice's persistence in trying to navigate and understand this confusing world.",
+        "score": 0,
+        "response": "The passage doesn't clearly support option A as the definitive correct answer. Alice doesn't consistently demonstrate staying calm (she shows anger multiple times) or a clear pattern of persistence leading to success. Other interpretations could be equally valid based on the text.",
         "category": "question"
       },
       "passage_reference": {
         "score": 1,
-        "response": "No specific passage references (like paragraph numbers or direct quotes) are made in the question, so this criterion is satisfied by default.",
+        "response": "No specific passage references (paragraph numbers, line numbers, or direct quotes) are made in the question, so there are no references to evaluate for accuracy.",
         "category": "question"
       },
       "too_close": {
         "score": 1,
-        "response": "The distractors provided in the question are distinct from each other in terms of their thematic focus, enabling a clear differentiation of concepts. Choice A centers on politeness, C emphasizes inquiry for clarity, and D suggests caution in interactions, while B aligns with the thematic element of perseverance in confusing circumstances, as demonstrated by Alice. This clear thematic separation ensures that there is minimal semantic overlap, which might confuse a respondent.",
+        "response": "The distractors in this question are clearly differentiated from the correct answer. Each option represents a distinct approach to handling confusing situations: 'Stay calm and keep trying' suggests perseverance, 'Give up when things get hard' suggests surrender, 'Avoid talking to new people' implies social withdrawal, and 'Always follow the first advice' limits decision-making to initial suggestions. None of these choices are semantically close enough to each other to cause confusion, as each presents a unique strategy.",
         "category": "distractor"
       },
       "difficulty_assessment": {
-        "score": 1,
-        "response": "The vocabulary and reasoning required for this question are suitable for a Grade 3 level. The language in the passage and the question is straightforward and age-appropriate. The question probes basic comprehension and interpretation of the text, skills typically aimed for in this grade level. The question asks to identify a thematic element rather than recalling specific facts or details, which is appropriately challenging for third graders, requiring them to think about the story in a slightly abstract way but still within their cognitive reach.",
+        "score": 0,
+        "response": "For Grade 3, this question may be slightly challenging due to a few factors. Firstly, the vocabulary and phrases such as 'everyone in this place is mad, including me and you,' and 'a grin without a cat' are complex and could be confusing. Secondly, the abstract reasoning required to understand the thematic implications of Alice's experiences and extract a lesson about handling confusing situations may be too demanding for this age group, typically between 8 to 9 years old. The literal comprehension of the text might be manageable, but the inferential reasoning about life lessons from the story would likely be intricate for most children in this grade.",
         "category": "question"
       },
       "length_check": {
@@ -8217,12 +8217,12 @@
       }
     },
     "provider": "openrouter",
-    "timestamp": "2025-12-20T14:21:09.635846",
-    "run_id": "20251220_142006",
+    "timestamp": "2025-12-20T01:44:31.361411",
+    "run_id": "20251220_013656",
     "article_id": "article_101006",
-    "content_hash": "3644d29420c6",
+    "content_hash": "12fa5b49ecd1",
     "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
-    "question_preview": "What is the main message the author shows through Alice's..."
+    "question_preview": "What lesson does the story teach about dealing with confu..."
   },
   {
     "question_id": "quiz_302047_sibling_2",
@@ -8653,73 +8653,73 @@
   {
     "question_id": "quiz_302048_sibling_3",
     "question_type": "MCQ",
-    "overall_score": 0.9090909090909091,
-    "total_checks_passed": 10,
+    "overall_score": 0.5454545454545454,
+    "total_checks_passed": 6,
     "total_checks_run": 11,
     "checks": {
       "grammatical_parallel": {
         "score": 1,
-        "response": "All answer choices follow the same grammatical pattern of starting with a pronoun ('He' for B, C, D) or article ('He' understood for A), followed by a verb phrase describing actions or characteristics of the Cheshire Cat.",
+        "response": "All answer choices follow the same grammatical pattern: 'Alice [verb] [object/prepositional phrase]' - they are consistently structured as actions Alice takes.",
         "category": "distractor"
       },
       "plausibility": {
-        "score": 1,
-        "response": "All distractors are plausible because they describe actual behaviors or characteristics of the Cheshire Cat mentioned in the passage. A student might reasonably think any of these could indicate magical powers without careful analysis.",
+        "score": 0,
+        "response": "Option B 'Alice talks to the sleepy Dormouse' is not plausible because the text explicitly states the Dormouse is sleepy and there's no indication Alice ever speaks to it. Option D 'Alice solves the raven riddle' is also implausible since the passage ends mid-sentence without Alice solving anything.",
         "category": "distractor"
       },
       "homogeneity": {
         "score": 1,
-        "response": "All choices describe behaviors, actions, or physical characteristics of the Cheshire Cat from the passage. They are all the same type of answer - textual details about the character.",
+        "response": "All choices represent conversational interactions or attempts at interaction that Alice has at the tea party scene, maintaining conceptual consistency.",
         "category": "distractor"
       },
       "specificity_balance": {
         "score": 1,
-        "response": "All choices provide similar levels of detail, describing 2-3 specific actions or characteristics of the Cheshire Cat in comparable length and specificity.",
+        "response": "All choices are at similar levels of detail - each describes a specific conversational topic or interaction without being overly broad or excessively detailed.",
         "category": "distractor"
       },
       "standard_alignment": {
         "score": 0,
-        "response": "RL.3.7 focuses on explaining how specific aspects of illustrations contribute to and clarify text. This question asks about identifying text details that show magical powers, which is more aligned with character analysis or inference skills rather than illustration-text relationships.",
+        "response": "RL.3.7 focuses on using illustrations and text to demonstrate understanding of characters, setting, or plot. This question is asking students to organize narrative events in sequence, which is more aligned with story structure/sequencing standards rather than using visual and textual information for comprehension.",
         "category": "question"
       },
       "clarity_precision": {
-        "score": 1,
-        "response": "The question is clearly written and unambiguous. It asks for 'text details that work together' to show magical powers, which has a clear meaning and interpretation.",
+        "score": 0,
+        "response": "The question is ambiguous about what constitutes 'Conversation 3.' The chart format suggests discrete conversations, but the tea party scene contains multiple overlapping exchanges about room at the table, lemonade, and invitations that blur together rather than forming distinct conversations.",
         "category": "question"
       },
       "single_correct_answer": {
-        "score": 1,
-        "response": "Option B is clearly the only correct answer as disappearing and leaving a floating smile are definitively magical phenomena. The other options describe normal behaviors that don't inherently demonstrate magical powers.",
+        "score": 0,
+        "response": "Both A and C could be considered correct. The argument about room at the table and the discussion about lemonade occur in the same continuous exchange and are equally valid as 'Conversation 3' since there's no clear delineation between conversations in the text.",
         "category": "question"
       },
       "passage_reference": {
         "score": 1,
-        "response": "No specific passage references (like paragraph numbers or direct quotes) are made in the question or answer choices, so this criterion is satisfied by default.",
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default.",
         "category": "question"
       },
       "too_close": {
         "score": 1,
-        "response": "The distractors provided in the question are sufficiently distinct from the correct answer. Each choice describes different actions or characteristics of the Cheshire Cat that do not explicitly indicate the use of magical powers like disappearing. Choices A, C, and D focus on physical traits, direction giving, and dialogue that do not directly show magical traits, unlike B, where the action of disappearing leaving only a grin perfectly captures the concept of magical powers.",
+        "response": "The distractors are clearly distinct from the correct answer and from each other. Each choice refers to a different potential interaction Alice could have during the tea party, and only option A ('Alice argues about room at the table') is directly supported by the provided passage. The other choices refer to interactions or elements not mentioned in the text, making it less likely that they would be confused with the correct answer.",
         "category": "distractor"
       },
       "difficulty_assessment": {
         "score": 1,
-        "response": "The question is appropriate for a third-grade level. The vocabulary used within the question and the passage excerpts provided are common and understandable for this age group. Moreover, the reasoning required to select the correct answer involves a straightforward comparison of the details in the text about what might indicate magical powers, which aligns with the cognitive skills expected of third-grade students.",
+        "response": "The question is suitable for a Grade 3 level. The vocabulary used in the question and choices is straightforward and age-appropriate. The reasoning required to identify the correct answer involves matching a detail from the text to the chart, a task that aligns well with the reading comprehension and critical thinking skills expected at this grade level. Furthermore, the text provides a clear context for each conversation, which aids in making the connections needed to answer the question accurately.",
         "category": "question"
       },
       "length_check": {
-        "score": 1,
-        "response": "Choice lengths are balanced",
+        "score": 0,
+        "response": "Correct answer (7 words) too long",
         "category": "distractor"
       }
     },
     "provider": "openrouter",
-    "timestamp": "2025-12-20T14:21:12.557164",
-    "run_id": "20251220_142006",
+    "timestamp": "2025-12-20T01:44:27.548128",
+    "run_id": "20251220_013656",
     "article_id": "article_101006",
-    "content_hash": "31a6c307b0ae",
+    "content_hash": "622c8525177e",
     "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
-    "question_preview": "Which text details work together to show that the Cheshir..."
+    "question_preview": "Look at this chart about Alice's conversations:\n\nConversa..."
   },
   {
     "question_id": "quiz_302048_sibling_4",
@@ -8866,73 +8866,73 @@
   {
     "question_id": "quiz_302049_sibling_1",
     "question_type": "MCQ",
-    "overall_score": 1.0,
-    "total_checks_passed": 11,
+    "overall_score": 0.5454545454545454,
+    "total_checks_passed": 6,
     "total_checks_run": 11,
     "checks": {
       "grammatical_parallel": {
-        "score": 1,
-        "response": "All answer choices follow the same grammatical pattern - they all begin with 'When' followed by a subject and verb phrase, creating consistent parallel structure.",
+        "score": 0,
+        "response": "The choices do not follow consistent grammatical structure. A and B use 'First X, then Y' pattern, C uses 'All characters meet Alice at once', and D uses 'Characters appear in Alice's dreams' - these are different grammatical constructions.",
         "category": "distractor"
       },
       "plausibility": {
-        "score": 1,
-        "response": "All distractors are plausible events that occur in the passage. A student could reasonably confuse when Alice arrives at the tea party with other sequential events like talking to the Cat, being offered lemonade, or hearing the riddle.",
+        "score": 0,
+        "response": "Option D 'Characters appear in Alice's dreams' is not plausible based on the passage. The text presents the encounters as real events in Wonderland, not dreams. Option C is also implausible since the passage clearly shows Alice meeting characters sequentially, not all at once.",
         "category": "distractor"
       },
       "homogeneity": {
-        "score": 1,
-        "response": "All choices represent specific events or moments in the story sequence, making them conceptually similar as potential answers to a question about timing of arrival.",
+        "score": 0,
+        "response": "The choices span different conceptual categories. A and B describe sequential order of meetings, C describes simultaneous meetings, and D describes a completely different scenario (dreams vs. reality). They don't all address the same type of organizational structure.",
         "category": "distractor"
       },
       "specificity_balance": {
-        "score": 1,
-        "response": "All choices are at similar levels of detail - each describes a specific action or event with comparable brevity and focus on a particular moment in the narrative.",
+        "score": 0,
+        "response": "There are significant differences in specificity. A and B are specific about the order of two encounters, C is general about timing, and D introduces an entirely different concept (dreams) not related to organizational sequence.",
         "category": "distractor"
       },
       "standard_alignment": {
         "score": 1,
-        "response": "RL.3.5 focuses on referring to parts of stories and describing how parts build on earlier sections. This question requires students to identify a specific structural element (arrival at tea party) and locate it within the text sequence.",
+        "response": "The question properly assesses RL.3.5 by asking about how the author organizes the story structure, specifically the sequence of character introductions, which relates to understanding text structure and organization.",
         "category": "question"
       },
       "clarity_precision": {
         "score": 1,
-        "response": "The question is clearly written and asks for a specific, identifiable moment in the text. The phrase 'when Alice arrives at the tea party' is unambiguous and has a clear textual referent.",
+        "response": "The question is clearly written and asks specifically about how the author organizes the story to show Alice meeting different characters. The intent is unambiguous.",
         "category": "question"
       },
       "single_correct_answer": {
         "score": 1,
-        "response": "Option B is the only correct answer. The passage clearly states 'Alice continued walking until she came to a house. In front of the house was a large table set up for tea time' - this is definitively when she arrives at the tea party location.",
+        "response": "Option A is clearly correct based on the passage structure. Alice first meets the Cheshire Cat (paragraphs 1-2), then encounters the tea party group with the March Hare, Mad Hatter, and Dormouse (paragraphs 3-4).",
         "category": "question"
       },
       "passage_reference": {
         "score": 1,
-        "response": "No specific passage references like paragraph numbers or quotes are made in the question or answer choices, so this criterion is satisfied by default.",
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question or answer choices, so this criterion is met by default.",
         "category": "question"
       },
       "too_close": {
         "score": 1,
-        "response": "The distractors are not semantically similar to the correct answer. Each choice describes distinctly different parts of the passage: talking to the Cheshire Cat (A), walking to a house where the tea party is held (B), and the last two are irrelevant events not found in the passage (C and D). The distinction is clear, making it unlikely for a student to confuse the distractors with the correct answer.",
+        "response": "The distractors are distinct from each other and the correct answer, leaving no confusion among choices. Each option presents a different scenario regarding the sequence or nature of interactions with various characters, making the distinctions between them clear. There's no semantic similarity that could mislead or confuse a third grader into choosing an incorrect answer over the correct one.",
         "category": "distractor"
       },
       "difficulty_assessment": {
         "score": 1,
-        "response": "The question requires basic reading comprehension skills appropriate for a Grade 3 level. Students are asked to identify a setting from a narrative, an activity suitable for their age. The vocabulary used is straightforward, and the reasoning required is direct and matches the cognitive abilities expected at this grade level.",
+        "response": "The question is suitable for a Grade 3 student as it involves basic reading comprehension skills, which includes remembering the order and context in which events occur in a narrative. The vocabulary used in both the passage and the question is appropriate for this grade level, not involving any overly complex terms. Additionally, the task of identifying the sequence in which characters are met by the protagonist is a straightforward reasoning challenge suitable for this age group.",
         "category": "question"
       },
       "length_check": {
-        "score": 1,
-        "response": "Choice lengths are balanced",
+        "score": 0,
+        "response": "Correct answer (8 words) too long",
         "category": "distractor"
       }
     },
     "provider": "openrouter",
-    "timestamp": "2025-12-20T16:18:52.363719",
-    "run_id": "20251220_161823",
+    "timestamp": "2025-12-20T01:44:44.979317",
+    "run_id": "20251220_013656",
     "article_id": "article_101006",
-    "content_hash": "45fbeea1737b",
+    "content_hash": "187dfe387f96",
     "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
-    "question_preview": "Which part of the passage shows when Alice arrives at the..."
+    "question_preview": "How does the author organize the story to show Alice meet..."
   },
   {
     "question_id": "quiz_302049_sibling_2",
@@ -14759,73 +14759,73 @@
   {
     "question_id": "quiz_302080_sibling_4",
     "question_type": "MCQ",
-    "overall_score": 1.0,
-    "total_checks_passed": 11,
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
     "total_checks_run": 11,
     "checks": {
       "grammatical_parallel": {
         "score": 1,
-        "response": "All answer choices follow the same grammatical structure: 'how [adjective] Rat feels [preposition phrase]'. Each choice maintains parallel construction with the same word order and parts of speech.",
+        "response": "All answer choices follow the same grammatical pattern, beginning with 'To' followed by a verb phrase (show/explain/describe/show), creating consistent parallel structure.",
         "category": "distractor"
       },
       "plausibility": {
-        "score": 1,
-        "response": "All distractors are plausible given the context. Option B (tired from the trip) could explain physical movement, Option C (confused about cars) relates to the new technology encounter, and Option D (excited about adventure) connects to the trip theme. None are obviously wrong without careful analysis.",
+        "score": 0,
+        "response": "Options B, C, and D are not plausible distractors. Option B about wagon color is completely unrelated to jumping into a ditch. Option C about running speed doesn't match the context of avoiding danger. Option D about road dirtiness is also unrelated to the action of jumping for safety.",
         "category": "distractor"
       },
       "homogeneity": {
-        "score": 1,
-        "response": "All choices belong to the same conceptual category - they all describe emotional or physical states that Rat might be feeling. Each option addresses how Rat feels about different aspects of the situation.",
+        "score": 0,
+        "response": "The choices do not belong to the same conceptual category. Option A addresses author's purpose regarding danger/safety, while B addresses descriptive details about appearance, C addresses character abilities, and D addresses setting conditions.",
         "category": "distractor"
       },
       "specificity_balance": {
         "score": 1,
-        "response": "All choices are at similar levels of detail and specificity. Each option identifies one emotion/feeling (upset, tired, confused, excited) paired with a specific cause or context, maintaining comparable levels of detail.",
+        "response": "All choices are at similar levels of detail and specificity, each providing a concise explanation for the author's purpose in describing the action.",
         "category": "distractor"
       },
       "standard_alignment": {
         "score": 1,
-        "response": "This question properly assesses RL.3.3 by asking students to analyze how the author's description of character actions (dancing, shaking fists) reveals the character's feelings and motivations. Students must connect character behavior to internal state.",
+        "response": "RL.3.3 focuses on describing how characters' actions contribute to events in a story. This question asks students to analyze why the author included the characters jumping into the ditch, which directly assesses understanding of how character actions relate to story events.",
         "category": "question"
       },
       "clarity_precision": {
         "score": 1,
-        "response": "The question is clearly written and unambiguous. The phrase 'most likely to show' clearly indicates students should identify the author's purpose in describing Rat's actions. The question has one clear interpretation.",
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's purpose for describing the friends jumping into a ditch when the motor car approaches, which is a precise and focused inquiry.",
         "category": "question"
       },
       "single_correct_answer": {
         "score": 1,
-        "response": "Option A is the only defensibly correct answer. The passage clearly states Rat was 'very angry' and describes his actions in that context. The other options are not supported by the text evidence about Rat's emotional state.",
+        "response": "Option A is clearly the only defensible correct answer. The passage explicitly shows the friends had to jump to 'get out of the way' of the motor car, demonstrating its danger to travelers. The other options are not supported by the text.",
         "category": "question"
       },
       "passage_reference": {
         "score": 1,
-        "response": "No specific passage references (like paragraph numbers or direct quotes) are made in the question, so this check passes by default. The question references the described actions accurately without citing specific locations.",
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question, so this criterion is satisfied by default.",
         "category": "question"
       },
       "too_close": {
         "score": 1,
-        "response": "The distractors provided in the question are distinctly different from each other in meaning and context, reducing any possible confusion. Each choice depicts a different emotional reaction that Rat could have, and only one (being upset about the accident) aligns closely with the actions described (dancing up and down in the road and shaking his fists). Thus, none of the distractors are too close semantically to the correct answer.",
+        "response": "The distractors in this question are distinct from the correct answer and each other. Each distractor provides a different perspective or reason for the action described in the passage (jumping into the ditch). The correct choice (A) focuses on the danger posed by the motor car, while the other options refer to unrelated aspects such as the color of the wagon, the speed of running, or the cleanliness of the road. These differences ensure there is no semantic overlap that could confuse the test-taker.",
         "category": "distractor"
       },
       "difficulty_assessment": {
         "score": 1,
-        "response": "The question is appropriate for a Grade 3 level in both vocabulary and reasoning demands. The words used, such as 'upset,' 'tired,' 'confused,' and 'excited,' are typical for this grade level, allowing children to understand and distinguish between the emotional states effectively. The reasoning required to identify how physical actions relate to emotional reactions, while contextual, is also within the capability of Grade 3 students, making the complexity suitable for their cognitive development.",
+        "response": "The question, along with its vocabulary and the reasoning required, is suitable for a Grade 3 level. The vocabulary used in the question and choices are straightforward and accessible for young students. The reasoning needed to answer correctly is directly supported by clues in the text, such as the sudden appearance and effect of the motor car, without requiring overly sophisticated inferential skills. This aligns well with the cognitive and comprehension abilities expected at this educational level.",
         "category": "question"
       },
       "length_check": {
-        "score": 1,
-        "response": "Choice lengths are balanced",
+        "score": 0,
+        "response": "Correct answer (10 words) too long",
         "category": "distractor"
       }
     },
     "provider": "openrouter",
-    "timestamp": "2025-12-20T14:21:11.464457",
-    "run_id": "20251220_142006",
+    "timestamp": "2025-12-20T01:45:07.279568",
+    "run_id": "20251220_013656",
     "article_id": "article_101010",
-    "content_hash": "756863f9c710",
+    "content_hash": "e47d50431e59",
     "passage_title": "The Open Road, Part III",
-    "question_preview": "The author describes Rat dancing up and down in the road..."
+    "question_preview": "Why does the author describe the friends jumping into a d..."
   },
   {
     "question_id": "quiz_302081",

@@ -112,21 +112,19 @@ quiz_302046_sibling_2,article_101006,63e3a062fb72,"Alice’s Adventures in Wonde
 quiz_302046_sibling_3,article_101006,fa2671a3cca7,"Alice’s Adventures in Wonderland, Part III",What does Alice do after the Cheshire Cat tells her every...,91%,✅,10/11,length_check,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,❌,✅,✅
 quiz_302046_sibling_4,article_101006,ceb993becd11,"Alice’s Adventures in Wonderland, Part III",How does Alice's response to the March Hare's offer of le...,91%,✅,10/11,difficulty_assessment,20251220_013656,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,❌
 quiz_302047,article_101006,54e2abddf897,"Alice’s Adventures in Wonderland, Part III","What does the March Hare offer Alice, even though there i...",82%,✅,9/11,"standard_alignment, length_check",20251220_002738,✅,✅,✅,✅,❌,✅,✅,✅,❌,✅,✅
-quiz_302047_sibling_1,article_101006,12fa5b49ecd1,"Alice’s Adventures in Wonderland, Part III",What lesson does the story teach about dealing with confu...,64%,❌,7/11,"standard_alignment, clarity_precision, single_correct_answer, difficulty_assessment",20251220_013656,✅,✅,✅,✅,❌,❌,❌,✅,✅,✅,❌
+quiz_302047_sibling_1,article_101006,3644d29420c6,"Alice’s Adventures in Wonderland, Part III",What is the main message the author shows through Alice's...,100%,✅,11/11,,20251220_142006,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302047_sibling_2,article_101006,c483db6d5b0e,"Alice’s Adventures in Wonderland, Part III",What message does the story convey through the Mad Hatter...,91%,✅,10/11,difficulty_assessment,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,❌
 quiz_302047_sibling_3,article_101006,9e077c068128,"Alice’s Adventures in Wonderland, Part III","Based on the entire passage, what central idea does the a...",100%,✅,11/11,,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302047_sibling_4,article_101006,ce2878b10cfc,"Alice’s Adventures in Wonderland, Part III",What main message does the author share through Alice's c...,100%,✅,11/11,,20251220_013656,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302048,article_101006,52faf27ff841,"Alice’s Adventures in Wonderland, Part III",Read this outline about Alice's journey. I. Characters Al...,91%,✅,10/11,standard_alignment,20251220_002738,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,✅
 quiz_302048_sibling_1,article_101006,ad6989e6c623,"Alice’s Adventures in Wonderland, Part III",Which text details best help readers understand that the ...,91%,✅,10/11,standard_alignment,20251220_013656,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,✅
 quiz_302048_sibling_2,article_101006,e5e1f17b8160,"Alice’s Adventures in Wonderland, Part III",Look at this timeline of events:  1. Alice talks to Chesh...,82%,✅,9/11,"plausibility, standard_alignment",20251220_002738,✅,❌,✅,✅,❌,✅,✅,✅,✅,✅,✅
-quiz_302048_sibling_3,article_101006,622c8525177e,"Alice’s Adventures in Wonderland, Part III","Look at this chart about Alice's conversations:
-
-Conversa...",55%,❌,6/11,"plausibility, standard_alignment, clarity_precision, single_correct_answer, length_check",20251220_013656,✅,❌,✅,✅,❌,❌,❌,✅,❌,✅,✅
+quiz_302048_sibling_3,article_101006,31a6c307b0ae,"Alice’s Adventures in Wonderland, Part III",Which text details work together to show that the Cheshir...,91%,✅,10/11,standard_alignment,20251220_142006,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,✅
 quiz_302048_sibling_4,article_101006,c436459f3a88,"Alice’s Adventures in Wonderland, Part III","Look at this simple chart about Alice's journey:
 
 Alice's...",82%,✅,9/11,"standard_alignment, single_correct_answer",20251220_013656,✅,✅,✅,✅,❌,✅,❌,✅,✅,✅,✅
 quiz_302049,article_101006,d74d3b7063ff,"Alice’s Adventures in Wonderland, Part III",What is one way the author shows that Wonderland is a str...,82%,✅,9/11,"plausibility, standard_alignment",20251220_002738,✅,❌,✅,✅,❌,✅,✅,✅,✅,✅,✅
-quiz_302049_sibling_1,article_101006,187dfe387f96,"Alice’s Adventures in Wonderland, Part III",How does the author organize the story to show Alice meet...,55%,❌,6/11,"grammatical_parallel, plausibility, homogeneity, specificity_balance, length_check",20251220_013656,❌,❌,❌,❌,✅,✅,✅,✅,❌,✅,✅
+quiz_302049_sibling_1,article_101006,45fbeea1737b,"Alice’s Adventures in Wonderland, Part III",Which part of the passage shows when Alice arrives at the...,100%,✅,11/11,,20251220_161823,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302049_sibling_2,article_101006,5e2e76981533,"Alice’s Adventures in Wonderland, Part III",What does the author emphasize about Wonderland by descri...,82%,✅,9/11,"standard_alignment, difficulty_assessment",20251220_002738,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,❌
 quiz_302049_sibling_3,article_101006,d5360ec9925b,"Alice’s Adventures in Wonderland, Part III",Which sentence from the passage shows the beginning of th...,82%,✅,9/11,"standard_alignment, length_check",20251220_013656,✅,✅,✅,✅,❌,✅,✅,✅,❌,✅,✅
 quiz_302049_sibling_4,article_101006,e2406c77a39f,"Alice’s Adventures in Wonderland, Part III","In paragraph 1, which part of the conversation with the C...",82%,✅,9/11,"standard_alignment, difficulty_assessment",20251220_002738,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,❌
@@ -209,7 +207,7 @@ quiz_302080,article_101010,74a5ec647b6c,"The Open Road, Part III",The author mos
 quiz_302080_sibling_1,article_101010,0c6e5cd8f228,"The Open Road, Part III",The author describes the motor car's shiny glass and leat...,100%,✅,11/11,,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302080_sibling_2,article_101010,99e0bbe5bcbb,"The Open Road, Part III",The author includes details about the dust cloud and fain...,91%,✅,10/11,length_check,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,❌,✅,✅
 quiz_302080_sibling_3,article_101010,582c70d52ab1,"The Open Road, Part III","Based on the passage, why does the author mention that 'i...",91%,✅,10/11,difficulty_assessment,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,❌
-quiz_302080_sibling_4,article_101010,e47d50431e59,"The Open Road, Part III",Why does the author describe the friends jumping into a d...,73%,❌,8/11,"plausibility, homogeneity, length_check",20251220_013656,✅,❌,❌,✅,✅,✅,✅,✅,❌,✅,✅
+quiz_302080_sibling_4,article_101010,756863f9c710,"The Open Road, Part III",The author describes Rat dancing up and down in the road...,100%,✅,11/11,,20251220_142006,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302081,article_101010,72002b9de03c,"The Open Road, Part III","Read the sentence from the passage. ""He did not want to d...",100%,✅,11/11,,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅
 quiz_302081_sibling_1,article_101010,e35955573439,"The Open Road, Part III",Read these sentences from the passage: 'He did not want t...,91%,✅,10/11,standard_alignment,20251220_002738,✅,✅,✅,✅,❌,✅,✅,✅,✅,✅,✅
 quiz_302081_sibling_2,article_101010,435bd6e2633b,"The Open Road, Part III",What does Toad's statement 'This is the real life for a g...,100%,✅,11/11,,20251220_002738,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅,✅

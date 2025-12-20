@@ -1,0 +1,192 @@
+{
+  "run_id": "20251220_142006",
+  "timestamp": "2025-12-20T14:21:14.055446",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 4,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 4,
+    "now_passing": 3,
+    "still_failing": 1,
+    "improvement_rate": "75.0%",
+    "questions_improved": 4,
+    "avg_score_before": 0.614,
+    "avg_score_after": 0.909,
+    "avg_score_improvement": 0.295
+  },
+  "by_check_improvement": {
+    "single_correct_answer": {
+      "before_failures": 2,
+      "after_failures": 0,
+      "fixed": 2
+    },
+    "standard_alignment": {
+      "before_failures": 2,
+      "after_failures": 2,
+      "fixed": 1
+    },
+    "difficulty_assessment": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "clarity_precision": {
+      "before_failures": 2,
+      "after_failures": 0,
+      "fixed": 2
+    },
+    "length_check": {
+      "before_failures": 3,
+      "after_failures": 1,
+      "fixed": 2
+    },
+    "plausibility": {
+      "before_failures": 3,
+      "after_failures": 1,
+      "fixed": 2
+    },
+    "specificity_balance": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "homogeneity": {
+      "before_failures": 2,
+      "after_failures": 0,
+      "fixed": 2
+    },
+    "grammatical_parallel": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302047_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral. This question asks about a lesson the story teaches, but the passage doesn't clearly demonstrate Alice learning or embodying the lesson 'stay calm and keep trying.' The standard requires identifying themes explicitly supported by the text, not inferring general life lessons.",
+          "clarity_precision": "The question is ambiguous because it asks what 'lesson the story teaches' without clearly defining whether it means what Alice learns, what readers should learn, or what the author intended. Additionally, 'dealing with confusing situations' is vague and could apply to multiple aspects of Alice's journey.",
+          "single_correct_answer": "The passage doesn't clearly support option A as the definitive correct answer. Alice doesn't consistently demonstrate staying calm (she shows anger multiple times) or a clear pattern of persistence leading to success. Other interpretations could be equally valid based on the text.",
+          "difficulty_assessment": "For Grade 3, this question may be slightly challenging due to a few factors. Firstly, the vocabulary and phrases such as 'everyone in this place is mad, including me and you,' and 'a grin without a cat' are complex and could be confusing. Secondly, the abstract reasoning required to understand the thematic implications of Alice's experiences and extract a lesson about handling confusing situations may be too demanding for this age group, typically between 8 to 9 years old. The literal comprehension of the text might be manageable, but the inferential reasoning about life lessons from the story would likely be intricate for most children in this grade."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302048_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B 'Alice talks to the sleepy Dormouse' is not plausible because the text explicitly states the Dormouse is sleepy and there's no indication Alice ever speaks to it. Option D 'Alice solves the raven riddle' is also implausible since the passage ends mid-sentence without Alice solving anything.",
+          "standard_alignment": "RL.3.7 focuses on using illustrations and text to demonstrate understanding of characters, setting, or plot. This question is asking students to organize narrative events in sequence, which is more aligned with story structure/sequencing standards rather than using visual and textual information for comprehension.",
+          "clarity_precision": "The question is ambiguous about what constitutes 'Conversation 3.' The chart format suggests discrete conversations, but the tea party scene contains multiple overlapping exchanges about room at the table, lemonade, and invitations that blur together rather than forming distinct conversations.",
+          "single_correct_answer": "Both A and C could be considered correct. The argument about room at the table and the discussion about lemonade occur in the same continuous exchange and are equally valid as 'Conversation 3' since there's no clear delineation between conversations in the text.",
+          "length_check": "Correct answer (7 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.7 focuses on explaining how specific aspects of illustrations contribute to and clarify text. This question asks about identifying text details that show magical powers, which is more aligned with character analysis or inference skills rather than illustration-text relationships."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302049_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices do not follow consistent grammatical structure. A and B use 'First X, then Y' pattern, C uses 'All characters meet Alice at once', and D uses 'Characters appear in Alice's dreams' - these are different grammatical constructions.",
+          "plausibility": "Option D 'Characters appear in Alice's dreams' is not plausible based on the passage. The text presents the encounters as real events in Wonderland, not dreams. Option C is also implausible since the passage clearly shows Alice meeting characters sequentially, not all at once.",
+          "homogeneity": "The choices span different conceptual categories. A and B describe sequential order of meetings, C describes simultaneous meetings, and D describes a completely different scenario (dreams vs. reality). They don't all address the same type of organizational structure.",
+          "specificity_balance": "There are significant differences in specificity. A and B are specific about the order of two encounters, C is general about timing, and D introduces an entirely different concept (dreams) not related to organizational sequence.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The Cat's dialogue shows no evidence of speaking 'kindly' (he's somewhat cryptic), 'loudly' (no volume indicators in text), or 'quickly' (no speed indicators). These are obviously wrong to any careful reader.",
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories/dramas when writing or speaking about text, using terms like chapter, scene, and stanza. This question asks about character development through dialogue, which aligns more with character analysis standards (RL.3.3) than structural text features.",
+          "length_check": "Correct answer (6 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": false,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302080_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. Option B about wagon color is completely unrelated to jumping into a ditch. Option C about running speed doesn't match the context of avoiding danger. Option D about road dirtiness is also unrelated to the action of jumping for safety.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A addresses author's purpose regarding danger/safety, while B addresses descriptive details about appearance, C addresses character abilities, and D addresses setting conditions.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    }
+  ]
+}

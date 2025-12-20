@@ -1,0 +1,65 @@
+{
+  "run_id": "20251220_161823",
+  "timestamp": "2025-12-20T16:18:52.516099",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 1,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 1,
+    "now_passing": 1,
+    "still_failing": 0,
+    "improvement_rate": "100.0%",
+    "questions_improved": 1,
+    "avg_score_before": 0.727,
+    "avg_score_after": 1.0,
+    "avg_score_improvement": 0.273
+  },
+  "by_check_improvement": {
+    "plausibility": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "standard_alignment": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "length_check": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302049_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The Cat's dialogue shows no evidence of speaking 'kindly' (he's somewhat cryptic), 'loudly' (no volume indicators in text), or 'quickly' (no speed indicators). These are obviously wrong to any careful reader.",
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories/dramas when writing or speaking about text, using terms like chapter, scene, and stanza. This question asks about character development through dialogue, which aligns more with character analysis standards (RL.3.3) than structural text features.",
+          "length_check": "Correct answer (6 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    }
+  ]
+}

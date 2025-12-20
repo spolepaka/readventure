@@ -1,0 +1,73 @@
+[
+  {
+    "question_id": "quiz_302049_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern - they all begin with 'When' followed by a subject and verb phrase, creating consistent parallel structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible events that occur in the passage. A student could reasonably confuse when Alice arrives at the tea party with other sequential events like talking to the Cat, being offered lemonade, or hearing the riddle.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent specific events or moments in the story sequence, making them conceptually similar as potential answers to a question about timing of arrival.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail - each describes a specific action or event with comparable brevity and focus on a particular moment in the narrative.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.5 focuses on referring to parts of stories and describing how parts build on earlier sections. This question requires students to identify a specific structural element (arrival at tea party) and locate it within the text sequence.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks for a specific, identifiable moment in the text. The phrase 'when Alice arrives at the tea party' is unambiguous and has a clear textual referent.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is the only correct answer. The passage clearly states 'Alice continued walking until she came to a house. In front of the house was a large table set up for tea time' - this is definitively when she arrives at the tea party location.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question or answer choices, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Each choice describes distinctly different parts of the passage: talking to the Cheshire Cat (A), walking to a house where the tea party is held (B), and the last two are irrelevant events not found in the passage (C and D). The distinction is clear, making it unlikely for a student to confuse the distractors with the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question requires basic reading comprehension skills appropriate for a Grade 3 level. Students are asked to identify a setting from a narrative, an activity suitable for their age. The vocabulary used is straightforward, and the reasoning required is direct and matches the cognitive abilities expected at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2025-12-20T16:18:52.363719",
+    "run_id": "20251220_161823",
+    "article_id": "article_101006",
+    "content_hash": "45fbeea1737b",
+    "passage_title": "Alice\u2019s Adventures in Wonderland, Part III",
+    "question_preview": "Which part of the passage shows when Alice arrives at the..."
+  }
+]

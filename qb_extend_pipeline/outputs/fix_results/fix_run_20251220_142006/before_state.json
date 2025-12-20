@@ -1,0 +1,100 @@
+{
+  "quiz_302047_sibling_1": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "standard_alignment",
+      "clarity_precision",
+      "single_correct_answer",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RL.3.2 requires students to recount stories and determine the central message, lesson, or moral. This question asks about a lesson the story teaches, but the passage doesn't clearly demonstrate Alice learning or embodying the lesson 'stay calm and keep trying.' The standard requires identifying themes explicitly supported by the text, not inferring general life lessons.",
+      "clarity_precision": "The question is ambiguous because it asks what 'lesson the story teaches' without clearly defining whether it means what Alice learns, what readers should learn, or what the author intended. Additionally, 'dealing with confusing situations' is vague and could apply to multiple aspects of Alice's journey.",
+      "single_correct_answer": "The passage doesn't clearly support option A as the definitive correct answer. Alice doesn't consistently demonstrate staying calm (she shows anger multiple times) or a clear pattern of persistence leading to success. Other interpretations could be equally valid based on the text.",
+      "difficulty_assessment": "For Grade 3, this question may be slightly challenging due to a few factors. Firstly, the vocabulary and phrases such as 'everyone in this place is mad, including me and you,' and 'a grin without a cat' are complex and could be confusing. Secondly, the abstract reasoning required to understand the thematic implications of Alice's experiences and extract a lesson about handling confusing situations may be too demanding for this age group, typically between 8 to 9 years old. The literal comprehension of the text might be manageable, but the inferential reasoning about life lessons from the story would likely be intricate for most children in this grade."
+    },
+    "question_text": "What lesson does the story teach about dealing with confusing situations?",
+    "options": {
+      "A": "Stay calm and keep trying.",
+      "B": "Give up when things get hard.",
+      "C": "Avoid talking to new people.",
+      "D": "Always follow the first advice."
+    }
+  },
+  "quiz_302048_sibling_3": {
+    "score": 0.5454545454545454,
+    "total_checks": 11,
+    "passed_checks": 6,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "clarity_precision",
+      "single_correct_answer",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option B 'Alice talks to the sleepy Dormouse' is not plausible because the text explicitly states the Dormouse is sleepy and there's no indication Alice ever speaks to it. Option D 'Alice solves the raven riddle' is also implausible since the passage ends mid-sentence without Alice solving anything.",
+      "standard_alignment": "RL.3.7 focuses on using illustrations and text to demonstrate understanding of characters, setting, or plot. This question is asking students to organize narrative events in sequence, which is more aligned with story structure/sequencing standards rather than using visual and textual information for comprehension.",
+      "clarity_precision": "The question is ambiguous about what constitutes 'Conversation 3.' The chart format suggests discrete conversations, but the tea party scene contains multiple overlapping exchanges about room at the table, lemonade, and invitations that blur together rather than forming distinct conversations.",
+      "single_correct_answer": "Both A and C could be considered correct. The argument about room at the table and the discussion about lemonade occur in the same continuous exchange and are equally valid as 'Conversation 3' since there's no clear delineation between conversations in the text.",
+      "length_check": "Correct answer (7 words) too long"
+    },
+    "question_text": "Look at this chart about Alice's conversations:\r\n\r\nConversation 1: Alice asks Cheshire Cat for directions\r\nConversation 2: Alice asks about people who live nearby\r\nConversation 3: _______\r\nConversation 4: Alice discusses the riddle with Mad Hatter\r\n\r\nWhich detail from the text BEST completes Conversation 3?",
+    "options": {
+      "A": "Alice argues about room at the table",
+      "B": "Alice talks to the sleepy Dormouse",
+      "C": "Alice asks about the missing lemonade",
+      "D": "Alice solves the raven riddle"
+    }
+  },
+  "quiz_302049_sibling_1": {
+    "score": 0.5454545454545454,
+    "total_checks": 11,
+    "passed_checks": 6,
+    "failed_checks": [
+      "grammatical_parallel",
+      "plausibility",
+      "homogeneity",
+      "specificity_balance",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "grammatical_parallel": "The choices do not follow consistent grammatical structure. A and B use 'First X, then Y' pattern, C uses 'All characters meet Alice at once', and D uses 'Characters appear in Alice's dreams' - these are different grammatical constructions.",
+      "plausibility": "Option D 'Characters appear in Alice's dreams' is not plausible based on the passage. The text presents the encounters as real events in Wonderland, not dreams. Option C is also implausible since the passage clearly shows Alice meeting characters sequentially, not all at once.",
+      "homogeneity": "The choices span different conceptual categories. A and B describe sequential order of meetings, C describes simultaneous meetings, and D describes a completely different scenario (dreams vs. reality). They don't all address the same type of organizational structure.",
+      "specificity_balance": "There are significant differences in specificity. A and B are specific about the order of two encounters, C is general about timing, and D introduces an entirely different concept (dreams) not related to organizational sequence.",
+      "length_check": "Correct answer (8 words) too long"
+    },
+    "question_text": "How does the author organize the story to show Alice meeting different characters?",
+    "options": {
+      "A": "First the Cat, then the tea party group",
+      "B": "First the tea party, then the Cat",
+      "C": "All characters meet Alice at once",
+      "D": "Characters appear in Alice's dreams"
+    }
+  },
+  "quiz_302080_sibling_4": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D are not plausible distractors. Option B about wagon color is completely unrelated to jumping into a ditch. Option C about running speed doesn't match the context of avoiding danger. Option D about road dirtiness is also unrelated to the action of jumping for safety.",
+      "homogeneity": "The choices do not belong to the same conceptual category. Option A addresses author's purpose regarding danger/safety, while B addresses descriptive details about appearance, C addresses character abilities, and D addresses setting conditions.",
+      "length_check": "Correct answer (10 words) too long"
+    },
+    "question_text": "Why does the author describe the friends jumping into a ditch when the motor car approaches?",
+    "options": {
+      "A": "To show how dangerous the motor car was to travelers",
+      "B": "To explain why their wagon was painted yellow",
+      "C": "To describe how fast they could run together",
+      "D": "To show how dirty the road was that day"
+    }
+  }
+}
