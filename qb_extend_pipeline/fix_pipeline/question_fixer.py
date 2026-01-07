@@ -162,6 +162,7 @@ Generate a COMPLETELY NEW question that:
 6. Has exactly ONE correct answer
 7. Has plausible, well-crafted distractors
 8. All options follow the same grammatical pattern and are similar in length
+9. ONLY references events, characters, and details EXPLICITLY STATED in the passage (students only see this excerpt, not the full story)
 
 Return ONLY valid JSON (no markdown, no explanation outside JSON):
 {{

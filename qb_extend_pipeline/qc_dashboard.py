@@ -30,21 +30,32 @@ def load_qc_results(results_dir: Path) -> Dict[str, Any]:
         'summary': None
     }
     
-    # Find most recent files
-    question_files = sorted(results_dir.glob("question_qc_v2_*.json"), reverse=True)
-    explanation_files = sorted(results_dir.glob("explanation_qc_v2_*.json"), reverse=True)
-    summary_file = results_dir / "summary_report.json"
-    
-    if question_files:
-        with open(question_files[0]) as f:
+    # Find question QC files - check multiple patterns
+    # Priority: merged > v3 > v2
+    merged_file = results_dir / "question_qc_merged.json"
+    if merged_file.exists():
+        with open(merged_file) as f:
             results['question_qc'] = json.load(f)
-        results['question_file'] = question_files[0].name
+        results['question_file'] = merged_file.name
+    else:
+        # Fallback to v3 or v2 files
+        question_files = sorted(results_dir.glob("question_qc_v3_*.json"), reverse=True)
+        if not question_files:
+            question_files = sorted(results_dir.glob("question_qc_v2_*.json"), reverse=True)
+        if question_files:
+            with open(question_files[0]) as f:
+                results['question_qc'] = json.load(f)
+            results['question_file'] = question_files[0].name
     
+    # Find explanation QC files
+    explanation_files = sorted(results_dir.glob("explanation_qc_v2_*.json"), reverse=True)
     if explanation_files:
         with open(explanation_files[0]) as f:
             results['explanation_qc'] = json.load(f)
         results['explanation_file'] = explanation_files[0].name
     
+    # Load summary report
+    summary_file = results_dir / "summary_report.json"
     if summary_file.exists():
         with open(summary_file) as f:
             results['summary'] = json.load(f)
@@ -52,7 +63,11 @@ def load_qc_results(results_dir: Path) -> Dict[str, Any]:
     return results
 
 
-def parse_question_results(results: List[Dict]) -> pd.DataFrame:
+# Default pass threshold
+DEFAULT_PASS_THRESHOLD = 0.8
+
+
+def parse_question_results(results: List[Dict], pass_threshold: float = DEFAULT_PASS_THRESHOLD) -> pd.DataFrame:
     """Parse question QC results into a DataFrame."""
     rows = []
     for r in results:
@@ -82,7 +97,7 @@ def parse_question_results(results: List[Dict]) -> pd.DataFrame:
             'question_type': q_type,
             'source': source,
             'overall_score': r.get('overall_score', 0),
-            'passed': r.get('overall_score', 0) >= 0.7,
+            'passed': r.get('overall_score', 0) >= pass_threshold,
             'checks_passed': r.get('total_checks_passed', 0),
             'checks_total': r.get('total_checks_run', 0),
         }
@@ -99,7 +114,7 @@ def parse_question_results(results: List[Dict]) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def parse_explanation_results(results: List[Dict]) -> pd.DataFrame:
+def parse_explanation_results(results: List[Dict], pass_threshold: float = DEFAULT_PASS_THRESHOLD) -> pd.DataFrame:
     """Parse explanation QC results into a DataFrame."""
     rows = []
     for r in results:
@@ -133,7 +148,7 @@ def parse_explanation_results(results: List[Dict]) -> pd.DataFrame:
             'source': source,
             'is_correct': r.get('is_correct', False),
             'overall_score': r.get('overall_score', 0),
-            'passed': r.get('overall_score', 0) >= 0.7,
+            'passed': r.get('overall_score', 0) >= pass_threshold,
             'checks_passed': r.get('total_checks_passed', 0),
             'checks_total': r.get('total_checks_run', 0),
         }
@@ -714,16 +729,30 @@ def main():
             summary = results['summary']
             st.write(f"**Mode:** {summary.get('mode', 'N/A')}")
             st.write(f"**Time:** {summary.get('total_time_seconds', 0):.1f}s")
+        
+        st.divider()
+        st.subheader("🎯 Pass Threshold")
+        pass_threshold_pct = st.slider(
+            "Pass Score Threshold",
+            min_value=50,
+            max_value=100,
+            value=int(DEFAULT_PASS_THRESHOLD * 100),
+            step=5,
+            format="%d%%",
+            help="Questions with overall score >= this threshold are marked as 'Passed'"
+        )
+        pass_threshold = pass_threshold_pct / 100.0
+        st.caption(f"Current: {pass_threshold_pct}% (Default: {int(DEFAULT_PASS_THRESHOLD * 100)}%)")
     
     # Parse results into DataFrames
     question_df = None
     explanation_df = None
     
     if results.get('question_qc'):
-        question_df = parse_question_results(results['question_qc'])
+        question_df = parse_question_results(results['question_qc'], pass_threshold)
     
     if results.get('explanation_qc'):
-        explanation_df = parse_explanation_results(results['explanation_qc'])
+        explanation_df = parse_explanation_results(results['explanation_qc'], pass_threshold)
     
     # Render dashboard sections
     render_overview_stats(question_df, explanation_df)
