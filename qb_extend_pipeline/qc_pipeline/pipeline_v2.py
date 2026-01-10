@@ -268,14 +268,20 @@ class QCPipelineV2:
                 self.question_qc = None
 
         if args.mode in ['explanations', 'both']:
-            if skip_openai or self.openai_client is None:
-                logger.warning("Explanation QC requires OpenAI - skipping")
-                self.explanation_qc = None
-            else:
+            if provider == 'openrouter':
+                # Use OpenRouter for explanation QC (batched, 1 call per question)
+                self.explanation_qc = 'openrouter'  # Flag to use inline OpenRouter calls
+                self.explanation_qc_client = self.openrouter_client
+                self.explanation_qc_model = claude_model
+                logger.info("Explanation QC: Using OpenRouter (batched, 1 call per question)")
+            elif self.openai_client is not None:
                 self.explanation_qc = ExplanationQCAnalyzerV2(
                     client=self.openai_client,
                     model=args.openai_model
                 )
+            else:
+                logger.warning("Explanation QC requires OpenAI or OpenRouter - skipping")
+                self.explanation_qc = None
         else:
             self.explanation_qc = None
 
@@ -291,8 +297,14 @@ class QCPipelineV2:
         """Get the path to the results file for a given QC type."""
         return self.output_dir / f"{qc_type}_qc_v2_results.json"
     
-    def _get_merged_file(self) -> Path:
-        """Get the path to the merged results file (like V3)."""
+    def _get_merged_file(self, qc_type: str = 'question') -> Path:
+        """Get the path to the merged results file (like V3).
+        
+        Args:
+            qc_type: 'question' or 'explanation'
+        """
+        if qc_type == 'explanation':
+            return self.output_dir / "explanation_qc_merged.json"
         return self.output_dir / "question_qc_merged.json"
     
     def _get_run_file(self, suffix: str = ".json") -> Path:
@@ -326,7 +338,8 @@ class QCPipelineV2:
         hash_map = {}  # For content change detection (like V3)
         
         # Try merged file first (like V3), then fall back to legacy file
-        results_file = self._get_merged_file()
+        # Use qc_type to get the correct file (question vs explanation)
+        results_file = self._get_merged_file(qc_type)
         if not results_file.exists():
             results_file = self._get_results_file(qc_type)
         
@@ -373,8 +386,8 @@ class QCPipelineV2:
 
     def _save_results_incrementally(self, new_results: List[Dict[str, Any]], qc_type: str):
         """Save results incrementally to the merged output file (like V3)."""
-        # Use merged file as primary (like V3)
-        results_file = self._get_merged_file()
+        # Use merged file as primary (like V3) - use qc_type for correct file
+        results_file = self._get_merged_file(qc_type)
         
         # Load existing results
         existing_results = []
@@ -692,112 +705,313 @@ class QCPipelineV2:
 
         return all_results
 
+    def _build_explanation_qc_prompt(
+        self,
+        question_data: Dict[str, Any],
+        grade: int = 3
+    ) -> str:
+        """Build prompt to QC all 4 explanations for a question in 1 call."""
+        from .utils import clamp_grade_to_band
+        grade_band = clamp_grade_to_band(grade)
+        
+        question = question_data.get('question', '')
+        correct_answer = question_data.get('correct_answer', '')
+        passage = question_data.get('passage', '')[:1500]
+        
+        options = question_data.get('options', {})
+        explanations = question_data.get('explanations', {})
+        
+        return f"""You are a QC expert evaluating reading comprehension feedback for Grade {grade_band} students.
+
+## Passage:
+{passage}
+
+## Question: {question}
+## Correct Answer: {correct_answer}
+
+## Answer Choices:
+A) {options.get('A', '')}
+B) {options.get('B', '')}
+C) {options.get('C', '')}
+D) {options.get('D', '')}
+
+## Explanations to Evaluate:
+A) {explanations.get('A', '')}
+B) {explanations.get('B', '')}
+C) {explanations.get('C', '')}
+D) {explanations.get('D', '')}
+
+---
+
+Evaluate EACH explanation on these criteria:
+
+### For CORRECT answer ({correct_answer}):
+1. **correctness_explanation**: Does it clearly explain WHY this is correct?
+2. **textual_evidence**: Does it cite specific passage text?
+3. **tone**: Is it encouraging and appropriate?
+4. **conciseness**: Is it clear and not too long?
+5. **grade_appropriateness**: Is language appropriate for {grade_band}?
+
+### For WRONG answers:
+1. **specific_error**: Does it explain WHY this specific answer is wrong?
+2. **misconception_diagnosis**: Does it explain the thinking error?
+3. **correct_guidance**: Does it point toward the correct answer?
+4. **tone**: Is it supportive and not discouraging?
+5. **conciseness**: Is it clear and not too verbose?
+6. **grade_appropriateness**: Is language appropriate for {grade_band}?
+
+Score each check as 0 (fail) or 1 (pass).
+
+Respond with JSON:
+{{
+  "A": {{
+    "is_correct": true/false,
+    "checks": {{
+      "correctness_explanation": {{"score": 0 or 1, "reason": "..."}},
+      "textual_evidence": {{"score": 0 or 1, "reason": "..."}},
+      "tone": {{"score": 0 or 1, "reason": "..."}},
+      "conciseness": {{"score": 0 or 1, "reason": "..."}},
+      "grade_appropriateness": {{"score": 0 or 1, "reason": "..."}}
+    }}
+  }},
+  "B": {{ ... same structure ... }},
+  "C": {{ ... same structure ... }},
+  "D": {{ ... same structure ... }}
+}}
+
+Note: For the correct answer, include correctness_explanation and textual_evidence.
+For wrong answers, include specific_error, misconception_diagnosis, and correct_guidance instead."""
+
+    async def _run_explanation_qc_openrouter(
+        self,
+        question_data: Dict[str, Any],
+        semaphore: asyncio.Semaphore
+    ) -> List[Dict[str, Any]]:
+        """Run explanation QC for all 4 options in 1 API call via OpenRouter."""
+        import random
+        
+        async with semaphore:
+            question_id = question_data.get('question_id', 'unknown')
+            grade = question_data.get('grade', 3)
+            correct_answer = question_data.get('correct_answer', '')
+            
+            prompt = self._build_explanation_qc_prompt(question_data, grade)
+            
+            for attempt in range(8):  # MAX_RETRIES
+                try:
+                    response = await self.explanation_qc_client.chat.completions.create(
+                        model=self.explanation_qc_model,
+                        max_tokens=2000,
+                        messages=[{"role": "user", "content": prompt}],
+                        response_format={"type": "json_object"},
+                        extra_headers={
+                            "HTTP-Referer": "https://github.com/playcademy",
+                            "X-Title": "Explanation QC V2"
+                        }
+                    )
+                    
+                    response_text = response.choices[0].message.content
+                    data = json.loads(response_text)
+                    
+                    # Convert to individual explanation results
+                    results = []
+                    for letter in ['A', 'B', 'C', 'D']:
+                        option_data = data.get(letter, {})
+                        is_correct = letter == correct_answer
+                        checks = option_data.get('checks', {})
+                        
+                        # Calculate score
+                        total_passed = sum(1 for c in checks.values() if c.get('score', 0) == 1)
+                        total_checks = len(checks)
+                        overall_score = (total_passed / total_checks) if total_checks > 0 else 0
+                        
+                        results.append({
+                            'question_id': f"{question_id}_{letter}",
+                            'original_question_id': question_id,
+                            'option_label': letter,
+                            'is_correct': is_correct,
+                            'overall_score': overall_score,
+                            'total_checks_passed': total_passed,
+                            'total_checks_run': total_checks,
+                            'checks': {k: {'passed': v.get('score', 0) == 1, 'reason': v.get('reason', '')} 
+                                      for k, v in checks.items()},
+                            'timestamp': datetime.now().isoformat()
+                        })
+                    
+                    logger.info(f"✓ QC'd explanations for {question_id}")
+                    return results
+                    
+                except json.JSONDecodeError as e:
+                    logger.warning(f"JSON parse error for {question_id}: {e}")
+                except Exception as e:
+                    error_str = str(e)
+                    if '429' in error_str or 'rate' in error_str.lower():
+                        delay = min(0.5 * (2 ** attempt) + random.uniform(0, 0.3), 60.0)
+                        logger.warning(f"Rate limit for {question_id}, retry in {delay:.1f}s")
+                        await asyncio.sleep(delay)
+                    else:
+                        logger.error(f"Error for {question_id}: {e}")
+                        break
+            
+            # Return empty results on failure
+            return [{
+                'question_id': f"{question_id}_{letter}",
+                'original_question_id': question_id,
+                'option_label': letter,
+                'is_correct': letter == correct_answer,
+                'overall_score': 0,
+                'total_checks_passed': 0,
+                'total_checks_run': 0,
+                'checks': {},
+                'error': 'Max retries exceeded',
+                'timestamp': datetime.now().isoformat()
+            } for letter in ['A', 'B', 'C', 'D']]
+
     async def run_explanation_qc(self, df: pd.DataFrame) -> List[Dict[str, Any]]:
         if not self.explanation_qc:
             return []
 
+        use_openrouter = self.explanation_qc == 'openrouter'
+        
         logger.info("\n" + "=" * 60)
-        logger.info("RUNNING EXPLANATION QC (OPTIMIZED V2 WITH CHECKPOINTING)")
+        if use_openrouter:
+            logger.info("RUNNING EXPLANATION QC (OPENROUTER - 1 CALL PER QUESTION)")
+        else:
+            logger.info("RUNNING EXPLANATION QC (OPTIMIZED V2 WITH CHECKPOINTING)")
         logger.info("=" * 60)
 
         # Load completed explanations from output
-        completed_ids, existing_results = self._load_completed_from_output(
+        (completed_ids, existing_results, _, _, _) = self._load_completed_from_output(
             'explanation', self.EXPECTED_EXPLANATION_CHECKS
         )
+        # Convert to set of question IDs (not explanation IDs) for OpenRouter mode
+        completed_question_ids = set()
+        for eid in completed_ids:
+            # Extract question_id from "quiz_302005_A" -> "quiz_302005"
+            parts = eid.rsplit('_', 1)
+            if len(parts) == 2 and len(parts[1]) == 1:
+                completed_question_ids.add(parts[0])
 
         explanation_cols = [col for col in df.columns if 'explanation' in col.lower()]
         if not explanation_cols:
             logger.warning("No explanation columns found")
             return []
 
-        explanations = []
-        skipped = 0
+        # Build question-level data for OpenRouter mode
+        questions_to_process = []
+        skipped_questions = 0
         
         for i, row in df.iterrows():
             question_id = str(row.get('question_id') or row.get('item_id', f'Q{i+1}'))
-            correct_answer_key = row.get('correct_answer', '')
-
-            correct_option_text = ''
-            if correct_answer_key == 'A':
-                correct_option_text = row.get('option_1', '')
-            elif correct_answer_key == 'B':
-                correct_option_text = row.get('option_2', '')
-            elif correct_answer_key == 'C':
-                correct_option_text = row.get('option_3', '')
-            elif correct_answer_key == 'D':
-                correct_option_text = row.get('option_4', '')
-
+            
+            # Skip if already completed (for OpenRouter, check at question level)
+            if use_openrouter and question_id in completed_question_ids:
+                skipped_questions += 1
+                continue
+            
+            correct_answer = row.get('correct_answer', '')
             passage = row.get('passage_text') or row.get('passage') or row.get('stimulus', '')
-
+            
+            options = {}
+            explanations = {}
             for j in range(1, 5):
-                option_key = f'option_{j}'
-                explanation_key = f'{option_key}_explanation'
-                if explanation_key in row and pd.notna(row[explanation_key]):
-                    letter = chr(64 + j)
-                    is_correct = letter == correct_answer_key
-                    
-                    # Create unique ID for this explanation
-                    explanation_id = f"{question_id}_{letter}"
-                    
-                    # Skip if already completed
-                    if explanation_id in completed_ids:
-                        skipped += 1
-                        continue
+                letter = chr(64 + j)
+                options[letter] = row.get(f'option_{j}', '')
+                explanations[letter] = row.get(f'option_{j}_explanation', '')
+            
+            questions_to_process.append({
+                'question_id': question_id,
+                'question': row.get('question', ''),
+                'correct_answer': correct_answer,
+                'passage': passage,
+                'options': options,
+                'explanations': explanations,
+                'grade': row.get('grade', 3)
+            })
 
-                    explanation_item = {
-                        'question_id': explanation_id,  # Use unique ID
-                        'original_question_id': question_id,
-                        'option_label': letter,
-                        'explanation': row.get(explanation_key, ''),
-                        'question': row.get('question', ''),
-                        'passage': passage,
-                        'option_text': row.get(option_key, ''),
-                        'correct_option_text': correct_option_text,
-                        'is_correct': is_correct,
-                        'grade': row.get('grade', 5)
-                    }
-                    explanations.append(explanation_item)
-
-        if not explanations:
-            if skipped > 0:
-                logger.info(f"\n✓ All {skipped} explanations already processed!")
+        if not questions_to_process:
+            if skipped_questions > 0:
+                logger.info(f"\n✓ All {skipped_questions} questions already processed!")
                 return existing_results
-            logger.warning("No explanations found to evaluate")
+            logger.warning("No questions with explanations found to evaluate")
             return []
 
         logger.info(f"\n📋 PROGRESS STATUS")
         logger.info(f"{'─'*40}")
-        logger.info(f"  Already completed:  {skipped}")
-        logger.info(f"  To process:         {len(explanations)}")
-
-        logger.info(f"\nProcessing {len(explanations)} explanations with batched API calls")
-        logger.info(f"Expected API calls: ~{len(explanations)} (1 per explanation)")
+        logger.info(f"  Already completed:  {skipped_questions} questions")
+        logger.info(f"  To process:         {len(questions_to_process)} questions")
+        
+        if use_openrouter:
+            logger.info(f"\nProcessing {len(questions_to_process)} questions (4 explanations each)")
+            logger.info(f"Expected API calls: ~{len(questions_to_process)} (1 per question)")
+        else:
+            total_explanations = len(questions_to_process) * 4
+            logger.info(f"\nProcessing {total_explanations} explanations")
+            logger.info(f"Expected API calls: ~{total_explanations} (1 per explanation)")
 
         start_time = datetime.now()
-        
-        # Process in batches
-        batch_size = getattr(self.args, 'batch_size', 50)
         all_new_results = []
         
-        for batch_start in range(0, len(explanations), batch_size):
-            batch_end = min(batch_start + batch_size, len(explanations))
-            batch_explanations = explanations[batch_start:batch_end]
+        if use_openrouter:
+            # OpenRouter mode: 1 API call per question
+            concurrency = getattr(self.args, 'concurrency', 25)
+            semaphore = asyncio.Semaphore(concurrency)
+            batch_size = getattr(self.args, 'batch_size', 20)
             
-            logger.info(f"\n  Processing batch {batch_start+1}-{batch_end} of {len(explanations)}...")
+            for batch_start in range(0, len(questions_to_process), batch_size):
+                batch_end = min(batch_start + batch_size, len(questions_to_process))
+                batch = questions_to_process[batch_start:batch_end]
+                
+                logger.info(f"\n  Processing batch {batch_start+1}-{batch_end} of {len(questions_to_process)}...")
+                
+                tasks = [self._run_explanation_qc_openrouter(q, semaphore) for q in batch]
+                batch_results_nested = await asyncio.gather(*tasks)
+                
+                # Flatten results (each question returns 4 results)
+                batch_results = [r for results in batch_results_nested for r in results]
+                all_new_results.extend(batch_results)
+                
+                # Save incrementally
+                all_results = self._save_results_incrementally(batch_results, 'explanation')
+                logger.info(f"  ✓ Saved {len(batch_results)} results (total: {len(all_results)})")
+        else:
+            # Legacy mode: use ExplanationQCAnalyzerV2 (1 call per explanation)
+            explanations = []
+            for q in questions_to_process:
+                for letter in ['A', 'B', 'C', 'D']:
+                    explanations.append({
+                        'question_id': f"{q['question_id']}_{letter}",
+                        'original_question_id': q['question_id'],
+                        'option_label': letter,
+                        'explanation': q['explanations'].get(letter, ''),
+                        'question': q['question'],
+                        'passage': q['passage'],
+                        'option_text': q['options'].get(letter, ''),
+                        'correct_option_text': q['options'].get(q['correct_answer'], ''),
+                        'is_correct': letter == q['correct_answer'],
+                        'grade': q['grade']
+                    })
             
-            batch_results = await self.explanation_qc.analyze_batch(batch_explanations, self.args.concurrency)
-            all_new_results.extend(batch_results)
-            
-            # Save incrementally
-            all_results = self._save_results_incrementally(batch_results, 'explanation')
-            logger.info(f"  ✓ Saved {len(batch_results)} results (total: {len(all_results)})")
+            batch_size = getattr(self.args, 'batch_size', 50)
+            for batch_start in range(0, len(explanations), batch_size):
+                batch_end = min(batch_start + batch_size, len(explanations))
+                batch_explanations = explanations[batch_start:batch_end]
+                
+                logger.info(f"\n  Processing batch {batch_start+1}-{batch_end} of {len(explanations)}...")
+                
+                batch_results = await self.explanation_qc.analyze_batch(batch_explanations, self.args.concurrency)
+                all_new_results.extend(batch_results)
+                
+                all_results = self._save_results_incrementally(batch_results, 'explanation')
+                logger.info(f"  ✓ Saved {len(batch_results)} results (total: {len(all_results)})")
 
         elapsed = (datetime.now() - start_time).total_seconds()
 
         # Combine with existing results
         all_results = existing_results + all_new_results
 
-        logger.info(f"\nCompleted in {elapsed:.1f}s ({len(explanations) / elapsed:.1f} explanations/sec)")
+        total_items = len(questions_to_process) if use_openrouter else len(questions_to_process) * 4
+        logger.info(f"\nCompleted in {elapsed:.1f}s ({total_items / elapsed:.1f} items/sec)")
 
         output_file = self.output_dir / f"explanation_qc_v2_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(output_file, 'w') as f:
@@ -1097,8 +1311,8 @@ class ConcurrentQCPipelineV2:
         results_map = {}
         hash_map = {}
         
-        # Try merged file first (like V3)
-        results_file = self._get_merged_file()
+        # Try merged file first (like V3) - this is for question QC
+        results_file = self._get_merged_file('question')
         if not results_file.exists():
             results_file = self._get_results_file()
         
@@ -1139,8 +1353,8 @@ class ConcurrentQCPipelineV2:
     def _save_results_thread_safe(self, new_results: List[Dict[str, Any]]):
         """Save results in a thread-safe manner to merged file (like V3)."""
         with self._output_lock:
-            # Use merged file as primary (like V3)
-            results_file = self._get_merged_file()
+            # Use merged file as primary (like V3) - this is for question QC
+            results_file = self._get_merged_file('question')
             
             # Load existing
             existing = []
@@ -1446,8 +1660,8 @@ class ConcurrentQCPipelineV2:
             if 'run_id' not in r:
                 r['run_id'] = self.run_id
 
-        # Save to merged file (like V3)
-        merged_file = self._get_merged_file()
+        # Save to merged file (like V3) - this is for question QC
+        merged_file = self._get_merged_file('question')
         results_map = {r.get('question_id'): r for r in results}
         with open(merged_file, 'w') as f:
             json.dump(list(results_map.values()), f, indent=2)
