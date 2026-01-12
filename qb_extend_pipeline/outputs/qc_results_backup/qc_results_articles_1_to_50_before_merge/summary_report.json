@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-01-12T15:21:07.701389",
+  "total_questions": 1038,
+  "total_articles": 49,
+  "articles_range": "article_101001 to article_101050",
+  "passed": 861,
+  "failed": 177,
+  "pass_rate": "82.9%",
+  "average_score": 0.864,
+  "source_files": [
+    "qc_results/question_qc_merged.json (articles 1-10)",
+    "qc_results_articles_11_to_50/question_qc_merged.json (articles 11-50)"
+  ]
+}
