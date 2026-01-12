@@ -599,4 +599,3 @@ Respond with JSON:
         semaphore = asyncio.Semaphore(concurrency)
         tasks = [self.analyze_openai_only(q, semaphore) for q in questions]
         return await asyncio.gather(*tasks)
-
