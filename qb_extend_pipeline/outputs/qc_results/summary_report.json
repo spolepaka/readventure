@@ -1,38 +1,14 @@
 {
-  "run_id": "20260110_160924",
-  "timestamp": "2026-01-10T16:24:44.776380",
-  "input_file": "outputs/qb_extended_rewritten.csv",
-  "mode": "explanations",
-  "version": "v2_optimized",
-  "stats": {
-    "total_processed": 0,
-    "skipped_complete": 0,
-    "skipped_has_claude": 0,
-    "rerun_modified": 0,
-    "new_questions": 0,
-    "passed": 0,
-    "failed": 0,
-    "pass_rate": 0,
-    "average_score": 0
-  },
-  "by_article": {},
-  "failed_checks_summary": {},
-  "timing": {
-    "total_seconds": 920.335211,
-    "questions_per_second": 0.0
-  },
-  "question_qc": {
-    "total": 0,
-    "passed": 0,
-    "failed": 0,
-    "pass_rate": 0,
-    "average_score": 0
-  },
-  "explanation_qc": {
-    "total": 860,
-    "passed": 771,
-    "failed": 89,
-    "pass_rate": 0.8965116279069767,
-    "average_score": 0.9108527131782959
-  }
+  "generated_at": "2026-01-12T15:21:07.701389",
+  "total_questions": 1038,
+  "total_articles": 49,
+  "articles_range": "article_101001 to article_101050",
+  "passed": 861,
+  "failed": 177,
+  "pass_rate": "82.9%",
+  "average_score": 0.864,
+  "source_files": [
+    "qc_results/question_qc_merged.json (articles 1-10)",
+    "qc_results_articles_11_to_50/question_qc_merged.json (articles 11-50)"
+  ]
 }

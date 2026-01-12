@@ -162,6 +162,9 @@ OPENAI_CHECKS = [
     'difficulty_assessment'
 ]
 
+# Default OpenAI model via OpenRouter
+DEFAULT_OPENAI_MODEL = "openai/gpt-4o"  # GPT-4o via OpenRouter for speed + unified billing
+
 # JSON Schema for structured output (OpenAI format)
 CLAUDE_QC_JSON_SCHEMA = {
     "type": "object",
@@ -199,32 +202,44 @@ class QuestionQCAnalyzerV2OpenRouter:
         openrouter_client: AsyncOpenAI,
         openai_client: Optional[AsyncOpenAI] = None,
         claude_model: str = "anthropic/claude-sonnet-4",
-        openai_model: str = "gpt-4-turbo",
+        openai_model: str = DEFAULT_OPENAI_MODEL,  # Now defaults to GPT-4o via OpenRouter
         examples_df: Optional[pd.DataFrame] = None,
         skip_openai: bool = False,
         initial_rate: int = 25,  # Higher default for OpenRouter
-        max_concurrent: int = 30  # Allow high concurrency
+        max_concurrent: int = 30,  # Allow high concurrency
+        use_openrouter_for_openai: bool = True  # Route GPT through OpenRouter too
     ):
         """
         Initialize the OpenRouter-based QC analyzer.
         
         Args:
             openrouter_client: AsyncOpenAI client configured for OpenRouter
-            openai_client: Standard OpenAI client for supplementary checks
+            openai_client: Standard OpenAI client for supplementary checks (legacy, optional)
             claude_model: OpenRouter model ID (e.g., "anthropic/claude-sonnet-4")
-            openai_model: OpenAI model for supplementary checks
+            openai_model: OpenAI model ID (e.g., "openai/gpt-4o" for OpenRouter or "gpt-4o" for direct)
             examples_df: Benchmark questions for difficulty assessment
             skip_openai: Skip OpenAI-based checks
             initial_rate: Initial requests per minute (default: 25)
             max_concurrent: Maximum concurrent requests (default: 30)
+            use_openrouter_for_openai: Route GPT calls through OpenRouter (default: True)
         """
         self.openrouter_client = openrouter_client
-        self.openai_client = openai_client if not skip_openai else None
         self.claude_model = claude_model
         self.openai_model = openai_model
         self.examples_df = examples_df
         self.skip_openai = skip_openai
         self.max_concurrent = max_concurrent
+        self.use_openrouter_for_openai = use_openrouter_for_openai
+        
+        # For GPT calls: use OpenRouter client if enabled, else use separate OpenAI client
+        if use_openrouter_for_openai:
+            self.openai_client = openrouter_client  # Same client, different model
+            # Ensure model ID is in OpenRouter format
+            if not self.openai_model.startswith('openai/'):
+                self.openai_model = f"openai/{self.openai_model}"
+            logger.info(f"GPT checks will use OpenRouter: {self.openai_model}")
+        else:
+            self.openai_client = openai_client if not skip_openai else None
         
         # Initialize rate limiter with custom rate
         reset_rate_limiter()  # Reset for fresh start
@@ -506,18 +521,38 @@ Respond with JSON:
         passage_text: str,
         grade: Optional[int] = None
     ) -> Dict[str, Dict[str, Any]]:
-        """Run all OpenAI checks in a single API call."""
+        """
+        Run all OpenAI/GPT checks in a single API call.
+        
+        Now optimized to use OpenRouter for GPT-4o with same rate limiting
+        as Claude checks for unified, fast processing.
+        """
         if not self.openai_client:
             return {}
 
         prompt = self._build_openai_batch_prompt(question_data, passage_text, grade)
+        self._stats['total_requests'] += 1
 
         for attempt in range(MAX_RETRIES):
             try:
+                # Use same rate limiter for unified throughput control
+                if self.use_openrouter_for_openai:
+                    await self.rate_limiter.acquire()
+                
+                # Build request - add OpenRouter headers if using OpenRouter
+                extra_kwargs = {}
+                if self.use_openrouter_for_openai:
+                    extra_kwargs['extra_headers'] = {
+                        "HTTP-Referer": "https://github.com/playcademy",
+                        "X-Title": "QC Pipeline V2 - GPT Checks"
+                    }
+                
                 response = await self.openai_client.chat.completions.create(
                     model=self.openai_model,
                     messages=[{"role": "user", "content": prompt}],
-                    response_format={"type": "json_object"}
+                    response_format={"type": "json_object"},
+                    max_tokens=1000,  # GPT checks need less tokens
+                    **extra_kwargs
                 )
 
                 response_text = response.choices[0].message.content
@@ -543,21 +578,31 @@ Respond with JSON:
                     'category': 'question'
                 }
 
+                # Track success for adaptive rate limiting
+                self._stats['successful_requests'] += 1
+                if self.use_openrouter_for_openai:
+                    await self.rate_limiter.report_success()
+                
                 return results
 
             except Exception as e:
                 error_str = str(e)
                 if '429' in error_str or 'rate' in error_str.lower():
-                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 1), MAX_DELAY)
-                    logger.warning(f"OpenAI rate limit, retrying in {delay:.1f}s")
+                    self._stats['rate_limit_hits'] += 1
+                    if self.use_openrouter_for_openai:
+                        await self.rate_limiter.report_rate_limit()
+                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, JITTER_FACTOR), MAX_DELAY)
+                    logger.warning(f"GPT rate limit (attempt {attempt + 1}), retrying in {delay:.1f}s")
                     await asyncio.sleep(delay)
                 else:
-                    logger.error(f"Error in OpenAI batch: {e}")
+                    self._stats['errors'] += 1
+                    logger.error(f"Error in GPT batch: {e}")
                     return {
                         'too_close': {'score': 0, 'response': f'Error: {str(e)}', 'category': 'distractor'},
                         'difficulty_assessment': {'score': 0, 'response': f'Error: {str(e)}', 'category': 'question'}
                     }
 
+        self._stats['errors'] += 1
         return {
             'too_close': {'score': 0, 'response': 'Max retries exceeded', 'category': 'distractor'},
             'difficulty_assessment': {'score': 0, 'response': 'Max retries exceeded', 'category': 'question'}

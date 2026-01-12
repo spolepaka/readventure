@@ -1,0 +1,13 @@
+
+================================================================================
+[2026-01-10T23:58:11.513269] REQUEST 20260110_235811_w0_0001 (Worker 0)
+Article: article_101036 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 9867 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:00:40.402329] RESPONSE 20260110_235811_w0_0001 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 148.89s
+Response length: 38738 chars
+--------------------------------------------------------------------------------

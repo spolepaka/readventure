@@ -1,0 +1,26 @@
+
+================================================================================
+[2026-01-10T18:52:26.744161] REQUEST 20260110_185226_w0_0001 (Worker 0)
+Article: article_101011 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11729 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-10T18:55:38.765248] RESPONSE 20260110_185226_w0_0001 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 192.02s
+Response length: 43851 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-10T18:55:39.779401] REQUEST 20260110_185226_w0_0002 (Worker 0)
+Article: article_101013 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11054 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-10T19:03:59.080808] RESPONSE 20260110_185226_w0_0002 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 499.30s
+Response length: 38238 chars
+--------------------------------------------------------------------------------

@@ -1,0 +1,335 @@
+
+================================================================================
+[2026-01-11T00:12:55.398014] REQUEST 20260111_001255_w0_0001 (Worker 0)
+Article: article_101051 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11344 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:16:25.275471] RESPONSE 20260111_001255_w0_0001 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 209.88s
+Response length: 49300 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:16:26.287635] REQUEST 20260111_001255_w0_0002 (Worker 0)
+Article: article_101052 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10506 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:18:53.886319] RESPONSE 20260111_001255_w0_0002 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 147.60s
+Response length: 36127 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:18:54.893789] REQUEST 20260111_001255_w0_0003 (Worker 0)
+Article: article_101053 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10418 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:21:52.801890] RESPONSE 20260111_001255_w0_0003 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 177.91s
+Response length: 41022 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:21:53.813410] REQUEST 20260111_001255_w0_0004 (Worker 0)
+Article: article_101054 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10892 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:25:23.323203] RESPONSE 20260111_001255_w0_0004 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 209.51s
+Response length: 45852 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:25:24.335989] REQUEST 20260111_001255_w0_0005 (Worker 0)
+Article: article_101055 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11709 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:28:38.983798] RESPONSE 20260111_001255_w0_0005 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 194.65s
+Response length: 50213 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:28:39.999447] REQUEST 20260111_001255_w0_0006 (Worker 0)
+Article: article_101056 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10406 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T00:31:29.767017] RESPONSE 20260111_001255_w0_0006 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 169.77s
+Response length: 42462 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T00:31:30.779562] REQUEST 20260111_001255_w0_0007 (Worker 0)
+Article: article_101057 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 12280 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:12:22.802539] RESPONSE 20260111_001255_w0_0007 (Worker 0)
+Success: False | Stop Reason: error | Duration: 2452.02s
+Response length: 0 chars
+Error: The read operation timed out
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:12:23.811131] REQUEST 20260111_001255_w0_0008 (Worker 0)
+Article: article_101058 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 9887 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:15:48.154692] RESPONSE 20260111_001255_w0_0008 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 204.34s
+Response length: 46599 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:15:49.166247] REQUEST 20260111_001255_w0_0009 (Worker 0)
+Article: article_101059 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11025 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:19:55.582563] RESPONSE 20260111_001255_w0_0009 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 246.41s
+Response length: 58187 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:19:56.599505] REQUEST 20260111_001255_w0_0010 (Worker 0)
+Article: article_101060 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11191 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:22:54.610265] RESPONSE 20260111_001255_w0_0010 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 178.01s
+Response length: 41852 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:22:55.621810] REQUEST 20260111_001255_w0_0011 (Worker 0)
+Article: article_101061 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11235 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:25:49.449356] RESPONSE 20260111_001255_w0_0011 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 173.83s
+Response length: 42425 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:25:50.459574] REQUEST 20260111_001255_w0_0012 (Worker 0)
+Article: article_101062 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 9844 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:28:04.282809] RESPONSE 20260111_001255_w0_0012 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 133.82s
+Response length: 35106 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:28:05.294831] REQUEST 20260111_001255_w0_0013 (Worker 0)
+Article: article_101063 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11607 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:32:05.919243] RESPONSE 20260111_001255_w0_0013 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 240.62s
+Response length: 57631 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:32:06.930320] REQUEST 20260111_001255_w0_0014 (Worker 0)
+Article: article_101064 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10233 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:34:56.065722] RESPONSE 20260111_001255_w0_0014 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 169.13s
+Response length: 40353 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:34:57.083234] REQUEST 20260111_001255_w0_0015 (Worker 0)
+Article: article_101065 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10496 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T01:37:46.770878] RESPONSE 20260111_001255_w0_0015 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 169.69s
+Response length: 40066 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T01:37:47.786149] REQUEST 20260111_001255_w0_0016 (Worker 0)
+Article: article_101066 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11214 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T02:13:38.934880] RESPONSE 20260111_001255_w0_0016 (Worker 0)
+Success: False | Stop Reason: error | Duration: 2151.15s
+Response length: 0 chars
+Error: The read operation timed out
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T02:13:39.949563] REQUEST 20260111_001255_w0_0017 (Worker 0)
+Article: article_101067 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11750 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T02:16:54.659735] RESPONSE 20260111_001255_w0_0017 (Worker 0)
+Success: True | Stop Reason: end_turn | Duration: 194.71s
+Response length: 43034 chars
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T02:16:55.673559] REQUEST 20260111_001255_w0_0018 (Worker 0)
+Article: article_101068 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10560 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:38.983466] RESPONSE 20260111_001255_w0_0018 (Worker 0)
+Success: False | Stop Reason: error | Duration: 10543.31s
+Response length: 0 chars
+Error: The read operation timed out
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:40.059979] REQUEST 20260111_001255_w0_0019 (Worker 0)
+Article: article_101069 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 11418 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:49.841566] RESPONSE 20260111_001255_w0_0019 (Worker 0)
+Success: False | Stop Reason: error | Duration: 9.78s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRXmF81szG9akAkrJ9'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:50.853098] REQUEST 20260111_001255_w0_0020 (Worker 0)
+Article: article_101070 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10317 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:50.993517] RESPONSE 20260111_001255_w0_0020 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.14s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRckdKAuah87zbMUYZ'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:52.002417] REQUEST 20260111_001255_w0_0021 (Worker 0)
+Article: article_101071 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10399 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:52.166531] RESPONSE 20260111_001255_w0_0021 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.16s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRhin1G3Nb4jcd6r2r'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:53.177921] REQUEST 20260111_001255_w0_0022 (Worker 0)
+Article: article_101072 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10586 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:53.361941] RESPONSE 20260111_001255_w0_0022 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.18s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRniABgL1R3pQTTKNu'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:54.373465] REQUEST 20260111_001255_w0_0023 (Worker 0)
+Article: article_101073 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10452 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:54.520802] RESPONSE 20260111_001255_w0_0023 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.15s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRspFL6rKr6JGiHcXv'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:55.526365] REQUEST 20260111_001255_w0_0024 (Worker 0)
+Article: article_101074 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10034 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:55.678683] RESPONSE 20260111_001255_w0_0024 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.15s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwRxjuj5B4vwrrtvqAe'}
+--------------------------------------------------------------------------------
+
+================================================================================
+[2026-01-11T05:12:56.687212] REQUEST 20260111_001255_w0_0025 (Worker 0)
+Article: article_101075 | Category: quiz | Type: MCQ
+Model: claude-sonnet-4-5-20250929
+Prompt length: 10600 chars
+Headers: {"anthropic-beta": "structured-outputs-2025-11-13"}
+================================================================================
+
+[2026-01-11T05:12:56.853111] RESPONSE 20260111_001255_w0_0025 (Worker 0)
+Success: False | Stop Reason: error | Duration: 0.17s
+Response length: 0 chars
+Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWzwS3hZW4ferqxTyeYGx'}
+--------------------------------------------------------------------------------

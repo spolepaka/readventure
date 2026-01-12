@@ -224,15 +224,23 @@ class QCPipelineV2:
                 if examples_df is not None:
                     logger.info(f"Loaded {len(examples_df)} benchmark questions")
 
+                # Determine GPT model - convert to OpenRouter format if needed
+                gpt_model = args.openai_model
+                use_openrouter_for_gpt = getattr(args, 'use_openrouter_for_gpt', True)
+                if use_openrouter_for_gpt and not gpt_model.startswith('openai/'):
+                    gpt_model = f"openai/{gpt_model}"
+                    logger.info(f"  GPT Model: {gpt_model} (via OpenRouter)")
+                
                 self.question_qc = QuestionQCAnalyzerV2OpenRouter(
                     openrouter_client=self.openrouter_client,
                     openai_client=self.openai_client,
                     claude_model=claude_model,
-                    openai_model=args.openai_model,
+                    openai_model=gpt_model,
                     examples_df=examples_df,
                     skip_openai=skip_openai,
                     initial_rate=openrouter_rate,
-                    max_concurrent=openrouter_concurrency
+                    max_concurrent=openrouter_concurrency,
+                    use_openrouter_for_openai=use_openrouter_for_gpt
                 )
                 logger.info(f"  Concurrency: {openrouter_concurrency}")
                 logger.info(f"  Initial rate: {openrouter_rate} req/min (adaptive)")
@@ -1933,7 +1941,11 @@ Concurrency:
     parser.add_argument("--openrouter-rate", type=int, default=25,
                        help="Initial requests per minute for OpenRouter (default: 25). Rate adapts automatically based on API responses.")
     parser.add_argument("--claude-model", default="claude-sonnet-4-5-20250929", help="Claude model (auto-converted for OpenRouter)")
-    parser.add_argument("--openai-model", default="gpt-4-turbo", help="OpenAI model")
+    parser.add_argument("--openai-model", default="gpt-4o", help="OpenAI/GPT model (default: gpt-4o, routed via OpenRouter)")
+    parser.add_argument("--use-openrouter-for-gpt", action="store_true", default=True,
+                       help="Route GPT calls through OpenRouter for unified billing and higher rate limits (default: True)")
+    parser.add_argument("--direct-openai", action="store_true", 
+                       help="Use direct OpenAI API instead of OpenRouter for GPT calls")
     parser.add_argument("--skip-openai", action="store_true", help="Skip OpenAI checks")
     
     # Concurrency options
@@ -1941,6 +1953,11 @@ Concurrency:
     parser.add_argument("--max-workers", type=int, default=None, help="Maximum number of concurrent workers")
 
     args = parser.parse_args()
+    
+    # Handle --direct-openai flag (disables OpenRouter for GPT)
+    if getattr(args, 'direct_openai', False):
+        args.use_openrouter_for_gpt = False
+        logger.info("Using direct OpenAI API for GPT calls (--direct-openai)")
 
     try:
         if args.concurrent:
