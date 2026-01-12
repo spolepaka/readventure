@@ -1,0 +1,200 @@
+{
+  "run_id": "20260112_190042",
+  "timestamp": "2026-01-12T19:54:12.610103",
+  "input_file": "../outputs/qb_for_qc_articles_101_to_131.csv",
+  "mode": "questions",
+  "version": "v2_optimized",
+  "stats": {
+    "total_processed": 633,
+    "skipped_complete": 0,
+    "skipped_has_claude": 0,
+    "rerun_modified": 0,
+    "new_questions": 633,
+    "passed": 469,
+    "failed": 164,
+    "pass_rate": 0.740916271721959,
+    "average_score": 0.8427401981904388
+  },
+  "by_article": {
+    "article_101101": {
+      "total": 25,
+      "passed": 20,
+      "failed": 5
+    },
+    "article_101102": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101103": {
+      "total": 20,
+      "passed": 17,
+      "failed": 3
+    },
+    "article_101104": {
+      "total": 20,
+      "passed": 11,
+      "failed": 9
+    },
+    "article_101105": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101106": {
+      "total": 20,
+      "passed": 17,
+      "failed": 3
+    },
+    "article_101107": {
+      "total": 25,
+      "passed": 21,
+      "failed": 4
+    },
+    "article_101108": {
+      "total": 20,
+      "passed": 12,
+      "failed": 8
+    },
+    "article_101109": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101110": {
+      "total": 20,
+      "passed": 15,
+      "failed": 5
+    },
+    "article_101111": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "article_101112": {
+      "total": 20,
+      "passed": 13,
+      "failed": 7
+    },
+    "article_101113": {
+      "total": 25,
+      "passed": 16,
+      "failed": 9
+    },
+    "article_101114": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101115": {
+      "total": 20,
+      "passed": 13,
+      "failed": 7
+    },
+    "article_101116": {
+      "total": 20,
+      "passed": 13,
+      "failed": 7
+    },
+    "article_101117": {
+      "total": 20,
+      "passed": 12,
+      "failed": 8
+    },
+    "article_101118": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101119": {
+      "total": 19,
+      "passed": 15,
+      "failed": 4
+    },
+    "article_101120": {
+      "total": 20,
+      "passed": 6,
+      "failed": 14
+    },
+    "article_101121": {
+      "total": 20,
+      "passed": 15,
+      "failed": 5
+    },
+    "article_101122": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101123": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101124": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101125": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101126": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101127": {
+      "total": 20,
+      "passed": 16,
+      "failed": 4
+    },
+    "article_101128": {
+      "total": 20,
+      "passed": 13,
+      "failed": 7
+    },
+    "article_101129": {
+      "total": 24,
+      "passed": 16,
+      "failed": 8
+    },
+    "article_101130": {
+      "total": 20,
+      "passed": 11,
+      "failed": 9
+    },
+    "article_102001": {
+      "total": 20,
+      "passed": 9,
+      "failed": 11
+    }
+  },
+  "failed_checks_summary": {
+    "plausibility": 217,
+    "difficulty_assessment": 204,
+    "standard_alignment": 189,
+    "length_check": 163,
+    "homogeneity": 89,
+    "clarity_precision": 55,
+    "single_correct_answer": 49,
+    "grammatical_parallel": 46,
+    "passage_reference": 36,
+    "specificity_balance": 35,
+    "too_close": 12
+  },
+  "timing": {
+    "total_seconds": 3210.454182,
+    "questions_per_second": 0.19716836438564692
+  },
+  "question_qc": {
+    "total": 633,
+    "passed": 469,
+    "failed": 164,
+    "pass_rate": 0.740916271721959,
+    "average_score": 0.8427401981904388
+  },
+  "explanation_qc": null
+}
