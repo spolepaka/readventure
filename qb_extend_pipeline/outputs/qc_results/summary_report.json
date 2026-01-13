@@ -1,6 +1,6 @@
 {
-  "run_id": "20260113_171957",
-  "timestamp": "2026-01-13T17:48:14.104432",
+  "run_id": "20260113_183305",
+  "timestamp": "2026-01-13T18:34:34.841389",
   "input_file": "outputs/qb_extended_all_131_rewritten.csv",
   "mode": "explanations",
   "version": "v2_optimized",
@@ -18,7 +18,7 @@
   "by_article": {},
   "failed_checks_summary": {},
   "timing": {
-    "total_seconds": 1696.921398,
+    "total_seconds": 89.584519,
     "questions_per_second": 0.0
   },
   "question_qc": {
@@ -29,10 +29,10 @@
     "average_score": 0
   },
   "explanation_qc": {
-    "total": 22128,
-    "passed": 11408,
-    "failed": 10720,
-    "pass_rate": 0.5155459146782357,
-    "average_score": 0.5195272957339208
+    "total": 11068,
+    "passed": 10103,
+    "failed": 965,
+    "pass_rate": 0.9128117094325985,
+    "average_score": 0.9206541380556604
   }
 }
