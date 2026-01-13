@@ -319,13 +319,20 @@ class QCPipelineV2:
         """Get the path for current run's output file (like V3)."""
         return self.runs_dir / f"qc_run_{self.run_id}{suffix}"
 
-    # Check names by provider
+    # Check names by provider - for QUESTION QC
     CLAUDE_CHECKS = {
         'grammatical_parallel', 'plausibility', 'homogeneity', 'specificity_balance',
         'standard_alignment', 'clarity_precision', 'single_correct_answer', 'passage_reference'
     }
     OPENAI_CHECKS = {'too_close', 'difficulty_assessment'}
     LOCAL_CHECKS = {'length_check'}
+    
+    # Check names for EXPLANATION QC
+    EXPLANATION_CHECKS = {
+        'correctness_explanation', 'textual_evidence',  # For correct answers
+        'specific_error', 'misconception_diagnosis', 'correct_guidance',  # For wrong answers
+        'tone', 'conciseness', 'grade_appropriateness'  # Common checks
+    }
 
     def _load_completed_from_output(self, qc_type: str, expected_checks: int) -> tuple[Set[str], List[Dict[str, Any]], Set[str], Dict[str, Dict[str, Any]], Dict[str, str]]:
         """
@@ -364,23 +371,31 @@ class QCPipelineV2:
                 check_names = set(checks.keys())
                 content_hash = result.get('content_hash', '')
                 
-                # Check what's present
-                has_claude = len(check_names & self.CLAUDE_CHECKS) >= len(self.CLAUDE_CHECKS) - 1  # Allow 1 missing
-                has_openai = len(check_names & self.OPENAI_CHECKS) >= 1
-                has_local = 'length_check' in check_names
-                
                 existing_results.append(result)
                 results_map[item_id] = result
                 if content_hash:
                     hash_map[item_id] = content_hash
                 
-                # Determine status
-                if has_claude and has_openai and has_local:
-                    fully_completed_ids.add(item_id)
-                elif has_claude and not has_openai:
-                    # Has Claude checks but missing OpenAI - can run just OpenAI
-                    needs_openai_ids.add(item_id)
-                # else: needs full rerun
+                # Different logic for question vs explanation QC
+                if qc_type == 'explanation':
+                    # For explanation QC: check if we have valid explanation checks
+                    # A valid explanation has at least 3 checks (tone, conciseness, grade_appropriateness + specific ones)
+                    has_valid_checks = len(check_names & self.EXPLANATION_CHECKS) >= 3
+                    if has_valid_checks:
+                        fully_completed_ids.add(item_id)
+                else:
+                    # For question QC: original logic
+                    has_claude = len(check_names & self.CLAUDE_CHECKS) >= len(self.CLAUDE_CHECKS) - 1  # Allow 1 missing
+                    has_openai = len(check_names & self.OPENAI_CHECKS) >= 1
+                    has_local = 'length_check' in check_names
+                    
+                    # Determine status
+                    if has_claude and has_openai and has_local:
+                        fully_completed_ids.add(item_id)
+                    elif has_claude and not has_openai:
+                        # Has Claude checks but missing OpenAI - can run just OpenAI
+                        needs_openai_ids.add(item_id)
+                    # else: needs full rerun
             
             if fully_completed_ids:
                 logger.info(f"  Found {len(fully_completed_ids)} fully completed {qc_type} results")
