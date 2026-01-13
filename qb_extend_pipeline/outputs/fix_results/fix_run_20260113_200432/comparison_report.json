@@ -1,0 +1,2815 @@
+{
+  "run_id": "20260113_200432",
+  "timestamp": "2026-01-13T20:21:23.859486",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 91,
+    "distractor_fixes_attempted": 12,
+    "full_regenerations_attempted": 79,
+    "now_passing": 80,
+    "still_failing": 11,
+    "improvement_rate": "87.9%",
+    "questions_improved": 80,
+    "avg_score_before": 0.679,
+    "avg_score_after": 0.884,
+    "avg_score_improvement": 0.205
+  },
+  "by_check_improvement": {
+    "plausibility": {
+      "before_failures": 63,
+      "after_failures": 34,
+      "fixed": 39
+    },
+    "homogeneity": {
+      "before_failures": 30,
+      "after_failures": 9,
+      "fixed": 24
+    },
+    "length_check": {
+      "before_failures": 47,
+      "after_failures": 24,
+      "fixed": 36
+    },
+    "standard_alignment": {
+      "before_failures": 61,
+      "after_failures": 21,
+      "fixed": 44
+    },
+    "difficulty_assessment": {
+      "before_failures": 42,
+      "after_failures": 12,
+      "fixed": 32
+    },
+    "grammatical_parallel": {
+      "before_failures": 18,
+      "after_failures": 1,
+      "fixed": 18
+    },
+    "specificity_balance": {
+      "before_failures": 21,
+      "after_failures": 4,
+      "fixed": 20
+    },
+    "passage_reference": {
+      "before_failures": 14,
+      "after_failures": 3,
+      "fixed": 13
+    },
+    "single_correct_answer": {
+      "before_failures": 9,
+      "after_failures": 1,
+      "fixed": 9
+    },
+    "clarity_precision": {
+      "before_failures": 15,
+      "after_failures": 2,
+      "fixed": 15
+    },
+    "too_close": {
+      "before_failures": 1,
+      "after_failures": 5,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302089_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Option C (friends should always agree) has no support in the passage where Rat clearly disagrees with Toad. Option D (walking is healthier) is completely unrelated to the story's themes and would be obviously wrong to any reader.",
+          "homogeneity": "The choices span different conceptual categories. Option A addresses personal responsibility and impulse control, Option B is about material values, Option C is about friendship dynamics, and Option D is about health/transportation. They don't all address the same type of theme or lesson.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C 'He complains loudly about the motor car' is not plausible because the passage explicitly shows Toad praising the motor car, not complaining about it. He says 'What a beautiful sight!' and asks 'Why would I complain about that beautiful motor car?' This makes it obviously wrong rather than a believable distractor.",
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining central message/lesson/moral. This question asks about character behavior problems rather than identifying key details, central message, or moral of the story, making it misaligned with the standard."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302089_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D contain factual inaccuracies that make them obviously wrong. Option B mentions buying 'several wagons' when Toad wants to abandon wagons entirely. Option C states Toad says he dislikes motor cars, but he never says this in the passage. Option D claims he stays by the river, but the passage shows he walks to town with his friends.",
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining central message, lesson, or moral. This question assesses character analysis and inference about contradictions between stated intentions and true feelings, which is more aligned with character analysis standards rather than identifying central themes or messages.",
+          "length_check": "Correct answer (19 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302089_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible because there is no indication in the text that Toad is injured or that either character believes he is injured. The text clearly shows Toad is in a dreamy state about motor cars, not hurt. Options B and C also lack textual support, making them obviously wrong rather than believable distractors.",
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining central message, lesson, or moral. This question assesses character perspective comparison, which is more aligned with character analysis standards rather than identifying central themes or messages.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('Walking is safer than riding in vehicles') is not a plausible distractor as it focuses on a minor detail about transportation safety rather than addressing the broader lesson about excitement and new experiences that the story demonstrates."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302090_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice B is not plausible - there's no evidence in the passage that Toad wants to walk faster than Rat can keep up. Choice C is also problematic as the motor car didn't break their wagon (another vehicle did) and Toad doesn't insist on driving that specific car. Choice D is obviously wrong as Toad never demands Rat buy a motor car.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing point of view and understanding characters' feelings/thoughts. This question asks about problem-solving and cause-effect relationships rather than point of view, making it more aligned with comprehension or character analysis standards.",
+          "length_check": "Correct answer (16 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302090_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible based on the passage. B suggests Toad wants to repair his wagon, but he explicitly says he's 'done with wagons forever.' C suggests he initially refused wagons, but the passage shows he was traveling by wagon. D mentions collecting/giving away wagons, which isn't supported by the text.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing point of view and identifying who is telling the story. This question assesses character development and change over time, which is more aligned with RL.3.3 (character traits, motivations, feelings) rather than point of view.",
+          "difficulty_assessment": "The question may be challenging for Grade 3 due to several factors. The passage contains complex sentence structures and advanced vocabulary ('dreamed,' 'peaceful,' 'concluded,' etc.) that may not be fully accessible to students at this grade level. Moreover, the inference required to conclude Toad's change in perception about wagons based solely on his enthusiastic comments about motor cars demands a level of critical thinking and reasoning that might be too advanced for Grade 3. The transition from enjoyment to disdain for wagons is not explicitly stated, adding difficulty in understanding the shift in Toad's perspective without guided interpretation."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is obviously wrong as it states characters whisper quietly to show fear of motor cars, but the passage clearly shows Toad is excited about motor cars, not afraid. Option C is also implausible since Mole actually speaks less than the others and shows no leadership behavior.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302091_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "specificity_balance",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses direct quotes and 'showing he sees...', Choice B uses 'weighs...against...before making', Choice C uses 'expresses concern about...before deciding', and Choice D uses 'suggests that...and should be'. The structures vary significantly in their approach and grammatical patterns.",
+          "specificity_balance": "Choice A provides specific quotes ('the REAL way' and 'the ONLY way') and detailed explanation, while choices B, C, and D are more general descriptions of balanced thinking without specific textual evidence. Choice A is significantly more detailed and specific than the others.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing point of view and understanding characters' feelings and motivations. This question asks about whether Toad's view is 'balanced,' which is more about critical thinking and evaluation rather than identifying or distinguishing point of view. The question would better align with standards about making inferences or analyzing character traits.",
+          "length_check": "Correct answer (25 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D contain elements that are clearly contradicted by the passage. For example, option B states 'Rat wants to buy a motor car' when the passage shows Rat being frustrated with Toad's motor car obsession. Option C says 'Rat wants to stay with Toad' when Rat explicitly says 'Never mind him, I'm done with him!' These make the distractors obviously wrong rather than plausible."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302098_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B and D are obviously wrong and not plausible distractors. Option B describes Rattenborough as an insect, and Option D describes him as a plant, which directly contradicts the clear evidence in the first paragraph that he is a character who studies animals and plants. These are not believable distractors for a reasonable test-taker.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A describes a narrative role/function, Option B describes him as an animal species, Option C describes him as a scientist with specific achievements, and Option D describes him as a plant species. These span different categories of what Rattenborough could be.",
+          "specificity_balance": "There are significant differences in specificity levels. Option A gives a general role description, Option B includes specific habitat details, Option C includes a specific quantified achievement ('over one million animals'), and Option D includes specific environmental details ('dry desert environments'). The level of detail varies considerably across choices.",
+          "standard_alignment": "This question does not assess RI.3.7, which focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. Instead, this question assesses character analysis and inference skills, which would be more aligned with literature standards or general comprehension rather than the specific skill of using illustrations and text together."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of the text. This question asks students to synthesize information about energy acquisition but doesn't require them to use visual information or demonstrate understanding through multiple sources as the standard specifies."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302099_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible as answers to the question about how characteristics connect to classification. Option B contradicts the passage (different habitats are mentioned), Option C is a specific fact about insects rather than about the connection between characteristics and classification, and Option D explains a plant characteristic but doesn't address the classification connection.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A addresses the relationship between characteristics and classification (the question's focus), while B, C, and D provide specific facts about habitats, anatomy, and plant processes respectively, rather than explaining conceptual connections.",
+          "specificity_balance": "There are significant differences in specificity. Option A provides a broad conceptual explanation, while Options C and D give very specific biological facts. Option B makes a general but incorrect claim about habitats.",
+          "standard_alignment": "RI.3.8 requires describing logical connections between sentences and paragraphs. While this question asks about connections, it focuses more on synthesizing information about classification concepts rather than analyzing how specific sentences/paragraphs logically connect to each other."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302099_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'They explain the cause of why plants stay in one spot' is obviously wrong because the sentences in question are about animal discoveries and have nothing to do with plants staying in one spot. This makes it an implausible distractor that students would easily eliminate.",
+          "homogeneity": "The choices span different conceptual categories. Options A, B, and C relate to organizational/structural functions of text (comparing, contrasting, describing sequence), while option D relates to explaining causation about plant behavior, creating inconsistency in the type of answers provided.",
+          "difficulty_assessment": "The vocabulary and conceptual understanding required for this question may be too advanced for a typical Grade 3 student. Terms like 'classify,' 'kingdom,' and understanding the abstract concept of known versus unknown scientific data might challenge this age group excessively. Additionally, the passage does not contain the specific information about scientists finding 1 million animals and 10 million undiscovered animals, which is critical for answering the question. This reliance on not directly provided context elevates the difficulty, making it inappropriate for the suggested grade level."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'They show how many animals are bigger than others' is obviously wrong as the sentences discuss quantity of discovered vs. undiscovered animals, not animal sizes. This makes it an implausible distractor that doesn't relate to the content.",
+          "homogeneity": "Options A, B, and C all describe relationships between pieces of information (comparing, contrasting, connecting), while option D describes showing physical characteristics (size). The choices don't all belong to the same conceptual category of text structure relationships.",
+          "difficulty_assessment": "The vocabulary may include complex terms for a Grade 3 level, such as 'contrast' and 'classify.' Additionally, the reasoning demands are higher than typical for this grade level, as it requires understanding abstract concepts, which might be too challenging for a typical third grader. The presence of indirect references (sentence about scientists finding animals) not explicitly in the passage could confuse young students, making it inappropriate for Grade 3."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302104_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "specificity_balance",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices have inconsistent grammatical structures. Choice A uses present tense ('discusses'), Choice B uses present tense ('explains'), Choice C uses present tense ('need'), but Choice D appears incomplete and uses different verb forms ('eat', 'survive'). The structures are not parallel.",
+          "plausibility": "Choice D is problematic as a distractor because it mentions information ('Most crocodiles only eat once a week but can survive for months') that doesn't appear in the passage. The passage cuts off mid-sentence about crocodiles, making this choice obviously wrong rather than a plausible distractor.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice A is broad (discussing previous chapters), Choice B is appropriately specific (listing key characteristics), Choice C is very specific (exact water amount), and Choice D appears to contain specific claims not in the passage.",
+          "passage_reference": "Choice D references information ('Most crocodiles only eat once a week but can survive for months') that does not appear in the passage. The passage cuts off mid-sentence when discussing crocodiles' eating habits, making this reference inaccurate."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302107_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible because the passage clearly states that cold-blooded animals 'must also keep a constant temperature for their bodies to work right,' contradicting the idea that they eliminate the need for temperature regulation entirely. Option C mentions hibernation, which is not discussed in the passage at all. Option D about evolution speed is completely unrelated to the passage content.",
+          "homogeneity": "The choices span different conceptual categories. Option B addresses behavioral adaptations, Option A addresses physical features, Option C addresses hibernation behavior, and Option D addresses evolutionary processes. They are not all describing the same type of survival strategy.",
+          "length_check": "Correct answer (15 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302107_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Option C ('larger animals always belong to the mammal group') is obviously false as the passage mentions elephants as mammals but also discusses crocodiles which can be large. Option D about 'dangerous animals' introduces a concept (safety/danger) never mentioned in the passage, making it an obviously incorrect choice.",
+          "standard_alignment": "RI.3.4 focuses on determining meaning of general academic and domain-specific words and phrases. This question assesses text structure and author's craft/organizational strategies, which would be better aligned with standards like RI.3.8 (logical connections) or RI.3.5 (text features and search tools).",
+          "difficulty_assessment": "The question might be challenging for a Grade 3 student due to the vocabulary and the abstract nature of biological classification concepts. Terms such as 'physical and reproductive characteristics', 'group membership', and even the idea of classification itself are quite advanced for this age group. Moreover, understanding and effectively distinguishing among the general notions presented in the distractors require a higher level of critical thinking that typically develops at a later stage."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D contain obvious errors that make them implausible. B is clearly wrong since the passage mentions crocodiles can live in various environments. C is factually incorrect as cold-blooded animals' temperatures fluctuate. D introduces an irrelevant concept (color changing) not mentioned in the passage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302113_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices do not follow consistent grammatical structure. A and D are complete declarative sentences, B is a noun phrase followed by 'are all mammals and vertebrates', and C is a simple declarative statement. The structures vary significantly.",
+          "specificity_balance": "There are significant differences in specificity. Choice A is very broad (covering all vertebrate groups), B is moderately specific (listing mammal examples), C is a general statement, and D is highly specific (contrasting two bird sizes). The levels of detail vary considerably.",
+          "length_check": "Shortest distractor (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C 'All animals need backbones to survive' is obviously wrong since the passage explicitly discusses invertebrates (animals without backbones) that clearly survive. This makes it an implausible distractor that students could easily eliminate.",
+          "homogeneity": "The choices span different conceptual categories. Option A is about scientific classification methods, Option B is a value judgment comparing animal types, Option C is about survival requirements, and Option D is about animal group size. They don't all address the same type of concept."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302114_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "single_correct_answer",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is obviously wrong and not plausible. The passage clearly states that tiny goldfish are vertebrates (fish category) and makes no mention of goldfish living in the sea - they are just mentioned as an example of vertebrate fish. This makes it an implausible distractor.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information relevant to a topic efficiently. This question asks students to compare information about two animals mentioned in different parts of the text, which is more aligned with making connections and comparisons (RI.3.9) rather than using text features to locate information.",
+          "single_correct_answer": "There is not exactly one defensibly correct answer. While B is intended as correct (both have backbones per the passage), option A could also be argued as correct since both animals are mentioned in the context of sea creatures - the octopus explicitly lives in the sea, and goldfish, while mentioned as 'tiny goldfish,' could reasonably be interpreted as living in aquatic environments.",
+          "length_check": "Shortest distractor (6 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302119_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Neither 'Fish have scales that cover their skin' nor 'Fish use different fins to swim' logically relates to explaining why fish are found in many places on Earth. These are anatomical features that don't address geographic distribution.",
+          "homogeneity": "The choices span different conceptual categories. Options A and B relate to population/habitat concepts, while C and D are about fish anatomy/physical features. They don't all belong to the same type of answer.",
+          "standard_alignment": "RI.3.7 involves using information from illustrations/text features to understand text. This question asks students to identify a supporting detail that explains a claim, which is more aligned with identifying key details and making connections (RI.3.1 or RI.3.8) rather than using text features."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 requires using information from illustrations/text features to demonstrate understanding. This question asks students to identify and connect textual information to explain a cause-effect relationship, which better aligns with standards about making connections or determining main ideas rather than using text features."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302122_sibling_2",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A is a simple declarative statement, Choice B starts with 'One type of fish that...', Choice C is a direct action statement, and Choice D begins with 'Most scientists think...'. These represent different sentence types and structures.",
+          "length_check": "Correct answer (14 words) too long",
+          "difficulty_assessment": "The vocabulary and conceptual depth required to understand the cause and effect relationship implied in the correct answer might be challenging for Grade 3 students. Terms such as 'strong sense of smell' and the inference needed to link it with navigation could be too advanced. Furthermore, the context needed to understand this cause and effect relationship is not clearly provided in the passage, possibly requiring prior knowledge which is not expected at this grade level."
+        }
+      },
+      "after": {
+        "score": 0.36363636363636365,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C ('Scientists say salmon jump over rocks because they want to show off') is not plausible as it attributes human-like vanity to fish behavior, which is obviously wrong and not scientifically credible.",
+          "standard_alignment": "RI.3.5 requires identifying text features and structures. This question asks students to identify cause-and-effect relationships within content, which is more aligned with RI.3.8 (logical connections) than with identifying structural text features.",
+          "clarity_precision": "The question is ambiguous because none of the answer choices are actual sentences from the passage. The question asks 'Which sentence from the passage shows...' but all options are paraphrases or invented statements, not direct quotes.",
+          "single_correct_answer": "Option D is not actually a sentence from the passage that shows cause-and-effect. The passage states 'Most scientists think they use their strong sense of smell to find their way' but this doesn't explicitly show causation - it's just a method explanation.",
+          "passage_reference": "The question claims answer choices are 'sentences from the passage' but none of the options are direct quotes. They are either paraphrases or completely fabricated statements not found in the text.",
+          "difficulty_assessment": "The question is challenging for Grade 3 because the passage does not explicitly discuss salmon migration or their sense of smell, making it difficult for students to infer the correct answer without additional context. Furthermore, the level of reasoning required to understand the connection between the sense of smell and navigation may be too advanced for this grade level.",
+          "length_check": "Correct answer (14 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.364
+    },
+    {
+      "question_id": "quiz_302123_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently. However, the question asks about 'bold words' but there are no bold words visible in the provided passage. This appears to assess vocabulary/keyword identification rather than proper text features like headings, captions, or indexes.",
+          "clarity_precision": "The question is unclear because it references 'bold words' that are not actually bold in the provided passage text. Students cannot see which words are supposedly bold, making it impossible to answer the question accurately. The question premise is flawed.",
+          "passage_reference": "The question refers to 'bold words' but no words appear in bold formatting in the provided passage text. This creates a fundamental disconnect between the question and the passage as presented."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302123_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A (memorize all bold words before reading) and Option C (write down every bold word alphabetically) are not plausible research strategies and would be obviously ineffective to most students. These distractors are too clearly wrong to be believable.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information relevant to a topic. However, this passage contains no bold words or clear text features to analyze, making it impossible to properly assess this standard with this question-passage pairing.",
+          "difficulty_assessment": "The question and its choices are conceptually a bit advanced for Grade 3 students in terms of the metacognitive strategy required\u2014especially in identifying specific text features like bold words relevant to research questions. This involves a higher level of analytical thinking about how to use textual information effectively rather than simply understanding the text, which might be more suitable for higher elementary or middle school students. Moreover, the vocabulary and conceptual grasp required for understanding terms like 'text features' and applying them strategically in research are not typical of standard Grade 3 curricula."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302128_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'It lets them swim in frozen water' is obviously wrong and implausible. Hibernation is about dormancy/inactivity, not enabling swimming in frozen conditions. This distractor is too obviously incorrect for 3rd grade students.",
+          "homogeneity": "The choices span different conceptual categories - A is about survival/energy conservation, B is about physical development, C is about reproduction/eggs, and D is about swimming ability. They don't all address the same type of hibernation benefit.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice C 'They grow legs and become toads' is obviously wrong because eggs cannot directly grow legs - this skips the entire tadpole stage that is extensively described in the passage. Choice D 'They swim away to find food' is also implausible since eggs cannot swim or actively seek food.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302129_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'prove that amphibians are dangerous to humans' is obviously wrong and unrelated to the passage content. The passage presents amphibians in a positive, educational manner and never suggests they are dangerous to humans.",
+          "standard_alignment": "RI.3.4 focuses on determining meaning of academic and domain-specific words/phrases, but this question asks about author's purpose for including information, which aligns more with author's purpose standards rather than vocabulary/word meaning.",
+          "difficulty_assessment": "Although the language used in the question is generally simple and should be understandable to a third grader, the reasoning and inferential demands of the question are high. The students are required to make interpretations about biological concepts that are not explicitly stated in the text (e.g., change in diet as part of maturation). This kind of abstract reasoning and need to connect implicit information might be challenging for students at the Grade 3 level. Typically, students this age are more attuned to directly presented facts and more straightforward inferences. Therefore, the question might be more suitable for slightly older students rather than the targeted grade level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302130_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "single_correct_answer",
+          "passage_reference",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "single_correct_answer": "Both options B and C could be considered correct. Option B describes tadpoles eating 'tiny water plants' and Option C describes adults eating 'insects, small reptiles, and even mice.' Both provide information about what amphibians eat at different life stages",
+          "passage_reference": "The passage only has 4 sections based on the paragraph breaks, but the answer choices reference 'Section 5' which does not exist in the provided passage",
+          "difficulty_assessment": "The vocabulary and conceptual requirements of this question seem too advanced for a Grade 3 level. Terms like 'carnivore diets' and understanding that the 'amphibian classification' or 'life cycles' might not directly relate to dietary habits require a higher level of abstract reasoning and vocabulary not typical of this grade level. Additionally, the passage excerpts do not directly contain Section 5 or discuss adult dietary habits explicitly, making it hard for children at this grade level to deduce the correct answer when it cannot be located in the text."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "specificity_balance"
+        ],
+        "failed_reasons": {
+          "specificity_balance": "The choices vary significantly in specificity. Choice A is broad and general (defining what amphibians are), while Choices C and D are very specific details (appearance of one group, etymology of the word). Choice B falls in between. This imbalance makes some choices less viable as 'main ideas.'"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302135_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'impossible to find in rocky areas' is obviously wrong since the passage explicitly states that copperheads 'live in rocky, wooded places.' This makes it an implausible distractor that students could easily eliminate.",
+          "standard_alignment": "RI.3.6 requires students to distinguish their point of view from that of the author. This question asks about what the author would say about copperheads, but doesn't require students to distinguish between their own viewpoint and the author's viewpoint.",
+          "length_check": "Correct answer (8 words) too long",
+          "difficulty_assessment": "For a Grade 3 level, the vocabulary and conceptual understanding required by this question might be challenging. Terms such as 'venom,' 'inject,' triangular-shaped heads,' and 'copperheads' may not be familiar or easily understood by students at this grade level without additional context or explanation. Additionally, the reasoning required to deduce behavior from the descriptive passage about safety around these snakes might be too complex, as it requires synthesis and application of the textual information."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Choice C ('People know reptiles well') doesn't relate to the author's feelings about fear, and choice D ('People live near reptiles') is completely unrelated to the question about the author's opinion on people's fear of reptiles.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Options A and B address the author's judgment about fear being justified or unjustified, while options C and D address completely different concepts (knowledge and proximity) that don't relate to the author's feelings about people's fear."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302135_sibling_4",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'because it attacks humans often', Choice B uses 'when it attacks but does not attack often', Choice C uses 'in the entire world', and Choice D uses 'by any person'. The structures vary significantly in their construction and phrasing.",
+          "length_check": "Correct answer (11 words) too long",
+          "difficulty_assessment": "The complexity of vocabulary and concepts (e.g., descriptions of the nature of attacks, animal characteristics, and comparative adjectives) may be challenging for the average third grader. The reasoning required to differentiate between the distractors in terms of frequency and implications of attacks might be beyond the cognitive development typical for this grade level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302136_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "The question asks about 'bolded words' but there are no bolded words visible in the passage. RI.3.7 involves using text features to locate information, but this question cannot be properly assessed without the referenced text feature being present.",
+          "clarity_precision": "The question is unclear and ambiguous because it references 'bolded words' that are not visible in the provided passage, making it impossible to determine what the question is actually asking about.",
+          "single_correct_answer": "Without being able to see the bolded words referenced in the question, it's impossible to determine which answer choice is correct or verify that only one answer is defensible.",
+          "passage_reference": "The question specifically references 'bolded words in the passage' but no bolded words are visible in the provided text, making this reference inaccurate or incomplete.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations and text features to understand content. This question assesses text structure/organization, which would be better aligned with standards like RI.3.8 (author's use of reasons and evidence) or RI.3.5 (text features and search tools)."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302136_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "grammatical_parallel",
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses present tense verb 'live', choice B uses a gerund phrase 'Opening...does not require', choice C uses modal verb 'can grow', and choice D uses present perfect 'have bites'. The structures are inconsistent.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding. However, the question references 'bolded words' that do not appear to exist in the provided passage, making it impossible to properly assess this visual-text integration standard.",
+          "clarity_precision": "The question is unclear because it references 'bolded words about crocodile mouth muscles' but no bolded text appears in the passage. This creates ambiguity about which specific text the question is referencing.",
+          "passage_reference": "The question references 'bolded words' that are not actually bolded or identifiable in the provided passage text, making this reference inaccurate.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of text. This question asks about a specific textual comparison rather than integrating visual and textual information, so it doesn't properly assess the assigned standard"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302136_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations, maps, photographs, etc. to demonstrate understanding of text. This question asks about bolded words (text formatting) rather than visual elements like illustrations or diagrams, so it doesn't properly assess the assigned standard.",
+          "clarity_precision": "The question is unclear because there are no bolded words visible in the provided passage. The question refers to 'bolded words in paragraph 1' but no words appear in bold formatting, making the question impossible to answer accurately.",
+          "single_correct_answer": "Without being able to identify which words are supposedly bolded in paragraph 1, it's impossible to determine what information they help readers understand. The question cannot be answered as written.",
+          "passage_reference": "The question references 'bolded words in paragraph 1' but there are no bolded words visible in the passage, making this reference inaccurate."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302136_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible as a distractor. The passage describes the black mamba as 'long' but explicitly states it is 'the deadliest snake in the world,' not the longest. This makes option A obviously incorrect rather than a believable distractor.",
+          "standard_alignment": "The question asks about 'bolded words in paragraph 2' but there are no bolded words visible in the provided passage. RI.3.7 focuses on using text features and search tools to locate information, but this question cannot assess that standard without the referenced formatting.",
+          "clarity_precision": "The question references 'bolded words in paragraph 2' but no bolded text is visible in the passage provided. This creates ambiguity about what specific information students should focus on.",
+          "passage_reference": "The question references 'bolded words in paragraph 2' but there are no bolded words visible in the provided text, making this passage reference inaccurate.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are obviously wrong. There are no animal pictures mentioned or present in the passage, and there are no page numbers referenced. These are not plausible distractors for a 3rd grader working with this specific passage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302138_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A (developing gills like amphibians) is obviously wrong as the passage explicitly states reptiles have lungs from birth, not gills like amphibians. This makes it implausible as a distractor for 3rd graders.",
+          "homogeneity": "The choices span different conceptual categories: B is about physical growth/development, A is about respiratory system changes, C is about reproduction, and D is about predatory behavior. They don't all represent the same type of event or process.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs in a text. This question asks about a simple cause-and-effect relationship within a single sentence, which is more aligned with basic comprehension (RI.3.1) rather than analyzing text structure connections.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. Triangle-shaped heads and rattles are specific features of certain snake species mentioned in the passage, not general characteristics that develop before molting. Moving to rocky areas is unrelated to molting. These distractors are obviously wrong and not believable as potential answers to the molting question.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A describes a biological growth process, while options B and C describe species-specific anatomical features, and option D describes a behavioral/habitat change. They span different types of biological concepts rather than being uniform.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between particular sentences and paragraphs, or explain how reasons support specific points an author makes. This question asks for factual recall about the sequence of events in molting, not about logical connections between text elements or how authors support their points.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302138_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and B are not plausible distractors as they describe unrelated reptile behaviors (skin shedding and growth) that have no logical connection to what happens after a mamba bite. Option D reverses the cause-effect relationship inappropriately.",
+          "homogeneity": "The choices span different conceptual categories - Option C describes the immediate consequence of a bite, Options A and B describe general reptile behaviors unrelated to biting, and Option D describes human actions that might provoke a bite.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs. This question simply asks for explicit information recall about what happens after a bite, which is more aligned with RI.3.1 (asking and answering questions about key details) rather than analyzing logical connections.",
+          "length_check": "Shortest distractor (7 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. They reference physical characteristics (triangle-shaped heads, dark stripes) or habitat (rocky places) rather than behavioral triggers for biting. These are obviously wrong as they don't represent causes of biting behavior.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Option A describes a behavioral trigger (cause), while options B, C, and D describe physical characteristics or habitat features, which are not causes of biting behavior."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302143_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible as the passage never mentions seagulls being the largest birds in the ocean. Option D is also implausible since the passage clearly states birds can live in many different places including hot deserts, not just near water.",
+          "specificity_balance": "The choices vary significantly in specificity. Option B gives a general reason about bird habitat, while Option A makes a very specific claim about seagull size ranking, and Option C provides specific details about migration timing.",
+          "length_check": "Shortest distractor (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302152_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "homogeneity": "The choices span different conceptual categories. Choice A describes a behavioral adaptation, Choice B describes a reproductive characteristic, Choice C makes a general claim about intelligence, and Choice D describes a physical characteristic. They are not all the same type of detail.",
+          "standard_alignment": "RI.3.7 typically focuses on using information from illustrations/text features to demonstrate understanding of text. This question asks about identifying details showing adaptation, which is more aligned with identifying key details (RI.3.1) or making connections between ideas rather than using text features.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "specificity_balance",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "specificity_balance": "Choice D combines two unrelated concepts ('warm-blooded and rare') while the other choices focus on single, specific traits. This creates an imbalance in specificity and conceptual focus.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of the text. This question asks about challenging expectations, which is more about inference and analysis (higher-order thinking) rather than using textual information to demonstrate understanding.",
+          "difficulty_assessment": "The question is difficult for Grade 3 as the passage makes no mention of the platypus, potentially leaving students unable to leverage direct textual evidence or prior learning without additional context. The reasoning involved requires understanding an implicit contrast between atypical and typical mammalian traits, which might exceed a typical Grade 3 student's concrete operational stage cognitive skills. Vocabulary and concepts around mammalian traits such as 'egg-laying mammal' are also challenging without direct prior instruction."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302152_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "passage_reference",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of the text. This question asks students to draw conclusions based on textual information, which is more aligned with making inferences (RI.3.1) rather than using visual and textual information together.",
+          "passage_reference": "The question refers to 'section 4' but the passage is not clearly divided into numbered sections. While the content being referenced is identifiable (the paragraph about platypus and spiny anteater), the specific section reference is inaccurate.",
+          "difficulty_assessment": "The question could be challenging for a Grade 3 level due to multiple reasons. First, the question asks about platypus and spiny anteater, which are not mentioned in the provided passage, leading to potential confusion as students must apply general knowledge not provided in the text. Secondly, the question involves abstract reasoning about mammalian characteristics and reproduction, which might surpass typical cognitive expectations at this grade level. The combination of these factors could make the question too complex for Grade 3 students."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors because the passage contains no information about size comparisons, swimming speed, jumping ability, food differences, or group travel patterns between dolphins/whales and fish. These distractors are obviously wrong since they reference details not mentioned in the text.",
+          "standard_alignment": "This question does not assess RI.3.7 (using information from illustrations and text to demonstrate understanding). Instead, it assesses reading comprehension and finding specific information in text, which would be more aligned with standards like RI.3.1 or RI.3.7's text component only."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302152_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. Choice A uses a compound structure with 'while' connecting two clauses, choice B is a simple declarative statement, choice C uses 'and not' structure, and choice D is a straightforward declarative statement. They don't follow the same grammatical pattern.",
+          "plausibility": "Choice C ('Most mammals live only on land and not in water') is obviously wrong based on the passage content, which extensively discusses marine mammals like dolphins and whales. Choice D is also implausible as the passage doesn't claim mammals are smartest 'in every environment.' These are not believable distractors.",
+          "homogeneity": "The choices span different conceptual categories. Choice A describes physical behaviors/appearances, choice B addresses communication methods, choice C makes a habitat claim, and choice D makes an intelligence claim. They don't all belong to the same type of answer category.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of text, words, or ideas. This question asks students to synthesize information from two sections to support an inference, which is more aligned with integration/synthesis standards rather than using illustrations/text features to understand content."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D contain factual errors that make them obviously wrong rather than plausible distractors. Option B incorrectly states whales/dolphins have gills, Option C mentions feathers (which are bird characteristics), and Option D mentions wings (which whales/dolphins don't have). These are not believable mistakes a student might make.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding. This question asks about textual details showing adaptation but doesn't require integrating visual and textual information as the standard specifies."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302161_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.3 focuses on describing relationships between events, ideas, or concepts in texts. This question asks about a logical sequence (what must happen first), but the passage doesn't explicitly describe this causal relationship. The answer requires inference beyond what the standard targets.",
+          "clarity_precision": "The phrase 'animals that don't exist in our knowledge yet' is confusing and ambiguous. It could mean animals that are unknown to science, animals that haven't been discovered, or animals that don't exist at all. This creates uncertainty about what the question is actually asking.",
+          "difficulty_assessment": "The question might be challenging for Grade 3 students due to multiple complexities. Firstly, the vocabulary such as 'zoologists,' 'vertebrates,' 'invertebrates,' 'observe,' and 'unexplored' may be too advanced or unfamiliar. Secondly, the conceptual understanding required\u2014such as inferring the primary activities necessary to discover new species\u2014is sophisticated. The reasoning demands for linking the steps in scientific discovery with knowledge about animal studies may surpass the typical cognitive development expected at this grade level."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A contains an obviously false statement that 'scientists stopped studying them' which contradicts the passage's emphasis on ongoing scientific study. Option D is also implausible as it suggests all animals were found before classification, which contradicts basic scientific understanding.",
+          "length_check": "Correct answer (15 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302171_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. Option B makes an illogical absolute claim that scientists cannot be activists. Option C incorrectly states she stopped being a scientist when the passage shows she continues both roles. Option D claims she's famous only for activism, contradicting her well-established scientific fame described throughout the passage.",
+          "length_check": "Shortest distractor (9 words) too long",
+          "difficulty_assessment": "The question poses a challenge for a Grade 3 reading and comprehension level, primarily due to the complexity of logical reasoning required. The vocabulary ('activist', 'contrast', 'logical connection') and the abstract nature of understanding 'logical connections' between statements could be too advanced for the typical cognitive and language development expected at this educational stage. Additionally, the correct passage snippet mentioned in the question ('In section 4, the passage states that Jane Goodall 'is more than a scientist. She is also an activist.'') does not exist in the provided text, making the question confusing and impossible for students to answer correctly based on the given passage."
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C 'The second sentence repeats her first role' is not plausible because the second sentence clearly introduces a new concept (activist) that is different from the first (scientist). This makes it obviously incorrect rather than a believable distractor.",
+          "standard_alignment": "RI.3.8 focuses on describing logical connections between sentences and paragraphs in a text, using language that pertains to cause/effect, sequence, or comparison. While this question asks about logical connections, it's asking about sentence relationships at a very micro level that may be too advanced for 3rd grade comprehension of logical connections.",
+          "too_close": "The distractors are not strongly differentiated from each other in terms of logical reasoning vocabulary (contrast, add, repeat, list). The vocabulary in the choices may be too similar for a Grade 3 student, leading to potential confusion with the correct answer.",
+          "difficulty_assessment": "The question requires understanding nuanced differences in logical connections between sentences (contrast, add, repeat, list), which may be too advanced for a Grade 3 level. The vocabulary used in the options may not be familiar to typical third graders, making the question challenging for the intended grade level."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.091
+    },
+    {
+      "question_id": "quiz_302171_sibling_4",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are obviously wrong and not plausible distractors. Option C ('proves that diet discoveries are never important') makes an absolute claim not supported by the passage, and Option D ('explains that the diet discovery was wrong') contradicts information clearly stated in the passage.",
+          "length_check": "Correct answer (12 words) too long",
+          "difficulty_assessment": "The question and the passage may be challenging for a Grade 3 student in terms of vocabulary and conceptual understanding. The terms 'primatologist,' 'omnivores,' 'herbivores,' and understanding the abstract connection between the phrases, such as the significance of 'more importantly,' require a higher level of comprehension and cognitive skills generally expected from older students. Thus, while the content is clearly presented, the reasoning and vocabulary demands are possibly beyond typical Grade 3 level."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "This question may be too complex for Grade 3 students. The vocabulary includes terms like 'significance' and 'connection,' which could be challenging to understand. The reasoning demand of evaluating the relative significance of scientific discoveries requires higher-order thinking skills that may exceed the cognitive development of typical third graders."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302172_sibling_2",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible as it states the omnivore discovery 'was not useful,' which contradicts the passage's presentation of both discoveries as significant. Option D is also implausible since the passage doesn't discuss different locations for the discoveries - both are presented as occurring during her African research.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The cognitive and reasoning demands of the question are likely too high for a typical third-grade student. The vocabularies such as 'transitional phrase', 'omnivore', 'primatologist', and 'scientific understanding' are complex. Additionally, the question requires understanding abstract concepts like the relative importance of scientific discoveries, which might be challenging for students at this grade level to fully grasp without additional contextual learning or simpler language."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question might be challenging for Grade 3 students due to the abstract reasoning required to understand why the transitional phrase 'More importantly' signifies greater scientific impact. Additionally, understanding the significance of scientific discoveries and their impact is a complex thought process for this age group.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302177_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Options A and B are complete sentences with quotation marks, while options C and D are also complete sentences with quotation marks, but they address completely different topics and don't maintain parallel structure in terms of content focus.",
+          "plausibility": "Options C and D are not plausible distractors for this question. Option C about scuba gear and Option D about pool pressure are clearly unrelated to showing that ocean depth varies in different locations. These are obviously wrong and don't serve as believable distractors.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Options A and B are quotes about ocean depth measurements, while Options C and D are quotes about diving equipment and pressure effects. They span different categories rather than all being examples of depth variation."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. The passage explicitly describes increasing pressure with depth, making 'becomes much weaker' and 'disappears completely' obviously wrong rather than believable misconceptions a student might have."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302178_sibling_4",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C is obviously wrong as it suggests that the presence or absence of remote control capability would affect deep-sea fish survival, which is completely unrelated. Option D is also implausible as it suggests marine biologists would need new careers just because one tool lacks remote capability.",
+          "homogeneity": "The choices span different conceptual categories - A discusses discovery rates, B discusses exploration methods, C discusses fish biology, and D discusses career changes. They are not all addressing the same type of consequence.",
+          "difficulty_assessment": "The vocabulary and concepts introduced in the passage and question might be challenging for the average Grade 3 student. Terms such as 'submersibles', 'remote controls', and understanding abstract connections between technological capabilities (like remote controlling of submersibles) and scientific outcomes (like the discovery rate of deep-sea creatures) require a higher level of cognitive and linguistic maturity than typically expected at this grade level."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice B ('Scientists would discover more deep-sea creatures') is not plausible. The passage indicates submersibles are necessary for deep-sea exploration due to crushing water pressure that humans cannot survive. Without remote control capability, fewer explorations would be possible, not more.",
+          "difficulty_assessment": "The writing of the question and answer choices uses vocabulary and reasoning concepts that might be too advanced for Grade 3. Concepts such as 'submersibles,' 'remote control capability,' and the implication that such capability affects the number of discoveries are complex. These may require higher-level reasoning skills not typically expected at Grade 3. Simplification or more context might be needed to make it age-appropriate."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302179_sibling_4",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "While 'extremely' is clearly correct, 'carefully' and 'recently' are not plausible distractors. The context is about the strength of water pressure, making these two options obviously wrong rather than believable alternatives.",
+          "homogeneity": "The choices span different conceptual categories. 'Slightly' and 'extremely' are degree/intensity adverbs, 'carefully' is a manner adverb, and 'recently' is a time adverb. They don't all belong to the same semantic category.",
+          "difficulty_assessment": "The vocabulary used in the question and choices, such as 'incredibly', might be challenging for a Grade 3 student. Moreover, the concept of 'water pressure' and its analogy ('like 3,300 elephants dropped on you') could also be complex for this age group. The complexity of the context and vocabulary could make the question too difficult for typical third graders."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "too_close": "The distractors 'extremely' (B) and 'very' (D) are semantically similar, which could confuse students. Both words can convey a high degree of intensity, making the distinction between them subtle and potentially unclear for a Grade 3 student.",
+          "difficulty_assessment": "The vocabulary word 'incredibly' and the context within which it is used might be challenging for a Grade 3 student. Additionally, distinguishing between synonyms with subtle differences in intensity and meaning could be too demanding at this level, making the question likely too challenging for Grade 3."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302186_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question assesses vocabulary/word meaning (RI.3.4), not RI.3.7 which focuses on using information from illustrations, text features, or digital media to demonstrate understanding of text.",
+          "clarity_precision": "The question references a 'bolded word' but the word 'amphibians' does not appear to be bolded in the provided passage, creating confusion about which word is being referenced.",
+          "passage_reference": "The question refers to a 'bolded word' but 'amphibians' is not actually bolded in the passage text provided, making this reference inaccurate.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations, maps, photographs, etc. to understand text. This question asks about author's explanatory techniques for a concept, which is more aligned with author's craft or text structure (RI.3.8) rather than using visual/textual features.",
+          "length_check": "Correct answer (11 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302193_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are obviously wrong and implausible. The passage clearly establishes that Komodo dragons live in hot, dry places on Indonesian islands, making 'cold forests' and 'flying over mountains in Africa' obviously incorrect to any reader who engaged with the text.",
+          "specificity_balance": "Choice A provides specific, detailed information (naming Komodo island and mentioning '4 or 5 nearby islands'), while choices C and D are vague about specific locations ('across Europe and Asia', 'over mountains in Africa'). Choice B falls in between with 'every zoo around the entire world.'",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302194_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A, C, and D are not plausible distractors. A is obviously wrong because the passage never discusses intelligence comparisons. C is clearly incorrect as the passage doesn't mention breathing problems. D is unrelated since tongue-smelling is described for finding food, not defense.",
+          "standard_alignment": "This question assesses author's purpose (RI.3.8) rather than RI.3.3, which focuses on describing relationships between events, ideas, concepts, or steps in historical, scientific, or technical texts.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The vocabulary and concepts introduced in the question might be challenging for third-grade students. Terms like 'carnivores', 'nostril', and phrases like 'sense their environment' are likely complex for this age group. The comprehension needed to grasp how and why Komodo dragons use their tongues rather than their nostrils for smelling, which involves understanding anatomical and physiological nuances, could be beyond the reasoning skills typically expected at this grade level. This question might better suit older students with a stronger grasp of biological concepts and vocabulary."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302195_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice D 'To prove that all dragons can fly through the air' is obviously wrong because the passage explicitly states that real fire-breathing dragons never existed and that Komodo dragons do not fly. This makes it an implausible distractor that is easily eliminated.",
+          "standard_alignment": "RI.3.4 focuses on determining meaning of general academic and domain-specific words and phrases. This question asks about author's purpose/intent for including information, which better aligns with standards about author's purpose (RI.3.8) rather than vocabulary/word meaning.",
+          "difficulty_assessment": "The question may be somewhat challenging for a third-grade level considering the abstract nature of comparing real and mythical creatures, which requires higher order thinking skills. The vocabulary used ('carnivores', 'burrow', 'weigh') and the concept of using a creature from mythology for comparison might also be complex for the typical comprehension level of this grade. Although the question itself is structured in a way that is accessible, these elements combined may push the difficulty slightly above what is appropriate for many third-grade students."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A ('They only eat plants and leaves from trees') is not plausible because the passage explicitly states that carnivores eat meat and provides extensive details about Komodo dragons hunting and eating animals. This makes option A obviously wrong rather than a believable distractor."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302195_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible because the passage explicitly states that Komodo dragons 'cannot hear or see very well,' making it obviously wrong to suggest wind helps them hear. Option C is also implausible as it confuses the bacteria concept - the passage mentions bacteria in their saliva as dangerous to prey, not something they need protection from.",
+          "homogeneity": "The choices span different conceptual categories - A deals with scent transmission, B with nostril function, C with bacteria protection, and D with hearing ability. They should all relate to how wind affects the dragon's ability to smell food.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "While the vocabulary and basic comprehension level in the question might align with a grade 3 level, the conceptual understanding required about how smell can be affected by wind might be slightly advanced for this age group. Understanding that smell can be carried and detected over long distances by external elements such as wind, requiring a bit more abstract reasoning, may make it challenging for the typical grade 3 student. The topic, while interesting, incorporates elements of advanced sensory perception that could be tricky for younger students to grasp fully."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The phrase 'like most reptiles' in the passage specifically refers to spending time sleeping/resting in burrows, not to being dangerous, living on islands, or eating meat. These distractors are obviously unrelated to the context of the phrase."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302199_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'only in [location] with [feature]', choice B uses 'in [locations] near [feature]', choice C uses 'in [locations] created by [agent]', and choice D uses 'only in [locations] where [condition]'. The mix of 'only in' vs 'in' and different prepositional phrase structures creates inconsistent patterns.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice B provides broad continental regions (North America, Europe, Asia), choice A focuses on specific water features (rivers/streams with fast water), choice C describes ecosystem types (wetlands/swamps), and choice D describes policy-based locations (protected areas). This creates an imbalance in the level of detail.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently. This question asks students to locate and recall explicitly stated information about beaver habitats, which is more aligned with RI.3.1 (asking and answering questions about key details) rather than using text features or search tools."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information quickly and efficiently. However, this question asks about paragraph content rather than text features like headings, bold text, captions, or indexes. The passage doesn't have clear text features to navigate."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302199_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. Option C (trading wood with other animals) is unrealistic as beavers don't engage in inter-species trade. Option D (creating forest paths to reach water) is also implausible since beavers live near water and don't need to create forest paths for this purpose.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently. This question assesses literal comprehension and locating explicitly stated information, which is more aligned with RI.3.1 (asking and answering questions about key details).",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "passage_reference": "The passage is not formally divided into numbered paragraphs, but the answer choices refer to 'first paragraph,' 'second paragraph,' and 'third paragraph.' Additionally, choice D incorrectly refers to 'second paragraph about lodge construction' when lodge construction is actually discussed in what would be the third section of the passage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302210_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "passage_reference",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and D are not plausible distractors. There is no mention in the passage of webs making noise or signaling to other birds. These concepts are unrelated to the passage content and would be obviously wrong to students who read carefully.",
+          "passage_reference": "The question refers to 'Section 3' but the passage has 4 unmarked paragraphs. The relevant information is actually in the 4th paragraph, not a clearly marked 'Section 3,' making this reference inaccurate and potentially confusing.",
+          "difficulty_assessment": "The content and construction of the question might be slightly advanced for a Grade 3 level. Although the general topic of birds could be suitable, the specific understanding of how the material properties of a spider's web contribute functionally to the nest's safety requires a level of abstract reasoning and inference that may be challenging. The connections the students are required to make between 'stretching,' 'staying safe,' 'creating more space,' and 'warmth and protection' are complex concepts that might not be explicitly clear from the passage. Additionally, the vocabulary ('flexible,' 'stretching') and the concept of physical properties regarding safety might not be entirely graspable for the typical third-grade student."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302215_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. Choice A says 'twenty-two different bones', Choice B says 'more than thirty bones', Choice C says 'exactly two hundred bones', and Choice D says 'two bones shaped like triangles'. The inclusion of descriptive phrases like 'different' and 'shaped like triangles' creates structural inconsistency.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice C uses 'exactly', Choice B uses 'more than', Choice A uses 'different', and Choice D adds descriptive detail 'shaped like triangles'. This creates imbalanced levels of detail across options.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently. This question is asking for basic recall of specific information from the text rather than assessing understanding of text structure, features, or organizational elements."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302215_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. Choice A uses 'while' to connect two clauses, Choice B uses an infinitive phrase 'to help you', Choice C describes location without a connecting structure, and Choice D uses a passive construction 'are stacked'. The patterns are not parallel.",
+          "plausibility": "Choice C is obviously wrong as it states the lower leg bones are 'located behind your ribs near your organs,' which contradicts basic anatomy knowledge that would be accessible to 3rd graders. Choice D is also implausible as it suggests bones are stacked on top of each other, which doesn't match the passage description of bones positioned 'next to' each other.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information relevant to a topic efficiently. This question asks about connecting information between two bones, which is more about comprehension and synthesis rather than using text features or search tools to locate information.",
+          "clarity_precision": "The question asks 'what connects the information about the two bones' which is ambiguous. It's unclear whether it's asking about the relationship between the bones themselves, how the information is connected in the text, or what textual elements link the information."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302224_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "passage_reference",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "passage_reference": "The question incorrectly references 'paragraph 3' when the quoted text 'The soft tissue around your bones is not as hard' actually appears in paragraph 4 of the passage.",
+          "length_check": "Correct answer (6 words) too long",
+          "difficulty_assessment": "For a Grade 3 level, the term 'tissue' and its contextual understanding might be slightly advanced, leaning more toward a middle school biology concept. The vocabulary and the concept of 'tissue' being a collective term for body materials such as muscles and skin could be challenging for third graders to grasp fully without prior detailed learning of body anatomy. Additionally, this question involves interpretive reasoning that may exceed the typical cognitive expectations for Grade 3."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "While 'material' and 'color' could be plausible interpretations of 'stuff' in context, 'shape' and 'size' are obviously wrong distractors. The passage clearly states bones are made of the same 'stuff' as seashells and identifies this as calcium, which relates to composition/material, not physical attributes like shape or size.",
+          "homogeneity": "The choices span different conceptual categories. 'Material' refers to composition/substance, while 'shape,' 'color,' and 'size' refer to physical attributes/properties. These are fundamentally different types of characteristics."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302232_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently. This question asks students to identify the main reason from paragraph content, which is more aligned with comprehension/main idea standards rather than text feature usage.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The vocabulary and concepts involved in this question might be somewhat complex for a third-grade level. Terms such as 'voluntary' and 'involuntary' muscles, along with the reasoning needed to infer the role of muscles from their described actions, could pose challenges. Additionally, comprehending abstract and numerical facts like musculature making up half of body weight or the presence of 650 muscles may be difficult. In essence, the question may slightly exceed the typical curriculum focus and comprehensible material designed for grade 3 students."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302232_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.36363636363636365,
+        "failed_checks": [
+          "grammatical_parallel",
+          "homogeneity",
+          "specificity_balance",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "too_close"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices have inconsistent grammatical structures. A and B are simple statements about what muscles do, C starts with 'You can control...' making it more active, and D takes a different approach by describing what doctors do to categorize muscles.",
+          "homogeneity": "The choices span different conceptual categories. A, B, and C are specific details about muscle function/characteristics, while D is a meta-statement about how doctors classify muscles. They don't all belong to the same type of answer.",
+          "specificity_balance": "There are significant differences in specificity. A, B, and C provide specific details about muscle functions, while D gives a broader, more general statement about classification methodology. The levels of detail are not balanced.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information relevant to a topic. This question asks students to identify which detail 'best shows the difference' between muscle types, which is more about analyzing and comparing information (comprehension) rather than locating information using text features.",
+          "clarity_precision": "The question is ambiguous about what constitutes 'best shows the difference.' Multiple choices could reasonably be defended as showing the difference between voluntary and involuntary muscles, making the question unclear about what specific criteria determine the 'best' answer.",
+          "single_correct_answer": "Multiple answers could be defended as correct. Choice B directly states the key difference (automatic vs. controlled), Choice C explains the controllable nature of voluntary muscles, and Choice D describes the classification system. The question doesn't clearly establish why D is definitively better than B or C.",
+          "too_close": "Distractors A, B, and C are all directly related to the distinction between voluntary and involuntary muscles, as they each describe attributes that separate these groups. Choice D, on the other hand, talks about a higher-level classification, which is a generalized statement about the two groups as a whole and might be confused with the specifics provided in A, B, and C. Thus, there is a potential for semantic overlap where respondents could think that specific examples of voluntary and involuntary muscle functions (from choices A, B, C) also inherently demonstrate the overall grouping itself, creating confusion."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 requires students to use text features and search tools to locate information efficiently. This question is simply asking for a specific detail recall from the passage, which is more aligned with RI.3.1 (asking and answering questions about key details). No text features or search tools are needed."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.545
+    },
+    {
+      "question_id": "quiz_302233_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('Only doctors can control muscles by thinking about them carefully') is obviously wrong and unrelated to the passage content. The passage discusses voluntary vs. involuntary muscles for all people, not special abilities of doctors.",
+          "length_check": "Correct answer (14 words) too long",
+          "difficulty_assessment": "The vocabulary and concept presented in the question might be a bit challenging for a Grade 3 level. Terms like 'voluntary' and 'involuntary' muscles, along with the requirement to differentiate types of muscle control based on thinking processes, are complex physiological concepts that may not be fully understandable to students at this educational stage without sufficient prior instruction or simplified explanations. The cognitive load required to grasp the distinction between consciously controlled muscle action and automatic muscle function is significant, suggesting that the question could be better suited for slightly older students."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (14 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302234_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A, B, and D are obviously wrong and not plausible distractors. Option A directly contradicts the passage's main point, Option B makes an absurd claim about cartoons being accurate, and Option D is completely unrelated to the scientific principle being taught.",
+          "homogeneity": "The choices span different conceptual categories - C addresses body systems working together, A is about bone/muscle strength, B is about cartoon accuracy, and D is about learning methods. They don't all represent the same type of scientific principle.",
+          "standard_alignment": "RI.3.6 focuses on distinguishing the reader's point of view from that of the author. This question asks about scientific principles rather than assessing point of view, making it misaligned with the standard.",
+          "length_check": "Shortest distractor (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302235_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('It makes the passage longer by adding extra sentences that take up more space') is obviously wrong and implausible as it suggests the author's purpose is simply to waste space, which is not a legitimate rhetorical purpose.",
+          "standard_alignment": "The assigned standard RI.3.7 typically focuses on using information from illustrations and text features to demonstrate understanding. This question assesses author's craft and rhetorical purpose, which better aligns with standards about author's purpose or text structure rather than RI.3.7.",
+          "difficulty_assessment": "For a grade 3 level, both the vocabulary and the abstract reasoning required by this question could be challenging. Terms such as 'voluntary muscles', 'involuntary muscles', and discussing the function and examples of muscles might be manageable, but analyzing the rhetorical impact of a question within a passage could be too advanced. This kind of meta-cognitive analysis of text purpose is generally more suited to older students who have developed higher-level thinking skills."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations/text features to understand text. This question asks about author's use of examples to help understanding, which is more aligned with author's craft/purpose (RI.3.8) rather than using text features for comprehension."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302236_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are obviously wrong and implausible. Option C makes an extreme claim about who can write about the muscular system that has no basis in the passage, and Option D about muscle strength is completely unrelated to the author's credibility or the passage's purpose.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Options A and B address reasons for mentioning professional identity, while Options C and D address unrelated concepts (writing permissions and physical strength) that don't connect to the passage's purpose.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks about author's purpose and credibility, which aligns more with author's craft standards rather than using textual information to understand story elements."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A, C, and D are not plausible distractors. A focuses on entertainment value rather than the author's pedagogical strategy, C makes an irrelevant claim about doctors' viewing habits, and D discusses horror movie conventions - none of these relate to the author's instructional purpose of using contrast to teach about muscles.",
+          "homogeneity": "The choices span different conceptual categories. Option B addresses the author's instructional technique, A discusses entertainment preferences, C makes a claim about doctors' personal habits, and D analyzes horror movie conventions. Only B actually answers the question about the author's choice.",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302241_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "clarity_precision",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B ('the importance of exercise for healthy muscles') is not plausible as it relates to content not discussed in the first part of Section 3. The first part focuses on defining tendons and contrasting them with ligaments, with no mention of exercise or muscle health.",
+          "clarity_precision": "The question lacks precision in defining 'the first part of Section 3.' The passage doesn't have clearly marked sections, and it's ambiguous exactly which portion of the text constitutes 'the first part of Section 3,' making it difficult for students to know exactly what text to analyze.",
+          "passage_reference": "The reference to 'Section 3' is inaccurate because the passage is not clearly divided into numbered sections. While there appear to be paragraph breaks, there are no explicit section markers that would allow students to definitively identify 'Section 3.'"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice B states 'Cartilage is the hardest type of tissue found in the human body,' which directly contradicts the passage that explicitly states 'It is not as hard as bone.' This makes it obviously wrong rather than a plausible distractor."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302243_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "single_correct_answer",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C is not plausible as the passage explicitly states that ligaments connect bone to bone while tendons connect muscle to bone, making their jobs clearly different. Option D is also implausible since the passage describes ligaments as 'tissue,' not bone material.",
+          "standard_alignment": "This question assesses making inferences/conclusions (higher-order thinking) rather than RI.3.1, which focuses on asking and answering questions about explicit information in the text. The question asks what can be concluded, not what the text directly states.",
+          "single_correct_answer": "Option A is problematic as the correct answer. The passage states 'Most of your joints have ligaments,' implying that not all joints have ligaments, which contradicts the absolute statement in option A that ligaments 'must be located wherever two bones meet.'",
+          "difficulty_assessment": "The question involves comprehension and inferential reasoning about the nature and function of ligaments, which could be challenging for a Grade 3 level. Understanding the concept of ligaments as connective tissues linking one bone to another requires some abstract thinking. Additionally, the language in the question and the need to understand specific biological terms like 'ligaments' and 'tissues', which, without prior detailed teaching, could be conceptually difficult for students at this grade. The reasoning required to derive a conclusion based on provided information might make it more suitable for slightly older students."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302248_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'Your body counts all the nerves' is obviously wrong and unrelated to the cold sensation scenario. It doesn't make logical sense as a response to feeling cold and is not a plausible distractor.",
+          "homogeneity": "The choices span different conceptual categories. Options A, B, and C describe logical responses or actions related to the nervous system's function, while option D describes an unrelated counting activity that doesn't fit the same category of responses to cold.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs, but this question asks about a cause-and-effect sequence within the content rather than analyzing how ideas are connected across text structures.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs. This question asks about a simple detail connection within a single paragraph rather than logical connections between sentences/paragraphs, making it more of a literal comprehension question."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302248_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'You would not be able to visit your family doctor' is obviously wrong and unrelated to the physiological functions discussed in the passage. It's not a believable consequence of lacking nerves and appears arbitrary.",
+          "homogeneity": "The choices span different conceptual categories. Options A, B, and C relate to bodily functions and anatomy, while option D relates to social/medical activities. They don't all belong to the same category of consequences.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs, or explain scientific procedures. This question asks about consequences of a hypothetical scenario rather than analyzing text connections or procedures.",
+          "length_check": "Correct answer (13 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is obviously wrong and unrelated to the specific scenario described in the question. While the passage mentions doctors checking reflexes, this has no connection to what happens when nerves detect cold weather, making it an implausible distractor.",
+          "homogeneity": "The choices span different conceptual categories. Options A and B describe responses to cold, option C describes the mechanism of nerve transmission, and option D describes a medical test. They don't all belong to the same type of answer category.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs in a text. This question asks about a specific cause-and-effect relationship from the passage rather than connections between text structures, so it doesn't properly assess the assigned standard.",
+          "length_check": "Correct answer (12 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302248_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'Nerves count how cold the air is in degrees' is obviously wrong and implausible - the passage never suggests nerves measure temperature in degrees, and this function is not biologically accurate for how nerves work.",
+          "specificity_balance": "There are significant differences in specificity. Option D is overly specific with 'count...in degrees' while others are more general. Option A is appropriately specific to match the passage detail level.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs. This question asks about a simple cause-effect relationship within one paragraph rather than connections between different parts of the text."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question does not assess RI.3.8, which focuses on describing logical connections between sentences and paragraphs in a text. Instead, this question asks students to identify a specific cause-and-effect relationship described in the passage, which better aligns with standards about identifying explicit information or cause-and-effect relationships.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302249_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 requires students to use text features and search tools to locate information efficiently. However, this question asks about locating information using a highlighted term, but no term is actually highlighted in the provided passage. The question cannot assess the standard without the proper text feature present.",
+          "clarity_precision": "The question refers to a 'highlighted term' called 'sense of touch' but this term is not actually highlighted in the passage provided. This creates confusion and makes the question impossible to answer as intended.",
+          "passage_reference": "The question references a 'highlighted term' but no highlighting is present in the passage. This inaccurate reference makes the question unanswerable as written."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "passage_reference"
+        ],
+        "failed_reasons": {
+          "passage_reference": "There is an inaccuracy in the answer choices. Option C refers to 'the fourth paragraph that explains nerve cells and dendrites' but the content about nerve cells and dendrites is actually in the third paragraph of the passage, not the fourth. The fourth paragraph discusses reflexes and doctor visits."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302256_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is not plausible as a distractor. The phrase 'in the past few decades' clearly indicates recent time, not 'a very long time ago.' This creates an obviously wrong choice that contradicts basic understanding of the temporal phrase.",
+          "specificity_balance": "The choices vary significantly in specificity. Option B provides specific timeframe details ('20-30 years'), while options A, C, and D use vague temporal references ('very long time ago,' 'future,' 'every single day'). This imbalance makes the correct answer stand out.",
+          "length_check": "Correct answer (12 words) too long",
+          "difficulty_assessment": "The question is not suitable for Grade 3 students for several reasons. Firstly, the question references a phrase, 'in the past few decades', which does not appear in the provided passage, making it impossible for students to answer based on the text. This lack of context can confuse students and is not suitable testing practice. Secondly, the question may hinge on understanding the concept of 'decades', which could be too complex for Grade 3 reasoning about specific time intervals and historical context. The comprehension of chronological concepts and their implications could challenge Grade 3 students excessively. Error in source material connection and potential conceptual difficulty makes this question inappropriate for the specified grade level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302257_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible. Option C claims the cerebellum is the most important part of the human body, which contradicts the passage stating the brain is 'the most important organ for life.' Option D about helmet wearing is completely unrelated to the passage's main message and only tangentially connects to the brief concussion mention.",
+          "homogeneity": "The choices span different conceptual categories. Option A addresses the overall structure/function of the nervous system, Option B focuses on a specific scientific tool, Option C makes a claim about anatomical importance, and Option D gives safety advice. They are not all the same type of answer to the main message question.",
+          "specificity_balance": "There are significant differences in specificity. Option A provides a broad, comprehensive statement about the nervous system. Option B is very specific about PET scans and daily usage. Option C makes a specific claim about one brain part. Option D is specific safety advice. The levels of detail vary considerably.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "specificity_balance",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "specificity_balance": "The choices vary significantly in specificity. Choice A is broad and comprehensive about the entire nervous system, while Choices B and D focus on very specific parts (cerebellum, medulla), and Choice C shifts to scientific methodology. This creates an imbalance in the level of detail.",
+          "length_check": "Correct answer (11 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302257_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A ('to show that the brain is exactly ten years old') is obviously wrong and unrelated to the context. Option D ('to teach a new mathematics concept') is also implausible as this is clearly a science passage about anatomy, not mathematics.",
+          "standard_alignment": "RI.3.2 focuses on determining main idea and supporting details. This question asks about author's purpose for a specific word choice, which better aligns with craft and structure standards (RI.3.4 or RI.3.5) rather than main idea identification.",
+          "difficulty_assessment": "The content complexity and vocabulary may be too advanced for a typical third-grade level. Concepts such as understanding 'past few decades' and discussing the precise roles of specific brain parts (medulla, cerebellum, cerebrum) are likely beyond the usual cognitive and educational range of Grade 3 students. Additionally, the question and passage involve a higher order of reasoning and synthesis, suitable for older students. For Grade 3, the focus is usually on foundational concepts in a more straightforward manner."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (16 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302257_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "homogeneity",
+          "specificity_balance",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structures. Choice A is a simple statement about weight and importance, Choice B uses 'while' to contrast two functions, Choice C describes a connection and action, and Choice D makes a general statement about learning. The structures vary significantly.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about physical characteristics, Choice B describes specific functions, Choice C explains anatomical connections, and Choice D discusses scientific progress. They don't belong to the same type of answer category.",
+          "specificity_balance": "There are significant differences in specificity levels. Choice B provides very specific examples of brain part functions (medulla/breathing, cerebellum/walking), while Choice A gives general characteristics, Choice C offers broad functional description, and Choice D makes a vague statement about scientific learning.",
+          "difficulty_assessment": "The vocabulary and conceptual demand of this question likely exceed what is typical for a Grade 3 level. Terms such as 'medulla,' 'cerebellum,' and 'hemispheres' and concepts like these parts controlling involuntary functions and voluntary movements may not be fully understandable to third graders without simplified explanations or prior detailed teaching on the topic. Furthermore, distinguishing the roles based on text might be challenging, crossing into interpretative skills that are developed at higher grade levels."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C is not plausible as it states the brain and spinal cord are 'made of the same materials and do the same jobs,' which contradicts the passage's clear explanation that they have different structures and functions. Option D is also questionable since the passage only mentions studying the brain with PET scans, not the spinal cord, and emphasizes that scientists didn't know much for many years."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302258_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and D are obviously wrong based on the passage content. Option A uses absolute language 'never happen to careful people' which contradicts the football player example, and Option D claims skull bones 'prevent all possible brain damage' which directly contradicts the concussion example provided.",
+          "standard_alignment": "This question does not assess RI.3.6 (author's point of view or purpose). Instead, it asks students to infer what the author would agree with based on information presented, which is more aligned with making inferences (RI.3.1) rather than identifying author's perspective or purpose.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302258_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A is obviously wrong and implausible - it claims scientists have 'completely finished learning everything about the brain,' which contradicts basic understanding that scientific research is ongoing. Choice C is also implausible as it introduces cost concerns about PET scans that aren't mentioned anywhere in the passage.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice B mentions specific technology (PET scans and discoveries), Choice C focuses specifically on PET scan costs, while Choices A and D make broad generalizations about research progress without specific details.",
+          "difficulty_assessment": "The wording and concepts presented in the question and choices may prove challenging for a typical third-grade student. Vocabulary such as 'scientific progress,' 'PET scans,' and 'modern technology' might not be thoroughly understood by children at this grade level without further explanation. Additionally, the question asks for inference about the author's viewpoint concerning a nuance of scientific progress, which is a complex reasoning task likely exceeding the cognitive and critical thinking skills expected at this educational stage. Thus, this question aligns better with higher grade levels where students have more advanced reading comprehension and critical thinking skills."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "too_close",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "too_close": "Options C and D are semantically close to the correct answer B. All three options mention new tools and scientific discoveries about the brain. This similarity may confuse students as they could perceive these options as having overlapping meanings. The distinction between learning some things (C) and making important discoveries (B) might not be clear for a Grade 3 student.",
+          "difficulty_assessment": "The question requires the integration of information that is not directly provided in the passage. It assumes knowledge about tools like PET scans, which might not be familiar to Grade 3 students. Additionally, the passage doesn't explicitly discuss scientific progress related to the brain, making it challenging for students to infer the correct answer. The vocabulary and reasoning demands may be too advanced for this grade level.",
+          "length_check": "Shortest distractor (14 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302266_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.45454545454545453,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'That Dr. Kwan Si-Yu is...', choices B, C, and D use 'That [noun phrase] [verb]...' but choice A identifies a person as being something, while the others describe processes or relationships. The structures are inconsistent.",
+          "plausibility": "Choice A is not plausible as the passage never evaluates Dr. Kwan Si-Yu's quality as an optometrist or compares him to others. Choice D is also implausible because the passage explicitly states iris color is just what people refer to when they say 'brown eyes' but never connects iris color to vision quality.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about evaluating a person's professional quality, choice B focuses on one specific mechanism, choice C addresses the overall process/collaboration, and choice D concerns a relationship between anatomy and function. They are not all the same type of answer.",
+          "specificity_balance": "There are significant differences in specificity. Choice B is very specific (pupils getting bigger in darkness), choice C is broad and conceptual (multiple parts collaborating), choice A is about professional evaluation, and choice D is about a specific anatomical relationship. The levels of detail vary considerably.",
+          "standard_alignment": "RI.3.1 requires students to ask and answer questions to demonstrate understanding of a text, referring explicitly to the text. This question asks about author's intent/main idea, which is more aligned with RI.3.2 (determining main idea) rather than demonstrating literal comprehension through text-based questions and answers.",
+          "length_check": "Shortest distractor (9 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.545
+    },
+    {
+      "question_id": "quiz_302268_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A is a simple statement about iris colors, Choice B describes a process with 'must travel through', Choice C identifies a person's profession with 'works as', and Choice D makes a descriptive statement with 'appears black regardless of'. The structures vary significantly.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about physical variation, Choice B is about process complexity, Choice C is about professional expertise, and Choice D is about physical appearance. They don't all belong to the same type of detail that would demonstrate complexity.",
+          "standard_alignment": "RI.3.6 requires students to distinguish their own point of view from that of the author. This question asks about identifying evidence of complexity in vision, which is more about analyzing textual evidence (RI.3.8) or making inferences rather than distinguishing points of view."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B and C are not plausible distractors. Option B incorrectly states the author believes vision only works in bright light (the passage clearly explains vision works in both bright and dark conditions). Option C reverses the actual relationship - the author explains many parts are involved, not just the pupil.",
+          "standard_alignment": "RI.3.6 requires students to distinguish their own point of view from that of the author. This question asks students to compare the author's view with hypothetical other viewpoints, not to identify how the student's view differs from the author's view.",
+          "clarity_precision": "The question is unclear because it asks about 'someone who thinks seeing is instant and automatic' but this contrasting viewpoint is not explicitly presented in the passage. Students must infer what this alternative perspective would be."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302273_sibling_1",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C 'cannot see anything at all' is obviously wrong and unrelated to the concept of farsightedness. A 3rd grader would easily eliminate this as it describes blindness, not a vision correction issue. Option D is also implausible as it contradicts the entire premise that farsighted people have a vision problem.",
+          "homogeneity": "While options A, B, and D describe vision capabilities, option C describes complete vision loss (blindness), which is a fundamentally different category from vision correction problems discussed in the passage.",
+          "difficulty_assessment": "While the basic concept of vision problems like farsightedness and nearsightedness is explained in simple terms in the passage, the terminology such as 'farsighted' might still be challenging for a Grade 3 level. The comprehension of how vision works involving terms like 'cornea,' 'retina,' and 'lens,' and understanding vision correction terminology might be too complex for this age group in a standard educational setting, unless they have had specific lessons or introductions to these concepts. Typically, this level of scientific detail might be introduced later in school curriculums."
+        }
+      },
+      "after": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "specificity_balance",
+          "too_close",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choices A and B use the pattern 'can see things [distance] clearly' while choices C and D use the pattern 'can see things [distance] but not [distance]'. This creates inconsistent parallel structure.",
+          "plausibility": "Choice A is not plausible as a definition of 'farsighted' because it describes nearsightedness. The passage clearly states that farsighted people see things far away clearly but have trouble with close objects, making choice A obviously incorrect to anyone who read the passage.",
+          "specificity_balance": "Choices A and B provide only partial information about vision ability (only mentioning one distance), while choices C and D provide complete information about both near and far vision abilities. This creates an imbalance in the level of detail provided.",
+          "too_close": "Choice D (can see things far away but not up close) is semantically similar to the correct answer B (can see things far away clearly). While B focuses on the ability to see far away clearly, D includes additional information that farsighted people cannot see up close, which could mislead students into thinking it's also correct.",
+          "length_check": "Shortest distractor (7 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.182
+    },
+    {
+      "question_id": "quiz_302273_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'They are not safe to use' is not plausible as a distractor. The phrase 'almost invisible' has no connection to safety, making this choice obviously wrong and unrelated to the meaning being assessed.",
+          "homogeneity": "The choices span different conceptual categories. A and B relate to practical usage issues, C relates to visual appearance, and D relates to safety concerns. They don't all address the same type of characteristic.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. 'Look at' and 'clean off' are obviously wrong in the context of inserting a contact lens into your eye. These actions are unrelated to the meaning of 'insert' in this passage.",
+          "homogeneity": "While all choices are verb phrases, they represent different types of actions. 'Put in' and 'take out' are opposite directional movements, 'look at' is an observational action, and 'clean off' is a maintenance action. They don't all belong to the same conceptual category of actions."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302275_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is implausible as it directly contradicts the passage which explicitly mentions optometrists checking eyes. Option D is also implausible since the passage makes no mention of age-specific vision concerns, making it obviously unrelated to the content.",
+          "standard_alignment": "RI.3.6 requires distinguishing the author's point of view from that of the narrator or characters. This question asks about author agreement/viewpoint but the passage is informational text without clear author opinion markers, making it difficult to assess point of view distinction as required by the standard.",
+          "difficulty_assessment": "The question may be somewhat challenging for a Grade 3 audience due to the complexity of the concepts involved, such as the anatomy of the eye, vision problems, and methods of correction like LASIK surgery and the role of optometrists and opticians. These topics might require a deeper understanding and a higher level of reasoning than typically expected at this grade level. The vocabulary and the required inferential thinking aligned with the comprehension of such specific content sum up to a level that might be a bit too advanced for the average third grader. Therefore, the question might be more suited for students a few grades higher."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question may be too challenging for Grade 3 students due to complex vocabulary and the sophistication required to infer the author's purpose. Words like 'optometrist' and 'prescription' are likely unfamiliar to third graders without context or prior knowledge, and the passage expects students to extract and synthesize information on both problems and solutions to determine the author's purpose. Therefore, the question might be too difficult for the intended grade level."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302281_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "homogeneity",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Options A, B, and D describe actions or processes ('starts moving', 'catches sounds', 'go down'), while option C describes a function or purpose ('protects against germs'). The grammatical patterns are inconsistent.",
+          "homogeneity": "The choices span different conceptual categories. Options A, B, and D describe steps in the hearing process, while option C describes a protective function of ear wax. They are not all the same type of answer - some are process steps, one is a function.",
+          "standard_alignment": "RI.3.8 requires students to describe logical connections between sentences and paragraphs in a text. This question asks about the sequence of steps in a process (first step), which is more aligned with identifying sequence or cause-and-effect relationships rather than logical connections between text structures."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302288_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'white canes that tap out letter patterns' is obviously wrong as the passage clearly states white canes are used by blind people for navigation, not by deaf people for spelling. Option C also clearly refers to Braille for blind people, not deaf people.",
+          "homogeneity": "The choices span different categories - some are tools for deaf people (A, B) while others are tools for blind people (C, D). They don't all belong to the same conceptual category of communication tools for deaf people.",
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information relevant to a topic. This question asks about specific content/details rather than assessing ability to use text features or organizational elements.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302288_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A (taste of food people bring them) and choice D (smell of different clothing materials) are not plausible distractors. Neither is mentioned or suggested in the passage as ways blind people recognize other people, making them obviously incorrect rather than believable alternatives.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice B (sound of voices or footsteps) provides two specific examples, while choices A, C, and D each focus on single, more specific sensory details. Choice C refers to a reading method rather than recognition of people.",
+          "standard_alignment": "RI.3.5 requires students to use text features and search tools to locate information efficiently. This question asks for explicit information retrieval about what the passage states, which aligns more with RI.3.1 (asking and answering questions about key details) rather than using text features or search tools."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302291_sibling_1",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('to teach readers the exact steps for training guide dogs') is obviously wrong as the passage only briefly mentions guide dogs without providing any training steps or procedures. This makes it an implausible distractor that students could easily eliminate.",
+          "specificity_balance": "The choices vary significantly in specificity. Option A is broad and general, Option B focuses on comparing disabilities, Option C specifies particular skills everyone should learn, and Option D narrows to very specific training steps. This imbalance makes some options easier to eliminate.",
+          "difficulty_assessment": "While the vocabulary and structure of the question are suitable for a Grade 3 level, the cognitive and reasoning demand might be slightly elevated. This question requires students to extrapolate the author's purpose from examples given, a high-order reasoning skill that might challenge typical third-grade comprehension abilities. Additionally, understanding the nuances of 'author's purpose', which requires abstract thinking about the passage's intent, might be advanced for this grade level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302291_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "specificity_balance",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A is a complete sentence with subject-verb-object structure. Choice B uses 'must have' construction. Choice C uses gerund 'Learning' as subject with 'requires' as verb. Choice D uses 'People who...' clause structure. The varied sentence structures lack parallelism.",
+          "plausibility": "Choices B, C, and D are not plausible based on the passage content. The passage explicitly contradicts these distractors - it shows deaf people communicating independently through sign language and lip reading, describes blind people navigating independently with canes and guide dogs, and emphasizes self-sufficiency rather than constant dependence on others. These distractors are obviously wrong rather than believable alternatives.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice A provides specific details about tools (guide dogs, white canes) and specific activities (walking safely). Choice B mentions specific communication needs (translation, sign language). Choice C is more general about learning processes. Choice D makes a broad generalization about care needs without specific details.",
+          "standard_alignment": "This question does not assess RI.3.6, which focuses on distinguishing the reader's point of view from that of the author or narrator. Instead, this question asks students to identify author's beliefs/opinions, which aligns more closely with standards about author's purpose or main idea (such as RI.3.8 or RI.3.2). The question is asking about what the author believes rather than comparing viewpoints.",
+          "difficulty_assessment": "The difficulty of this question might not be completely appropriate for a Grade 3 level due to the vocabulary and conceptual understanding required. Terms such as 'independent', 'translate', and the concept of using guide dogs or white canes for navigation might be challenging for some third graders without additional context or simplification. Moreover, understanding abstract concepts such as independence in the context of disability might require higher reasoning skills than typical for this grade level. The choice of vocabulary and the need to infer the implied meaning of independence can pose challenges for younger students."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302296_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options C and D are not plausible distractors. The passage clearly states Helen lost her sight and hearing at 19 months old (making C obviously wrong), and the description of pushing her mother away has no connection to where she lived before school (making D obviously unrelated to the question).",
+          "homogeneity": "The choices span different conceptual categories. A and B relate to Helen's behavior and communication, while C relates to timing of her disability onset, and D relates to her living situation. They don't all address the same type of information.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations and text to demonstrate understanding of characters, settings, or plot. This question asks about understanding Helen's communication method rather than using textual information to understand story elements like character, setting, or plot.",
+          "length_check": "Correct answer (9 words) too long",
+          "difficulty_assessment": "The question might be slightly challenging for a Grade 3 student due to the complexity of understanding abstract representations of emotional and communicative behaviors (like pushing someone away to indicate a desire to be alone). While the vocabulary used in the question and options is suitable for this grade level, the reasoning demanded to make the connection between physical actions and their communicative purposes might be a bit advanced. It requires a certain level of maturity and understanding about indirect communication methods, which might not be fully developed in all children at this grade level."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question does not align with RI.3.7, which requires using information from illustrations and text to demonstrate understanding. This question asks about character inference/analysis, which would better align with literature standards about character traits and motivations, not informational text standards about using text features."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302297_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.8 focuses on describing logical connections between sentences and paragraphs in a text. While this question asks about connections between paragraphs, it's asking specifically about authorial intent ('What connection does the author make') rather than having students identify and describe the logical connections themselves.",
+          "length_check": "Correct answer (16 words) too long",
+          "difficulty_assessment": "The question might be challenging for Grade 3 due to several factors. Firstly, the vocabulary and concepts such as 'communication problem' and the abstract idea of 'beginning of a solution' are complex. Secondly, the cognitive load required to understand how paragraphs are connected in context and the detail within the passage might be too high for the typical comprehension level of a Grade 3 student. This may make the question better suited for higher elementary grades rather than Grade 3."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice C 'Hand movements and word learning were the same' is not plausible as a distractor. The passage clearly shows these are completely different communication methods - hand movements were basic gestures while word learning involved spelling letters on Helen's palm. This choice is obviously incorrect to any reader who understood the passage."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302297_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.2727272727272727,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "specificity_balance",
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. A and B start with 'She learned/Later, she went', C starts with 'Sullivan took', and D makes a general statement about her life. The subjects and verb structures vary significantly.",
+          "plausibility": "Option D 'Helen Keller lived a long and productive life' is obviously wrong as it doesn't show sequential organization of communication methods at all - it's a general biographical statement unrelated to the question about sequencing communication information.",
+          "homogeneity": "The choices span different conceptual categories. A, B, and C are specific examples from the text about communication/learning, while D is a general biographical summary statement that doesn't relate to communication methods or sequencing.",
+          "specificity_balance": "There are significant differences in specificity. Options A, B, and C provide specific details about Helen's learning/communication methods, while option D is a very general, high-level statement about her entire life.",
+          "standard_alignment": "RI.3.8 typically involves describing logical connections and text structure. However, this question asks about 'organizing information in a sequence' but the correct answer (B) doesn't clearly demonstrate sequential organization of communication methods - it's just one step in her education timeline.",
+          "clarity_precision": "The question is ambiguous. It's unclear whether it's asking about the author's use of sequence words/transitions, chronological order of events, or logical organization of information about communication methods. The phrase 'organizing this information in a sequence' is vague.",
+          "single_correct_answer": "The correct answer (B) 'Later, she went to a school for the deaf' shows temporal sequence but doesn't specifically organize information about communication methods. Option A could also be considered correct as it describes a communication method in the sequence of her learning.",
+          "difficulty_assessment": "The question poses a difficulty in understanding primarily due to the fact that the correct answer, 'Later, she went to a school for the deaf,' is not supported by the passage provided. There is no mention of Helen Keller attending a school for the deaf in the given text. This discrepancy makes it challenging for Grade 3 students to correctly answer based on the provided information. Ideally, the correct answer should be directly inferable from the text to be appropriate for this grade level's reasoning capabilities. Moreover, some vocabulary and conceptual understanding such as 'sequence of learning' might be too abstract for Grade 3."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A, C, and D are problematic distractors. Option A makes an unsupported comparison about difficulty levels, Option C makes a broad generalization about musicians vs. writers that isn't supported by the passage, and Option D makes a gender-based comparison that's completely unrelated to the author's purpose.",
+          "difficulty_assessment": "The question requires understanding the author's intent, comparing the challenges faced by individuals with disabilities, and contextualizing the examples given. This level of inferential reasoning may be too advanced for a typical Grade 3 student. The vocabulary used, while not overly complex, might also be challenging when combined with the need to determine the purpose of the text structure."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.545
+    },
+    {
+      "question_id": "quiz_302298_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 focuses on using text features and search tools to locate information efficiently, and understanding how text structure supports meaning. This question asks for specific content recall from a particular section rather than assessing understanding of text structure or organizational features.",
+          "length_check": "Correct answer (7 words) too long",
+          "difficulty_assessment": "The question might be challenging for a typical third grader for several reasons. First, the complexity of understanding what it means to learn to spell words without knowing they exist is a fairly nuanced concept. Additionally, the correct answer requires students to infer that 'the specific words Helen learned to spell' relates to the actions described (tracing the letters, etc.), which could be too abstract a connection for younger students to make easily. These factors suggest that the intellectual and reasoning demands of the question might exceed the typical capabilities of a third grade student."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302298_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 typically focuses on using text features and search tools to locate information efficiently, or understanding how text structure contributes to meaning. This question is asking about sequence of events/chronology, which is more aligned with RI.3.3 (describing relationships between events) or basic comprehension skills.",
+          "length_check": "Correct answer (10 words) too long",
+          "difficulty_assessment": "The question appears to be misleading based on the passage provided. The passage does not explicitly state that Helen learned more words like 'pin' and 'hat' immediately after learning the word 'doll.' Therefore, the correct answer provided, 'C - Annie Sullivan taught her more words like pin and hat', is not supported by the information in the passage. This could confuse students, making the question inappropriate for Grade 3 level as it does not test understanding based on accurate textual evidence. Additionally, this misleading aspect makes the question's difficulty inappropriate because it tests the student's guesswork rather than their understanding and reasoning."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302298_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "single_correct_answer",
+          "passage_reference",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question does not assess RI.3.5 (text features and their purposes). Instead, it assesses sequencing/text structure, which would be more aligned with standards about chronological order or text organization.",
+          "clarity_precision": "The question is ambiguous because the passage appears to be cut off mid-sentence ('Helen Kel'), making it unclear what information is actually presented last in the complete text. Additionally, none of the answer choices B, C, or D actually appear in the provided passage excerpt.",
+          "single_correct_answer": "Cannot determine the correct answer because the passage is incomplete (cuts off abruptly) and multiple answer choices (B, C, D) contain information not found in the provided passage text.",
+          "passage_reference": "The question references 'the section about Helen Keller's later life' but the provided passage cuts off incomplete, and most answer choices contain information not present in the given text excerpt.",
+          "difficulty_assessment": "The question asks about specific details that are not mentioned anywhere in the provided passage. For third graders, the ability to retrieve or infer information that has not been discussed in a text would not only be challenging but could also create confusion. Moreover, the vocabulary and ideas such as 'political activism,' 'reading lips,' and 'state quarter commemoration' might be advanced for a typical third-grade comprehension level."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_302299_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "length_check",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A is implausible because the passage does not indicate that Ray Charles learned to communicate using his hands - he communicated through music and speech. Choice C is also implausible as there is no mention of awards from Alabama for either person. Only choices B and D have any plausibility.",
+          "specificity_balance": "The choices vary significantly in specificity. Choice B is broadly conceptual (success despite disabilities), while Choice C is very specific (awards from Alabama), and Choice A is moderately specific (hand communication). This creates an imbalance in detail levels.",
+          "length_check": "Shortest distractor (8 words) too long",
+          "difficulty_assessment": "While the vocabulary used in the question itself is not overly complex and should be understandable for a Grade 3 student, the challenge lies in the need for higher-level inferential reasoning. The question requires students to generalize the concept of overcoming challenges and achieving success from specific detailed narratives, which may be too demanding in terms of abstract thinking for typical students at this grade level. Students are required not only to recall content from the passage but also to identify and connect underlying themes across different scenarios, which might be more suited for upper elementary grade levels."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question assesses author's purpose/main idea (RI.3.8), not RI.3.1 which focuses on asking and answering questions using explicit text evidence. The question asks about authorial intent rather than literal comprehension with text support."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302304_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.5 focuses on text features and search tools, but this question asks about inferring student ability from character actions. It's more about reading comprehension of character behavior than using text features to locate information.",
+          "clarity_precision": "The question is ambiguous. 'Shows that students can locate information' could mean students in general demonstrating the skill, or could be interpreted as evidence that the characters have this ability. The phrasing is unclear.",
+          "difficulty_assessment": "For Grade 3 students, the question may present issues primarily related to the abstraction required to link the correct distractor to an event that isn't specifically detailed in the passage. While children at this level can handle moderate complexity, the question requires an inference based on information not explicitly present in the excerpt provided. Children might struggle with the implication that making a note involves information about the growth date of Rome and may require a more concrete or straightforward expression in the question and choices to ensure better comprehension."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "length_check"
+        ],
+        "failed_reasons": {
+          "length_check": "Correct answer (7 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302307_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "clarity_precision",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is implausible because the passage clearly shows Charlie repeatedly fails to follow the classroom rule of raising his hand, receiving multiple reminders and a 'last warning.' Option D is also implausible as there's no evidence suggesting he would be the 'best student' - this is an extreme conclusion not supported by the text.",
+          "standard_alignment": "RI.3.6 requires students to distinguish their own point of view from that of the author or narrator. This question asks about the author's perspective on Charlie's excitement, but the passage doesn't explicitly present Charlie as wanting to give his own report - this appears to be an inference not clearly supported by the text, making the standard alignment questionable.",
+          "clarity_precision": "The question is ambiguous because the passage doesn't clearly establish that Charlie wants to give his own report. Charlie shows enthusiasm by participating and making observations, but the question assumes a scenario (wanting to give a report) that isn't explicitly established in the passage.",
+          "length_check": "Shortest distractor (11 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_302313_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "single_correct_answer",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.2 focuses on recounting stories and determining central message, lesson, or moral. This question asks students to infer authorial/cultural intent behind storytelling, which is more aligned with analyzing purpose and perspective (typically higher-grade standards) rather than identifying central themes within the text.",
+          "single_correct_answer": "Multiple answers could be defensible. While B focuses on single rulership, A is also strongly supported by the text's emphasis on the specific geographic location (seven hills, Tiber River) that matches actual Rome. The story does seem to explain geographic origins as much as political structure.",
+          "difficulty_assessment": "The question might be challenging for third graders due to the requirement for abstract thinking and interpretation of a symbolic narrative. Grade 3 students are typically developing abilities to handle straightforward information and basic inference but might struggle with analyzing the implications of a myth for understanding historical perspectives or political symbolism. Additionally, the concepts such as 'meant to have one powerful ruler,' which includes interpretation of intention and abstract symbolism in the story, could be too complex at this educational level."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The passage clearly shows anger leading to negative consequences (Romulus killing his brother), making choices about anger being helpful (C), necessary for leadership (D), or making people stronger (B) obviously incorrect based on the text.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302314_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A, C, and D are not plausible distractors. Option A mentions magic powers not referenced in the passage. Option C about twins bringing bad luck has no basis in the text. Option D about the she-wolf helping attack the kingdom is chronologically impossible since the king acts before the she-wolf appears. These are obviously wrong rather than believable alternatives.",
+          "standard_alignment": "RL.3.6 asks students to distinguish their point of view from that of the narrator or characters. This question asks about character motivation (why the king sees twins as a threat) rather than comparing different points of view, so it does not properly assess the assigned standard.",
+          "length_check": "Correct answer (14 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B is not plausible. The passage clearly states the twins 'grew up to be smart and strong,' making it obvious that the narrator does not see them as weak. This makes option B an obviously incorrect distractor rather than a believable one."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302314_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C is implausible - the passage clearly states the servant put the twins in the river and they were later found by a wolf, so he could not have protected them 'from the wolf.' Option D is also questionable since there's no indication the servant tricked the king or that the king believed the twins actually drowned.",
+          "standard_alignment": "RL.3.6 focuses on distinguishing point of view and identifying who is telling the story. This question assesses cause-and-effect relationships and character motivation, which aligns more closely with character analysis standards (RL.3.3) rather than point of view.",
+          "length_check": "Shortest distractor (13 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A 'Romulus himself' is not plausible since the passage clearly states that Romulus died at the end of the story, so he could not be telling it. Choice D 'A shepherd' is also implausible as there's no indication in the passage that the shepherd who raised the twins is narrating the story.",
+          "too_close": "The correct answer 'B' (A historian today) and the distractor 'C' (The Romans) are both sources that could be seen as telling the story in a historical context. Given that the passage specifically states that 'The Romans themselves have a special story,' it is reasonable for students to equate 'The Romans' with a valid historical source, making these options semantically similar.",
+          "difficulty_assessment": "The question seems to require a level of inference that might be challenging for a Grade 3 student. The passage does not directly state who is telling the story, thus requiring students to infer. Additionally, the vocabulary and reasoning demands such as understanding the difference between a historian today and the Romans, involve complex cognitive processing that could be too advanced for this grade level."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    }
+  ]
+}
