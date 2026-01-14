@@ -1,0 +1,50 @@
+{
+  "quiz_302727_sibling_1": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "grammatical_parallel",
+      "plausibility",
+      "homogeneity",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "grammatical_parallel": "The choices do not follow consistent grammatical structure. Choice A uses a complete comparative phrase 'squeezed together to fit in your hand,' Choice B uses 'packed tighter than,' Choice C uses 'moving faster than,' and Choice D uses 'formed by gravity over billions of years' - these represent different grammatical constructions.",
+      "plausibility": "Choice D is not plausible as it refers to spheres formed by gravity over billions of years, which describes what happened AFTER the Big Bang, not before it. This makes it obviously wrong in the context of the question about the universe's size before the Big Bang.",
+      "homogeneity": "The choices span different conceptual categories. Choice A is about size comparison, Choice B is about density/heat, Choice C is about movement/speed, and Choice D is about formation processes. They don't all address the same type of concept.",
+      "length_check": "Correct answer (12 words) too long"
+    },
+    "question_text": "According to the passage, what comparison does the author use to help readers understand how small the universe was before the Big Bang?",
+    "options": {
+      "A": "All the planets and stars squeezed together to fit in your hand",
+      "B": "All the matter packed tighter than the hottest star",
+      "C": "All the galaxies moving faster than distant objects",
+      "D": "All the spheres formed by gravity over billions of years"
+    }
+  },
+  "quiz_303004_sibling_3": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D are not plausible distractors. The poem clearly states she was born in Ohio (making B factual but not addressing the 'why' of combining topics), option C misses the family history element entirely, and option D is factually incorrect as the poem only mentions being born in Ohio, not living in different places.",
+      "standard_alignment": "RL.4.6 focuses on comparing points of view and distinguishing narrator/speaker perspective. This question asks about authorial purpose and structural choices, which better aligns with standards about craft and structure (RL.4.5) rather than point of view.",
+      "difficulty_assessment": "The question may be too difficult for a Grade 3 level due to complex vocabulary and concepts like emancipation, constellation, and historical contexts of slavery that may not be familiar to typical third graders. The reasoning required to connect personal history and larger historical narratives may also exceed the typical comprehension skills at this grade level.",
+      "length_check": "Correct answer (9 words) too long"
+    },
+    "question_text": "Why does the author choose to tell about her birth and her family's history in the same poem?",
+    "options": {
+      "A": "To show how her past and present are connected",
+      "B": "To explain why she was born in Ohio",
+      "C": "To describe what happened on her birthday",
+      "D": "To tell about different places she has lived"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "run_id": "20260114_131212",
+  "timestamp": "2026-01-14T13:12:37.239100",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 1,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 1,
+    "now_passing": 1,
+    "still_failing": 0,
+    "improvement_rate": "100.0%",
+    "questions_improved": 1,
+    "avg_score_before": 0.636,
+    "avg_score_after": 0.818,
+    "avg_score_improvement": 0.182
+  },
+  "by_check_improvement": {
+    "standard_alignment": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "length_check": {
+      "before_failures": 1,
+      "after_failures": 1,
+      "fixed": 0
+    },
+    "difficulty_assessment": {
+      "before_failures": 1,
+      "after_failures": 1,
+      "fixed": 0
+    },
+    "plausibility": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_303004_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A 'Sad about leaving it' is not plausible because the passage never indicates the speaker left Ohio or feels sad about leaving. The other distractors (confused, worried) could be reasonable given the complex social context described, but A is clearly unrelated to the passage content",
+          "standard_alignment": "RL.4.6 focuses on comparing point of view in different texts or contrasting first and third person narration. This question asks about the speaker's feelings toward a place, which is more aligned with inferring character emotions (RL.4.1/4.3) rather than analyzing point of view",
+          "difficulty_assessment": "The passage contains complex historical context and abstract concepts like emancipation, inequality, and systemic injustice, which may be challenging for a Grade 3 level. Additionally, vocabulary such as 'emancipated', 'enslaved', and 'constellation' could be too advanced, making it hard for young students to fully grasp the nuances of the speaker's pride without additional explanation.",
+          "length_check": "Correct answer (5 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The complexity of the passage and the reasoning needed to understand personal narrative versus factual recounting may be challenging for Grade 3 students. Additionally, the historical context and abstract concepts like 'personal connection to history' may not be readily accessible to this age group. The vocabulary and themes are likely too advanced for this grade level.",
+          "length_check": "Correct answer (7 words) too long"
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    }
+  ]
+}

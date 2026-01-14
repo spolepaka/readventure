@@ -1,0 +1,357 @@
+[
+  {
+    "question_id": "quiz_302387_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'He [verb] [object] in both places' - maintaining consistent parallel structure across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option C 'He made new laws in both places' is not plausible because the passage clearly states Caesar only made laws in Rome, not in Gaul. The text mentions he 'made the Senate pass new laws' only after returning to Rome.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all actions that Caesar could have performed in both locations (Gaul and Rome).",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity, each describing a general type of action Caesar might have taken in both places.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RI.3.7 requires using information from illustrations, maps, photographs, etc. to understand text. This question only asks students to compare textual information between two locations, not to use visual information to understand the text.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous, asking specifically what information the text provides about Caesar's actions in both Gaul and Rome.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only correct answer. The text clearly states Caesar 'won his battles in Gaul' and later defeated Pompey in battle (Rome/civil war context). No other option is supported by evidence from both locations.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are sufficiently distinct from the correct answer. The correct answer indicates that Caesar won battles in both places, which is specific and directly mentioned in the passage. The other choices, such as crossing rivers, making new laws, and fighting armies, while related to Caesar's actions, are not similar enough to cause confusion.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary is not overly complex, focusing on familiar terms such as 'won battles', 'crossed rivers', and 'fought armies'. The reasoning demands are straightforward, requiring students to recall specific information from the passage about Caesar's actions in Gaul and Rome. The question does not demand advanced critical thinking or inference skills, making it suitable for the intended grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:10:02.632043",
+    "run_id": "20260114_130852",
+    "article_id": "article_101048",
+    "content_hash": "f638c4ec211f",
+    "passage_title": "Julius Caesar: Crossing the Rubicon",
+    "question_preview": "What information does the text give about Caesar in both..."
+  },
+  {
+    "question_id": "quiz_302556_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All choices follow the same grammatical pattern: 'It is a [adjective] [location description] where [additional details]'. Each option maintains consistent structure and parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option A is obviously wrong because the passage explicitly states the dwarves live 'deep under the ground' and are 'grouchy and surly,' contradicting a 'bright, cheerful' place. Option D is also implausible as there's no mention of floating castles or sky locations for the dwarves.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are descriptions of physical locations/settings, maintaining conceptual consistency. Each option describes a type of place where the dwarves could potentially live.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail about location, characteristics, and activities. Each includes descriptive elements about the physical environment and what happens there.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.7 focuses on explaining how illustrations and text work together to convey meaning, mood, or tone. This question assesses students' ability to synthesize textual details to understand the setting's characteristics, which aligns with analyzing how text elements contribute to overall meaning.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question clearly asks students to identify what can be understood about the dwarves' setting based on the text. The wording is precise and unambiguous, with a clear focus on textual evidence.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly correct based on multiple text details: 'lived deep under the ground,' 'Nidavellir...realm of the dwarves,' 'master workers who could make amazing things.' No other option is supported by the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers or quotes are referenced in the question, so this criterion is satisfied by default. The question appropriately refers to 'the text' in general terms.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Each option describes a distinctly different setting: a bright place above ground, a magical forest, and a floating castle, which are in clear contrast to the dark, underground setting described in the correct choice.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary used in the question and passage, such as 'underground realm' and 'skilled workers,' is suitable for the grade level. The reasoning required is straightforward, centering on comprehension of a clearly stated fact within the passage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:10:03.139496",
+    "run_id": "20260114_130852",
+    "article_id": "article_101068",
+    "content_hash": "8b6fc066334b",
+    "passage_title": "Loki and the Dwarves",
+    "question_preview": "Based on the text, what can readers understand about the..."
+  },
+  {
+    "question_id": "quiz_302727_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "The choices do not follow consistent grammatical structure. Choice A uses a complete comparative phrase 'squeezed together to fit in your hand,' Choice B uses 'packed tighter than,' Choice C uses 'moving faster than,' and Choice D uses 'formed by gravity over billions of years' - these represent different grammatical constructions.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice D is not plausible as it refers to spheres formed by gravity over billions of years, which describes what happened AFTER the Big Bang, not before it. This makes it obviously wrong in the context of the question about the universe's size before the Big Bang.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices span different conceptual categories. Choice A is about size comparison, Choice B is about density/heat, Choice C is about movement/speed, and Choice D is about formation processes. They don't all address the same type of concept.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail - each contains descriptive phrases of roughly equivalent length and specificity about different aspects mentioned in the passage.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RI.3.7 involves using information from illustrations and text features to understand content. This question asks students to identify a specific comparison (text feature) the author used to help readers understand a concept, which directly aligns with the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks for the comparison the author uses to help readers understand the universe's size before the Big Bang, and this comparison is explicitly stated in the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is the only correct answer. The passage explicitly states 'Imagine if all the planets and all the stars were squeezed together to fit in your hand. That is how tight and tiny the ball was!' This is clearly the comparison used by the author.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or line numbers) are made in the question, so this criterion is satisfied by default. The question accurately reflects content from the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Each option presents a distinct concept, making it unlikely for students to confuse them. The correct answer clearly uses a visual metaphor ('squeezed together to fit in your hand') that is not mirrored or closely paralleled in the other options.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3 as it requires basic comprehension and the ability to connect a metaphorical comparison from the text. The vocabulary used is suitable for the grade level, with terms like 'planets,' 'stars,' and 'hand' being accessible to a third grader. The reasoning needed to identify the correct answer is straightforward given the direct quote from the passage.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (12 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:10:04.087837",
+    "run_id": "20260114_130852",
+    "article_id": "article_101089",
+    "content_hash": "0bc250eaf269",
+    "passage_title": "The Big Bang",
+    "question_preview": "According to the passage, what comparison does the author..."
+  },
+  {
+    "question_id": "quiz_302928_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the identical grammatical structure: 'He thinks they are [adjective] and [adjective].' This creates perfect parallel structure across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible given the context. Option B could seem reasonable given the mention of deteriorating relations, Option C could appeal to students who misinterpret colonial attitudes, and Option D could attract those who focus on cultural differences rather than William's actual respectful view.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all character judgments or opinions about the Powhatan people, expressed through pairs of descriptive adjectives.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at the same level of specificity, each providing two general descriptive adjectives that characterize William's view of the Powhatan people without getting into detailed explanations.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.6 (distinguishing point of view) by asking students to identify William's specific perspective on the Powhatan people, which is clearly expressed through his dialogue and differs from the general colonial attitude described in the passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It directly asks about William's view of the Powhatan people, and the passage provides clear evidence of his perspective through his quoted dialogue praising their skills and knowledge.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Answer choice A is clearly correct based on William's dialogue: 'They get everything they need from the forest... The men are expert hunters... they know which berries and nuts are safe to eat...' This shows he views them as smart and helpful. The other options contradict his respectful, admiring tone.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, line numbers, or direct quotes) are made in the question stem, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Each choice clearly conveys a distinct attitude toward the Powhatan people. Choice A reflects a positive view as being smart and helpful, while the other options (B, C, D) represent negative or neutral perceptions. Thus, there's a clear distinction between the correct choice and the distractors.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary used in both the passage and the question is within the expected understanding level of third graders. Additionally, the reasoning required involves basic comprehension of William's perspective as narrated in the passage, which aligns with typical third-grade reading comprehension tasks. The task is neither too easy nor too hard, making the difficulty level suitable for the intended grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:10:01.979890",
+    "run_id": "20260114_130852",
+    "article_id": "article_101113",
+    "content_hash": "0d527a577154",
+    "passage_title": "Jamestown, Part II: Hunting the Powhatan Way",
+    "question_preview": "What does William's view of the Powhatan people show abou..."
+  },
+  {
+    "question_id": "quiz_303004_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'To [verb phrase]' creating consistent parallel infinitive constructions.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options B, C, and D are not plausible distractors. The poem clearly states she was born in Ohio (making B factual but not addressing the 'why' of combining topics), option C misses the family history element entirely, and option D is factually incorrect as the poem only mentions being born in Ohio, not living in different places.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address authorial purpose/intent - they all attempt to explain why the author made specific literary choices about content and structure.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each provides a concise explanation for the author's structural choice without excessive detail or oversimplification.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.4.6 focuses on comparing points of view and distinguishing narrator/speaker perspective. This question asks about authorial purpose and structural choices, which better aligns with standards about craft and structure (RL.4.5) rather than point of view.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It directly asks about the author's purpose in combining two topics (birth and family history) within the same poem.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only defensible answer. The poem explicitly connects past and present through phrases like 'stories of South Carolina already run like rivers through my veins' and contextualizes her birth within the broader historical struggle.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific line numbers or quotes are referenced in the question, so there are no passage references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from the correct answer. Option A focuses on the connection between past and present, whereas the other options (B, C, and D) focus on reasons related to location, event description, and places lived, which are not directly linked to the thematic aspect of connection presented in option A.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be too difficult for a Grade 3 level due to complex vocabulary and concepts like emancipation, constellation, and historical contexts of slavery that may not be familiar to typical third graders. The reasoning required to connect personal history and larger historical narratives may also exceed the typical comprehension skills at this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (9 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:10:04.063736",
+    "run_id": "20260114_130852",
+    "article_id": "article_102001",
+    "content_hash": "5bf9f7b2450d",
+    "passage_title": "february 12, 1963",
+    "question_preview": "Why does the author choose to tell about her birth and he..."
+  }
+]

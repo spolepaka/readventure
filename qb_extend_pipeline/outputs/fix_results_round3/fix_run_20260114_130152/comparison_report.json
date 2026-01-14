@@ -1,0 +1,469 @@
+{
+  "run_id": "20260114_130152",
+  "timestamp": "2026-01-14T13:04:35.760004",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 13,
+    "distractor_fixes_attempted": 3,
+    "full_regenerations_attempted": 10,
+    "now_passing": 8,
+    "still_failing": 5,
+    "improvement_rate": "61.5%",
+    "questions_improved": 8,
+    "avg_score_before": 0.699,
+    "avg_score_after": 0.839,
+    "avg_score_improvement": 0.14
+  },
+  "by_check_improvement": {
+    "homogeneity": {
+      "before_failures": 4,
+      "after_failures": 1,
+      "fixed": 4
+    },
+    "plausibility": {
+      "before_failures": 9,
+      "after_failures": 5,
+      "fixed": 6
+    },
+    "difficulty_assessment": {
+      "before_failures": 11,
+      "after_failures": 8,
+      "fixed": 4
+    },
+    "standard_alignment": {
+      "before_failures": 7,
+      "after_failures": 3,
+      "fixed": 5
+    },
+    "too_close": {
+      "before_failures": 4,
+      "after_failures": 1,
+      "fixed": 4
+    },
+    "length_check": {
+      "before_failures": 7,
+      "after_failures": 2,
+      "fixed": 6
+    },
+    "grammatical_parallel": {
+      "before_failures": 0,
+      "after_failures": 1,
+      "fixed": 0
+    },
+    "specificity_balance": {
+      "before_failures": 1,
+      "after_failures": 1,
+      "fixed": 1
+    },
+    "clarity_precision": {
+      "before_failures": 0,
+      "after_failures": 1,
+      "fixed": 0
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302378_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D (anger, fear, sadness) are not plausible distractors. The passage context about the three-word report shows Caesar's confidence and efficiency, not negative emotions. These distractors are obviously wrong and unrelated to the passage content.",
+          "homogeneity": "While all choices mention showing aspects of Caesar, they span different conceptual categories. Option A refers to a writing/communication style, while B, C, and D refer to emotional states. They are not the same type of answer.",
+          "difficulty_assessment": "The question is likely too advanced for a Grade 3 level due to the reasoning demands. Understanding the concept of 'style' in writing requires a level of abstract thinking that might not be developed in 3rd graders. Additionally, the vocabulary and context of the passage, including specific historical references and terms like 'ransom' and 'talents', could also pose challenges. Overall, the question may be better suited for older students with more advanced critical thinking and reading comprehension skills."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "For a Grade 3 level, the vocabulary and comprehension demands are quite high. Terms like 'ransom', 'barbarian', and even the historical context may be challenging for young students. Additionally, the abstract reasoning required to connect 'three-word report' and 'style' without explicit information from the passage adds to the difficulty. This makes it challenging for a typical third-grader."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302387_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question assesses sequencing and recall of factual information rather than using textual information to understand story elements. This aligns better with standards about sequencing or literal comprehension.",
+          "too_close": "The distractors are semantically similar because they all involve the sequence of Caesar being a dictator for varying lengths of time, including one year, ten years, and for life. The subtle changes in order can be confusing without a clear guide in the text.",
+          "difficulty_assessment": "The question requires close reading and comprehension of historical sequences, which may be complicated for a Grade 3 student. The vocabulary and the concept of different timeframes of dictatorship are likely too advanced for this grade level."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks students to compare and analyze motivations, which is more aligned with inference and analysis standards (like RI.3.8 or higher-level thinking skills) rather than demonstrating understanding through text and visual information.",
+          "difficulty_assessment": "The question may be too difficult for a Grade 3 level due to a few factors: the complexity of the historical context, the abstract nature of comparing motivations (i.e., understanding different ideas about helping Rome), and vocabulary terms such as 'conspirators,' 'senate,' and 'dictator.' This might require cognitive skills that exceed typical Grade 3 capabilities, making it more appropriate for higher grade levels.",
+          "length_check": "Correct answer (15 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302488_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option B is obviously wrong and not plausible. The passage clearly states that both sound and light move in waves, making the claim that 'light waves cannot travel through air' obviously false and easily eliminated.",
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations and text features to understand a text. This question asks about understanding a concept (speed comparison) rather than how the lightning/thunder example helps explain or illustrate the concept, which would be more aligned with the standard.",
+          "difficulty_assessment": "The concept of sound waves traveling slower than light waves requires the third-grade students to integrate information about speed comparisons between light and sound. The passage doesn't explicitly use the example of lighting and thunder, which may make it difficult to directly connect this information without external knowledge or additional context. Additionally, the passage cut-off seems to affect the comprehensibility of the question, since no mention of lightning and thunder explicitly exists within the text."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302531_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A ('It proved his teaching methods worked') is not plausible as a distractor. The accidental discovery was about transmitting sound through wires, not about Bell's teaching methods. This choice is obviously unrelated to the context of the discovery.",
+          "homogeneity": "The choices span different conceptual categories. Choice B addresses the technical problem being solved, Choice C is about personnel/hiring, Choice D is about facilities, and Choice A is about teaching methodology. They don't all belong to the same type of outcome or connection.",
+          "difficulty_assessment": "The question expects an understanding of the connection between paragraphs and an inference about how one development (an accidental discovery) connects to Bell's ongoing experimentation efforts, as expressed in an earlier part of the text. This level of analysis and inference might be challenging for a Grade 3 student, who may struggle with the reasoning demands even if the vocabulary itself is not overly complex. It requires making connections and understanding implications, which could make it too difficult for this grade level.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "This question assesses sequence/chronology (what happened after a specific event), which aligns more with RI.3.3 (describing relationships between events) rather than RI.3.8, which focuses on describing logical connections between sentences and paragraphs in a text.",
+          "difficulty_assessment": "The question may be too difficult for Grade 3 students. The passage lacks specific information about Bell writing after Watson's message. Without direct reference, students must infer from an incomplete passage, which elevates complexity beyond typical Grade 3 capabilities. Additionally, some vocabulary and reasoning demands may need simplification to better suit this grade level."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302556_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The passage makes no mention of temperature differences (coldest to warmest), size comparisons between locations (largest to smallest), or age of locations (oldest to newest). These distractors are obviously wrong as they reference attributes not discussed in the text.",
+          "standard_alignment": "RL.3.7 requires students to explain how specific aspects of text's illustrations contribute to meaning. This question asks about text organization/structure, which aligns more with informational text standards (RI.3.5) about text structure rather than how illustrations support meaning in literature.",
+          "difficulty_assessment": "The question requires an understanding of abstract concepts like relative location based on height, which might be challenging for Grade 3 students. The vocabulary (e.g., anvils, forge, craftsmen) and the reasoning required to link the narrative's sequence of locations to elevation might be too complex for this grade level. Therefore, it may not be appropriate for Grade 3 students."
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.7 focuses on using information from illustrations and words in text to demonstrate understanding of characters, setting, or plot. This question asks about sequencing details, which is more aligned with informational text standards or RL.3.3 (describing how characters' actions contribute to events). It doesn't assess understanding of characters, setting, or plot through text and illustrations.",
+          "too_close": "All distractors include the same elements: golden hair to Sif, silver spear to Odin, and magical boat to Thor, but in different orders. Without specific details from the passage regarding the order of gift-giving, it can be confusing for students, as they need to rely on implied understanding rather than explicit textual evidence.",
+          "difficulty_assessment": "The passage does not provide explicit information about the order in which Loki gave the gifts to the gods, making the question reliant on inference rather than recollection of details. The grade level (3rd grade) may not possess the abstract reasoning skills needed to infer the sequence without textual support, and the vocabulary level regarding norse mythology and abstract reasoning might be challenging for the age group."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302581_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice A is not plausible because the story doesn't actually describe different courses of food being served in order - it simply lists what Thor ate. Choice C is obviously wrong as the story doesn't organize content by character importance. Choice D is implausible since the story doesn't compare Thrym's feelings to other guests' feelings.",
+          "standard_alignment": "RL.3.7 focuses on explaining how illustrations contribute to story elements (words/images), but this question asks about text organization structure, which aligns more with informational text standards about text structure rather than literature standards about illustrations.",
+          "difficulty_assessment": "The question requires a higher level of inference and understanding of narrative structure than is typically expected at the Grade 3 level. It involves identifying implicit narrative techniques, such as problem-solving, rather than explicit or concrete details directly lifted from the text. The complexity of the reasoning and the expectation of understanding the metaphorical disguise of Thor and Loki may make it too challenging for most Grade 3 students."
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302631_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible as it makes a clearly false claim that no other planets have ice. Third-grade students would likely know that Earth has ice, making this distractor obviously wrong rather than believable.",
+          "too_close": "The correct answer (A) states that the discovery of ice might mean there is water on Mars. Distractor (B) implies disappointment because of an expectation of liquid water. Both (A) and (B) discuss water presence, which may confuse students who may not yet be adept at distinguishing between states of matter. Also, without explicit information from the passage about scientists' feelings towards finding ice versus liquid water, (B) could inadvertently seem valid.",
+          "difficulty_assessment": "The question references information not directly stated in the passage. It requires prior knowledge or inference beyond typical Grade 3 capabilities, regarding the significance of finding ice on Mars. The excerpt does not discuss the discovery of ice or its importance, nor does it explicitly cover comparison with other planets, making the reasoning demand too high for the specified grade level."
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D ('it meant Mars was closer to the sun than expected') is not plausible as a distractor. The discovery of ice would not logically lead to conclusions about Mars' distance from the sun, making this choice obviously wrong rather than a believable distractor.",
+          "difficulty_assessment": "The question asks about the discovery of ice on Mars, which is not mentioned in the passage. This makes the question difficult for Grade 3 students because it requires knowledge or inference beyond what is provided, which is not appropriate for this grade level. Furthermore, the vocabulary and concepts related to planetary orbits and the historical naming of planets are relatively advanced for a Grade 3 audience."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302727_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 requires using information from illustrations, maps, photographs, etc. to demonstrate understanding of text. This question only asks about text comprehension without any visual elements, so it doesn't assess the assigned standard.",
+          "difficulty_assessment": "The question may be too challenging for Grade 3 students due to its reliance on inference not directly stated in the passage. The passage describes the Big Bang and the expansion of the universe, but it does not directly address what happened when matter cooled and gravity's role in forming stars and galaxies. Additionally, the concept of the Big Bang Theory and scientific principles might be complex for this grade level.",
+          "length_check": "Correct answer (8 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'It says...', Choice B uses 'It shows...', Choice C uses 'It compares...', and Choice D uses 'It mentions...'. While they all start with 'It', they have different verb forms and complete different types of statements - some describe actions, others describe content.",
+          "plausibility": "Choice B 'It shows a picture of a tiny ball' is obviously wrong because this is a text passage with no pictures mentioned or present. Choice D 'It mentions 14 billion years ago' is also not plausible as an answer to how the passage helps readers picture the size, since a time reference doesn't help visualize physical dimensions.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about analogies/comparisons, Choice B is about visual aids, Choice C is about temperature comparisons, and Choice D is about temporal information. They don't all address the same type of literary device or method."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    },
+    {
+      "question_id": "quiz_302738_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "standard_alignment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'By naming all the brothers' is not plausible as it doesn't demonstrate teamwork. Simply naming characters doesn't show how they work together. Options B and C are also weak distractors as they describe elements present in the passage but don't address teamwork",
+          "homogeneity": "The choices span different conceptual categories. Option A addresses role distribution (teamwork concept), B focuses on equipment description, C addresses setting description, and D addresses character identification. They're not all ways of showing teamwork",
+          "standard_alignment": "RL.3.5 focuses on referring to parts of stories/dramas/poems, using terms like chapter/scene/stanza, and describing how parts build on earlier sections. This question asks about author's craft in showing teamwork, which better aligns with author's purpose or craft standards, not RL.3.5",
+          "length_check": "Correct answer (7 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D 'By naming each family member's favorite task' is not plausible as the passage doesn't discuss anyone's favorite tasks, making it obviously wrong. Option B is also weak as the story doesn't structure around detailed weapon descriptions."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.273
+    },
+    {
+      "question_id": "quiz_302831_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "specificity_balance",
+          "too_close",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "specificity_balance": "The choices vary significantly in specificity. Choice A is broad and encompasses multiple effects (power AND wealth), while choices B, C, and D focus on more specific aspects of land division. This creates an imbalance in the level of detail.",
+          "too_close": "The distractors B) 'Land becomes too small to be useful', C) 'Families cannot keep their big farms together', and D) 'Land gets split into too many tiny pieces' are semantically similar to A) 'Families lose their power and wealth'. All options are closely related and stem from the same idea of losing land or wealth through division. This can make it confusing, as they all touch on consequences of splitting land.",
+          "length_check": "Shortest distractor (7 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "difficulty_assessment": "The question's vocabulary and concepts, such as 'primogeniture' and 'inheritance laws,' may be challenging for a Grade 3 student. Understanding the historical context and linking it to the idea that such laws could lead to exploration might be too abstract for this age group."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302928_sibling_3",
+      "fix_strategy": "distractor_fix",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible based on the passage. The text clearly states that Powhatan people 'were no longer good friends with the colonists' and 'did not visit Jamestown very much anymore,' making options about colonists wanting to learn from them or inviting them obviously incorrect.",
+          "difficulty_assessment": "The question requires higher-level reasoning skills to discern differences in point of view between Tom and the colonists based on nuanced text interpretations, which might be challenging for a 3rd-grade level. Additionally, the vocabulary and complexity of the passage could be too demanding for the grade level, including abstract ideas about human interactions and land use issues.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible because the passage does not discuss the colonists' beliefs about Powhatan fishing abilities versus hunting abilities. In fact, William specifically mentions that the Powhatan 'can catch more fish in one day than we catch in a whole week,' making the claim that colonists think they are better at fishing contradictory to the text.",
+          "specificity_balance": "The choices vary significantly in specificity. Option A is broad and conceptual ('obstacles to land use'), while options B and D focus on very specific skills (hunting vs. farming, hunting vs. fishing). This creates an imbalance in the level of detail across choices.",
+          "difficulty_assessment": "The question might be challenging for Grade 3 due to its demands on comprehension and inference. It requires the reader to interpret the character perspectives based on the provided passage, which may be complicated for this grade level. The vocabulary includes terms like 'obstacles,' 'colonists,' and 'skills,' which might require additional contextual understanding. Additionally, integrating information about perspectives without explicit statements in the text may pose reasoning challenges for Grade 3 students.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.091
+    },
+    {
+      "question_id": "quiz_303065_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.5454545454545454,
+        "failed_checks": [
+          "plausibility",
+          "homogeneity",
+          "too_close",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Choice D 'Getting water and air makes pollution in cities' is obviously wrong and implausible. Water and air are not 'gotten' in the same way as other resources, and the statement doesn't make logical sense in the context of electricity generation methods.",
+          "homogeneity": "The choices do not belong to the same conceptual category. Choices A and B relate to electricity generation methods (the focus of the question), while choices C and D relate to different environmental concerns (habitat loss and pollution) that are not directly connected to electricity generation.",
+          "too_close": "Choice C ('Getting trees and metal takes away animal homes') and choice B ('Getting oil and coal can cause accidents like oil spills') both imply a negative environmental impact associated with extracting natural resources. While B specifically addresses oil spills (a key point in the passage), C also aligns with the idea of environmental harm, which could confuse a Grade 3 student lacking detailed knowledge of energy production and its impacts.",
+          "difficulty_assessment": "The question requires understanding the environmental impacts of different natural resources, which may be abstract for Grade 3 students. The vocabulary, such as 'accidents', 'natural resource', and the concepts of energy production and environmental implications, may be challenging without explicit context provided in the passage. Moreover, the connection between cleaner ways to make electricity and protecting the environment is not directly covered by the passage, increasing the reasoning demands for this age group.",
+          "length_check": "Correct answer (10 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.455
+    },
+    {
+      "question_id": "quiz_303004_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.4.6 focuses on comparing and contrasting point of view from which different stories are narrated, including the difference between first- and third-person narrations. This question assesses the speaker's attitude/feelings rather than point of view or narrative perspective, making it misaligned with the standard.",
+          "difficulty_assessment": "The passage contains complex language and historical context that may be challenging for a Grade 3 student to fully understand. The concepts of emancipation, fighting for civil rights, and the emotional gratitude conveyed may require reasoning skills beyond the typical Grade 3 level. Additionally, the vocabulary and context might be too advanced for this grade level.",
+          "length_check": "Correct answer (14 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and C are not plausible distractors. The poem clearly does not read like a news report (no objective reporting style, dates, or factual tone) and has no fairy tale elements (no 'once upon a time,' magical elements, or fairy tale structure). These are obviously wrong to any careful reader.",
+          "clarity_precision": "The question asks how the speaker tells the story 'differently from how someone else might tell it,' but provides no basis for comparison. Without knowing what 'someone else' refers to (historian, news reporter, etc.), students must guess what comparison point the question intends.",
+          "difficulty_assessment": "The language and concepts in the passage, such as historical references to slavery and emancipation, may be too complex for a Grade 3 student. Additionally, understanding the nuance of storytelling perspectives might be challenging at this level. The question demands both comprehension of abstract concepts and subtle distinctions in narrative style, which might not be suitable for this grade level."
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": 0.0
+    }
+  ]
+}

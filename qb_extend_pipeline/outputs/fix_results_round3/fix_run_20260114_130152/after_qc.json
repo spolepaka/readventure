@@ -1,0 +1,925 @@
+[
+  {
+    "question_id": "quiz_302378_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the exact same grammatical structure: 'To show Caesar's [noun]' - perfect parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations. Caesar's brief report could reasonably demonstrate his skill (B), speed in battle (C), or strength as a leader (D), making them believable wrong answers.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all character traits or qualities that Caesar's three-word report could potentially demonstrate.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at the same level of specificity - each presents a single, general character trait (style, skill, speed, strength) without additional detail or qualification.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RI.3.6 asks students to distinguish their point of view from the author's point of view. This question requires students to understand the author's purpose/perspective in including the three-word report example, which aligns with analyzing author's point of view.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically about the author's purpose for including the three-word report example, with clear reference to the relevant passage content.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly correct based on the passage text: 'Most generals wrote long reports... But that was not Caesar's style.' The author explicitly states this example shows Caesar's style, making A the only defensible answer.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question references Caesar's three-word report, which accurately appears in the passage as 'Veni, vidi, vici' with the provided translation. No specific paragraph numbers or quotes are cited that could be inaccurate.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors focus on different aspects of what a three-word report might convey. 'Style' is distinct from 'skill', 'speed', and 'strength'. While they all pertain to characteristics of a person, they highlight different attributes. 'Style' is about the manner of expression, 'skill' is about proficiency, 'speed' is about quickness, and 'strength' is about power, making the choices sufficiently distinct.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "For a Grade 3 level, the vocabulary and comprehension demands are quite high. Terms like 'ransom', 'barbarian', and even the historical context may be challenging for young students. Additionally, the abstract reasoning required to connect 'three-word report' and 'style' without explicit information from the passage adds to the difficulty. This makes it challenging for a typical third-grader.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:16.279011",
+    "run_id": "20260114_130152",
+    "article_id": "article_101047",
+    "content_hash": "848b8abe950e",
+    "passage_title": "Julius Caesar: Great Fighter, Great Writer",
+    "question_preview": "Why does the author write about Caesar's three-word report?"
+  },
+  {
+    "question_id": "quiz_302387_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'They both [verb phrase] but/and [additional clause about their approach/belief]'. Each choice maintains consistent structure with 'They both' opening and similar sentence construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible based on the passage content. Option B could seem correct since Caesar became dictator for life. Option C relates to Roman government structure mentioned in the text. Option D connects to the passage's discussion of traditional one-year dictatorships. None are obviously wrong without careful analysis.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - comparisons of Caesar's and the conspirators' motivations/goals regarding Roman governance. Each option presents a different perspective on what both parties wanted for Rome.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices maintain similar levels of detail and specificity. Each provides a general statement about both parties' motivations without being overly detailed or vague compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks students to compare and analyze motivations, which is more aligned with inference and analysis standards (like RI.3.8 or higher-level thinking skills) rather than demonstrating understanding through text and visual information.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks for a specific comparison between Caesar and the conspirators. The phrasing 'What does the text show us about both Caesar and the conspirators?' is unambiguous and directly asks students to find evidence in the passage.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the only correct answer. The passage shows Caesar wanted to help Rome through reforms and changes, while conspirators wanted to help Rome by preserving the republic. The other options are contradicted by the text - conspirators didn't want to be kings (B), didn't want Senate to make all decisions (C), and Caesar clearly didn't believe in one-year dictatorships (D).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question makes no specific passage references (no paragraph numbers, line citations, or direct quotes), so there are no references to evaluate for accuracy.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically too similar to the correct answer. Each choice presents a distinct and different perspective on the motives and beliefs of Caesar and the conspirators. Thus, the distinction between the correct answer and the distractors is clear.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be too difficult for a Grade 3 level due to a few factors: the complexity of the historical context, the abstract nature of comparing motivations (i.e., understanding different ideas about helping Rome), and vocabulary terms such as 'conspirators,' 'senate,' and 'dictator.' This might require cognitive skills that exceed typical Grade 3 capabilities, making it more appropriate for higher grade levels.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (15 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:22.264034",
+    "run_id": "20260114_130152",
+    "article_id": "article_101048",
+    "content_hash": "bbf7c57b083a",
+    "passage_title": "Julius Caesar: Crossing the Rubicon",
+    "question_preview": "What does the text show us about both Caesar and the cons..."
+  },
+  {
+    "question_id": "quiz_302488_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'It shows that sound [verb phrase]'. Each option maintains consistent parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible misinterpretations. Option B could seem correct since the example involves humming. Option C relates to touching/feeling vibrations. Option D connects to the concept of sound traveling through different media, which is discussed in the passage.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all explanations of what the humming/throat example demonstrates about sound. Each option explains a different potential lesson from the same example.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each provides a concise explanation of what the example shows, without significant differences in complexity or elaboration.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RI.3.7 requires students to use information from illustrations and text features to understand a text. This question asks students to analyze how a specific example (the humming experiment) helps explain the main concept, which directly aligns with using text features to aid comprehension.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks about the purpose of the humming example in explaining sound, with clear wording that leaves no room for misinterpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct as the passage explicitly states 'Sound happens when something moves back and forth very fast' and the humming example demonstrates vibration. The other options are not supported by what the example actually demonstrates in the passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "The question accurately references the specific example from the passage about humming and putting your hand on your throat, which appears in the second paragraph exactly as described.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer and are clearly distinct. The correct answer (A) addresses the concept of vibration, whereas the distractors introduce unrelated concepts such as sound being exclusively produced by people (B), sound being louder upon touch (C), or sound moving faster through different media (D).",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3 students. The vocabulary used is simple and the concept of vibration as introduced by the example of humming is straightforward. Additionally, the reasoning required to eliminate the distractors and identify the correct answer is aligned with the expected cognitive level for this grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:17.774514",
+    "run_id": "20260114_130152",
+    "article_id": "article_101060",
+    "content_hash": "9651423110ec",
+    "passage_title": "What Is Sound?",
+    "question_preview": "How does the passage use the example of humming and putti..."
+  },
+  {
+    "question_id": "quiz_302531_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: [Subject] + [past tense verb] + [object/complement]. Each choice is a simple past tense statement about an action taken by a specific person.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All incorrect choices are plausible distractors that relate to events mentioned in the passage. Watson coming to see Bell, Bell hiring Watson, and Bell teaching students are all real events from the text, making them believable but incorrect answers to this specific sequence question.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all actions/events that occurred in the narrative about Bell's invention process. Each choice represents a specific action taken by Bell or Watson.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each choice describes a single, concrete action without excessive detail or vague generalities.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "This question assesses sequence/chronology (what happened after a specific event), which aligns more with RI.3.3 (describing relationships between events) rather than RI.3.8, which focuses on describing logical connections between sentences and paragraphs in a text.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific event that occurred after a clearly identified moment (Bell hearing Watson with electricity off), and the timeframe and context are well-established.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is the only defensibly correct answer. The passage clearly states that after the accident, Bell wrote 'I have (by accident) made a discovery of the very greatest importance,' making this the immediate next action described in the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers or line references are made in the question, so this criterion is satisfied by default. The question accurately references the general event described in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Each option represents a distinct action: writing (A), coming to see someone (B), hiring (C), and starting to teach (D). The clear differentiation ensures that the correct choice is not easily confused with the incorrect options.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question may be too difficult for Grade 3 students. The passage lacks specific information about Bell writing after Watson's message. Without direct reference, students must infer from an incomplete passage, which elevates complexity beyond typical Grade 3 capabilities. Additionally, some vocabulary and reasoning demands may need simplification to better suit this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:17.511175",
+    "run_id": "20260114_130152",
+    "article_id": "article_101065",
+    "content_hash": "c1171bbb0876",
+    "passage_title": "Alexander Graham Bell, Part II",
+    "question_preview": "What happened after Bell heard Watson send a message with..."
+  },
+  {
+    "question_id": "quiz_302556_sibling_4",
+    "question_type": "MCQ",
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the exact same grammatical structure: 'First the [item] to [recipient], then the [item] to [recipient], then the [item] to [recipient]'. The parallel structure is perfectly consistent across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible because they use the same three gifts and recipients mentioned in the passage, just in different orders. Without carefully reading the final paragraph, any of these sequences could seem reasonable to a student.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all sequences describing the order in which Loki gave the three gifts to the three recipients. Each choice presents a different permutation of the same basic information.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide the same level of detail - each specifies the three gifts (golden hair, silver spear, magical boat) and their recipients (Sif, Odin, Thor) in sequential order. The specificity is perfectly balanced across all options.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.3.7 focuses on using information from illustrations and words in text to demonstrate understanding of characters, setting, or plot. This question asks about sequencing details, which is more aligned with informational text standards or RL.3.3 (describing how characters' actions contribute to events). It doesn't assess understanding of characters, setting, or plot through text and illustrations.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks specifically for the order in which Loki gave the gifts, and the answer choices present distinct sequences that allow for only one interpretation of what is being asked.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "There is exactly one correct answer based on the passage. The final paragraph clearly states: 'Loki put the golden hair on Sif's head... Next, Loki gave Odin the silver spear. Then Loki gave Thor the magical boat.' This definitively establishes the sequence as option A.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or direct quotes) are made in the question stem, so this criterion is satisfied by default. The question accurately refers to events that occur in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 0,
+        "response": "All distractors include the same elements: golden hair to Sif, silver spear to Odin, and magical boat to Thor, but in different orders. Without specific details from the passage regarding the order of gift-giving, it can be confusing for students, as they need to rely on implied understanding rather than explicit textual evidence.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The passage does not provide explicit information about the order in which Loki gave the gifts to the gods, making the question reliant on inference rather than recollection of details. The grade level (3rd grade) may not possess the abstract reasoning skills needed to infer the sequence without textual support, and the vocabulary level regarding norse mythology and abstract reasoning might be challenging for the age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:20.399159",
+    "run_id": "20260114_130152",
+    "article_id": "article_101068",
+    "content_hash": "a76b8ac48876",
+    "passage_title": "Loki and the Dwarves",
+    "question_preview": "Which detail from the passage shows the order in which Lo..."
+  },
+  {
+    "question_id": "quiz_302581_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All four answer choices follow the same grammatical structure: 'Each section shows a different [noun phrase] [relative clause/prepositional phrase]'. The parallel construction is consistent across all options.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations of how story sections could be organized. Students might reasonably think sections show different rooms (A), food types (C), or guest arrivals (D) without careful analysis of the actual text structure.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - different ways that story sections could be organized to show progression or organization of events. They all relate to structural/organizational elements of the narrative.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity, each describing a different organizational principle (location, time, food, guests) with comparable detail and scope.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.3.7 focuses on explaining how specific aspects of illustrations contribute to meaning in stories. This question asks students to analyze how text sections (structural elements) contribute to showing the sequence of events, which aligns with understanding how text features contribute to meaning.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about how the author uses story sections to show what happens at different parts of the wedding feast. The intent is unambiguous and directly relates to text structure.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice B is clearly correct as the sections show temporal progression: arrival/greeting, eating, attempted kiss/eye comment, and finally the hammer retrieval/battle. The other choices are not supported by the text structure - sections don't focus on different rooms, foods, or guest arrivals.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default. The question refers generally to 'story sections' which accurately describes how the passage is divided.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Options A, C, and D focus on different aspects (locations, types of food, and guest arrivals), whereas the correct answer, B, focuses on the timing of events during the feast. Each option is distinct in focus, making the correct choice clear.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3 level. The vocabulary is simple enough, and the question requires students to understand the sequence of events, a skill suitable for this age group. The reasoning demand is moderate, as students are required to understand how story sections depict different times, which aligns with Grade 3 capabilities.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:20.178610",
+    "run_id": "20260114_130152",
+    "article_id": "article_101071",
+    "content_hash": "44fbe261c835",
+    "passage_title": "The Wedding Feast",
+    "question_preview": "How does the author use the story sections to show the re..."
+  },
+  {
+    "question_id": "quiz_302631_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: 'It was important because [clause explaining the significance].' Each option maintains consistent structure and parallel construction.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D ('it meant Mars was closer to the sun than expected') is not plausible as a distractor. The discovery of ice would not logically lead to conclusions about Mars' distance from the sun, making this choice obviously wrong rather than a believable distractor.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all address why the discovery of ice on Mars was considered important, focusing on different potential implications of this discovery.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All answer choices are at similar levels of detail and specificity. Each provides a single, concrete reason why the ice discovery was significant, with comparable length and depth of explanation.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RI.3.1 (asking and answering questions to demonstrate understanding, referring explicitly to text as basis for answers). Students must draw a conclusion based on evidence from the passage about the significance of finding ice on Mars.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It asks for a specific conclusion based on passage evidence about the ice discovery, with clear direction for what type of response is expected.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only defensibly correct answer. The passage explicitly states 'Ice is frozen water, and if there is water on Mars,' directly supporting the conclusion that ice discovery was important because it suggests water might exist on Mars.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question stem, so this criterion is automatically met.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "None of the distractors are semantically similar to the correct answer. Each choice presents a distinctly different reason for the importance of ice on Mars. The correct answer focuses on the presence of water, while the other options mention weather, habitability, and proximity to the sun, all of which are different concepts.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question asks about the discovery of ice on Mars, which is not mentioned in the passage. This makes the question difficult for Grade 3 students because it requires knowledge or inference beyond what is provided, which is not appropriate for this grade level. Furthermore, the vocabulary and concepts related to planetary orbits and the historical naming of planets are relatively advanced for a Grade 3 audience.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:18.863642",
+    "run_id": "20260114_130152",
+    "article_id": "article_101077",
+    "content_hash": "ed8d387cf259",
+    "passage_title": "The Planets Closest to the Sun: Mercury, Venus,...",
+    "question_preview": "Based on evidence from the passage, what can readers conc..."
+  },
+  {
+    "question_id": "quiz_302727_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 0,
+        "response": "The answer choices do not follow consistent grammatical structure. Choice A uses 'It says...', Choice B uses 'It shows...', Choice C uses 'It compares...', and Choice D uses 'It mentions...'. While they all start with 'It', they have different verb forms and complete different types of statements - some describe actions, others describe content.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Choice B 'It shows a picture of a tiny ball' is obviously wrong because this is a text passage with no pictures mentioned or present. Choice D 'It mentions 14 billion years ago' is also not plausible as an answer to how the passage helps readers picture the size, since a time reference doesn't help visualize physical dimensions.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 0,
+        "response": "The choices span different conceptual categories. Choice A is about analogies/comparisons, Choice B is about visual aids, Choice C is about temperature comparisons, and Choice D is about temporal information. They don't all address the same type of literary device or method.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and specificity. Each provides a brief, specific reference to something mentioned in the passage without being overly detailed or vague.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RI.3.7, which focuses on using information from illustrations and text to demonstrate understanding. The question asks students to identify how the author uses textual devices (analogy) to help readers visualize and understand concepts.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks about how the passage helps readers picture the size of the universe before the Big Bang, which has a clear, focused intent.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is the only defensibly correct answer. The passage explicitly states 'Imagine if all the planets and all the stars were squeezed together to fit in your hand' which directly helps readers picture the tiny size. The other choices either don't exist in the passage (B) or don't address size visualization (C, D).",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references like paragraph numbers or quotes are made in the question or answer choices, so this check passes by default. The content references are accurate to what appears in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The correct answer, A, is distinct from the other choices. B, C, and D focus on different aspects of the passage: an actual picture (B), a comparison with a star (C), and a timeframe (D). They don't semantically overlap with the visualization provided in option A.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is suitable for Grade 3. The vocabulary used is age-appropriate, and the reasoning required is straightforward. The passage directly provides the visualization ('everything could fit in your hand'), making it accessible for third-grade students without requiring advanced inference skills.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:21.251424",
+    "run_id": "20260114_130152",
+    "article_id": "article_101089",
+    "content_hash": "77d4b36ae7d9",
+    "passage_title": "The Big Bang",
+    "question_preview": "How does the passage help readers picture how tiny the un..."
+  },
+  {
+    "question_id": "quiz_302738_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern starting with 'By' followed by a gerund phrase, creating consistent parallel structure.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D 'By naming each family member's favorite task' is not plausible as the passage doesn't discuss anyone's favorite tasks, making it obviously wrong. Option B is also weak as the story doesn't structure around detailed weapon descriptions.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address methods of structuring/organizing a narrative, staying within the same conceptual category of story organization techniques.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity, each describing a general organizational approach with comparable detail.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "The question directly assesses RL.3.5 by asking students to analyze how the author structures the story, which requires understanding of text structure and organization.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous, asking specifically about how the author structures the story to show different parts of the hunt.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly correct as the passage moves chronologically from preparation (getting ready, walking quietly), to tracking (following the mammoth herd), to waiting (crouching and watching the hunters move forward). No other option accurately describes this structure.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from the correct answer. Option A focuses on the sequence and structure of the hunt (preparation, tracking, waiting), while the others focus on different aspects such as weapons (B), weather (C), and personal tasks (D). These different focuses make the choice A clearly distinguishable as the correct answer.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary used in the question and answer choices is suitable for this grade level. The reasoning required involves understanding the sequence of events, which is a typical skill for third graders. The narrative structure is straightforward, and students at this level should have the ability to follow chronological sequences in a story.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:16.768115",
+    "run_id": "20260114_130152",
+    "article_id": "article_101090",
+    "content_hash": "98cf869be854",
+    "passage_title": "Etu, the Hunter",
+    "question_preview": "How does the author structure the story to show the diffe..."
+  },
+  {
+    "question_id": "quiz_302831_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow a similar grammatical structure - each is a complete sentence making a claim about laws, families, exploration, or inheritance practices.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible interpretations that a student might reasonably arrive at after reading the passage. B, C, and D all represent viewpoints that could be inferred from the text, even if they're not the main message.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices are interpretive statements about the relationship between inheritance laws and exploration - they all belong to the same conceptual category of 'main message about the connection.'",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at a similar level of generality, making broad statements about inheritance laws and their effects. None are significantly more detailed or specific than others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question directly assesses RI.3.2 (determining the main idea/message) by asking students to identify the author's main message about the connection between inheritance laws and exploration, requiring synthesis of information across the entire passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It specifically asks for the 'main message' the author wants readers to understand about a particular connection, which is precise and focused.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly the best answer as it captures the author's nuanced view that primogeniture laws, while seemingly unfair, actually led to positive outcomes (exploration and discovery). The other choices are either too judgmental or too extreme to represent the author's balanced perspective.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically too similar to the correct answer. Answer A highlights the opportunity created by the inheritance laws, while B criticizes the fairness of the laws, C focuses on survival needs, and D suggests equal distribution, none of which overlap significantly with A.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question's vocabulary and concepts, such as 'primogeniture' and 'inheritance laws,' may be challenging for a Grade 3 student. Understanding the historical context and linking it to the idea that such laws could lead to exploration might be too abstract for this age group.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:17.971592",
+    "run_id": "20260114_130152",
+    "article_id": "article_101101",
+    "content_hash": "1fc5d59a95ca",
+    "passage_title": "Second Sons",
+    "question_preview": "What main message does the author want readers to underst..."
+  },
+  {
+    "question_id": "quiz_302928_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same parallel structure: 'Tom [does something], while the colonists [do something else].' Each choice uses the same comparative format with 'while' as the connecting word.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option D is not plausible because the passage does not discuss the colonists' beliefs about Powhatan fishing abilities versus hunting abilities. In fact, William specifically mentions that the Powhatan 'can catch more fish in one day than we catch in a whole week,' making the claim that colonists think they are better at fishing contradictory to the text.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices address the same conceptual category - comparing Tom's perspective about the Powhatan people with the colonists' perspective. Each choice presents a contrast between these two viewpoints.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 0,
+        "response": "The choices vary significantly in specificity. Option A is broad and conceptual ('obstacles to land use'), while options B and D focus on very specific skills (hunting vs. farming, hunting vs. fishing). This creates an imbalance in the level of detail across choices.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "This question properly assesses RL.3.6 as it requires students to distinguish different characters' points of view - specifically comparing Tom's perspective (influenced by William) with the colonists' perspective about the Powhatan people.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks for a specific comparison between Tom's point of view and the colonists' point of view about the Powhatan people. The question is unambiguous and has a clear focus.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is clearly the correct answer. Tom learns about Powhatan skills through William's positive descriptions, while the passage explicitly states that colonists see the Powhatan as standing in the way of their tobacco farming expansion ('taking more and more land from the Powhatan to grow tobacco').",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (paragraph numbers or quotes) are made in the question, so this criterion is satisfied by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct enough from the correct answer. Choice A focuses on Tom learning about the Powhatan as skilled people through William, while the colonists see them as obstacles. Choice B inaccurately suggests a focus on farming methods, C incorrectly suggests general likability, and D offers an incorrect comparison between hunting and fishing. None of the distractors are semantically close enough to the correct answer to cause confusion.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The question might be challenging for Grade 3 due to its demands on comprehension and inference. It requires the reader to interpret the character perspectives based on the provided passage, which may be complicated for this grade level. The vocabulary includes terms like 'obstacles,' 'colonists,' and 'skills,' which might require additional contextual understanding. Additionally, integrating information about perspectives without explicit statements in the text may pose reasoning challenges for Grade 3 students.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (18 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:33.882876",
+    "run_id": "20260114_130152",
+    "article_id": "article_101113",
+    "content_hash": "2798a3c615ec",
+    "passage_title": "Jamestown, Part II: Hunting the Powhatan Way",
+    "question_preview": "How does Tom's point of view about the Powhatan people di..."
+  },
+  {
+    "question_id": "quiz_303065_sibling_2",
+    "question_type": "MCQ",
+    "overall_score": 1.0,
+    "total_checks_passed": 11,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow a consistent grammatical structure: 'Workers [verb] [object/description]' with similar sentence construction and parallel phrasing.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are believable explanations for how tree farms might work. Options B, C, and D present reasonable-sounding practices that could plausibly help the environment, making them effective distractors.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices describe different methods or practices that workers at tree farms might use to help the environment while providing wood. They all belong to the same conceptual category of tree farm practices.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices provide similar levels of detail about tree farm practices. Each option gives a specific action (cutting/planting/using tools/selecting trees) with brief explanatory details.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RI.3.3 requires students to describe connections and relationships between ideas/concepts in a text. This question asks students to explain the connection between tree farm practices and environmental protection, directly assessing cause-and-effect relationships from the passage.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. It directly asks for the reason why tree farms help protect the environment while providing wood, which has a single, clear interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option A is the only correct answer, as it directly restates the explanation given in the passage: 'At a tree farm, workers cut down trees in one section while new trees grow in another section.' The other options are not supported by the text.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific paragraph numbers or quotes are referenced in the question, so this criterion is met by default. The question appropriately directs students to information contained in the passage.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors provided do not appear to be semantically similar to the correct answer. Each choice represents a distinct idea about tree farming and its environmental impacts.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The vocabulary and reasoning demands of this question are appropriate for a Grade 3 student. The concept of sustainable tree farming, where trees are replanted as others are harvested, is accessible at this level. The choices are clear and do not require advanced knowledge, making the difficulty level suitable for the intended grade.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:31.192015",
+    "run_id": "20260114_130152",
+    "article_id": "article_101130",
+    "content_hash": "4711a870f0fc",
+    "passage_title": "Protecting the Environment",
+    "question_preview": "Why do tree farms help protect the environment while stil..."
+  },
+  {
+    "question_id": "quiz_303004_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.7272727272727273,
+    "total_checks_passed": 8,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'She tells it [preposition phrase describing manner/perspective]'",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Options A and C are not plausible distractors. The poem clearly does not read like a news report (no objective reporting style, dates, or factual tone) and has no fairy tale elements (no 'once upon a time,' magical elements, or fairy tale structure). These are obviously wrong to any careful reader.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they all describe different narrative styles or perspectives for telling a story.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity, each naming a distinct storytelling approach or perspective with equal levels of detail.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.4.6 focuses on comparing point of view and how stories are told from different perspectives. This question directly assesses how the speaker's personal perspective shapes the telling of historical events, which aligns with the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 0,
+        "response": "The question asks how the speaker tells the story 'differently from how someone else might tell it,' but provides no basis for comparison. Without knowing what 'someone else' refers to (historian, news reporter, etc.), students must guess what comparison point the question intends.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly correct. The poem is written in first person ('I am born') and connects historical events to the speaker's personal birth and identity, making it definitively her own story.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references with paragraph numbers or quotes are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are distinct from the correct answer. Option B indicates a personal narrative, while the other options suggest different storytelling methods. A news report, a fairy tale, and a story about someone else are conceptually different from a personal story.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The language and concepts in the passage, such as historical references to slavery and emancipation, may be too complex for a Grade 3 student. Additionally, understanding the nuance of storytelling perspectives might be challenging at this level. The question demands both comprehension of abstract concepts and subtle distinctions in narrative style, which might not be suitable for this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:04:33.781240",
+    "run_id": "20260114_130152",
+    "article_id": "article_102001",
+    "content_hash": "7622c78a6424",
+    "passage_title": "february 12, 1963",
+    "question_preview": "How does the speaker tell this story differently from how..."
+  }
+]

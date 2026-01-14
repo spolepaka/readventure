@@ -1,0 +1,26 @@
+{
+  "quiz_303004_sibling_3": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option A 'Sad about leaving it' is not plausible because the passage never indicates the speaker left Ohio or feels sad about leaving. The other distractors (confused, worried) could be reasonable given the complex social context described, but A is clearly unrelated to the passage content",
+      "standard_alignment": "RL.4.6 focuses on comparing point of view in different texts or contrasting first and third person narration. This question asks about the speaker's feelings toward a place, which is more aligned with inferring character emotions (RL.4.1/4.3) rather than analyzing point of view",
+      "difficulty_assessment": "The passage contains complex historical context and abstract concepts like emancipation, inequality, and systemic injustice, which may be challenging for a Grade 3 level. Additionally, vocabulary such as 'emancipated', 'enslaved', and 'constellation' could be too advanced, making it hard for young students to fully grasp the nuances of the speaker's pride without additional explanation.",
+      "length_check": "Correct answer (5 words) too long"
+    },
+    "question_text": "How does the speaker feel about the place where she was born?",
+    "options": {
+      "A": "Sad about leaving it",
+      "B": "Proud to be from there",
+      "C": "Confused about it",
+      "D": "Worried about it"
+    }
+  }
+}

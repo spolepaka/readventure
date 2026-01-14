@@ -1,0 +1,73 @@
+[
+  {
+    "question_id": "quiz_303004_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.8181818181818182,
+    "total_checks_passed": 9,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical structure: 'To [verb] [object/complement]' - each begins with an infinitive phrase expressing purpose.",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible reasons why an author might use first person. Choice B (describing others' thoughts), C (explaining historical facts), and D (telling someone else's story) are all believable purposes for using 'I' in different contexts.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices belong to the same conceptual category - they are all potential reasons/purposes for an author's choice to use first-person point of view in narrative writing.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail and abstraction. Each option presents a general purpose or function of first-person narration without being overly specific or broad compared to the others.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 1,
+        "response": "RL.4.6 focuses on comparing point of view and understanding how it affects the reader's experience. This question directly assesses understanding of why an author chose first-person point of view and its effect, which aligns with the standard.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about the author's purpose in using first-person point of view. The wording is unambiguous and age-appropriate for the target grade level.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly correct as the passage shows the author connecting her personal birth and identity to broader historical events. The other choices don't align with how the first-person perspective functions in this specific passage.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors B, C, and D are distinct from the correct answer A. B focuses on others\u2019 thoughts, C on facts, and D on another person's story, while A centers on personal connection. The distinction is clear, and none are semantically too similar to A.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The complexity of the passage and the reasoning needed to understand personal narrative versus factual recounting may be challenging for Grade 3 students. Additionally, the historical context and abstract concepts like 'personal connection to history' may not be readily accessible to this age group. The vocabulary and themes are likely too advanced for this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (7 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:12:36.956986",
+    "run_id": "20260114_131212",
+    "article_id": "article_102001",
+    "content_hash": "024906c045e6",
+    "passage_title": "february 12, 1963",
+    "question_preview": "Why does the author tell this story from her own point of..."
+  }
+]

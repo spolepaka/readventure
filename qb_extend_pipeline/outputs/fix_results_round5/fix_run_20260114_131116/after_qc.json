@@ -1,0 +1,144 @@
+[
+  {
+    "question_id": "quiz_302727_sibling_1",
+    "question_type": "MCQ",
+    "overall_score": 0.9090909090909091,
+    "total_checks_passed": 10,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern of noun phrases describing scientific observations or processes (e.g., 'Galaxies moving outward', 'Telescopes becoming more powerful', 'Matter cooling down', 'Stars forming into round shapes').",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 1,
+        "response": "All distractors are plausible because they all relate to astronomical phenomena mentioned in the passage. B mentions telescopes which helped make observations, C mentions matter cooling which is part of the theory's explanation, and D mentions star formation which is also discussed. None are obviously wrong to a 3rd grader.",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent scientific observations or phenomena related to astronomy and space science. They all belong to the same conceptual category of astronomical evidence/observations.",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of detail - each describes a single astronomical phenomenon or observation in simple, concrete terms appropriate for 3rd grade level.",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RI.3.7 focuses on using information from illustrations, maps, photographs, etc. to demonstrate understanding of text. This question asks about textual evidence for a scientific theory, which is more aligned with identifying supporting details (RI.3.8) or making connections between ideas rather than using visual information.",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and asks specifically about evidence that helped scientists develop the Big Bang Theory. The language is appropriate for 3rd grade and there is only one reasonable interpretation.",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Choice A is clearly correct as the passage explicitly states that Hubble's discovery of galaxies moving outward 'led scientists to offer explanations of how the solar system started' and directly connects this observation to the development of theories including the Big Bang Theory.",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (like paragraph numbers or quotes) are made in the question, so this check passes by default.",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors are not semantically similar to the correct answer. Choices B, C, and D present different concepts (telescopes, matter cooling, and star formation) that are not directly related to galaxies moving outward, which is the evidence discussed in the passage for the Big Bang Theory.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 1,
+        "response": "The question is appropriate for Grade 3. The vocabulary is within an understandable range ('galaxies,' 'telescopes,' 'matter,' 'stars'). The question focuses on identifying the specific piece of evidence discussed (galaxies moving outward from Earth), a straightforward task that doesn't require complex reasoning, making it suitable for this grade level.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 1,
+        "response": "Choice lengths are balanced",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:11:48.532261",
+    "run_id": "20260114_131116",
+    "article_id": "article_101089",
+    "content_hash": "e0d786711fe9",
+    "passage_title": "The Big Bang",
+    "question_preview": "According to the passage, what evidence helped scientists..."
+  },
+  {
+    "question_id": "quiz_303004_sibling_3",
+    "question_type": "MCQ",
+    "overall_score": 0.6363636363636364,
+    "total_checks_passed": 7,
+    "total_checks_run": 11,
+    "checks": {
+      "grammatical_parallel": {
+        "score": 1,
+        "response": "All answer choices follow the same grammatical pattern: adjective + preposition phrase ('Sad about leaving it', 'Proud to be from there', 'Confused about it', 'Worried about it')",
+        "category": "distractor"
+      },
+      "plausibility": {
+        "score": 0,
+        "response": "Option A 'Sad about leaving it' is not plausible because the passage never indicates the speaker left Ohio or feels sad about leaving. The other distractors (confused, worried) could be reasonable given the complex social context described, but A is clearly unrelated to the passage content",
+        "category": "distractor"
+      },
+      "homogeneity": {
+        "score": 1,
+        "response": "All choices represent emotional responses or feelings about a place, maintaining conceptual consistency within the category of emotions/attitudes",
+        "category": "distractor"
+      },
+      "specificity_balance": {
+        "score": 1,
+        "response": "All choices are at similar levels of specificity - each presents a single emotional state with a brief qualifying phrase, maintaining comparable detail across options",
+        "category": "distractor"
+      },
+      "standard_alignment": {
+        "score": 0,
+        "response": "RL.4.6 focuses on comparing point of view in different texts or contrasting first and third person narration. This question asks about the speaker's feelings toward a place, which is more aligned with inferring character emotions (RL.4.1/4.3) rather than analyzing point of view",
+        "category": "question"
+      },
+      "clarity_precision": {
+        "score": 1,
+        "response": "The question is clearly written and unambiguous. 'How does the speaker feel about the place where she was born?' is straightforward and asks for one specific type of information",
+        "category": "question"
+      },
+      "single_correct_answer": {
+        "score": 1,
+        "response": "Option B is clearly correct. The passage shows pride through positive language about growing up 'free' and the connection to family heritage. The speaker presents her birth circumstances in an empowering, positive light despite acknowledging historical struggles",
+        "category": "question"
+      },
+      "passage_reference": {
+        "score": 1,
+        "response": "No specific passage references (line numbers, quotes, etc.) are made in the question, so this check passes by default",
+        "category": "question"
+      },
+      "too_close": {
+        "score": 1,
+        "response": "The distractors (A, C, D) are not semantically similar to the correct answer (B). Each choice represents a distinct emotion (sadness, pride, confusion, worry), and only choice B aligns correctly with the positive feelings and historical pride the speaker expresses about her birthplace in the passage.",
+        "category": "distractor"
+      },
+      "difficulty_assessment": {
+        "score": 0,
+        "response": "The passage contains complex historical context and abstract concepts like emancipation, inequality, and systemic injustice, which may be challenging for a Grade 3 level. Additionally, vocabulary such as 'emancipated', 'enslaved', and 'constellation' could be too advanced, making it hard for young students to fully grasp the nuances of the speaker's pride without additional explanation.",
+        "category": "question"
+      },
+      "length_check": {
+        "score": 0,
+        "response": "Correct answer (5 words) too long",
+        "category": "distractor"
+      }
+    },
+    "provider": "openrouter",
+    "timestamp": "2026-01-14T13:11:50.321090",
+    "run_id": "20260114_131116",
+    "article_id": "article_102001",
+    "content_hash": "6a7bf5224b71",
+    "passage_title": "february 12, 1963",
+    "question_preview": "How does the speaker feel about the place where she was b..."
+  }
+]

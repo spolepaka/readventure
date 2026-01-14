@@ -1,0 +1,114 @@
+{
+  "quiz_302387_sibling_2": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "standard_alignment",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks students to compare and analyze motivations, which is more aligned with inference and analysis standards (like RI.3.8 or higher-level thinking skills) rather than demonstrating understanding through text and visual information.",
+      "difficulty_assessment": "The question may be too difficult for a Grade 3 level due to a few factors: the complexity of the historical context, the abstract nature of comparing motivations (i.e., understanding different ideas about helping Rome), and vocabulary terms such as 'conspirators,' 'senate,' and 'dictator.' This might require cognitive skills that exceed typical Grade 3 capabilities, making it more appropriate for higher grade levels.",
+      "length_check": "Correct answer (15 words) too long"
+    },
+    "question_text": "What does the text show us about both Caesar and the conspirators?",
+    "options": {
+      "A": "They both wanted to help Rome but had different ideas about how to do it",
+      "B": "They both wanted to become kings and rule Rome forever",
+      "C": "They both thought the Senate should make all the decisions for Rome",
+      "D": "They both believed that dictators should only rule for one year"
+    }
+  },
+  "quiz_302556_sibling_4": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "standard_alignment",
+      "too_close",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RL.3.7 focuses on using information from illustrations and words in text to demonstrate understanding of characters, setting, or plot. This question asks about sequencing details, which is more aligned with informational text standards or RL.3.3 (describing how characters' actions contribute to events). It doesn't assess understanding of characters, setting, or plot through text and illustrations.",
+      "too_close": "All distractors include the same elements: golden hair to Sif, silver spear to Odin, and magical boat to Thor, but in different orders. Without specific details from the passage regarding the order of gift-giving, it can be confusing for students, as they need to rely on implied understanding rather than explicit textual evidence.",
+      "difficulty_assessment": "The passage does not provide explicit information about the order in which Loki gave the gifts to the gods, making the question reliant on inference rather than recollection of details. The grade level (3rd grade) may not possess the abstract reasoning skills needed to infer the sequence without textual support, and the vocabulary level regarding norse mythology and abstract reasoning might be challenging for the age group."
+    },
+    "question_text": "Which detail from the passage shows the order in which Loki gave the gifts to the gods?",
+    "options": {
+      "A": "First the golden hair to Sif, then the silver spear to Odin, then the magical boat to Thor",
+      "B": "First the silver spear to Odin, then the golden hair to Sif, then the magical boat to Thor",
+      "C": "First the magical boat to Thor, then the golden hair to Sif, then the silver spear to Odin",
+      "D": "First the golden hair to Sif, then the magical boat to Thor, then the silver spear to Odin"
+    }
+  },
+  "quiz_302727_sibling_1": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "grammatical_parallel",
+      "plausibility",
+      "homogeneity"
+    ],
+    "failed_reasons": {
+      "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'It says...', Choice B uses 'It shows...', Choice C uses 'It compares...', and Choice D uses 'It mentions...'. While they all start with 'It', they have different verb forms and complete different types of statements - some describe actions, others describe content.",
+      "plausibility": "Choice B 'It shows a picture of a tiny ball' is obviously wrong because this is a text passage with no pictures mentioned or present. Choice D 'It mentions 14 billion years ago' is also not plausible as an answer to how the passage helps readers picture the size, since a time reference doesn't help visualize physical dimensions.",
+      "homogeneity": "The choices span different conceptual categories. Choice A is about analogies/comparisons, Choice B is about visual aids, Choice C is about temperature comparisons, and Choice D is about temporal information. They don't all address the same type of literary device or method."
+    },
+    "question_text": "How does the passage help readers picture how tiny the universe was before the Big Bang?",
+    "options": {
+      "A": "It says everything could fit in your hand",
+      "B": "It shows a picture of a tiny ball",
+      "C": "It compares it to the hottest star",
+      "D": "It mentions 14 billion years ago"
+    }
+  },
+  "quiz_302928_sibling_3": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "plausibility",
+      "specificity_balance",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option D is not plausible because the passage does not discuss the colonists' beliefs about Powhatan fishing abilities versus hunting abilities. In fact, William specifically mentions that the Powhatan 'can catch more fish in one day than we catch in a whole week,' making the claim that colonists think they are better at fishing contradictory to the text.",
+      "specificity_balance": "The choices vary significantly in specificity. Option A is broad and conceptual ('obstacles to land use'), while options B and D focus on very specific skills (hunting vs. farming, hunting vs. fishing). This creates an imbalance in the level of detail across choices.",
+      "difficulty_assessment": "The question might be challenging for Grade 3 due to its demands on comprehension and inference. It requires the reader to interpret the character perspectives based on the provided passage, which may be complicated for this grade level. The vocabulary includes terms like 'obstacles,' 'colonists,' and 'skills,' which might require additional contextual understanding. Additionally, integrating information about perspectives without explicit statements in the text may pose reasoning challenges for Grade 3 students.",
+      "length_check": "Correct answer (18 words) too long"
+    },
+    "question_text": "How does Tom's point of view about the Powhatan people differ from the colonists' point of view?",
+    "options": {
+      "A": "Tom learns about their skills through William, while the colonists see them as obstacles to their land use.",
+      "B": "Tom learns about their hunting skills, while the colonists learn about their farming methods.",
+      "C": "Tom hears good things about them from William, while the colonists think they are unfriendly.",
+      "D": "Tom knows they are good hunters, while the colonists believe they are better at fishing."
+    }
+  },
+  "quiz_303004_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "clarity_precision",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options A and C are not plausible distractors. The poem clearly does not read like a news report (no objective reporting style, dates, or factual tone) and has no fairy tale elements (no 'once upon a time,' magical elements, or fairy tale structure). These are obviously wrong to any careful reader.",
+      "clarity_precision": "The question asks how the speaker tells the story 'differently from how someone else might tell it,' but provides no basis for comparison. Without knowing what 'someone else' refers to (historian, news reporter, etc.), students must guess what comparison point the question intends.",
+      "difficulty_assessment": "The language and concepts in the passage, such as historical references to slavery and emancipation, may be too complex for a Grade 3 student. Additionally, understanding the nuance of storytelling perspectives might be challenging at this level. The question demands both comprehension of abstract concepts and subtle distinctions in narrative style, which might not be suitable for this grade level."
+    },
+    "question_text": "How does the speaker tell this story differently from how someone else might tell it?",
+    "options": {
+      "A": "She tells it like a news report.",
+      "B": "She tells it as her own story.",
+      "C": "She tells it like a fairy tale.",
+      "D": "She tells it as someone else's story."
+    }
+  }
+}

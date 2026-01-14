@@ -1,0 +1,296 @@
+{
+  "quiz_302378_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D (anger, fear, sadness) are not plausible distractors. The passage context about the three-word report shows Caesar's confidence and efficiency, not negative emotions. These distractors are obviously wrong and unrelated to the passage content.",
+      "homogeneity": "While all choices mention showing aspects of Caesar, they span different conceptual categories. Option A refers to a writing/communication style, while B, C, and D refer to emotional states. They are not the same type of answer.",
+      "difficulty_assessment": "The question is likely too advanced for a Grade 3 level due to the reasoning demands. Understanding the concept of 'style' in writing requires a level of abstract thinking that might not be developed in 3rd graders. Additionally, the vocabulary and context of the passage, including specific historical references and terms like 'ransom' and 'talents', could also pose challenges. Overall, the question may be better suited for older students with more advanced critical thinking and reading comprehension skills."
+    },
+    "question_text": "Why does the author write about Caesar's three-word report?",
+    "options": {
+      "A": "To show Caesar's style",
+      "B": "To show Caesar's anger",
+      "C": "To show Caesar's fear",
+      "D": "To show Caesar's sadness"
+    }
+  },
+  "quiz_302387_sibling_2": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "standard_alignment",
+      "too_close",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question assesses sequencing and recall of factual information rather than using textual information to understand story elements. This aligns better with standards about sequencing or literal comprehension.",
+      "too_close": "The distractors are semantically similar because they all involve the sequence of Caesar being a dictator for varying lengths of time, including one year, ten years, and for life. The subtle changes in order can be confusing without a clear guide in the text.",
+      "difficulty_assessment": "The question requires close reading and comprehension of historical sequences, which may be complicated for a Grade 3 student. The vocabulary and the concept of different timeframes of dictatorship are likely too advanced for this grade level."
+    },
+    "question_text": "What does the text tell us about when Caesar became dictator?",
+    "options": {
+      "A": "He was dictator for one year, then ten years, then for life.",
+      "B": "He was dictator for ten years, then one year, then for life.",
+      "C": "He was dictator for life, then ten years, then one year.",
+      "D": "He was dictator for one year, then for life, then ten years."
+    }
+  },
+  "quiz_302488_sibling_1": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option B is obviously wrong and not plausible. The passage clearly states that both sound and light move in waves, making the claim that 'light waves cannot travel through air' obviously false and easily eliminated.",
+      "standard_alignment": "RI.3.7 focuses on using information from illustrations and text features to understand a text. This question asks about understanding a concept (speed comparison) rather than how the lightning/thunder example helps explain or illustrate the concept, which would be more aligned with the standard.",
+      "difficulty_assessment": "The concept of sound waves traveling slower than light waves requires the third-grade students to integrate information about speed comparisons between light and sound. The passage doesn't explicitly use the example of lighting and thunder, which may make it difficult to directly connect this information without external knowledge or additional context. Additionally, the passage cut-off seems to affect the comprehensibility of the question, since no mention of lightning and thunder explicitly exists within the text."
+    },
+    "question_text": "The passage uses the example of seeing lightning before hearing thunder to help you understand which concept about sound and light?",
+    "options": {
+      "A": "Sound waves travel much slower than light waves do",
+      "B": "Sound waves can travel through air but light waves cannot",
+      "C": "Sound waves are stronger than light waves during storms",
+      "D": "Sound waves move in different directions than light waves"
+    }
+  },
+  "quiz_302531_sibling_1": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Choice A ('It proved his teaching methods worked') is not plausible as a distractor. The accidental discovery was about transmitting sound through wires, not about Bell's teaching methods. This choice is obviously unrelated to the context of the discovery.",
+      "homogeneity": "The choices span different conceptual categories. Choice B addresses the technical problem being solved, Choice C is about personnel/hiring, Choice D is about facilities, and Choice A is about teaching methodology. They don't all belong to the same type of outcome or connection.",
+      "difficulty_assessment": "The question expects an understanding of the connection between paragraphs and an inference about how one development (an accidental discovery) connects to Bell's ongoing experimentation efforts, as expressed in an earlier part of the text. This level of analysis and inference might be challenging for a Grade 3 student, who may struggle with the reasoning demands even if the vocabulary itself is not overly complex. It requires making connections and understanding implications, which could make it too difficult for this grade level.",
+      "length_check": "Correct answer (8 words) too long"
+    },
+    "question_text": "How does the accidental discovery in paragraph 3 connect to Bell's earlier work in paragraph 2?",
+    "options": {
+      "A": "It proved his teaching methods worked",
+      "B": "It solved the problem he was working on",
+      "C": "It helped him hire Thomas Watson",
+      "D": "It showed MIT's lab was helpful"
+    }
+  },
+  "quiz_302556_sibling_4": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D are not plausible distractors. The passage makes no mention of temperature differences (coldest to warmest), size comparisons between locations (largest to smallest), or age of locations (oldest to newest). These distractors are obviously wrong as they reference attributes not discussed in the text.",
+      "standard_alignment": "RL.3.7 requires students to explain how specific aspects of text's illustrations contribute to meaning. This question asks about text organization/structure, which aligns more with informational text standards (RI.3.5) about text structure rather than how illustrations support meaning in literature.",
+      "difficulty_assessment": "The question requires an understanding of abstract concepts like relative location based on height, which might be challenging for Grade 3 students. The vocabulary (e.g., anvils, forge, craftsmen) and the reasoning required to link the narrative's sequence of locations to elevation might be too complex for this grade level. Therefore, it may not be appropriate for Grade 3 students."
+    },
+    "question_text": "How does the text organize information about the locations Loki visits?",
+    "options": {
+      "A": "From highest to lowest, then back to highest",
+      "B": "From coldest to warmest, then back to coldest",
+      "C": "From largest to smallest, then back to largest",
+      "D": "From oldest to newest, then back to oldest"
+    }
+  },
+  "quiz_302581_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "standard_alignment",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Choice A is not plausible because the story doesn't actually describe different courses of food being served in order - it simply lists what Thor ate. Choice C is obviously wrong as the story doesn't organize content by character importance. Choice D is implausible since the story doesn't compare Thrym's feelings to other guests' feelings.",
+      "standard_alignment": "RL.3.7 focuses on explaining how illustrations contribute to story elements (words/images), but this question asks about text organization structure, which aligns more with informational text standards about text structure rather than literature standards about illustrations.",
+      "difficulty_assessment": "The question requires a higher level of inference and understanding of narrative structure than is typically expected at the Grade 3 level. It involves identifying implicit narrative techniques, such as problem-solving, rather than explicit or concrete details directly lifted from the text. The complexity of the reasoning and the expectation of understanding the metaphorical disguise of Thor and Loki may make it too challenging for most Grade 3 students."
+    },
+    "question_text": "How does the author organize the story sections to show the different parts of the wedding feast?",
+    "options": {
+      "A": "By describing each course of food in the order it was served",
+      "B": "By showing different problems that arise and how they are solved",
+      "C": "By listing all the characters from most important to least important",
+      "D": "By comparing Thrym's feelings to the other wedding guests"
+    }
+  },
+  "quiz_302631_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "too_close",
+      "difficulty_assessment"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option D is not plausible as it makes a clearly false claim that no other planets have ice. Third-grade students would likely know that Earth has ice, making this distractor obviously wrong rather than believable.",
+      "too_close": "The correct answer (A) states that the discovery of ice might mean there is water on Mars. Distractor (B) implies disappointment because of an expectation of liquid water. Both (A) and (B) discuss water presence, which may confuse students who may not yet be adept at distinguishing between states of matter. Also, without explicit information from the passage about scientists' feelings towards finding ice versus liquid water, (B) could inadvertently seem valid.",
+      "difficulty_assessment": "The question references information not directly stated in the passage. It requires prior knowledge or inference beyond typical Grade 3 capabilities, regarding the significance of finding ice on Mars. The excerpt does not discuss the discovery of ice or its importance, nor does it explicitly cover comparison with other planets, making the reasoning demand too high for the specified grade level."
+    },
+    "question_text": "Based on evidence from the passage, what can readers conclude about the discovery of ice on Mars?",
+    "options": {
+      "A": "It was important because ice means there might be water on Mars.",
+      "B": "It was disappointing because scientists expected to find liquid water instead.",
+      "C": "It was confusing because Mars is too hot for ice to form naturally.",
+      "D": "It was surprising because no other planets in our solar system have ice."
+    }
+  },
+  "quiz_302727_sibling_1": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "standard_alignment",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RI.3.7 requires using information from illustrations, maps, photographs, etc. to demonstrate understanding of text. This question only asks about text comprehension without any visual elements, so it doesn't assess the assigned standard.",
+      "difficulty_assessment": "The question may be too challenging for Grade 3 students due to its reliance on inference not directly stated in the passage. The passage describes the Big Bang and the expansion of the universe, but it does not directly address what happened when matter cooled and gravity's role in forming stars and galaxies. Additionally, the concept of the Big Bang Theory and scientific principles might be complex for this grade level.",
+      "length_check": "Correct answer (8 words) too long"
+    },
+    "question_text": "According to the passage, what happened when matter cooled down after the Big Bang?",
+    "options": {
+      "A": "Gravity helped form the first stars and galaxies",
+      "B": "Everything exploded outward very quickly",
+      "C": "All galaxies began moving away from Earth",
+      "D": "Scientists developed the Big Bang Theory"
+    }
+  },
+  "quiz_302738_sibling_2": {
+    "score": 0.6363636363636364,
+    "total_checks": 11,
+    "passed_checks": 7,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "standard_alignment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Option D 'By naming all the brothers' is not plausible as it doesn't demonstrate teamwork. Simply naming characters doesn't show how they work together. Options B and C are also weak distractors as they describe elements present in the passage but don't address teamwork",
+      "homogeneity": "The choices span different conceptual categories. Option A addresses role distribution (teamwork concept), B focuses on equipment description, C addresses setting description, and D addresses character identification. They're not all ways of showing teamwork",
+      "standard_alignment": "RL.3.5 focuses on referring to parts of stories/dramas/poems, using terms like chapter/scene/stanza, and describing how parts build on earlier sections. This question asks about author's craft in showing teamwork, which better aligns with author's purpose or craft standards, not RL.3.5",
+      "length_check": "Correct answer (7 words) too long"
+    },
+    "question_text": "How does the author show the family works as a team?",
+    "options": {
+      "A": "By showing each person has a job",
+      "B": "By telling about their weapons",
+      "C": "By describing the cold weather",
+      "D": "By naming all the brothers"
+    }
+  },
+  "quiz_302831_sibling_1": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "specificity_balance",
+      "too_close",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "specificity_balance": "The choices vary significantly in specificity. Choice A is broad and encompasses multiple effects (power AND wealth), while choices B, C, and D focus on more specific aspects of land division. This creates an imbalance in the level of detail.",
+      "too_close": "The distractors B) 'Land becomes too small to be useful', C) 'Families cannot keep their big farms together', and D) 'Land gets split into too many tiny pieces' are semantically similar to A) 'Families lose their power and wealth'. All options are closely related and stem from the same idea of losing land or wealth through division. This can make it confusing, as they all touch on consequences of splitting land.",
+      "length_check": "Shortest distractor (7 words) too long"
+    },
+    "question_text": "What is the main problem the author explains about dividing land equally among all sons?",
+    "options": {
+      "A": "Families lose their power and wealth.",
+      "B": "Land becomes too small to be useful.",
+      "C": "Families cannot keep their big farms together.",
+      "D": "Land gets split into too many tiny pieces."
+    }
+  },
+  "quiz_302928_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "plausibility",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Options B, C, and D are not plausible based on the passage. The text clearly states that Powhatan people 'were no longer good friends with the colonists' and 'did not visit Jamestown very much anymore,' making options about colonists wanting to learn from them or inviting them obviously incorrect.",
+      "difficulty_assessment": "The question requires higher-level reasoning skills to discern differences in point of view between Tom and the colonists based on nuanced text interpretations, which might be challenging for a 3rd-grade level. Additionally, the vocabulary and complexity of the passage could be too demanding for the grade level, including abstract ideas about human interactions and land use issues.",
+      "length_check": "Correct answer (18 words) too long"
+    },
+    "question_text": "How does Tom's point of view about the Powhatan people differ from the colonists' point of view?",
+    "options": {
+      "A": "Tom learns about their skills through William, while the colonists see them as obstacles to their land use.",
+      "B": "Tom thinks they are dangerous hunters, while the colonists want to learn from them.",
+      "C": "Tom believes they should stay in the forest, while the colonists invite them to visit Jamestown.",
+      "D": "Tom wants to avoid them completely, while the colonists try to make friends with them."
+    }
+  },
+  "quiz_303065_sibling_2": {
+    "score": 0.5454545454545454,
+    "total_checks": 11,
+    "passed_checks": 6,
+    "failed_checks": [
+      "plausibility",
+      "homogeneity",
+      "too_close",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "plausibility": "Choice D 'Getting water and air makes pollution in cities' is obviously wrong and implausible. Water and air are not 'gotten' in the same way as other resources, and the statement doesn't make logical sense in the context of electricity generation methods.",
+      "homogeneity": "The choices do not belong to the same conceptual category. Choices A and B relate to electricity generation methods (the focus of the question), while choices C and D relate to different environmental concerns (habitat loss and pollution) that are not directly connected to electricity generation.",
+      "too_close": "Choice C ('Getting trees and metal takes away animal homes') and choice B ('Getting oil and coal can cause accidents like oil spills') both imply a negative environmental impact associated with extracting natural resources. While B specifically addresses oil spills (a key point in the passage), C also aligns with the idea of environmental harm, which could confuse a Grade 3 student lacking detailed knowledge of energy production and its impacts.",
+      "difficulty_assessment": "The question requires understanding the environmental impacts of different natural resources, which may be abstract for Grade 3 students. The vocabulary, such as 'accidents', 'natural resource', and the concepts of energy production and environmental implications, may be challenging without explicit context provided in the passage. Moreover, the connection between cleaner ways to make electricity and protecting the environment is not directly covered by the passage, increasing the reasoning demands for this age group.",
+      "length_check": "Correct answer (10 words) too long"
+    },
+    "question_text": "Which detail best supports the idea that finding cleaner ways to make electricity helps protect the environment?",
+    "options": {
+      "A": "Getting wind and sunlight requires lots of big machines",
+      "B": "Getting oil and coal can cause accidents like oil spills",
+      "C": "Getting trees and metal takes away animal homes",
+      "D": "Getting water and air makes pollution in cities"
+    }
+  },
+  "quiz_303004_sibling_3": {
+    "score": 0.7272727272727273,
+    "total_checks": 11,
+    "passed_checks": 8,
+    "failed_checks": [
+      "standard_alignment",
+      "difficulty_assessment",
+      "length_check"
+    ],
+    "failed_reasons": {
+      "standard_alignment": "RL.4.6 focuses on comparing and contrasting point of view from which different stories are narrated, including the difference between first- and third-person narrations. This question assesses the speaker's attitude/feelings rather than point of view or narrative perspective, making it misaligned with the standard.",
+      "difficulty_assessment": "The passage contains complex language and historical context that may be challenging for a Grade 3 student to fully understand. The concepts of emancipation, fighting for civil rights, and the emotional gratitude conveyed may require reasoning skills beyond the typical Grade 3 level. Additionally, the vocabulary and context might be too advanced for this grade level.",
+      "length_check": "Correct answer (14 words) too long"
+    },
+    "question_text": "How does the speaker feel about the people who were 'fighting and marching and getting killed' when she was born?",
+    "options": {
+      "A": "She feels sad that they had to struggle so much for freedom.",
+      "B": "She feels grateful that they made it possible for her to grow up free.",
+      "C": "She feels worried that the fighting will never end.",
+      "D": "She feels confused about why they were marching."
+    }
+  }
+}

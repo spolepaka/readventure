@@ -1,0 +1,227 @@
+{
+  "run_id": "20260114_130852",
+  "timestamp": "2026-01-14T13:10:04.932172",
+  "config": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4",
+    "questions_fixed": "extended_only"
+  },
+  "summary": {
+    "total_failed_extended": 5,
+    "distractor_fixes_attempted": 0,
+    "full_regenerations_attempted": 5,
+    "now_passing": 3,
+    "still_failing": 2,
+    "improvement_rate": "60.0%",
+    "questions_improved": 3,
+    "avg_score_before": 0.709,
+    "avg_score_after": 0.8,
+    "avg_score_improvement": 0.091
+  },
+  "by_check_improvement": {
+    "difficulty_assessment": {
+      "before_failures": 4,
+      "after_failures": 1,
+      "fixed": 3
+    },
+    "length_check": {
+      "before_failures": 2,
+      "after_failures": 2,
+      "fixed": 2
+    },
+    "standard_alignment": {
+      "before_failures": 2,
+      "after_failures": 2,
+      "fixed": 1
+    },
+    "plausibility": {
+      "before_failures": 3,
+      "after_failures": 4,
+      "fixed": 1
+    },
+    "too_close": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "grammatical_parallel": {
+      "before_failures": 1,
+      "after_failures": 1,
+      "fixed": 0
+    },
+    "homogeneity": {
+      "before_failures": 1,
+      "after_failures": 1,
+      "fixed": 0
+    },
+    "specificity_balance": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    },
+    "clarity_precision": {
+      "before_failures": 1,
+      "after_failures": 0,
+      "fixed": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "quiz_302387_sibling_2",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RI.3.7 focuses on using information from illustrations and text to demonstrate understanding of characters, setting, or plot. This question asks students to compare and analyze motivations, which is more aligned with inference and analysis standards (like RI.3.8 or higher-level thinking skills) rather than demonstrating understanding through text and visual information.",
+          "difficulty_assessment": "The question may be too difficult for a Grade 3 level due to a few factors: the complexity of the historical context, the abstract nature of comparing motivations (i.e., understanding different ideas about helping Rome), and vocabulary terms such as 'conspirators,' 'senate,' and 'dictator.' This might require cognitive skills that exceed typical Grade 3 capabilities, making it more appropriate for higher grade levels.",
+          "length_check": "Correct answer (15 words) too long"
+        }
+      },
+      "after": {
+        "score": 0.8181818181818182,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option C 'He made new laws in both places' is not plausible because the passage clearly states Caesar only made laws in Rome, not in Gaul. The text mentions he 'made the Senate pass new laws' only after returning to Rome.",
+          "standard_alignment": "RI.3.7 requires using information from illustrations, maps, photographs, etc. to understand text. This question only asks students to compare textual information between two locations, not to use visual information to understand the text."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.091
+    },
+    {
+      "question_id": "quiz_302556_sibling_4",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "standard_alignment",
+          "too_close",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "standard_alignment": "RL.3.7 focuses on using information from illustrations and words in text to demonstrate understanding of characters, setting, or plot. This question asks about sequencing details, which is more aligned with informational text standards or RL.3.3 (describing how characters' actions contribute to events). It doesn't assess understanding of characters, setting, or plot through text and illustrations.",
+          "too_close": "All distractors include the same elements: golden hair to Sif, silver spear to Odin, and magical boat to Thor, but in different orders. Without specific details from the passage regarding the order of gift-giving, it can be confusing for students, as they need to rely on implied understanding rather than explicit textual evidence.",
+          "difficulty_assessment": "The passage does not provide explicit information about the order in which Loki gave the gifts to the gods, making the question reliant on inference rather than recollection of details. The grade level (3rd grade) may not possess the abstract reasoning skills needed to infer the sequence without textual support, and the vocabulary level regarding norse mythology and abstract reasoning might be challenging for the age group."
+        }
+      },
+      "after": {
+        "score": 0.9090909090909091,
+        "failed_checks": [
+          "plausibility"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option A is obviously wrong because the passage explicitly states the dwarves live 'deep under the ground' and are 'grouchy and surly,' contradicting a 'bright, cheerful' place. Option D is also implausible as there's no mention of floating castles or sky locations for the dwarves."
+        }
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.182
+    },
+    {
+      "question_id": "quiz_302727_sibling_1",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The answer choices do not follow consistent grammatical structure. Choice A uses 'It says...', Choice B uses 'It shows...', Choice C uses 'It compares...', and Choice D uses 'It mentions...'. While they all start with 'It', they have different verb forms and complete different types of statements - some describe actions, others describe content.",
+          "plausibility": "Choice B 'It shows a picture of a tiny ball' is obviously wrong because this is a text passage with no pictures mentioned or present. Choice D 'It mentions 14 billion years ago' is also not plausible as an answer to how the passage helps readers picture the size, since a time reference doesn't help visualize physical dimensions.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about analogies/comparisons, Choice B is about visual aids, Choice C is about temperature comparisons, and Choice D is about temporal information. They don't all address the same type of literary device or method."
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "grammatical_parallel",
+          "plausibility",
+          "homogeneity",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "grammatical_parallel": "The choices do not follow consistent grammatical structure. Choice A uses a complete comparative phrase 'squeezed together to fit in your hand,' Choice B uses 'packed tighter than,' Choice C uses 'moving faster than,' and Choice D uses 'formed by gravity over billions of years' - these represent different grammatical constructions.",
+          "plausibility": "Choice D is not plausible as it refers to spheres formed by gravity over billions of years, which describes what happened AFTER the Big Bang, not before it. This makes it obviously wrong in the context of the question about the universe's size before the Big Bang.",
+          "homogeneity": "The choices span different conceptual categories. Choice A is about size comparison, Choice B is about density/heat, Choice C is about movement/speed, and Choice D is about formation processes. They don't all address the same type of concept.",
+          "length_check": "Correct answer (12 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.091
+    },
+    {
+      "question_id": "quiz_302928_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "specificity_balance",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Option D is not plausible because the passage does not discuss the colonists' beliefs about Powhatan fishing abilities versus hunting abilities. In fact, William specifically mentions that the Powhatan 'can catch more fish in one day than we catch in a whole week,' making the claim that colonists think they are better at fishing contradictory to the text.",
+          "specificity_balance": "The choices vary significantly in specificity. Option A is broad and conceptual ('obstacles to land use'), while options B and D focus on very specific skills (hunting vs. farming, hunting vs. fishing). This creates an imbalance in the level of detail across choices.",
+          "difficulty_assessment": "The question might be challenging for Grade 3 due to its demands on comprehension and inference. It requires the reader to interpret the character perspectives based on the provided passage, which may be complicated for this grade level. The vocabulary includes terms like 'obstacles,' 'colonists,' and 'skills,' which might require additional contextual understanding. Additionally, integrating information about perspectives without explicit statements in the text may pose reasoning challenges for Grade 3 students.",
+          "length_check": "Correct answer (18 words) too long"
+        }
+      },
+      "after": {
+        "score": 1.0,
+        "failed_checks": [],
+        "failed_reasons": {}
+      },
+      "improved": true,
+      "now_passing": true,
+      "score_delta": 0.364
+    },
+    {
+      "question_id": "quiz_303004_sibling_3",
+      "fix_strategy": "full_regeneration",
+      "before": {
+        "score": 0.7272727272727273,
+        "failed_checks": [
+          "plausibility",
+          "clarity_precision",
+          "difficulty_assessment"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options A and C are not plausible distractors. The poem clearly does not read like a news report (no objective reporting style, dates, or factual tone) and has no fairy tale elements (no 'once upon a time,' magical elements, or fairy tale structure). These are obviously wrong to any careful reader.",
+          "clarity_precision": "The question asks how the speaker tells the story 'differently from how someone else might tell it,' but provides no basis for comparison. Without knowing what 'someone else' refers to (historian, news reporter, etc.), students must guess what comparison point the question intends.",
+          "difficulty_assessment": "The language and concepts in the passage, such as historical references to slavery and emancipation, may be too complex for a Grade 3 student. Additionally, understanding the nuance of storytelling perspectives might be challenging at this level. The question demands both comprehension of abstract concepts and subtle distinctions in narrative style, which might not be suitable for this grade level."
+        }
+      },
+      "after": {
+        "score": 0.6363636363636364,
+        "failed_checks": [
+          "plausibility",
+          "standard_alignment",
+          "difficulty_assessment",
+          "length_check"
+        ],
+        "failed_reasons": {
+          "plausibility": "Options B, C, and D are not plausible distractors. The poem clearly states she was born in Ohio (making B factual but not addressing the 'why' of combining topics), option C misses the family history element entirely, and option D is factually incorrect as the poem only mentions being born in Ohio, not living in different places.",
+          "standard_alignment": "RL.4.6 focuses on comparing points of view and distinguishing narrator/speaker perspective. This question asks about authorial purpose and structural choices, which better aligns with standards about craft and structure (RL.4.5) rather than point of view.",
+          "difficulty_assessment": "The question may be too difficult for a Grade 3 level due to complex vocabulary and concepts like emancipation, constellation, and historical contexts of slavery that may not be familiar to typical third graders. The reasoning required to connect personal history and larger historical narratives may also exceed the typical comprehension skills at this grade level.",
+          "length_check": "Correct answer (9 words) too long"
+        }
+      },
+      "improved": false,
+      "now_passing": false,
+      "score_delta": -0.091
+    }
+  ]
+}
