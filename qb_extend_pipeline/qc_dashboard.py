@@ -105,8 +105,10 @@ def load_input_data(results_dir: Path) -> Optional[pd.DataFrame]:
     """Load the input CSV with full question/passage data."""
     # Try to find the input file
     possible_paths = [
+        results_dir.parent / "qb_extended_all_131_rewritten.csv",
         results_dir.parent / "qb_extended_rewritten.csv",
         results_dir.parent / "qb_extended_combined.csv",
+        results_dir.parent / "outputs" / "qb_extended_all_131_rewritten.csv",
         results_dir.parent / "outputs" / "qb_extended_rewritten.csv",
         results_dir.parent / "outputs" / "qb_extended_combined.csv",
     ]
