@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QTI Assessment Data Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select, input[type="file"] {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            min-width: 250px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        select:hover, select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .metadata {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .metadata h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .metadata-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .metadata-item label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .metadata-item span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .assessment-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .assessment-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .assessment-title {
+            color: #667eea;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .assessment-subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .metadata-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-difficulty-easy {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .tag-difficulty-medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .tag-difficulty-hard {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .tag-dok {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .tag-ccss {
+            background: #e7e7ff;
+            color: #4a4a8a;
+        }
+
+        .tag-lexile {
+            background: #f5e6ff;
+            color: #6a1b9a;
+        }
+
+        .tag-module {
+            background: #e1f5e1;
+            color: #2e7d32;
+        }
+
+        .full-article {
+            background: #fffbf0;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .full-article h2 {
+            color: #856404;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .full-article-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .full-article-content p {
+            margin-bottom: 12px;
+        }
+
+        .article-section {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0e5d8;
+        }
+
+        .article-section:last-child {
+            border-bottom: none;
+        }
+
+        .article-section-title {
+            font-weight: 700;
+            color: #856404;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-header {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .section-header:hover {
+            background: #e9ecef;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .toggle-icon {
+            font-size: 20px;
+            color: #667eea;
+        }
+
+        .section-content {
+            padding: 15px;
+            display: none;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        .item {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #764ba2;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .item-title .metadata-tags {
+            margin-top: 8px;
+        }
+
+        .prompt {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .choices {
+            margin-left: 20px;
+        }
+
+        .choice {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .choice.correct {
+            background: #d4edda;
+            border: 2px solid #28a745;
+        }
+
+        .choice.incorrect {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+        }
+
+        .choice-text {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .choice-feedback {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .stimulus {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .stimulus-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .stimulus-text {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .pagination {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .pagination span {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .empty-state {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .empty-state h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            select, input[type="file"] {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📚 QTI Assessment Data Viewer</h1>
+            <p>Browse and explore extracted assessment data with questions, answers, and reading passages</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-group">
+                <label>Select JSON File</label>
+                <input type="file" id="fileInput" accept=".json">
+            </div>
+            <div class="control-group" style="flex: 1;">
+                <label>Or Choose Pre-loaded Files</label>
+                <select id="fileSelect">
+                    <option value="">-- Select a file --</option>
+                    <option value="qti_assessment_data.json">All Grades (qti_assessment_data.json)</option>
+                    <option value="qti_grade_3_data.json">Grade 3 - Core Knowledge</option>
+                    <option value="qti_grade_4_data.json">Grade 4 - Core Knowledge</option>
+                    <option value="qti_grade_5_data.json">Grade 5 - Core Knowledge</option>
+                    <option value="qti_grade_6_data.json">Grade 6 - Core Knowledge</option>
+                    <option value="qti_grade_7_data.json">Grade 7 - Core Knowledge</option>
+                    <option value="qti_grade_8_data.json">Grade 8 - Core Knowledge</option>
+                    <option value="qti_grade_9_data.json">Grade 9 - High School Reading</option>
+                    <option value="qti_grade_10_data.json">Grade 10 - High School Reading</option>
+                    <option value="qti_grade_11_data.json">Grade 11 - High School Reading</option>
+                    <option value="qti_grade_12_data.json">Grade 12 - High School Reading</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Metadata -->
+        <div id="metadata" class="metadata" style="display: none;">
+            <h2>📊 Dataset Information</h2>
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <label>Grade Filter</label>
+                    <span id="gradeFilter">All</span>
+                </div>
+                <div class="metadata-item">
+                    <label>Total Tests</label>
+                    <span id="totalTests">0</span>
+                </div>
+                <div class="metadata-item">
+                    <label>Extraction Date</label>
+                    <span id="extractionDate">-</span>
+                </div>
+                <div class="metadata-item">
+                    <label>API Base URL</label>
+                    <span id="apiUrl">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination" style="display: none;">
+            <button id="prevBtn" onclick="previousPage()">← Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextBtn" onclick="nextPage()">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let assessmentsData = null;
+        let currentPage = 1;
+        const itemsPerPage = 5;
+
+        // File input handler
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    try {
+                        const data = JSON.parse(event.target.result);
+                        loadData(data);
+                    } catch (error) {
+                        alert('Error parsing JSON file: ' + error.message);
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        // File select handler
+        document.getElementById('fileSelect').addEventListener('change', function(e) {
+            const filename = e.target.value;
+            if (filename) {
+                fetch(filename)
+                    .then(response => response.json())
+                    .then(data => loadData(data))
+                    .catch(error => alert('Error loading file: ' + error.message));
+            }
+        });
+
+        function loadData(data) {
+            assessmentsData = data;
+            currentPage = 1;
+            
+            // Update metadata
+            document.getElementById('metadata').style.display = 'block';
+            document.getElementById('gradeFilter').textContent = data.metadata.grade_filter || 'All';
+            document.getElementById('totalTests').textContent = data.metadata.total_tests;
+            document.getElementById('extractionDate').textContent = data.metadata.extraction_date;
+            document.getElementById('apiUrl').textContent = data.metadata.api_base_url;
+            
+            // Show pagination
+            document.getElementById('pagination').style.display = 'flex';
+            
+            renderPage();
+        }
+
+        function renderPage() {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+            
+            if (!assessmentsData || !assessmentsData.assessments.length) {
+                content.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No Data Loaded</h3>
+                        <p>Please select a JSON file to view assessment data</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const startIdx = (currentPage - 1) * itemsPerPage;
+            const endIdx = startIdx + itemsPerPage;
+            const pageAssessments = assessmentsData.assessments.slice(startIdx, endIdx);
+            
+            pageAssessments.forEach((assessment, idx) => {
+                const card = createAssessmentCard(assessment, startIdx + idx + 1);
+                content.appendChild(card);
+            });
+            
+            updatePagination();
+        }
+
+        function extractMetadataFromAssessment(assessment) {
+            const metadata = {
+                difficulty: null,
+                dok: null,
+                ccss: [],
+                lexile: null,
+                module: null,
+                course: null
+            };
+
+            // Get metadata from first item
+            if (assessment.test_parts) {
+                for (const part of assessment.test_parts) {
+                    for (const section of part.sections || []) {
+                        for (const item of section.items || []) {
+                            if (item.metadata) {
+                                if (item.metadata.difficulty && !metadata.difficulty) {
+                                    metadata.difficulty = item.metadata.difficulty;
+                                }
+                                if (item.metadata.DOK && !metadata.dok) {
+                                    metadata.dok = item.metadata.DOK;
+                                }
+                                if (item.metadata.CCSS && !metadata.ccss.includes(item.metadata.CCSS)) {
+                                    metadata.ccss.push(item.metadata.CCSS);
+                                }
+                            }
+                            if (item.stimulus && item.stimulus.metadata) {
+                                if (item.stimulus.metadata.lexile_level && !metadata.lexile) {
+                                    metadata.lexile = item.stimulus.metadata.lexile_level;
+                                }
+                                if (item.stimulus.metadata.module && !metadata.module) {
+                                    metadata.module = item.stimulus.metadata.module;
+                                }
+                                if (item.stimulus.metadata.course && !metadata.course) {
+                                    metadata.course = item.stimulus.metadata.course;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return metadata;
+        }
+
+        function assembleFullArticle(assessment) {
+            const sections = [];
+            const seenStimuli = new Set();
+
+            if (assessment.test_parts) {
+                for (const part of assessment.test_parts) {
+                    for (const section of part.sections || []) {
+                        // Only process "Guiding Questions" sections
+                        if (section.title && section.title.includes('Guiding Question')) {
+                            for (const item of section.items || []) {
+                                if (item.stimulus && item.stimulus.content_text) {
+                                    const stimulusId = item.stimulus.identifier;
+                                    // Avoid duplicates
+                                    if (!seenStimuli.has(stimulusId)) {
+                                        seenStimuli.add(stimulusId);
+                                        sections.push({
+                                            title: item.stimulus.title || `Section ${sections.length + 1}`,
+                                            content: item.stimulus.content_text,
+                                            sectionNumber: item.stimulus.metadata?.section_number
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Sort by section number if available
+            sections.sort((a, b) => (a.sectionNumber || 0) - (b.sectionNumber || 0));
+            return sections;
+        }
+
+        function createAssessmentCard(assessment, index) {
+            const card = document.createElement('div');
+            card.className = 'assessment-card';
+            
+            // Extract metadata
+            const metadata = extractMetadataFromAssessment(assessment);
+            
+            // Build metadata tags HTML
+            let metadataTags = '<div class="metadata-tags">';
+            if (metadata.difficulty) {
+                metadataTags += `<span class="tag tag-difficulty-${metadata.difficulty}">${metadata.difficulty}</span>`;
+            }
+            if (metadata.dok) {
+                metadataTags += `<span class="tag tag-dok">DOK ${metadata.dok}</span>`;
+            }
+            if (metadata.lexile) {
+                metadataTags += `<span class="tag tag-lexile">Lexile ${metadata.lexile}L</span>`;
+            }
+            if (metadata.ccss.length > 0) {
+                metadata.ccss.slice(0, 3).forEach(standard => {
+                    metadataTags += `<span class="tag tag-ccss">${standard}</span>`;
+                });
+            }
+            if (metadata.module) {
+                metadataTags += `<span class="tag tag-module">${metadata.module}</span>`;
+            }
+            metadataTags += '</div>';
+            
+            let html = `
+                <div class="assessment-header">
+                    <div class="assessment-title">${index}. ${assessment.title || assessment.identifier}</div>
+                    <div class="assessment-subtitle">
+                        <span class="badge badge-info">${assessment.qtiVersion || 'QTI 3.0'}</span>
+                        ${assessment.csv_metadata ? `
+                            <span class="badge badge-info">${assessment.csv_metadata.course || ''}</span>
+                        ` : ''}
+                    </div>
+                    ${metadataTags}
+                </div>
+            `;
+            
+            // Add full article section
+            const articleSections = assembleFullArticle(assessment);
+            if (articleSections.length > 0) {
+                const fullArticleId = `article-${index}`;
+                html += `
+                    <div class="section">
+                        <div class="section-header" onclick="toggleSection('${fullArticleId}')">
+                            <span class="section-title">
+                                📖 Full Article Content
+                                <span class="badge badge-success">${articleSections.length} sections</span>
+                            </span>
+                            <span class="toggle-icon" id="${fullArticleId}-icon">▼</span>
+                        </div>
+                        <div class="section-content" id="${fullArticleId}">
+                            <div class="full-article">
+                                <div class="full-article-content">
+                                    ${articleSections.map(section => `
+                                        <div class="article-section">
+                                            <div class="article-section-title">${section.title}</div>
+                                            ${formatArticleText(section.content)}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Render test parts and sections
+            if (assessment.test_parts) {
+                assessment.test_parts.forEach(part => {
+                    if (part.sections) {
+                        part.sections.forEach((section, sectionIdx) => {
+                            const sectionId = `section-${index}-${sectionIdx}`;
+                            const itemCount = section.items ? section.items.length : 0;
+                            
+                            html += `
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('${sectionId}')">
+                                        <span class="section-title">
+                                            ${section.title || 'Section ' + (sectionIdx + 1)}
+                                            <span class="badge badge-success">${itemCount} items</span>
+                                        </span>
+                                        <span class="toggle-icon" id="${sectionId}-icon">▼</span>
+                                    </div>
+                                    <div class="section-content" id="${sectionId}">
+                                        ${renderItems(section.items)}
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+                });
+            }
+            
+            card.innerHTML = html;
+            return card;
+        }
+
+        function renderItems(items) {
+            if (!items || !items.length) return '<p style="padding: 15px; color: #999;">No items in this section</p>';
+            
+            return items.map(item => {
+                let html = `
+                    <div class="item">
+                        <div class="item-title">${item.title || item.identifier}`;
+                
+                // Add item-level metadata tags
+                if (item.metadata) {
+                    html += '<div class="metadata-tags" style="margin-top: 8px;">';
+                    if (item.metadata.difficulty) {
+                        html += `<span class="tag tag-difficulty-${item.metadata.difficulty}">${item.metadata.difficulty}</span>`;
+                    }
+                    if (item.metadata.DOK) {
+                        html += `<span class="tag tag-dok">DOK ${item.metadata.DOK}</span>`;
+                    }
+                    if (item.metadata.CCSS) {
+                        html += `<span class="tag tag-ccss">${item.metadata.CCSS}</span>`;
+                    }
+                    html += '</div>';
+                }
+                
+                html += '</div>'; // close item-title
+                
+                if (item.prompt) {
+                    html += `<div class="prompt">❓ ${item.prompt}</div>`;
+                }
+                
+                if (item.choices && item.choices.length) {
+                    html += '<div class="choices">';
+                    item.choices.forEach(choice => {
+                        const correctClass = choice.is_correct ? 'correct' : 'incorrect';
+                        const correctBadge = choice.is_correct ? ' ✓' : '';
+                        html += `
+                            <div class="choice ${correctClass}">
+                                <div class="choice-text"><strong>${choice.identifier}${correctBadge}:</strong> ${choice.text}</div>
+                                ${choice.feedback ? `<div class="choice-feedback">💬 ${choice.feedback}</div>` : ''}
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                }
+                
+                // Don't show stimulus in individual items - it's in the Full Article section
+                // if (item.stimulus) {
+                //     html += `
+                //         <div class="stimulus">
+                //             <div class="stimulus-title">📖 Reading Passage: ${item.stimulus.title || 'Stimulus'}</div>
+                //             ${item.stimulus.content_text ? `
+                //                 <div class="stimulus-text">${item.stimulus.content_text}</div>
+                //             ` : '<p style="color: #999; font-size: 12px;">No text content available</p>'}
+                //         </div>
+                //     `;
+                // }
+                
+                html += '</div>';
+                return html;
+            }).join('');
+        }
+
+        function formatArticleText(text) {
+            if (!text) return '';
+            
+            // Clean up the text
+            text = text.trim();
+            
+            // Split into paragraphs (look for multiple spaces/newlines as paragraph breaks)
+            const paragraphs = text.split(/\n\s*\n|\n{2,}/).filter(p => p.trim());
+            
+            // If we couldn't split well, try splitting by sentence groups
+            if (paragraphs.length === 1) {
+                // Return as single paragraph
+                return `<p>${text}</p>`;
+            }
+            
+            // Return formatted paragraphs
+            return paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+        }
+
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const icon = document.getElementById(sectionId + '-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                icon.textContent = '▲';
+            }
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(assessmentsData.assessments.length / itemsPerPage);
+            document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function nextPage() {
+            const totalPages = Math.ceil(assessmentsData.assessments.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPage();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Auto-load default file if available
+        window.addEventListener('load', function() {
+            fetch('qti_assessment_data.json')
+                .then(response => response.json())
+                .then(data => loadData(data))
+                .catch(error => console.log('Default file not found, waiting for user selection'));
+        });
+    </script>
+</body>
+</html>
+
