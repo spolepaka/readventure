@@ -1,0 +1,681 @@
+{
+  "run_id": "20260114_131212",
+  "timestamp": "2026-01-14T13:12:37.235854",
+  "summary": {
+    "total_questions": 2766,
+    "passed": 2674,
+    "failed": 92,
+    "pass_rate": "96.7%",
+    "average_score": 0.899
+  },
+  "by_article": {
+    "article_101001": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101002": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101003": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101005": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101004": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101006": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101007": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101008": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101009": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101011": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101012": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101013": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101014": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101015": {
+      "total": 25,
+      "passed": 22,
+      "failed": 3
+    },
+    "article_101016": {
+      "total": 18,
+      "passed": 18,
+      "failed": 0
+    },
+    "article_101017": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101018": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101019": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101020": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101021": {
+      "total": 24,
+      "passed": 22,
+      "failed": 2
+    },
+    "article_101022": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101023": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101024": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101025": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101026": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101027": {
+      "total": 19,
+      "passed": 19,
+      "failed": 0
+    },
+    "article_101028": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101029": {
+      "total": 24,
+      "passed": 23,
+      "failed": 1
+    },
+    "article_101030": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101031": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101032": {
+      "total": 19,
+      "passed": 19,
+      "failed": 0
+    },
+    "article_101033": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101034": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101035": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101036": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101037": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101038": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101039": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101040": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101041": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101042": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101043": {
+      "total": 24,
+      "passed": 23,
+      "failed": 1
+    },
+    "article_101044": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101045": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101046": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101047": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101048": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101049": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101050": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101051": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101052": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101053": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101054": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101055": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101056": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101057": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101058": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101059": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101060": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101061": {
+      "total": 24,
+      "passed": 22,
+      "failed": 2
+    },
+    "article_101062": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101063": {
+      "total": 25,
+      "passed": 22,
+      "failed": 3
+    },
+    "article_101064": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101065": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101066": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101067": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101068": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101069": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101070": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101071": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101072": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101073": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101074": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101075": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101076": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101077": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "article_101078": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101079": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101080": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101081": {
+      "total": 23,
+      "passed": 22,
+      "failed": 1
+    },
+    "article_101082": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101083": {
+      "total": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "article_101084": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101085": {
+      "total": 23,
+      "passed": 23,
+      "failed": 0
+    },
+    "article_101086": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101087": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101088": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101089": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101090": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101091": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101092": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101093": {
+      "total": 23,
+      "passed": 22,
+      "failed": 1
+    },
+    "article_101094": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101095": {
+      "total": 23,
+      "passed": 22,
+      "failed": 1
+    },
+    "article_101096": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101097": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101098": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101099": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101100": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101101": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101102": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101103": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101104": {
+      "total": 20,
+      "passed": 17,
+      "failed": 3
+    },
+    "article_101105": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101106": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101107": {
+      "total": 25,
+      "passed": 24,
+      "failed": 1
+    },
+    "article_101108": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101109": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101110": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101111": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "article_101112": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101113": {
+      "total": 25,
+      "passed": 23,
+      "failed": 2
+    },
+    "article_101114": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101115": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101116": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101117": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101118": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101119": {
+      "total": 19,
+      "passed": 18,
+      "failed": 1
+    },
+    "article_101120": {
+      "total": 20,
+      "passed": 18,
+      "failed": 2
+    },
+    "article_101121": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101122": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101123": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101124": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101125": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101126": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101127": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "article_101128": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101129": {
+      "total": 24,
+      "passed": 22,
+      "failed": 2
+    },
+    "article_101130": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_102001": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    },
+    "article_101010": {
+      "total": 20,
+      "passed": 19,
+      "failed": 1
+    }
+  },
+  "failed_checks_summary": {
+    "plausibility": 673,
+    "difficulty_assessment": 666,
+    "length_check": 639,
+    "standard_alignment": 606,
+    "homogeneity": 149,
+    "grammatical_parallel": 93,
+    "specificity_balance": 88,
+    "clarity_precision": 56,
+    "passage_reference": 40,
+    "single_correct_answer": 38,
+    "too_close": 37
+  }
+}

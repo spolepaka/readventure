@@ -1,0 +1,1059 @@
+{
+  "generation_date": "2026-01-22 11:18:04",
+  "total_questions": 3277,
+  "guiding_questions": 511,
+  "quiz_questions": 2766,
+  "quiz_original": 557,
+  "quiz_extended": 2209,
+  "total_articles": 131,
+  "articles": [
+    {
+      "article_id": "rv_article_101001",
+      "article_title": "Aladdin and the Wonderful Lamp, Part I",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101002",
+      "article_title": "Aladdin and the Wonderful Lamp, Part II",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101003",
+      "article_title": "Aladdin and the Wonderful Lamp, Part III",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101004",
+      "article_title": "Alice’s Adventures in Wonderland, Part I",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101005",
+      "article_title": "Alice’s Adventures in Wonderland, Part II",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101006",
+      "article_title": "Alice’s Adventures in Wonderland, Part III",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101007",
+      "article_title": "Alice’s Adventures in Wonderland, Part IV",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101008",
+      "article_title": "The Open Road, Part I",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101009",
+      "article_title": "The Open Road, Part II",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101010",
+      "article_title": "The Open Road, Part III",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101011",
+      "article_title": "The Open Road, Part IV",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101012",
+      "article_title": "Classifying Living Things",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101013",
+      "article_title": "Warm-Blooded and Cold-Blooded Animals",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101014",
+      "article_title": "Vertebrate or Invertebrate?",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101015",
+      "article_title": "Fish",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101016",
+      "article_title": "Amphibians",
+      "total_questions": 22,
+      "guiding_questions": 4,
+      "quiz_questions": 18,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101017",
+      "article_title": "Reptiles",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101018",
+      "article_title": "Birds",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101019",
+      "article_title": "Mammals",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101020",
+      "article_title": "Scientists Who Classify Animals",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101021",
+      "article_title": "Jane Goodall",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101022",
+      "article_title": "Deep-Sea Fish",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101023",
+      "article_title": "Tree Frogs",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101024",
+      "article_title": "The Komodo Dragon",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101025",
+      "article_title": "Beavers",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101026",
+      "article_title": "Hummingbirds",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101027",
+      "article_title": "The Skeletal System",
+      "total_questions": 23,
+      "guiding_questions": 4,
+      "quiz_questions": 19,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101028",
+      "article_title": "All About Bones",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101029",
+      "article_title": "The Muscular System",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101030",
+      "article_title": "Joints and Muscles",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101031",
+      "article_title": "The Nervous System",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101032",
+      "article_title": "The Spinal Cord and Brain",
+      "total_questions": 23,
+      "guiding_questions": 4,
+      "quiz_questions": 19,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101033",
+      "article_title": "Eyes and Vision",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101034",
+      "article_title": "Vision Problems, Vision Solutions",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101035",
+      "article_title": "Ears and Hearing",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101036",
+      "article_title": "Overcoming Disabilities, Part I",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101037",
+      "article_title": "Overcoming Disabilities, Part II",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101038",
+      "article_title": "Rome, Then and Now",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101039",
+      "article_title": "The Legend of Romulus and Remus",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101040",
+      "article_title": "The Roman Gods and Goddesses, Part I",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101041",
+      "article_title": "The Roman Gods and Goddesses, Part II",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101042",
+      "article_title": "Cupid and Psyche, Part I",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101043",
+      "article_title": "Cupid and Psyche, Part II",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101044",
+      "article_title": "The Sword of Damocles",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101045",
+      "article_title": "The Roman Republic",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101046",
+      "article_title": "Hannibal Crosses the Alps",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101047",
+      "article_title": "Julius Caesar: Great Fighter, Great Writer",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101048",
+      "article_title": "Julius Caesar: Crossing the Rubicon",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101049",
+      "article_title": "After Caesar: Augustus and the Roman Empire",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101050",
+      "article_title": "Androcles and the Lion",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101051",
+      "article_title": "The Rise of Christianity",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101052",
+      "article_title": "The Second Rome: From Constantine to Justinian",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101053",
+      "article_title": "Pompeii",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101054",
+      "article_title": "How Horatius Held the Bridge",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101055",
+      "article_title": "What Is Light?",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101056",
+      "article_title": "How Are Shadows Made?",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101057",
+      "article_title": "Mirrors and Reflections",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101058",
+      "article_title": "Refraction and Lenses",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101059",
+      "article_title": "Color and Light",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101060",
+      "article_title": "What Is Sound?",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101061",
+      "article_title": "Characteristics of Sound",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101062",
+      "article_title": "The Human Voice",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101063",
+      "article_title": "Light and Photography",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101064",
+      "article_title": "Alexander Graham Bell, Part I",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101065",
+      "article_title": "Alexander Graham Bell, Part II",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101066",
+      "article_title": "Thomas Edison: The Wizard of Menlo Park",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101067",
+      "article_title": "Sif’s Golden Hair",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101068",
+      "article_title": "Loki and the Dwarves",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101069",
+      "article_title": "Stolen Thunder",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101070",
+      "article_title": "A Plan Is Made",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101071",
+      "article_title": "The Wedding Feast",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101072",
+      "article_title": "Balder, the Beautiful",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101073",
+      "article_title": "The Death of Balder",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101074",
+      "article_title": "Loki’s Punishment",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101075",
+      "article_title": "The Sun, Earth, and Our Solar System",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101076",
+      "article_title": "The Moon",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101077",
+      "article_title": "The Planets Closest to the Sun: Mercury, Venus, Earth, and Mars",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101078",
+      "article_title": "The Outer Planets: Jupiter, Saturn, Uranus, and Neptune",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101079",
+      "article_title": "Asteroids, Comets, and Meteors",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101080",
+      "article_title": "Galaxies and Stars",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101081",
+      "article_title": "Constellations",
+      "total_questions": 27,
+      "guiding_questions": 4,
+      "quiz_questions": 23,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101082",
+      "article_title": "Exploring Space",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101083",
+      "article_title": "A Walk on the Moon",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101084",
+      "article_title": "What’s it Like in Space?",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101085",
+      "article_title": "The Space Shuttle",
+      "total_questions": 27,
+      "guiding_questions": 4,
+      "quiz_questions": 23,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101086",
+      "article_title": "The International Space Station",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101087",
+      "article_title": "Dr. Mae Jemison",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101088",
+      "article_title": "Nicolaus Copernicus",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101089",
+      "article_title": "The Big Bang",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101090",
+      "article_title": "Etu, the Hunter",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101091",
+      "article_title": "Adoette and Awan, the Bird Chasers",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101092",
+      "article_title": "Akando and Aponi, the Gatherers",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101093",
+      "article_title": "Alemeda, the Basket Weaver",
+      "total_questions": 27,
+      "guiding_questions": 4,
+      "quiz_questions": 23,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101094",
+      "article_title": "Alo, the Spirit Giver",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101095",
+      "article_title": "Meda and Flo, the Forest Children",
+      "total_questions": 27,
+      "guiding_questions": 4,
+      "quiz_questions": 23,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101096",
+      "article_title": "Yutu, the Dog Trainer",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101097",
+      "article_title": "Salali, Dustu, and the Festival of Hope",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101098",
+      "article_title": "The Hunting of the Great Bear: An Iroquois Tale",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101099",
+      "article_title": "Crow Brings the Daylight: An Inuit Myth",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101100",
+      "article_title": "The Lure of Spices",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101101",
+      "article_title": "Second Sons",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101102",
+      "article_title": "Toscanelli’s Map",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101103",
+      "article_title": "Navigation in the Age of Exploration",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101104",
+      "article_title": "El Castillo de San Marcos",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101105",
+      "article_title": "Coronado Reports to the King",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101106",
+      "article_title": "John Cabot",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101107",
+      "article_title": "Henry Hudson",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101108",
+      "article_title": "The Fur Trade and Samuel de Champlain",
+      "total_questions": 23,
+      "guiding_questions": 3,
+      "quiz_questions": 20,
+      "sections": 4
+    },
+    {
+      "article_id": "rv_article_101109",
+      "article_title": "A History of People in North America",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101110",
+      "article_title": "Caribbean Words",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101111",
+      "article_title": "The First English Colony",
+      "total_questions": 19,
+      "guiding_questions": 4,
+      "quiz_questions": 15,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101112",
+      "article_title": "Jamestown, Part I: A New Life",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101113",
+      "article_title": "Jamestown, Part II: Hunting the Powhatan Way",
+      "total_questions": 29,
+      "guiding_questions": 4,
+      "quiz_questions": 25,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101114",
+      "article_title": "Plantation Life",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101115",
+      "article_title": "Early Days in Georgia",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101116",
+      "article_title": "The Pilgrims, Part I: Arrival",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101117",
+      "article_title": "The Pilgrims, Part II: Thanksgiving Celebration",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101118",
+      "article_title": "Puritan Life",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101119",
+      "article_title": "Life on a Farm in the Middle Atlantic Colonies, Part I",
+      "total_questions": 23,
+      "guiding_questions": 4,
+      "quiz_questions": 19,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101120",
+      "article_title": "Life on a Farm in the Middle Atlantic Colonies, Part II",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101121",
+      "article_title": "The Quakers and the Lenni Lenape",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101122",
+      "article_title": "Matthew, the Apprentice",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101123",
+      "article_title": "Living Things and Their Habitats",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101124",
+      "article_title": "Food Chains",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101125",
+      "article_title": "Producers, Consumers, and Decomposers",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101126",
+      "article_title": "The Balance of Nature",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101127",
+      "article_title": "Natural Changes to the Environment",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101128",
+      "article_title": "Human Changes to the Environment",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101129",
+      "article_title": "Environmental Damage Caused by Humans",
+      "total_questions": 28,
+      "guiding_questions": 4,
+      "quiz_questions": 24,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_101130",
+      "article_title": "Protecting the Environment",
+      "total_questions": 24,
+      "guiding_questions": 4,
+      "quiz_questions": 20,
+      "sections": 5
+    },
+    {
+      "article_id": "rv_article_102001",
+      "article_title": "february 12, 1963",
+      "total_questions": 22,
+      "guiding_questions": 2,
+      "quiz_questions": 20,
+      "sections": 3
+    }
+  ]
+}
