@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Custom theme extending Tailwind's defaults */
+@theme {
+  /* Admin panel uses slate-900 as base dark background */
+  --color-admin-bg: #0f172a;
+  --color-admin-card: #1e293b;
+  --color-admin-border: #334155;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-admin-bg text-slate-200 antialiased;
+  }
+}

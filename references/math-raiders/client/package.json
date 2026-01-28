@@ -1,0 +1,53 @@
+{
+  "name": "math-raiders",
+  "version": "0.7.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:staging": "tsc && vite build --mode staging",
+    "dev": "vite",
+    "dev:staging": "vite --mode staging",
+    "dev:prod": "VITE_SPACETIMEDB_HOST=ws://18.224.110.93:3000 vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pixi/react": "^8.0.3",
+    "@playcademy/sdk": "^0.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-progress": "^1.1.7",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tabs": "^1.1.12",
+    "@sentry/react": "^10.20.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.9",
+    "lucide-react": "^0.525.0",
+    "pixi.js": "^8.11.0",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
+    "recharts": "^3.2.1",
+    "spacetimedb": "^1.11.4",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@browser-echo/core": "^0.0.6",
+    "@browser-echo/vite": "^0.0.6",
+    "@playcademy/vite-plugin": "^0.2.5",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.21",
+    "bun-types": "^1.2.22",
+    "playcademy": "^0.14.32",
+    "postcss": "^8.5.6",
+    "typescript": "^5",
+    "vite": "^6.3.5"
+  }
+}

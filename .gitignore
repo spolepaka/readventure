@@ -1,6 +1,9 @@
 reading-question-qc/.env
 qb_extend_pipeline/.env
 
-# Reference files (credentials, large data files)
-references/
-course_builder/reference/
+# Credentials
+course_builder/reference/timeback-cred.json
+
+# OS files
+.DS_Store
+

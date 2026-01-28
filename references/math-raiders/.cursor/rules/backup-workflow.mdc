@@ -1,0 +1,112 @@
+---
+description: Context for backup.sh and analyzing production data
+globs:
+  - "**/backup.sh"
+  - "**/export-backup.ts"
+---
+
+# Backup Workflow Context
+
+## Running Backups
+
+```bash
+./scripts/ops/backup.sh production  # Most common - backs up EC2 production
+./scripts/ops/backup.sh staging     # Maincloud staging
+./scripts/ops/backup.sh local       # Maincloud local
+```
+
+Requires `y` confirmation. Outputs both JSON and SQLite to:
+- Local: `~/Desktop/MathRaiders-Backups/{env}/{env}_{timestamp}.{json,sqlite}`
+- Offsite: Box sync folder (same structure)
+
+## Latest Backup Path
+
+Always use the most recent file:
+```bash
+ls -t ~/Desktop/MathRaiders-Backups/production/*.sqlite | head -1
+```
+
+Or in code:
+```typescript
+const backups = await Array.fromAsync(new Bun.Glob('*.sqlite').scan('~/Desktop/MathRaiders-Backups/production'));
+const latest = backups.sort().pop();
+```
+
+## SQLite Schema
+
+### player
+| Column | Type | Notes |
+|--------|------|-------|
+| id | TEXT PK | Hex player ID |
+| name | TEXT | Display name |
+| grade | INTEGER | School grade |
+| rank | TEXT | Current rank |
+| total_problems | INTEGER | Lifetime attempts |
+| total_correct | INTEGER | Lifetime correct |
+| timeback_id | TEXT | TimeBack user ID (nullable) |
+| email | TEXT | Email (nullable) |
+| last_played | INTEGER | Unix timestamp (seconds) |
+
+### performance_snapshot (raids)
+| Column | Type | Notes |
+|--------|------|-------|
+| id | TEXT PK | Snapshot ID |
+| player_id | TEXT FK | References player.id |
+| timestamp | INTEGER | Unix micros (÷1e6 for seconds) |
+| track | TEXT | e.g. "TRACK12" (+≤10) |
+| problems_attempted | INTEGER | This raid |
+| problems_correct | INTEGER | This raid |
+| session_seconds | INTEGER | Raid duration |
+| boss_level | INTEGER | Boss fought |
+| victory | INTEGER | 1=won, 0=lost |
+| damage_dealt | INTEGER | Total damage |
+
+### fact_mastery
+| Column | Type | Notes |
+|--------|------|-------|
+| player_id | TEXT FK | References player.id |
+| fact_key | TEXT | e.g. "3+4", "7×8" |
+| total_attempts | INTEGER | Lifetime |
+| mastery_level | INTEGER | 0-5 scale |
+
+## Common Queries
+
+### Who played today (CST)
+```sql
+SELECT p.name, COUNT(*) as raids, SUM(s.problems_correct) as correct
+FROM player p
+JOIN performance_snapshot s ON p.id = s.player_id
+WHERE date(s.timestamp/1000000, 'unixepoch', '-6 hours') = date('now', '-6 hours')
+GROUP BY p.id ORDER BY raids DESC;
+```
+
+### Player's recent raids
+```sql
+SELECT datetime(timestamp/1000000, 'unixepoch', 'localtime') as time,
+       track, boss_level, victory, problems_correct, session_seconds
+FROM performance_snapshot
+WHERE player_id = (SELECT id FROM player WHERE name LIKE '%johnny%')
+ORDER BY timestamp DESC LIMIT 10;
+```
+
+### CQPM calculation
+```sql
+SELECT name, 
+       ROUND(problems_correct * 60.0 / NULLIF(session_seconds, 0), 1) as cqpm
+FROM performance_snapshot s
+JOIN player p ON s.player_id = p.id
+WHERE timestamp > (strftime('%s','now') - 86400) * 1000000;
+```
+
+## Track ID Mapping
+| ID | Practice |
+|----|----------|
+| TRACK12 | +≤10 |
+| TRACK9 | +0-9 |
+| TRACK10 | -≤20 |
+| TRACK6 | +≤20 |
+| TRACK8 | -≤20 |
+| TRACK11 | ×0-9 |
+| TRACK7 | ×0-12 |
+| TRACK5 | ÷0-12 |
+| ALL | Mix |

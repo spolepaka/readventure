@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark background -->
+  <rect width="64" height="64" rx="12" fill="#1e1b4b"/>
+  
+  <!-- Diamond shape -->
+  <path d="M32 8 L48 32 L32 56 L16 32 Z" 
+        fill="#a78bfa" 
+        stroke="#e9d5ff" 
+        stroke-width="2"/>
+  
+  <!-- Inner speed lines -->
+  <path d="M32 18 L40 32 L32 46 L24 32 Z" 
+        fill="#6b21a8"/>
+  
+  <!-- Math symbol in center -->
+  <text x="32" y="38" 
+        font-family="system-ui" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="#fbbf24" 
+        text-anchor="middle">×</text>
+</svg>
+
+
+
+
+
+
+
+
+
+

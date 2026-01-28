@@ -1,0 +1,27 @@
+{
+  "name": "mathraiders-academic-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "cookie": "^0.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "spacetimedb": "^1.11.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/cookie": "^0.6.0",
+    "@types/node": "^24.10.4",
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.7",
+    "@vercel/node": "^3.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1"
+  }
+}

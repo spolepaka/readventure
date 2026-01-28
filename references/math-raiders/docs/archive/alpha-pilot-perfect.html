@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Raiders × Alpha School: Grade 4 Pilot</title>
+    <style>
+        /* === CSS VARIABLES: Single source of truth === */
+        :root {
+            /* Typography scale */
+            --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
+            /* Type sizes */
+            --text-base: 12pt;
+            --text-title: 18pt;
+            --text-h2: 14pt;      /* 17% larger than body - clear hierarchy */
+            --text-h3: 12pt;      /* Same as body, bold sans distinguishes */
+            --text-meta: 10.5pt;
+            --text-small: 10pt;
+            --text-tiny: 9pt;
+            --text-micro: 8.5pt;
+            
+            /* Colors */
+            --color-text: #111;
+            --color-text-medium: #555;
+            --color-text-light: #777;
+            --color-text-lighter: #888;
+            --color-border: #ddd;
+            --color-border-medium: #bbb;
+            --color-border-dark: #000;
+            
+            /* Spacing rhythm */
+            --space-xs: 0.5em;
+            --space-sm: 0.75em;
+            --space-md: 1em;
+            --space-lg: 1.5em;
+            --space-xl: 2em;
+            --space-xxl: 2.5em;
+            --space-xxxl: 3em;
+            
+            /* Layout */
+            --line-height-tight: 1.1;
+            --line-height-base: 1.4;
+            --line-height-relaxed: 1.5;
+            --line-height-loose: 1.6;
+            
+            /* Optimal line length */
+            --measure: 65ch;
+        }
+        
+        /* === PAGE SETUP === */
+        @page {
+            size: letter;
+            margin: 1.25in 1.75in 1.25in 1.25in;
+        }
+        
+        /* === BASE TYPOGRAPHY === */
+        body {
+            font-family: var(--font-serif);
+            font-size: var(--text-base);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            max-width: var(--measure);
+            margin: 0 auto;
+            padding: 0.75in 0.5in;
+            
+            /* Modern typography features */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;  /* Better kerning */
+            font-feature-settings: "kern" 1, "liga" 1;  /* Kerning + ligatures */
+            font-kerning: normal;
+            
+            /* Smart quotes */
+            quotes: """ """ "'" "'";  /* Curly quotes */
+        }
+        
+        /* === HIERARCHY === */
+        h1 {
+            font-family: var(--font-sans);
+            font-size: var(--text-title);
+            font-weight: 600;
+            margin: 0 0 0.5em 0;  /* More breathing room after title */
+            line-height: var(--line-height-tight);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-family: var(--font-sans);
+            font-size: var(--text-h2);
+            font-weight: 600;
+            margin: var(--space-xxxl) 0 var(--space-md) 0;  /* More space for major sections */
+            letter-spacing: -0.01em;
+        }
+        
+        /* H2 after HR - HR provides the spacing */
+        hr + * {
+            margin-top: 0;
+        }
+        
+        hr + div > h2 {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-family: var(--font-sans);
+            font-size: var(--text-h3);
+            font-weight: 600;
+            margin: var(--space-xl) 0 var(--space-sm) 0;  /* Clear subsection breaks */
+        }
+        
+        /* === METADATA === */
+        .metadata {
+            font-family: var(--font-sans);
+            font-size: var(--text-meta);
+            color: var(--color-text-light);
+            line-height: var(--line-height-relaxed);
+            margin: 0 0 var(--space-xxxl) 0;  /* Clean break before content */
+        }
+        
+        /* === PARAGRAPHS === */
+        p {
+            margin: 0 0 0.85em 0;
+            text-align: left;
+            hyphens: none;
+        }
+        
+        /* === LISTS === */
+        ul, ol {
+            margin: var(--space-sm) 0 var(--space-md) 0;
+            padding-left: 1.5em;
+        }
+        
+        ul {
+            list-style-type: disc;
+        }
+        
+        li {
+            margin: 0.4em 0;
+            line-height: var(--line-height-base);
+        }
+        
+        /* === TABLES: Tufte minimal === */
+        table {
+            font-family: var(--font-sans);
+            border-collapse: collapse;
+            margin: 1.25em 0;
+            font-size: var(--text-small);
+            width: 100%;
+        }
+        
+        thead {
+            border-top: 1.5pt solid var(--color-border-dark);
+            border-bottom: 0.75pt solid var(--color-border-dark);
+        }
+        
+        th {
+            text-align: left;
+            font-weight: 600;
+            padding: var(--space-xs) var(--space-md) var(--space-xs) 0;
+            vertical-align: bottom;
+        }
+        
+        td {
+            padding: var(--space-xs) var(--space-md) var(--space-xs) 0;
+            vertical-align: top;
+        }
+        
+        tbody tr {
+            border: none;
+        }
+        
+        /* === COMPARISON TABLE: Modern minimal === */
+        .comparison-table {
+            margin: 1.5em 0;
+            width: 100%;
+        }
+        
+        .comparison-table thead {
+            border-top: 1.5pt solid var(--color-border-dark);
+            border-bottom: 1pt solid var(--color-border-dark);
+        }
+        
+        .comparison-table th {
+            font-weight: 600;
+            padding: var(--space-xs) var(--space-md) var(--space-xs) 0;
+        }
+        
+        .comparison-table th:first-child {
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 0.65em var(--space-md) 0.65em 0;
+            vertical-align: baseline;
+        }
+        
+        .comparison-table tbody tr {
+            border: none;
+        }
+        
+        /* Conclusion row - subtle emphasis */
+        .comparison-table .table-conclusion {
+            border-top: 0.5pt solid var(--color-border-medium);
+            padding-top: 0.75em;
+        }
+        
+        .comparison-table .table-conclusion td {
+            padding-top: 0.75em;
+        }
+        
+        /* === INLINE CITATIONS: Modern subtle === */
+        .cite {
+            font-family: var(--font-sans);
+            font-size: 9.5pt;
+            color: #888;
+            font-style: italic;
+            /* Flows inline - no breaks */
+        }
+        
+        /* === SECTION BREAKS === */
+        .major-break {
+            margin: var(--space-xxxl) 0 var(--space-xxl) 0;  /* 3em top, 2.5em bottom */
+            border: none;
+            border-top: 0.5pt solid var(--color-border-medium);
+        }
+        
+        /* === EMPHASIS === */
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        /* === NUMBERS: Tabular === */
+        .num {
+            font-weight: 600;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: var(--font-sans);
+            font-feature-settings: "tnum" 1, "lnum" 1;  /* Explicit tabular + lining */
+        }
+        
+        /* === ALL CAPS: Letterspacing === */
+        /* Butterick: 5-12% extra spacing for all caps */
+        abbr, .caps {
+            letter-spacing: 0.08em;  /* 8% extra spacing */
+            font-feature-settings: "c2sc" 0;  /* Disable auto small-caps */
+        }
+        
+        /* === UTILITY CLASSES: Consistent styling === */
+        .text-right {
+            text-align: right;
+        }
+        
+        .summary {
+            margin-top: 1.25em;
+            font-size: var(--text-small);
+            color: var(--color-text-medium);
+        }
+        
+        .key-claim {
+            font-size: var(--text-h2);  /* Same as H2 for emphasis */
+            margin: 1.25em 0;
+        }
+        
+        /* === CONTACT: Subtle === */
+        .contact {
+            margin-top: var(--space-xxl);
+            padding-top: var(--space-lg);
+            border-top: 0.5pt solid var(--color-border);
+            font-family: var(--font-sans);
+            font-size: var(--text-tiny);
+            line-height: var(--line-height-relaxed);
+            color: var(--color-text-light);
+        }
+        
+        .contact p {
+            margin: 0;
+        }
+        
+        .contact p + p {
+            margin-top: 0.75em;
+        }
+        
+        .contact strong {
+            font-weight: 600;
+            color: var(--color-text-medium);
+        }
+        
+        /* === PRINT: Page breaks === */
+        @media print {
+            body {
+                max-width: none;
+                padding: 0;
+            }
+            
+            /* Prevent orphans - heading without content */
+            h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            /* Keep units together */
+            table {
+                page-break-inside: avoid;
+            }
+            
+            .comparison-table {
+                page-break-inside: avoid;
+            }
+            
+            /* Keep list items together when possible */
+            li {
+                page-break-inside: avoid;
+            }
+            
+            /* Data & Reporting + Timeline: keep together */
+            h2:has(+ p + p + p + div#timeline-section),
+            #timeline-section {
+                page-break-before: avoid;
+                page-break-inside: avoid;
+            }
+            
+            /* Better: wrap both in container */
+            .footer-sections {
+                page-break-inside: avoid;
+            }
+            
+            /* Contact stays with timeline if possible */
+            .contact {
+                page-break-before: avoid;
+                page-break-inside: avoid;
+            }
+            
+            /* Major sections can break, but prefer to keep together */
+            h2 + p {
+                page-break-before: avoid;
+            }
+            
+            /* Keep Assessment & Success Criteria together */
+            #success-criteria-section {
+                page-break-inside: avoid;
+            }
+            
+            /* Keep 2x Advantage table + claim together */
+            #advantage-section {
+                page-break-inside: avoid;
+            }
+            
+            /* Prevent widow/orphan in metrics sections */
+            h3 + p + p {
+                page-break-before: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Math Raiders × Alpha School: Grade 4 Pilot</h1>
+
+<div class="metadata">
+Target: Grade 4 students, Alpha School<br>
+Duration: 10 instructional days (2 weeks)<br>
+Scope: Multiplication and Division, 0–12 facts (target: <span class="num">35</span> <abbr>CQPM</abbr> fluency standard)
+</div>
+
+<h2>The Problem</h2>
+
+<p>AlphaMath Fluency provides sound pedagogy and proven fact sequences, but recent field data shows consistent engagement challenges <span class="cite">(Source: AlphaMath Fluency usage data across Alpha School network)</span>:</p>
+
+<ul>
+<li>Only <span class="num">~50%</span> of students achieve daily practice targets</li>
+<li><span class="num">20–50%</span> waste time through idling, rushing, and distractions</li>
+<li>Wide variance in learning efficiency: <span class="num">0.8 to 7+</span> minutes per fact</li>
+</ul>
+
+<p><strong>The bottleneck:</strong> Student engagement, not instructional design.</p>
+
+<h2>The Proposal</h2>
+
+<p>Replace AlphaMath Fluency with Math Raiders for Grade 4 students during a 2-week pilot to test whether game-based mechanics solve the engagement gap.</p>
+
+<p><strong>Hypothesis:</strong> Cooperative team raids, immediate performance feedback, and visible progression drive higher daily practice volume, leading to faster mastery of Grade 4 multiplication and division facts.</p>
+
+<h2>Pilot Structure</h2>
+
+<h3>Week 1</h3>
+
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Activity</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monday</td>
+<td>AlphaMath pre-test, then intro raid</td>
+<td>5–8 min test<br>10–15 min practice</td>
+</tr>
+<tr>
+<td>Tue–Fri</td>
+<td>Math Raiders practice</td>
+<td>20 min/day</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Week 2</h3>
+
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Activity</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon–Thu</td>
+<td>Math Raiders practice</td>
+<td>20 min/day</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Warmup raid, then AlphaMath post-test</td>
+<td>10–12 min practice<br>5–8 min test</td>
+</tr>
+</tbody>
+</table>
+
+<p class="summary">Total: <span class="num">170–180</span> minutes practice over 10 instructional days (~<span class="num">3</span> hours total)</p>
+
+<h2>Grade 4 Scope</h2>
+
+<p><strong>Matches AlphaMath Fluency Grade 4 exactly</strong> <span class="cite">(Verified via Timeback API, Oct 2025)</span>:</p>
+
+<ul>
+<li><span class="num">313</span> total facts (169 multiplication + 144 division)</li>
+<li>Target: <span class="num">35</span> <abbr>CQPM</abbr> (1.7-second threshold)</li>
+<li>Baseline: Students passed Grade 3 multiplication (<span class="num">30</span> <abbr>CQPM</abbr> on 0–9); 10–12 facts and division are new content</li>
+</ul>
+
+<div id="advantage-section">
+<h2>The 2x Advantage</h2>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Metric</th>
+<th class="text-right">AlphaMath Fluency</th>
+<th class="text-right">Math Raiders</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily practice</td>
+<td class="text-right"><span class="num">10</span> min/day</td>
+<td class="text-right"><span class="num">20</span> min/day</td>
+</tr>
+<tr>
+<td>Total (10 days)</td>
+<td class="text-right"><span class="num">100</span> min</td>
+<td class="text-right"><span class="num">200</span> min</td>
+</tr>
+<tr>
+<td>Learning efficiency</td>
+<td class="text-right"><span class="num">4</span> min/fact</td>
+<td class="text-right"><span class="num">3–4</span> min/fact</td>
+</tr>
+<tr class="table-conclusion">
+<td><strong>Projected facts mastered</strong></td>
+<td class="text-right"><strong>~<span class="num">25</span></strong></td>
+<td class="text-right"><strong>~<span class="num">50–65</span></strong></td>
+</tr>
+</tbody>
+</table>
+
+<p class="key-claim"><strong><span class="num">2×</span> more practice volume</strong> drives proportional fact mastery gains <span class="cite">(AlphaMath planning: 10 min/day, 4 min/fact baseline; Math Raiders: 20 min/day, 3–4 min/fact target)</span>.</p>
+
+<p><em>Not claiming better pedagogy — just more engaged practice time.</em></p>
+</div>
+
+<div id="success-criteria-section">
+<h2>Assessment & Success Criteria</h2>
+
+<h3>Assessment Method</h3>
+
+<p>Pre-test (Day 1): Students take AlphaMath Fluency Grade 4 assessment, establishing baseline <abbr>CQPM</abbr> for multiplication and division.</p>
+
+<p>Post-test (Friday, Week 2): Same assessment (5–8 min) measures <abbr>CQPM</abbr> improvement from baseline.</p>
+
+<h3>Success Criteria</h3>
+
+<p><strong>Tier 1 — Proves engagement value:</strong></p>
+
+<ul>
+<li>Average <span class="num">16+</span> min/day among active participants (students with 5+ days) <span class="cite">(Benchmark: AlphaMath field data shows approximately half of students meeting daily practice targets)</span></li>
+</ul>
+
+<p><strong>Tier 2 — Proves learning outcomes:</strong></p>
+
+<ul>
+<li>Tier 1 AND <span class="num">+5</span> or more <abbr>CQPM</abbr> improvement <span class="cite">(Based on RocketMath +3 CQPM/hour baseline; AlphaMath rate not yet established)</span></li>
+</ul>
+
+<p><strong>Tier 3 — Demonstrates superiority:</strong></p>
+
+<ul>
+<li>Tier 2 AND (Efficiency: <span class="num">2.5–3.5</span> min/fact OR Outcomes: <span class="num">+8–10</span> <abbr>CQPM</abbr>)</li>
+</ul>
+</div>
+
+<div class="footer-sections">
+<h2>Data & Reporting</h2>
+
+<p><strong>Automatic tracking:</strong> Each raid logs practice time, facts mastered, and accuracy to Timeback.</p>
+
+<p><strong>Weekly reports to Alpha:</strong> Student engagement metrics, learning rates, and fact mastery progress.</p>
+
+<p><strong>Student access:</strong> Enrolled students launch Math Raiders directly from their Timeback course page.</p>
+
+<h2>Timeline to Launch</h2>
+
+<p><strong>Next steps:</strong></p>
+<ol>
+<li>Academics team approval</li>
+<li>Alpha recruits Grade 4 volunteers</li>
+<li>Alpha enrolls students in Math Raiders Grade 4 course (Timeback)</li>
+<li>Pilot begins</li>
+</ol>
+
+<p>Duration: Any consecutive 2-week period<br>
+Cohort: Grade 4 volunteers</p>
+</div>
+
+<div class="contact">
+<p><strong>Campbell Cao</strong> — campbell.cao@superbuilders.school<br>
+<em>Game Development</em></p>
+
+<p><strong>Adam Paul</strong> — adam.paul@superbuilders.school<br>
+<em>Playcademy Lead</em></p>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1363 @@
+@import "tailwindcss";
+
+/* Theme configuration for Tailwind v4 */
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* Button shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Logo floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+
+    /* Layout tokens */
+    --page-max: 1200px;
+    --page-cols: 12; /* for reference */
+    --page-gutter: 24px;
+    --baseline: 4px;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Hide number input spinners */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Custom animations for game effects */
+@keyframes damage-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+/* Boss hit: visible pulse + brightness pop - works with PixiJS color flash */
+@keyframes boss-hit {
+  0% { transform: scale(1); filter: brightness(1); }
+  25% { transform: scale(1.025); filter: brightness(1.15); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* Emoji boss idle bounce - for WebGL fallback */
+@keyframes boss-idle-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.05); }
+}
+
+.boss-emoji-idle {
+  animation: boss-idle-bounce 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+}
+
+.animate-damage-float {
+  animation: damage-float 1.5s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.boss-damage-flash { 
+  animation: boss-hit 0.18s ease-out; 
+  will-change: transform, filter;
+}
+
+/* Health bar flash - brief red glow, NO opacity changes */
+@keyframes boss-hp-flash {
+  0% {
+    box-shadow: 0 0 0 rgba(239, 68, 68, 0);
+  }
+  40% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.8), inset 0 0 8px rgba(239, 68, 68, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.boss-hp-flash {
+  animation: boss-hp-flash 0.6s ease-out;
+}
+
+/* Player HP flash - same effect as boss, triggered when player takes time damage */
+.player-hp-flash {
+  animation: boss-hp-flash 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Math Raiders UI elements */
+.raid-frame {
+  @apply bg-white/5 border border-white/10 rounded-lg shadow-2xl;
+  /* backdrop-blur-sm removed for Chromebook performance */
+}
+
+.raid-button {
+  @apply bg-gradient-to-b from-yellow-600 to-yellow-700 hover:from-yellow-500 hover:to-yellow-600 
+         text-gray-900 font-bold shadow-lg border-2 border-yellow-800/50 
+         transition-all duration-200 active:scale-95;
+}
+
+/* Reduce excessive glow to improve readability */
+.raid-glow-text { text-shadow: none; }
+
+/* Success Ripple Effect - Emanates from input field */
+.success-ripple {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(16, 185, 129, 0.9);
+  border-radius: 50%;
+  animation: ripple-expand 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple-expand {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.8),
+                inset 0 0 10px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4),
+                inset 0 0 20px rgba(16, 185, 129, 0.1);
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0),
+                inset 0 0 30px rgba(16, 185, 129, 0);
+  }
+}
+
+/* Answer input feedback animations */
+.answer-input-correct {
+  animation: correct-glow 1.6s ease-out forwards;
+  background: rgba(16,185,129,0.15) !important;
+  border: 4px solid rgb(16,185,129) !important;
+  box-shadow: 
+    0 0 40px rgba(16,185,129,0.6), 
+    inset 0 0 30px rgba(16,185,129,0.3),
+    0 0 60px rgba(16,185,129,0.4) !important;
+}
+
+.answer-input-wrong {
+  animation: wrong-glow 2.5s ease-out forwards;
+  background: rgba(239,68,68,0.12) !important;
+  border: 3px solid rgba(239,68,68,0.7) !important;
+  box-shadow: 
+    0 0 30px rgba(239,68,68,0.4),
+    inset 0 0 20px rgba(239,68,68,0.2),
+    0 0 50px rgba(239,68,68,0.25) !important;
+}
+
+.answer-input-typing {
+  background: rgba(139,92,246,0.1);
+  border: 4px solid rgba(168,85,247,0.6);
+  animation: typing-pulse 2s ease-in-out infinite;
+}
+
+.answer-input-idle {
+  background: rgba(0,0,0,0.5);
+  border: 4px solid rgba(100,100,100,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+@keyframes correct-glow {
+  0% { 
+    box-shadow: 
+      0 0 80px rgba(16,185,129,0.9),
+      inset 0 0 60px rgba(16,185,129,0.5),
+      0 0 120px rgba(16,185,129,0.6);
+    transform: scale(1.02);
+    background: rgba(16,185,129,0.15);
+  }
+  25% {
+    box-shadow: 
+      0 0 100px rgba(16,185,129,1),
+      inset 0 0 70px rgba(16,185,129,0.6),
+      0 0 140px rgba(16,185,129,0.7);
+    transform: scale(1.03);
+    background: rgba(16,185,129,0.2);
+  }
+  60% {
+    box-shadow: 
+      0 0 70px rgba(16,185,129,0.8),
+      inset 0 0 50px rgba(16,185,129,0.5),
+      0 0 90px rgba(16,185,129,0.6);
+    transform: scale(1.01);
+    background: rgba(16,185,129,0.15);
+  }
+  90% {
+    box-shadow: 
+      0 0 50px rgba(16,185,129,0.5),
+      inset 0 0 30px rgba(16,185,129,0.3),
+      0 0 60px rgba(16,185,129,0.4);
+    transform: scale(1);
+    background: rgba(16,185,129,0.1);
+  }
+  100% { 
+    box-shadow: 
+      0 0 40px rgba(16,185,129,0.4),
+      inset 0 0 25px rgba(16,185,129,0.25),
+      0 0 50px rgba(16,185,129,0.3);
+    transform: scale(1);
+    background: rgba(16,185,129,0.08);
+  }
+}
+
+@keyframes wrong-glow {
+  0% { 
+    box-shadow: 
+      0 0 80px rgba(239,68,68,0.9),
+      inset 0 0 60px rgba(239,68,68,0.5),
+      0 0 120px rgba(239,68,68,0.6);
+    transform: scale(0.98);
+  }
+  25% {
+    transform: translateX(-5px) scale(0.98);
+  }
+  50% {
+    transform: translateX(5px) scale(0.98);
+  }
+  75% {
+    transform: translateX(-3px) scale(0.99);
+  }
+  100% { 
+    box-shadow: 
+      0 0 20px rgba(239,68,68,0.2),
+      inset 0 0 10px rgba(239,68,68,0.1),
+      0 0 30px rgba(239,68,68,0.15);
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes typing-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(168,85,247,0.3),
+      inset 0 0 20px rgba(168,85,247,0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(168,85,247,0.6),
+      inset 0 0 30px rgba(168,85,247,0.2);
+  }
+}
+
+.raid-timer-bar {
+  @apply bg-gray-800 border border-gray-700;
+}
+
+.raid-timer-fill {
+  @apply bg-gradient-to-r from-amber-500 to-yellow-500;
+}
+
+/* Crystal sparkle animation */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle ease-in-out infinite;
+}
+
+/* Floating animation for math symbols */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) scale(1);
+  }
+  100% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up linear infinite;
+}
+
+/* Lightning bolt animations */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.slow-spin {
+  animation-duration: 8s;
+}
+
+/* Rainbow border for legendary loot */
+@keyframes rainbow-border {
+  0% {
+    border-color: #ff0000;
+  }
+  16% {
+    border-color: #ff8800;
+  }
+  33% {
+    border-color: #ffff00;
+  }
+  50% {
+    border-color: #00ff00;
+  }
+  66% {
+    border-color: #0088ff;
+  }
+  83% {
+    border-color: #ff00ff;
+  }
+  100% {
+    border-color: #ff0000;
+  }
+}
+
+.rainbow-border {
+  border: 3px solid;
+  animation: rainbow-border 3s linear infinite;
+}
+
+/* Gradient animation for logo */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 5s ease-in-out infinite;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+.animation-delay-250 {
+  animation-delay: 250ms;
+}
+
+/* Animation delays for combo sparkles */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-450 {
+  animation-delay: 450ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+
+/* ======================== */
+/* Design tokens (components)
+   Use Tailwind's component layer so ordering and tree-shaking work. */
+/* ======================== */
+
+@layer components {
+  /* Grid system: 12-col, fixed gutter */
+  .page-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--page-gutter);
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  .span-12 { grid-column: span 12 / span 12; }
+  .span-6 { grid-column: span 6 / span 6; }
+  .span-4 { grid-column: span 4 / span 4; }
+  .span-3 { grid-column: span 3 / span 3; }
+  @media (max-width: 1024px) { .span-6 { grid-column: span 12 / span 12; } .span-4 { grid-column: span 6 / span 6; } .span-3 { grid-column: span 6 / span 6; } }
+  @media (max-width: 640px) { .span-4, .span-3 { grid-column: span 12 / span 12; } }
+
+  /* Dev overlay toggle */
+  .grid-overlay::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: calc((var(--page-max) - 32px) / 12) 100%, var(--baseline) var(--baseline);
+    background-position: center top;
+    z-index: 9999;
+  }
+  .font-display { font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+  .font-game { font-family: "Russo One", ui-sans-serif, system-ui, sans-serif; }
+  .heading-display { font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; letter-spacing: -0.01em; }
+  .ui-num { font-variant-numeric: tabular-nums lining-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+  .ui-sc { font-variant-caps: all-small-caps; letter-spacing: 0.04em; font-weight: 600; }
+  @media (max-width: 640px) { .ui-sc { letter-spacing: 0.03em; } }
+  .h1 { @apply font-black leading-tight; font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; letter-spacing: -0.01em; font-size: clamp(2.25rem, 3.5vw + 1rem, 3.75rem); text-wrap: balance; }
+  .h2 { @apply font-bold leading-tight; font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; letter-spacing: -0.01em; font-size: clamp(1.75rem, 1.8vw + 0.9rem, 2rem); text-wrap: balance; }
+  .h3 { @apply font-semibold leading-tight; font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; letter-spacing: -0.01em; font-size: clamp(1.125rem, 1vw + 0.75rem, 1.5rem); }
+  .ui-stat-label { @apply text-white/70 text-sm font-semibold; }
+  .ui-stat-value { @apply text-white font-extrabold tabular-nums; }
+
+  .ui-progress-track { @apply bg-white/10 border border-white/10 rounded; }
+  .ui-progress-ap { @apply bg-gradient-to-r from-[#7C3AED] to-[#22D3EE]; }
+  .ui-progress-quest { @apply bg-gradient-to-r from-[#F5C84C] to-[#F59E0B]; }
+  .ui-progress-quest-done { @apply bg-gradient-to-r from-[#34D399] to-[#10B981]; }
+
+  .ui-button-primary {
+    @apply rounded-lg font-bold text-white border border-white/10 focus:outline-none focus:ring-2 transition-transform bg-indigo-500 hover:bg-indigo-400 shadow-sm focus:ring-indigo-300;
+  }
+  .ui-button-secondary {
+    @apply rounded-lg font-bold text-white/90 border border-white/15 bg-transparent hover:bg-white/5 focus:outline-none focus:ring-2 transition-transform focus:ring-emerald-300;
+  }
+
+  .ui-card-surface { @apply bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm; }
+  .raid-panel { @apply bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm; }
+  .ui-muted { @apply text-white/70; }
+  .ui-subtle { @apply text-white/60; }
+
+  /* Loot tier chips */
+  .tier-chip { @apply text-xs px-2 py-0.5 rounded-full border inline-block; }
+  .tier-chip-common { @apply border-white/15 text-white/70 bg-white/5; }
+  .tier-chip-uncommon { @apply border-emerald-300/40 text-emerald-300 bg-white/5; }
+  .tier-chip-rare { @apply border-blue-300/40 text-blue-300 bg-white/5; }
+  .tier-chip-legendary { @apply border-amber-300/40 text-amber-300 bg-white/5; }
+}
+
+/* DPS Meter text pulse effect */
+@keyframes text-shadow-pulse {
+  0%, 100% { text-shadow: 0 0 4px rgba(255, 255, 255, 0.3); }
+  50% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }
+}
+.text-shadow-pulse {
+  animation: text-shadow-pulse 0.5s ease-in-out;
+}
+
+/* Slower damage bar edge pulse */
+@keyframes damage-edge-pulse {
+  0%, 100% { 
+    opacity: 0.4;
+  }
+  50% { 
+    opacity: 0.8;
+  }
+}
+.animate-damage-pulse {
+  animation: damage-edge-pulse 2s ease-in-out infinite;
+}
+
+/* Floating animation for logo */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient background animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Grid pulse animation */
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+/* Subtle pulse for button */
+@keyframes subtle-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4), 0 2px 4px rgba(0,0,0,0.2);
+  }
+  50% { 
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5), 0 3px 6px rgba(0,0,0,0.3);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+/* Arcade button pulse animation for idle state */
+@keyframes arcade-glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 4px 0 #92400E, 0 6px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -2px 0 rgba(0,0,0,0.2);
+  }
+  50% { 
+    box-shadow: 0 4px 0 #92400E, 0 6px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -2px 0 rgba(0,0,0,0.2), 0 0 25px rgba(251, 191, 36, 0.4);
+  }
+}
+
+/* Button breathing animation */
+@keyframes button-breathe {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.01);
+  }
+}
+
+/* Shine sweep animation */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  20% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+/* Subtle pulse for level up text - GPU accelerated */
+@keyframes pulse-subtle {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1) translateZ(0);
+  }
+  50% { 
+    opacity: 0.85; 
+    transform: scale(1.02) translateZ(0);
+  }
+}
+
+/* Arrow bounce - GPU accelerated */
+@keyframes arrow-bounce {
+  0%, 100% { 
+    transform: translateX(0) translateZ(0);
+  }
+  50% { 
+    transform: translateX(8px) translateZ(0);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-arrow-bounce {
+  animation: arrow-bounce 1.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* AP bar shine effect */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shine {
+  animation: shine 2s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+/* Level up modal effects */
+@keyframes screen-shake {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2px, -2px); }
+  20% { transform: translate(2px, -1px); }
+  30% { transform: translate(-2px, 2px); }
+  40% { transform: translate(1px, -2px); }
+  50% { transform: translate(-1px, 1px); }
+  60% { transform: translate(2px, 1px); }
+  70% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 2px); }
+  90% { transform: translate(-2px, -1px); }
+}
+
+.screen-shake {
+  animation: screen-shake 0.5s ease-out;
+}
+
+@keyframes level-up-glow {
+  0%, 100% { 
+    text-shadow: 
+      0 0 20px rgba(250,204,21,0.8),
+      0 0 40px rgba(250,204,21,0.6),
+      0 0 60px rgba(250,204,21,0.4);
+  }
+  50% { 
+    text-shadow: 
+      0 0 30px rgba(250,204,21,1),
+      0 0 60px rgba(250,204,21,0.8),
+      0 0 90px rgba(250,204,21,0.6);
+  }
+}
+
+.level-up-glow {
+  animation: level-up-glow 2s ease-in-out infinite;
+}
+
+/* Simple float up animation for particles */
+@keyframes float-up-simple {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up-simple 4s ease-out infinite;
+}
+
+/* Level up modal particles - run once for performance */
+.animate-float-up-once {
+  animation: float-up-simple 3s ease-out forwards;
+}
+
+/* Fortnite-style level up animations - CSS only */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlam {
+  0% {
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.02) translateY(-3px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes levelUpSlam {
+  0% {
+    transform: scale(0.8) translateY(-30px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) translateY(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes levelSpin {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-modalSlam {
+  animation: modalSlam 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-levelUpSlam {
+  animation: levelUpSlam 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-levelSpin {
+  animation: levelSpin 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Additional Fortnite-style animations */
+@keyframes glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow-border {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-glow-border {
+  animation: glow-border 2s ease-in-out infinite;
+}
+
+/* ===================== MASTERY GRID TOOLTIPS ===================== */
+/* Tooltip CSS variables for consistency */
+.mastery-cell {
+  --tooltip-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  --tooltip-color: rgba(255, 255, 255, 0.95);
+  --tooltip-border: 1px solid rgba(148, 163, 184, 0.3);
+  --tooltip-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Info icon instant tooltip */
+.info-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.info-icon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background: rgba(15, 23, 42, 0.95);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: none;
+  white-space: nowrap;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  z-index: 1000;
+}
+
+/* Arrow */
+.info-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(15, 23, 42, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  z-index: 1001;
+}
+
+.info-icon:hover::before,
+.info-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mastery grid animations */
+@keyframes gentle-shine {
+  0%, 100% { 
+    filter: brightness(1);
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+  }
+  50% { 
+    filter: brightness(1.08);
+    box-shadow: 0 0 12px rgba(251, 191, 36, 0.5);
+  }
+}
+
+/* Gold damage bar shimmer */
+@keyframes gold-shimmer {
+  0%, 100% { 
+    filter: brightness(1);
+  }
+  50% { 
+    filter: brightness(1.2);
+  }
+}
+
+.animate-gentle-shine {
+  animation: gentle-shine 3s ease-in-out infinite;
+}
+
+/* Bronze rank glow effect - subtle warmth */
+@keyframes bronze-glow {
+  0%, 100% { 
+    filter: brightness(1) saturate(1);
+  }
+  50% { 
+    filter: brightness(1.08) saturate(1.15);
+  }
+}
+
+.animate-bronze-glow {
+  animation: bronze-glow 4s ease-in-out infinite;
+}
+
+/* Silver rank gleam effect - metallic shine */
+@keyframes silver-gleam {
+  0%, 100% { 
+    filter: brightness(1) contrast(1);
+  }
+  50% { 
+    filter: brightness(1.1) contrast(1.08);
+  }
+}
+
+.animate-silver-gleam {
+  animation: silver-gleam 3s ease-in-out infinite;
+}
+
+/* Diamond rank shimmer effect */
+@keyframes shimmer {
+  0%, 100% { 
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  50% { 
+    filter: brightness(1.12) hue-rotate(10deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Rank gem shine sweep */
+@keyframes rank-shine-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(300%) skewX(-12deg);
+  }
+}
+
+/* Different shine timing/intensity per rank */
+.bronze-shine {
+  animation: rank-shine-sweep 5s ease-in-out infinite;
+  animation-delay: 4s;
+  opacity: 0.7;
+}
+
+.silver-shine {
+  animation: rank-shine-sweep 4.5s ease-in-out infinite;
+  animation-delay: 3.5s;
+  opacity: 0.8;
+}
+
+.gold-shine {
+  animation: rank-shine-sweep 4s ease-in-out infinite;
+  animation-delay: 3s;
+  opacity: 0.9;
+}
+
+.diamond-shine {
+  animation: rank-shine-sweep 3.5s ease-in-out infinite;
+  animation-delay: 2.5s;
+  opacity: 0.9;
+}
+
+.legendary-rank-shine {
+  animation: rank-shine-sweep 3s ease-in-out infinite;
+  animation-delay: 2s;
+  opacity: 1;
+}
+
+/* Keep old rank-shine for backwards compatibility */
+.rank-shine {
+  animation: rank-shine-sweep 3s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+
+
+@keyframes pulse-subtle {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* Challenge boss legendary shimmer - purple/gold awe effect */
+@keyframes legendary-shimmer {
+  0%, 100% {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.2), 0 0 24px rgba(234, 179, 8, 0.1);
+  }
+  50% {
+    border-color: rgba(234, 179, 8, 0.6);
+    box-shadow: 0 0 16px rgba(234, 179, 8, 0.3), 0 0 32px rgba(168, 85, 247, 0.15);
+  }
+}
+
+.animate-legendary-shimmer {
+  animation: legendary-shimmer 3s ease-in-out infinite;
+}
+
+/* Beautiful instant tooltips for the multiplication grid */
+
+.mastery-cell {
+  position: relative;
+  
+  /* Custom properties for dynamic content styling */
+  --fact-size: 16px;
+  --status-size: 13px;
+  --stats-size: 12px;
+}
+
+/* Tooltip container */
+.mastery-cell::before {
+  /* Show data-tooltip if present, otherwise data-fact */
+  content: attr(data-tooltip) attr(data-fact);
+  
+  /* Positioning */
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Invisible by default */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+  /* Beautiful styling - using CSS variables */
+  padding: 14px 18px;
+  background: var(--tooltip-bg);
+  backdrop-filter: blur(12px);
+  color: var(--tooltip-color);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: none;
+  border-radius: 10px;
+  z-index: 9999;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Pretty border */
+  border: var(--tooltip-border);
+  box-shadow: var(--tooltip-shadow);
+  
+  /* Faster transitions for snappy hover on/off */
+  transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+/* Tooltip arrow */
+.mastery-cell::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Arrow shape */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(30, 41, 59, 0.95); /* Match tooltip bg opacity */
+  
+  /* Match visibility */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10000;
+  
+  /* Match faster transitions */
+  transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+/* Show on hover - instant! */
+.mastery-cell:hover::before,
+.mastery-cell:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Don't show tooltip for division facts with no data */
+.mastery-cell[data-stats=""]:not([data-fact]):hover::before,
+.mastery-cell[data-stats=""]:not([data-fact]):hover::after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Multi-line content for cells with stats */
+.mastery-cell[data-stats]:not([data-stats=""])::before {
+  content: attr(data-fact) "\A\A" attr(data-stats);
+  white-space: pre-line;
+  text-align: center;
+  min-width: 140px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+/* Division facts show stats only (no fact since it's visible in the pill) */
+.mastery-cell[data-stats]:not([data-stats=""]):not([data-fact])::before {
+  content: attr(data-stats);
+  white-space: pre-line;
+  text-align: center;
+  min-width: 140px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+/* Single line for unpracticed cells */
+.mastery-cell[data-accuracy=""][data-fact]:not([data-attempts])::before {
+  content: attr(data-fact);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+/* Multiplication facts with < 3 attempts - same as unpracticed */
+.mastery-cell[data-fact][data-attempts]:not([data-attempts=""])::before {
+  content: attr(data-fact);
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* Division tooltip rules removed - MasteryGrid uses unified tooltip system via data-stats */
+
+/* Subtle glow effect on cells that have tooltips with data */
+.mastery-cell[data-accuracy]:not([data-accuracy=""]):hover {
+  filter: brightness(1.1);
+}
+
+/* Top row cells show tooltip below */
+.mastery-cell.tooltip-below::before {
+  bottom: auto;
+  top: calc(100% + 8px);
+}
+
+.mastery-cell.tooltip-below::after {
+  bottom: auto;
+  top: calc(100% + 4px);
+  border-color: transparent transparent rgba(30, 41, 59, 0.95) transparent; /* Match tooltip bg */
+}
+
+/* Fade in animation for loading messages */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Timer bar classes - Direct DOM manipulation for 60fps */
+.timer-bar-fast {
+  background: linear-gradient(to right, rgba(16,185,129,0.6), rgba(16,185,129,0.4));
+  transition: width 16ms linear;
+  will-change: width;
+  transform: translateZ(0);
+}
+
+.timer-bar-medium {
+  background: linear-gradient(to right, rgba(251,191,36,0.6), rgba(245,158,11,0.4));
+  transition: width 16ms linear;
+  will-change: width;
+  transform: translateZ(0);
+}
+
+.timer-bar-slow {
+  background: linear-gradient(to right, rgba(239,68,68,0.4), rgba(249,115,22,0.4));
+  transition: width 16ms linear;
+  will-change: width;
+  transform: translateZ(0);
+}
+
+/* Rotating border selection effect - Fortnite/Valorant style */
+@keyframes border-rotate {
+  0% {
+    --border-angle: 0deg;
+  }
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.selected-border-glow {
+  position: relative;
+  border: 2px solid rgba(255,255,255,0.3);  /* Dimmer base so snake shows */
+  background-clip: padding-box;
+  box-shadow: 
+    0 0 20px rgba(255,255,255,0.2),
+    inset 0 0 15px rgba(255,255,255,0.05);
+}
+
+.selected-border-glow::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  padding: 3px;
+  /* Rotating snake highlight - now visible! */
+  background: conic-gradient(
+    from var(--border-angle),
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.5) 10%,
+    transparent 25%,
+    transparent 75%,
+    rgba(255,255,255,0.5) 90%,
+    rgba(255,255,255,1) 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-rotate 2s linear infinite;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Problem display: Cohesive entrance - subtle fade+scale wave */
+
+@keyframes problem-enter {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.9) translateY(6px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
+}
+
+/* Container: 200ms settle */
+.animate-problem-container {
+    animation: problem-enter 0.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+/* All elements: same animation, stagger via inline style in JSX */
+.animate-problem-operand,
+.animate-problem-operator,
+.animate-problem-equals,
+.animate-problem-question {
+    opacity: 0;
+    animation: problem-enter 0.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}

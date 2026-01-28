@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Purple gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b21a8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  
+  <!-- Rocket body -->
+  <path d="M32 12 L38 24 L38 40 L32 48 L26 40 L26 24 Z" 
+        fill="#fbbf24"/>
+  
+  <!-- Rocket fins -->
+  <path d="M26 32 L20 40 L26 38 M38 32 L44 40 L38 38" 
+        fill="#f59e0b"/>
+  
+  <!-- Rocket window -->
+  <circle cx="32" cy="24" r="4" fill="#60a5fa"/>
+  
+  <!-- Flame -->
+  <path d="M28 48 L32 56 L36 48" 
+        fill="#ef4444"/>
+</svg>
+
+
+
+
+
+
+
+
+
+

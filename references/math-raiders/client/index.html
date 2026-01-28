@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon-lightning.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Math Raiders - Epic Math Battles</title>
+        
+        <!-- Game fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&family=Bungee&family=Fredoka:wght@600;700&family=Orbitron:wght@700;900&family=Russo+One&family=Audiowide&display=swap" rel="stylesheet">
+        
+        <!-- Playcademy dev wrapper fixes -->
+        <script>
+            (function() {
+                if (window.parent !== window && window.parent.document) {
+                    try {
+                        const parentDoc = window.parent.document;
+                        
+                        const fixStatus = () => {
+                            if (!parentDoc.getElementById('status')) {
+                                const status = parentDoc.createElement('div');
+                                status.id = 'status';
+                                status.className = 'status';
+                                status.style.display = 'none';
+                                
+                                if (parentDoc.body) {
+                                    parentDoc.body.appendChild(status);
+                                    return true;
+                                }
+                            }
+                            return false;
+                        };
+                        
+                        const hideHeader = () => {
+                            const header = parentDoc.querySelector('header');
+                            if (header) {
+                                header.style.display = 'none';
+                                return true;
+                            }
+                            return false;
+                        };
+                        
+                        const applyFixes = () => {
+                            fixStatus();
+                            hideHeader();
+                        };
+                        
+                        // Try immediately
+                        applyFixes();
+                        
+                        // If elements don't exist yet, wait for them
+                        const observer = new MutationObserver(() => {
+                            if (applyFixes()) {
+                                observer.disconnect();
+                            }
+                        });
+                        observer.observe(parentDoc.documentElement, { childList: true, subtree: true });
+                        
+                        setTimeout(() => observer.disconnect(), 2000);
+                    } catch (e) {
+                        // Ignore - probably cross-origin
+                    }
+                }
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+</html>

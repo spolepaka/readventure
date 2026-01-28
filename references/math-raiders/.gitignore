@@ -1,0 +1,78 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.slndo you
+*.sw?
+
+# Production secrets
+docs/PRODUCTION.md
+
+# Environment files
+# Environment files (contain secrets)
+.env
+.env.*
+*.env
+*.env.*
+
+# EXCEPT .env.example files (templates, no secrets)
+!.env.example
+!*.env.example
+!**/.env.example
+
+# Specific patterns for clarity
+.env.local
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+
+# All worker env files
+worker/.env
+worker/.env.*
+!worker/.env.example
+
+# All admin env files
+admin/.env
+admin/.env.*
+!admin/.env.example
+
+academic-dashboard/.env
+academic-dashboard/.env.*
+!academic-dashboard/.env.example
+
+# Deploy scripts (contain server info)
+deploy.sh
+
+
+
+
+
+
+# Deployment artifacts (temporary zips created by deploy scripts)
+*.zip
+update-tunnel.sh
+*.csv
+pilot_report.txt
+
+# Large reference docs (re-export from WorkFlowy when needed)
+docs/academics-root.md
+docs/work-log.md
