@@ -1,2 +1,5 @@
 reading-question-qc/.env
 qb_extend_pipeline/.env
+
+# Reference files (credentials, large data files)
+course_builder/reference/
