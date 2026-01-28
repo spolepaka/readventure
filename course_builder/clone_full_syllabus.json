@@ -1,0 +1,4612 @@
+{
+  "course": {
+    "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f",
+    "status": "active",
+    "dateLastModified": "2026-01-21T20:38:59.833Z",
+    "metadata": {
+      "goals": {
+        "dailyXp": 25,
+        "dailyLessons": 1,
+        "dailyAccuracy": 80,
+        "dailyActiveMinutes": 25,
+        "dailyMasteredUnits": 2
+      },
+      "metrics": {
+        "totalXp": 1000
+      },
+      "AlphaLearn": {
+        "DailyXPGoal": 25
+      }
+    },
+    "title": "Readventure - Grade 3",
+    "academicSession": null,
+    "schoolYear": null,
+    "courseCode": "readventure-g3",
+    "grades": [
+      "3"
+    ],
+    "subjects": [
+      "Reading"
+    ],
+    "subjectCodes": [],
+    "org": {
+      "sourcedId": "PLAYCADEMY"
+    },
+    "level": "Elementary",
+    "gradingScheme": "STANDARD",
+    "resources": []
+  },
+  "subComponents": [
+    {
+      "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f",
+      "status": "active",
+      "title": "Classic Tales",
+      "sortOrder": 1,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_89c918d6_article_101001",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part I",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:14.067Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_89c918d6_article_101001",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:13.667Z",
+            "metadata": {
+              "sourcedId": "clone_89c918d6_article_101001",
+              "originalArticleId": "article_101001",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101001",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101001",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_0212e4a9_article_101002",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part II",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:14.705Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_0212e4a9_article_101002",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:14.264Z",
+            "metadata": {
+              "sourcedId": "clone_0212e4a9_article_101002",
+              "originalArticleId": "article_101002",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101002",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101002",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e2f6011b_article_101003",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part III",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:15.536Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_e2f6011b_article_101003",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:15.123Z",
+            "metadata": {
+              "sourcedId": "clone_e2f6011b_article_101003",
+              "originalArticleId": "article_101003",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101003",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101003",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f37d1ceb_article_101004",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part I",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:16.349Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_f37d1ceb_article_101004",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:15.953Z",
+            "metadata": {
+              "sourcedId": "clone_f37d1ceb_article_101004",
+              "originalArticleId": "article_101004",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101004",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101004",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9976c40c_article_101005",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part II",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:16.969Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_9976c40c_article_101005",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:16.563Z",
+            "metadata": {
+              "sourcedId": "clone_9976c40c_article_101005",
+              "originalArticleId": "article_101005",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101005",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101005",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_5f7ecdef_article_101006",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part III",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:17.572Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_5f7ecdef_article_101006",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:17.368Z",
+            "metadata": {
+              "sourcedId": "clone_5f7ecdef_article_101006",
+              "originalArticleId": "article_101006",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101006",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101006",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e28a7a26_article_101007",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part IV",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:18.401Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_e28a7a26_article_101007",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:17.983Z",
+            "metadata": {
+              "sourcedId": "clone_e28a7a26_article_101007",
+              "originalArticleId": "article_101007",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101007",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part IV",
+            "importance": "primary",
+            "vendorResourceId": "101007",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e6f7df42_article_101008",
+          "status": "active",
+          "title": "The Open Road, Part I",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:19.232Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_e6f7df42_article_101008",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:18.831Z",
+            "metadata": {
+              "sourcedId": "clone_e6f7df42_article_101008",
+              "originalArticleId": "article_101008",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101008",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101008",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_12c93810_article_101009",
+          "status": "active",
+          "title": "The Open Road, Part II",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:19.861Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_12c93810_article_101009",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:19.620Z",
+            "metadata": {
+              "sourcedId": "clone_12c93810_article_101009",
+              "originalArticleId": "article_101009",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101009",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101009",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_827cd539_article_101010",
+          "status": "active",
+          "title": "The Open Road, Part III",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:20.297Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_827cd539_article_101010",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:20.069Z",
+            "metadata": {
+              "sourcedId": "clone_827cd539_article_101010",
+              "originalArticleId": "article_101010",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101010",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101010",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3b248dd2_article_101011",
+          "status": "active",
+          "title": "The Open Road, Part IV",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:21.092Z",
+          "courseComponent": {
+            "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f"
+          },
+          "resource": {
+            "sourcedId": "clone_3b248dd2_article_101011",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:20.695Z",
+            "metadata": {
+              "sourcedId": "clone_3b248dd2_article_101011",
+              "originalArticleId": "article_101011",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101011",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part IV",
+            "importance": "primary",
+            "vendorResourceId": "101011",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f-component",
+      "status": "active",
+      "title": "Readventure - Grade 3 Activities",
+      "sortOrder": 1,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "prerequisiteCriteria": "ALL",
+      "componentResources": [
+        {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f-cr",
+          "status": "active",
+          "title": "",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-21T20:38:59.933Z",
+          "courseComponent": {
+            "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f-component"
+          },
+          "resource": {
+            "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f-resource",
+            "status": "active",
+            "dateLastModified": "2026-01-21T20:38:59.886Z",
+            "metadata": {
+              "playcademy": {
+                "mastery": {
+                  "masterableUnits": 10
+                }
+              },
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "interactive",
+              "subject": "Reading",
+              "grades": [
+                "3"
+              ],
+              "language": "en-US",
+              "xp": 1000,
+              "launchUrl": "https://hub.playcademy.net/play/readventure",
+              "toolProvider": "Readventure",
+              "instructionalMethod": "exploratory"
+            },
+            "title": "Readventure - Grade 3 Game",
+            "importance": "primary",
+            "vendorResourceId": "readventure",
+            "vendorId": "playcademy",
+            "type": "interactive"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29",
+      "status": "active",
+      "title": "Rattenborough's Guide to Animals",
+      "sortOrder": 2,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_f4133c2f_stimulus-ck-g3-3-u2-unit-intro",
+          "status": "active",
+          "title": "Introduction to 'Classic Tales'",
+          "sortOrder": 0,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:21.886Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_f4133c2f_stimulus-ck-g3-3-u2-unit-intro",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:21.684Z",
+            "metadata": {
+              "sourcedId": "clone_f4133c2f_stimulus-ck-g3-3-u2-unit-intro",
+              "originalArticleId": "stimulus-ck-g3-3-u2-unit-intro",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 15,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/stimulus-ck-g3-3-u2-unit-intro",
+              "questionType": "custom"
+            },
+            "title": "Introduction to 'Classic Tales'",
+            "importance": "primary",
+            "vendorResourceId": "2-unit-intro",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_1f9057d6_article_101012",
+          "status": "active",
+          "title": "Classifying Living Things",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:22.802Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_1f9057d6_article_101012",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:22.299Z",
+            "metadata": {
+              "sourcedId": "clone_1f9057d6_article_101012",
+              "originalArticleId": "article_101012",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101012",
+              "questionType": "custom"
+            },
+            "title": "Classifying Living Things",
+            "importance": "primary",
+            "vendorResourceId": "101012",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_df868441_article_101013",
+          "status": "active",
+          "title": "Warm-Blooded and Cold-Blooded Animals",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:23.501Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_df868441_article_101013",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:23.211Z",
+            "metadata": {
+              "sourcedId": "clone_df868441_article_101013",
+              "originalArticleId": "article_101013",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101013",
+              "questionType": "custom"
+            },
+            "title": "Warm-Blooded and Cold-Blooded Animals",
+            "importance": "primary",
+            "vendorResourceId": "101013",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3886a629_article_101014",
+          "status": "active",
+          "title": "Vertebrate or Invertebrate?",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:24.451Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_3886a629_article_101014",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:23.972Z",
+            "metadata": {
+              "sourcedId": "clone_3886a629_article_101014",
+              "originalArticleId": "article_101014",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101014",
+              "questionType": "custom"
+            },
+            "title": "Vertebrate or Invertebrate?",
+            "importance": "primary",
+            "vendorResourceId": "101014",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_344c4c9e_article_101015",
+          "status": "active",
+          "title": "Fish",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:25.099Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_344c4c9e_article_101015",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:24.687Z",
+            "metadata": {
+              "sourcedId": "clone_344c4c9e_article_101015",
+              "originalArticleId": "article_101015",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101015",
+              "questionType": "custom"
+            },
+            "title": "Fish",
+            "importance": "primary",
+            "vendorResourceId": "101015",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_ae10f14a_article_101016",
+          "status": "active",
+          "title": "Amphibians",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:26.057Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_ae10f14a_article_101016",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:25.632Z",
+            "metadata": {
+              "sourcedId": "clone_ae10f14a_article_101016",
+              "originalArticleId": "article_101016",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101016",
+              "questionType": "custom"
+            },
+            "title": "Amphibians",
+            "importance": "primary",
+            "vendorResourceId": "101016",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_0f17dcad_article_101017",
+          "status": "active",
+          "title": "Reptiles",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:26.910Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_0f17dcad_article_101017",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:26.461Z",
+            "metadata": {
+              "sourcedId": "clone_0f17dcad_article_101017",
+              "originalArticleId": "article_101017",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101017",
+              "questionType": "custom"
+            },
+            "title": "Reptiles",
+            "importance": "primary",
+            "vendorResourceId": "101017",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_be66b090_article_101018",
+          "status": "active",
+          "title": "Birds",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:27.390Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_be66b090_article_101018",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:27.148Z",
+            "metadata": {
+              "sourcedId": "clone_be66b090_article_101018",
+              "originalArticleId": "article_101018",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101018",
+              "questionType": "custom"
+            },
+            "title": "Birds",
+            "importance": "primary",
+            "vendorResourceId": "101018",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_df16c251_article_101019",
+          "status": "active",
+          "title": "Mammals",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:28.015Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_df16c251_article_101019",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:27.790Z",
+            "metadata": {
+              "sourcedId": "clone_df16c251_article_101019",
+              "originalArticleId": "article_101019",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101019",
+              "questionType": "custom"
+            },
+            "title": "Mammals",
+            "importance": "primary",
+            "vendorResourceId": "101019",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_534eaead_article_101020",
+          "status": "active",
+          "title": "Scientists Who Classify Animals",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:28.668Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_534eaead_article_101020",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:28.401Z",
+            "metadata": {
+              "sourcedId": "clone_534eaead_article_101020",
+              "originalArticleId": "article_101020",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101020",
+              "questionType": "custom"
+            },
+            "title": "Scientists Who Classify Animals",
+            "importance": "primary",
+            "vendorResourceId": "101020",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_06b6aa02_article_101021",
+          "status": "active",
+          "title": "Jane Goodall",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:29.133Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_06b6aa02_article_101021",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:28.914Z",
+            "metadata": {
+              "sourcedId": "clone_06b6aa02_article_101021",
+              "originalArticleId": "article_101021",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101021",
+              "questionType": "custom"
+            },
+            "title": "Jane Goodall",
+            "importance": "primary",
+            "vendorResourceId": "101021",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_09a2367a_article_101022",
+          "status": "active",
+          "title": "Deep-Sea Fish",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:29.984Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_09a2367a_article_101022",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:29.580Z",
+            "metadata": {
+              "sourcedId": "clone_09a2367a_article_101022",
+              "originalArticleId": "article_101022",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 8,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101022",
+              "questionType": "custom"
+            },
+            "title": "Deep-Sea Fish",
+            "importance": "primary",
+            "vendorResourceId": "101022",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3c48acdc_article_101023",
+          "status": "active",
+          "title": "Tree Frogs",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:30.663Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_3c48acdc_article_101023",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:30.250Z",
+            "metadata": {
+              "sourcedId": "clone_3c48acdc_article_101023",
+              "originalArticleId": "article_101023",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101023",
+              "questionType": "custom"
+            },
+            "title": "Tree Frogs",
+            "importance": "primary",
+            "vendorResourceId": "101023",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_076615b2_article_101024",
+          "status": "active",
+          "title": "The Komodo Dragon",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:31.469Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_076615b2_article_101024",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:31.058Z",
+            "metadata": {
+              "sourcedId": "clone_076615b2_article_101024",
+              "originalArticleId": "article_101024",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101024",
+              "questionType": "custom"
+            },
+            "title": "The Komodo Dragon",
+            "importance": "primary",
+            "vendorResourceId": "101024",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_5fc01e70_article_101025",
+          "status": "active",
+          "title": "Beavers",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:32.309Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_5fc01e70_article_101025",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:31.922Z",
+            "metadata": {
+              "sourcedId": "clone_5fc01e70_article_101025",
+              "originalArticleId": "article_101025",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 14,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101025",
+              "questionType": "custom"
+            },
+            "title": "Beavers",
+            "importance": "primary",
+            "vendorResourceId": "101025",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_1a56a02c_article_101026",
+          "status": "active",
+          "title": "Hummingbirds",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:32.764Z",
+          "courseComponent": {
+            "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29"
+          },
+          "resource": {
+            "sourcedId": "clone_1a56a02c_article_101026",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:32.505Z",
+            "metadata": {
+              "sourcedId": "clone_1a56a02c_article_101026",
+              "originalArticleId": "article_101026",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101026",
+              "questionType": "custom"
+            },
+            "title": "Hummingbirds",
+            "importance": "primary",
+            "vendorResourceId": "101026",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1",
+      "status": "active",
+      "title": "How Does Your Body Work?",
+      "sortOrder": 3,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_9b98457f_stimulus-ck-g3-3-u3-unit-intro",
+          "status": "active",
+          "title": "Introduction to 'How Does Your Body Work?'",
+          "sortOrder": 0,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:33.607Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_9b98457f_stimulus-ck-g3-3-u3-unit-intro",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:33.399Z",
+            "metadata": {
+              "sourcedId": "clone_9b98457f_stimulus-ck-g3-3-u3-unit-intro",
+              "originalArticleId": "stimulus-ck-g3-3-u3-unit-intro",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 15,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/stimulus-ck-g3-3-u3-unit-intro",
+              "questionType": "custom"
+            },
+            "title": "Introduction to 'How Does Your Body Work?'",
+            "importance": "primary",
+            "vendorResourceId": "3-unit-intro",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f67ced6b_article_101027",
+          "status": "active",
+          "title": "The Skeletal System",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:34.199Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_f67ced6b_article_101027",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:33.802Z",
+            "metadata": {
+              "sourcedId": "clone_f67ced6b_article_101027",
+              "originalArticleId": "article_101027",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101027",
+              "questionType": "custom"
+            },
+            "title": "The Skeletal System",
+            "importance": "primary",
+            "vendorResourceId": "101027",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_67d77981_article_101028",
+          "status": "active",
+          "title": "All About Bones",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:34.654Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_67d77981_article_101028",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:34.423Z",
+            "metadata": {
+              "sourcedId": "clone_67d77981_article_101028",
+              "originalArticleId": "article_101028",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101028",
+              "questionType": "custom"
+            },
+            "title": "All About Bones",
+            "importance": "primary",
+            "vendorResourceId": "101028",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_22abde3f_article_101029",
+          "status": "active",
+          "title": "The Muscular System",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:35.255Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_22abde3f_article_101029",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:34.847Z",
+            "metadata": {
+              "sourcedId": "clone_22abde3f_article_101029",
+              "originalArticleId": "article_101029",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101029",
+              "questionType": "custom"
+            },
+            "title": "The Muscular System",
+            "importance": "primary",
+            "vendorResourceId": "101029",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_89c1f1d6_article_101030",
+          "status": "active",
+          "title": "Joints and Muscles",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:35.911Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_89c1f1d6_article_101030",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:35.509Z",
+            "metadata": {
+              "sourcedId": "clone_89c1f1d6_article_101030",
+              "originalArticleId": "article_101030",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101030",
+              "questionType": "custom"
+            },
+            "title": "Joints and Muscles",
+            "importance": "primary",
+            "vendorResourceId": "101030",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9417d194_article_101031",
+          "status": "active",
+          "title": "The Nervous System",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:36.537Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_9417d194_article_101031",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:36.123Z",
+            "metadata": {
+              "sourcedId": "clone_9417d194_article_101031",
+              "originalArticleId": "article_101031",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101031",
+              "questionType": "custom"
+            },
+            "title": "The Nervous System",
+            "importance": "primary",
+            "vendorResourceId": "101031",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3fc00760_article_101032",
+          "status": "active",
+          "title": "The Spinal Cord and Brain",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:36.940Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_3fc00760_article_101032",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:36.751Z",
+            "metadata": {
+              "sourcedId": "clone_3fc00760_article_101032",
+              "originalArticleId": "article_101032",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101032",
+              "questionType": "custom"
+            },
+            "title": "The Spinal Cord and Brain",
+            "importance": "primary",
+            "vendorResourceId": "101032",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9066ed88_article_101033",
+          "status": "active",
+          "title": "Eyes and Vision",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:37.770Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_9066ed88_article_101033",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:37.345Z",
+            "metadata": {
+              "sourcedId": "clone_9066ed88_article_101033",
+              "originalArticleId": "article_101033",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101033",
+              "questionType": "custom"
+            },
+            "title": "Eyes and Vision",
+            "importance": "primary",
+            "vendorResourceId": "101033",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_5ed36008_article_101034",
+          "status": "active",
+          "title": "Vision Problems, Vision Solutions",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:38.370Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_5ed36008_article_101034",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:37.973Z",
+            "metadata": {
+              "sourcedId": "clone_5ed36008_article_101034",
+              "originalArticleId": "article_101034",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 15,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101034",
+              "questionType": "custom"
+            },
+            "title": "Vision Problems, Vision Solutions",
+            "importance": "primary",
+            "vendorResourceId": "101034",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e3e90c13_article_101035",
+          "status": "active",
+          "title": "Ears and Hearing",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:38.978Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_e3e90c13_article_101035",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:38.757Z",
+            "metadata": {
+              "sourcedId": "clone_e3e90c13_article_101035",
+              "originalArticleId": "article_101035",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101035",
+              "questionType": "custom"
+            },
+            "title": "Ears and Hearing",
+            "importance": "primary",
+            "vendorResourceId": "101035",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f6cb1e61_article_101036",
+          "status": "active",
+          "title": "Overcoming Disabilities, Part I",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:39.770Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_f6cb1e61_article_101036",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:39.362Z",
+            "metadata": {
+              "sourcedId": "clone_f6cb1e61_article_101036",
+              "originalArticleId": "article_101036",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101036",
+              "questionType": "custom"
+            },
+            "title": "Overcoming Disabilities, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101036",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_39fe3746_article_101037",
+          "status": "active",
+          "title": "Overcoming Disabilities, Part II",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:40.232Z",
+          "courseComponent": {
+            "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1"
+          },
+          "resource": {
+            "sourcedId": "clone_39fe3746_article_101037",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:40.008Z",
+            "metadata": {
+              "sourcedId": "clone_39fe3746_article_101037",
+              "originalArticleId": "article_101037",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101037",
+              "questionType": "custom"
+            },
+            "title": "Overcoming Disabilities, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101037",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a",
+      "status": "active",
+      "title": "Stories of Ancient Rome",
+      "sortOrder": 4,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_1d284a68_article_101038",
+          "status": "active",
+          "title": "Rome, Then and Now",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:41.039Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_1d284a68_article_101038",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:40.834Z",
+            "metadata": {
+              "sourcedId": "clone_1d284a68_article_101038",
+              "originalArticleId": "article_101038",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101038",
+              "questionType": "custom"
+            },
+            "title": "Rome, Then and Now",
+            "importance": "primary",
+            "vendorResourceId": "101038",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_efe3f11b_article_101039",
+          "status": "active",
+          "title": "The Legend of Romulus and Remus",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:41.826Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_efe3f11b_article_101039",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:41.425Z",
+            "metadata": {
+              "sourcedId": "clone_efe3f11b_article_101039",
+              "originalArticleId": "article_101039",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101039",
+              "questionType": "custom"
+            },
+            "title": "The Legend of Romulus and Remus",
+            "importance": "primary",
+            "vendorResourceId": "101039",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d3c2c7ba_article_101040",
+          "status": "active",
+          "title": "The Roman Gods and Goddesses, Part I",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:42.621Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_d3c2c7ba_article_101040",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:42.218Z",
+            "metadata": {
+              "sourcedId": "clone_d3c2c7ba_article_101040",
+              "originalArticleId": "article_101040",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101040",
+              "questionType": "custom"
+            },
+            "title": "The Roman Gods and Goddesses, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101040",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_869a41d1_article_101041",
+          "status": "active",
+          "title": "The Roman Gods and Goddesses, Part II",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:43.538Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_869a41d1_article_101041",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:43.029Z",
+            "metadata": {
+              "sourcedId": "clone_869a41d1_article_101041",
+              "originalArticleId": "article_101041",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101041",
+              "questionType": "custom"
+            },
+            "title": "The Roman Gods and Goddesses, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101041",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_fa184f72_article_101042",
+          "status": "active",
+          "title": "Cupid and Psyche, Part I",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:43.994Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_fa184f72_article_101042",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:43.782Z",
+            "metadata": {
+              "sourcedId": "clone_fa184f72_article_101042",
+              "originalArticleId": "article_101042",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101042",
+              "questionType": "custom"
+            },
+            "title": "Cupid and Psyche, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101042",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_467be15b_article_101043",
+          "status": "active",
+          "title": "Cupid and Psyche, Part II",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:44.790Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_467be15b_article_101043",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:44.398Z",
+            "metadata": {
+              "sourcedId": "clone_467be15b_article_101043",
+              "originalArticleId": "article_101043",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101043",
+              "questionType": "custom"
+            },
+            "title": "Cupid and Psyche, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101043",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_32bcee9d_article_101044",
+          "status": "active",
+          "title": "The Sword of Damocles",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:45.205Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_32bcee9d_article_101044",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:44.995Z",
+            "metadata": {
+              "sourcedId": "clone_32bcee9d_article_101044",
+              "originalArticleId": "article_101044",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101044",
+              "questionType": "custom"
+            },
+            "title": "The Sword of Damocles",
+            "importance": "primary",
+            "vendorResourceId": "101044",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_ce8a15a3_article_101045",
+          "status": "active",
+          "title": "The Roman Republic",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:45.630Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_ce8a15a3_article_101045",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:45.427Z",
+            "metadata": {
+              "sourcedId": "clone_ce8a15a3_article_101045",
+              "originalArticleId": "article_101045",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101045",
+              "questionType": "custom"
+            },
+            "title": "The Roman Republic",
+            "importance": "primary",
+            "vendorResourceId": "101045",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_7aecba80_article_101046",
+          "status": "active",
+          "title": "Hannibal Crosses the Alps",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:46.486Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_7aecba80_article_101046",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:46.054Z",
+            "metadata": {
+              "sourcedId": "clone_7aecba80_article_101046",
+              "originalArticleId": "article_101046",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101046",
+              "questionType": "custom"
+            },
+            "title": "Hannibal Crosses the Alps",
+            "importance": "primary",
+            "vendorResourceId": "101046",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_91fcc916_article_101047",
+          "status": "active",
+          "title": "Julius Caesar: Great Fighter, Great Writer",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:47.354Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_91fcc916_article_101047",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:46.944Z",
+            "metadata": {
+              "sourcedId": "clone_91fcc916_article_101047",
+              "originalArticleId": "article_101047",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101047",
+              "questionType": "custom"
+            },
+            "title": "Julius Caesar: Great Fighter, Great Writer",
+            "importance": "primary",
+            "vendorResourceId": "101047",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_feb33e6d_article_101048",
+          "status": "active",
+          "title": "Julius Caesar: Crossing the Rubicon",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:47.780Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_feb33e6d_article_101048",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:47.557Z",
+            "metadata": {
+              "sourcedId": "clone_feb33e6d_article_101048",
+              "originalArticleId": "article_101048",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101048",
+              "questionType": "custom"
+            },
+            "title": "Julius Caesar: Crossing the Rubicon",
+            "importance": "primary",
+            "vendorResourceId": "101048",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_2533d500_article_101049",
+          "status": "active",
+          "title": "After Caesar: Augustus and the Roman Empire",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:48.398Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_2533d500_article_101049",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:48.186Z",
+            "metadata": {
+              "sourcedId": "clone_2533d500_article_101049",
+              "originalArticleId": "article_101049",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101049",
+              "questionType": "custom"
+            },
+            "title": "After Caesar: Augustus and the Roman Empire",
+            "importance": "primary",
+            "vendorResourceId": "101049",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_af6ac8e8_article_101050",
+          "status": "active",
+          "title": "Androcles and the Lion",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:49.203Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_af6ac8e8_article_101050",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:48.798Z",
+            "metadata": {
+              "sourcedId": "clone_af6ac8e8_article_101050",
+              "originalArticleId": "article_101050",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101050",
+              "questionType": "custom"
+            },
+            "title": "Androcles and the Lion",
+            "importance": "primary",
+            "vendorResourceId": "101050",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d4700e73_article_101051",
+          "status": "active",
+          "title": "The Rise of Christianity",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:49.831Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_d4700e73_article_101051",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:49.607Z",
+            "metadata": {
+              "sourcedId": "clone_d4700e73_article_101051",
+              "originalArticleId": "article_101051",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101051",
+              "questionType": "custom"
+            },
+            "title": "The Rise of Christianity",
+            "importance": "primary",
+            "vendorResourceId": "101051",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_4c081f0f_article_101052",
+          "status": "active",
+          "title": "The Second Rome: From Constantine to Justinian",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:50.645Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_4c081f0f_article_101052",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:50.243Z",
+            "metadata": {
+              "sourcedId": "clone_4c081f0f_article_101052",
+              "originalArticleId": "article_101052",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101052",
+              "questionType": "custom"
+            },
+            "title": "The Second Rome: From Constantine to Justinian",
+            "importance": "primary",
+            "vendorResourceId": "101052",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f40b448a_article_101053",
+          "status": "active",
+          "title": "Pompeii",
+          "sortOrder": 16,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:51.493Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_f40b448a_article_101053",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:51.068Z",
+            "metadata": {
+              "sourcedId": "clone_f40b448a_article_101053",
+              "originalArticleId": "article_101053",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101053",
+              "questionType": "custom"
+            },
+            "title": "Pompeii",
+            "importance": "primary",
+            "vendorResourceId": "101053",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_c7efea08_article_101054",
+          "status": "active",
+          "title": "How Horatius Held the Bridge",
+          "sortOrder": 17,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:52.359Z",
+          "courseComponent": {
+            "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a"
+          },
+          "resource": {
+            "sourcedId": "clone_c7efea08_article_101054",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:51.935Z",
+            "metadata": {
+              "sourcedId": "clone_c7efea08_article_101054",
+              "originalArticleId": "article_101054",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101054",
+              "questionType": "custom"
+            },
+            "title": "How Horatius Held the Bridge",
+            "importance": "primary",
+            "vendorResourceId": "101054",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877",
+      "status": "active",
+      "title": "Adventures in Light and Sound",
+      "sortOrder": 5,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_bfe469b2_article_101055",
+          "status": "active",
+          "title": "What Is Light?",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:53.207Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_bfe469b2_article_101055",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:53.002Z",
+            "metadata": {
+              "sourcedId": "clone_bfe469b2_article_101055",
+              "originalArticleId": "article_101055",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101055",
+              "questionType": "custom"
+            },
+            "title": "What Is Light?",
+            "importance": "primary",
+            "vendorResourceId": "101055",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_b58cf971_article_101056",
+          "status": "active",
+          "title": "How Are Shadows Made?",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:53.632Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_b58cf971_article_101056",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:53.430Z",
+            "metadata": {
+              "sourcedId": "clone_b58cf971_article_101056",
+              "originalArticleId": "article_101056",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101056",
+              "questionType": "custom"
+            },
+            "title": "How Are Shadows Made?",
+            "importance": "primary",
+            "vendorResourceId": "101056",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_a90a86db_article_101057",
+          "status": "active",
+          "title": "Mirrors and Reflections",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:54.224Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_a90a86db_article_101057",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:54.028Z",
+            "metadata": {
+              "sourcedId": "clone_a90a86db_article_101057",
+              "originalArticleId": "article_101057",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101057",
+              "questionType": "custom"
+            },
+            "title": "Mirrors and Reflections",
+            "importance": "primary",
+            "vendorResourceId": "101057",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_c7121764_article_101058",
+          "status": "active",
+          "title": "Refraction and Lenses",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:54.819Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_c7121764_article_101058",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:54.441Z",
+            "metadata": {
+              "sourcedId": "clone_c7121764_article_101058",
+              "originalArticleId": "article_101058",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101058",
+              "questionType": "custom"
+            },
+            "title": "Refraction and Lenses",
+            "importance": "primary",
+            "vendorResourceId": "101058",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_c413a713_article_101059",
+          "status": "active",
+          "title": "Color and Light",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:55.637Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_c413a713_article_101059",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:55.226Z",
+            "metadata": {
+              "sourcedId": "clone_c413a713_article_101059",
+              "originalArticleId": "article_101059",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101059",
+              "questionType": "custom"
+            },
+            "title": "Color and Light",
+            "importance": "primary",
+            "vendorResourceId": "101059",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_a2c50946_article_101060",
+          "status": "active",
+          "title": "What Is Sound?",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:56.462Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_a2c50946_article_101060",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:56.047Z",
+            "metadata": {
+              "sourcedId": "clone_a2c50946_article_101060",
+              "originalArticleId": "article_101060",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101060",
+              "questionType": "custom"
+            },
+            "title": "What Is Sound?",
+            "importance": "primary",
+            "vendorResourceId": "101060",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_80775fdb_article_101061",
+          "status": "active",
+          "title": "Characteristics of Sound",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:57.264Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_80775fdb_article_101061",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:56.851Z",
+            "metadata": {
+              "sourcedId": "clone_80775fdb_article_101061",
+              "originalArticleId": "article_101061",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101061",
+              "questionType": "custom"
+            },
+            "title": "Characteristics of Sound",
+            "importance": "primary",
+            "vendorResourceId": "101061",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9cdbca33_article_101062",
+          "status": "active",
+          "title": "The Human Voice",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:57.922Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_9cdbca33_article_101062",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:57.524Z",
+            "metadata": {
+              "sourcedId": "clone_9cdbca33_article_101062",
+              "originalArticleId": "article_101062",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101062",
+              "questionType": "custom"
+            },
+            "title": "The Human Voice",
+            "importance": "primary",
+            "vendorResourceId": "101062",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9d20cfe8_article_101063",
+          "status": "active",
+          "title": "Light and Photography",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:58.535Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_9d20cfe8_article_101063",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:58.139Z",
+            "metadata": {
+              "sourcedId": "clone_9d20cfe8_article_101063",
+              "originalArticleId": "article_101063",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101063",
+              "questionType": "custom"
+            },
+            "title": "Light and Photography",
+            "importance": "primary",
+            "vendorResourceId": "101063",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_edf3de3c_article_101064",
+          "status": "active",
+          "title": "Alexander Graham Bell, Part I",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:59.161Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_edf3de3c_article_101064",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:58.751Z",
+            "metadata": {
+              "sourcedId": "clone_edf3de3c_article_101064",
+              "originalArticleId": "article_101064",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101064",
+              "questionType": "custom"
+            },
+            "title": "Alexander Graham Bell, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101064",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f987eef3_article_101065",
+          "status": "active",
+          "title": "Alexander Graham Bell, Part II",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:51:59.976Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_f987eef3_article_101065",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:51:59.566Z",
+            "metadata": {
+              "sourcedId": "clone_f987eef3_article_101065",
+              "originalArticleId": "article_101065",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101065",
+              "questionType": "custom"
+            },
+            "title": "Alexander Graham Bell, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101065",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e8c54e0b_article_101066",
+          "status": "active",
+          "title": "Thomas Edison: The Wizard of Menlo Park",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:00.404Z",
+          "courseComponent": {
+            "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877"
+          },
+          "resource": {
+            "sourcedId": "clone_e8c54e0b_article_101066",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:00.203Z",
+            "metadata": {
+              "sourcedId": "clone_e8c54e0b_article_101066",
+              "originalArticleId": "article_101066",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101066",
+              "questionType": "custom"
+            },
+            "title": "Thomas Edison: The Wizard of Menlo Park",
+            "importance": "primary",
+            "vendorResourceId": "101066",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54",
+      "status": "active",
+      "title": "Gods, Giants, and Dwarves",
+      "sortOrder": 6,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_45cec66e_article_101067",
+          "status": "active",
+          "title": "Sif\u2019s Golden Hair",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:01.396Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_45cec66e_article_101067",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:01.000Z",
+            "metadata": {
+              "sourcedId": "clone_45cec66e_article_101067",
+              "originalArticleId": "article_101067",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101067",
+              "questionType": "custom"
+            },
+            "title": "Sif\u2019s Golden Hair",
+            "importance": "primary",
+            "vendorResourceId": "101067",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_616861ad_article_101068",
+          "status": "active",
+          "title": "Loki and the Dwarves",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:01.840Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_616861ad_article_101068",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:01.594Z",
+            "metadata": {
+              "sourcedId": "clone_616861ad_article_101068",
+              "originalArticleId": "article_101068",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101068",
+              "questionType": "custom"
+            },
+            "title": "Loki and the Dwarves",
+            "importance": "primary",
+            "vendorResourceId": "101068",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_12a70a42_article_101069",
+          "status": "active",
+          "title": "Stolen Thunder",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:02.638Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_12a70a42_article_101069",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:02.239Z",
+            "metadata": {
+              "sourcedId": "clone_12a70a42_article_101069",
+              "originalArticleId": "article_101069",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101069",
+              "questionType": "custom"
+            },
+            "title": "Stolen Thunder",
+            "importance": "primary",
+            "vendorResourceId": "101069",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_eaf569d7_article_101070",
+          "status": "active",
+          "title": "A Plan Is Made",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:03.214Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_eaf569d7_article_101070",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:02.837Z",
+            "metadata": {
+              "sourcedId": "clone_eaf569d7_article_101070",
+              "originalArticleId": "article_101070",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101070",
+              "questionType": "custom"
+            },
+            "title": "A Plan Is Made",
+            "importance": "primary",
+            "vendorResourceId": "101070",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_8a5f601f_article_101071",
+          "status": "active",
+          "title": "The Wedding Feast",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:03.997Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_8a5f601f_article_101071",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:03.617Z",
+            "metadata": {
+              "sourcedId": "clone_8a5f601f_article_101071",
+              "originalArticleId": "article_101071",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101071",
+              "questionType": "custom"
+            },
+            "title": "The Wedding Feast",
+            "importance": "primary",
+            "vendorResourceId": "101071",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_03b0fb69_article_101072",
+          "status": "active",
+          "title": "Balder, the Beautiful",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:04.607Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_03b0fb69_article_101072",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:04.404Z",
+            "metadata": {
+              "sourcedId": "clone_03b0fb69_article_101072",
+              "originalArticleId": "article_101072",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101072",
+              "questionType": "custom"
+            },
+            "title": "Balder, the Beautiful",
+            "importance": "primary",
+            "vendorResourceId": "101072",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_79df85cd_article_101073",
+          "status": "active",
+          "title": "The Death of Balder",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:05.054Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_79df85cd_article_101073",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:04.854Z",
+            "metadata": {
+              "sourcedId": "clone_79df85cd_article_101073",
+              "originalArticleId": "article_101073",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101073",
+              "questionType": "custom"
+            },
+            "title": "The Death of Balder",
+            "importance": "primary",
+            "vendorResourceId": "101073",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_19b2500c_article_101074",
+          "status": "active",
+          "title": "Loki\u2019s Punishment",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:05.639Z",
+          "courseComponent": {
+            "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54"
+          },
+          "resource": {
+            "sourcedId": "clone_19b2500c_article_101074",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:05.251Z",
+            "metadata": {
+              "sourcedId": "clone_19b2500c_article_101074",
+              "originalArticleId": "article_101074",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101074",
+              "questionType": "custom"
+            },
+            "title": "Loki\u2019s Punishment",
+            "importance": "primary",
+            "vendorResourceId": "101074",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95",
+      "status": "active",
+      "title": "What's in Our Universe?",
+      "sortOrder": 7,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_1180111a_article_101075",
+          "status": "active",
+          "title": "The Sun, Earth, and Our Solar System",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:06.206Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_1180111a_article_101075",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:06.015Z",
+            "metadata": {
+              "sourcedId": "clone_1180111a_article_101075",
+              "originalArticleId": "article_101075",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101075",
+              "questionType": "custom"
+            },
+            "title": "The Sun, Earth, and Our Solar System",
+            "importance": "primary",
+            "vendorResourceId": "101075",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_9bdeddb6_article_101076",
+          "status": "active",
+          "title": "The Moon",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:06.806Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_9bdeddb6_article_101076",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:06.599Z",
+            "metadata": {
+              "sourcedId": "clone_9bdeddb6_article_101076",
+              "originalArticleId": "article_101076",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101076",
+              "questionType": "custom"
+            },
+            "title": "The Moon",
+            "importance": "primary",
+            "vendorResourceId": "101076",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d77a5f5f_article_101077",
+          "status": "active",
+          "title": "The Planets Closest to the Sun: Mercury, Venus, Earth, and Mars",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:07.410Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_d77a5f5f_article_101077",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:07.203Z",
+            "metadata": {
+              "sourcedId": "clone_d77a5f5f_article_101077",
+              "originalArticleId": "article_101077",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101077",
+              "questionType": "custom"
+            },
+            "title": "The Planets Closest to the Sun: Mercury, Venus, Earth, and Mars",
+            "importance": "primary",
+            "vendorResourceId": "101077",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d996d783_article_101078",
+          "status": "active",
+          "title": "The Outer Planets: Jupiter, Saturn, Uranus, and Neptune",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:08.027Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_d996d783_article_101078",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:07.600Z",
+            "metadata": {
+              "sourcedId": "clone_d996d783_article_101078",
+              "originalArticleId": "article_101078",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101078",
+              "questionType": "custom"
+            },
+            "title": "The Outer Planets: Jupiter, Saturn, Uranus, and Neptune",
+            "importance": "primary",
+            "vendorResourceId": "101078",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_290b1f7e_article_101079",
+          "status": "active",
+          "title": "Asteroids, Comets, and Meteors",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:08.716Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_290b1f7e_article_101079",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:08.510Z",
+            "metadata": {
+              "sourcedId": "clone_290b1f7e_article_101079",
+              "originalArticleId": "article_101079",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101079",
+              "questionType": "custom"
+            },
+            "title": "Asteroids, Comets, and Meteors",
+            "importance": "primary",
+            "vendorResourceId": "101079",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_b56b698c_article_101080",
+          "status": "active",
+          "title": "Galaxies and Stars",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:09.327Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_b56b698c_article_101080",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:08.922Z",
+            "metadata": {
+              "sourcedId": "clone_b56b698c_article_101080",
+              "originalArticleId": "article_101080",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101080",
+              "questionType": "custom"
+            },
+            "title": "Galaxies and Stars",
+            "importance": "primary",
+            "vendorResourceId": "101080",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_823d2732_article_101081",
+          "status": "active",
+          "title": "Constellations",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:09.951Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_823d2732_article_101081",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:09.733Z",
+            "metadata": {
+              "sourcedId": "clone_823d2732_article_101081",
+              "originalArticleId": "article_101081",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101081",
+              "questionType": "custom"
+            },
+            "title": "Constellations",
+            "importance": "primary",
+            "vendorResourceId": "101081",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3b51b351_article_101082",
+          "status": "active",
+          "title": "Exploring Space",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:10.340Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_3b51b351_article_101082",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:10.151Z",
+            "metadata": {
+              "sourcedId": "clone_3b51b351_article_101082",
+              "originalArticleId": "article_101082",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101082",
+              "questionType": "custom"
+            },
+            "title": "Exploring Space",
+            "importance": "primary",
+            "vendorResourceId": "101082",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_56ac5527_article_101083",
+          "status": "active",
+          "title": "A Walk on the Moon",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:11.106Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_56ac5527_article_101083",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:10.722Z",
+            "metadata": {
+              "sourcedId": "clone_56ac5527_article_101083",
+              "originalArticleId": "article_101083",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101083",
+              "questionType": "custom"
+            },
+            "title": "A Walk on the Moon",
+            "importance": "primary",
+            "vendorResourceId": "101083",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_69715b72_article_101084",
+          "status": "active",
+          "title": "What\u2019s it Like in Space?",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:11.719Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_69715b72_article_101084",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:11.323Z",
+            "metadata": {
+              "sourcedId": "clone_69715b72_article_101084",
+              "originalArticleId": "article_101084",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101084",
+              "questionType": "custom"
+            },
+            "title": "What\u2019s it Like in Space?",
+            "importance": "primary",
+            "vendorResourceId": "101084",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_4d2b13a3_article_101085",
+          "status": "active",
+          "title": "The Space Shuttle",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:12.317Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_4d2b13a3_article_101085",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:12.106Z",
+            "metadata": {
+              "sourcedId": "clone_4d2b13a3_article_101085",
+              "originalArticleId": "article_101085",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101085",
+              "questionType": "custom"
+            },
+            "title": "The Space Shuttle",
+            "importance": "primary",
+            "vendorResourceId": "101085",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_29acc4d5_article_101086",
+          "status": "active",
+          "title": "The International Space Station",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:12.723Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_29acc4d5_article_101086",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:12.536Z",
+            "metadata": {
+              "sourcedId": "clone_29acc4d5_article_101086",
+              "originalArticleId": "article_101086",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101086",
+              "questionType": "custom"
+            },
+            "title": "The International Space Station",
+            "importance": "primary",
+            "vendorResourceId": "101086",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_74e3520f_article_101087",
+          "status": "active",
+          "title": "Dr. Mae Jemison",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:13.516Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_74e3520f_article_101087",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:13.105Z",
+            "metadata": {
+              "sourcedId": "clone_74e3520f_article_101087",
+              "originalArticleId": "article_101087",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101087",
+              "questionType": "custom"
+            },
+            "title": "Dr. Mae Jemison",
+            "importance": "primary",
+            "vendorResourceId": "101087",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_dba2f7ff_article_101088",
+          "status": "active",
+          "title": "Nicolaus Copernicus",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:14.324Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_dba2f7ff_article_101088",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:13.921Z",
+            "metadata": {
+              "sourcedId": "clone_dba2f7ff_article_101088",
+              "originalArticleId": "article_101088",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101088",
+              "questionType": "custom"
+            },
+            "title": "Nicolaus Copernicus",
+            "importance": "primary",
+            "vendorResourceId": "101088",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_7f8652d5_article_101089",
+          "status": "active",
+          "title": "The Big Bang",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:15.099Z",
+          "courseComponent": {
+            "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95"
+          },
+          "resource": {
+            "sourcedId": "clone_7f8652d5_article_101089",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:14.712Z",
+            "metadata": {
+              "sourcedId": "clone_7f8652d5_article_101089",
+              "originalArticleId": "article_101089",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101089",
+              "questionType": "custom"
+            },
+            "title": "The Big Bang",
+            "importance": "primary",
+            "vendorResourceId": "101089",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0",
+      "status": "active",
+      "title": "Native American Stories",
+      "sortOrder": 8,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_adfd524d_article_101090",
+          "status": "active",
+          "title": "Etu, the Hunter",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:15.814Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_adfd524d_article_101090",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:15.590Z",
+            "metadata": {
+              "sourcedId": "clone_adfd524d_article_101090",
+              "originalArticleId": "article_101090",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101090",
+              "questionType": "custom"
+            },
+            "title": "Etu, the Hunter",
+            "importance": "primary",
+            "vendorResourceId": "101090",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f9073fb8_article_101091",
+          "status": "active",
+          "title": "Adoette and Awan, the Bird Chasers",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:16.435Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_f9073fb8_article_101091",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:16.225Z",
+            "metadata": {
+              "sourcedId": "clone_f9073fb8_article_101091",
+              "originalArticleId": "article_101091",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101091",
+              "questionType": "custom"
+            },
+            "title": "Adoette and Awan, the Bird Chasers",
+            "importance": "primary",
+            "vendorResourceId": "101091",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_74db6fb4_article_101092",
+          "status": "active",
+          "title": "Akando and Aponi, the Gatherers",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:16.850Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_74db6fb4_article_101092",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:16.655Z",
+            "metadata": {
+              "sourcedId": "clone_74db6fb4_article_101092",
+              "originalArticleId": "article_101092",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101092",
+              "questionType": "custom"
+            },
+            "title": "Akando and Aponi, the Gatherers",
+            "importance": "primary",
+            "vendorResourceId": "101092",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_02f67396_article_101093",
+          "status": "active",
+          "title": "Alemeda, the Basket Weaver",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:17.648Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_02f67396_article_101093",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:17.254Z",
+            "metadata": {
+              "sourcedId": "clone_02f67396_article_101093",
+              "originalArticleId": "article_101093",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101093",
+              "questionType": "custom"
+            },
+            "title": "Alemeda, the Basket Weaver",
+            "importance": "primary",
+            "vendorResourceId": "101093",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_725a8f99_article_101094",
+          "status": "active",
+          "title": "Alo, the Spirit Giver",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:18.252Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_725a8f99_article_101094",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:18.061Z",
+            "metadata": {
+              "sourcedId": "clone_725a8f99_article_101094",
+              "originalArticleId": "article_101094",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101094",
+              "questionType": "custom"
+            },
+            "title": "Alo, the Spirit Giver",
+            "importance": "primary",
+            "vendorResourceId": "101094",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_a069c0a0_article_101095",
+          "status": "active",
+          "title": "Meda and Flo, the Forest Children",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:18.658Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_a069c0a0_article_101095",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:18.458Z",
+            "metadata": {
+              "sourcedId": "clone_a069c0a0_article_101095",
+              "originalArticleId": "article_101095",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101095",
+              "questionType": "custom"
+            },
+            "title": "Meda and Flo, the Forest Children",
+            "importance": "primary",
+            "vendorResourceId": "101095",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_20ddc132_article_101096",
+          "status": "active",
+          "title": "Yutu, the Dog Trainer",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:19.271Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_20ddc132_article_101096",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:19.040Z",
+            "metadata": {
+              "sourcedId": "clone_20ddc132_article_101096",
+              "originalArticleId": "article_101096",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101096",
+              "questionType": "custom"
+            },
+            "title": "Yutu, the Dog Trainer",
+            "importance": "primary",
+            "vendorResourceId": "101096",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_18ff4f57_article_101097",
+          "status": "active",
+          "title": "Salali, Dustu, and the Festival of Hope",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:19.684Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_18ff4f57_article_101097",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:19.475Z",
+            "metadata": {
+              "sourcedId": "clone_18ff4f57_article_101097",
+              "originalArticleId": "article_101097",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101097",
+              "questionType": "custom"
+            },
+            "title": "Salali, Dustu, and the Festival of Hope",
+            "importance": "primary",
+            "vendorResourceId": "101097",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_cc1757c8_article_101098",
+          "status": "active",
+          "title": "The Hunting of the Great Bear: An Iroquois Tale",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:20.300Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_cc1757c8_article_101098",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:20.088Z",
+            "metadata": {
+              "sourcedId": "clone_cc1757c8_article_101098",
+              "originalArticleId": "article_101098",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101098",
+              "questionType": "custom"
+            },
+            "title": "The Hunting of the Great Bear: An Iroquois Tale",
+            "importance": "primary",
+            "vendorResourceId": "101098",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_f395de21_article_101099",
+          "status": "active",
+          "title": "Crow Brings the Daylight: An Inuit Myth",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:20.910Z",
+          "courseComponent": {
+            "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0"
+          },
+          "resource": {
+            "sourcedId": "clone_f395de21_article_101099",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:20.710Z",
+            "metadata": {
+              "sourcedId": "clone_f395de21_article_101099",
+              "originalArticleId": "article_101099",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101099",
+              "questionType": "custom"
+            },
+            "title": "Crow Brings the Daylight: An Inuit Myth",
+            "importance": "primary",
+            "vendorResourceId": "101099",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee",
+      "status": "active",
+      "title": "The Age of Exploration",
+      "sortOrder": 9,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_81548705_article_101100",
+          "status": "active",
+          "title": "The Lure of Spices",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:21.770Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_81548705_article_101100",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:21.378Z",
+            "metadata": {
+              "sourcedId": "clone_81548705_article_101100",
+              "originalArticleId": "article_101100",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101100",
+              "questionType": "custom"
+            },
+            "title": "The Lure of Spices",
+            "importance": "primary",
+            "vendorResourceId": "101100",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d9b8a00f_article_101101",
+          "status": "active",
+          "title": "Second Sons",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:22.424Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_d9b8a00f_article_101101",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:22.022Z",
+            "metadata": {
+              "sourcedId": "clone_d9b8a00f_article_101101",
+              "originalArticleId": "article_101101",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101101",
+              "questionType": "custom"
+            },
+            "title": "Second Sons",
+            "importance": "primary",
+            "vendorResourceId": "101101",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_ebb8b27b_article_101102",
+          "status": "active",
+          "title": "Toscanelli\u2019s Map",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:22.855Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_ebb8b27b_article_101102",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:22.640Z",
+            "metadata": {
+              "sourcedId": "clone_ebb8b27b_article_101102",
+              "originalArticleId": "article_101102",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101102",
+              "questionType": "custom"
+            },
+            "title": "Toscanelli\u2019s Map",
+            "importance": "primary",
+            "vendorResourceId": "101102",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_b78c1719_article_101103",
+          "status": "active",
+          "title": "Navigation in the Age of Exploration",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:23.473Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_b78c1719_article_101103",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:23.063Z",
+            "metadata": {
+              "sourcedId": "clone_b78c1719_article_101103",
+              "originalArticleId": "article_101103",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101103",
+              "questionType": "custom"
+            },
+            "title": "Navigation in the Age of Exploration",
+            "importance": "primary",
+            "vendorResourceId": "101103",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_5d5e25cf_article_101104",
+          "status": "active",
+          "title": "El Castillo de San Marcos",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:24.082Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_5d5e25cf_article_101104",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:23.692Z",
+            "metadata": {
+              "sourcedId": "clone_5d5e25cf_article_101104",
+              "originalArticleId": "article_101104",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101104",
+              "questionType": "custom"
+            },
+            "title": "El Castillo de San Marcos",
+            "importance": "primary",
+            "vendorResourceId": "101104",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_ce9ef256_article_101105",
+          "status": "active",
+          "title": "Coronado Reports to the King",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:24.544Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_ce9ef256_article_101105",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:24.339Z",
+            "metadata": {
+              "sourcedId": "clone_ce9ef256_article_101105",
+              "originalArticleId": "article_101105",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101105",
+              "questionType": "custom"
+            },
+            "title": "Coronado Reports to the King",
+            "importance": "primary",
+            "vendorResourceId": "101105",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_7156fe91_article_101106",
+          "status": "active",
+          "title": "John Cabot",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:25.330Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_7156fe91_article_101106",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:24.929Z",
+            "metadata": {
+              "sourcedId": "clone_7156fe91_article_101106",
+              "originalArticleId": "article_101106",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101106",
+              "questionType": "custom"
+            },
+            "title": "John Cabot",
+            "importance": "primary",
+            "vendorResourceId": "101106",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_0d055a51_article_101107",
+          "status": "active",
+          "title": "Henry Hudson",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:25.732Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_0d055a51_article_101107",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:25.535Z",
+            "metadata": {
+              "sourcedId": "clone_0d055a51_article_101107",
+              "originalArticleId": "article_101107",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101107",
+              "questionType": "custom"
+            },
+            "title": "Henry Hudson",
+            "importance": "primary",
+            "vendorResourceId": "101107",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_0728a484_article_101108",
+          "status": "active",
+          "title": "The Fur Trade and Samuel de Champlain",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:26.155Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_0728a484_article_101108",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:25.943Z",
+            "metadata": {
+              "sourcedId": "clone_0728a484_article_101108",
+              "originalArticleId": "article_101108",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101108",
+              "questionType": "custom"
+            },
+            "title": "The Fur Trade and Samuel de Champlain",
+            "importance": "primary",
+            "vendorResourceId": "101108",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_b4df94fe_article_101109",
+          "status": "active",
+          "title": "A History of People in North America",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:26.788Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_b4df94fe_article_101109",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:26.569Z",
+            "metadata": {
+              "sourcedId": "clone_b4df94fe_article_101109",
+              "originalArticleId": "article_101109",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101109",
+              "questionType": "custom"
+            },
+            "title": "A History of People in North America",
+            "importance": "primary",
+            "vendorResourceId": "101109",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_48a0e80a_article_101110",
+          "status": "active",
+          "title": "Caribbean Words",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:27.412Z",
+          "courseComponent": {
+            "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee"
+          },
+          "resource": {
+            "sourcedId": "clone_48a0e80a_article_101110",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:27.190Z",
+            "metadata": {
+              "sourcedId": "clone_48a0e80a_article_101110",
+              "originalArticleId": "article_101110",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101110",
+              "questionType": "custom"
+            },
+            "title": "Caribbean Words",
+            "importance": "primary",
+            "vendorResourceId": "101110",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652",
+      "status": "active",
+      "title": "Living in Colonial America",
+      "sortOrder": 10,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_05387b47_article_101111",
+          "status": "active",
+          "title": "The First English Colony",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:28.205Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_05387b47_article_101111",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:28.003Z",
+            "metadata": {
+              "sourcedId": "clone_05387b47_article_101111",
+              "originalArticleId": "article_101111",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101111",
+              "questionType": "custom"
+            },
+            "title": "The First English Colony",
+            "importance": "primary",
+            "vendorResourceId": "101111",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_0e347e7c_article_101112",
+          "status": "active",
+          "title": "Jamestown, Part I: A New Life",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:28.642Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_0e347e7c_article_101112",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:28.435Z",
+            "metadata": {
+              "sourcedId": "clone_0e347e7c_article_101112",
+              "originalArticleId": "article_101112",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101112",
+              "questionType": "custom"
+            },
+            "title": "Jamestown, Part I: A New Life",
+            "importance": "primary",
+            "vendorResourceId": "101112",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d96ff87e_article_101113",
+          "status": "active",
+          "title": "Jamestown, Part II: Hunting the Powhatan Way",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:29.012Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_d96ff87e_article_101113",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:28.831Z",
+            "metadata": {
+              "sourcedId": "clone_d96ff87e_article_101113",
+              "originalArticleId": "article_101113",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101113",
+              "questionType": "custom"
+            },
+            "title": "Jamestown, Part II: Hunting the Powhatan Way",
+            "importance": "primary",
+            "vendorResourceId": "101113",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_5b88cdbb_article_101114",
+          "status": "active",
+          "title": "Plantation Life",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:29.445Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_5b88cdbb_article_101114",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:29.243Z",
+            "metadata": {
+              "sourcedId": "clone_5b88cdbb_article_101114",
+              "originalArticleId": "article_101114",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101114",
+              "questionType": "custom"
+            },
+            "title": "Plantation Life",
+            "importance": "primary",
+            "vendorResourceId": "101114",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_48e7005f_article_101115",
+          "status": "active",
+          "title": "Early Days in Georgia",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:29.884Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_48e7005f_article_101115",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:29.638Z",
+            "metadata": {
+              "sourcedId": "clone_48e7005f_article_101115",
+              "originalArticleId": "article_101115",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101115",
+              "questionType": "custom"
+            },
+            "title": "Early Days in Georgia",
+            "importance": "primary",
+            "vendorResourceId": "101115",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_dd0068df_article_101116",
+          "status": "active",
+          "title": "The Pilgrims, Part I: Arrival",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:30.485Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_dd0068df_article_101116",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:30.268Z",
+            "metadata": {
+              "sourcedId": "clone_dd0068df_article_101116",
+              "originalArticleId": "article_101116",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101116",
+              "questionType": "custom"
+            },
+            "title": "The Pilgrims, Part I: Arrival",
+            "importance": "primary",
+            "vendorResourceId": "101116",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_42316bd6_article_101117",
+          "status": "active",
+          "title": "The Pilgrims, Part II: Thanksgiving Celebration",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:30.932Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_42316bd6_article_101117",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:30.723Z",
+            "metadata": {
+              "sourcedId": "clone_42316bd6_article_101117",
+              "originalArticleId": "article_101117",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101117",
+              "questionType": "custom"
+            },
+            "title": "The Pilgrims, Part II: Thanksgiving Celebration",
+            "importance": "primary",
+            "vendorResourceId": "101117",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_503df843_article_101118",
+          "status": "active",
+          "title": "Puritan Life",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:31.593Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_503df843_article_101118",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:31.368Z",
+            "metadata": {
+              "sourcedId": "clone_503df843_article_101118",
+              "originalArticleId": "article_101118",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101118",
+              "questionType": "custom"
+            },
+            "title": "Puritan Life",
+            "importance": "primary",
+            "vendorResourceId": "101118",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_2d5b2ee7_article_101119",
+          "status": "active",
+          "title": "Life on a Farm in the Middle Atlantic Colonies, Part I",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:32.274Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_2d5b2ee7_article_101119",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:32.045Z",
+            "metadata": {
+              "sourcedId": "clone_2d5b2ee7_article_101119",
+              "originalArticleId": "article_101119",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101119",
+              "questionType": "custom"
+            },
+            "title": "Life on a Farm in the Middle Atlantic Colonies, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101119",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_759484e2_article_101120",
+          "status": "active",
+          "title": "Life on a Farm in the Middle Atlantic Colonies, Part II",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:32.918Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_759484e2_article_101120",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:32.515Z",
+            "metadata": {
+              "sourcedId": "clone_759484e2_article_101120",
+              "originalArticleId": "article_101120",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101120",
+              "questionType": "custom"
+            },
+            "title": "Life on a Farm in the Middle Atlantic Colonies, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101120",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_10e5c8cb_article_101121",
+          "status": "active",
+          "title": "The Quakers and the Lenni Lenape",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:33.320Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_10e5c8cb_article_101121",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:33.116Z",
+            "metadata": {
+              "sourcedId": "clone_10e5c8cb_article_101121",
+              "originalArticleId": "article_101121",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101121",
+              "questionType": "custom"
+            },
+            "title": "The Quakers and the Lenni Lenape",
+            "importance": "primary",
+            "vendorResourceId": "101121",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_d659f316_article_101122",
+          "status": "active",
+          "title": "Matthew, the Apprentice",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:33.750Z",
+          "courseComponent": {
+            "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652"
+          },
+          "resource": {
+            "sourcedId": "clone_d659f316_article_101122",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:33.533Z",
+            "metadata": {
+              "sourcedId": "clone_d659f316_article_101122",
+              "originalArticleId": "article_101122",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101122",
+              "questionType": "custom"
+            },
+            "title": "Matthew, the Apprentice",
+            "importance": "primary",
+            "vendorResourceId": "101122",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f",
+      "status": "active",
+      "title": "Introduction to Ecology",
+      "sortOrder": 11,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "clone_cc47b661_article_101123",
+          "status": "active",
+          "title": "Living Things and Their Habitats",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:34.752Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_cc47b661_article_101123",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:34.404Z",
+            "metadata": {
+              "sourcedId": "clone_cc47b661_article_101123",
+              "originalArticleId": "article_101123",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101123",
+              "questionType": "custom"
+            },
+            "title": "Living Things and Their Habitats",
+            "importance": "primary",
+            "vendorResourceId": "101123",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_35985c42_article_101124",
+          "status": "active",
+          "title": "Food Chains",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:35.146Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_35985c42_article_101124",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:34.940Z",
+            "metadata": {
+              "sourcedId": "clone_35985c42_article_101124",
+              "originalArticleId": "article_101124",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101124",
+              "questionType": "custom"
+            },
+            "title": "Food Chains",
+            "importance": "primary",
+            "vendorResourceId": "101124",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_e8b593d7_article_101125",
+          "status": "active",
+          "title": "Producers, Consumers, and Decomposers",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:35.580Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_e8b593d7_article_101125",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:35.360Z",
+            "metadata": {
+              "sourcedId": "clone_e8b593d7_article_101125",
+              "originalArticleId": "article_101125",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101125",
+              "questionType": "custom"
+            },
+            "title": "Producers, Consumers, and Decomposers",
+            "importance": "primary",
+            "vendorResourceId": "101125",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_3c5a8ad4_article_101126",
+          "status": "active",
+          "title": "The Balance of Nature",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:36.371Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_3c5a8ad4_article_101126",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:35.969Z",
+            "metadata": {
+              "sourcedId": "clone_3c5a8ad4_article_101126",
+              "originalArticleId": "article_101126",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101126",
+              "questionType": "custom"
+            },
+            "title": "The Balance of Nature",
+            "importance": "primary",
+            "vendorResourceId": "101126",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_8e007ff0_article_101127",
+          "status": "active",
+          "title": "Natural Changes to the Environment",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:36.801Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_8e007ff0_article_101127",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:36.592Z",
+            "metadata": {
+              "sourcedId": "clone_8e007ff0_article_101127",
+              "originalArticleId": "article_101127",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101127",
+              "questionType": "custom"
+            },
+            "title": "Natural Changes to the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101127",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_b1491b72_article_101128",
+          "status": "active",
+          "title": "Human Changes to the Environment",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:37.606Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_b1491b72_article_101128",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:37.201Z",
+            "metadata": {
+              "sourcedId": "clone_b1491b72_article_101128",
+              "originalArticleId": "article_101128",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101128",
+              "questionType": "custom"
+            },
+            "title": "Human Changes to the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101128",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_37ae9b92_article_101129",
+          "status": "active",
+          "title": "Environmental Damage Caused by Humans",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:38.219Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_37ae9b92_article_101129",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:37.825Z",
+            "metadata": {
+              "sourcedId": "clone_37ae9b92_article_101129",
+              "originalArticleId": "article_101129",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101129",
+              "questionType": "custom"
+            },
+            "title": "Environmental Damage Caused by Humans",
+            "importance": "primary",
+            "vendorResourceId": "101129",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_efdcefe7_article_101130",
+          "status": "active",
+          "title": "Protecting the Environment",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:38.740Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_efdcefe7_article_101130",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:38.436Z",
+            "metadata": {
+              "sourcedId": "clone_efdcefe7_article_101130",
+              "originalArticleId": "article_101130",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101130",
+              "questionType": "custom"
+            },
+            "title": "Protecting the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101130",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "clone_830091ea_article_101131",
+          "status": "active",
+          "title": "John Muir",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2026-01-26T10:52:39.235Z",
+          "courseComponent": {
+            "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f"
+          },
+          "resource": {
+            "sourcedId": "clone_830091ea_article_101131",
+            "status": "active",
+            "dateLastModified": "2026-01-26T10:52:39.008Z",
+            "metadata": {
+              "sourcedId": "clone_830091ea_article_101131",
+              "originalArticleId": "article_101131",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "d5bd942b-0404-4fca-abf4-ff7c71d6325a",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101131",
+              "questionType": "custom"
+            },
+            "title": "John Muir",
+            "importance": "primary",
+            "vendorResourceId": "101131",
+            "vendorId": "playcademy-course-builder",
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "7c08fe91-530f-4527-a83e-93e4cc8e4d60",
+      "status": "active",
+      "title": "Aladin and the Wonderful Lamp",
+      "sortOrder": 21,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": []
+    }
+  ]
+}

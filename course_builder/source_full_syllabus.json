@@ -1,0 +1,4171 @@
+{
+  "course": {
+    "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e",
+    "status": "active",
+    "dateLastModified": "2025-11-06T12:50:40.848Z",
+    "metadata": {
+      "goals": {
+        "dailyXp": 25,
+        "dailyLessons": 1,
+        "dailyAccuracy": 80,
+        "dailyActiveMinutes": 25,
+        "dailyMasteredUnits": 2
+      },
+      "metrics": {
+        "totalXp": 1565,
+        "totalGrades": 1,
+        "totalLessons": 131
+      },
+      "isCustom": false,
+      "AlphaLearn": {
+        "DailyXPGoal": 25
+      },
+      "courseType": "base",
+      "primaryApp": "alpha_read",
+      "isAlphaRead": true,
+      "contactEmail": "aleksandra.wrega@alpha.school",
+      "contentGrade": "3",
+      "publishStatus": "testing",
+      "isSupplemental": false,
+      "timebackVisible": true
+    },
+    "title": "Core Knowledge Reading Grade 3/3",
+    "academicSession": null,
+    "schoolYear": null,
+    "courseCode": "CORE_KNOWLEDGE_READING_GRADE_3/3",
+    "grades": [
+      "3"
+    ],
+    "subjects": [
+      "Reading"
+    ],
+    "subjectCodes": [],
+    "org": {
+      "sourcedId": "powerpath-ui-org"
+    },
+    "resources": []
+  },
+  "subComponents": [
+    {
+      "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841",
+      "status": "active",
+      "title": "Classic Tales",
+      "sortOrder": 1,
+      "unlockDate": "2025-07-10T12:58:48.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101001",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part I",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:54.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101001",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:00.445Z",
+            "metadata": {
+              "sourcedId": "article_101001",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101001",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101001",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101002",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part II",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:55.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101002",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:01.217Z",
+            "metadata": {
+              "sourcedId": "article_101002",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101002",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101002",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101003",
+          "status": "active",
+          "title": "Aladdin and the Wonderful Lamp, Part III",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:56.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101003",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:01.951Z",
+            "metadata": {
+              "sourcedId": "article_101003",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101003",
+              "questionType": "custom"
+            },
+            "title": "Aladdin and the Wonderful Lamp, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101003",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101004",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part I",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:56.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101004",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:02.580Z",
+            "metadata": {
+              "sourcedId": "article_101004",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101004",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101004",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101005",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part II",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:57.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101005",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:03.234Z",
+            "metadata": {
+              "sourcedId": "article_101005",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101005",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101005",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101006",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part III",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:57.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101006",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:03.958Z",
+            "metadata": {
+              "sourcedId": "article_101006",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101006",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101006",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101007",
+          "status": "active",
+          "title": "Alice\u2019s Adventures in Wonderland, Part IV",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:58.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101007",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:04.519Z",
+            "metadata": {
+              "sourcedId": "article_101007",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101007",
+              "questionType": "custom"
+            },
+            "title": "Alice\u2019s Adventures in Wonderland, Part IV",
+            "importance": "primary",
+            "vendorResourceId": "101007",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101008",
+          "status": "active",
+          "title": "The Open Road, Part I",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:59.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101008",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:05.090Z",
+            "metadata": {
+              "sourcedId": "article_101008",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101008",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101008",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101009",
+          "status": "active",
+          "title": "The Open Road, Part II",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:58:59.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101009",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:05.834Z",
+            "metadata": {
+              "sourcedId": "article_101009",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101009",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101009",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101010",
+          "status": "active",
+          "title": "The Open Road, Part III",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:00.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101010",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:06.392Z",
+            "metadata": {
+              "sourcedId": "article_101010",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101010",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part III",
+            "importance": "primary",
+            "vendorResourceId": "101010",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101011",
+          "status": "active",
+          "title": "The Open Road, Part IV",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:01.000Z",
+          "courseComponent": {
+            "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841"
+          },
+          "resource": {
+            "sourcedId": "article_101011",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:06.948Z",
+            "metadata": {
+              "sourcedId": "article_101011",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101011",
+              "questionType": "custom"
+            },
+            "title": "The Open Road, Part IV",
+            "importance": "primary",
+            "vendorResourceId": "101011",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04",
+      "status": "active",
+      "title": "Rattenborough's Guide to Animals",
+      "sortOrder": 2,
+      "unlockDate": "2025-07-10T12:58:48.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "stimulus-ck-g3-3-u2-unit-intro",
+          "status": "tobedeleted",
+          "title": "Introduction to 'Classic Tales'",
+          "sortOrder": 0,
+          "metadata": {},
+          "dateLastModified": "2025-07-31T17:00:24.346Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "stimulus-ck-g3-3-u2-unit-intro",
+            "status": "tobedeleted",
+            "dateLastModified": "2025-07-31T17:06:51.852Z",
+            "metadata": {
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-stimulus"
+            },
+            "title": "Introduction to Classic Tales",
+            "importance": "primary",
+            "vendorResourceId": "stimulus-ck-g3-3-u2-unit-intro",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101012",
+          "status": "active",
+          "title": "Classifying Living Things",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:01.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101012",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:07.582Z",
+            "metadata": {
+              "sourcedId": "article_101012",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101012",
+              "questionType": "custom"
+            },
+            "title": "Classifying Living Things",
+            "importance": "primary",
+            "vendorResourceId": "101012",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101013",
+          "status": "active",
+          "title": "Warm-Blooded and Cold-Blooded Animals",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:02.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101013",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:08.232Z",
+            "metadata": {
+              "sourcedId": "article_101013",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101013",
+              "questionType": "custom"
+            },
+            "title": "Warm-Blooded and Cold-Blooded Animals",
+            "importance": "primary",
+            "vendorResourceId": "101013",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101014",
+          "status": "active",
+          "title": "Vertebrate or Invertebrate?",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:03.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101014",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:08.964Z",
+            "metadata": {
+              "sourcedId": "article_101014",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101014",
+              "questionType": "custom"
+            },
+            "title": "Vertebrate or Invertebrate?",
+            "importance": "primary",
+            "vendorResourceId": "101014",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101015",
+          "status": "active",
+          "title": "Fish",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:03.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101015",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:09.590Z",
+            "metadata": {
+              "sourcedId": "article_101015",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101015",
+              "questionType": "custom"
+            },
+            "title": "Fish",
+            "importance": "primary",
+            "vendorResourceId": "101015",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101016",
+          "status": "active",
+          "title": "Amphibians",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:04.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101016",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:10.221Z",
+            "metadata": {
+              "sourcedId": "article_101016",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101016",
+              "questionType": "custom"
+            },
+            "title": "Amphibians",
+            "importance": "primary",
+            "vendorResourceId": "101016",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101017",
+          "status": "active",
+          "title": "Reptiles",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:04.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101017",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:10.867Z",
+            "metadata": {
+              "sourcedId": "article_101017",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101017",
+              "questionType": "custom"
+            },
+            "title": "Reptiles",
+            "importance": "primary",
+            "vendorResourceId": "101017",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101018",
+          "status": "active",
+          "title": "Birds",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:05.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101018",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:11.508Z",
+            "metadata": {
+              "sourcedId": "article_101018",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101018",
+              "questionType": "custom"
+            },
+            "title": "Birds",
+            "importance": "primary",
+            "vendorResourceId": "101018",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101019",
+          "status": "active",
+          "title": "Mammals",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:06.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101019",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:12.219Z",
+            "metadata": {
+              "sourcedId": "article_101019",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101019",
+              "questionType": "custom"
+            },
+            "title": "Mammals",
+            "importance": "primary",
+            "vendorResourceId": "101019",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101020",
+          "status": "active",
+          "title": "Scientists Who Classify Animals",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:06.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101020",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:12.788Z",
+            "metadata": {
+              "sourcedId": "article_101020",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101020",
+              "questionType": "custom"
+            },
+            "title": "Scientists Who Classify Animals",
+            "importance": "primary",
+            "vendorResourceId": "101020",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101021",
+          "status": "active",
+          "title": "Jane Goodall",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:07.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101021",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:13.426Z",
+            "metadata": {
+              "sourcedId": "article_101021",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101021",
+              "questionType": "custom"
+            },
+            "title": "Jane Goodall",
+            "importance": "primary",
+            "vendorResourceId": "101021",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101022",
+          "status": "active",
+          "title": "Deep-Sea Fish",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:08.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101022",
+            "status": "active",
+            "dateLastModified": "2025-07-16T11:40:33.351Z",
+            "metadata": {
+              "sourcedId": "article_101022",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "ed85325c-fc3a-4e06-874f-f316851e542d",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 8,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101022",
+              "questionType": "custom"
+            },
+            "title": "Deep-Sea Fish",
+            "importance": "primary",
+            "vendorResourceId": "101022",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101023",
+          "status": "active",
+          "title": "Tree Frogs",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:08.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101023",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:14.878Z",
+            "metadata": {
+              "sourcedId": "article_101023",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101023",
+              "questionType": "custom"
+            },
+            "title": "Tree Frogs",
+            "importance": "primary",
+            "vendorResourceId": "101023",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101024",
+          "status": "active",
+          "title": "The Komodo Dragon",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:09.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101024",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:15.430Z",
+            "metadata": {
+              "sourcedId": "article_101024",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101024",
+              "questionType": "custom"
+            },
+            "title": "The Komodo Dragon",
+            "importance": "primary",
+            "vendorResourceId": "101024",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101025",
+          "status": "active",
+          "title": "Beavers",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:09.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101025",
+            "status": "active",
+            "dateLastModified": "2025-07-16T11:41:08.585Z",
+            "metadata": {
+              "sourcedId": "article_101025",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "ed85325c-fc3a-4e06-874f-f316851e542d",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 14,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101025",
+              "questionType": "custom"
+            },
+            "title": "Beavers",
+            "importance": "primary",
+            "vendorResourceId": "101025",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101026",
+          "status": "active",
+          "title": "Hummingbirds",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:10.000Z",
+          "courseComponent": {
+            "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04"
+          },
+          "resource": {
+            "sourcedId": "article_101026",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:16.714Z",
+            "metadata": {
+              "sourcedId": "article_101026",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101026",
+              "questionType": "custom"
+            },
+            "title": "Hummingbirds",
+            "importance": "primary",
+            "vendorResourceId": "101026",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6",
+      "status": "active",
+      "title": "How Does Your Body Work?",
+      "sortOrder": 3,
+      "unlockDate": "2025-07-10T12:58:49.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "stimulus-ck-g3-3-u3-unit-intro",
+          "status": "tobedeleted",
+          "title": "Introduction to 'How Does Your Body Work?'",
+          "sortOrder": 0,
+          "metadata": {},
+          "dateLastModified": "2025-07-31T16:59:36.149Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "stimulus-ck-g3-3-u3-unit-intro",
+            "status": "active",
+            "dateLastModified": "2025-07-11T04:46:54.660Z",
+            "metadata": {
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-stimulus"
+            },
+            "title": "Introduction to How Does Your Body Work?",
+            "importance": "primary",
+            "vendorResourceId": "stimulus-ck-g3-3-u3-unit-intro",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101027",
+          "status": "active",
+          "title": "The Skeletal System",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:11.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101027",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:17.265Z",
+            "metadata": {
+              "sourcedId": "article_101027",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101027",
+              "questionType": "custom"
+            },
+            "title": "The Skeletal System",
+            "importance": "primary",
+            "vendorResourceId": "101027",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101028",
+          "status": "active",
+          "title": "All About Bones",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:11.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101028",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:17.897Z",
+            "metadata": {
+              "sourcedId": "article_101028",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101028",
+              "questionType": "custom"
+            },
+            "title": "All About Bones",
+            "importance": "primary",
+            "vendorResourceId": "101028",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101029",
+          "status": "active",
+          "title": "The Muscular System",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:12.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101029",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:18.463Z",
+            "metadata": {
+              "sourcedId": "article_101029",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101029",
+              "questionType": "custom"
+            },
+            "title": "The Muscular System",
+            "importance": "primary",
+            "vendorResourceId": "101029",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101030",
+          "status": "active",
+          "title": "Joints and Muscles",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:13.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101030",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:19.182Z",
+            "metadata": {
+              "sourcedId": "article_101030",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101030",
+              "questionType": "custom"
+            },
+            "title": "Joints and Muscles",
+            "importance": "primary",
+            "vendorResourceId": "101030",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101031",
+          "status": "active",
+          "title": "The Nervous System",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:13.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101031",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:19.916Z",
+            "metadata": {
+              "sourcedId": "article_101031",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101031",
+              "questionType": "custom"
+            },
+            "title": "The Nervous System",
+            "importance": "primary",
+            "vendorResourceId": "101031",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101032",
+          "status": "active",
+          "title": "The Spinal Cord and Brain",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:14.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101032",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:20.633Z",
+            "metadata": {
+              "sourcedId": "article_101032",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101032",
+              "questionType": "custom"
+            },
+            "title": "The Spinal Cord and Brain",
+            "importance": "primary",
+            "vendorResourceId": "101032",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101033",
+          "status": "active",
+          "title": "Eyes and Vision",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:14.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101033",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:21.300Z",
+            "metadata": {
+              "sourcedId": "article_101033",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101033",
+              "questionType": "custom"
+            },
+            "title": "Eyes and Vision",
+            "importance": "primary",
+            "vendorResourceId": "101033",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101034",
+          "status": "active",
+          "title": "Vision Problems, Vision Solutions",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:15.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101034",
+            "status": "active",
+            "dateLastModified": "2025-07-16T11:41:31.082Z",
+            "metadata": {
+              "sourcedId": "article_101034",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "ed85325c-fc3a-4e06-874f-f316851e542d",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 15,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101034",
+              "questionType": "custom"
+            },
+            "title": "Vision Problems, Vision Solutions",
+            "importance": "primary",
+            "vendorResourceId": "101034",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101035",
+          "status": "active",
+          "title": "Ears and Hearing",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:16.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101035",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:22.657Z",
+            "metadata": {
+              "sourcedId": "article_101035",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101035",
+              "questionType": "custom"
+            },
+            "title": "Ears and Hearing",
+            "importance": "primary",
+            "vendorResourceId": "101035",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101036",
+          "status": "active",
+          "title": "Overcoming Disabilities, Part I",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:16.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101036",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:23.216Z",
+            "metadata": {
+              "sourcedId": "article_101036",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101036",
+              "questionType": "custom"
+            },
+            "title": "Overcoming Disabilities, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101036",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101037",
+          "status": "active",
+          "title": "Overcoming Disabilities, Part II",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:17.000Z",
+          "courseComponent": {
+            "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6"
+          },
+          "resource": {
+            "sourcedId": "article_101037",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:23.856Z",
+            "metadata": {
+              "sourcedId": "article_101037",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101037",
+              "questionType": "custom"
+            },
+            "title": "Overcoming Disabilities, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101037",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142",
+      "status": "active",
+      "title": "Stories of Ancient Rome",
+      "sortOrder": 4,
+      "unlockDate": "2025-07-10T12:58:50.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101038",
+          "status": "active",
+          "title": "Rome, Then and Now",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:18.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101038",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:24.484Z",
+            "metadata": {
+              "sourcedId": "article_101038",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101038",
+              "questionType": "custom"
+            },
+            "title": "Rome, Then and Now",
+            "importance": "primary",
+            "vendorResourceId": "101038",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101039",
+          "status": "active",
+          "title": "The Legend of Romulus and Remus",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:18.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101039",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:25.117Z",
+            "metadata": {
+              "sourcedId": "article_101039",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101039",
+              "questionType": "custom"
+            },
+            "title": "The Legend of Romulus and Remus",
+            "importance": "primary",
+            "vendorResourceId": "101039",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101040",
+          "status": "active",
+          "title": "The Roman Gods and Goddesses, Part I",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:19.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101040",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:25.762Z",
+            "metadata": {
+              "sourcedId": "article_101040",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101040",
+              "questionType": "custom"
+            },
+            "title": "The Roman Gods and Goddesses, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101040",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101041",
+          "status": "active",
+          "title": "The Roman Gods and Goddesses, Part II",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:19.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101041",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:26.496Z",
+            "metadata": {
+              "sourcedId": "article_101041",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101041",
+              "questionType": "custom"
+            },
+            "title": "The Roman Gods and Goddesses, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101041",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101042",
+          "status": "active",
+          "title": "Cupid and Psyche, Part I",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:20.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101042",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:27.209Z",
+            "metadata": {
+              "sourcedId": "article_101042",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101042",
+              "questionType": "custom"
+            },
+            "title": "Cupid and Psyche, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101042",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101043",
+          "status": "active",
+          "title": "Cupid and Psyche, Part II",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:21.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101043",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:27.866Z",
+            "metadata": {
+              "sourcedId": "article_101043",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101043",
+              "questionType": "custom"
+            },
+            "title": "Cupid and Psyche, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101043",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101044",
+          "status": "active",
+          "title": "The Sword of Damocles",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:21.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101044",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:28.426Z",
+            "metadata": {
+              "sourcedId": "article_101044",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101044",
+              "questionType": "custom"
+            },
+            "title": "The Sword of Damocles",
+            "importance": "primary",
+            "vendorResourceId": "101044",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101045",
+          "status": "active",
+          "title": "The Roman Republic",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:22.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101045",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:29.062Z",
+            "metadata": {
+              "sourcedId": "article_101045",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101045",
+              "questionType": "custom"
+            },
+            "title": "The Roman Republic",
+            "importance": "primary",
+            "vendorResourceId": "101045",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101046",
+          "status": "active",
+          "title": "Hannibal Crosses the Alps",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:23.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101046",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:29.777Z",
+            "metadata": {
+              "sourcedId": "article_101046",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101046",
+              "questionType": "custom"
+            },
+            "title": "Hannibal Crosses the Alps",
+            "importance": "primary",
+            "vendorResourceId": "101046",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101047",
+          "status": "active",
+          "title": "Julius Caesar: Great Fighter, Great Writer",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:23.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101047",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:30.421Z",
+            "metadata": {
+              "sourcedId": "article_101047",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101047",
+              "questionType": "custom"
+            },
+            "title": "Julius Caesar: Great Fighter, Great Writer",
+            "importance": "primary",
+            "vendorResourceId": "101047",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101048",
+          "status": "active",
+          "title": "Julius Caesar: Crossing the Rubicon",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:24.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101048",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:30.970Z",
+            "metadata": {
+              "sourcedId": "article_101048",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101048",
+              "questionType": "custom"
+            },
+            "title": "Julius Caesar: Crossing the Rubicon",
+            "importance": "primary",
+            "vendorResourceId": "101048",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101049",
+          "status": "active",
+          "title": "After Caesar: Augustus and the Roman Empire",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:24.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101049",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:31.602Z",
+            "metadata": {
+              "sourcedId": "article_101049",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101049",
+              "questionType": "custom"
+            },
+            "title": "After Caesar: Augustus and the Roman Empire",
+            "importance": "primary",
+            "vendorResourceId": "101049",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101050",
+          "status": "active",
+          "title": "Androcles and the Lion",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:25.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101050",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:32.232Z",
+            "metadata": {
+              "sourcedId": "article_101050",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101050",
+              "questionType": "custom"
+            },
+            "title": "Androcles and the Lion",
+            "importance": "primary",
+            "vendorResourceId": "101050",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101051",
+          "status": "active",
+          "title": "The Rise of Christianity",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:26.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101051",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:32.870Z",
+            "metadata": {
+              "sourcedId": "article_101051",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101051",
+              "questionType": "custom"
+            },
+            "title": "The Rise of Christianity",
+            "importance": "primary",
+            "vendorResourceId": "101051",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101052",
+          "status": "active",
+          "title": "The Second Rome: From Constantine to Justinian",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:26.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101052",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:33.524Z",
+            "metadata": {
+              "sourcedId": "article_101052",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101052",
+              "questionType": "custom"
+            },
+            "title": "The Second Rome: From Constantine to Justinian",
+            "importance": "primary",
+            "vendorResourceId": "101052",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101053",
+          "status": "active",
+          "title": "Pompeii",
+          "sortOrder": 16,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:27.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101053",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:34.169Z",
+            "metadata": {
+              "sourcedId": "article_101053",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101053",
+              "questionType": "custom"
+            },
+            "title": "Pompeii",
+            "importance": "primary",
+            "vendorResourceId": "101053",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101054",
+          "status": "active",
+          "title": "How Horatius Held the Bridge",
+          "sortOrder": 17,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:27.000Z",
+          "courseComponent": {
+            "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142"
+          },
+          "resource": {
+            "sourcedId": "article_101054",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:34.731Z",
+            "metadata": {
+              "sourcedId": "article_101054",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101054",
+              "questionType": "custom"
+            },
+            "title": "How Horatius Held the Bridge",
+            "importance": "primary",
+            "vendorResourceId": "101054",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e",
+      "status": "active",
+      "title": "Adventures in Light and Sound",
+      "sortOrder": 5,
+      "unlockDate": "2025-07-10T12:58:50.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101055",
+          "status": "active",
+          "title": "What Is Light?",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:28.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101055",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:35.444Z",
+            "metadata": {
+              "sourcedId": "article_101055",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101055",
+              "questionType": "custom"
+            },
+            "title": "What Is Light?",
+            "importance": "primary",
+            "vendorResourceId": "101055",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101056",
+          "status": "active",
+          "title": "How Are Shadows Made?",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:29.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101056",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:36.129Z",
+            "metadata": {
+              "sourcedId": "article_101056",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101056",
+              "questionType": "custom"
+            },
+            "title": "How Are Shadows Made?",
+            "importance": "primary",
+            "vendorResourceId": "101056",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101057",
+          "status": "active",
+          "title": "Mirrors and Reflections",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:29.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101057",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:36.779Z",
+            "metadata": {
+              "sourcedId": "article_101057",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101057",
+              "questionType": "custom"
+            },
+            "title": "Mirrors and Reflections",
+            "importance": "primary",
+            "vendorResourceId": "101057",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101058",
+          "status": "active",
+          "title": "Refraction and Lenses",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:30.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101058",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:37.495Z",
+            "metadata": {
+              "sourcedId": "article_101058",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101058",
+              "questionType": "custom"
+            },
+            "title": "Refraction and Lenses",
+            "importance": "primary",
+            "vendorResourceId": "101058",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101059",
+          "status": "active",
+          "title": "Color and Light",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:31.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101059",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:38.208Z",
+            "metadata": {
+              "sourcedId": "article_101059",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101059",
+              "questionType": "custom"
+            },
+            "title": "Color and Light",
+            "importance": "primary",
+            "vendorResourceId": "101059",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101060",
+          "status": "active",
+          "title": "What Is Sound?",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:31.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101060",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:38.928Z",
+            "metadata": {
+              "sourcedId": "article_101060",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101060",
+              "questionType": "custom"
+            },
+            "title": "What Is Sound?",
+            "importance": "primary",
+            "vendorResourceId": "101060",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101061",
+          "status": "active",
+          "title": "Characteristics of Sound",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:32.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101061",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:39.586Z",
+            "metadata": {
+              "sourcedId": "article_101061",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101061",
+              "questionType": "custom"
+            },
+            "title": "Characteristics of Sound",
+            "importance": "primary",
+            "vendorResourceId": "101061",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101062",
+          "status": "active",
+          "title": "The Human Voice",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:32.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101062",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:40.226Z",
+            "metadata": {
+              "sourcedId": "article_101062",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101062",
+              "questionType": "custom"
+            },
+            "title": "The Human Voice",
+            "importance": "primary",
+            "vendorResourceId": "101062",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101063",
+          "status": "active",
+          "title": "Light and Photography",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:33.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101063",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:40.876Z",
+            "metadata": {
+              "sourcedId": "article_101063",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101063",
+              "questionType": "custom"
+            },
+            "title": "Light and Photography",
+            "importance": "primary",
+            "vendorResourceId": "101063",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101064",
+          "status": "active",
+          "title": "Alexander Graham Bell, Part I",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:34.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101064",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:41.587Z",
+            "metadata": {
+              "sourcedId": "article_101064",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101064",
+              "questionType": "custom"
+            },
+            "title": "Alexander Graham Bell, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101064",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101065",
+          "status": "active",
+          "title": "Alexander Graham Bell, Part II",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:34.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101065",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:42.299Z",
+            "metadata": {
+              "sourcedId": "article_101065",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101065",
+              "questionType": "custom"
+            },
+            "title": "Alexander Graham Bell, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101065",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101066",
+          "status": "active",
+          "title": "Thomas Edison: The Wizard of Menlo Park",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:35.000Z",
+          "courseComponent": {
+            "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e"
+          },
+          "resource": {
+            "sourcedId": "article_101066",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:42.937Z",
+            "metadata": {
+              "sourcedId": "article_101066",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101066",
+              "questionType": "custom"
+            },
+            "title": "Thomas Edison: The Wizard of Menlo Park",
+            "importance": "primary",
+            "vendorResourceId": "101066",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2",
+      "status": "active",
+      "title": "Gods, Giants, and Dwarves",
+      "sortOrder": 6,
+      "unlockDate": "2025-07-10T12:58:51.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101067",
+          "status": "active",
+          "title": "Sif\u2019s Golden Hair",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:36.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101067",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:43.577Z",
+            "metadata": {
+              "sourcedId": "article_101067",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101067",
+              "questionType": "custom"
+            },
+            "title": "Sif\u2019s Golden Hair",
+            "importance": "primary",
+            "vendorResourceId": "101067",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101068",
+          "status": "active",
+          "title": "Loki and the Dwarves",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:36.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101068",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:44.318Z",
+            "metadata": {
+              "sourcedId": "article_101068",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101068",
+              "questionType": "custom"
+            },
+            "title": "Loki and the Dwarves",
+            "importance": "primary",
+            "vendorResourceId": "101068",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101069",
+          "status": "active",
+          "title": "Stolen Thunder",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:37.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101069",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:45.028Z",
+            "metadata": {
+              "sourcedId": "article_101069",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101069",
+              "questionType": "custom"
+            },
+            "title": "Stolen Thunder",
+            "importance": "primary",
+            "vendorResourceId": "101069",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101070",
+          "status": "active",
+          "title": "A Plan Is Made",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:37.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101070",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:45.751Z",
+            "metadata": {
+              "sourcedId": "article_101070",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101070",
+              "questionType": "custom"
+            },
+            "title": "A Plan Is Made",
+            "importance": "primary",
+            "vendorResourceId": "101070",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101071",
+          "status": "active",
+          "title": "The Wedding Feast",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:38.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101071",
+            "status": "active",
+            "dateLastModified": "2025-07-16T11:50:04.089Z",
+            "metadata": {
+              "sourcedId": "article_101071",
+              "lessonType": "alpha-read-article",
+              "tenantId": "fd23ab60-2db4-4de1-8538-a6dd43e71620",
+              "clientAppId": "ed85325c-fc3a-4e06-874f-f316851e542d",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101071",
+              "questionType": "custom"
+            },
+            "title": "The Wedding Feast",
+            "importance": "primary",
+            "vendorResourceId": "101071",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101072",
+          "status": "active",
+          "title": "Balder, the Beautiful",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:39.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101072",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:46.949Z",
+            "metadata": {
+              "sourcedId": "article_101072",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101072",
+              "questionType": "custom"
+            },
+            "title": "Balder, the Beautiful",
+            "importance": "primary",
+            "vendorResourceId": "101072",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101073",
+          "status": "active",
+          "title": "The Death of Balder",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:39.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101073",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:47.590Z",
+            "metadata": {
+              "sourcedId": "article_101073",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101073",
+              "questionType": "custom"
+            },
+            "title": "The Death of Balder",
+            "importance": "primary",
+            "vendorResourceId": "101073",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101074",
+          "status": "active",
+          "title": "Loki\u2019s Punishment",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:40.000Z",
+          "courseComponent": {
+            "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2"
+          },
+          "resource": {
+            "sourcedId": "article_101074",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:48.303Z",
+            "metadata": {
+              "sourcedId": "article_101074",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101074",
+              "questionType": "custom"
+            },
+            "title": "Loki\u2019s Punishment",
+            "importance": "primary",
+            "vendorResourceId": "101074",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6",
+      "status": "active",
+      "title": "What's in Our Universe?",
+      "sortOrder": 7,
+      "unlockDate": "2025-07-10T12:58:51.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101075",
+          "status": "active",
+          "title": "The Sun, Earth, and Our Solar System",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:41.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101075",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:49.041Z",
+            "metadata": {
+              "sourcedId": "article_101075",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101075",
+              "questionType": "custom"
+            },
+            "title": "The Sun, Earth, and Our Solar System",
+            "importance": "primary",
+            "vendorResourceId": "101075",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101076",
+          "status": "active",
+          "title": "The Moon",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:41.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101076",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:49.614Z",
+            "metadata": {
+              "sourcedId": "article_101076",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101076",
+              "questionType": "custom"
+            },
+            "title": "The Moon",
+            "importance": "primary",
+            "vendorResourceId": "101076",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101077",
+          "status": "active",
+          "title": "The Planets Closest to the Sun: Mercury, Venus, Earth, and Mars",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:42.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101077",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:50.355Z",
+            "metadata": {
+              "sourcedId": "article_101077",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101077",
+              "questionType": "custom"
+            },
+            "title": "The Planets Closest to the Sun: Mercury, Venus, Earth, and Mars",
+            "importance": "primary",
+            "vendorResourceId": "101077",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101078",
+          "status": "active",
+          "title": "The Outer Planets: Jupiter, Saturn, Uranus, and Neptune",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:42.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101078",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:50.987Z",
+            "metadata": {
+              "sourcedId": "article_101078",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101078",
+              "questionType": "custom"
+            },
+            "title": "The Outer Planets: Jupiter, Saturn, Uranus, and Neptune",
+            "importance": "primary",
+            "vendorResourceId": "101078",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101079",
+          "status": "active",
+          "title": "Asteroids, Comets, and Meteors",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:43.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101079",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:51.634Z",
+            "metadata": {
+              "sourcedId": "article_101079",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101079",
+              "questionType": "custom"
+            },
+            "title": "Asteroids, Comets, and Meteors",
+            "importance": "primary",
+            "vendorResourceId": "101079",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101080",
+          "status": "active",
+          "title": "Galaxies and Stars",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:44.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101080",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:52.208Z",
+            "metadata": {
+              "sourcedId": "article_101080",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101080",
+              "questionType": "custom"
+            },
+            "title": "Galaxies and Stars",
+            "importance": "primary",
+            "vendorResourceId": "101080",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101081",
+          "status": "active",
+          "title": "Constellations",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:44.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101081",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:52.849Z",
+            "metadata": {
+              "sourcedId": "article_101081",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101081",
+              "questionType": "custom"
+            },
+            "title": "Constellations",
+            "importance": "primary",
+            "vendorResourceId": "101081",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101082",
+          "status": "active",
+          "title": "Exploring Space",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:45.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101082",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:53.415Z",
+            "metadata": {
+              "sourcedId": "article_101082",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101082",
+              "questionType": "custom"
+            },
+            "title": "Exploring Space",
+            "importance": "primary",
+            "vendorResourceId": "101082",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101083",
+          "status": "active",
+          "title": "A Walk on the Moon",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:46.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101083",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:54.067Z",
+            "metadata": {
+              "sourcedId": "article_101083",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101083",
+              "questionType": "custom"
+            },
+            "title": "A Walk on the Moon",
+            "importance": "primary",
+            "vendorResourceId": "101083",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101084",
+          "status": "active",
+          "title": "What\u2019s it Like in Space?",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:47.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101084",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:54.810Z",
+            "metadata": {
+              "sourcedId": "article_101084",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101084",
+              "questionType": "custom"
+            },
+            "title": "What\u2019s it Like in Space?",
+            "importance": "primary",
+            "vendorResourceId": "101084",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101085",
+          "status": "active",
+          "title": "The Space Shuttle",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:48.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101085",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:55.457Z",
+            "metadata": {
+              "sourcedId": "article_101085",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101085",
+              "questionType": "custom"
+            },
+            "title": "The Space Shuttle",
+            "importance": "primary",
+            "vendorResourceId": "101085",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101086",
+          "status": "active",
+          "title": "The International Space Station",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:48.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101086",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:56.091Z",
+            "metadata": {
+              "sourcedId": "article_101086",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101086",
+              "questionType": "custom"
+            },
+            "title": "The International Space Station",
+            "importance": "primary",
+            "vendorResourceId": "101086",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101087",
+          "status": "active",
+          "title": "Dr. Mae Jemison",
+          "sortOrder": 13,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:49.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101087",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:56.794Z",
+            "metadata": {
+              "sourcedId": "article_101087",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101087",
+              "questionType": "custom"
+            },
+            "title": "Dr. Mae Jemison",
+            "importance": "primary",
+            "vendorResourceId": "101087",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101088",
+          "status": "active",
+          "title": "Nicolaus Copernicus",
+          "sortOrder": 14,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:50.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101088",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:57.356Z",
+            "metadata": {
+              "sourcedId": "article_101088",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101088",
+              "questionType": "custom"
+            },
+            "title": "Nicolaus Copernicus",
+            "importance": "primary",
+            "vendorResourceId": "101088",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101089",
+          "status": "active",
+          "title": "The Big Bang",
+          "sortOrder": 15,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:50.000Z",
+          "courseComponent": {
+            "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6"
+          },
+          "resource": {
+            "sourcedId": "article_101089",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:57.907Z",
+            "metadata": {
+              "sourcedId": "article_101089",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101089",
+              "questionType": "custom"
+            },
+            "title": "The Big Bang",
+            "importance": "primary",
+            "vendorResourceId": "101089",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48",
+      "status": "active",
+      "title": "Native American Stories",
+      "sortOrder": 8,
+      "unlockDate": "2025-07-10T12:58:52.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101090",
+          "status": "active",
+          "title": "Etu, the Hunter",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:51.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101090",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:58.460Z",
+            "metadata": {
+              "sourcedId": "article_101090",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101090",
+              "questionType": "custom"
+            },
+            "title": "Etu, the Hunter",
+            "importance": "primary",
+            "vendorResourceId": "101090",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101091",
+          "status": "active",
+          "title": "Adoette and Awan, the Bird Chasers",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:52.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101091",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:59.034Z",
+            "metadata": {
+              "sourcedId": "article_101091",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101091",
+              "questionType": "custom"
+            },
+            "title": "Adoette and Awan, the Bird Chasers",
+            "importance": "primary",
+            "vendorResourceId": "101091",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101092",
+          "status": "active",
+          "title": "Akando and Aponi, the Gatherers",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:52.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101092",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:08:59.754Z",
+            "metadata": {
+              "sourcedId": "article_101092",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101092",
+              "questionType": "custom"
+            },
+            "title": "Akando and Aponi, the Gatherers",
+            "importance": "primary",
+            "vendorResourceId": "101092",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101093",
+          "status": "active",
+          "title": "Alemeda, the Basket Weaver",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:53.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101093",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:00.468Z",
+            "metadata": {
+              "sourcedId": "article_101093",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101093",
+              "questionType": "custom"
+            },
+            "title": "Alemeda, the Basket Weaver",
+            "importance": "primary",
+            "vendorResourceId": "101093",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101094",
+          "status": "active",
+          "title": "Alo, the Spirit Giver",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:53.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101094",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:01.188Z",
+            "metadata": {
+              "sourcedId": "article_101094",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101094",
+              "questionType": "custom"
+            },
+            "title": "Alo, the Spirit Giver",
+            "importance": "primary",
+            "vendorResourceId": "101094",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101095",
+          "status": "active",
+          "title": "Meda and Flo, the Forest Children",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:54.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101095",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:01.818Z",
+            "metadata": {
+              "sourcedId": "article_101095",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101095",
+              "questionType": "custom"
+            },
+            "title": "Meda and Flo, the Forest Children",
+            "importance": "primary",
+            "vendorResourceId": "101095",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101096",
+          "status": "active",
+          "title": "Yutu, the Dog Trainer",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:55.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101096",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:02.549Z",
+            "metadata": {
+              "sourcedId": "article_101096",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101096",
+              "questionType": "custom"
+            },
+            "title": "Yutu, the Dog Trainer",
+            "importance": "primary",
+            "vendorResourceId": "101096",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101097",
+          "status": "active",
+          "title": "Salali, Dustu, and the Festival of Hope",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:55.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101097",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:03.120Z",
+            "metadata": {
+              "sourcedId": "article_101097",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101097",
+              "questionType": "custom"
+            },
+            "title": "Salali, Dustu, and the Festival of Hope",
+            "importance": "primary",
+            "vendorResourceId": "101097",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101098",
+          "status": "active",
+          "title": "The Hunting of the Great Bear: An Iroquois Tale",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:56.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101098",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:03.766Z",
+            "metadata": {
+              "sourcedId": "article_101098",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101098",
+              "questionType": "custom"
+            },
+            "title": "The Hunting of the Great Bear: An Iroquois Tale",
+            "importance": "primary",
+            "vendorResourceId": "101098",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101099",
+          "status": "active",
+          "title": "Crow Brings the Daylight: An Inuit Myth",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:57.000Z",
+          "courseComponent": {
+            "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48"
+          },
+          "resource": {
+            "sourcedId": "article_101099",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:04.408Z",
+            "metadata": {
+              "sourcedId": "article_101099",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101099",
+              "questionType": "custom"
+            },
+            "title": "Crow Brings the Daylight: An Inuit Myth",
+            "importance": "primary",
+            "vendorResourceId": "101099",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7",
+      "status": "active",
+      "title": "The Age of Exploration",
+      "sortOrder": 9,
+      "unlockDate": "2025-07-10T12:58:52.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101100",
+          "status": "active",
+          "title": "The Lure of Spices",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:57.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101100",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:05.120Z",
+            "metadata": {
+              "sourcedId": "article_101100",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101100",
+              "questionType": "custom"
+            },
+            "title": "The Lure of Spices",
+            "importance": "primary",
+            "vendorResourceId": "101100",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101101",
+          "status": "active",
+          "title": "Second Sons",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:58.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101101",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:05.754Z",
+            "metadata": {
+              "sourcedId": "article_101101",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101101",
+              "questionType": "custom"
+            },
+            "title": "Second Sons",
+            "importance": "primary",
+            "vendorResourceId": "101101",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101102",
+          "status": "active",
+          "title": "Toscanelli\u2019s Map",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:58.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101102",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:06.377Z",
+            "metadata": {
+              "sourcedId": "article_101102",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101102",
+              "questionType": "custom"
+            },
+            "title": "Toscanelli\u2019s Map",
+            "importance": "primary",
+            "vendorResourceId": "101102",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101103",
+          "status": "active",
+          "title": "Navigation in the Age of Exploration",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T12:59:59.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101103",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:07.025Z",
+            "metadata": {
+              "sourcedId": "article_101103",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101103",
+              "questionType": "custom"
+            },
+            "title": "Navigation in the Age of Exploration",
+            "importance": "primary",
+            "vendorResourceId": "101103",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101104",
+          "status": "active",
+          "title": "El Castillo de San Marcos",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:00.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101104",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:07.590Z",
+            "metadata": {
+              "sourcedId": "article_101104",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101104",
+              "questionType": "custom"
+            },
+            "title": "El Castillo de San Marcos",
+            "importance": "primary",
+            "vendorResourceId": "101104",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101105",
+          "status": "active",
+          "title": "Coronado Reports to the King",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:00.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101105",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:08.307Z",
+            "metadata": {
+              "sourcedId": "article_101105",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101105",
+              "questionType": "custom"
+            },
+            "title": "Coronado Reports to the King",
+            "importance": "primary",
+            "vendorResourceId": "101105",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101106",
+          "status": "active",
+          "title": "John Cabot",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:01.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101106",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:08.953Z",
+            "metadata": {
+              "sourcedId": "article_101106",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101106",
+              "questionType": "custom"
+            },
+            "title": "John Cabot",
+            "importance": "primary",
+            "vendorResourceId": "101106",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101107",
+          "status": "active",
+          "title": "Henry Hudson",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:02.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101107",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:09.594Z",
+            "metadata": {
+              "sourcedId": "article_101107",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101107",
+              "questionType": "custom"
+            },
+            "title": "Henry Hudson",
+            "importance": "primary",
+            "vendorResourceId": "101107",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101108",
+          "status": "active",
+          "title": "The Fur Trade and Samuel de Champlain",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:02.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101108",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:10.151Z",
+            "metadata": {
+              "sourcedId": "article_101108",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 10,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101108",
+              "questionType": "custom"
+            },
+            "title": "The Fur Trade and Samuel de Champlain",
+            "importance": "primary",
+            "vendorResourceId": "101108",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101109",
+          "status": "active",
+          "title": "A History of People in North America",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:03.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101109",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:10.798Z",
+            "metadata": {
+              "sourcedId": "article_101109",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101109",
+              "questionType": "custom"
+            },
+            "title": "A History of People in North America",
+            "importance": "primary",
+            "vendorResourceId": "101109",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101110",
+          "status": "active",
+          "title": "Caribbean Words",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:03.000Z",
+          "courseComponent": {
+            "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7"
+          },
+          "resource": {
+            "sourcedId": "article_101110",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:11.515Z",
+            "metadata": {
+              "sourcedId": "article_101110",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101110",
+              "questionType": "custom"
+            },
+            "title": "Caribbean Words",
+            "importance": "primary",
+            "vendorResourceId": "101110",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7",
+      "status": "active",
+      "title": "Living in Colonial America",
+      "sortOrder": 10,
+      "unlockDate": "2025-07-10T12:58:53.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101111",
+          "status": "active",
+          "title": "The First English Colony",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:04.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101111",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:12.161Z",
+            "metadata": {
+              "sourcedId": "article_101111",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101111",
+              "questionType": "custom"
+            },
+            "title": "The First English Colony",
+            "importance": "primary",
+            "vendorResourceId": "101111",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101112",
+          "status": "active",
+          "title": "Jamestown, Part I: A New Life",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:05.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101112",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:12.788Z",
+            "metadata": {
+              "sourcedId": "article_101112",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101112",
+              "questionType": "custom"
+            },
+            "title": "Jamestown, Part I: A New Life",
+            "importance": "primary",
+            "vendorResourceId": "101112",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101113",
+          "status": "active",
+          "title": "Jamestown, Part II: Hunting the Powhatan Way",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:05.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101113",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:13.421Z",
+            "metadata": {
+              "sourcedId": "article_101113",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101113",
+              "questionType": "custom"
+            },
+            "title": "Jamestown, Part II: Hunting the Powhatan Way",
+            "importance": "primary",
+            "vendorResourceId": "101113",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101114",
+          "status": "active",
+          "title": "Plantation Life",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:06.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101114",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:14.133Z",
+            "metadata": {
+              "sourcedId": "article_101114",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101114",
+              "questionType": "custom"
+            },
+            "title": "Plantation Life",
+            "importance": "primary",
+            "vendorResourceId": "101114",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101115",
+          "status": "active",
+          "title": "Early Days in Georgia",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:07.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101115",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:14.790Z",
+            "metadata": {
+              "sourcedId": "article_101115",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101115",
+              "questionType": "custom"
+            },
+            "title": "Early Days in Georgia",
+            "importance": "primary",
+            "vendorResourceId": "101115",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101116",
+          "status": "active",
+          "title": "The Pilgrims, Part I: Arrival",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:07.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101116",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:15.437Z",
+            "metadata": {
+              "sourcedId": "article_101116",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101116",
+              "questionType": "custom"
+            },
+            "title": "The Pilgrims, Part I: Arrival",
+            "importance": "primary",
+            "vendorResourceId": "101116",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101117",
+          "status": "active",
+          "title": "The Pilgrims, Part II: Thanksgiving Celebration",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:08.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101117",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:16.077Z",
+            "metadata": {
+              "sourcedId": "article_101117",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101117",
+              "questionType": "custom"
+            },
+            "title": "The Pilgrims, Part II: Thanksgiving Celebration",
+            "importance": "primary",
+            "vendorResourceId": "101117",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101118",
+          "status": "active",
+          "title": "Puritan Life",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:08.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101118",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:16.797Z",
+            "metadata": {
+              "sourcedId": "article_101118",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101118",
+              "questionType": "custom"
+            },
+            "title": "Puritan Life",
+            "importance": "primary",
+            "vendorResourceId": "101118",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101119",
+          "status": "active",
+          "title": "Life on a Farm in the Middle Atlantic Colonies, Part I",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:09.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101119",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:17.348Z",
+            "metadata": {
+              "sourcedId": "article_101119",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101119",
+              "questionType": "custom"
+            },
+            "title": "Life on a Farm in the Middle Atlantic Colonies, Part I",
+            "importance": "primary",
+            "vendorResourceId": "101119",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101120",
+          "status": "active",
+          "title": "Life on a Farm in the Middle Atlantic Colonies, Part II",
+          "sortOrder": 10,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:10.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101120",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:18.064Z",
+            "metadata": {
+              "sourcedId": "article_101120",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 13,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101120",
+              "questionType": "custom"
+            },
+            "title": "Life on a Farm in the Middle Atlantic Colonies, Part II",
+            "importance": "primary",
+            "vendorResourceId": "101120",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101121",
+          "status": "active",
+          "title": "The Quakers and the Lenni Lenape",
+          "sortOrder": 11,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:10.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101121",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:18.695Z",
+            "metadata": {
+              "sourcedId": "article_101121",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101121",
+              "questionType": "custom"
+            },
+            "title": "The Quakers and the Lenni Lenape",
+            "importance": "primary",
+            "vendorResourceId": "101121",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101122",
+          "status": "active",
+          "title": "Matthew, the Apprentice",
+          "sortOrder": 12,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:11.000Z",
+          "courseComponent": {
+            "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7"
+          },
+          "resource": {
+            "sourcedId": "article_101122",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:19.423Z",
+            "metadata": {
+              "sourcedId": "article_101122",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101122",
+              "questionType": "custom"
+            },
+            "title": "Matthew, the Apprentice",
+            "importance": "primary",
+            "vendorResourceId": "101122",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab",
+      "status": "active",
+      "title": "Introduction to Ecology",
+      "sortOrder": 11,
+      "unlockDate": "2025-07-10T12:58:54.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "componentResources": [
+        {
+          "sourcedId": "article_101123",
+          "status": "active",
+          "title": "Living Things and Their Habitats",
+          "sortOrder": 1,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:12.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101123",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:20.134Z",
+            "metadata": {
+              "sourcedId": "article_101123",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101123",
+              "questionType": "custom"
+            },
+            "title": "Living Things and Their Habitats",
+            "importance": "primary",
+            "vendorResourceId": "101123",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101124",
+          "status": "active",
+          "title": "Food Chains",
+          "sortOrder": 2,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:12.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101124",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:20.782Z",
+            "metadata": {
+              "sourcedId": "article_101124",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101124",
+              "questionType": "custom"
+            },
+            "title": "Food Chains",
+            "importance": "primary",
+            "vendorResourceId": "101124",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101125",
+          "status": "active",
+          "title": "Producers, Consumers, and Decomposers",
+          "sortOrder": 3,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:13.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101125",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:21.421Z",
+            "metadata": {
+              "sourcedId": "article_101125",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 11,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101125",
+              "questionType": "custom"
+            },
+            "title": "Producers, Consumers, and Decomposers",
+            "importance": "primary",
+            "vendorResourceId": "101125",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101126",
+          "status": "active",
+          "title": "The Balance of Nature",
+          "sortOrder": 4,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:14.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101126",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:22.061Z",
+            "metadata": {
+              "sourcedId": "article_101126",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101126",
+              "questionType": "custom"
+            },
+            "title": "The Balance of Nature",
+            "importance": "primary",
+            "vendorResourceId": "101126",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101127",
+          "status": "active",
+          "title": "Natural Changes to the Environment",
+          "sortOrder": 5,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:14.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101127",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:22.702Z",
+            "metadata": {
+              "sourcedId": "article_101127",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101127",
+              "questionType": "custom"
+            },
+            "title": "Natural Changes to the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101127",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101128",
+          "status": "active",
+          "title": "Human Changes to the Environment",
+          "sortOrder": 6,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:15.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101128",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:23.348Z",
+            "metadata": {
+              "sourcedId": "article_101128",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101128",
+              "questionType": "custom"
+            },
+            "title": "Human Changes to the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101128",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101129",
+          "status": "active",
+          "title": "Environmental Damage Caused by Humans",
+          "sortOrder": 7,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:16.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101129",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:24.057Z",
+            "metadata": {
+              "sourcedId": "article_101129",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101129",
+              "questionType": "custom"
+            },
+            "title": "Environmental Damage Caused by Humans",
+            "importance": "primary",
+            "vendorResourceId": "101129",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101130",
+          "status": "active",
+          "title": "Protecting the Environment",
+          "sortOrder": 8,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:16.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101130",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:24.617Z",
+            "metadata": {
+              "sourcedId": "article_101130",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101130",
+              "questionType": "custom"
+            },
+            "title": "Protecting the Environment",
+            "importance": "primary",
+            "vendorResourceId": "101130",
+            "vendorId": null,
+            "type": "qti"
+          }
+        },
+        {
+          "sourcedId": "article_101131",
+          "status": "active",
+          "title": "John Muir",
+          "sortOrder": 9,
+          "metadata": {},
+          "dateLastModified": "2025-07-10T13:00:17.000Z",
+          "courseComponent": {
+            "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab"
+          },
+          "resource": {
+            "sourcedId": "article_101131",
+            "status": "active",
+            "dateLastModified": "2025-07-15T11:09:25.265Z",
+            "metadata": {
+              "sourcedId": "article_101131",
+              "lessonType": "alpha-read-article",
+              "type": "qti",
+              "subType": "qti-test",
+              "xp": 12,
+              "url": "https://qti.alpha-1edtech.ai/api/assessment-tests/article_101131",
+              "questionType": "custom"
+            },
+            "title": "John Muir",
+            "importance": "primary",
+            "vendorResourceId": "101131",
+            "vendorId": null,
+            "type": "qti"
+          }
+        }
+      ]
+    },
+    {
+      "sourcedId": "90a0bdce-d86d-4e90-bc99-16bd57a0a282",
+      "status": "tobedeleted",
+      "title": "Aladin and the Wonderful Lamp",
+      "sortOrder": 21,
+      "unlockDate": "1970-01-01T00:00:00.000Z",
+      "metadata": {},
+      "prerequisites": [],
+      "prerequisiteCriteria": "ALL"
+    }
+  ]
+}

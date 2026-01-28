@@ -3,4 +3,11 @@ export default {
   name: "Readventure",
   description: "Turn reading into adventure - a reading comprehension game",
   emoji: "📖",
+  integrations: {
+    timeback: {
+      courses: [
+        { subject: "Reading", grade: 3, totalXp: 1000, masterableUnits: 10 },
+      ],
+    },
+  },
 };

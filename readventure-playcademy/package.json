@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@playcademy/vite-plugin": "^0.2.6",
+    "@playcademy/vite-plugin": "^0.2.12",
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
   },
   "dependencies": {
-    "@playcademy/sdk": "latest"
+    "@playcademy/sdk": "^0.2.12"
   }
 }
