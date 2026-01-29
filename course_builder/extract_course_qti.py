@@ -40,9 +40,14 @@ COGNITO_URL = "https://prod-beyond-timeback-api-2-idp.auth.us-east-1.amazoncogni
 CLIENT_ID = os.getenv("TIMEBACK_CLIENT_ID", "31rkusu8sloquan3cmcb9p8v33")
 CLIENT_SECRET = os.getenv("TIMEBACK_CLIENT_SECRET", "1vv89lcl7lfu151ruccfts4hauefc0r1epdvaotbrgupvcif4cor")
 
+# Paths
+from pathlib import Path
+SCRIPT_DIR = Path(__file__).parent
+OUTPUTS_DIR = SCRIPT_DIR / "outputs"
+
 # State tracking
-STATE_FILE = "course_extraction_state.json"
-LOG_FILE = "course_extraction.log"
+STATE_FILE = str(OUTPUTS_DIR / "extractions" / "course_extraction_state.json")
+LOG_FILE = str(OUTPUTS_DIR / "logs" / "course_extraction.log")
 
 # Global logger
 logger = None
@@ -1007,7 +1012,7 @@ Examples:
         
         # Direct test extraction mode
         if args.test_id:
-            output_file = args.output or f"test_{args.test_id}_data.json"
+            output_file = args.output or str(OUTPUTS_DIR / "extractions" / f"test_{args.test_id}_data.json")
             result = extract_single_test(args.test_id)
             
             if not result:
@@ -1028,7 +1033,7 @@ Examples:
             parser.error("--course-id or --test-id is required (or use --list-courses / --list-tests)")
         
         # Determine output filename
-        output_file = args.output or f"course_{args.course_id}_data.json"
+        output_file = args.output or str(OUTPUTS_DIR / "extractions" / f"course_{args.course_id}_data.json")
         
         # Extract course content
         result = extract_course_content(

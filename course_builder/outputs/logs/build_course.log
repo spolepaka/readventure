@@ -1,0 +1,493 @@
+2026-01-23 23:20:03 | INFO     | ============================================================
+2026-01-23 23:20:03 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:20:03 | INFO     | ============================================================
+2026-01-23 23:20:03 | INFO     | Mode: create
+2026-01-23 23:20:03 | INFO     | Grade: 3
+2026-01-23 23:20:03 | INFO     | Article limit: 2
+2026-01-23 23:20:03 | INFO     | 🔒 DRY RUN MODE - No API calls will be made
+2026-01-23 23:20:03 | INFO     | ============================================================
+2026-01-23 23:20:03 | INFO     | 📂 Loading question bank from /Users/skp/code/superbuilders/playcademy-games/reading-comp/readventure/course_builder/final_deliverables_grade3/comprehensive_question_bank_grade3_3277_questions.json
+2026-01-23 23:20:03 | INFO     | ✅ Loaded 3277 questions
+2026-01-23 23:20:03 | INFO     | 
+📊 Question Bank Summary:
+2026-01-23 23:20:03 | INFO     |    Total questions: 3277
+2026-01-23 23:20:03 | INFO     |    Guiding questions: 511
+2026-01-23 23:20:03 | INFO     |    Quiz questions: 2766
+2026-01-23 23:20:03 | INFO     |    Total articles: 131
+2026-01-23 23:20:03 | INFO     | 
+============================================================
+2026-01-23 23:20:03 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:20:03 | INFO     | ============================================================
+2026-01-23 23:20:03 | INFO     | 📊 Organized questions into 131 articles
+2026-01-23 23:20:03 | INFO     | 📊 Limited to 2 articles for testing
+2026-01-23 23:20:03 | INFO     | 
+========================================
+2026-01-23 23:20:03 | INFO     | Processing article 1/2
+2026-01-23 23:20:03 | INFO     | ========================================
+2026-01-23 23:20:03 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part I
+2026-01-23 23:20:03 | INFO     |    Article ID: article_101001
+2026-01-23 23:20:03 | INFO     |    Guiding questions: 4
+2026-01-23 23:20:03 | INFO     |    Quiz questions: 20
+2026-01-23 23:20:03 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21014
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21015
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21016
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21017
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21014_302001
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21015_302002
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21016_302003
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21017_302004
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302005
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302005_sibling_1
+2026-01-23 23:20:04 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302005_sibling_2
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302005_sibling_3
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302005_sibling_4
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302006
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302006_sibling_1
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302006_sibling_2
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302006_sibling_3
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302006_sibling_4
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302007
+2026-01-23 23:20:05 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302007_sibling_1
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302007_sibling_2
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302007_sibling_3
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302007_sibling_4
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302008
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302008_sibling_1
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302008_sibling_2
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302008_sibling_3
+2026-01-23 23:20:06 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302008_sibling_4
+2026-01-23 23:20:06 | INFO     |   [DRY RUN] Would create assessment test: article_101001
+2026-01-23 23:20:07 | INFO     | 
+========================================
+2026-01-23 23:20:07 | INFO     | Processing article 2/2
+2026-01-23 23:20:07 | INFO     | ========================================
+2026-01-23 23:20:07 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part II
+2026-01-23 23:20:07 | INFO     |    Article ID: article_101002
+2026-01-23 23:20:07 | INFO     |    Guiding questions: 4
+2026-01-23 23:20:07 | INFO     |    Quiz questions: 20
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21018
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21019
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21020
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create stimulus: guiding_21021
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21018_302009
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21019_302010
+2026-01-23 23:20:07 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21020_302011
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: guiding_21021_302012
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302013
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302013_sibling_1
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302013_sibling_2
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302013_sibling_3
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302013_sibling_4
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302014
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302014_sibling_1
+2026-01-23 23:20:08 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302014_sibling_2
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302014_sibling_3
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302014_sibling_4
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302015
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302015_sibling_1
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302015_sibling_2
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302015_sibling_3
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302015_sibling_4
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302016
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302016_sibling_1
+2026-01-23 23:20:09 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302016_sibling_2
+2026-01-23 23:20:10 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302016_sibling_3
+2026-01-23 23:20:10 | DEBUG    |     [DRY RUN] Would create assessment item: quiz_302016_sibling_4
+2026-01-23 23:20:10 | INFO     |   [DRY RUN] Would create assessment test: article_101002
+2026-01-23 23:20:10 | INFO     | 
+============================================================
+2026-01-23 23:20:10 | INFO     | BUILD COMPLETE
+2026-01-23 23:20:10 | INFO     | ============================================================
+2026-01-23 23:20:10 | INFO     |    Articles processed: 2
+2026-01-23 23:20:10 | INFO     |    Stimuli created: 8
+2026-01-23 23:20:10 | INFO     |    Assessment items created: 48
+2026-01-23 23:20:10 | INFO     |    Assessment tests created: 2
+2026-01-23 23:20:10 | INFO     |    Resources created: 0
+2026-01-23 23:20:10 | INFO     |    Errors: 0
+2026-01-23 23:20:10 | INFO     | 
+🔒 This was a DRY RUN - no actual changes were made
+2026-01-23 23:20:10 | INFO     | 
+💾 Results saved to: build_results_20260123_232010.json
+2026-01-23 23:20:15 | INFO     | ============================================================
+2026-01-23 23:20:15 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:20:15 | INFO     | ============================================================
+2026-01-23 23:20:15 | INFO     | Mode: create
+2026-01-23 23:20:15 | INFO     | Grade: 3
+2026-01-23 23:20:15 | INFO     | Article limit: 1
+2026-01-23 23:20:15 | INFO     | ============================================================
+2026-01-23 23:20:15 | INFO     | 📂 Loading question bank from /Users/skp/code/superbuilders/playcademy-games/reading-comp/readventure/course_builder/final_deliverables_grade3/comprehensive_question_bank_grade3_3277_questions.json
+2026-01-23 23:20:15 | INFO     | ✅ Loaded 3277 questions
+2026-01-23 23:20:15 | INFO     | 
+📊 Question Bank Summary:
+2026-01-23 23:20:15 | INFO     |    Total questions: 3277
+2026-01-23 23:20:15 | INFO     |    Guiding questions: 511
+2026-01-23 23:20:15 | INFO     |    Quiz questions: 2766
+2026-01-23 23:20:15 | INFO     |    Total articles: 131
+2026-01-23 23:20:15 | INFO     | 
+============================================================
+2026-01-23 23:20:15 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:20:15 | INFO     | ============================================================
+2026-01-23 23:20:15 | INFO     | 📊 Organized questions into 131 articles
+2026-01-23 23:20:15 | INFO     | 📊 Limited to 1 articles for testing
+2026-01-23 23:20:15 | INFO     | 
+========================================
+2026-01-23 23:20:15 | INFO     | Processing article 1/1
+2026-01-23 23:20:15 | INFO     | ========================================
+2026-01-23 23:20:15 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part I
+2026-01-23 23:20:15 | INFO     |    Article ID: article_101001
+2026-01-23 23:20:15 | INFO     |    Guiding questions: 4
+2026-01-23 23:20:15 | INFO     |    Quiz questions: 20
+2026-01-23 23:20:15 | DEBUG    |     📄 Creating stimulus: guiding_21014
+2026-01-23 23:20:15 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 23:20:16 | INFO     | ✅ Token obtained successfully
+2026-01-23 23:20:17 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21014
+2026-01-23 23:20:17 | DEBUG    |     📄 Creating stimulus: guiding_21015
+2026-01-23 23:20:17 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21015
+2026-01-23 23:20:18 | DEBUG    |     📄 Creating stimulus: guiding_21016
+2026-01-23 23:20:18 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21016
+2026-01-23 23:20:18 | DEBUG    |     📄 Creating stimulus: guiding_21017
+2026-01-23 23:20:19 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21017
+2026-01-23 23:20:19 | DEBUG    |     ❓ Creating assessment item: guiding_21014_302001
+2026-01-23 23:20:19 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21014_302001
+2026-01-23 23:20:20 | DEBUG    |     ❓ Creating assessment item: guiding_21015_302002
+2026-01-23 23:20:20 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21015_302002
+2026-01-23 23:20:20 | DEBUG    |     ❓ Creating assessment item: guiding_21016_302003
+2026-01-23 23:20:21 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21016_302003
+2026-01-23 23:20:21 | DEBUG    |     ❓ Creating assessment item: guiding_21017_302004
+2026-01-23 23:20:21 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21017_302004
+2026-01-23 23:20:22 | DEBUG    |     ❓ Creating assessment item: quiz_302005
+2026-01-23 23:20:22 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005
+2026-01-23 23:20:22 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_1
+2026-01-23 23:20:23 | DEBUG    |     ✅ Assessment item created: quiz_302005_sibling_1
+2026-01-23 23:20:23 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_2
+2026-01-23 23:20:23 | DEBUG    |     ✅ Assessment item created: quiz_302005_sibling_2
+2026-01-23 23:20:24 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_3
+2026-01-23 23:20:24 | DEBUG    |     ✅ Assessment item created: quiz_302005_sibling_3
+2026-01-23 23:20:24 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_4
+2026-01-23 23:20:25 | DEBUG    |     ✅ Assessment item created: quiz_302005_sibling_4
+2026-01-23 23:20:25 | DEBUG    |     ❓ Creating assessment item: quiz_302006
+2026-01-23 23:20:25 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006
+2026-01-23 23:20:26 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_1
+2026-01-23 23:20:26 | DEBUG    |     ✅ Assessment item created: quiz_302006_sibling_1
+2026-01-23 23:20:26 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_2
+2026-01-23 23:20:27 | DEBUG    |     ✅ Assessment item created: quiz_302006_sibling_2
+2026-01-23 23:20:27 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_3
+2026-01-23 23:20:28 | DEBUG    |     ✅ Assessment item created: quiz_302006_sibling_3
+2026-01-23 23:20:28 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_4
+2026-01-23 23:20:28 | DEBUG    |     ✅ Assessment item created: quiz_302006_sibling_4
+2026-01-23 23:20:28 | DEBUG    |     ❓ Creating assessment item: quiz_302007
+2026-01-23 23:20:29 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007
+2026-01-23 23:20:29 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_1
+2026-01-23 23:20:30 | DEBUG    |     ✅ Assessment item created: quiz_302007_sibling_1
+2026-01-23 23:20:30 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_2
+2026-01-23 23:20:30 | DEBUG    |     ✅ Assessment item created: quiz_302007_sibling_2
+2026-01-23 23:20:30 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_3
+2026-01-23 23:20:31 | DEBUG    |     ✅ Assessment item created: quiz_302007_sibling_3
+2026-01-23 23:20:31 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_4
+2026-01-23 23:20:32 | DEBUG    |     ✅ Assessment item created: quiz_302007_sibling_4
+2026-01-23 23:20:32 | DEBUG    |     ❓ Creating assessment item: quiz_302008
+2026-01-23 23:20:32 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008
+2026-01-23 23:20:32 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_1
+2026-01-23 23:20:33 | DEBUG    |     ✅ Assessment item created: quiz_302008_sibling_1
+2026-01-23 23:20:33 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_2
+2026-01-23 23:20:34 | DEBUG    |     ✅ Assessment item created: quiz_302008_sibling_2
+2026-01-23 23:20:34 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_3
+2026-01-23 23:20:34 | DEBUG    |     ✅ Assessment item created: quiz_302008_sibling_3
+2026-01-23 23:20:35 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_4
+2026-01-23 23:20:35 | DEBUG    |     ✅ Assessment item created: quiz_302008_sibling_4
+2026-01-23 23:20:35 | INFO     |   📋 Creating assessment test: article_101001
+2026-01-23 23:20:36 | INFO     |   ⚠️ Assessment test already exists: article_101001
+2026-01-23 23:20:36 | DEBUG    |     📦 Creating resource: article_101001
+2026-01-23 23:20:36 | ERROR    |     ❌ Error creating resource article_101001: 404 Client Error: Not Found for url: https://api.alpha-1edtech.ai/ims/oneroster/resources/v1p2/resources/
+2026-01-23 23:20:37 | INFO     | 
+============================================================
+2026-01-23 23:20:37 | INFO     | BUILD COMPLETE
+2026-01-23 23:20:37 | INFO     | ============================================================
+2026-01-23 23:20:37 | INFO     |    Articles processed: 1
+2026-01-23 23:20:37 | INFO     |    Stimuli created: 4
+2026-01-23 23:20:37 | INFO     |    Assessment items created: 24
+2026-01-23 23:20:37 | INFO     |    Assessment tests created: 1
+2026-01-23 23:20:37 | INFO     |    Resources created: 0
+2026-01-23 23:20:37 | INFO     |    Errors: 0
+2026-01-23 23:20:37 | INFO     | 
+💾 Results saved to: build_results_20260123_232037.json
+2026-01-23 23:21:11 | INFO     | ============================================================
+2026-01-23 23:21:11 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:21:11 | INFO     | ============================================================
+2026-01-23 23:21:11 | INFO     | Mode: create
+2026-01-23 23:21:11 | INFO     | Grade: 3
+2026-01-23 23:21:11 | INFO     | Article limit: 1
+2026-01-23 23:21:11 | INFO     | ============================================================
+2026-01-23 23:21:11 | INFO     | 📂 Loading question bank from /Users/skp/code/superbuilders/playcademy-games/reading-comp/readventure/course_builder/final_deliverables_grade3/comprehensive_question_bank_grade3_3277_questions.json
+2026-01-23 23:21:11 | INFO     | ✅ Loaded 3277 questions
+2026-01-23 23:21:11 | INFO     | 
+📊 Question Bank Summary:
+2026-01-23 23:21:11 | INFO     |    Total questions: 3277
+2026-01-23 23:21:11 | INFO     |    Guiding questions: 511
+2026-01-23 23:21:11 | INFO     |    Quiz questions: 2766
+2026-01-23 23:21:11 | INFO     |    Total articles: 131
+2026-01-23 23:21:11 | INFO     | 
+============================================================
+2026-01-23 23:21:11 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:21:11 | INFO     | ============================================================
+2026-01-23 23:21:11 | INFO     | 📊 Organized questions into 131 articles
+2026-01-23 23:21:11 | INFO     | 📊 Limited to 1 articles for testing
+2026-01-23 23:21:11 | INFO     | 
+========================================
+2026-01-23 23:21:11 | INFO     | Processing article 1/1
+2026-01-23 23:21:11 | INFO     | ========================================
+2026-01-23 23:21:11 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part I
+2026-01-23 23:21:11 | INFO     |    Article ID: article_101001
+2026-01-23 23:21:11 | INFO     |    Guiding questions: 4
+2026-01-23 23:21:11 | INFO     |    Quiz questions: 20
+2026-01-23 23:21:11 | DEBUG    |     📄 Creating stimulus: guiding_21014
+2026-01-23 23:21:11 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 23:21:12 | INFO     | ✅ Token obtained successfully
+2026-01-23 23:21:12 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21014
+2026-01-23 23:21:12 | DEBUG    |     📄 Creating stimulus: guiding_21015
+2026-01-23 23:21:13 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21015
+2026-01-23 23:21:13 | DEBUG    |     📄 Creating stimulus: guiding_21016
+2026-01-23 23:21:13 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21016
+2026-01-23 23:21:13 | DEBUG    |     📄 Creating stimulus: guiding_21017
+2026-01-23 23:21:14 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21017
+2026-01-23 23:21:14 | DEBUG    |     ❓ Creating assessment item: guiding_21014_302001
+2026-01-23 23:21:15 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21014_302001
+2026-01-23 23:21:15 | DEBUG    |     ❓ Creating assessment item: guiding_21015_302002
+2026-01-23 23:21:15 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21015_302002
+2026-01-23 23:21:15 | DEBUG    |     ❓ Creating assessment item: guiding_21016_302003
+2026-01-23 23:21:16 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21016_302003
+2026-01-23 23:21:16 | DEBUG    |     ❓ Creating assessment item: guiding_21017_302004
+2026-01-23 23:21:17 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21017_302004
+2026-01-23 23:21:17 | DEBUG    |     ❓ Creating assessment item: quiz_302005
+2026-01-23 23:21:17 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005
+2026-01-23 23:21:17 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_1
+2026-01-23 23:21:18 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_1
+2026-01-23 23:21:18 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_2
+2026-01-23 23:21:19 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_2
+2026-01-23 23:21:19 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_3
+2026-01-23 23:21:19 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_3
+2026-01-23 23:21:19 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_4
+2026-01-23 23:21:20 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_4
+2026-01-23 23:21:20 | DEBUG    |     ❓ Creating assessment item: quiz_302006
+2026-01-23 23:21:20 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006
+2026-01-23 23:21:21 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_1
+2026-01-23 23:21:21 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_1
+2026-01-23 23:21:21 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_2
+2026-01-23 23:21:22 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_2
+2026-01-23 23:21:22 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_3
+2026-01-23 23:21:22 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_3
+2026-01-23 23:21:22 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_4
+2026-01-23 23:21:23 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_4
+2026-01-23 23:21:23 | DEBUG    |     ❓ Creating assessment item: quiz_302007
+2026-01-23 23:21:24 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007
+2026-01-23 23:21:24 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_1
+2026-01-23 23:21:24 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_1
+2026-01-23 23:21:25 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_2
+2026-01-23 23:21:25 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_2
+2026-01-23 23:21:25 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_3
+2026-01-23 23:21:26 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_3
+2026-01-23 23:21:26 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_4
+2026-01-23 23:21:26 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_4
+2026-01-23 23:21:26 | DEBUG    |     ❓ Creating assessment item: quiz_302008
+2026-01-23 23:21:27 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008
+2026-01-23 23:21:27 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_1
+2026-01-23 23:21:28 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_1
+2026-01-23 23:21:28 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_2
+2026-01-23 23:21:28 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_2
+2026-01-23 23:21:28 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_3
+2026-01-23 23:21:29 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_3
+2026-01-23 23:21:29 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_4
+2026-01-23 23:21:30 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_4
+2026-01-23 23:21:30 | INFO     |   📋 Creating assessment test: article_101001
+2026-01-23 23:21:30 | INFO     |   ⚠️ Assessment test already exists: article_101001
+2026-01-23 23:21:30 | DEBUG    |     📦 Creating resource: article_101001
+2026-01-23 23:21:31 | ERROR    |     ❌ Error creating resource article_101001: 404 Client Error: Not Found for url: https://api.alpha-1edtech.ai/ims/oneroster/resources/v1p2/resources
+2026-01-23 23:21:31 | INFO     | 
+============================================================
+2026-01-23 23:21:31 | INFO     | BUILD COMPLETE
+2026-01-23 23:21:31 | INFO     | ============================================================
+2026-01-23 23:21:31 | INFO     |    Articles processed: 1
+2026-01-23 23:21:31 | INFO     |    Stimuli created: 4
+2026-01-23 23:21:31 | INFO     |    Assessment items created: 24
+2026-01-23 23:21:31 | INFO     |    Assessment tests created: 1
+2026-01-23 23:21:31 | INFO     |    Resources created: 0
+2026-01-23 23:21:31 | INFO     |    Errors: 0
+2026-01-23 23:21:31 | INFO     | 
+💾 Results saved to: build_results_20260123_232131.json
+2026-01-23 23:21:55 | INFO     | ============================================================
+2026-01-23 23:21:55 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:21:55 | INFO     | ============================================================
+2026-01-23 23:21:55 | INFO     | Mode: create
+2026-01-23 23:21:55 | INFO     | Grade: 3
+2026-01-23 23:21:55 | INFO     | Article limit: 2
+2026-01-23 23:21:55 | INFO     | ============================================================
+2026-01-23 23:21:55 | INFO     | 📂 Loading question bank from /Users/skp/code/superbuilders/playcademy-games/reading-comp/readventure/course_builder/final_deliverables_grade3/comprehensive_question_bank_grade3_3277_questions.json
+2026-01-23 23:21:55 | INFO     | ✅ Loaded 3277 questions
+2026-01-23 23:21:55 | INFO     | 
+📊 Question Bank Summary:
+2026-01-23 23:21:55 | INFO     |    Total questions: 3277
+2026-01-23 23:21:55 | INFO     |    Guiding questions: 511
+2026-01-23 23:21:55 | INFO     |    Quiz questions: 2766
+2026-01-23 23:21:55 | INFO     |    Total articles: 131
+2026-01-23 23:21:55 | INFO     | 
+============================================================
+2026-01-23 23:21:55 | INFO     | ALPHA READ COURSE BUILDER
+2026-01-23 23:21:55 | INFO     | ============================================================
+2026-01-23 23:21:55 | INFO     | 📊 Organized questions into 131 articles
+2026-01-23 23:21:55 | INFO     | 📊 Limited to 2 articles for testing
+2026-01-23 23:21:55 | INFO     | 
+========================================
+2026-01-23 23:21:55 | INFO     | Processing article 1/2
+2026-01-23 23:21:55 | INFO     | ========================================
+2026-01-23 23:21:55 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part I
+2026-01-23 23:21:55 | INFO     |    Article ID: article_101001
+2026-01-23 23:21:55 | INFO     |    Guiding questions: 4
+2026-01-23 23:21:55 | INFO     |    Quiz questions: 20
+2026-01-23 23:21:55 | DEBUG    |     📄 Creating stimulus: guiding_21014
+2026-01-23 23:21:55 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 23:21:55 | INFO     | ✅ Token obtained successfully
+2026-01-23 23:21:56 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21014
+2026-01-23 23:21:56 | DEBUG    |     📄 Creating stimulus: guiding_21015
+2026-01-23 23:21:56 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21015
+2026-01-23 23:21:57 | DEBUG    |     📄 Creating stimulus: guiding_21016
+2026-01-23 23:21:57 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21016
+2026-01-23 23:21:57 | DEBUG    |     📄 Creating stimulus: guiding_21017
+2026-01-23 23:21:58 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21017
+2026-01-23 23:21:58 | DEBUG    |     ❓ Creating assessment item: guiding_21014_302001
+2026-01-23 23:21:58 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21014_302001
+2026-01-23 23:21:58 | DEBUG    |     ❓ Creating assessment item: guiding_21015_302002
+2026-01-23 23:21:59 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21015_302002
+2026-01-23 23:21:59 | DEBUG    |     ❓ Creating assessment item: guiding_21016_302003
+2026-01-23 23:22:00 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21016_302003
+2026-01-23 23:22:00 | DEBUG    |     ❓ Creating assessment item: guiding_21017_302004
+2026-01-23 23:22:00 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21017_302004
+2026-01-23 23:22:00 | DEBUG    |     ❓ Creating assessment item: quiz_302005
+2026-01-23 23:22:01 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005
+2026-01-23 23:22:01 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_1
+2026-01-23 23:22:02 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_1
+2026-01-23 23:22:02 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_2
+2026-01-23 23:22:02 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_2
+2026-01-23 23:22:02 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_3
+2026-01-23 23:22:03 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_3
+2026-01-23 23:22:03 | DEBUG    |     ❓ Creating assessment item: quiz_302005_sibling_4
+2026-01-23 23:22:03 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302005_sibling_4
+2026-01-23 23:22:04 | DEBUG    |     ❓ Creating assessment item: quiz_302006
+2026-01-23 23:22:04 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006
+2026-01-23 23:22:04 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_1
+2026-01-23 23:22:05 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_1
+2026-01-23 23:22:05 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_2
+2026-01-23 23:22:05 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_2
+2026-01-23 23:22:06 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_3
+2026-01-23 23:22:06 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_3
+2026-01-23 23:22:06 | DEBUG    |     ❓ Creating assessment item: quiz_302006_sibling_4
+2026-01-23 23:22:07 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302006_sibling_4
+2026-01-23 23:22:07 | DEBUG    |     ❓ Creating assessment item: quiz_302007
+2026-01-23 23:22:07 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007
+2026-01-23 23:22:08 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_1
+2026-01-23 23:22:08 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_1
+2026-01-23 23:22:08 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_2
+2026-01-23 23:22:09 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_2
+2026-01-23 23:22:09 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_3
+2026-01-23 23:22:09 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_3
+2026-01-23 23:22:10 | DEBUG    |     ❓ Creating assessment item: quiz_302007_sibling_4
+2026-01-23 23:22:10 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302007_sibling_4
+2026-01-23 23:22:10 | DEBUG    |     ❓ Creating assessment item: quiz_302008
+2026-01-23 23:22:11 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008
+2026-01-23 23:22:11 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_1
+2026-01-23 23:22:11 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_1
+2026-01-23 23:22:11 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_2
+2026-01-23 23:22:12 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_2
+2026-01-23 23:22:12 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_3
+2026-01-23 23:22:13 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_3
+2026-01-23 23:22:13 | DEBUG    |     ❓ Creating assessment item: quiz_302008_sibling_4
+2026-01-23 23:22:13 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302008_sibling_4
+2026-01-23 23:22:13 | INFO     |   📋 Creating assessment test: article_101001
+2026-01-23 23:22:14 | INFO     |   ⚠️ Assessment test already exists: article_101001
+2026-01-23 23:22:14 | DEBUG    |     📦 Creating resource: article_101001
+2026-01-23 23:22:14 | DEBUG    |     ⚠️ Resource already exists: article_101001
+2026-01-23 23:22:15 | INFO     | 
+========================================
+2026-01-23 23:22:15 | INFO     | Processing article 2/2
+2026-01-23 23:22:15 | INFO     | ========================================
+2026-01-23 23:22:15 | INFO     | 
+📚 Building article: Aladdin and the Wonderful Lamp, Part II
+2026-01-23 23:22:15 | INFO     |    Article ID: article_101002
+2026-01-23 23:22:15 | INFO     |    Guiding questions: 4
+2026-01-23 23:22:15 | INFO     |    Quiz questions: 20
+2026-01-23 23:22:15 | DEBUG    |     📄 Creating stimulus: guiding_21018
+2026-01-23 23:22:16 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21018
+2026-01-23 23:22:16 | DEBUG    |     📄 Creating stimulus: guiding_21019
+2026-01-23 23:22:16 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21019
+2026-01-23 23:22:16 | DEBUG    |     📄 Creating stimulus: guiding_21020
+2026-01-23 23:22:17 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21020
+2026-01-23 23:22:17 | DEBUG    |     📄 Creating stimulus: guiding_21021
+2026-01-23 23:22:18 | DEBUG    |     ⚠️ Stimulus already exists: guiding_21021
+2026-01-23 23:22:18 | DEBUG    |     ❓ Creating assessment item: guiding_21018_302009
+2026-01-23 23:22:18 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21018_302009
+2026-01-23 23:22:18 | DEBUG    |     ❓ Creating assessment item: guiding_21019_302010
+2026-01-23 23:22:19 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21019_302010
+2026-01-23 23:22:19 | DEBUG    |     ❓ Creating assessment item: guiding_21020_302011
+2026-01-23 23:22:20 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21020_302011
+2026-01-23 23:22:20 | DEBUG    |     ❓ Creating assessment item: guiding_21021_302012
+2026-01-23 23:22:20 | DEBUG    |     ⚠️ Assessment item already exists: guiding_21021_302012
+2026-01-23 23:22:20 | DEBUG    |     ❓ Creating assessment item: quiz_302013
+2026-01-23 23:22:21 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302013
+2026-01-23 23:22:21 | DEBUG    |     ❓ Creating assessment item: quiz_302013_sibling_1
+2026-01-23 23:22:21 | DEBUG    |     ✅ Assessment item created: quiz_302013_sibling_1
+2026-01-23 23:22:22 | DEBUG    |     ❓ Creating assessment item: quiz_302013_sibling_2
+2026-01-23 23:22:22 | DEBUG    |     ✅ Assessment item created: quiz_302013_sibling_2
+2026-01-23 23:22:22 | DEBUG    |     ❓ Creating assessment item: quiz_302013_sibling_3
+2026-01-23 23:22:23 | DEBUG    |     ✅ Assessment item created: quiz_302013_sibling_3
+2026-01-23 23:22:23 | DEBUG    |     ❓ Creating assessment item: quiz_302013_sibling_4
+2026-01-23 23:22:23 | DEBUG    |     ✅ Assessment item created: quiz_302013_sibling_4
+2026-01-23 23:22:24 | DEBUG    |     ❓ Creating assessment item: quiz_302014
+2026-01-23 23:22:24 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302014
+2026-01-23 23:22:24 | DEBUG    |     ❓ Creating assessment item: quiz_302014_sibling_1
+2026-01-23 23:22:25 | DEBUG    |     ✅ Assessment item created: quiz_302014_sibling_1
+2026-01-23 23:22:25 | DEBUG    |     ❓ Creating assessment item: quiz_302014_sibling_2
+2026-01-23 23:22:25 | DEBUG    |     ✅ Assessment item created: quiz_302014_sibling_2
+2026-01-23 23:22:26 | DEBUG    |     ❓ Creating assessment item: quiz_302014_sibling_3
+2026-01-23 23:22:26 | DEBUG    |     ✅ Assessment item created: quiz_302014_sibling_3
+2026-01-23 23:22:26 | DEBUG    |     ❓ Creating assessment item: quiz_302014_sibling_4
+2026-01-23 23:22:27 | DEBUG    |     ✅ Assessment item created: quiz_302014_sibling_4
+2026-01-23 23:22:27 | DEBUG    |     ❓ Creating assessment item: quiz_302015
+2026-01-23 23:22:27 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302015
+2026-01-23 23:22:28 | DEBUG    |     ❓ Creating assessment item: quiz_302015_sibling_1
+2026-01-23 23:22:28 | DEBUG    |     ✅ Assessment item created: quiz_302015_sibling_1
+2026-01-23 23:22:28 | DEBUG    |     ❓ Creating assessment item: quiz_302015_sibling_2
+2026-01-23 23:22:29 | DEBUG    |     ✅ Assessment item created: quiz_302015_sibling_2
+2026-01-23 23:22:29 | DEBUG    |     ❓ Creating assessment item: quiz_302015_sibling_3
+2026-01-23 23:22:29 | DEBUG    |     ✅ Assessment item created: quiz_302015_sibling_3
+2026-01-23 23:22:30 | DEBUG    |     ❓ Creating assessment item: quiz_302015_sibling_4
+2026-01-23 23:22:30 | DEBUG    |     ✅ Assessment item created: quiz_302015_sibling_4
+2026-01-23 23:22:30 | DEBUG    |     ❓ Creating assessment item: quiz_302016
+2026-01-23 23:22:31 | DEBUG    |     ⚠️ Assessment item already exists: quiz_302016
+2026-01-23 23:22:31 | DEBUG    |     ❓ Creating assessment item: quiz_302016_sibling_1
+2026-01-23 23:22:31 | DEBUG    |     ✅ Assessment item created: quiz_302016_sibling_1
+2026-01-23 23:22:32 | DEBUG    |     ❓ Creating assessment item: quiz_302016_sibling_2
+2026-01-23 23:22:32 | DEBUG    |     ✅ Assessment item created: quiz_302016_sibling_2
+2026-01-23 23:22:32 | DEBUG    |     ❓ Creating assessment item: quiz_302016_sibling_3
+2026-01-23 23:22:33 | DEBUG    |     ✅ Assessment item created: quiz_302016_sibling_3
+2026-01-23 23:22:33 | DEBUG    |     ❓ Creating assessment item: quiz_302016_sibling_4
+2026-01-23 23:22:33 | DEBUG    |     ✅ Assessment item created: quiz_302016_sibling_4
+2026-01-23 23:22:34 | INFO     |   📋 Creating assessment test: article_101002
+2026-01-23 23:22:34 | INFO     |   ⚠️ Assessment test already exists: article_101002
+2026-01-23 23:22:34 | DEBUG    |     📦 Creating resource: article_101002
+2026-01-23 23:22:35 | DEBUG    |     ⚠️ Resource already exists: article_101002
+2026-01-23 23:22:35 | INFO     | 
+============================================================
+2026-01-23 23:22:35 | INFO     | BUILD COMPLETE
+2026-01-23 23:22:35 | INFO     | ============================================================
+2026-01-23 23:22:35 | INFO     |    Articles processed: 2
+2026-01-23 23:22:35 | INFO     |    Stimuli created: 8
+2026-01-23 23:22:35 | INFO     |    Assessment items created: 48
+2026-01-23 23:22:35 | INFO     |    Assessment tests created: 2
+2026-01-23 23:22:35 | INFO     |    Resources created: 2
+2026-01-23 23:22:35 | INFO     |    Errors: 0
+2026-01-23 23:22:35 | INFO     | 
+💾 Results saved to: build_results_20260123_232235.json

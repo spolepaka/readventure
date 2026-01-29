@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Structure Comparison</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: #16213e;
+            padding: 20px;
+            border-bottom: 1px solid #0f3460;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .controls label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .controls input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .controls button {
+            background: #0f3460;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .controls button:hover {
+            background: #1a4a7a;
+        }
+        
+        .stats {
+            background: #0f3460;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        
+        .unit {
+            margin-bottom: 20px;
+            background: #16213e;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .unit-header {
+            background: #0f3460;
+            padding: 12px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .unit-header:hover {
+            background: #1a4a7a;
+        }
+        
+        .unit-header .title {
+            font-weight: 600;
+        }
+        
+        .unit-header .badge {
+            background: #e94560;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+        
+        .unit-content {
+            padding: 15px;
+            display: none;
+        }
+        
+        .unit.expanded .unit-content {
+            display: block;
+        }
+        
+        .article {
+            background: #1a1a2e;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .article-header {
+            padding: 10px 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid #0f3460;
+        }
+        
+        .article-header:hover {
+            background: #252542;
+        }
+        
+        .article.has-diff .article-header {
+            border-left-color: #e94560;
+            background: rgba(233, 69, 96, 0.1);
+        }
+        
+        .article-header .title {
+            font-size: 0.9rem;
+        }
+        
+        .article-content {
+            padding: 12px;
+            background: #12121f;
+            display: none;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .article.expanded .article-content {
+            display: block;
+        }
+        
+        .field {
+            display: flex;
+            margin-bottom: 6px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        
+        .field.diff {
+            background: rgba(233, 69, 96, 0.2);
+            border: 1px solid rgba(233, 69, 96, 0.4);
+        }
+        
+        .field.same {
+            opacity: 0.6;
+        }
+        
+        .field-name {
+            color: #7ec8e3;
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+        
+        .field-value {
+            color: #98c379;
+            word-break: break-all;
+        }
+        
+        .field-value.null {
+            color: #888;
+            font-style: italic;
+        }
+        
+        .nested {
+            margin-left: 20px;
+            border-left: 2px solid #0f3460;
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+        
+        .diff-indicator {
+            background: #e94560;
+            color: white;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            margin-left: 10px;
+        }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            margin-left: auto;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        
+        .legend-color.diff {
+            background: rgba(233, 69, 96, 0.4);
+            border: 1px solid #e94560;
+        }
+        
+        .legend-color.same {
+            background: #0f3460;
+        }
+        
+        .missing {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px dashed #ffc107;
+            padding: 10px;
+            border-radius: 6px;
+            color: #ffc107;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .course-level {
+            border: 2px solid #7ec8e3;
+            margin-bottom: 25px;
+        }
+        
+        .course-level .unit-header {
+            background: #1a4a7a;
+        }
+        
+        .course-level .unit-header:hover {
+            background: #2a5a8a;
+        }
+        
+        .course-level.has-diff {
+            border-color: #e94560;
+        }
+        
+        .section-header {
+            font-size: 11px;
+            font-weight: 600;
+            color: #7ec8e3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 15px 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #0f3460;
+        }
+        
+        .unit-fields {
+            background: #12121f;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .unit-fields .section-header {
+            margin-top: 0;
+        }
+        
+        .articles-section .section-header {
+            margin-top: 5px;
+        }
+        
+        /* Unified view styles */
+        .unified-view {
+            height: calc(100vh - 120px);
+            overflow: auto;
+        }
+        
+        .unified-header {
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #16213e;
+            border-bottom: 1px solid #0f3460;
+        }
+        
+        .unified-header .unified-col {
+            flex: 1;
+            padding: 10px 15px;
+            border-right: 1px solid #0f3460;
+        }
+        
+        .unified-header .unified-col:last-child {
+            border-right: none;
+        }
+        
+        .unified-header h2 {
+            font-size: 1rem;
+            color: #e94560;
+        }
+        
+        .unified-content {
+            padding: 15px;
+        }
+        
+        .unified-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .unified-row > .unified-col {
+            flex: 1;
+            padding: 0 10px;
+        }
+        
+        .unified-row > .unified-col:first-child {
+            padding-left: 0;
+            border-right: 1px solid #0f3460;
+        }
+        
+        .unified-row > .unified-col:last-child {
+            padding-right: 0;
+        }
+        
+        .unified-row.unit-row {
+            background: #0f3460;
+            margin: 20px -15px 10px -15px;
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+        
+        .unified-row.unit-row:hover {
+            background: #1a4a7a;
+        }
+        
+        .unified-row.unit-row .title {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .unified-row.unit-row .badge {
+            background: #e94560;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        
+        .unit-details {
+            display: none;
+            padding: 10px 0;
+        }
+        
+        .unit-details.expanded {
+            display: block;
+        }
+        
+        .field-row {
+            display: flex;
+            margin-bottom: 4px;
+        }
+        
+        .field-row > .unified-col {
+            flex: 1;
+            padding: 4px 10px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 12px;
+        }
+        
+        .field-row > .unified-col:first-child {
+            border-right: 1px solid #0f3460;
+        }
+        
+        .field-row.diff > .unified-col {
+            background: rgba(233, 69, 96, 0.15);
+        }
+        
+        .field-row .field-name {
+            color: #7ec8e3;
+            min-width: 150px;
+            display: inline-block;
+        }
+        
+        .field-row .field-value {
+            color: #98c379;
+            word-break: break-all;
+        }
+        
+        .field-row .field-value.null {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .field-row .field-value.missing {
+            color: #ffc107;
+            font-style: italic;
+        }
+        
+        .article-row {
+            background: #1a1a2e;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        
+        .article-row .article-header-row {
+            display: flex;
+            cursor: pointer;
+            padding: 10px 12px;
+        }
+        
+        .article-row .article-header-row:hover {
+            background: #252542;
+        }
+        
+        .article-row .article-header-row > .unified-col {
+            flex: 1;
+        }
+        
+        .article-row .article-header-row > .unified-col:first-child {
+            border-right: 1px solid #0f3460;
+            padding-right: 10px;
+        }
+        
+        .article-row.has-diff .article-header-row {
+            border-left: 3px solid #e94560;
+        }
+        
+        .article-row .article-details {
+            display: none;
+            background: #12121f;
+            padding: 10px;
+        }
+        
+        .article-row.expanded .article-details {
+            display: block;
+        }
+        
+        .nested-section {
+            margin-left: 20px;
+            padding-left: 10px;
+            border-left: 2px solid #0f3460;
+            margin-top: 8px;
+        }
+        
+        .nested-section .section-label {
+            color: #7ec8e3;
+            font-weight: 600;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+        
+        .sync-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .search-box {
+            background: #0f3460;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: white;
+            width: 200px;
+        }
+        
+        .search-box::placeholder {
+            color: #666;
+        }
+        
+        .highlight {
+            background: yellow;
+            color: black;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Course Structure Comparison</h1>
+        <div class="controls">
+            <label>
+                <input type="checkbox" id="showDiffOnly" checked>
+                Show differences only
+            </label>
+            <button onclick="expandAll()">Expand All</button>
+            <button onclick="collapseAll()">Collapse All</button>
+            <input type="text" class="search-box" id="searchBox" placeholder="Search...">
+            <div class="stats" id="stats">Loading...</div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color diff"></div>
+                    <span>Different</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color same"></div>
+                    <span>Same</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="unified-view" id="unifiedView">
+        <div class="unified-header">
+            <div class="unified-col">
+                <h2>SOURCE COURSE</h2>
+                <div class="subtitle" id="sourceInfo">Loading...</div>
+            </div>
+            <div class="unified-col">
+                <h2>CLONED COURSE</h2>
+                <div class="subtitle" id="cloneInfo">Loading...</div>
+            </div>
+        </div>
+        <div class="unified-content" id="unifiedContent"></div>
+    </div>
+
+    <script>
+        let sourceData = null;
+        let cloneData = null;
+        let differences = [];
+        
+        // Load JSON files
+        async function loadData() {
+            try {
+                const [sourceRes, cloneRes] = await Promise.all([
+                    fetch('source_full_syllabus.json'),
+                    fetch('clone_full_syllabus.json')
+                ]);
+                
+                sourceData = await sourceRes.json();
+                cloneData = await cloneRes.json();
+                
+                // Update header info
+                document.getElementById('sourceInfo').textContent = 
+                    `${sourceData.course?.title || 'Unknown'} (${sourceData.course?.sourcedId?.substring(0, 8)}...)`;
+                document.getElementById('cloneInfo').textContent = 
+                    `${cloneData.course?.title || 'Unknown'} (${cloneData.course?.sourcedId?.substring(0, 8)}...)`;
+                
+                // Compute differences
+                computeDifferences();
+                
+                // Render
+                render();
+                
+                // Update stats
+                updateStats();
+                
+            } catch (err) {
+                console.error('Error loading data:', err);
+                document.getElementById('sourceContent').innerHTML = 
+                    `<div class="missing">Error loading source_full_syllabus.json</div>`;
+                document.getElementById('cloneContent').innerHTML = 
+                    `<div class="missing">Error loading clone_full_syllabus.json</div>`;
+            }
+        }
+        
+        function computeDifferences() {
+            differences = [];
+            
+            const sourceUnits = sourceData.subComponents || [];
+            const cloneUnits = cloneData.subComponents || [];
+            
+            const cloneByTitle = {};
+            cloneUnits.forEach(u => cloneByTitle[u.title] = u);
+            
+            sourceUnits.forEach(srcUnit => {
+                const clnUnit = cloneByTitle[srcUnit.title];
+                if (!clnUnit) {
+                    differences.push({ type: 'missing_unit', title: srcUnit.title });
+                    return;
+                }
+                
+                const srcArticles = srcUnit.componentResources || [];
+                const clnArticles = clnUnit.componentResources || [];
+                
+                const clnArtByTitle = {};
+                clnArticles.forEach(a => clnArtByTitle[a.title] = a);
+                
+                srcArticles.forEach(srcArt => {
+                    const clnArt = clnArtByTitle[srcArt.title];
+                    if (!clnArt) {
+                        differences.push({ 
+                            type: 'missing_article', 
+                            unit: srcUnit.title, 
+                            title: srcArt.title 
+                        });
+                        return;
+                    }
+                    
+                    // Compare fields
+                    const artDiffs = compareObjects(srcArt, clnArt, 
+                        ['sourcedId', 'dateLastModified', 'courseComponent']);
+                    
+                    if (artDiffs.length > 0) {
+                        differences.push({
+                            type: 'article_diff',
+                            unit: srcUnit.title,
+                            title: srcArt.title,
+                            fields: artDiffs
+                        });
+                    }
+                });
+            });
+        }
+        
+        function compareObjects(src, cln, ignoreFields = [], path = '') {
+            const diffs = [];
+            const allKeys = new Set([...Object.keys(src || {}), ...Object.keys(cln || {})]);
+            
+            allKeys.forEach(key => {
+                if (ignoreFields.includes(key)) return;
+                
+                const srcVal = src?.[key];
+                const clnVal = cln?.[key];
+                const fullPath = path ? `${path}.${key}` : key;
+                
+                if (typeof srcVal === 'object' && srcVal !== null && 
+                    typeof clnVal === 'object' && clnVal !== null) {
+                    // Recurse for nested objects, but ignore certain nested fields
+                    const nestedIgnore = key === 'resource' ? 
+                        ['sourcedId', 'dateLastModified', 'metadata.sourcedId', 'metadata.originalArticleId', 
+                         'metadata.tenantId', 'metadata.clientAppId'] : [];
+                    const nestedDiffs = compareObjects(srcVal, clnVal, nestedIgnore, fullPath);
+                    diffs.push(...nestedDiffs);
+                } else if (JSON.stringify(srcVal) !== JSON.stringify(clnVal)) {
+                    // Check if this is an expected difference
+                    if (key === 'sourcedId' || fullPath.includes('sourcedId')) return;
+                    if (fullPath.includes('originalArticleId')) return;
+                    if (fullPath.includes('tenantId')) return;
+                    if (fullPath.includes('clientAppId')) return;
+                    
+                    diffs.push({ path: fullPath, src: srcVal, cln: clnVal });
+                }
+            });
+            
+            return diffs;
+        }
+        
+        function render() {
+            const showDiffOnly = document.getElementById('showDiffOnly').checked;
+            renderUnified(showDiffOnly);
+        }
+        
+        function renderUnified(showDiffOnly) {
+            const container = document.getElementById('unifiedContent');
+            let html = '';
+            
+            const srcCourse = sourceData.course || {};
+            const clnCourse = cloneData.course || {};
+            const courseDiffs = compareCourseLevelFields(srcCourse, clnCourse);
+            
+            // Course level
+            html += `
+                <div class="unified-row unit-row" onclick="toggleUnitDetails(this)" data-unit="__COURSE__">
+                    <div class="unified-col">
+                        <span class="title">📚 COURSE INFO</span>
+                        ${courseDiffs.length > 0 ? '<span class="badge">' + courseDiffs.length + ' diff</span>' : ''}
+                    </div>
+                    <div class="unified-col">
+                        <span class="title">📚 COURSE INFO</span>
+                        ${courseDiffs.length > 0 ? '<span class="badge">' + courseDiffs.length + ' diff</span>' : ''}
+                    </div>
+                </div>
+                <div class="unit-details ${courseDiffs.length > 0 ? 'expanded' : ''}" data-unit="__COURSE__">
+                    ${renderCourseFieldsUnified(srcCourse, clnCourse, courseDiffs)}
+                </div>
+            `;
+            
+            // Get all unit titles from both sides
+            const srcUnits = sourceData.subComponents || [];
+            const clnUnits = cloneData.subComponents || [];
+            const srcUnitMap = {};
+            const clnUnitMap = {};
+            srcUnits.forEach(u => srcUnitMap[u.title] = u);
+            clnUnits.forEach(u => clnUnitMap[u.title] = u);
+            
+            const allUnitTitles = new Set([
+                ...srcUnits.map(u => u.title),
+                ...clnUnits.map(u => u.title)
+            ]);
+            
+            // Sort by source order, then clone-only at end
+            const sortedTitles = [...allUnitTitles].sort((a, b) => {
+                const srcA = srcUnitMap[a];
+                const srcB = srcUnitMap[b];
+                if (srcA && srcB) return (srcA.sortOrder || 0) - (srcB.sortOrder || 0);
+                if (srcA) return -1;
+                if (srcB) return 1;
+                return 0;
+            });
+            
+            sortedTitles.forEach(unitTitle => {
+                const srcUnit = srcUnitMap[unitTitle] || null;
+                const clnUnit = clnUnitMap[unitTitle] || null;
+                
+                const unitFieldDiffs = compareUnitFields(srcUnit || {}, clnUnit || {});
+                const articleDiffs = differences.filter(d => d.unit === unitTitle);
+                const hasDiffs = unitFieldDiffs.length > 0 || articleDiffs.length > 0 || !srcUnit || !clnUnit;
+                
+                const srcArticles = srcUnit?.componentResources || [];
+                const clnArticles = clnUnit?.componentResources || [];
+                
+                if (showDiffOnly && !hasDiffs) return;
+                
+                html += `
+                    <div class="unified-row unit-row ${hasDiffs ? 'has-diff' : ''}" onclick="toggleUnitDetails(this)" data-unit="${unitTitle}">
+                        <div class="unified-col">
+                            <span class="title">📁 ${srcUnit ? unitTitle : '(missing)'}</span>
+                            ${srcUnit ? '<span class="badge">' + srcArticles.length + ' articles</span>' : ''}
+                        </div>
+                        <div class="unified-col">
+                            <span class="title">📁 ${clnUnit ? unitTitle : '(missing)'}</span>
+                            ${clnUnit ? '<span class="badge">' + clnArticles.length + ' articles</span>' : ''}
+                        </div>
+                    </div>
+                    <div class="unit-details ${hasDiffs ? 'expanded' : ''}" data-unit="${unitTitle}">
+                        ${renderUnitFieldsUnified(srcUnit, clnUnit, unitFieldDiffs)}
+                        ${renderArticlesUnified(srcUnit, clnUnit, unitTitle, showDiffOnly)}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html || '<div class="missing">No data</div>';
+        }
+        
+        function renderCourseFieldsUnified(srcCourse, clnCourse, diffs) {
+            const diffFields = diffs.map(d => d.field);
+            let html = '<div class="section-label">COURSE PROPERTIES</div>';
+            
+            const fields = ['sourcedId', 'status', 'title', 'courseCode', 'grades', 'dateLastModified'];
+            fields.forEach(field => {
+                const isDiff = diffFields.includes(field);
+                html += renderFieldRow(field, srcCourse[field], clnCourse[field], isDiff);
+            });
+            
+            // Metadata
+            const srcMeta = srcCourse.metadata || {};
+            const clnMeta = clnCourse.metadata || {};
+            const allMetaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+            
+            if (allMetaKeys.size > 0) {
+                html += '<div class="nested-section"><div class="section-label">metadata</div>';
+                allMetaKeys.forEach(field => {
+                    const isDiff = diffFields.includes(`metadata.${field}`);
+                    html += renderFieldRow(field, srcMeta[field], clnMeta[field], isDiff);
+                });
+                html += '</div>';
+            }
+            
+            return html;
+        }
+        
+        function renderUnitFieldsUnified(srcUnit, clnUnit, diffs) {
+            if (!srcUnit && !clnUnit) return '';
+            
+            const diffFields = diffs.map(d => d.field);
+            let html = '<div class="section-label">UNIT PROPERTIES</div>';
+            
+            const fields = ['sourcedId', 'status', 'sortOrder', 'dateLastModified', 'unlockDate', 'prerequisiteCriteria', 'prerequisites'];
+            fields.forEach(field => {
+                const srcVal = srcUnit?.[field];
+                const clnVal = clnUnit?.[field];
+                if (srcVal === undefined && clnVal === undefined) return;
+                
+                const isDiff = diffFields.includes(field);
+                html += renderFieldRow(field, srcVal, clnVal, isDiff);
+            });
+            
+            // Course reference
+            html += renderFieldRow('course.sourcedId', srcUnit?.course?.sourcedId, clnUnit?.course?.sourcedId, false);
+            
+            // Metadata
+            const srcMeta = srcUnit?.metadata || {};
+            const clnMeta = clnUnit?.metadata || {};
+            const allMetaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+            
+            if (allMetaKeys.size > 0) {
+                html += '<div class="nested-section"><div class="section-label">metadata</div>';
+                allMetaKeys.forEach(field => {
+                    const isDiff = diffFields.includes(`metadata.${field}`);
+                    html += renderFieldRow(field, srcMeta[field], clnMeta[field], isDiff);
+                });
+                html += '</div>';
+            }
+            
+            return html;
+        }
+        
+        function renderArticlesUnified(srcUnit, clnUnit, unitTitle, showDiffOnly) {
+            const srcArticles = srcUnit?.componentResources || [];
+            const clnArticles = clnUnit?.componentResources || [];
+            
+            const srcArtMap = {};
+            const clnArtMap = {};
+            srcArticles.forEach(a => srcArtMap[a.title] = a);
+            clnArticles.forEach(a => clnArtMap[a.title] = a);
+            
+            const allTitles = new Set([
+                ...srcArticles.map(a => a.title),
+                ...clnArticles.map(a => a.title)
+            ]);
+            
+            if (allTitles.size === 0) return '';
+            
+            let html = '<div class="section-label">ARTICLES (' + allTitles.size + ')</div>';
+            
+            // Sort by source sortOrder
+            const sortedTitles = [...allTitles].sort((a, b) => {
+                const srcA = srcArtMap[a];
+                const srcB = srcArtMap[b];
+                if (srcA && srcB) return (srcA.sortOrder || 0) - (srcB.sortOrder || 0);
+                if (srcA) return -1;
+                if (srcB) return 1;
+                return 0;
+            });
+            
+            sortedTitles.forEach(artTitle => {
+                const srcArt = srcArtMap[artTitle] || null;
+                const clnArt = clnArtMap[artTitle] || null;
+                
+                const artDiff = differences.find(d => 
+                    d.type === 'article_diff' && 
+                    d.unit === unitTitle && 
+                    d.title === artTitle
+                );
+                const hasDiff = !!artDiff || !srcArt || !clnArt;
+                
+                if (showDiffOnly && !hasDiff) return;
+                
+                html += `
+                    <div class="article-row ${hasDiff ? 'has-diff' : ''}" onclick="toggleArticleRow(this)">
+                        <div class="article-header-row">
+                            <div class="unified-col">${srcArt ? artTitle : '<span class="field-value missing">(missing)</span>'}</div>
+                            <div class="unified-col">${clnArt ? artTitle : '<span class="field-value missing">(missing)</span>'}</div>
+                        </div>
+                        <div class="article-details">
+                            ${renderArticleFieldsUnified(srcArt, clnArt, artDiff)}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            return html;
+        }
+        
+        function renderArticleFieldsUnified(srcArt, clnArt, diffInfo) {
+            const diffFields = diffInfo ? diffInfo.fields.map(f => f.path) : [];
+            let html = '';
+            
+            const fields = ['sourcedId', 'status', 'sortOrder'];
+            fields.forEach(field => {
+                const isDiff = diffFields.includes(field);
+                html += renderFieldRow(field, srcArt?.[field], clnArt?.[field], isDiff);
+            });
+            
+            // Resource
+            const srcRes = srcArt?.resource || {};
+            const clnRes = clnArt?.resource || {};
+            
+            html += '<div class="nested-section"><div class="section-label">resource</div>';
+            const resFields = ['sourcedId', 'status', 'importance', 'vendorResourceId', 'vendorId', 'type'];
+            resFields.forEach(field => {
+                const isDiff = diffFields.includes(`resource.${field}`);
+                html += renderFieldRow(field, srcRes[field], clnRes[field], isDiff);
+            });
+            
+            // Resource metadata
+            const srcMeta = srcRes.metadata || {};
+            const clnMeta = clnRes.metadata || {};
+            const allMetaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+            
+            if (allMetaKeys.size > 0) {
+                html += '<div class="nested-section"><div class="section-label">metadata</div>';
+                allMetaKeys.forEach(field => {
+                    const isDiff = diffFields.includes(`resource.metadata.${field}`);
+                    html += renderFieldRow(field, srcMeta[field], clnMeta[field], isDiff);
+                });
+                html += '</div>';
+            }
+            
+            html += '</div>';
+            
+            return html;
+        }
+        
+        function renderFieldRow(name, srcVal, clnVal, isDiff) {
+            const srcDisplay = srcVal === null || srcVal === undefined ? 
+                '<span class="field-value null">null</span>' : 
+                '<span class="field-value">' + (typeof srcVal === 'object' ? JSON.stringify(srcVal) : String(srcVal)) + '</span>';
+            const clnDisplay = clnVal === null || clnVal === undefined ? 
+                '<span class="field-value null">null</span>' : 
+                '<span class="field-value">' + (typeof clnVal === 'object' ? JSON.stringify(clnVal) : String(clnVal)) + '</span>';
+            
+            return `
+                <div class="field-row ${isDiff ? 'diff' : ''}">
+                    <div class="unified-col"><span class="field-name">${name}:</span> ${srcDisplay}</div>
+                    <div class="unified-col"><span class="field-name">${name}:</span> ${clnDisplay}</div>
+                </div>
+            `;
+        }
+        
+        function toggleUnitDetails(row) {
+            const unitTitle = row.dataset.unit;
+            const details = document.querySelector(`.unit-details[data-unit="${unitTitle}"]`);
+            if (details) {
+                details.classList.toggle('expanded');
+            }
+        }
+        
+        function toggleArticleRow(row) {
+            row.classList.toggle('expanded');
+            event.stopPropagation();
+        }
+        
+        function renderArticleFields(article, diffInfo, side) {
+            const diffFields = diffInfo ? diffInfo.fields.map(f => f.path) : [];
+            let html = '';
+            
+            // Render main fields
+            const mainFields = ['sourcedId', 'status', 'title', 'sortOrder'];
+            mainFields.forEach(field => {
+                const isDiff = diffFields.some(p => p === field);
+                const value = article[field];
+                html += renderField(field, value, isDiff);
+            });
+            
+            // Render resource
+            if (article.resource) {
+                html += '<div class="nested"><strong>resource:</strong>';
+                const resFields = ['sourcedId', 'status', 'title', 'importance', 'vendorResourceId', 'vendorId', 'type'];
+                resFields.forEach(field => {
+                    const isDiff = diffFields.some(p => p === `resource.${field}`);
+                    const value = article.resource[field];
+                    html += renderField(field, value, isDiff);
+                });
+                
+                // Render metadata
+                if (article.resource.metadata) {
+                    html += '<div class="nested"><strong>metadata:</strong>';
+                    Object.keys(article.resource.metadata).forEach(field => {
+                        const isDiff = diffFields.some(p => p === `resource.metadata.${field}`);
+                        const value = article.resource.metadata[field];
+                        html += renderField(field, value, isDiff);
+                    });
+                    html += '</div>';
+                }
+                html += '</div>';
+            }
+            
+            return html;
+        }
+        
+        function renderField(name, value, isDiff) {
+            const displayValue = value === null || value === undefined ? 
+                '<span class="null">null</span>' : 
+                (typeof value === 'object' ? JSON.stringify(value) : String(value));
+            
+            return `
+                <div class="field ${isDiff ? 'diff' : 'same'}">
+                    <span class="field-name">${name}:</span>
+                    <span class="field-value">${displayValue}</span>
+                </div>
+            `;
+        }
+        
+        function compareUnitFields(srcUnit, clnUnit) {
+            const diffs = [];
+            const ignoreFields = ['sourcedId', 'dateLastModified', 'componentResources', 'course'];
+            const allKeys = new Set([...Object.keys(srcUnit || {}), ...Object.keys(clnUnit || {})]);
+            
+            allKeys.forEach(key => {
+                if (ignoreFields.includes(key)) return;
+                
+                const srcVal = srcUnit?.[key];
+                const clnVal = clnUnit?.[key];
+                
+                if (key === 'metadata') {
+                    // Compare metadata fields individually
+                    const srcMeta = srcVal || {};
+                    const clnMeta = clnVal || {};
+                    const metaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+                    metaKeys.forEach(metaKey => {
+                        if (JSON.stringify(srcMeta[metaKey]) !== JSON.stringify(clnMeta[metaKey])) {
+                            diffs.push({ field: `metadata.${metaKey}`, src: srcMeta[metaKey], cln: clnMeta[metaKey] });
+                        }
+                    });
+                } else if (JSON.stringify(srcVal) !== JSON.stringify(clnVal)) {
+                    diffs.push({ field: key, src: srcVal, cln: clnVal });
+                }
+            });
+            
+            return diffs;
+        }
+        
+        function renderUnitFields(unit, diffs, side) {
+            const diffFields = diffs.map(d => d.field);
+            let html = '';
+            
+            // Get other unit for comparison
+            const otherUnits = side === 'source' ? 
+                (cloneData?.subComponents || []) : 
+                (sourceData?.subComponents || []);
+            const otherUnit = otherUnits.find(u => u.title === unit.title) || {};
+            
+            // Main unit fields
+            const fields = ['sourcedId', 'status', 'title', 'sortOrder', 'dateLastModified', 'unlockDate', 'prerequisiteCriteria', 'prerequisites'];
+            fields.forEach(field => {
+                const isDiff = diffFields.includes(field);
+                const value = unit[field];
+                if (value !== undefined || (otherUnit[field] !== undefined)) {
+                    html += renderField(field, value, isDiff);
+                }
+            });
+            
+            // Course reference
+            if (unit.course) {
+                html += renderField('course.sourcedId', unit.course.sourcedId, false);
+            }
+            
+            // Metadata
+            const srcMeta = (side === 'source' ? unit : otherUnit).metadata || {};
+            const clnMeta = (side === 'clone' ? unit : otherUnit).metadata || {};
+            const allMetaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+            
+            if (allMetaKeys.size > 0 || (unit.metadata && Object.keys(unit.metadata).length > 0)) {
+                html += '<div class="nested"><strong>metadata:</strong>';
+                const currentMeta = unit.metadata || {};
+                
+                allMetaKeys.forEach(field => {
+                    const isDiff = diffFields.includes(`metadata.${field}`);
+                    const value = currentMeta[field];
+                    const otherValue = (side === 'source' ? clnMeta : srcMeta)[field];
+                    
+                    if (value !== undefined) {
+                        html += renderField(field, value, isDiff);
+                    } else if (otherValue !== undefined) {
+                        html += `
+                            <div class="field diff">
+                                <span class="field-name">${field}:</span>
+                                <span class="field-value null">(missing)</span>
+                            </div>
+                        `;
+                    }
+                });
+                html += '</div>';
+            }
+            
+            return html;
+        }
+        
+        function compareCourseLevelFields(srcCourse, clnCourse) {
+            const diffs = [];
+            const ignoreFields = ['sourcedId', 'dateLastModified'];
+            const allKeys = new Set([...Object.keys(srcCourse || {}), ...Object.keys(clnCourse || {})]);
+            
+            allKeys.forEach(key => {
+                if (ignoreFields.includes(key)) return;
+                
+                const srcVal = srcCourse?.[key];
+                const clnVal = clnCourse?.[key];
+                
+                if (key === 'metadata') {
+                    // Compare metadata fields individually
+                    const srcMeta = srcVal || {};
+                    const clnMeta = clnVal || {};
+                    const metaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+                    metaKeys.forEach(metaKey => {
+                        if (JSON.stringify(srcMeta[metaKey]) !== JSON.stringify(clnMeta[metaKey])) {
+                            diffs.push({ field: `metadata.${metaKey}`, src: srcMeta[metaKey], cln: clnMeta[metaKey] });
+                        }
+                    });
+                } else if (JSON.stringify(srcVal) !== JSON.stringify(clnVal)) {
+                    diffs.push({ field: key, src: srcVal, cln: clnVal });
+                }
+            });
+            
+            return diffs;
+        }
+        
+        function renderCourseFields(course, diffs, side) {
+            const diffFields = diffs.map(d => d.field);
+            let html = '';
+            
+            // Get other course for comparison
+            const otherCourse = side === 'source' ? (cloneData?.course || {}) : (sourceData?.course || {});
+            
+            // All course fields
+            const fields = ['sourcedId', 'status', 'title', 'courseCode', 'grades', 'dateLastModified'];
+            fields.forEach(field => {
+                const isDiff = diffFields.includes(field);
+                const value = course[field];
+                html += renderField(field, value, isDiff);
+            });
+            
+            // Metadata - compare all fields from both sides
+            const srcMeta = sourceData?.course?.metadata || {};
+            const clnMeta = cloneData?.course?.metadata || {};
+            const allMetaKeys = new Set([...Object.keys(srcMeta), ...Object.keys(clnMeta)]);
+            
+            if (allMetaKeys.size > 0) {
+                html += '<div class="nested"><strong>metadata:</strong>';
+                
+                const currentMeta = course.metadata || {};
+                
+                allMetaKeys.forEach(field => {
+                    const isDiff = diffFields.includes(`metadata.${field}`);
+                    const value = currentMeta[field];
+                    const otherValue = (side === 'source' ? clnMeta : srcMeta)[field];
+                    
+                    // Show if exists in current side, or mark as missing
+                    if (value !== undefined) {
+                        html += renderField(field, value, isDiff);
+                    } else if (otherValue !== undefined) {
+                        html += `
+                            <div class="field diff">
+                                <span class="field-name">${field}:</span>
+                                <span class="field-value null">(missing - exists in other: ${JSON.stringify(otherValue).substring(0, 50)})</span>
+                            </div>
+                        `;
+                    }
+                });
+                html += '</div>';
+            }
+            
+            return html;
+        }
+        
+        function expandAll() {
+            document.querySelectorAll('.unit-details, .article-row').forEach(el => el.classList.add('expanded'));
+        }
+        
+        function collapseAll() {
+            document.querySelectorAll('.unit-details, .article-row').forEach(el => el.classList.remove('expanded'));
+        }
+        
+        function updateStats() {
+            const articleDiffs = differences.filter(d => d.type === 'article_diff').length;
+            const totalArticles = (sourceData.subComponents || [])
+                .reduce((sum, u) => sum + (u.componentResources || []).length, 0);
+            
+            // Course-level diffs
+            const courseDiffs = compareCourseLevelFields(sourceData.course, cloneData.course);
+            
+            document.getElementById('stats').textContent = 
+                `Course: ${courseDiffs.length} diff | Articles: ${articleDiffs} with differences / ${totalArticles} total`;
+        }
+        
+        // Event listeners
+        document.getElementById('showDiffOnly').addEventListener('change', render);
+        
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.article').forEach(article => {
+                const title = article.dataset.article.toLowerCase();
+                if (term && title.includes(term)) {
+                    article.style.display = '';
+                    article.classList.add('expanded');
+                    article.closest('.unit').classList.add('expanded');
+                } else if (term) {
+                    article.style.display = 'none';
+                } else {
+                    article.style.display = '';
+                }
+            });
+        });
+        
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>

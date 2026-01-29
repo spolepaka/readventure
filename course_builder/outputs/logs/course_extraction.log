@@ -1,0 +1,567 @@
+2026-01-23 09:54:28 | INFO     | ============================================================
+2026-01-23 09:54:28 | INFO     | GENERIC QTI COURSE EXTRACTOR
+2026-01-23 09:54:28 | INFO     | ============================================================
+2026-01-23 09:54:28 | INFO     | 
+============================================================
+2026-01-23 09:54:28 | INFO     | EXTRACTING COURSE: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:54:28 | INFO     | ============================================================
+2026-01-23 09:54:28 | INFO     | 📖 Fetching course: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:54:28 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 09:54:29 | INFO     | ✅ Token obtained successfully
+2026-01-23 09:54:30 | ERROR    | ❌ Error fetching course 80c8fa8d-744d-4df4-937b-2c93fb0cb93e: 401 Client Error: Unauthorized for url: https://api.alpha-1edtech.com/ims/oneroster/rostering/v1p2/courses/80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:54:30 | ERROR    | Could not find course: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:54:30 | ERROR    | No content extracted
+2026-01-23 09:55:46 | INFO     | ============================================================
+2026-01-23 09:55:46 | INFO     | GENERIC QTI COURSE EXTRACTOR
+2026-01-23 09:55:46 | INFO     | ============================================================
+2026-01-23 09:55:46 | INFO     | 
+============================================================
+2026-01-23 09:55:46 | INFO     | EXTRACTING FROM CSV: reference/article_ids.csv
+2026-01-23 09:55:46 | INFO     | LIMIT: 10
+2026-01-23 09:55:46 | INFO     | ============================================================
+2026-01-23 09:55:46 | INFO     | 📚 Found 1450 articles matching criteria
+2026-01-23 09:55:46 | INFO     | 📊 Processing 10 articles (limited)
+2026-01-23 09:55:46 | INFO     | 
+[1/10] Aladdin and the Wonderful Lamp, Part I
+2026-01-23 09:55:46 | INFO     |    ID: article_101001
+2026-01-23 09:55:46 | INFO     |   📋 Fetching assessment test: article_101001
+2026-01-23 09:55:46 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 09:55:46 | INFO     | ✅ Token obtained successfully
+2026-01-23 09:55:47 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:47 | DEBUG    |     ❓ Fetching item: guiding_21014_302001
+2026-01-23 09:55:48 | DEBUG    |     📄 Fetching stimulus: guiding_21014
+2026-01-23 09:55:48 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:48 | DEBUG    |     ❓ Fetching item: guiding_21015_302002
+2026-01-23 09:55:49 | DEBUG    |     📄 Fetching stimulus: guiding_21015
+2026-01-23 09:55:49 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:49 | DEBUG    |     ❓ Fetching item: guiding_21016_302003
+2026-01-23 09:55:50 | DEBUG    |     📄 Fetching stimulus: guiding_21016
+2026-01-23 09:55:51 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:51 | DEBUG    |     ❓ Fetching item: guiding_21017_302004
+2026-01-23 09:55:51 | DEBUG    |     📄 Fetching stimulus: guiding_21017
+2026-01-23 09:55:52 | INFO     |     📂 Section: Quiz
+2026-01-23 09:55:52 | DEBUG    |     ❓ Fetching item: quiz_302005
+2026-01-23 09:55:53 | DEBUG    |     ❓ Fetching item: quiz_302006
+2026-01-23 09:55:53 | DEBUG    |     ❓ Fetching item: quiz_302007
+2026-01-23 09:55:54 | DEBUG    |     ❓ Fetching item: quiz_302008
+2026-01-23 09:55:55 | INFO     |   ✅ Completed: article_101001
+2026-01-23 09:55:55 | INFO     |    ✅ Success
+2026-01-23 09:55:55 | INFO     | 
+[2/10] Aladdin and the Wonderful Lamp, Part II
+2026-01-23 09:55:55 | INFO     |    ID: article_101002
+2026-01-23 09:55:55 | INFO     |   📋 Fetching assessment test: article_101002
+2026-01-23 09:55:56 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:56 | DEBUG    |     ❓ Fetching item: guiding_21018_302009
+2026-01-23 09:55:56 | DEBUG    |     📄 Fetching stimulus: guiding_21018
+2026-01-23 09:55:57 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:57 | DEBUG    |     ❓ Fetching item: guiding_21019_302010
+2026-01-23 09:55:57 | DEBUG    |     📄 Fetching stimulus: guiding_21019
+2026-01-23 09:55:58 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:58 | DEBUG    |     ❓ Fetching item: guiding_21020_302011
+2026-01-23 09:55:59 | DEBUG    |     📄 Fetching stimulus: guiding_21020
+2026-01-23 09:55:59 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:55:59 | DEBUG    |     ❓ Fetching item: guiding_21021_302012
+2026-01-23 09:56:00 | DEBUG    |     📄 Fetching stimulus: guiding_21021
+2026-01-23 09:56:01 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:01 | DEBUG    |     ❓ Fetching item: quiz_302013
+2026-01-23 09:56:01 | DEBUG    |     ❓ Fetching item: quiz_302014
+2026-01-23 09:56:02 | DEBUG    |     ❓ Fetching item: quiz_302015
+2026-01-23 09:56:03 | DEBUG    |     ❓ Fetching item: quiz_302016
+2026-01-23 09:56:03 | INFO     |   ✅ Completed: article_101002
+2026-01-23 09:56:03 | INFO     |    ✅ Success
+2026-01-23 09:56:04 | INFO     | 
+[3/10] Aladdin and the Wonderful Lamp, Part III
+2026-01-23 09:56:04 | INFO     |    ID: article_101003
+2026-01-23 09:56:04 | INFO     |   📋 Fetching assessment test: article_101003
+2026-01-23 09:56:04 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:04 | DEBUG    |     ❓ Fetching item: guiding_21022_302017
+2026-01-23 09:56:05 | DEBUG    |     📄 Fetching stimulus: guiding_21022
+2026-01-23 09:56:05 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:05 | DEBUG    |     ❓ Fetching item: guiding_21023_302018
+2026-01-23 09:56:06 | DEBUG    |     📄 Fetching stimulus: guiding_21023
+2026-01-23 09:56:07 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:07 | DEBUG    |     ❓ Fetching item: guiding_21024_302019
+2026-01-23 09:56:07 | DEBUG    |     📄 Fetching stimulus: guiding_21024
+2026-01-23 09:56:08 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:08 | DEBUG    |     ❓ Fetching item: guiding_21025_302020
+2026-01-23 09:56:08 | DEBUG    |     📄 Fetching stimulus: guiding_21025
+2026-01-23 09:56:09 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:09 | DEBUG    |     ❓ Fetching item: quiz_302021
+2026-01-23 09:56:10 | DEBUG    |     ❓ Fetching item: quiz_302022
+2026-01-23 09:56:10 | DEBUG    |     ❓ Fetching item: quiz_302023
+2026-01-23 09:56:11 | DEBUG    |     ❓ Fetching item: quiz_302024
+2026-01-23 09:56:12 | INFO     |   ✅ Completed: article_101003
+2026-01-23 09:56:12 | INFO     |    ✅ Success
+2026-01-23 09:56:12 | INFO     | 
+[4/10] Alice’s Adventures in Wonderland, Part I
+2026-01-23 09:56:12 | INFO     |    ID: article_101004
+2026-01-23 09:56:12 | INFO     |   📋 Fetching assessment test: article_101004
+2026-01-23 09:56:13 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:13 | DEBUG    |     ❓ Fetching item: guiding_21026_302025
+2026-01-23 09:56:13 | DEBUG    |     📄 Fetching stimulus: guiding_21026
+2026-01-23 09:56:14 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:14 | DEBUG    |     ❓ Fetching item: guiding_21027_302026
+2026-01-23 09:56:15 | DEBUG    |     📄 Fetching stimulus: guiding_21027
+2026-01-23 09:56:15 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:15 | DEBUG    |     ❓ Fetching item: guiding_21028_302027
+2026-01-23 09:56:16 | DEBUG    |     📄 Fetching stimulus: guiding_21028
+2026-01-23 09:56:16 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:16 | DEBUG    |     ❓ Fetching item: guiding_21029_302028
+2026-01-23 09:56:17 | DEBUG    |     📄 Fetching stimulus: guiding_21029
+2026-01-23 09:56:18 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:18 | DEBUG    |     ❓ Fetching item: quiz_302029
+2026-01-23 09:56:18 | DEBUG    |     ❓ Fetching item: quiz_302030
+2026-01-23 09:56:19 | DEBUG    |     ❓ Fetching item: quiz_302031
+2026-01-23 09:56:20 | DEBUG    |     ❓ Fetching item: quiz_302032
+2026-01-23 09:56:20 | INFO     |   ✅ Completed: article_101004
+2026-01-23 09:56:20 | INFO     |    ✅ Success
+2026-01-23 09:56:21 | INFO     | 
+[5/10] Alice’s Adventures in Wonderland, Part II
+2026-01-23 09:56:21 | INFO     |    ID: article_101005
+2026-01-23 09:56:21 | INFO     |   📋 Fetching assessment test: article_101005
+2026-01-23 09:56:21 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:21 | DEBUG    |     ❓ Fetching item: guiding_21030_302033
+2026-01-23 09:56:22 | DEBUG    |     📄 Fetching stimulus: guiding_21030
+2026-01-23 09:56:23 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:23 | DEBUG    |     ❓ Fetching item: guiding_21031_302034
+2026-01-23 09:56:23 | DEBUG    |     📄 Fetching stimulus: guiding_21031
+2026-01-23 09:56:24 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:24 | DEBUG    |     ❓ Fetching item: guiding_21032_302035
+2026-01-23 09:56:24 | DEBUG    |     📄 Fetching stimulus: guiding_21032
+2026-01-23 09:56:25 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:25 | DEBUG    |     ❓ Fetching item: guiding_21033_302036
+2026-01-23 09:56:26 | DEBUG    |     📄 Fetching stimulus: guiding_21033
+2026-01-23 09:56:26 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:26 | DEBUG    |     ❓ Fetching item: quiz_302037
+2026-01-23 09:56:27 | DEBUG    |     ❓ Fetching item: quiz_302038
+2026-01-23 09:56:28 | DEBUG    |     ❓ Fetching item: quiz_302039
+2026-01-23 09:56:28 | DEBUG    |     ❓ Fetching item: quiz_302040
+2026-01-23 09:56:29 | DEBUG    |     ❓ Fetching item: quiz_302041
+2026-01-23 09:56:30 | INFO     |   ✅ Completed: article_101005
+2026-01-23 09:56:30 | INFO     |    ✅ Success
+2026-01-23 09:56:30 | INFO     | 
+[6/10] Alice’s Adventures in Wonderland, Part III
+2026-01-23 09:56:30 | INFO     |    ID: article_101006
+2026-01-23 09:56:30 | INFO     |   📋 Fetching assessment test: article_101006
+2026-01-23 09:56:31 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:31 | DEBUG    |     ❓ Fetching item: guiding_21034_302042
+2026-01-23 09:56:31 | DEBUG    |     📄 Fetching stimulus: guiding_21034
+2026-01-23 09:56:32 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:32 | DEBUG    |     ❓ Fetching item: guiding_21035_302043
+2026-01-23 09:56:33 | DEBUG    |     📄 Fetching stimulus: guiding_21035
+2026-01-23 09:56:33 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:33 | DEBUG    |     ❓ Fetching item: guiding_21036_302044
+2026-01-23 09:56:34 | DEBUG    |     📄 Fetching stimulus: guiding_21036
+2026-01-23 09:56:35 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:35 | DEBUG    |     ❓ Fetching item: guiding_21037_302045
+2026-01-23 09:56:35 | DEBUG    |     📄 Fetching stimulus: guiding_21037
+2026-01-23 09:56:36 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:36 | DEBUG    |     ❓ Fetching item: quiz_302046
+2026-01-23 09:56:36 | DEBUG    |     ❓ Fetching item: quiz_302047
+2026-01-23 09:56:37 | DEBUG    |     ❓ Fetching item: quiz_302048
+2026-01-23 09:56:38 | DEBUG    |     ❓ Fetching item: quiz_302049
+2026-01-23 09:56:38 | INFO     |   ✅ Completed: article_101006
+2026-01-23 09:56:38 | INFO     |    ✅ Success
+2026-01-23 09:56:39 | INFO     | 
+[7/10] Alice’s Adventures in Wonderland, Part IV
+2026-01-23 09:56:39 | INFO     |    ID: article_101007
+2026-01-23 09:56:39 | INFO     |   📋 Fetching assessment test: article_101007
+2026-01-23 09:56:40 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:40 | DEBUG    |     ❓ Fetching item: guiding_21038_302050
+2026-01-23 09:56:40 | DEBUG    |     📄 Fetching stimulus: guiding_21038
+2026-01-23 09:56:41 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:41 | DEBUG    |     ❓ Fetching item: guiding_21039_302051
+2026-01-23 09:56:41 | DEBUG    |     📄 Fetching stimulus: guiding_21039
+2026-01-23 09:56:42 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:42 | DEBUG    |     ❓ Fetching item: guiding_21040_302052
+2026-01-23 09:56:43 | DEBUG    |     📄 Fetching stimulus: guiding_21040
+2026-01-23 09:56:43 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:43 | DEBUG    |     ❓ Fetching item: guiding_21041_302053
+2026-01-23 09:56:44 | DEBUG    |     📄 Fetching stimulus: guiding_21041
+2026-01-23 09:56:44 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:44 | DEBUG    |     ❓ Fetching item: quiz_302054
+2026-01-23 09:56:45 | DEBUG    |     ❓ Fetching item: quiz_302055
+2026-01-23 09:56:46 | DEBUG    |     ❓ Fetching item: quiz_302056
+2026-01-23 09:56:46 | DEBUG    |     ❓ Fetching item: quiz_302057
+2026-01-23 09:56:47 | DEBUG    |     ❓ Fetching item: quiz_302058
+2026-01-23 09:56:48 | INFO     |   ✅ Completed: article_101007
+2026-01-23 09:56:48 | INFO     |    ✅ Success
+2026-01-23 09:56:48 | INFO     | 
+[8/10] The Open Road, Part I
+2026-01-23 09:56:48 | INFO     |    ID: article_101008
+2026-01-23 09:56:48 | INFO     |   📋 Fetching assessment test: article_101008
+2026-01-23 09:56:49 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:49 | DEBUG    |     ❓ Fetching item: guiding_21042_302059
+2026-01-23 09:56:49 | DEBUG    |     📄 Fetching stimulus: guiding_21042
+2026-01-23 09:56:50 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:50 | DEBUG    |     ❓ Fetching item: guiding_21043_302060
+2026-01-23 09:56:50 | DEBUG    |     📄 Fetching stimulus: guiding_21043
+2026-01-23 09:56:51 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:51 | DEBUG    |     ❓ Fetching item: guiding_21044_302061
+2026-01-23 09:56:52 | DEBUG    |     📄 Fetching stimulus: guiding_21044
+2026-01-23 09:56:52 | INFO     |     📂 Section: Quiz
+2026-01-23 09:56:52 | DEBUG    |     ❓ Fetching item: quiz_302062
+2026-01-23 09:56:53 | DEBUG    |     ❓ Fetching item: quiz_302063
+2026-01-23 09:56:54 | DEBUG    |     ❓ Fetching item: quiz_302064
+2026-01-23 09:56:54 | DEBUG    |     ❓ Fetching item: quiz_302065
+2026-01-23 09:56:55 | INFO     |   ✅ Completed: article_101008
+2026-01-23 09:56:55 | INFO     |    ✅ Success
+2026-01-23 09:56:55 | INFO     | 
+[9/10] The Open Road, Part II
+2026-01-23 09:56:55 | INFO     |    ID: article_101009
+2026-01-23 09:56:55 | INFO     |   📋 Fetching assessment test: article_101009
+2026-01-23 09:56:56 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:56 | DEBUG    |     ❓ Fetching item: guiding_21045_302066
+2026-01-23 09:56:56 | DEBUG    |     📄 Fetching stimulus: guiding_21045
+2026-01-23 09:56:57 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:57 | DEBUG    |     ❓ Fetching item: guiding_21046_302067
+2026-01-23 09:56:58 | DEBUG    |     📄 Fetching stimulus: guiding_21046
+2026-01-23 09:56:58 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:56:58 | DEBUG    |     ❓ Fetching item: guiding_21047_302068
+2026-01-23 09:56:59 | DEBUG    |     📄 Fetching stimulus: guiding_21047
+2026-01-23 09:57:00 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:57:00 | DEBUG    |     ❓ Fetching item: guiding_21048_302069
+2026-01-23 09:57:00 | DEBUG    |     📄 Fetching stimulus: guiding_21048
+2026-01-23 09:57:01 | INFO     |     📂 Section: Quiz
+2026-01-23 09:57:01 | DEBUG    |     ❓ Fetching item: quiz_302070
+2026-01-23 09:57:01 | DEBUG    |     ❓ Fetching item: quiz_302071
+2026-01-23 09:57:02 | DEBUG    |     ❓ Fetching item: quiz_302072
+2026-01-23 09:57:03 | DEBUG    |     ❓ Fetching item: quiz_302073
+2026-01-23 09:57:03 | DEBUG    |     ❓ Fetching item: quiz_302074
+2026-01-23 09:57:04 | INFO     |   ✅ Completed: article_101009
+2026-01-23 09:57:04 | INFO     |    ✅ Success
+2026-01-23 09:57:05 | INFO     | 
+[10/10] The Open Road, Part III
+2026-01-23 09:57:05 | INFO     |    ID: article_101010
+2026-01-23 09:57:05 | INFO     |   📋 Fetching assessment test: article_101010
+2026-01-23 09:57:05 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:57:05 | DEBUG    |     ❓ Fetching item: guiding_21049_302075
+2026-01-23 09:57:06 | DEBUG    |     📄 Fetching stimulus: guiding_21049
+2026-01-23 09:57:06 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:57:06 | DEBUG    |     ❓ Fetching item: guiding_21050_302076
+2026-01-23 09:57:07 | DEBUG    |     📄 Fetching stimulus: guiding_21050
+2026-01-23 09:57:08 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:57:08 | DEBUG    |     ❓ Fetching item: guiding_21051_302077
+2026-01-23 09:57:08 | DEBUG    |     📄 Fetching stimulus: guiding_21051
+2026-01-23 09:57:09 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 09:57:09 | DEBUG    |     ❓ Fetching item: guiding_21052_302078
+2026-01-23 09:57:09 | DEBUG    |     📄 Fetching stimulus: guiding_21052
+2026-01-23 09:57:10 | INFO     |     📂 Section: Quiz
+2026-01-23 09:57:10 | DEBUG    |     ❓ Fetching item: quiz_302079
+2026-01-23 09:57:11 | DEBUG    |     ❓ Fetching item: quiz_302080
+2026-01-23 09:57:11 | DEBUG    |     ❓ Fetching item: quiz_302081
+2026-01-23 09:57:12 | DEBUG    |     ❓ Fetching item: quiz_302082
+2026-01-23 09:57:13 | INFO     |   ✅ Completed: article_101010
+2026-01-23 09:57:13 | INFO     |    ✅ Success
+2026-01-23 09:57:13 | INFO     | 
+💾 Saving results to: extracted_10_articles.json
+2026-01-23 09:57:13 | INFO     | 
+✅ Extraction Complete!
+2026-01-23 09:57:13 | INFO     | ============================================================
+2026-01-23 09:57:13 | INFO     |    Assessments: 10
+2026-01-23 09:57:13 | INFO     |    Sections: 49
+2026-01-23 09:57:13 | INFO     |    Items: 82
+2026-01-23 09:57:13 | INFO     |    Errors: 0
+2026-01-23 09:57:13 | INFO     |    Output: extracted_10_articles.json
+2026-01-23 09:57:13 | INFO     |    File size: 425.9 KB
+2026-01-23 09:57:13 | INFO     | ============================================================
+2026-01-23 09:59:10 | INFO     | ============================================================
+2026-01-23 09:59:10 | INFO     | GENERIC QTI COURSE EXTRACTOR
+2026-01-23 09:59:10 | INFO     | ============================================================
+2026-01-23 09:59:10 | INFO     | 
+============================================================
+2026-01-23 09:59:10 | INFO     | EXTRACTING COURSE: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:59:10 | INFO     | ============================================================
+2026-01-23 09:59:10 | INFO     | 📖 Fetching course: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:59:10 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 09:59:11 | INFO     | ✅ Token obtained successfully
+2026-01-23 09:59:12 | ERROR    | ❌ Error fetching course 80c8fa8d-744d-4df4-937b-2c93fb0cb93e: 401 Client Error: Unauthorized for url: https://api.alpha-1edtech.com/ims/oneroster/rostering/v1p2/courses/80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:59:12 | ERROR    | Could not find course: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 09:59:12 | ERROR    | No content extracted
+2026-01-23 10:36:22 | INFO     | ============================================================
+2026-01-23 10:36:22 | INFO     | GENERIC QTI COURSE EXTRACTOR
+2026-01-23 10:36:22 | INFO     | ============================================================
+2026-01-23 10:36:22 | INFO     | 
+============================================================
+2026-01-23 10:36:22 | INFO     | EXTRACTING COURSE: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 10:36:22 | INFO     | ============================================================
+2026-01-23 10:36:22 | INFO     | 📖 Fetching course: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 10:36:22 | INFO     | 🔑 Obtaining OAuth token...
+2026-01-23 10:36:23 | INFO     | ✅ Token obtained successfully
+2026-01-23 10:36:23 | INFO     | 📚 Course: Core Knowledge Reading Grade 3/3
+2026-01-23 10:36:23 | INFO     | 📋 Fetching course syllabus: 80c8fa8d-744d-4df4-937b-2c93fb0cb93e
+2026-01-23 10:36:24 | INFO     | ✅ Using syllabus data
+2026-01-23 10:36:24 | INFO     | 📚 Course from syllabus: Core Knowledge Reading Grade 3/3
+2026-01-23 10:36:24 | INFO     | 📂 Found 12 top-level units/components
+2026-01-23 10:36:24 | INFO     | 
+📁 Unit 1: Classic Tales
+2026-01-23 10:36:24 | INFO     |    📎 11 articles in this unit
+2026-01-23 10:36:24 | INFO     |    📄 Article 1: Aladdin and the Wonderful Lamp, Part I
+2026-01-23 10:36:24 | INFO     |   📋 Fetching assessment test: article_101001
+2026-01-23 10:36:24 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:24 | DEBUG    |     ❓ Fetching item: guiding_21014_302001
+2026-01-23 10:36:25 | DEBUG    |     📄 Fetching stimulus: guiding_21014
+2026-01-23 10:36:26 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:26 | DEBUG    |     ❓ Fetching item: guiding_21015_302002
+2026-01-23 10:36:26 | DEBUG    |     📄 Fetching stimulus: guiding_21015
+2026-01-23 10:36:27 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:27 | DEBUG    |     ❓ Fetching item: guiding_21016_302003
+2026-01-23 10:36:27 | DEBUG    |     📄 Fetching stimulus: guiding_21016
+2026-01-23 10:36:28 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:28 | DEBUG    |     ❓ Fetching item: guiding_21017_302004
+2026-01-23 10:36:29 | DEBUG    |     📄 Fetching stimulus: guiding_21017
+2026-01-23 10:36:29 | INFO     |     📂 Section: Quiz
+2026-01-23 10:36:29 | DEBUG    |     ❓ Fetching item: quiz_302005
+2026-01-23 10:36:30 | DEBUG    |     ❓ Fetching item: quiz_302006
+2026-01-23 10:36:31 | DEBUG    |     ❓ Fetching item: quiz_302007
+2026-01-23 10:36:31 | DEBUG    |     ❓ Fetching item: quiz_302008
+2026-01-23 10:36:32 | INFO     |   ✅ Completed: article_101001
+2026-01-23 10:36:32 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:36:32 | INFO     |    📄 Article 2: Aladdin and the Wonderful Lamp, Part II
+2026-01-23 10:36:32 | INFO     |   📋 Fetching assessment test: article_101002
+2026-01-23 10:36:33 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:33 | DEBUG    |     ❓ Fetching item: guiding_21018_302009
+2026-01-23 10:36:33 | DEBUG    |     📄 Fetching stimulus: guiding_21018
+2026-01-23 10:36:34 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:34 | DEBUG    |     ❓ Fetching item: guiding_21019_302010
+2026-01-23 10:36:34 | DEBUG    |     📄 Fetching stimulus: guiding_21019
+2026-01-23 10:36:35 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:35 | DEBUG    |     ❓ Fetching item: guiding_21020_302011
+2026-01-23 10:36:36 | DEBUG    |     📄 Fetching stimulus: guiding_21020
+2026-01-23 10:36:36 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:36 | DEBUG    |     ❓ Fetching item: guiding_21021_302012
+2026-01-23 10:36:37 | DEBUG    |     📄 Fetching stimulus: guiding_21021
+2026-01-23 10:36:37 | INFO     |     📂 Section: Quiz
+2026-01-23 10:36:37 | DEBUG    |     ❓ Fetching item: quiz_302013
+2026-01-23 10:36:38 | DEBUG    |     ❓ Fetching item: quiz_302014
+2026-01-23 10:36:39 | DEBUG    |     ❓ Fetching item: quiz_302015
+2026-01-23 10:36:39 | DEBUG    |     ❓ Fetching item: quiz_302016
+2026-01-23 10:36:40 | INFO     |   ✅ Completed: article_101002
+2026-01-23 10:36:40 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:36:40 | INFO     |    📄 Article 3: Aladdin and the Wonderful Lamp, Part III
+2026-01-23 10:36:40 | INFO     |   📋 Fetching assessment test: article_101003
+2026-01-23 10:36:41 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:41 | DEBUG    |     ❓ Fetching item: guiding_21022_302017
+2026-01-23 10:36:41 | DEBUG    |     📄 Fetching stimulus: guiding_21022
+2026-01-23 10:36:42 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:42 | DEBUG    |     ❓ Fetching item: guiding_21023_302018
+2026-01-23 10:36:43 | DEBUG    |     📄 Fetching stimulus: guiding_21023
+2026-01-23 10:36:43 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:43 | DEBUG    |     ❓ Fetching item: guiding_21024_302019
+2026-01-23 10:36:44 | DEBUG    |     📄 Fetching stimulus: guiding_21024
+2026-01-23 10:36:44 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:44 | DEBUG    |     ❓ Fetching item: guiding_21025_302020
+2026-01-23 10:36:45 | DEBUG    |     📄 Fetching stimulus: guiding_21025
+2026-01-23 10:36:46 | INFO     |     📂 Section: Quiz
+2026-01-23 10:36:46 | DEBUG    |     ❓ Fetching item: quiz_302021
+2026-01-23 10:36:46 | DEBUG    |     ❓ Fetching item: quiz_302022
+2026-01-23 10:36:47 | DEBUG    |     ❓ Fetching item: quiz_302023
+2026-01-23 10:36:48 | DEBUG    |     ❓ Fetching item: quiz_302024
+2026-01-23 10:36:48 | INFO     |   ✅ Completed: article_101003
+2026-01-23 10:36:48 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:36:49 | INFO     |    📄 Article 4: Alice’s Adventures in Wonderland, Part I
+2026-01-23 10:36:49 | INFO     |   📋 Fetching assessment test: article_101004
+2026-01-23 10:36:49 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:49 | DEBUG    |     ❓ Fetching item: guiding_21026_302025
+2026-01-23 10:36:50 | DEBUG    |     📄 Fetching stimulus: guiding_21026
+2026-01-23 10:36:50 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:50 | DEBUG    |     ❓ Fetching item: guiding_21027_302026
+2026-01-23 10:36:51 | DEBUG    |     📄 Fetching stimulus: guiding_21027
+2026-01-23 10:36:52 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:52 | DEBUG    |     ❓ Fetching item: guiding_21028_302027
+2026-01-23 10:36:52 | DEBUG    |     📄 Fetching stimulus: guiding_21028
+2026-01-23 10:36:53 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:53 | DEBUG    |     ❓ Fetching item: guiding_21029_302028
+2026-01-23 10:36:53 | DEBUG    |     📄 Fetching stimulus: guiding_21029
+2026-01-23 10:36:54 | INFO     |     📂 Section: Quiz
+2026-01-23 10:36:54 | DEBUG    |     ❓ Fetching item: quiz_302029
+2026-01-23 10:36:55 | DEBUG    |     ❓ Fetching item: quiz_302030
+2026-01-23 10:36:55 | DEBUG    |     ❓ Fetching item: quiz_302031
+2026-01-23 10:36:56 | DEBUG    |     ❓ Fetching item: quiz_302032
+2026-01-23 10:36:57 | INFO     |   ✅ Completed: article_101004
+2026-01-23 10:36:57 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:36:57 | INFO     |    📄 Article 5: Alice’s Adventures in Wonderland, Part II
+2026-01-23 10:36:57 | INFO     |   📋 Fetching assessment test: article_101005
+2026-01-23 10:36:58 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:58 | DEBUG    |     ❓ Fetching item: guiding_21030_302033
+2026-01-23 10:36:58 | DEBUG    |     📄 Fetching stimulus: guiding_21030
+2026-01-23 10:36:59 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:36:59 | DEBUG    |     ❓ Fetching item: guiding_21031_302034
+2026-01-23 10:36:59 | DEBUG    |     📄 Fetching stimulus: guiding_21031
+2026-01-23 10:37:00 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:00 | DEBUG    |     ❓ Fetching item: guiding_21032_302035
+2026-01-23 10:37:00 | DEBUG    |     📄 Fetching stimulus: guiding_21032
+2026-01-23 10:37:01 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:01 | DEBUG    |     ❓ Fetching item: guiding_21033_302036
+2026-01-23 10:37:02 | DEBUG    |     📄 Fetching stimulus: guiding_21033
+2026-01-23 10:37:02 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:02 | DEBUG    |     ❓ Fetching item: quiz_302037
+2026-01-23 10:37:03 | DEBUG    |     ❓ Fetching item: quiz_302038
+2026-01-23 10:37:04 | DEBUG    |     ❓ Fetching item: quiz_302039
+2026-01-23 10:37:04 | DEBUG    |     ❓ Fetching item: quiz_302040
+2026-01-23 10:37:05 | DEBUG    |     ❓ Fetching item: quiz_302041
+2026-01-23 10:37:06 | INFO     |   ✅ Completed: article_101005
+2026-01-23 10:37:06 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:06 | INFO     |    📄 Article 6: Alice’s Adventures in Wonderland, Part III
+2026-01-23 10:37:06 | INFO     |   📋 Fetching assessment test: article_101006
+2026-01-23 10:37:06 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:06 | DEBUG    |     ❓ Fetching item: guiding_21034_302042
+2026-01-23 10:37:07 | DEBUG    |     📄 Fetching stimulus: guiding_21034
+2026-01-23 10:37:07 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:07 | DEBUG    |     ❓ Fetching item: guiding_21035_302043
+2026-01-23 10:37:08 | DEBUG    |     📄 Fetching stimulus: guiding_21035
+2026-01-23 10:37:09 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:09 | DEBUG    |     ❓ Fetching item: guiding_21036_302044
+2026-01-23 10:37:09 | DEBUG    |     📄 Fetching stimulus: guiding_21036
+2026-01-23 10:37:10 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:10 | DEBUG    |     ❓ Fetching item: guiding_21037_302045
+2026-01-23 10:37:10 | DEBUG    |     📄 Fetching stimulus: guiding_21037
+2026-01-23 10:37:11 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:11 | DEBUG    |     ❓ Fetching item: quiz_302046
+2026-01-23 10:37:12 | DEBUG    |     ❓ Fetching item: quiz_302047
+2026-01-23 10:37:12 | DEBUG    |     ❓ Fetching item: quiz_302048
+2026-01-23 10:37:13 | DEBUG    |     ❓ Fetching item: quiz_302049
+2026-01-23 10:37:14 | INFO     |   ✅ Completed: article_101006
+2026-01-23 10:37:14 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:14 | INFO     |    📄 Article 7: Alice’s Adventures in Wonderland, Part IV
+2026-01-23 10:37:14 | INFO     |   📋 Fetching assessment test: article_101007
+2026-01-23 10:37:14 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:14 | DEBUG    |     ❓ Fetching item: guiding_21038_302050
+2026-01-23 10:37:15 | DEBUG    |     📄 Fetching stimulus: guiding_21038
+2026-01-23 10:37:16 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:16 | DEBUG    |     ❓ Fetching item: guiding_21039_302051
+2026-01-23 10:37:16 | DEBUG    |     📄 Fetching stimulus: guiding_21039
+2026-01-23 10:37:17 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:17 | DEBUG    |     ❓ Fetching item: guiding_21040_302052
+2026-01-23 10:37:17 | DEBUG    |     📄 Fetching stimulus: guiding_21040
+2026-01-23 10:37:18 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:18 | DEBUG    |     ❓ Fetching item: guiding_21041_302053
+2026-01-23 10:37:19 | DEBUG    |     📄 Fetching stimulus: guiding_21041
+2026-01-23 10:37:19 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:19 | DEBUG    |     ❓ Fetching item: quiz_302054
+2026-01-23 10:37:20 | DEBUG    |     ❓ Fetching item: quiz_302055
+2026-01-23 10:37:21 | DEBUG    |     ❓ Fetching item: quiz_302056
+2026-01-23 10:37:21 | DEBUG    |     ❓ Fetching item: quiz_302057
+2026-01-23 10:37:22 | DEBUG    |     ❓ Fetching item: quiz_302058
+2026-01-23 10:37:23 | INFO     |   ✅ Completed: article_101007
+2026-01-23 10:37:23 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:23 | INFO     |    📄 Article 8: The Open Road, Part I
+2026-01-23 10:37:23 | INFO     |   📋 Fetching assessment test: article_101008
+2026-01-23 10:37:23 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:23 | DEBUG    |     ❓ Fetching item: guiding_21042_302059
+2026-01-23 10:37:24 | DEBUG    |     📄 Fetching stimulus: guiding_21042
+2026-01-23 10:37:25 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:25 | DEBUG    |     ❓ Fetching item: guiding_21043_302060
+2026-01-23 10:37:25 | DEBUG    |     📄 Fetching stimulus: guiding_21043
+2026-01-23 10:37:26 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:26 | DEBUG    |     ❓ Fetching item: guiding_21044_302061
+2026-01-23 10:37:26 | DEBUG    |     📄 Fetching stimulus: guiding_21044
+2026-01-23 10:37:27 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:27 | DEBUG    |     ❓ Fetching item: quiz_302062
+2026-01-23 10:37:28 | DEBUG    |     ❓ Fetching item: quiz_302063
+2026-01-23 10:37:28 | DEBUG    |     ❓ Fetching item: quiz_302064
+2026-01-23 10:37:29 | DEBUG    |     ❓ Fetching item: quiz_302065
+2026-01-23 10:37:30 | INFO     |   ✅ Completed: article_101008
+2026-01-23 10:37:30 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:30 | INFO     |    📄 Article 9: The Open Road, Part II
+2026-01-23 10:37:30 | INFO     |   📋 Fetching assessment test: article_101009
+2026-01-23 10:37:30 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:30 | DEBUG    |     ❓ Fetching item: guiding_21045_302066
+2026-01-23 10:37:31 | DEBUG    |     📄 Fetching stimulus: guiding_21045
+2026-01-23 10:37:32 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:32 | DEBUG    |     ❓ Fetching item: guiding_21046_302067
+2026-01-23 10:37:32 | DEBUG    |     📄 Fetching stimulus: guiding_21046
+2026-01-23 10:37:33 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:33 | DEBUG    |     ❓ Fetching item: guiding_21047_302068
+2026-01-23 10:37:33 | DEBUG    |     📄 Fetching stimulus: guiding_21047
+2026-01-23 10:37:34 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:34 | DEBUG    |     ❓ Fetching item: guiding_21048_302069
+2026-01-23 10:37:34 | DEBUG    |     📄 Fetching stimulus: guiding_21048
+2026-01-23 10:37:35 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:35 | DEBUG    |     ❓ Fetching item: quiz_302070
+2026-01-23 10:37:36 | DEBUG    |     ❓ Fetching item: quiz_302071
+2026-01-23 10:37:36 | DEBUG    |     ❓ Fetching item: quiz_302072
+2026-01-23 10:37:37 | DEBUG    |     ❓ Fetching item: quiz_302073
+2026-01-23 10:37:38 | DEBUG    |     ❓ Fetching item: quiz_302074
+2026-01-23 10:37:38 | INFO     |   ✅ Completed: article_101009
+2026-01-23 10:37:38 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:39 | INFO     |    📄 Article 10: The Open Road, Part III
+2026-01-23 10:37:39 | INFO     |   📋 Fetching assessment test: article_101010
+2026-01-23 10:37:39 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:39 | DEBUG    |     ❓ Fetching item: guiding_21049_302075
+2026-01-23 10:37:40 | DEBUG    |     📄 Fetching stimulus: guiding_21049
+2026-01-23 10:37:40 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:40 | DEBUG    |     ❓ Fetching item: guiding_21050_302076
+2026-01-23 10:37:41 | DEBUG    |     📄 Fetching stimulus: guiding_21050
+2026-01-23 10:37:42 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:42 | DEBUG    |     ❓ Fetching item: guiding_21051_302077
+2026-01-23 10:37:42 | DEBUG    |     📄 Fetching stimulus: guiding_21051
+2026-01-23 10:37:43 | INFO     |     📂 Section: Guiding Questions
+2026-01-23 10:37:43 | DEBUG    |     ❓ Fetching item: guiding_21052_302078
+2026-01-23 10:37:43 | DEBUG    |     📄 Fetching stimulus: guiding_21052
+2026-01-23 10:37:44 | INFO     |     📂 Section: Quiz
+2026-01-23 10:37:44 | DEBUG    |     ❓ Fetching item: quiz_302079
+2026-01-23 10:37:45 | DEBUG    |     ❓ Fetching item: quiz_302080
+2026-01-23 10:37:45 | DEBUG    |     ❓ Fetching item: quiz_302081
+2026-01-23 10:37:46 | DEBUG    |     ❓ Fetching item: quiz_302082
+2026-01-23 10:37:47 | INFO     |   ✅ Completed: article_101010
+2026-01-23 10:37:47 | INFO     |       ✅ QTI content fetched
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 2: Rattenborough's Guide to Animals
+2026-01-23 10:37:47 | INFO     |    📎 16 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 3: How Does Your Body Work?
+2026-01-23 10:37:47 | INFO     |    📎 12 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 4: Stories of Ancient Rome
+2026-01-23 10:37:47 | INFO     |    📎 17 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 5: Adventures in Light and Sound
+2026-01-23 10:37:47 | INFO     |    📎 12 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 6: Gods, Giants, and Dwarves
+2026-01-23 10:37:47 | INFO     |    📎 8 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 7: What's in Our Universe?
+2026-01-23 10:37:47 | INFO     |    📎 15 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 8: Native American Stories
+2026-01-23 10:37:47 | INFO     |    📎 10 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 9: The Age of Exploration
+2026-01-23 10:37:47 | INFO     |    📎 11 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 10: Living in Colonial America
+2026-01-23 10:37:47 | INFO     |    📎 12 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 11: Introduction to Ecology
+2026-01-23 10:37:47 | INFO     |    📎 9 articles in this unit
+2026-01-23 10:37:47 | INFO     |    ⏹️ Reached total article limit (10)
+2026-01-23 10:37:47 | INFO     | 
+📁 Unit 12: Aladin and the Wonderful Lamp
+2026-01-23 10:37:47 | INFO     |    📎 0 articles in this unit
+2026-01-23 10:37:47 | INFO     | 
+📊 Processed 12 units, 10 articles total
+2026-01-23 10:37:47 | INFO     | 
+💾 Saving results to: test_course_extract.json
+2026-01-23 10:37:47 | INFO     | 
+✅ Extraction Complete!
+2026-01-23 10:37:47 | INFO     | ============================================================
+2026-01-23 10:37:47 | INFO     |    Course: Core Knowledge Reading Grade 3/3
+2026-01-23 10:37:47 | INFO     |    Units: 12
+2026-01-23 10:37:47 | INFO     |    Lessons: 0
+2026-01-23 10:37:47 | INFO     |    Activities: 0
+2026-01-23 10:37:47 | INFO     |    QTI Assessments: 10
+2026-01-23 10:37:47 | INFO     |    Output: test_course_extract.json
+2026-01-23 10:37:47 | INFO     |    File size: 616.4 KB
+2026-01-23 10:37:47 | INFO     | ============================================================

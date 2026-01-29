@@ -1,0 +1,368 @@
+{
+  "source": {
+    "course": {
+      "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e",
+      "status": "active",
+      "dateLastModified": "2025-11-06T12:50:40.848Z",
+      "metadata": {
+        "goals": {
+          "dailyXp": 25,
+          "dailyLessons": 1,
+          "dailyAccuracy": 80,
+          "dailyActiveMinutes": 25,
+          "dailyMasteredUnits": 2
+        },
+        "metrics": {
+          "totalXp": 1565,
+          "totalGrades": 1,
+          "totalLessons": 131
+        },
+        "isCustom": false,
+        "AlphaLearn": {
+          "DailyXPGoal": 25
+        },
+        "courseType": "base",
+        "primaryApp": "alpha_read",
+        "isAlphaRead": true,
+        "contactEmail": "aleksandra.wrega@alpha.school",
+        "contentGrade": "3",
+        "publishStatus": "testing",
+        "isSupplemental": false,
+        "timebackVisible": true
+      },
+      "title": "Core Knowledge Reading Grade 3/3",
+      "courseCode": "CORE_KNOWLEDGE_READING_GRADE_3/3",
+      "grades": [
+        "3"
+      ],
+      "subjects": [
+        "Reading"
+      ],
+      "subjectCodes": [],
+      "org": {
+        "sourcedId": "powerpath-ui-org"
+      },
+      "resources": []
+    },
+    "components": [
+      {
+        "sourcedId": "9ee49524-8eb1-41b6-92c3-1c3ba0407841",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:48.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Classic Tales",
+        "sortOrder": 1,
+        "unlockDate": "2025-07-10T12:58:48.000Z"
+      },
+      {
+        "sourcedId": "aca10683-1a55-4227-83e3-a0981f4c0d04",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:48.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Rattenborough's Guide to Animals",
+        "sortOrder": 2,
+        "unlockDate": "2025-07-10T12:58:48.000Z"
+      },
+      {
+        "sourcedId": "3523fcef-eb38-47f0-9068-3592363b18e6",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:49.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "How Does Your Body Work?",
+        "sortOrder": 3,
+        "unlockDate": "2025-07-10T12:58:49.000Z"
+      },
+      {
+        "sourcedId": "fc1cd583-330c-45e1-bdd0-0ffc0e1c8142",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:50.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Stories of Ancient Rome",
+        "sortOrder": 4,
+        "unlockDate": "2025-07-10T12:58:50.000Z"
+      },
+      {
+        "sourcedId": "def5005f-bc4b-495e-b884-cf7a0bbc258e",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:50.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Adventures in Light and Sound",
+        "sortOrder": 5,
+        "unlockDate": "2025-07-10T12:58:50.000Z"
+      },
+      {
+        "sourcedId": "7dc04f0d-28bd-431f-bc9e-4ee88dd17ff2",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:51.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Gods, Giants, and Dwarves",
+        "sortOrder": 6,
+        "unlockDate": "2025-07-10T12:58:51.000Z"
+      },
+      {
+        "sourcedId": "7e67eaaa-4461-44d2-8c67-19a066efa6c6",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:51.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "What's in Our Universe?",
+        "sortOrder": 7,
+        "unlockDate": "2025-07-10T12:58:51.000Z"
+      },
+      {
+        "sourcedId": "44d1da91-5625-4491-bcfb-ce6de69dfd48",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:52.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Native American Stories",
+        "sortOrder": 8,
+        "unlockDate": "2025-07-10T12:58:52.000Z"
+      },
+      {
+        "sourcedId": "183c4fa8-ea9f-4d2c-9762-4ca2ce77c9d7",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:52.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "The Age of Exploration",
+        "sortOrder": 9,
+        "unlockDate": "2025-07-10T12:58:52.000Z"
+      },
+      {
+        "sourcedId": "0a2e6374-b8bb-4b96-9469-18097d6db3d7",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:53.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Living in Colonial America",
+        "sortOrder": 10,
+        "unlockDate": "2025-07-10T12:58:53.000Z"
+      },
+      {
+        "sourcedId": "43a961a5-5a07-46f6-b125-874540908dab",
+        "status": "active",
+        "dateLastModified": "2025-07-10T12:58:54.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Introduction to Ecology",
+        "sortOrder": 11,
+        "unlockDate": "2025-07-10T12:58:54.000Z"
+      },
+      {
+        "sourcedId": "90a0bdce-d86d-4e90-bc99-16bd57a0a282",
+        "status": "tobedeleted",
+        "dateLastModified": "2025-10-09T19:35:03.000Z",
+        "course": {
+          "sourcedId": "80c8fa8d-744d-4df4-937b-2c93fb0cb93e"
+        },
+        "title": "Aladin and the Wonderful Lamp",
+        "sortOrder": 21,
+        "prerequisites": [],
+        "prerequisiteCriteria": "ALL",
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      }
+    ]
+  },
+  "clone": {
+    "course": {
+      "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f",
+      "status": "active",
+      "dateLastModified": "2026-01-21T20:38:59.833Z",
+      "metadata": {
+        "goals": {
+          "dailyXp": 25,
+          "dailyLessons": 1,
+          "dailyAccuracy": 80,
+          "dailyActiveMinutes": 25,
+          "dailyMasteredUnits": 2
+        },
+        "metrics": {
+          "totalXp": 1000
+        },
+        "AlphaLearn": {
+          "DailyXPGoal": 25
+        }
+      },
+      "title": "Readventure - Grade 3",
+      "courseCode": "readventure-g3",
+      "grades": [
+        "3"
+      ],
+      "subjects": [
+        "Reading"
+      ],
+      "subjectCodes": [],
+      "org": {
+        "sourcedId": "PLAYCADEMY"
+      },
+      "level": "Elementary",
+      "gradingScheme": "STANDARD",
+      "resources": []
+    },
+    "components": [
+      {
+        "sourcedId": "4dc688a7-7c74-449c-b8ea-d7ee2d40cf0f",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:51:13.279Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Classic Tales",
+        "sortOrder": 1,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f-component",
+        "status": "active",
+        "dateLastModified": "2026-01-21T20:38:59.863Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Readventure - Grade 3 Activities",
+        "sortOrder": 1,
+        "prerequisites": [],
+        "prerequisiteCriteria": "ALL",
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "1d3db91b-b9cb-4d51-aa19-179c16dded29",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:51:21.480Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Rattenborough's Guide to Animals",
+        "sortOrder": 2,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "4c98141b-4f07-45dc-b082-17078ac462b1",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:51:32.989Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "How Does Your Body Work?",
+        "sortOrder": 3,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "a8f0da06-77bd-42a9-919f-05c60122cb9a",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:51:40.618Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Stories of Ancient Rome",
+        "sortOrder": 4,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "f6e29816-9da8-46e2-99b2-3c8ada6c1877",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:51:52.591Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Adventures in Light and Sound",
+        "sortOrder": 5,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "e107a4f2-97c2-4fef-9728-5b816169ae54",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:00.608Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Gods, Giants, and Dwarves",
+        "sortOrder": 6,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "a9d21b35-8778-41d2-a0bf-f604e9874c95",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:05.837Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "What's in Our Universe?",
+        "sortOrder": 7,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "37562122-1970-497c-971c-6ba513ae25a0",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:15.372Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Native American Stories",
+        "sortOrder": 8,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "ea291372-dd8f-4a7e-9400-0bc9e95e9dee",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:21.128Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "The Age of Exploration",
+        "sortOrder": 9,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "03ce9834-7581-4bc0-b290-aa8835b96652",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:27.629Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Living in Colonial America",
+        "sortOrder": 10,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "e29c771e-5a07-48a5-b45f-a904e856aa9f",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:33.957Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Introduction to Ecology",
+        "sortOrder": 11,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      },
+      {
+        "sourcedId": "7c08fe91-530f-4527-a83e-93e4cc8e4d60",
+        "status": "active",
+        "dateLastModified": "2026-01-26T10:52:39.621Z",
+        "course": {
+          "sourcedId": "43a840e0-8dff-46bf-a19f-a18fa954099f"
+        },
+        "title": "Aladin and the Wonderful Lamp",
+        "sortOrder": 21,
+        "unlockDate": "1970-01-01T00:00:00.000Z"
+      }
+    ]
+  }
+}

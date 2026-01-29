@@ -53,12 +53,13 @@ CLIENT_SECRET = os.getenv("TIMEBACK_CLIENT_SECRET", "1vv89lcl7lfu151ruccfts4haue
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent
+OUTPUTS_DIR = SCRIPT_DIR / "outputs"
 DELIVERABLES_DIR = SCRIPT_DIR / "final_deliverables_grade3"
 QUESTION_BANK_FILE = DELIVERABLES_DIR / "comprehensive_question_bank_grade3_3277_questions.json"
 SUMMARY_FILE = DELIVERABLES_DIR / "comprehensive_qb_summary.json"
 
 # Logging
-LOG_FILE = SCRIPT_DIR / "build_course.log"
+LOG_FILE = OUTPUTS_DIR / "logs" / "build_course.log"
 
 # Global state
 logger = None
@@ -945,7 +946,7 @@ Examples:
             logger.info("\n🔒 This was a DRY RUN - no actual changes were made")
         
         # Save results
-        output_file = args.output or f"build_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        output_file = args.output or str(OUTPUTS_DIR / "build_results" / f"build_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
         logger.info(f"\n💾 Results saved to: {output_file}")
