@@ -1,0 +1,2550 @@
+{
+  "metadata": {
+    "article_id": "article_101001",
+    "extraction_date": "2026-01-29T13:14:47.149321",
+    "qti_api_url": "https://qti.alpha-1edtech.ai/api"
+  },
+  "assessment_test": {
+    "identifier": "article_101001",
+    "title": "Aladdin and the Wonderful Lamp, Part I",
+    "qtiVersion": "3.0",
+    "qti-test-part": [
+      {
+        "identifier": "test_part_0",
+        "navigationMode": "linear",
+        "submissionMode": "individual",
+        "qti-assessment-section": [
+          {
+            "identifier": "test_guiding_21014",
+            "title": "Guiding Questions",
+            "visible": true,
+            "required": true,
+            "fixed": false,
+            "sequence": 1,
+            "qti-assessment-item-ref": [
+              {
+                "identifier": "guiding_21014_302001",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21014_302001"
+              }
+            ]
+          },
+          {
+            "identifier": "test_guiding_21015",
+            "title": "Guiding Questions",
+            "visible": true,
+            "required": true,
+            "fixed": false,
+            "sequence": 2,
+            "qti-assessment-item-ref": [
+              {
+                "identifier": "guiding_21015_302002",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21015_302002"
+              }
+            ]
+          },
+          {
+            "identifier": "test_guiding_21016",
+            "title": "Guiding Questions",
+            "visible": true,
+            "required": true,
+            "fixed": false,
+            "sequence": 3,
+            "qti-assessment-item-ref": [
+              {
+                "identifier": "guiding_21016_302003",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21016_302003"
+              }
+            ]
+          },
+          {
+            "identifier": "test_guiding_21017",
+            "title": "Guiding Questions",
+            "visible": true,
+            "required": true,
+            "fixed": false,
+            "sequence": 4,
+            "qti-assessment-item-ref": [
+              {
+                "identifier": "guiding_21017_302004",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21017_302004"
+              }
+            ]
+          },
+          {
+            "identifier": "test_quiz",
+            "title": "Quiz",
+            "visible": true,
+            "required": true,
+            "fixed": false,
+            "sequence": 5,
+            "qti-assessment-item-ref": [
+              {
+                "identifier": "quiz_302005",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302005"
+              },
+              {
+                "identifier": "quiz_302006",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302006"
+              },
+              {
+                "identifier": "quiz_302007",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302007"
+              },
+              {
+                "identifier": "quiz_302008",
+                "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302008"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qti-outcome-declaration": [],
+    "rawXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<qti-assessment-test xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"article_101001\" title=\"Aladdin and the Wonderful Lamp, Part I\">\n  <qti-test-part identifier=\"test_part_0\" navigation-mode=\"linear\" submission-mode=\"individual\">\n    <qti-assessment-section identifier=\"test_guiding_21014\" title=\"Guiding Questions\" visible=\"true\">\n      <qti-assessment-item-ref identifier=\"guiding_21014_302001\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21014_302001\"/>\n    </qti-assessment-section>\n    <qti-assessment-section identifier=\"test_guiding_21015\" title=\"Guiding Questions\" visible=\"true\">\n      <qti-assessment-item-ref identifier=\"guiding_21015_302002\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21015_302002\"/>\n    </qti-assessment-section>\n    <qti-assessment-section identifier=\"test_guiding_21016\" title=\"Guiding Questions\" visible=\"true\">\n      <qti-assessment-item-ref identifier=\"guiding_21016_302003\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21016_302003\"/>\n    </qti-assessment-section>\n    <qti-assessment-section identifier=\"test_guiding_21017\" title=\"Guiding Questions\" visible=\"true\">\n      <qti-assessment-item-ref identifier=\"guiding_21017_302004\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21017_302004\"/>\n    </qti-assessment-section>\n    <qti-assessment-section identifier=\"test_quiz\" title=\"Quiz\" visible=\"true\">\n      <qti-assessment-item-ref identifier=\"quiz_302005\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302005\"/>\n      <qti-assessment-item-ref identifier=\"quiz_302006\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302006\"/>\n      <qti-assessment-item-ref identifier=\"quiz_302007\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302007\"/>\n      <qti-assessment-item-ref identifier=\"quiz_302008\" href=\"https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302008\"/>\n    </qti-assessment-section>\n  </qti-test-part>\n</qti-assessment-test>",
+    "content": {
+      "qti-assessment-test": {
+        "_attributes": {
+          "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+          "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+          "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+          "identifier": "article_101001",
+          "title": "Aladdin and the Wonderful Lamp, Part I"
+        },
+        "qti-test-part": [
+          {
+            "_attributes": {
+              "identifier": "test_part_0",
+              "navigation-mode": "linear",
+              "submission-mode": "individual"
+            },
+            "qti-assessment-section": [
+              {
+                "_attributes": {
+                  "identifier": "test_guiding_21014",
+                  "title": "Guiding Questions",
+                  "visible": "true"
+                },
+                "qti-assessment-item-ref": [
+                  {
+                    "_attributes": {
+                      "identifier": "guiding_21014_302001",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21014_302001"
+                    }
+                  }
+                ]
+              },
+              {
+                "_attributes": {
+                  "identifier": "test_guiding_21015",
+                  "title": "Guiding Questions",
+                  "visible": "true"
+                },
+                "qti-assessment-item-ref": [
+                  {
+                    "_attributes": {
+                      "identifier": "guiding_21015_302002",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21015_302002"
+                    }
+                  }
+                ]
+              },
+              {
+                "_attributes": {
+                  "identifier": "test_guiding_21016",
+                  "title": "Guiding Questions",
+                  "visible": "true"
+                },
+                "qti-assessment-item-ref": [
+                  {
+                    "_attributes": {
+                      "identifier": "guiding_21016_302003",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21016_302003"
+                    }
+                  }
+                ]
+              },
+              {
+                "_attributes": {
+                  "identifier": "test_guiding_21017",
+                  "title": "Guiding Questions",
+                  "visible": "true"
+                },
+                "qti-assessment-item-ref": [
+                  {
+                    "_attributes": {
+                      "identifier": "guiding_21017_302004",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/guiding_21017_302004"
+                    }
+                  }
+                ]
+              },
+              {
+                "_attributes": {
+                  "identifier": "test_quiz",
+                  "title": "Quiz",
+                  "visible": "true"
+                },
+                "qti-assessment-item-ref": [
+                  {
+                    "_attributes": {
+                      "identifier": "quiz_302005",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302005"
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "quiz_302006",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302006"
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "quiz_302007",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302007"
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "quiz_302008",
+                      "href": "https://qti.alpha-1edtech.ai/api/assessment-items/quiz_302008"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "createdAt": "2025-07-10T12:57:31.062Z",
+    "updatedAt": "2025-12-15T17:24:33.625Z",
+    "__v": 0,
+    "isValidXml": true
+  },
+  "assessment_items": {
+    "guiding_21014_302001": {
+      "identifier": "guiding_21014_302001",
+      "title": "Section 1 - Guiding Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600101"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 1,
+        "difficulty": "easy",
+        "CCSS": "RL.3.1",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "ee598abe-124a-4fdd-b9b0-c8c39088aa3d"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_item_aebec5d1-e651-4c00-b631-a9d639caf5de",
+          "_item_ffc8280f-a475-4aaa-817f-dd0517df464f",
+          "_item_49704577-7ccc-49e2-be66-4972bdef723b"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"guiding_21014_302001\" title=\"Section 1 - Guiding Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600101</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-assessment-stimulus-ref identifier=\"guiding_21014\" href=\"stimuli/guiding_21014\" title=\"Section 1\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>Aladdin's father worked as a</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600102\">\n        baker\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600102\" show-hide=\"show\">You may have chosen baker because it’s a common job, but look at the lines, “His father worked as a tailor,” and, “Are you the son of the tailor?”—baker is never mentioned. The correct answer is tailor because the text names it twice. Next time, reread for exact clue words and pick the word the text repeats.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600101\">\n        tailor\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600101\" show-hide=\"show\">You successfully identified key details by picking “tailor” as Aladdin’s father’s job. The text supports this when it says, “His father worked as a tailor, making clothes for people,” and again when the stranger asks, “Are you the son of the tailor who lived here?” Remember to look for sentences that directly answer the question and repeat key words from the question in the passage.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600103\">\n        farmer\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600103\" show-hide=\"show\">You may have guessed “farmer” or mixed it up with another story, but the text clearly says, “His father worked as a tailor, making clothes for people,” and the stranger asks, “Are you the son of the tailor?”—so the father was a tailor, not a farmer. The correct answer is tailor because the story states it twice. Next time, reread the sentence that answers the question and underline the exact words from the text before choosing.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600104\">\n        teacher\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600104\" show-hide=\"show\">You may have mixed up the job words and chose “teacher,” but the story says his father worked as a tailor, and the stranger asks if Aladdin is the son of the tailor. This shows the correct answer is tailor, not teacher. Next time, reread and match your answer to the exact word the story uses.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "guiding_21014_302001",
+            "title": "Section 1 - Guiding Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600101"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-assessment-stimulus-ref": {
+            "_attributes": {
+              "identifier": "guiding_21014",
+              "href": "stimuli/guiding_21014",
+              "title": "Section 1"
+            }
+          },
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "Aladdin's father worked as a"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "baker",
+                  "_attributes": {
+                    "identifier": "answer_600102"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have chosen baker because it’s a common job, but look at the lines, “His father worked as a tailor,” and, “Are you the son of the tailor?”—baker is never mentioned. The correct answer is tailor because the text names it twice. Next time, reread for exact clue words and pick the word the text repeats.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600102",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "tailor",
+                  "_attributes": {
+                    "identifier": "answer_600101"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully identified key details by picking “tailor” as Aladdin’s father’s job. The text supports this when it says, “His father worked as a tailor, making clothes for people,” and again when the stranger asks, “Are you the son of the tailor who lived here?” Remember to look for sentences that directly answer the question and repeat key words from the question in the passage.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600101",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "farmer",
+                  "_attributes": {
+                    "identifier": "answer_600103"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have guessed “farmer” or mixed it up with another story, but the text clearly says, “His father worked as a tailor, making clothes for people,” and the stranger asks, “Are you the son of the tailor?”—so the father was a tailor, not a farmer. The correct answer is tailor because the story states it twice. Next time, reread the sentence that answers the question and underline the exact words from the text before choosing.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600103",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "teacher",
+                  "_attributes": {
+                    "identifier": "answer_600104"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have mixed up the job words and chose “teacher,” but the story says his father worked as a tailor, and the stranger asks if Aladdin is the son of the tailor. This shows the correct answer is tailor, not teacher. Next time, reread and match your answer to the exact word the story uses.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600104",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:28.462Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "guiding_21015_302002": {
+      "identifier": "guiding_21015_302002",
+      "title": "Section 2 - Guiding Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600108"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 1,
+        "difficulty": "medium",
+        "CCSS": "RL.3.3",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "6b38bcec-d7cc-11e8-824f-0242ac160002"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_item_045a383d-2008-4666-a6cb-f70f0b4f8195",
+          "_item_9ed734e1-0187-4ae6-8ac0-cc5730e20352",
+          "_item_c181a607-2125-4f8c-a4a0-07d6a76dbc8d"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"guiding_21015_302002\" title=\"Section 2 - Guiding Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600108</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-assessment-stimulus-ref identifier=\"guiding_21015\" href=\"stimuli/guiding_21015\" title=\"Section 2\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>Which word describes how Aladdin's mother most likely feels about meeting the stranger?</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600106\">\n        bored\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600106\" show-hide=\"show\">You may have guessed she was bored, but the text says, “She felt very surprised because her husband had never told her about having a brother,” which does not match “bored.” The right answer is “surprised” because the passage states it directly and explains why. Next time, reread the sentence that tells how the character feels and choose the word that matches it exactly.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600105\">\n        angry\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600105\" show-hide=\"show\">You may have guessed she was angry because a stranger came, but the story doesn’t say that. It says, “She felt very surprised because her husband had never told her about having a brother,” so the correct answer is surprised, not angry. Next time, reread the sentence with feeling words and pick the word that matches what the text says.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600107\">\n        excited\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600107\" show-hide=\"show\">You may have focused on the promise of good money and her welcoming him, which can sound exciting, but the text says, “She felt very surprised because her husband had never told her about having a brother,” so the correct answer is surprised. To find the right answer, look for the exact sentence that tells how the character feels and match your choice to that word.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600108\">\n        surprised\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600108\" show-hide=\"show\">Great job identifying a key detail about the character’s feelings. The text says, “She felt very surprised because her husband had never told her about having a brother.” Next time, look for feeling words and the reason that follows to confirm your answer.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "guiding_21015_302002",
+            "title": "Section 2 - Guiding Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600108"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-assessment-stimulus-ref": {
+            "_attributes": {
+              "identifier": "guiding_21015",
+              "href": "stimuli/guiding_21015",
+              "title": "Section 2"
+            }
+          },
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "Which word describes how Aladdin's mother most likely feels about meeting the stranger?"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "bored",
+                  "_attributes": {
+                    "identifier": "answer_600106"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have guessed she was bored, but the text says, “She felt very surprised because her husband had never told her about having a brother,” which does not match “bored.” The right answer is “surprised” because the passage states it directly and explains why. Next time, reread the sentence that tells how the character feels and choose the word that matches it exactly.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600106",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "angry",
+                  "_attributes": {
+                    "identifier": "answer_600105"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have guessed she was angry because a stranger came, but the story doesn’t say that. It says, “She felt very surprised because her husband had never told her about having a brother,” so the correct answer is surprised, not angry. Next time, reread the sentence with feeling words and pick the word that matches what the text says.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600105",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "excited",
+                  "_attributes": {
+                    "identifier": "answer_600107"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the promise of good money and her welcoming him, which can sound exciting, but the text says, “She felt very surprised because her husband had never told her about having a brother,” so the correct answer is surprised. To find the right answer, look for the exact sentence that tells how the character feels and match your choice to that word.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600107",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "surprised",
+                  "_attributes": {
+                    "identifier": "answer_600108"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "Great job identifying a key detail about the character’s feelings. The text says, “She felt very surprised because her husband had never told her about having a brother.” Next time, look for feeling words and the reason that follows to confirm your answer.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600108",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:29.038Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "guiding_21016_302003": {
+      "identifier": "guiding_21016_302003",
+      "title": "Section 3 - Guiding Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600110"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 2,
+        "difficulty": "easy",
+        "CCSS": "RL.3.5",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "13536d40-086b-472d-a084-01ad1fc7b1da"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_096e624f-60a6-4ac0-8e9c-c8e7cc72a116",
+          "_16554a2e-4ebd-40ec-b314-687891acf8a1",
+          "_11dec683-7fc9-4690-9efc-cd72d23dc998"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"guiding_21016_302003\" title=\"Section 3 - Guiding Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600110</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-assessment-stimulus-ref identifier=\"guiding_21016\" href=\"stimuli/guiding_21016\" title=\"Section 3\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>The reader can tell this story is a fantasy because</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600109\">\n        a stranger visits Aladdin's house\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600109\" show-hide=\"show\">You may have focused on an early detail (the magician visiting), but the text says he “spoke magical words in a loud voice. Suddenly… the earth split open,” showing the words caused it. That’s why the correct answer is “words make the earth split open.” Next time, reread the question for cause-and-effect and find the exact sentence that explains what made the event happen.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600111\">\n        they climb up a steep mountain path\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600111\" show-hide=\"show\">It looks like you focused on an earlier detail (their climb), but the question asks what made the earth split. The text says, “he… spoke magical words… The earth split open right at their feet,” so the correct answer is that the words made the earth split. Next time, reread the sentence where the event happens and pick the detail that explains it.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600110\">\n        words make the earth split open\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600110\" show-hide=\"show\">You successfully recognized cause and effect by connecting the magician’s words to what happened next. The text supports this: “he… spoke magical words in a loud voice. Suddenly… The earth split open right at their feet.” Remember to look for what happens right before a big change and ask, “What caused that?” when answering similar questions.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600112\">\n        Aladdin gathers dry sticks for a fire\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600112\" show-hide=\"show\">You likely focused on a small detail, but the text says, “Then he… spoke magical words in a loud voice. Suddenly… The earth split open right at their feet,” showing the words caused it—not Aladdin gathering sticks. The correct answer is “words make the earth split open.” Strategy: Reread the lines around the big event and pick the cause the text points to, not an earlier step.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "guiding_21016_302003",
+            "title": "Section 3 - Guiding Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600110"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-assessment-stimulus-ref": {
+            "_attributes": {
+              "identifier": "guiding_21016",
+              "href": "stimuli/guiding_21016",
+              "title": "Section 3"
+            }
+          },
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "The reader can tell this story is a fantasy because"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "a stranger visits Aladdin's house",
+                  "_attributes": {
+                    "identifier": "answer_600109"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on an early detail (the magician visiting), but the text says he “spoke magical words in a loud voice. Suddenly… the earth split open,” showing the words caused it. That’s why the correct answer is “words make the earth split open.” Next time, reread the question for cause-and-effect and find the exact sentence that explains what made the event happen.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600109",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "they climb up a steep mountain path",
+                  "_attributes": {
+                    "identifier": "answer_600111"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "It looks like you focused on an earlier detail (their climb), but the question asks what made the earth split. The text says, “he… spoke magical words… The earth split open right at their feet,” so the correct answer is that the words made the earth split. Next time, reread the sentence where the event happens and pick the detail that explains it.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600111",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "words make the earth split open",
+                  "_attributes": {
+                    "identifier": "answer_600110"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully recognized cause and effect by connecting the magician’s words to what happened next. The text supports this: “he… spoke magical words in a loud voice. Suddenly… The earth split open right at their feet.” Remember to look for what happens right before a big change and ask, “What caused that?” when answering similar questions.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600110",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin gathers dry sticks for a fire",
+                  "_attributes": {
+                    "identifier": "answer_600112"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You likely focused on a small detail, but the text says, “Then he… spoke magical words in a loud voice. Suddenly… The earth split open right at their feet,” showing the words caused it—not Aladdin gathering sticks. The correct answer is “words make the earth split open.” Strategy: Reread the lines around the big event and pick the cause the text points to, not an earlier step.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600112",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:29.622Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "guiding_21017_302004": {
+      "identifier": "guiding_21017_302004",
+      "title": "Section 4 - Guiding Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600113"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 2,
+        "difficulty": "medium",
+        "CCSS": "RL.3.6",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "7174b96b-c3e6-472d-8171-af6c874ef589"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_bc75eefc-7ac4-4bbd-afb0-d7f340d17f3e",
+          "_bf75f304-adb7-4e8c-9a56-188445038137",
+          "_item_08889945-0d25-43a3-81e5-7fc380d1dd6d"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"guiding_21017_302004\" title=\"Section 4 - Guiding Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600113</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-assessment-stimulus-ref identifier=\"guiding_21017\" href=\"stimuli/guiding_21017\" title=\"Section 4\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>This story was most likely written to</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600114\">\n        show readers how magic lamps are found\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600114\" show-hide=\"show\">You may have focused on the detail of Aladdin finding the lamp, but the story isn’t a how-to; it shows what happens because of choices. Look at “He only cared about getting the magic lamp… he spoke a magic spell… Poor Aladdin was trapped”—the magician’s greed causes trouble. So the best answer is that the story teaches that greed can lead to trouble; next time, ask, What lesson do the characters learn from what happens?</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600116\">\n        interest readers in collecting gems\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600116\" show-hide=\"show\">You may have focused on the shiny gems and thought the author wants to interest readers in collecting them, but the text shows the opposite: “all those gems made his bag very heavy” so Aladdin couldn’t climb out, and the magician “only cared about getting the magic lamp” and trapped him. These details teach that greed leads to trouble, which is the main message. Next time, ask yourself, “Do the events show a benefit or a warning?” and choose the answer that matches the lesson of the whole passage.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600113\">\n        teach readers that greed can lead to trouble\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600113\" show-hide=\"show\">Great job—you found the story’s lesson (theme) by noticing how greed leads to problems. The text shows this when “Aladdin…filled his bag with beautiful gems. But all those gems made his bag very heavy…he could not pull himself out,” and when the magician “only cared about getting the magic lamp” and trapped Aladdin. Next time, look for warnings and then see what trouble follows a character’s choice to want too much to spot the theme.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600115\">\n        make readers feel sorry for the magician\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600115\" show-hide=\"show\">You may have focused on the magician’s feelings instead of the main idea, but the text says \"The magician grew very angry... He only cared about getting the magic lamp\" and even says \"Poor Aladdin,\" so we are not meant to feel sorry for the magician. The story’s lesson is that greed causes trouble: the magician’s greed makes him trap Aladdin, and Aladdin’s heavy bag of gems keeps him stuck. Next time, ask, \"What lesson do the events show?\" and look for clue words that cover the whole passage, not just one character’s feelings.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "guiding_21017_302004",
+            "title": "Section 4 - Guiding Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600113"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-assessment-stimulus-ref": {
+            "_attributes": {
+              "identifier": "guiding_21017",
+              "href": "stimuli/guiding_21017",
+              "title": "Section 4"
+            }
+          },
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "This story was most likely written to"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "show readers how magic lamps are found",
+                  "_attributes": {
+                    "identifier": "answer_600114"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the detail of Aladdin finding the lamp, but the story isn’t a how-to; it shows what happens because of choices. Look at “He only cared about getting the magic lamp… he spoke a magic spell… Poor Aladdin was trapped”—the magician’s greed causes trouble. So the best answer is that the story teaches that greed can lead to trouble; next time, ask, What lesson do the characters learn from what happens?",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600114",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "interest readers in collecting gems",
+                  "_attributes": {
+                    "identifier": "answer_600116"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the shiny gems and thought the author wants to interest readers in collecting them, but the text shows the opposite: “all those gems made his bag very heavy” so Aladdin couldn’t climb out, and the magician “only cared about getting the magic lamp” and trapped him. These details teach that greed leads to trouble, which is the main message. Next time, ask yourself, “Do the events show a benefit or a warning?” and choose the answer that matches the lesson of the whole passage.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600116",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "teach readers that greed can lead to trouble",
+                  "_attributes": {
+                    "identifier": "answer_600113"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "Great job—you found the story’s lesson (theme) by noticing how greed leads to problems. The text shows this when “Aladdin…filled his bag with beautiful gems. But all those gems made his bag very heavy…he could not pull himself out,” and when the magician “only cared about getting the magic lamp” and trapped Aladdin. Next time, look for warnings and then see what trouble follows a character’s choice to want too much to spot the theme.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600113",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "make readers feel sorry for the magician",
+                  "_attributes": {
+                    "identifier": "answer_600115"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the magician’s feelings instead of the main idea, but the text says \"The magician grew very angry... He only cared about getting the magic lamp\" and even says \"Poor Aladdin,\" so we are not meant to feel sorry for the magician. The story’s lesson is that greed causes trouble: the magician’s greed makes him trap Aladdin, and Aladdin’s heavy bag of gems keeps him stuck. Next time, ask, \"What lesson do the events show?\" and look for clue words that cover the whole passage, not just one character’s feelings.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600115",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:30.194Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "quiz_302005": {
+      "identifier": "quiz_302005",
+      "title": "Quiz Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600117"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 2,
+        "difficulty": "medium",
+        "CCSS": "RL.3.4",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "3065be53-7582-47cf-8b7a-b6acede0773e"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_5bcfd7d2-29a5-464e-a9d8-81b7c3af5dd4",
+          "_718bd556-f0fb-4587-b362-55fd106ebce5",
+          "_3c3e2a7b-3c24-4518-995c-5d59da1fbc8b"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"quiz_302005\" title=\"Quiz Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600117</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>In the story, the magician tells Aladdin that finding the lamp will make him <b>\"richer than any king in the world.\"</b></p><p>What does this phrase mean?</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600117\">\n        Aladdin will have more money than he can count\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600117\" show-hide=\"show\">You successfully made a good prediction by using clues about the magic lamp and treasure. The text supports this when it says the lamp “had amazing powers that would make any person very rich” and the magician promises it “will make you richer than any king in the world.” Remember to look for repeated hints and strong words like “will” to predict what will happen next.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600118\">\n        Aladdin will become the ruler of a kingdom\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600118\" show-hide=\"show\">You may have thought “richer than any king” means Aladdin becomes a king, or you used what you know from other versions, but the text says the lamp “would make any person very rich” and “It will make you richer than any king,” which is about money, not ruling. So the correct answer is that Aladdin will have more money than he can count. Strategy: Reread and underline clue words like “rich/richer,” and choose the answer that matches exactly what the passage says—not what you expect from outside the story.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600119\">\n        Aladdin will find gold coins in the cave\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600119\" show-hide=\"show\">You may have brought in outside ideas (gold coins), but the text never mentions coins—Aladdin finds “beautiful gems,” and the lamp is said to make a person “very rich,” even “richer than any king.” That means the best prediction is about how much wealth he will have, not a specific kind of money, so “Aladdin will have more money than he can count” fits the text. Next time, stick to the exact words and look for clue phrases about the main idea, like “very rich.”</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600120\">\n        Aladdin will meet kings from other countries\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600120\" show-hide=\"show\">You may have focused on the word “king” and guessed he’d meet kings, but the text never says Aladdin will meet any kings; it says the lamp “had amazing powers that would make any person very rich” and the treasure “will make you richer than any king in the world.” That evidence points to the correct answer: Aladdin will have more money than he can count. Strategy: reread for clue words and choose the option that matches what the passage actually says, not ideas it doesn’t mention.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "quiz_302005",
+            "title": "Quiz Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600117"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": [
+                  {
+                    "_": "In the story, the magician tells Aladdin that finding the lamp will make him",
+                    "b": "\"richer than any king in the world.\""
+                  },
+                  "What does this phrase mean?"
+                ]
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "Aladdin will have more money than he can count",
+                  "_attributes": {
+                    "identifier": "answer_600117"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully made a good prediction by using clues about the magic lamp and treasure. The text supports this when it says the lamp “had amazing powers that would make any person very rich” and the magician promises it “will make you richer than any king in the world.” Remember to look for repeated hints and strong words like “will” to predict what will happen next.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600117",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin will become the ruler of a kingdom",
+                  "_attributes": {
+                    "identifier": "answer_600118"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have thought “richer than any king” means Aladdin becomes a king, or you used what you know from other versions, but the text says the lamp “would make any person very rich” and “It will make you richer than any king,” which is about money, not ruling. So the correct answer is that Aladdin will have more money than he can count. Strategy: Reread and underline clue words like “rich/richer,” and choose the answer that matches exactly what the passage says—not what you expect from outside the story.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600118",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin will find gold coins in the cave",
+                  "_attributes": {
+                    "identifier": "answer_600119"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have brought in outside ideas (gold coins), but the text never mentions coins—Aladdin finds “beautiful gems,” and the lamp is said to make a person “very rich,” even “richer than any king.” That means the best prediction is about how much wealth he will have, not a specific kind of money, so “Aladdin will have more money than he can count” fits the text. Next time, stick to the exact words and look for clue phrases about the main idea, like “very rich.”",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600119",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin will meet kings from other countries",
+                  "_attributes": {
+                    "identifier": "answer_600120"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the word “king” and guessed he’d meet kings, but the text never says Aladdin will meet any kings; it says the lamp “had amazing powers that would make any person very rich” and the treasure “will make you richer than any king in the world.” That evidence points to the correct answer: Aladdin will have more money than he can count. Strategy: reread for clue words and choose the option that matches what the passage actually says, not ideas it doesn’t mention.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600120",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:30.746Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "quiz_302006": {
+      "identifier": "quiz_302006",
+      "title": "Quiz Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600122"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 2,
+        "difficulty": "medium",
+        "CCSS": "RL.3.3",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "6b38bcec-d7cc-11e8-824f-0242ac160002"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_20439ec4-6fef-46aa-bdbf-d5de20d57abb",
+          "_item_c181a607-2125-4f8c-a4a0-07d6a76dbc8d",
+          "_ac95bfc4-a7d8-46ff-856f-6c5e0e52c6b8"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"quiz_302006\" title=\"Quiz Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600122</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>What causes the magician to trap Aladdin in the cave?</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600122\">\n        Aladdin doesn't give him the lamp right away.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600122\" show-hide=\"show\">You successfully understood cause and effect by noticing that Aladdin doesn’t give the lamp right away. The text supports this when the magician says, “First, hand me the lamp,” and Aladdin replies, “I cannot reach it right now.” Remember to reread what happens right before and after an event to see why it happens.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600121\">\n        Aladdin won't to go into the cave.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600121\" show-hide=\"show\">You may have thought Aladdin refused to go into the cave, but the story says he “agreed to help” and “went down into the dark cave below.” The problem is that “the lamp was buried deep in Aladdin’s heavy bag,” so he couldn’t reach it and didn’t give it to the magician right away—that’s why the correct answer is “Aladdin doesn’t give him the lamp right away.” Next time, reread and find the exact sentence in the text that answers the question.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600123\">\n        Aladdin takes too many gems from the cave.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600123\" show-hide=\"show\">You may have focused on the gems, but the text shows the problem happens when Aladdin won’t give the lamp right away: “First, hand me the lamp… The magician grew very angry,” and then he seals the cave. So the correct answer is that Aladdin doesn’t hand over the lamp right away. Next time, reread the sentences just before the trouble to find the real cause.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600124\">\n        Aladdin breaks the magic ring on his finger.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600124\" show-hide=\"show\">You may have brought in an idea that isn’t in this part of the story (the ring breaking), but look at the text: “First, hand me the lamp…,” “I cannot reach it right now,” and “The magician grew very angry,” which shows he’s mad because Aladdin doesn’t give him the lamp right away. The passage never says the ring breaks; it only says the ring will keep him safe. To find the right answer, reread the lines around the event and look for cause-and-effect clue words (like “first,” “when”), and choose the option that matches what the text directly says.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "quiz_302006",
+            "title": "Quiz Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600122"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "What causes the magician to trap Aladdin in the cave?"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "Aladdin doesn't give him the lamp right away.",
+                  "_attributes": {
+                    "identifier": "answer_600122"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully understood cause and effect by noticing that Aladdin doesn’t give the lamp right away. The text supports this when the magician says, “First, hand me the lamp,” and Aladdin replies, “I cannot reach it right now.” Remember to reread what happens right before and after an event to see why it happens.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600122",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin won't to go into the cave.",
+                  "_attributes": {
+                    "identifier": "answer_600121"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have thought Aladdin refused to go into the cave, but the story says he “agreed to help” and “went down into the dark cave below.” The problem is that “the lamp was buried deep in Aladdin’s heavy bag,” so he couldn’t reach it and didn’t give it to the magician right away—that’s why the correct answer is “Aladdin doesn’t give him the lamp right away.” Next time, reread and find the exact sentence in the text that answers the question.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600121",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin takes too many gems from the cave.",
+                  "_attributes": {
+                    "identifier": "answer_600123"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the gems, but the text shows the problem happens when Aladdin won’t give the lamp right away: “First, hand me the lamp… The magician grew very angry,” and then he seals the cave. So the correct answer is that Aladdin doesn’t hand over the lamp right away. Next time, reread the sentences just before the trouble to find the real cause.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600123",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin breaks the magic ring on his finger.",
+                  "_attributes": {
+                    "identifier": "answer_600124"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have brought in an idea that isn’t in this part of the story (the ring breaking), but look at the text: “First, hand me the lamp…,” “I cannot reach it right now,” and “The magician grew very angry,” which shows he’s mad because Aladdin doesn’t give him the lamp right away. The passage never says the ring breaks; it only says the ring will keep him safe. To find the right answer, reread the lines around the event and look for cause-and-effect clue words (like “first,” “when”), and choose the option that matches what the text directly says.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600124",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:31.297Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "quiz_302007": {
+      "identifier": "quiz_302007",
+      "title": "Quiz Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600126"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 3,
+        "difficulty": "hard",
+        "CCSS": "RL.3.2",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "6b36fd6f-d7cc-11e8-824f-0242ac160002"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_8181d244-338b-4e3c-be52-9de10f7f15ee",
+          "_06b78347-5752-4f70-8a53-502e5fa20fca",
+          "_bd7105c4-cf6a-4608-9b8d-db7f2a53c05a"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"quiz_302007\" title=\"Quiz Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600126</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>What is the central message or lesson of this story about Aladdin and the magician?</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600128\">\n        Magic can solve all of your problems if you believe in it.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600128\" show-hide=\"show\">You may have focused on the word “magic,” but look at how the magician lies about being Aladdin’s uncle, promises riches, and then uses magic to trap Aladdin in the cave—believing in magic doesn’t solve his problems, it creates them. This shows the real lesson is to be careful about trusting strangers who make big promises. Next time, check that your answer matches what happens in the whole story, especially the results of the characters’ actions.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600126\">\n        Be careful about trusting strangers who make big promises.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600126\" show-hide=\"show\">You successfully identified the lesson by noticing how a stranger’s big promises led to trouble. The text supports this when the man promises to help Aladdin “learn to become a merchant and earn good money” and says the treasure will make him “richer than any king in the world,” but then he traps Aladdin in the cave. Remember, when finding a story’s lesson, ask yourself, “What happens after a character makes a big promise?”</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600127\">\n        Hard work is the only way to become wealthy and successful.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600127\" show-hide=\"show\">You may have focused on the detail that Aladdin’s mother works hard, but the story’s events point to a different lesson. Aladdin doesn’t become rich through hard work—the stranger pretends to be his uncle, promises to make him a merchant, then uses magic and traps Aladdin in the cave to get the lamp. This shows the real lesson: be careful about trusting strangers who make big promises. Strategy: Reread the whole passage and ask, “What warning does the story give?” so your answer matches the main message, not just one detail.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600125\">\n        Always listen to your mother's advice about strangers.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600125\" show-hide=\"show\">You might be thinking about what parents usually say about strangers, but in the story the mother doesn’t give advice—she believes the “uncle,” and he is really a magician. The man promises Aladdin he will “earn good money” and find a treasure “richer than any king,” then he tricks Aladdin and traps him, so the lesson is to be careful about trusting strangers who make big promises. Next time, reread and ask, “What lesson fits what actually happens in the whole story?”</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "quiz_302007",
+            "title": "Quiz Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600126"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "What is the central message or lesson of this story about Aladdin and the magician?"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "Magic can solve all of your problems if you believe in it.",
+                  "_attributes": {
+                    "identifier": "answer_600128"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the word “magic,” but look at how the magician lies about being Aladdin’s uncle, promises riches, and then uses magic to trap Aladdin in the cave—believing in magic doesn’t solve his problems, it creates them. This shows the real lesson is to be careful about trusting strangers who make big promises. Next time, check that your answer matches what happens in the whole story, especially the results of the characters’ actions.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600128",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Be careful about trusting strangers who make big promises.",
+                  "_attributes": {
+                    "identifier": "answer_600126"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully identified the lesson by noticing how a stranger’s big promises led to trouble. The text supports this when the man promises to help Aladdin “learn to become a merchant and earn good money” and says the treasure will make him “richer than any king in the world,” but then he traps Aladdin in the cave. Remember, when finding a story’s lesson, ask yourself, “What happens after a character makes a big promise?”",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600126",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Hard work is the only way to become wealthy and successful.",
+                  "_attributes": {
+                    "identifier": "answer_600127"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the detail that Aladdin’s mother works hard, but the story’s events point to a different lesson. Aladdin doesn’t become rich through hard work—the stranger pretends to be his uncle, promises to make him a merchant, then uses magic and traps Aladdin in the cave to get the lamp. This shows the real lesson: be careful about trusting strangers who make big promises. Strategy: Reread the whole passage and ask, “What warning does the story give?” so your answer matches the main message, not just one detail.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600127",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Always listen to your mother's advice about strangers.",
+                  "_attributes": {
+                    "identifier": "answer_600125"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You might be thinking about what parents usually say about strangers, but in the story the mother doesn’t give advice—she believes the “uncle,” and he is really a magician. The man promises Aladdin he will “earn good money” and find a treasure “richer than any king,” then he tricks Aladdin and traps him, so the lesson is to be careful about trusting strangers who make big promises. Next time, reread and ask, “What lesson fits what actually happens in the whole story?”",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600125",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:31.848Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    },
+    "quiz_302008": {
+      "identifier": "quiz_302008",
+      "title": "Quiz Question",
+      "type": "choice",
+      "qtiVersion": "3.0",
+      "timeDependent": false,
+      "adaptive": false,
+      "responseDeclarations": [
+        {
+          "identifier": "RESPONSE",
+          "cardinality": "single",
+          "baseType": "identifier",
+          "correctResponse": {
+            "value": [
+              "answer_600131"
+            ]
+          }
+        }
+      ],
+      "outcomeDeclarations": [
+        {
+          "identifier": "FEEDBACK",
+          "cardinality": "single",
+          "baseType": "identifier"
+        },
+        {
+          "identifier": "FEEDBACK-INLINE",
+          "cardinality": "single",
+          "baseType": "identifier"
+        }
+      ],
+      "responseProcessing": {
+        "templateType": "match_correct",
+        "outcomeIdentifier": "FEEDBACK",
+        "correctResponseIdentifier": "CORRECT",
+        "incorrectResponseIdentifier": "INCORRECT",
+        "responseDeclarationIdentifier": "RESPONSE"
+      },
+      "metadata": {
+        "DOK": 3,
+        "difficulty": "hard",
+        "CCSS": "RL.3.2",
+        "learningObjectiveSet": [
+          {
+            "source": "CASE",
+            "learningObjectiveIds": [
+              "6b36fd6f-d7cc-11e8-824f-0242ac160002"
+            ]
+          }
+        ],
+        "similar_questions": [
+          "_06b78347-5752-4f70-8a53-502e5fa20fca",
+          "_bd7105c4-cf6a-4608-9b8d-db7f2a53c05a",
+          "_ce0f6f30-9f64-4502-baa5-6eed5f69b07a"
+        ]
+      },
+      "rawXml": "<qti-assessment-item xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\" identifier=\"quiz_302008\" title=\"Quiz Question\" adaptive=\"false\" time-dependent=\"false\">\n  <qti-response-declaration identifier=\"RESPONSE\" cardinality=\"single\" base-type=\"identifier\">\n    <qti-correct-response>\n      <qti-value>answer_600131</qti-value>\n    </qti-correct-response>\n  </qti-response-declaration>\n  <qti-outcome-declaration identifier=\"FEEDBACK\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-outcome-declaration identifier=\"FEEDBACK-INLINE\" base-type=\"identifier\" cardinality=\"single\"/>\n  <qti-item-body>\n    <qti-choice-interaction response-identifier=\"RESPONSE\" shuffle=\"false\" max-choices=\"1\">\n      <qti-prompt><p>Why does the magician pretend to be Aladdin’s uncle?</p></qti-prompt>\n      <qti-simple-choice identifier=\"answer_600130\">\n        So he can help Aladdin become a rich merchant.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600130\" show-hide=\"show\">You may have focused on the promise to help Aladdin become a merchant, but the story says he was “a powerful magician” who came “to search for a special magic lamp,” and later he says, “First, hand me the lamp.” This shows his real goal was the lamp, not making Aladdin rich. The correct answer is that he wanted Aladdin to bring him the magic lamp. Next time, check the character’s actions and repeated clues, not just their first promise.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600129\">\n        Because he is truly part of Aladdin’s family.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600129\" show-hide=\"show\">You may have thought he was truly family because he hugged Aladdin and called him 'nephew,' but the text says, \"the stranger was not really Aladdin’s uncle at all\" and later, \"He only cared about getting the magic lamp.\" This shows he pretended to be family to get Aladdin to bring him the lamp, which is the correct answer. Next time, reread to find the sentence that tells a character’s real reason, not just their first actions or words.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600131\">\n        To get Aladdin to bring him the magic lamp.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600131\" show-hide=\"show\">You successfully identified a character’s motive by noticing the magician pretended to be Aladdin’s uncle so Aladdin would bring him the lamp. The text supports this when it says he came “to search for a special magic lamp… [and] needed someone to help him,” and later he demands, “First, hand me the lamp.” Remember to ask yourself, “What does the character want?” and look for lines that state goals or demands when answering similar questions.</qti-feedback-inline>\n      </qti-simple-choice>\n      <qti-simple-choice identifier=\"answer_600132\">\n        So he can take Aladdin for a long mountain walk.\n        <qti-feedback-inline outcome-identifier=\"FEEDBACK-INLINE\" identifier=\"answer_600132\" show-hide=\"show\">It looks like you focused on the long walk up the mountain, but the text says the magician came “to search for a special magic lamp,” told Aladdin “Bring that lamp back to me,” and “only cared about getting the magic lamp,” so his goal wasn’t the walk. The correct answer is that he took Aladdin to get him to bring the magic lamp. Next time, look for what the character wants most (the main goal) and make sure your answer matches that, not just one event.</qti-feedback-inline>\n      </qti-simple-choice>\n    </qti-choice-interaction>\n  </qti-item-body>\n  <qti-response-processing>\n    <qti-response-condition>\n      <qti-response-if>\n        <qti-match>\n          <qti-variable identifier=\"RESPONSE\"/>\n          <qti-correct identifier=\"RESPONSE\"/>\n        </qti-match>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">CORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">1</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-if>\n      <qti-response-else>\n        <qti-set-outcome-value identifier=\"FEEDBACK\">\n          <qti-base-value base-type=\"identifier\">INCORRECT</qti-base-value>\n        </qti-set-outcome-value>\n        <qti-set-outcome-value identifier=\"SCORE\">\n          <qti-base-value base-type=\"float\">0</qti-base-value>\n        </qti-set-outcome-value>\n      </qti-response-else>\n    </qti-response-condition>\n  </qti-response-processing>\n</qti-assessment-item>",
+      "content": {
+        "qti-assessment-item": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd",
+            "identifier": "quiz_302008",
+            "title": "Quiz Question",
+            "adaptive": "false",
+            "time-dependent": "false"
+          },
+          "qti-response-declaration": {
+            "_attributes": {
+              "identifier": "RESPONSE",
+              "cardinality": "single",
+              "base-type": "identifier"
+            },
+            "qti-correct-response": {
+              "qti-value": "answer_600131"
+            }
+          },
+          "qti-outcome-declaration": [
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            },
+            {
+              "_attributes": {
+                "identifier": "FEEDBACK-INLINE",
+                "base-type": "identifier",
+                "cardinality": "single"
+              }
+            }
+          ],
+          "qti-item-body": {
+            "qti-choice-interaction": {
+              "_attributes": {
+                "response-identifier": "RESPONSE",
+                "shuffle": "false",
+                "max-choices": "1"
+              },
+              "qti-prompt": {
+                "p": "Why does the magician pretend to be Aladdin’s uncle?"
+              },
+              "qti-simple-choice": [
+                {
+                  "_": "So he can help Aladdin become a rich merchant.",
+                  "_attributes": {
+                    "identifier": "answer_600130"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have focused on the promise to help Aladdin become a merchant, but the story says he was “a powerful magician” who came “to search for a special magic lamp,” and later he says, “First, hand me the lamp.” This shows his real goal was the lamp, not making Aladdin rich. The correct answer is that he wanted Aladdin to bring him the magic lamp. Next time, check the character’s actions and repeated clues, not just their first promise.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600130",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "Because he is truly part of Aladdin’s family.",
+                  "_attributes": {
+                    "identifier": "answer_600129"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You may have thought he was truly family because he hugged Aladdin and called him 'nephew,' but the text says, \"the stranger was not really Aladdin’s uncle at all\" and later, \"He only cared about getting the magic lamp.\" This shows he pretended to be family to get Aladdin to bring him the lamp, which is the correct answer. Next time, reread to find the sentence that tells a character’s real reason, not just their first actions or words.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600129",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "To get Aladdin to bring him the magic lamp.",
+                  "_attributes": {
+                    "identifier": "answer_600131"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "You successfully identified a character’s motive by noticing the magician pretended to be Aladdin’s uncle so Aladdin would bring him the lamp. The text supports this when it says he came “to search for a special magic lamp… [and] needed someone to help him,” and later he demands, “First, hand me the lamp.” Remember to ask yourself, “What does the character want?” and look for lines that state goals or demands when answering similar questions.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600131",
+                      "show-hide": "show"
+                    }
+                  }
+                },
+                {
+                  "_": "So he can take Aladdin for a long mountain walk.",
+                  "_attributes": {
+                    "identifier": "answer_600132"
+                  },
+                  "qti-feedback-inline": {
+                    "_": "It looks like you focused on the long walk up the mountain, but the text says the magician came “to search for a special magic lamp,” told Aladdin “Bring that lamp back to me,” and “only cared about getting the magic lamp,” so his goal wasn’t the walk. The correct answer is that he took Aladdin to get him to bring the magic lamp. Next time, look for what the character wants most (the main goal) and make sure your answer matches that, not just one event.",
+                    "_attributes": {
+                      "outcome-identifier": "FEEDBACK-INLINE",
+                      "identifier": "answer_600132",
+                      "show-hide": "show"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "qti-response-processing": {
+            "qti-response-condition": {
+              "qti-response-if": {
+                "qti-match": {
+                  "qti-variable": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  },
+                  "qti-correct": {
+                    "_attributes": {
+                      "identifier": "RESPONSE"
+                    }
+                  }
+                },
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "CORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "1",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              },
+              "qti-response-else": {
+                "qti-set-outcome-value": [
+                  {
+                    "_attributes": {
+                      "identifier": "FEEDBACK"
+                    },
+                    "qti-base-value": {
+                      "_": "INCORRECT",
+                      "_attributes": {
+                        "base-type": "identifier"
+                      }
+                    }
+                  },
+                  {
+                    "_attributes": {
+                      "identifier": "SCORE"
+                    },
+                    "qti-base-value": {
+                      "_": "0",
+                      "_attributes": {
+                        "base-type": "float"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "modalFeedback": [],
+      "feedbackInline": [],
+      "feedbackBlock": [],
+      "createdAt": "2025-07-10T12:47:32.399Z",
+      "updatedAt": "2026-01-27T15:10:16.259Z",
+      "__v": 0
+    }
+  },
+  "stimuli": {
+    "guiding_21014": {
+      "identifier": "guiding_21014",
+      "title": "Section 1",
+      "catalogInfo": [],
+      "metadata": {
+        "lexile_level": 692,
+        "course": "Core Knowledge Reading Grade 3/3",
+        "module": "Classic Tales",
+        "section_number": 1
+      },
+      "rawXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<qti-assessment-stimulus xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd\" identifier=\"guiding_21014\" xml:lang=\"en\" title=\"Section 1\">\n  <qti-stimulus-body><div>\n    <div data-article-header=\"true\">\n        <h1>Aladdin and the Wonderful Lamp, Part I</h1>\n    </div>\n    <div>\n        <p>There once was a poor boy named Aladdin. His father worked as a tailor, making clothes for people. When his father died, Aladdin's mother had to work hard to earn money for food and shelter.</p><p>One day, a stranger walked up to Aladdin on the street. \"Tell me, young man,\" said the stranger. \"Are you the son of the <b style=\"color: #1a6666;\">tailor</b> who lived here?\"</p><p>\"Yes, I am,\" said Aladdin.</p><p>The stranger threw his arms around Aladdin and hugged him tight. \"My dear <b style=\"color: #1a6666;\">nephew</b>!\" he cried out. \"Your father was my brother! Now I learn that he has died! What terrible news!\"</p>\n    </div>\n</div></qti-stimulus-body>\n</qti-assessment-stimulus>",
+      "content": {
+        "qti-assessment-stimulus": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd",
+            "identifier": "guiding_21014",
+            "xml:lang": "en",
+            "title": "Section 1"
+          },
+          "qti-stimulus-body": {
+            "div": {
+              "div": [
+                {
+                  "_attributes": {
+                    "data-article-header": "true"
+                  },
+                  "h1": "Aladdin and the Wonderful Lamp, Part I"
+                },
+                {
+                  "p": [
+                    "There once was a poor boy named Aladdin. His father worked as a tailor, making clothes for people. When his father died, Aladdin's mother had to work hard to earn money for food and shelter.",
+                    {
+                      "_": "One day, a stranger walked up to Aladdin on the street. \"Tell me, young man,\" said the stranger. \"Are you the son of the  who lived here?\"",
+                      "b": {
+                        "_": "tailor",
+                        "_attributes": {
+                          "style": "color: #1a6666;"
+                        }
+                      }
+                    },
+                    "\"Yes, I am,\" said Aladdin.",
+                    {
+                      "_": "The stranger threw his arms around Aladdin and hugged him tight. \"My dear !\" he cried out. \"Your father was my brother! Now I learn that he has died! What terrible news!\"",
+                      "b": {
+                        "_": "nephew",
+                        "_attributes": {
+                          "style": "color: #1a6666;"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "createdAt": "2025-07-10T12:42:37.340Z",
+      "updatedAt": "2025-07-10T12:42:37.340Z",
+      "__v": 0
+    },
+    "guiding_21015": {
+      "identifier": "guiding_21015",
+      "title": "Section 2",
+      "catalogInfo": [],
+      "metadata": {
+        "lexile_level": 692,
+        "course": "Core Knowledge Reading Grade 3/3",
+        "module": "Classic Tales",
+        "section_number": 2
+      },
+      "rawXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<qti-assessment-stimulus xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd\" identifier=\"guiding_21015\" xml:lang=\"en\" title=\"Section 2\">\n  <qti-stimulus-body><div><p>Aladdin brought the man home to meet his mother. She felt very surprised because her husband had never told her about having a brother. Even so, she welcomed the man into their home. When the stranger promised to help Aladdin learn to become a <b style=\"color: #1a6666;\">merchant</b> and earn good money, she believed his words.</p><p>But the stranger was not really Aladdin's uncle at all. He was actually a powerful <b style=\"color: #1a6666;\">magician</b> who had traveled from far away in North Africa. He had come all the way to <b style=\"color: #1a6666;\">Persia</b> to search for a special magic lamp. People said this lamp had amazing powers that would make any person very rich. To find this lamp, the magician needed someone to help him. He wanted to find a person who would follow his directions without asking too many questions. He thought Aladdin was exactly the right person for this job.</p></div></qti-stimulus-body>\n</qti-assessment-stimulus>",
+      "content": {
+        "qti-assessment-stimulus": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd",
+            "identifier": "guiding_21015",
+            "xml:lang": "en",
+            "title": "Section 2"
+          },
+          "qti-stimulus-body": {
+            "div": {
+              "p": [
+                {
+                  "_": "Aladdin brought the man home to meet his mother. She felt very surprised because her husband had never told her about having a brother. Even so, she welcomed the man into their home. When the stranger promised to help Aladdin learn to become a  and earn good money, she believed his words.",
+                  "b": {
+                    "_": "merchant",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                {
+                  "_": "But the stranger was not really Aladdin's uncle at all. He was actually a powerful  who had traveled from far away in North Africa. He had come all the way to  to search for a special magic lamp. People said this lamp had amazing powers that would make any person very rich. To find this lamp, the magician needed someone to help him. He wanted to find a person who would follow his directions without asking too many questions. He thought Aladdin was exactly the right person for this job.",
+                  "b": [
+                    {
+                      "_": "magician",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    },
+                    {
+                      "_": "Persia",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "createdAt": "2025-07-10T12:42:37.913Z",
+      "updatedAt": "2025-07-10T12:42:37.913Z",
+      "__v": 0
+    },
+    "guiding_21016": {
+      "identifier": "guiding_21016",
+      "title": "Section 3",
+      "catalogInfo": [],
+      "metadata": {
+        "lexile_level": 692,
+        "course": "Core Knowledge Reading Grade 3/3",
+        "module": "Classic Tales",
+        "section_number": 3
+      },
+      "rawXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<qti-assessment-stimulus xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd\" identifier=\"guiding_21016\" xml:lang=\"en\" title=\"Section 3\">\n  <qti-stimulus-body><div><p>The next morning, the <b style=\"color: #1a6666;\">magician</b> came to Aladdin's house. \"Come with me today,\" he said to the boy. \"I want to introduce you to other <b style=\"color: #1a6666;\">merchants</b> in the city.\" Then he led Aladdin away from town and out into the countryside.</p><p>The <b style=\"color: #1a6666;\">magician</b> took Aladdin up a very steep mountain path. They climbed higher and higher for a whole hour. Finally, they reached a spot where no flowers or plants could grow. The ground looked empty and bare.</p><p>\"Go gather some dry sticks,\" the <b style=\"color: #1a6666;\">magician</b> told Aladdin. \"We will build a fire here. Then I will show you something truly amazing.\"</p><p>Aladdin did exactly what the man asked him to do. The <b style=\"color: #1a6666;\">magician</b> lit the fire with the sticks. Then he threw sweet-smelling perfumes into the flames and spoke magical words in a loud voice. Suddenly, the bright sky turned dark like night. Thunder crashed and rumbled all around them. The earth split open right at their feet. There in front of them lay a huge stone with a brass ring attached to it.</p></div></qti-stimulus-body>\n</qti-assessment-stimulus>",
+      "content": {
+        "qti-assessment-stimulus": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd",
+            "identifier": "guiding_21016",
+            "xml:lang": "en",
+            "title": "Section 3"
+          },
+          "qti-stimulus-body": {
+            "div": {
+              "p": [
+                {
+                  "_": "The next morning, the  came to Aladdin's house. \"Come with me today,\" he said to the boy. \"I want to introduce you to other  in the city.\" Then he led Aladdin away from town and out into the countryside.",
+                  "b": [
+                    {
+                      "_": "magician",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    },
+                    {
+                      "_": "merchants",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "_": "The  took Aladdin up a very steep mountain path. They climbed higher and higher for a whole hour. Finally, they reached a spot where no flowers or plants could grow. The ground looked empty and bare.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                {
+                  "_": "\"Go gather some dry sticks,\" the  told Aladdin. \"We will build a fire here. Then I will show you something truly amazing.\"",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                {
+                  "_": "Aladdin did exactly what the man asked him to do. The  lit the fire with the sticks. Then he threw sweet-smelling perfumes into the flames and spoke magical words in a loud voice. Suddenly, the bright sky turned dark like night. Thunder crashed and rumbled all around them. The earth split open right at their feet. There in front of them lay a huge stone with a brass ring attached to it.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "createdAt": "2025-07-10T12:42:38.478Z",
+      "updatedAt": "2025-07-10T12:42:38.478Z",
+      "__v": 0
+    },
+    "guiding_21017": {
+      "identifier": "guiding_21017",
+      "title": "Section 4",
+      "catalogInfo": [],
+      "metadata": {
+        "lexile_level": 692,
+        "course": "Core Knowledge Reading Grade 3/3",
+        "module": "Classic Tales",
+        "section_number": 4
+      },
+      "rawXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<qti-assessment-stimulus xmlns=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd\" identifier=\"guiding_21017\" xml:lang=\"en\" title=\"Section 4\">\n  <qti-stimulus-body><div><p>\"Under this heavy stone lies a great <b style=\"color: #1a6666;\">treasure</b>,\" said the <b style=\"color: #1a6666;\">magician</b>. \"It will make you richer than any king in the world. Lift the stone by pulling on the ring. Then go down the stairs. You will see many <b style=\"color: #1a6666;\">treasures</b> as you walk, but you must not touch any of them. You will come to a beautiful garden. In that garden, you will see a lamp hanging from a tree. Bring that lamp back to me. Once you have the lamp, you may take any <b style=\"color: #1a6666;\">treasures</b> you want.\"</p><p>Aladdin felt amazed by what he heard. He could hardly believe what the <b style=\"color: #1a6666;\">magician</b> was asking him to do. But he agreed to help.</p><p>\"Take this special ring,\" said the <b style=\"color: #1a6666;\">magician</b>. \"It will keep you safe from any harm.\" Aladdin took the ring and put it on his finger. Then he pulled the heavy stone up by its brass ring and went down into the dark cave below.</p><p>Aladdin found the lamp and filled his bag with beautiful gems. But all those gems made his bag very heavy. When he climbed back to the top of the stairs, he could not pull himself out of the cave opening.</p><p>\"Give me your hand, Uncle,\" Aladdin called out. \"Help me climb out!\"</p><p>\"First, hand me the lamp,\" the <b style=\"color: #1a6666;\">magician</b> answered back.</p><p>The lamp was buried deep in Aladdin's heavy bag. \"I cannot reach it right now,\" Aladdin said.</p><p>The magician grew very angry. He only cared about getting the magic lamp. When Aladdin said he would give it to him after climbing out, the impatient <b style=\"color: #1a6666;\">magician</b> could not wait any longer. He spoke a magic spell, and the stone rolled back into place. Poor Aladdin was trapped in the dark cave below.</p></div></qti-stimulus-body>\n</qti-assessment-stimulus>",
+      "content": {
+        "qti-assessment-stimulus": {
+          "_attributes": {
+            "xmlns": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "http://www.imsglobal.org/xsd/imsqtiasi_v3p0 https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_stimulusv3p0p1_v1p0.xsd",
+            "identifier": "guiding_21017",
+            "xml:lang": "en",
+            "title": "Section 4"
+          },
+          "qti-stimulus-body": {
+            "div": {
+              "p": [
+                {
+                  "_": "\"Under this heavy stone lies a great ,\" said the . \"It will make you richer than any king in the world. Lift the stone by pulling on the ring. Then go down the stairs. You will see many  as you walk, but you must not touch any of them. You will come to a beautiful garden. In that garden, you will see a lamp hanging from a tree. Bring that lamp back to me. Once you have the lamp, you may take any  you want.\"",
+                  "b": [
+                    {
+                      "_": "treasure",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    },
+                    {
+                      "_": "magician",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    },
+                    {
+                      "_": "treasures",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    },
+                    {
+                      "_": "treasures",
+                      "_attributes": {
+                        "style": "color: #1a6666;"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "_": "Aladdin felt amazed by what he heard. He could hardly believe what the  was asking him to do. But he agreed to help.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                {
+                  "_": "\"Take this special ring,\" said the . \"It will keep you safe from any harm.\" Aladdin took the ring and put it on his finger. Then he pulled the heavy stone up by its brass ring and went down into the dark cave below.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                "Aladdin found the lamp and filled his bag with beautiful gems. But all those gems made his bag very heavy. When he climbed back to the top of the stairs, he could not pull himself out of the cave opening.",
+                "\"Give me your hand, Uncle,\" Aladdin called out. \"Help me climb out!\"",
+                {
+                  "_": "\"First, hand me the lamp,\" the  answered back.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                },
+                "The lamp was buried deep in Aladdin's heavy bag. \"I cannot reach it right now,\" Aladdin said.",
+                {
+                  "_": "The magician grew very angry. He only cared about getting the magic lamp. When Aladdin said he would give it to him after climbing out, the impatient  could not wait any longer. He spoke a magic spell, and the stone rolled back into place. Poor Aladdin was trapped in the dark cave below.",
+                  "b": {
+                    "_": "magician",
+                    "_attributes": {
+                      "style": "color: #1a6666;"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "createdAt": "2025-07-10T12:42:39.055Z",
+      "updatedAt": "2025-08-04T15:43:14.730Z",
+      "__v": 0
+    }
+  },
+  "structure_summary": {
+    "total_sections": 5,
+    "total_items": 8,
+    "total_stimuli": 4,
+    "sections": [
+      {
+        "identifier": "test_guiding_21014",
+        "title": "Guiding Questions",
+        "sequence": 1,
+        "item_count": 1,
+        "item_ids": [
+          "guiding_21014_302001"
+        ],
+        "stimulus_id": "guiding_21014"
+      },
+      {
+        "identifier": "test_guiding_21015",
+        "title": "Guiding Questions",
+        "sequence": 2,
+        "item_count": 1,
+        "item_ids": [
+          "guiding_21015_302002"
+        ],
+        "stimulus_id": "guiding_21015"
+      },
+      {
+        "identifier": "test_guiding_21016",
+        "title": "Guiding Questions",
+        "sequence": 3,
+        "item_count": 1,
+        "item_ids": [
+          "guiding_21016_302003"
+        ],
+        "stimulus_id": "guiding_21016"
+      },
+      {
+        "identifier": "test_guiding_21017",
+        "title": "Guiding Questions",
+        "sequence": 4,
+        "item_count": 1,
+        "item_ids": [
+          "guiding_21017_302004"
+        ],
+        "stimulus_id": "guiding_21017"
+      },
+      {
+        "identifier": "test_quiz",
+        "title": "Quiz",
+        "sequence": 5,
+        "item_count": 4,
+        "item_ids": [
+          "quiz_302005",
+          "quiz_302006",
+          "quiz_302007",
+          "quiz_302008"
+        ],
+        "stimulus_id": null
+      }
+    ]
+  }
+}
